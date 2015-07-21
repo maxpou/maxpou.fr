@@ -1,2 +1,2 @@
 # maxpou.github.io
-my website
+my website using HPSTR Jekyll Theme <3
