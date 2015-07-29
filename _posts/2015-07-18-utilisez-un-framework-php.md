@@ -82,7 +82,7 @@ Autre élément intéressant, les constituantes de l'outils auront été testé 
 
 * Documentation : si vous utilisez un framework maison, n'allez pas me faire croire que tout est documenté aux petits oignons ! Par contre avec les frameworks open source, c'est tout l'inverse. Il faut dire que si la documentation est mal conçue de base, peu de personnes utiliseront cet outil.
 
-* Rapidité d'exécution : si vous avez un recrutement à faire dans une équipe de développement, la montée en compétence du développeur sur le projet sera plus rapide. Avez un outil home made, il faudra libérer une ressource d'un projet pour le former et l'encadrer.
+* Rapidité d'exécution : si vous avez un recrutement à faire dans une équipe de développeurs, la montée en compétence du développeur sur le projet sera plus rapide car il connait les outils. Avez un outil *home made*, il faudra libérer une ressource d'un projet pour le former et l'encadrer.
 
 
 ## Pourquoi ne pas utiliser de Framework
@@ -91,7 +91,9 @@ Autre élément intéressant, les constituantes de l'outils auront été testé 
 
 En fait, depuis le début de cet article, je prône l'utilisation d'un framework dans l'écosystème PHP. Mais il ne faut pas voir le framework comme une arme de destruction massive qui résout tous les problème à coups de baguette magique.
 
-En plus de ses prérequis (bien connaître le langage PHP et le PHP OOP, namespaces, ...), la [courbe d'apprentissage]({{ site.url }}/images/articles/use-framework-php/learningcurve.jpg) d'un framework est importante. Ne la négligez pas.  
+![courbe d'apprentissage]({{ site.url }}/images/articles/use-framework-php/learningcurve.jpg)
+
+En plus de ses prérequis (bien connaître le langage PHP et le PHP OOP, namespaces, ...), la courbe d'apprentissage d'un framework est importante. Ne la négligez pas.  
 Si vous souhaitez passer sur un framework pour un projet et que les deadlines sont courtes, oubliez l'idée car vous courrez vers l'échec. Commencez par un projet simple avec des deadlines larges (oui je sais c'est rare !).
 
 
@@ -100,30 +102,33 @@ Si vous souhaitez passer sur un framework pour un projet et que les deadlines so
 Deuxième cas où vous pouvez vous sentir exempté d'utiliser un framework : si vous êtes dans un marché de niche ou si vous gérez un très gros site (Amazon, Facebook, ...).
 Si aucun framework ne remplit vos besoins initiaux ou si vous avez un besoin assez important côté performances, n'hésitez pas à créer votre propre framework.
 
-Utiliser un Symfony2 pour une application minuscule qui doit se charger d'envoyer des mail après soumission d'un formulaire n'est pas pertinent du tout.  
+Il en va de même pour l'utilisation de Symfony2 (ou autre framework assez conséquent) pour une application minuscule qui doit se charger d'envoyer des mail après soumission d'un formulaire n'est pas pertinent du tout.  
 
 ![Utilisez le bon outil]({{ site.url }}/images/articles/use-framework-php/mouche-bazooka.gif)  
 
 Utilisez un framework plus approprié comme un **micro framework** ([Silex](http://silex.sensiolabs.org), [Slim](http://www.slimframework.com), ...). Ils sont beaucoup plus légers et plus rapides à mettre en place (il en va de même pour la courbe d'apprentissage).
 
-### Développeur PHP ou développeur Symfony2/Laravel/...
+### Développeur PHP ou développeur Symfony2/Laravel/... ?
 
 Un des dangers quand on utilise un framework, c'est de brûler les étapes. **C'est bien d'éviter de réinventer la roue, mais encore faut-il savoir comment elle est faite**.   
-De même, il n'y a -à mon sens- pas beaucoup de mérite à réutiliser un ensemble de fonctions créées par d'autres. Ca presque tout le monde peut le faire. Si vous sentez qu'il est trop tôt pour utiliser un framework, continuez l'apprentissage du langage avant de griller les étapes.
+De même, il n'y a -à mon sens- pas beaucoup de mérite à réutiliser un ensemble de fonctions créées par d'autres. Ça, presque tout le monde peut le faire.  
+Si vous sentez qu'il est trop tôt pour utiliser un framework, continuez l'apprentissage du langage avant de griller les étapes.
 
 
 ## A vous de jouer !
 
-Je n'ai pas envie de vous guider vers un framework plutôt qu'un autre. Pour la bonne et simple raison que chaque framework a sa spécificité, ses avantages et inconvénients. C'est avant tout une question de goûts. Pour ma part, j'ai directement adhéré à Symfony2 et à Silex (pour les plus petits projets). Mais ça n'a pas été le cas d'autres collègues.  
+Je n'ai pas envie de vous guider vers un framework plutôt qu'un autre, pour la bonne et simple raison que chaque framework a sa spécificité, ses avantages et inconvénients. C'est avant tout une question de goûts.  
+Pour ma part, j'ai directement adhéré à Symfony2 et son petit frère Silex (pour les plus petits projets). Mais ce n'est pas le cas de tout le monde.  
 
 Néanmoins lorsque vous ferez votre benchmark, prenez en compte ces éléments :
 
 * Qualité de la documentation : vous allez passer beaucoup de temps dessus au départ. Ne négligez pas pas ce point.
 * Fréquence de mises à jour : Si vous travaillez sur un projet et que vous devez tout casser et tout réécrire tous les 2 mois pour être à jour sur la nouvelle version, vous n'allez pas avancer. De même, si les mises à jour sont quasi inexistantes c'est peut-être que peu de personnes l'utilisent.  
 Je vous conseille de couper la poire en deux et d'opter pour les version **LTS (Long Term Support)**.
+* Facilité à produire des API : C'est de plus en plus demandées dans les projets et ce n'est pas prêt de s'arrêter.
 * Popularité du framework : il ne faut pas non plus que vous soyez tout seul au moindre problème. Testez la popularité de l'outil sur la toile (avec des sites comme [Stack Overflow](http://stackoverflow.com/)) ET sur le marché de l'emploi du lieu où vous travaillez (via des sites d'emploi). 
 
 
-Bref : Symfony2, Silex, Laravel, codeigniter, CakePHP Zend, YII... vous avez le choix !
+Bref, entre Symfony2, Silex, Laravel, Codeigniter, CakePHP, Zend Framework, YII... vous avez le choix !
 
 
