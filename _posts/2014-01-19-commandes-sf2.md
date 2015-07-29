@@ -3,7 +3,7 @@ layout: post
 title: Mémo - Commandes Symfony2
 description: "Liste des commandes console utilisées lors du développement d’un projet sous Symfony2"
 modified: 2015-06-12
-tags: ["Symfony2", "CLI"]
+tags: ["Symfony2", "CLI", "PHP"]
 ---
 
 #Mémo - Commandes Symfony2
