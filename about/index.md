@@ -2,13 +2,13 @@
 layout: page
 title: Hello world !
 comments: false
-modified: 2015-06-12
+modified: 2015-08-14
 ---
 
 #Hello World !
 
 ##Qui suis-je ?
-  
+
 Je m'appelle **Maxence POUTORD**, 26ans et passionné d'informatique.  
 Je suis intéressé par les architectures orientées services (services web, **REST**), la **sécurité** (aussi bien la sécurité informatique que la sécurité de l’information) sans oublier les enjeux liés aux tendances actuelles dans les DSI (BYOD, Cloud Computing, Big Data...).  
 
@@ -18,6 +18,7 @@ Je suis aussi motard ([Yamaha MT-03]({{ site.url }}/images/mt03.jpg)).
 
 
 ##Pourquoi ce blog ?
+
 L'objectif de ce blog est triple :  
 
 * Garder une trace de mes expériences. Comme tout développeur je teste beaucoup de choses... et j'en oublie beaucoup !
@@ -26,6 +27,7 @@ L'objectif de ce blog est triple :
 
 
 ##Contact
+
 Si vous le souhaitez, vous pouvez me contacter via :
 
 * [Mail](mailto:maxence.poutord@gmail.com)
