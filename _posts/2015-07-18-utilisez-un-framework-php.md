@@ -4,9 +4,13 @@ title: Utilisez un framework PHP
 description: "Utilisez un framework PHP"
 modified: 2015-07-18
 tags: ["PHP", "Symfony2", "silex"]
+image:
+    feature: abstract-4.jpg
+    credit: dargadgetz
+    creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
 
-# Utilisez un framework PHP 
+# Utilisez un framework PHP
 
 Aujourd'hui je vais vous parler de framework dans l'écosystème PHP.  
 L'idée de cet article m'est venue suite à la suite d'une mission de plus chez un client qui préférait utiliser son framework maison plutôt qu'un framework open source. Je n'adhère pas vraiment à cette philosophie et l'objectif de cet article est de vous présenter pourquoi.  
@@ -25,7 +29,7 @@ Je ne vais pas m'étendre plus sur la définition d'un framework. J'imagine que 
 ## Pourquoi vous devez utiliser un framework
 
 ### Capitalisation
-Si vous développez, vous le savez forcément : copier/coller du code c'est mal ! 
+Si vous développez, vous le savez forcément : copier/coller du code c'est mal !
 L'objectif d'un framework est clair : se concentrer sur la partie métier du projet et s'assurer que chaque fonctionnalité codée soit unique. Si à chaque fois que vous commencez un projet, vous redéveloppez la fonctionnalité authentification, c'est qu'il y a un problème. Vous ne capitalisez pas et vous perdez votre temps.  
 
 ### Vélocité
@@ -35,7 +39,7 @@ L'avantage d'un framework, c'est qu'il va vous permettre de réaliser du bon cod
 *[Source : Quora - Moving Fast With High Code Quality](http://engineering.quora.com/Moving-Fast-With-High-Code-Quality)*
 
 Ne pas se soucier de la qualité du code peut-être pertinent pour un petit projet (et encore). Pour un projet un petit peu plus conséquent, la vélocité en prend un coup. Attention, la qualité du code ne passe pas que sur l'utilisation d'un framework.  
-Vous devrez aussi respecter : 
+Vous devrez aussi respecter :
 
 * coder proprement (commenter, supprimer les codes morts, ne pas avoir trop de niveaux d'indentation, ...),
 * les standards du langage ([PSR-0](http://www.php-fig.org/psr/psr-0), [PSR-1](http://www.php-fig.org/psr/psr-1) et pourquoi pas [PSR-2](http://www.php-fig.org/psr/psr-2))
@@ -44,7 +48,7 @@ Vous devrez aussi respecter :
 
 ### Performances ?
 
-Un autre élément que j'ai déjà entendu : 
+Un autre élément que j'ai déjà entendu :
 
 > Les frameworks produisent du code lourd et peu performant.
 
@@ -110,7 +114,7 @@ Utilisez un framework plus approprié comme un **micro framework** ([Silex](http
 
 ### Développeur PHP ou développeur Symfony2/Laravel/... ?
 
-Un des dangers quand on utilise un framework, c'est de brûler les étapes. **C'est bien d'éviter de réinventer la roue, mais encore faut-il savoir comment elle est faite**.   
+Un des dangers quand on utilise un framework, c'est de brûler les étapes. **C'est bien d'éviter de réinventer la roue, mais encore faut-il savoir comment elle est faite**.
 De même, il n'y a -à mon sens- pas beaucoup de mérite à réutiliser un ensemble de fonctions créées par d'autres. Ça, presque tout le monde peut le faire.  
 Si vous sentez qu'il est trop tôt pour utiliser un framework, continuez l'apprentissage du langage avant de griller les étapes.
 
@@ -126,9 +130,7 @@ Néanmoins lorsque vous ferez votre benchmark, prenez en compte ces éléments :
 * Fréquence de mises à jour : Si vous travaillez sur un projet et que vous devez tout casser et tout réécrire tous les 2 mois pour être à jour sur la nouvelle version, vous n'allez pas avancer. De même, si les mises à jour sont quasi inexistantes c'est peut-être que peu de personnes l'utilisent.  
 Je vous conseille de couper la poire en deux et d'opter pour les version **LTS (Long Term Support)**.
 * Facilité à produire des API : C'est de plus en plus demandées dans les projets et ce n'est pas prêt de s'arrêter.
-* Popularité du framework : il ne faut pas non plus que vous soyez tout seul au moindre problème. Testez la popularité de l'outil sur la toile (avec des sites comme [Stack Overflow](http://stackoverflow.com/)) ET sur le marché de l'emploi du lieu où vous travaillez (via des sites d'emploi). 
+* Popularité du framework : il ne faut pas non plus que vous soyez tout seul au moindre problème. Testez la popularité de l'outil sur la toile (avec des sites comme [Stack Overflow](http://stackoverflow.com/)) ET sur le marché de l'emploi du lieu où vous travaillez (via des sites d'emploi).
 
 
 Bref, entre Symfony2, Silex, Laravel, Codeigniter, CakePHP, Zend Framework, YII... vous avez le choix !
-
-

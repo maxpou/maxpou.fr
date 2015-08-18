@@ -4,6 +4,10 @@ title: Mémo - Commandes Symfony2
 description: "Liste des commandes console utilisées lors du développement d’un projet sous Symfony2"
 modified: 2015-06-12
 tags: ["Symfony2", "CLI", "PHP"]
+image:
+    feature: abstract-1.jpg
+    credit: dargadgetz
+    creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
 
 #Mémo - Commandes Symfony2
@@ -26,7 +30,7 @@ Composer trouve les bibliothèques sur [packagelist.org](https://packagist.org).
 ### Mettre à jour composer
 `php composer.phar self-update`
 
-Note : 
+Note :
 
 * il faut pointer vers le fichier composer.phar (utiliser la navigation si besoin est)
 * Pour obtenir la version de composer : php composer.phar --version
@@ -47,7 +51,7 @@ Note :
 ### Créer un Bundle
 `php app/console generate:bundle`
 
-Note : 
+Note :
 
 * leNameSpace/nombundleBundle
 * le suffixe Bundle est obligatoire
@@ -63,7 +67,7 @@ Note :
 ### Nettoyer le cache
 `php app/console cache:clear`
 
-Note : 
+Note :
 
 * Si l’environnement est en prod : `--env=prod`
 * Préférez tout de même l'utilisation du plugin **[Clean de Grunt](https://www.npmjs.com/package/grunt-contrib-clean)**.
@@ -76,7 +80,7 @@ Note :
 ### Générer une entité
 `php app/console generate:doctrine:entity`
 
-Note : 
+Note :
 
 * utiliser les annotations (par défaut)
 * mettre yes quand pour générer le repository
@@ -85,7 +89,7 @@ Note :
 ### Générer les getter/setter d’une entité
 `php app/console doctrine:generate:entities AcmeStoreBundle:Product`
 
-Note : 
+Note :
 
 * il faut pointer vers le bundle
 

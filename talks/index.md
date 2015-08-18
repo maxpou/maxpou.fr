@@ -9,6 +9,7 @@ share: true
 
 ##2015
 
+* [TED (2009) - Tim Berners-Lee - Le web à venir](http://www.ted.com/talks/tim_berners_lee_on_the_next_web)
 * [AFUP - Architecture d'une application Full API orienté micro service - Xavier Gorse, Yves Heitz](https://www.youtube.com/watch?v=DUPf-bhHNm8)
 * [AFUP - REST, l'Architecture Incomprise - William Durand](https://www.youtube.com/watch?v=u_jDzcXCimM)
 * [AFUP 2015 - Attention chérie, ça va trancher - Étienne Samson, Bastien Jaillot #phptour](https://www.youtube.com/watch?v=8j_LprxGYbA)

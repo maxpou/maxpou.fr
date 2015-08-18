@@ -3,7 +3,11 @@ layout: post
 title: Non, votre API n'est pas REST !
 description: "Présentation de REST et du RMM"
 modified: 2015-07-15
-tags: [REST, json, xml, http]
+tags: [REST, JSON, XML, HTTP]
+image:
+    feature: abstract-3.jpg
+    credit: dargadgetz
+    creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
 
 # Non, votre API n'est pas REST !
@@ -162,7 +166,7 @@ POST /reservation HTTP/1.1
 
 Vous noterez que je mets un "s" à mes collections de ressources comme ceci :  
 http://example.org/articles/1
-Mais rien ne vous empêche de ne pas en mettre :   
+Mais rien ne vous empêche de ne pas en mettre :
 http://example.org/article/1
 
 Essayez cependant de garder une certaine cohérence dans l'ensemble de votre application.
