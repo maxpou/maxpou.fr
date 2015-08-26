@@ -6,13 +6,13 @@ words_per_minute: 240
 # Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
 # When testing locally leave blank or use http://localhost:4000
 #url:              http://dev.local:4000
-url:              http://maxpou.github.io
+url:              http://www.maxpou.fr
 
 # Owner/author information
 owner:
   name:           Maxence POUTORD
   avatar:         avatar.jpg
-  bio:            "Apprenant à vie. Passionné par le web. Motard."
+  bio:            "Apprenant à vie. Passionné par le web (REST, Symfony2 et JavaScript). Motard."
   email:          maxence.poutord@gmail.com
   # Social networking links used in footer. Update and remove as you like.
   twitter:        _maxpou
