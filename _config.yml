@@ -4,7 +4,6 @@ disqus_shortname: maxpou
 reading_time:     true
 words_per_minute: 240
 # Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
-# When testing locally leave blank or use http://localhost:4000
 #url:              http://dev.local:4000
 url:              http://maxpou.github.io
 
