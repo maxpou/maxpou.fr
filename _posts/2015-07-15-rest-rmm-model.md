@@ -2,7 +2,7 @@
 layout: post
 title: Non, votre API n'est pas REST !
 description: "Présentation de REST et du RMM"
-modified: 2015-07-15
+modified: 2015-10-20
 tags: [REST, JSON, XML, HTTP]
 image:
     feature: abstract-3.jpg
@@ -268,7 +268,7 @@ Il en va de même pour ceux qui confondent PATCH et GET. PATCH sert à envoyer u
 ![level 3]({{ site.url }}/images/articles/rest/level3.png)
 
 
-Ce dernier niveau introduit la notion ultime de REST : HATEOAS (<b>H</b>ypertext <b>A</b>s <b>T</b>he <b>E</b>ngine <b>O</b>f <b>A</b>pplication <b>S</b>tate). HATEOAS ou contrôles hypermedias rendent votre API auto-documentée. Ainsi vous pouvez passer d'un état à un autre via des URL transmises par l'API.  
+Ce dernier niveau introduit la notion ultime de REST : **HATEOAS** (<b>H</b>ypertext <b>A</b>s <b>T</b>he <b>E</b>ngine <b>O</b>f <b>A</b>pplication <b>S</b>tate). HATEOAS ou contrôles hypermedias rendent votre API auto-documentée. Ainsi vous pouvez passer d'un état à un autre via des URL transmises par l'API.  
 Quand vous êtes sur un site marchand et que vous souhaitez accéder à la fiche d'un produit, vous n'entrez pas l'url à la main. Vous cliquez sur un lien qui vous enverra vers cette dernière.  
 Dans une API REST, c'est pareil !
 
