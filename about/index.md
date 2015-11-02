@@ -9,7 +9,7 @@ modified: 2015-08-14
 
 ##Qui suis-je ?
 
-Je m'appelle **Maxence POUTORD**, 26ans et passionné d'informatique.  
+Je m'appelle **Maxence POUTORD**, 26 ans et passionné d'informatique.  
 Je suis intéressé par les architectures orientées services (services web, **REST**), la **sécurité** (aussi bien la sécurité informatique que la sécurité de l’information) sans oublier les enjeux liés aux tendances actuelles dans les DSI (BYOD, Cloud Computing, Big Data...).  
 
 En dehors de l’informatique, je m’intéresse également aux différentes formes de **communication**, à la cuisine, au cinéma (particulièrement le cinéma danois/canadien)...  
@@ -21,7 +21,7 @@ Je suis aussi motard ([Yamaha MT-03]({{ site.url }}/images/mt03.jpg)).
 
 L'objectif de ce blog est triple :  
 
-* Garder une trace de mes expériences. Comme tout développeur je teste beaucoup de choses... et j'en oublie beaucoup !
+* Garder une trace de mes expériences. Comme tout développeur je teste beaucoup de choses... et j'en oublie beaucoup ! ;)
 * Aller plus loin dans mes expérimentations. C'est souvent lorsque l'on essaye d'expliquer quelque chose que l'on se rend compte que l'on a pas tout compris.
 * Et pourquoi pas transmettre le savoir par la même occasion ! Après avoir tout appris des autres, quoi de plus normal que de transmettre le savoir à mon tour ?!
 
