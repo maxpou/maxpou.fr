@@ -3,18 +3,21 @@ layout: page
 title: Hello world !
 comments: false
 modified: 2015-08-14
+image:
+    feature: abstract-2.jpg
+    credit: dargadgetz
+    creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
 
 #Hello World !
 
 ##Qui suis-je ?
 
-Je m'appelle **Maxence POUTORD**, 26 ans et passionné d'informatique.  
-Je suis intéressé par les architectures orientées services (services web, **REST**), la **sécurité** (aussi bien la sécurité informatique que la sécurité de l’information) sans oublier les enjeux liés aux tendances actuelles dans les DSI (BYOD, Cloud Computing, Big Data...).  
+Je m'appelle **Maxence POUTORD**, 26 ans et passionné par le web.  
+Je suis principalement intéressé par tout ce qui touche de près ou de loin aux API (Web API, **REST**, linked data...), à Symfony2 et au JavaScript (aussi côté serveur).   
 
-En dehors de l’informatique, je m’intéresse également aux différentes formes de **communication**, à la cuisine, au cinéma (particulièrement le cinéma danois/canadien)...  
+En dehors de l’informatique, je m’intéresse également au **développement personnel**, aux différentes formes de **communication**, à la cuisine, au cinéma (particulièrement le cinéma danois/canadien)...  
 Je suis aussi motard ([Yamaha MT-03]({{ site.url }}/images/mt03.jpg)).
-
 
 
 ##Pourquoi ce blog ?

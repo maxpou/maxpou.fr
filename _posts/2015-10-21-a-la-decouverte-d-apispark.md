@@ -144,7 +144,7 @@ J'ai cherché comment avoir un design alternatif comme ceci :
 ## Conclusion
 
 APISpark est une plateforme très intéressante qui mérite le détour.
-Quelques fonctionnalités sont (ou semblent) absentes mais les principales sont là.  
+Quelques fonctionnalités sont (ou semblent) absentes, mais les principales sont là.  
 
 Je suis actuellement en train d'apprendre la <abbr title="MongoDB ExpressJS AngularJS NodeJS">stack MEAN</abbr>. J'ai choisi d'utiliser APISpark comme source de données et le résultat est plutôt satisfaisant. Le code source se trouve [sur mon répo Github (voir Step 2)](https://github.com/maxpou/mean-apispark-beer).
 
