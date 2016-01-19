@@ -11,19 +11,19 @@ image:
 
 # Productivité Ninja !
 
-Entre le [multitasking](https://fr.wikipedia.org/wiki/Multitasking), les mails pro, les notifications push sur votre téléphone (SMS, mail perso, Facebook, Twitter...), un collègue qui vient vous voir (votre voisin de bureau)...on a vite fait de procrastiner.
+Entre le [multitasking](https://fr.wikipedia.org/wiki/Multitasking), les mails pro, les notifications push sur votre téléphone (SMS, mail perso, Facebook, Twitter...), un collègue qui vient vous voir...on a vite fait de procrastiner au bureau.
 
-L'objectif de cet article est donc de vous faire un retour d'expérience sur la mise en œuvre de certaines techniques qui m'ont permis d'être plus productif dans la vie de tous les jours.
+L'objectif de cet article est donc de faire un retour d'expérience sur la mise en œuvre de certaines techniques, qui m'ont permis d'être plus productif dans la vie de tous les jours.
 
 
 ## Todo list
 
-Je commence toutes mes journées par le *stand-up*. Une réunion de 15' dans laquelle chacun dit ce qu'il a fait la veille, ce qu'il va faire dans la journée et évoque éventuellement ses points de blocage. Chaque matin pendant cette période, je note ce que je dis sur mon calepin. Enfin ce que je vais faire dans la journée. Car on a vite fait de s'éparpiller et d'oublier ses objectifs. Là, tout est écrit.
+En ce moment, je commence toutes mes journées par le *stand-up*. Une réunion de 15' dans laquelle chacun dit ce qu'il a fait la veille, ce qu'il va faire dans la journée et évoque éventuellement ses points de blocage. Chaque matin pendant cette période, je note ce que je dis sur mon calepin. Enfin ce que je vais faire dans la journée. Car on a vite fait de s'éparpiller et d'oublier ses objectifs. Là, tout est écrit.
 
 ![todo list]({{ site.url }}/images/articles/productivite-ninja/sponge-todo.gif)
 
 **TODO papier Vs. e-TODO :**
-Au début, j'ai essayé de réunir mes tâches dans un outil, développé par mes soins pour l'occasion. Puis, après avoir perdu le code source de cette petite application (si si...), j'ai utilisé des outils assez connus comme [Wunderlist](https://www.wunderlist.com/fr/) et [Todoist](https://todoist.com/android). Aucuns de ces outils ne m'a apporté satisfaction. Je suis donc passé à quelque chose d'encore plus basique, le combo magique : papier/crayon. C'est peut-être bête, mais le simple fait de rayer une tâche apporte une certaine satisfaction.  
+Au début, j'ai essayé de réunir mes tâches dans un outil, développé par mes soins pour l'occasion. Puis, après avoir perdu le code source de cette petite application (si si...), j'ai utilisé des outils assez connus comme [Wunderlist](https://www.wunderlist.com/fr/) et [Todoist](https://todoist.com/android). Aucuns de ces outils ne m'a apporté satisfaction. Je suis donc passé à quelque chose d'encore plus basique, le combo magique : papier/crayon. C'est peut-être bête, mais le simple fait de rayer une tâche m'apporte une certaine satisfaction.  
 Et puis, le problème avec les outils web, c'est qu'on a tendance à en rajouter...
 
 **Comment faire une bonne todo list ?**
@@ -39,7 +39,7 @@ Pourquoi cette todo list est mauvaise :
 * **Pas d'indications sur la durée des tâches** : Pour voir si votre liste est pertinente, il est primordial d'indiquer le temps passé pour chaque tâche. Pensez aussi à laisser de la place pour l'**imprévu**, en occupant votre journée à hauteur de 70% maximum.
 * **Gestion des priorités** : il est très important de séparer vos tâches en deux parties. Les tâches prioritaires et les secondaires. Mettez la vraie priorité de la journée tout en haut. C'est souvent ce genre de tâches que l'on a tendance à fuir. Si cette tâche est noyée dans plein d'autres, c'est un prétexte de plus pour ne pas la faire. En général, il faut garder les tâches les plus ardues pour le matin.  
 Un bon outil est la [matrice d'Eisenhower](https://fr.wikipedia.org/wiki/Matrice_d%27Eisenhower). Cette matrice va vous aider à prioriser vos tâches en fonction de son caractère urgent et/ou important.
-* **Tâches inutiles** : Twitter/Facebook, c'est du divertissement. Pas besoin de le noter pour y aller. Ça n'a rien à faire sur une todo list (à moins d'être community manager).
+* **Tâches inutiles** : Twitter/Facebook, c'est du divertissement. Pas besoin de le noter pour y aller. Ça n'a rien à faire sur une todo list (à moins d'être community manager !).
 * **Wording** : En un coup d'œil, vous devrez savoir où vous en êtes dans votre journée. Il faut donc être le plus bref possible et donc éviter les verbes d'action qui sont induits.
 
 Voici maintenant un 2e jet beaucoup plus pertinent :
@@ -92,9 +92,9 @@ Perturbations humaines : j'entends par là les *"Salut, tu peux me faire ça là
 
 ## Gestion des mails
 
-Mettons, nous d'accord. Un mail est **asynchrone**. Si vous voulez avertir d'un éventuel retard en réunion, si vous voulez une réponse dans la minute... et que vous utilsez le mail, c'est que vous vous trompez de canal de diffusion.
+Mettons, nous d'accord. Un mail est **asynchrone**. Si vous voulez avertir d'un éventuel retard en réunion, si vous voulez une réponse dans la minute... et que vous utilisez le mail, c'est que vous vous trompez de canal de diffusion.
 
-> “E-mail is causing a productivity crisis in the enterprise... it’s the silent corporate cancer”  
+> “L'email est à l'origine d'une crise de la productivité dans les entreprises... il est le cancer silencieux des entreprise”  
 — **Nancy FLYNN**
 
 Dans mon ancien boulot, ma boîte mail était ouverte en permanence en arrière-plan. Dès que je recevais un mail, j'arrêtais mon travail pour répondre presque au tac-o-tac. C'est bien, on se sent utile, mais côté productivité on est à la rue, car sans arrêt interrompu.
@@ -102,7 +102,7 @@ Dans mon ancien boulot, ma boîte mail était ouverte en permanence en arrière-
 La technique du pomodoro requière que l'on ne fasse qu'une activité en même temps. Il a donc fallu que je me planifie des *emails sessions*. Je consulte donc mes mails 3 fois par jour :
 
 * En fin de matinée sur le coup de 11H ;
-* En début d'après midi ;
+* En début d'après-midi ;
 * Avant de partir du boulot.
 
 A chaque fin de journée, mon objectif est d'atteindre le "[zéro inbox](https://www.linkedin.com/pulse/20130509153704-8628736-getting-to-inbox-zero)". Sinon ça s'accumule et pèse presque sur la conscience.
@@ -139,4 +139,7 @@ J'ai pensé à lui le lendemain en lisant le [résumé d'une conférence TED](ht
 
 Mises bouts à bouts, ces techniques ont considérablement améliorées ma productivité. Bon, je ne suis pas (encore ?) un Ninja de la productivité, mais j'y tends :-)
 
-L'idée de repenser ma façon de travailler m'est venu de cet [excellent article sur la productivité](https://medium.com/@kevintonon_/devenir-productif-mais-vraiment-il-est-temps-que-vous-le-fassiez-pour-votre-bien-%C3%AAtre-b82c85aea4b#.ea3b1oxq1) écrit par [Kévin TONON](https://twitter.com/KevinTONON_). C'est de là que tout a commencé.
+Plus de lecture sur le sujet :
+* [Devenir VRAIMENT productif (il est temps que vous le fassiez pour votre bien-être)](https://medium.com/@kevintonon_/devenir-productif-mais-vraiment-il-est-temps-que-vous-le-fassiez-pour-votre-bien-%C3%AAtre-b82c85aea4b#.ea3b1oxq1) écrit par [Kévin TONON](https://twitter.com/KevinTONON_). C'est de cet article que m'est venu l'idée de repenser ma façon de travailler.
+* [Getting To Inbox Zero](https://www.linkedin.com/pulse/20130509153704-8628736-getting-to-inbox-zero) par Randi ZUCKERBERG.
+* [Arrêtez d'insulter votre temps ! et celui des autres...](https://www.linkedin.com/pulse/arr%C3%AAter-dinsulter-votre-temps-et-celui-des-autres-manuel-diaz) par [Manuel DIAZ](https://twitter.com/manueldiaz)
