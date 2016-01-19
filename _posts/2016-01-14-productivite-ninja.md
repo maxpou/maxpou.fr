@@ -140,6 +140,7 @@ J'ai pensé à lui le lendemain en lisant le [résumé d'une conférence TED](ht
 Mises bouts à bouts, ces techniques ont considérablement améliorées ma productivité. Bon, je ne suis pas (encore ?) un Ninja de la productivité, mais j'y tends :-)
 
 Plus de lecture sur le sujet :
+
 * [Devenir VRAIMENT productif (il est temps que vous le fassiez pour votre bien-être)](https://medium.com/@kevintonon_/devenir-productif-mais-vraiment-il-est-temps-que-vous-le-fassiez-pour-votre-bien-%C3%AAtre-b82c85aea4b#.ea3b1oxq1) écrit par [Kévin TONON](https://twitter.com/KevinTONON_). C'est de cet article que m'est venu l'idée de repenser ma façon de travailler.
 * [Getting To Inbox Zero](https://www.linkedin.com/pulse/20130509153704-8628736-getting-to-inbox-zero) par Randi ZUCKERBERG.
 * [Arrêtez d'insulter votre temps ! et celui des autres...](https://www.linkedin.com/pulse/arr%C3%AAter-dinsulter-votre-temps-et-celui-des-autres-manuel-diaz) par [Manuel DIAZ](https://twitter.com/manueldiaz)
