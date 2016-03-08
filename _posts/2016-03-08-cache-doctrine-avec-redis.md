@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Utiliser Redis pour le cache de Doctrine
+title: Utiliser Redis pour stocker le cache Doctrine
 description: "Améliorer les performances de doctrine en utilisant son cache et en stockant les informations sur Redis"
 tags: ["Symfony", "Doctrine", "Redis"]
 image:
     feature: articles/doctrine-cache-redis/header.png
 ---
 
-# Utiliser Redis pour le cache de Doctrine
+# Utiliser Redis pour stocker le cache Doctrine
 
 > La meilleur requête est celle que l'on a pas à faire
 — **un inconnu**
