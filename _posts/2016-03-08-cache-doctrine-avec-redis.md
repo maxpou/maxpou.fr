@@ -1,20 +1,23 @@
 ---
 layout: post
-title: Utilisez Redis pour le cache Doctrine
-description: ""
+title: Utiliser Redis pour le cache de Doctrine
+description: "Améliorer les performances de doctrine en utilisant son cache et en stockant les informations sur Redis"
 tags: ["Symfony", "Doctrine", "Redis"]
 image:
-    feature: doctrine-cache-redis/header.png
+    feature: articles/doctrine-cache-redis/header.png
 ---
 
-# Utilisez Redis pour le cache Doctrine
+# Utiliser Redis pour le cache de Doctrine
+
+> La meilleur requête est celle que l'on a pas à faire
+— **un inconnu**
 
 Dans mon actuelle mission, nous développons une application sous Symfony2 avec Doctrine comme ORM.
 Voici grossièrement à quoi ressemble l'architecture globale :
 
 ![architecture globale]({{ site.url }}/images/articles/doctrine-cache-redis/architecture.png)
 
-Comme vous le voyez, l'application est dédoublée sur deux serveur distincts qui ont interdiction de se parler, en dehors de la base de données. Nous avons été confrontés à des problématiques de performances qui nous a contraint d'utiliser le **cache de Doctrine**.
+Comme vous le voyez, l'application est dédoublée sur deux serveurs distincts qui ont interdiction de se parler, en dehors de la base de données. Nous avons été confrontés à des problématiques de performances qui nous a contraint d'utiliser le **cache de Doctrine**.
 
 Il faut savoir qu'il y a [3 types de cache pour Doctrine](http://doctrine-orm.readthedocs.org/en/latest/reference/caching.html) :
 
@@ -71,6 +74,7 @@ composer require predis/predis ^1.0
 Et on modifie le app/AppKernel.php:
 
 {% highlight php %}
+<?php
 public function registerBundles()
 {
     $bundles = array(
@@ -129,9 +133,10 @@ A ce stade, seuls les caches de metadata et de query sont opérationnels. Pour l
 
 ## Mettre en cache le résultat
 
-Terminé les requêtes inlines dans les controllers ! Vous allez devoir utiliser le <abbr title="Doctrine Query Language">DQL</abbr> ou le QueryBuilder.
+Terminé les requêtes *inlines* dans les controllers ! Vous allez désormais devoir utiliser le <abbr title="Doctrine Query Language">DQL</abbr> ou le QueryBuilder.
 
 {% highlight php %}
+<?php
 public function findBeers()
 {
     $query = $this->getEntityManager()
@@ -141,8 +146,7 @@ public function findBeers()
     ;
 
     $query->useResultCache(true);
-    //3600sec = 1 hour
-    $query->setResultCacheLifetime(3600);
+    $query->setResultCacheLifetime(3600); //3600sec = 1 hour
 
     return $query->getResult();
 }
@@ -158,10 +162,10 @@ Voici ce que l'on va avoir :
 2) "[809cd863587594a754a7ffda5c2c06ee4640ebe3][1]"
 {% endhighlight %}
 
-La première ligne va contenir les métadonnées de la classe. La seconde la requête **et** son résultat.
+La première ligne va contenir les métadonnées de la classe Beer. La seconde, contiendra la requête **et** son résultat.
 Si vous voulez avoir une clé un peu plus digeste, vous pouvez utiliser cette méthode `$query->setResultCacheId('my_wonderful_key');` ou même faire **1 pierre 3 coups** : `$query->useResultCache(true, 3600, 'my_wonderful_key');`.
 
-Voici ce que nous aurons :
+Voici ce que nous aurons : (je n'ai pas réussi à supprimer le `[1]`)
 
 {% highlight PowerShell %}
 > KEYS *
@@ -240,6 +244,7 @@ beer_listener:
 Et enfin l'annotation sur l'entity :
 
 {% highlight php %}
+<?php
 /**
  * Beer
  *
@@ -253,11 +258,11 @@ class Beer implements BeerInterface
 {% endhighlight %}
 
 Les plus pointilleux d'entre vous auront remarqués que je redéfini le TTL de ma clef au lieu de la supprimer. En effet, si je supprime ma clef, la nouvelle clef créée sera `[beers_all][2]`. Et le compteur augmentera ainsi de suite...  
-Avec cette technique <s>de fainéant</s>, on garde la main sur le nom de la clef qui sera toujours `[beers_all][1]`. Ce qui m'évite de faire des recherches.
+Avec cette technique <s>de fainéant</s>, on garde la main sur le nom de la clef qui sera toujours `[beers_all][1]`.
 
 ## Pour aller plus loin
 
-* Tutoriel/Sandbox Redis : http://try.redis.io/
+* Tutoriel/Sandbox Redis : [http://try.redis.io](http://try.redis.io)
 * [2e niveau de cache de Doctrine (encore à l'état expérimental)](http://doctrine-orm.readthedocs.org/projects/doctrine-orm/en/latest/reference/second-level-cache.html)
 
 ## Tips

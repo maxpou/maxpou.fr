@@ -1,3 +1,10 @@
+---
+layout: post
+title: Elasticsearch
+description: ""
+tags: ["Elasticsearch", "Symfony", "PHP"]
+---
+
 # Elasticsearch
 
 Elasticsearch est un moteur de recherche libre et open source (licence Apache) basé sur la librairie Lucene. Cette dernière, développée par la fondation Apache, permet de rechercher et d'indexer du texte.
