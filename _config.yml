@@ -4,8 +4,8 @@ disqus_shortname: maxpou
 reading_time:     false
 words_per_minute: 240
 # Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
-#url:              http://scotch.local:4000
-url:              http://www.maxpou.fr
+url:              http://scotch.local:4000
+# url:              http://www.maxpou.fr
 
 # Owner/author information
 owner:
@@ -35,10 +35,13 @@ bing_verify:
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Europe/Paris
 future:      true
-highlighter: pygments
+highlighter: rouge
 markdown:    kramdown
 gems:
+gems:
   - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-gist
 sass:
   sass_dir: _sass
   style: compressed
@@ -54,7 +57,7 @@ kramdown:
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
-  use_coderay: true
+  enable_coderay: false
 
   coderay:
     coderay_line_numbers: nil
