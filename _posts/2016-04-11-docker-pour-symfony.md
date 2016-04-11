@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Docker dans l'écosystème Symfony
+title: Une stack Docker pour votre application Symfony
 description: ""
 tags: ["Docker", "Symfony", "PHP"]
 image:
@@ -9,7 +9,7 @@ image:
 
 TL;DR : [Répo Github du projet](https://github.com/maxpou/docker-symfony)
 
-# Docker dans l'écosystème Symfony
+# Une stack Docker pour votre application Symfony
 
 Je développe des applications web depuis quelques temps sur une stack [Vagrant que j'ai un peu pimpé](https://github.com/maxpou/scotch-box). Bosser sur une VM est vraiment plus agréable/malléable qu'un WAMP. Cependant, cette solution si miraculeuse soit-elle a aussi ses inconvénients.
 
