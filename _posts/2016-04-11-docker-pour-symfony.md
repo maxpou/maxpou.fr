@@ -3,6 +3,8 @@ layout: post
 title: Docker dans l'écosystème Symfony
 description: ""
 tags: ["Docker", "Symfony", "PHP"]
+image:
+    feature: articles/symfony-docker/bg-intro.jpg
 ---
 
 TL;DR : [Répo Github du projet](https://github.com/maxpou/docker-symfony)
@@ -193,7 +195,7 @@ Accédez à votre application sur [symfony.dev](http://symfony.dev/) pour voir v
 
 Le code source est sur mon répo GitHub : https://github.com/maxpou/docker-symfony  
 
-Et voilà pour aujourd'hui !  
+C'est tout pour aujourd'hui !  
 J'ai écrit ce billet après avoir passé une semaine à temps plein sur Docker. J'ai essayé de suivre au maximum les [Best Practices de Docker](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/).
 
 ## Boîte à outils
