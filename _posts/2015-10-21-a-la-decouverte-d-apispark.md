@@ -107,40 +107,6 @@ La modification partielle d'une ressource via la méthode PATCH n'est pas géré
 
 Il faudra attendre une version future de la plateforme pour atteindre le saint graal d'une API REST et faire plaisir au papa de REST :'-(
 
-### Design de la ressource
-
-Dans l'exemple précédent, j'ai dessiné une API avec des entités reliées entre elles (relation de type 1-1). Si je requête sur un utilisateur, voici ce que ça va m'afficher :
-
-{% highlight javascript %}
-// GET /contacts/6ca87680-6363-11e5-8997-49a8ffa9b046
-
-{
-  "id": "6ca87680-6363-11e5-8997-49a8ffa9b046",
-  "firstName": "C-3PO",
-  "lastName": null,
-  "age": null,
-  "sex": "dd9bd7e1-635b-11e5-8997-49a8ffa9b046"
-}
-{% endhighlight %}
-
-J'ai cherché comment avoir un design alternatif comme ceci :
-
-{% highlight javascript %}
-//GET /contacts/6ca87680-6363-11e5-8997-49a8ffa9b046
-
-{
-  "id": "6ca87680-6363-11e5-8997-49a8ffa9b046",
-  "firstName": "C-3PO",
-  "lastName": null,
-  "age": null,
-  "sex": {
-    "id":"dd9bd7e1-635b-11e5-8997-49a8ffa9b046",
-    "label":"droid"
-  }
-}
-{% endhighlight %}
-
-
 ## Conclusion
 
 APISpark est une plateforme très intéressante qui mérite le détour.
