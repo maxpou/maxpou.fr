@@ -3,7 +3,11 @@ layout: page
 title: Projets
 description: "Projet personnels open-source"
 share: true
+image:
+    feature: articles/opensource/bg.png
 ---
+
+([english version](/project/en/))
 
 # Projets personnels open-source
 

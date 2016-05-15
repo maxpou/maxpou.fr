@@ -26,6 +26,10 @@ If you find a typo, pull request are welcome. Thank you so much!
     docker run --rm -v $PWD:/site -p 4000:4000 maxpou/maxpou.github.io -H 0.0.0.0 --draft
     ```
 
-3. Retrieve IP adress: `docker inspect -f '{{ .NetworkSettings.IPAddress }}' $(docker ps -f ancestor=maxpou/maxpou.github.io -q)`
+3. Retrieve IP adress:
+
+  ```
+  docker inspect -f '{{ .NetworkSettings.IPAddress }}' $(docker ps -f ancestor=maxpou/maxpou.github.io -q)
+  ```
 
 4. Visit `http://<ipAdress>:4000`

@@ -4,23 +4,23 @@ title: Hello world !
 comments: false
 modified: 2015-08-14
 image:
-    feature: abstract-2.jpg
+    feature: helloworld.jpg
     credit: dargadgetz
     creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
 
-#Hello World !
+# Hello World !
 
-##Qui suis-je ?
+## Qui suis-je ?
 
-Je m'appelle **Maxence POUTORD**, 26 ans et passionné par le web.  
-Je suis principalement intéressé par tout ce qui touche de près ou de loin aux API (Web API, **REST**, linked data...), à Symfony2 et au JavaScript (aussi côté serveur).   
+Je m'appelle **Maxence POUTORD**, un curieux de 27ans, passionné par le web et qui aime comprendre ce qu'il fait.  
+Je m'intéresse à tout ce qui touche de près ou de loin aux applications web. Que ce soit par leurs architectures, leurs interactions entre elles, sans oublier les humains qui les produisent et les consomment.  
 
 En dehors de l’informatique, je m’intéresse également au **développement personnel**, aux différentes formes de **communication**, à la cuisine, au cinéma (particulièrement le cinéma danois/canadien)...  
 Je suis aussi motard ([Yamaha MT-03]({{ site.url }}/images/mt03.jpg)).
 
 
-##Pourquoi ce blog ?
+## Pourquoi ce blog ?
 
 L'objectif de ce blog est triple :  
 
@@ -29,7 +29,7 @@ L'objectif de ce blog est triple :
 * Et pourquoi pas transmettre le savoir par la même occasion ! Après avoir tout appris des autres, quoi de plus normal que de transmettre le savoir à mon tour ?!
 
 
-##Contact
+## Contact
 
 Si vous le souhaitez, vous pouvez me contacter via :
 

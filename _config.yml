@@ -4,7 +4,7 @@ disqus_shortname: maxpou
 reading_time:     false
 words_per_minute: 240
 # Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
-# url:              http://scotch.local:4000
+# url:              http://172.17.0.2:4000
 url:              http://www.maxpou.fr
 
 # Owner/author information
@@ -67,4 +67,4 @@ kramdown:
     coderay_css: class
 
 include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "vendor"]
+exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "vendor", "Dockerfile"]

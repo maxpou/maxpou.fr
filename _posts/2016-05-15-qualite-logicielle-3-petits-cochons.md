@@ -1,7 +1,7 @@
 ---
 layout: post
 title: La qualité logicielle et les trois petits cochons
-description: ""
+description: "Un comparatif entre le conte pour enfants et la qualité logicielle"
 tags: ["Qualité logicielle", "Gestion de projet"]
 image:
     feature: articles/software-quality-3-little-pigs/intro.jpg
@@ -29,16 +29,16 @@ Voilà pour l'histoire.
 
 Pour ne pas se faire dévorer, notre premier cochon aurait pu construire une 2e maison en paille pour s'y abriter le temps que le loup reprenne son souffle. Il aurait pu aussi essayer de mettre des rustines... Mais vous vous imaginez bien, qu'à force, il aurait dépensé plus de temps et donc d'énergie à maintenir sa maison debout que le 3e.
 
-Revenons maintenant à nos moutons... euh non, à nos cochons ! Pour faire le rapprochement, on va dire que les 3 petits cochons sont des développeurs et le grand méchant loup est un mixte entre : la dette technique, les bugs, votre concurrent qui veut vous piquer le projet...  
+Revenons maintenant à nos moutons... euh non, à nos cochons ! Pour faire le rapprochement, on va dire que les 3 petits cochons sont des développeurs et le grand méchant loup est un mixte entre : la dette technique, les bugs, un client concurrent...  
 A l'instar des petits cochons, nous développeurs, sommes aussi des constructeurs. Nous bâtissons des applications avec plus ou moins de soins et ce, en plus ou moins de temps. Et enfin, nous ne sommes pas sans savoir que le grand méchant loup rôde dans les parages.  
 
-**Quoi que l'on fasse, il va chercher à venir nous manger.**  
+**Quoi que l'on fasse, il va va chercher par tous les moyens à venir nous manger.**  
 
 ![Velocité, temps et qualité]({{ site.url }}/images/articles/software-quality-3-little-pigs/velocity-time-quora.png)
 
 Et bien dites-vous qu'en terme de qualité logicielle, c'est exactement pareil. Si vous n'en avez rien à faire de la qualité de votre code, votre application sera de moins en moins maintenable. Et, viendra un moment où vos devis atteindront de tels sommets, que vous aurez perdu toute crédibilité auprès de votre client. Alors, certes on peut avoir l'impression que le développeur est bon parce qu'il enchaîne les tickets. Mais, dites-vous bien, que vous ne voyez probablement que le sommet de l'iceberg.
 
-## Les clefs du succès
+## Les clefs du succès (ou plutôt quelques-unes)
 
 > Codez toujours en pensant que la personne qui maintiendra votre code est un violent psychopathe qui sait où vous habitez.  
 — **Martin Golding**
@@ -54,7 +54,7 @@ Si vous doutez encore, rappelez-vous ce que disait Leonardo da Vinci : *"La simp
 * **YAGNI** *(You Ain't Gonna Need It/Vous n'en aurez pas besoin)* Si la fonctionnalité n'est pas dans les specs ça ne sert à rien de la rajouter. L'objectif principal est de faire ce que vous avez à faire et dans les temps. S'il y a du temps en plus, blindez plutôt vos tests.  
 Se dire que ça servira plus tard est une erreur à mon sens. Le développeur passera du temps à développer, maintenir, tester et documenter une fonctionnalité non demandée, sans doute inutile et en plus sur un temps imputé au projet. Si votre application est parfaite, sans bugs... pourquoi pas jouer Madame Irma. Sinon vous tendez une belle perche à votre client pour qu'il vous décrédibilise.
 
-Maintenir un code de qualité est un travail qui se fait quotidiennement. Si vous laissez une qualité médiocre s'installer, le développeur va moins prendre soin de l'application. On appelle aussi ça la **[théorie de la vitre brisée](https://fr.wikipedia.org/wiki/Hypoth%C3%A8se_de_la_vitre_bris%C3%A9e)**. Pour y remédier, appliquez la règle du boy scout : *"laissez la place plus propre que ce que vous avez trouvé"*.  
+Maintenir un code de qualité est un travail qui se fait quotidiennement. Si vous laissez une qualité médiocre s'installer, le développeur va moins prendre soin de l'application. On appelle aussi ça la **[théorie de la vitre brisée](https://fr.wikipedia.org/wiki/Hypoth%C3%A8se_de_la_vitre_bris%C3%A9e)**. Pour y remédier, appliquez la règle du boy scout, à savoir : *"laissez la place plus propre que ce que vous avez trouvé"*.  
 
 Enfin, n'oublions pas les méthodologies de travail agiles telles que les code reviews, le pair programming...
 
@@ -88,13 +88,13 @@ $this->client->request('GET', '/api/search/google?mock=serverKo');
 $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
 ```
 
-Là, parce que le développeur n'a pas réussi à passer dans un if/else, le code a été adapté pour passer les tests. Le développeur a dû modifier *a posteriori* son code pour mocker le résultat et donc que la couverture soit à 100%.
+Là, parce que le développeur n'a pas réussi à passer dans un if/else, le code a été adapté pour passer les tests. Le développeur a dû modifier *a posteriori* son code pour mocker le résultat et donc que la couverture soit à 100%. Tout ça pour envisager le cas de figure où un serveur de Google tombe...
 
 C'est quand j'ai vu ceci que j'ai réalisé que l'**objectif de 100% de couverture de code ne nous garantissait rien du tout**.
 
 > Tester : oui, mais pas comme un con !  
-— **Moi**
+— **Moi :-)**
 
 Ma conclusion personnelle : il vaut mieux tester à fond les fonctionnalités clés de l'application et laisser de côté celles qui sont annexes, plutôt que de faire semblant de tester pour dire que l'on fait des tests.
 
-Si vous ne devez retenir qu'une seule chose : le grand méchant loup n'est pas loin, et il a faim :)
+Si vous ne devez retenir qu'une seule chose : le grand méchant loup sera toujours là, et il est toujours affamé !
