@@ -10,9 +10,9 @@ image:
     creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
 
-#Mémo - Commandes Symfony2
+# Mémo - Commandes Symfony2
 
-##Prérequis
+## Prérequis
 Il faut que la console point sur le répertoire du projet.
 La commande php app/console –s permet de ne plus écrire « php app/console ». Il est donc possible de créer un fichier .bat composé de la sorte :  
 `cd c:\wamp\www\projet`  
@@ -22,7 +22,7 @@ Note :
 
 * Parfois les commandes ne marchent pas très bien. Repasser en console classique ou relancer le bat.
 
-##Commandes Composer
+## Commandes Composer
 
 ### Rappel
 Composer trouve les bibliothèques sur [packagelist.org](https://packagist.org).
@@ -100,12 +100,15 @@ Note :
 Note : il faut que la base soit existante.
 
 Mettre à jour la BDD
-`php app/console doctrine:schema:update --dump-sql`  
-`php app/console doctrine:schema:update –-force`
+
+```
+php app/console doctrine:schema:update --dump-sql  
+php app/console doctrine:schema:update –-force
+```
 
 Note : `--dump-sql` pour voir le code sql et `--force` pour l’exécuter
 
-###Générer un formulaire
+### Générer un formulaire
 `php app/console doctrine:generate:form AcmeStoreBundle:Product`
 
 ### Supprimer le contenu de la BDD (purge)
@@ -127,11 +130,13 @@ Note :
 * [Information supplémentaires](http://symfony.com/doc/2.0/bundles/SensioGeneratorBundle/commands/generate_doctrine_crud.html)
 * Penser à rajouter la route principale de l’entity dans le routing.yml du bundle (les 3 lignes de routage sont écrites dans la console)
 
-Générer des entités à partir d'une base de données  
-`php app/console doctrine:mapping:convert --from-database  
-yml src/MyApplication/MyBundle/Resources/config/doctrine/metadata/orm`  
-`php app/console doctrine:mapping:import "MyApplicationMyBundle" yml`  
-`php app/console doctrine:generate:entities "MyApplicationMyBundle"`
+Générer des entités à partir d'une base de données :  
+
+```
+php app/console doctrine:mapping:convert --from-database yml src/MyApplication/MyBundle/Resources/config/doctrine/metadata/orm  
+php app/console doctrine:mapping:import "MyApplicationMyBundle" yml  
+php app/console doctrine:generate:entities "MyApplicationMyBundle"
+```
 
 Note :
 
@@ -139,12 +144,12 @@ Note :
 * Il faut obligatoirement une clé primaire dans la table
 
 
-##FOSUserBundle
+## FOSUserBundle
 
-###Création d’utilisateurs
+### Création d’utilisateurs
 
 `php app/console fos:user:create`
 
-###Promouvoir un utilisateur
+### Promouvoir un utilisateur
 
 `php app/console fos:user:promote testuser ROLE_ADMIN`
