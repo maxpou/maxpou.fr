@@ -53,11 +53,11 @@ Détail des conteneurs :
 ```yml
 # docker-compose.yml
 application:
-   build: code
-   volumes:
-       - ./symfony:/var/www/symfony
-       - ./logs/symfony:/var/www/symfony/app/logs
-   tty: true
+    build: code
+    volumes:
+        - ./symfony:/var/www/symfony
+        - ./logs/symfony:/var/www/symfony/app/logs
+    tty: true
 db:
     image: mysql
     ports:
@@ -65,11 +65,11 @@ db:
     environment:
         MYSQL_ROOT_PASSWORD: root
         MYSQL_DATABASE: symfony
-        MYSQL_USER: root
+        MYSQL_USER: user
         MYSQL_PASSWORD: root
 redis:
-    image: redis:alpine  
-    ports:
+  image: redis:alpine
+  ports:
       - 6379:6379
 php:
     build: php7-fpm
@@ -91,16 +91,16 @@ nginx:
     volumes:
         - ./logs/nginx/:/var/log/nginx
 elk:
-  image: willdurand/elk
-  ports:
-    - 81:80
-  volumes:
-    - ./elk/logstash:/etc/logstash
-    - ./elk/logstash/patterns:/opt/logstash/patterns
-  volumes_from:
-    - application
-    - php
-    - nginx
+    image: willdurand/elk
+    ports:
+        - 81:80
+    volumes:
+        - ./elk/logstash:/etc/logstash
+        - ./elk/logstash/patterns:/opt/logstash/patterns
+    volumes_from:
+        - application
+        - php
+        - nginx
 ```
 
 
@@ -119,8 +119,9 @@ VOLUME /var/www/symfony
 # nginx/Dockerfile
 FROM debian:jessie
 
-RUN \
-    apt-get update && apt-get install -y \
+MAINTAINER Maxence POUTORD <maxence.poutord@gmail.com>
+
+RUN apt-get update && apt-get install -y \
     nginx
 
 ADD nginx.conf /etc/nginx/
@@ -144,9 +145,11 @@ EXPOSE 443
 # See https://github.com/docker-library/php/blob/4677ca134fe48d20c820a19becb99198824d78e3/7.0/fpm/Dockerfile
 FROM php:7.0-fpm
 
+MAINTAINER Maxence POUTORD <maxence.poutord@gmail.com>
+
 RUN \
     apt-get update && apt-get install -y \
-    git
+    git \
     unzip
 
 # Install Composer
