@@ -11,7 +11,7 @@ url:              http://www.maxpou.fr
 owner:
   name:           Maxence POUTORD
   avatar:         avatar.jpg
-  bio:            "Apprenant à vie. Passionné par le web (REST, Symfony2 et JavaScript). Motard."
+  bio:            "Apprenant à vie. Passionné par le web. Motard."
   email:          maxence.poutord@gmail.com
   # Social networking links used in footer. Update and remove as you like.
   twitter:        _maxpou
@@ -37,7 +37,6 @@ timezone:    Europe/Paris
 future:      true
 highlighter: rouge
 markdown:    kramdown
-gems:
 gems:
   - jekyll-sitemap
   - jekyll-paginate
