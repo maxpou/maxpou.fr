@@ -1,18 +1,18 @@
 ---
 layout: post
-title: test
+title: Vagrant, Symfony and Windows are not incompatibles
 description: "en"
 tags: ["Symfony2", "CLI", "PHP"]
 lang: en
 image:
-    feature: abstract-1.jpg
+    feature: articles/vagrant-windows/header.png
     credit: dargadgetz
     creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
 
 # Vagrant, Symfony and Windows are not incompatibles
 
-At work, I'm using Vagrant on my Windows 10 because Docker really sucks :(
+At work, I'm using Vagrant on my Windows 10 because Docker really sucks on windows :(  
 So after promote [PuPHPet](https://puphpet.com/), I'm now using [Scotch Box](https://box.scotch.io/).
 
 In a few words, this is some features already in this box:
@@ -26,13 +26,13 @@ In a few words, this is some features already in this box:
 * ...
 
 It is a good base.  
-For my needs, I pimp this box (take a look on [my fork](https://github.com/maxpou/scotch-box)). I found it pretty cool on my own linux... but on my Windows, it's **really SLOW!**
+For my needs, I pimp this box (take a look on [my fork (on GitHub)](https://github.com/maxpou/scotch-box)). I found it pretty cool on my own linux... but on my Windows, it's **really SLOW!**
 
 ![]({{ site.url }}/images/articles/vagrant-windows/snail-1.gif)
 
 *Before: running a Symfony app into a Vagrant box*
 
-Here is some tip's to speed up your machine.
+Here is some tip's to speed up your application.
 
 
 ## First step: Install plugins
@@ -58,16 +58,16 @@ With this config I switch **from ~16s to ~4s for a page to load**.
 
 In my case PHP7 really decrease page loading time. Be careful, installing PHP7 will remove php5.
 
-1. Update package list
+**1. Update package list**
 
-    ```sh
+    {% highlight PowerShell %}
     sudo apt-get install python-software-properties
     sudo LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
-    ```
+    {% endhighlight %}
 
-2. Install PHP7 and remove PHP5
+**2. Install PHP7 and remove PHP5**
 
-    ```sh
+    {% highlight PowerShell %}
     sudo apt-get update
     sudo apt-get purge php5-common -y
     sudo apt-get install -y \
@@ -78,21 +78,21 @@ In my case PHP7 really decrease page loading time. Be careful, installing PHP7 w
         && libapache2-mod-php7.0 \
         && php7.0-mbstring
     sudo apt-get --purge autoremove -y
+    {% endhighlight %}
+
+**3. Set timezone (i.e. date.timezone = Europe/Paris)**
+
     ```
-
-3. Set timezone (i.e. date.timezone = Europe/Paris)
-
-    ```sh
     sudo vi /etc/php/7.0/cli/php.ini
     sudo vi /etc/php/7.0/apache2/php.ini
     ```
 
-4. Restart apache service
+**4. Restart apache service**
 
-    ```sh
-    sudo a2enmod php7.0
-    sudo service apache2 restart
-    ```
+```
+sudo a2enmod php7.0
+sudo service apache2 restart
+```
 
 Now my app **run in ~2s**.
 
@@ -127,7 +127,7 @@ public function getLogDir()
 }
 ```
 
-If you need, here is some aliases
+If you need, here is some aliases to help you.
 
 ```sh
 # Remove cache
@@ -137,7 +137,7 @@ alias cplogs='cp -R /dev/shm/application-name/logs /var/www/application-name/pub
 ```
 
 
-Tadaaaa! Some hundred milliseconds ♥ (I also add some SQL request to MySQL... just for fun).
+And... tadaaaa! It took Some hundred milliseconds ♥ (I also add some SQL request to MySQL... just for fun).
 
 ![step 3]({{ site.url }}/images/articles/vagrant-windows/3.png)
 
