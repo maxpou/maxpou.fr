@@ -7,6 +7,9 @@ image:
     feature: articles/symfony-docker/bg-intro.jpg
 ---
 
+> [05/07/2016] : màj du docker-compose (suppression conteneur code+alias) + màj schéma + ajout PHPMyAdmin + simplification toolbox.  
+Un grand merci à tous ceux qui m'ont fait des retours ♥
+
 TL;DR : [Répo Github du projet](https://github.com/maxpou/docker-symfony)
 
 # Une stack Docker pour votre application Symfony
@@ -29,13 +32,13 @@ Lors de mes premières expériences avec Docker, j'étais parti sur un méga-con
 *(ma première expérience avec Docker)*
 
 
-## 1 application = 1 conteneur
+## 1 application (process) = 1 conteneur
 
 A l'occasion du [3e anniversaire de Docker](https://github.com/docker/docker-birthday-3), j'ai vraiment vu l'intérêt de cet outil. Sans doutes, parce que le TP était plus pertinent que bon nombre d'articles sur la toile. Il faut donc lancer un process par conteneur. Le tout se fera avec docker-compose, qui jouera le rôle de chef d'orchestre de tous mes conteneurs.  
 
 Voici l'objectif vers lequel je souhaite tendre :
 
-![]({{ site.url }}/images/articles/symfony-docker/schema.png)
+![]({{ site.url }}/images/articles/symfony-docker/schema-v2.png)
 
 Détail des conteneurs :
 
@@ -52,68 +55,57 @@ Détail des conteneurs :
 
 ```yml
 # docker-compose.yml
-application:
-    build: code
-    volumes:
-        - ./symfony:/var/www/symfony
-        - ./logs/symfony:/var/www/symfony/app/logs
-    tty: true
-db:
-    image: mysql
-    ports:
-        - 3306:3306
-    environment:
-        MYSQL_ROOT_PASSWORD: root
-        MYSQL_DATABASE: symfony
-        MYSQL_USER: user
-        MYSQL_PASSWORD: root
-redis:
-  image: redis:alpine
-  ports:
-      - 6379:6379
-php:
-    build: php7-fpm
-    ports:
-        - 9000:9000
-    volumes_from:
-        - application
-    links:
-        - db
-        - redis
-nginx:
-    build: nginx
-    ports:
-        - 80:80
-    links:
-        - php
-    volumes_from:
-        - application
-    volumes:
-        - ./logs/nginx/:/var/log/nginx
-elk:
-    image: willdurand/elk
-    ports:
-        - 81:80
-    volumes:
-        - ./elk/logstash:/etc/logstash
-        - ./elk/logstash/patterns:/opt/logstash/patterns
-    volumes_from:
-        - application
-        - php
-        - nginx
+version: '2'
+
+services:
+    db:
+        image: mysql
+        ports:
+            - 3306:3306
+        volumes:
+            - "./.data/db:/var/lib/mysql"
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+    redis:
+        image: redis:alpine
+        ports:
+            - 6379:6379
+    php:
+        build: php7-fpm
+        ports:
+            - 9000:9000
+        links:
+            - db:mysqldb
+            - redis
+        volumes:
+            - chemin/vers/votre/app/symfony:/var/www/symfony
+            - ./logs/symfony:/var/www/symfony/app/logs
+    nginx:
+        build: nginx
+        ports:
+            - 80:80
+        links:
+            - php
+        volumes_from:
+            - php
+        volumes:
+            - ./logs/nginx/:/var/log/nginx
+    elk:
+        image: willdurand/elk
+        ports:
+            - 81:80
+        volumes:
+            - ./elk/logstash:/etc/logstash
+            - ./elk/logstash/patterns:/opt/logstash/patterns
+        volumes_from:
+            - php
+            - nginx
 ```
 
 
-La 5e et 6e ligne du fichier indique qu'il y a un mapping de volumes. Il faudra donc créer deux répertoires symfony et logs à la racine. Dans le répertoire "symfony" se trouvera votre application symfony (et non pas un répertoire contenant l'application).
+La 22 et 23e ligne du fichier (*services.php.volumes*) indiquent qu'il y a un mapping de volumes. Il vous faudra donc indiquer le chemin (absolu ou relatif) vers l'application Symfony. Le répertoire de logs se construiera tout seul comme un grand.
 
-3 composantes du docker-compose n'étant pas des images, il faut donc construire les Dockerfiles.
-
-```bash
-# code/Dockerfile
-FROM debian:jessie
-
-VOLUME /var/www/symfony
-```
+2 composantes du docker-compose n'étant pas des images, il faut donc construire les Dockerfiles.
 
 ```bash
 # nginx/Dockerfile
@@ -142,13 +134,11 @@ EXPOSE 443
 
 ```bash
 # php7-fpm/Dockerfile
-# See https://github.com/docker-library/php/blob/4677ca134fe48d20c820a19becb99198824d78e3/7.0/fpm/Dockerfile
 FROM php:7.0-fpm
 
 MAINTAINER Maxence POUTORD <maxence.poutord@gmail.com>
 
-RUN \
-    apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y \
     git \
     unzip
 
@@ -163,6 +153,10 @@ RUN "date"
 
 # Type docker-php-ext-install to see available extensions
 RUN docker-php-ext-install pdo pdo_mysql
+
+RUN echo 'alias sf="php app/console"' >> ~/.bashrc
+
+WORKDIR /var/www/symfony
 ```
 
 Il faut garder à l'esprit que les images se doivent d'être les plus petites possibles. Il ne faut installer que ce qui est nécessaire (le apt-get clean est [implicite sur les debian](https://github.com/docker/docker/blob/03e2923e42446dbb830c654d0eec323a0b4ef02a/contrib/mkimage/debootstrap#L82-L105)).  
@@ -174,7 +168,6 @@ Vous pouvez vérifier avec la commande docker-compose ps (tout doit-être à Up)
 $ docker-compose ps
            Name                          Command               State              Ports            
 --------------------------------------------------------------------------------------------------
-dockersymfony_application_1   /bin/bash                        Up                                  
 dockersymfony_db_1            /entrypoint.sh mysqld            Up      0.0.0.0:3306->3306/tcp      
 dockersymfony_elk_1           /usr/bin/supervisord -n -c ...   Up      0.0.0.0:81->80/tcp          
 dockersymfony_nginx_1         nginx                            Up      443/tcp, 0.0.0.0:80->80/tcp
@@ -182,13 +175,22 @@ dockersymfony_php_1           php-fpm                          Up      0.0.0.0:9
 dockersymfony_redis_1         /entrypoint.sh redis-server      Up      0.0.0.0:6379->6379/tcp      
 {% endhighlight %}
 
-Pour remplir le fichier de paramétrage de l'application, il faudra connaitre les IP des conteneurs de base de données avec la commande ci-dessous :
+Maintenant, vous allez devoir retrouver l'IP associée au conteneur NGINX et modifier votre fichier hosts :
 
 ```bash
-$ docker inspect --format '{{ .NetworkSettings.IPAddress }}' $(docker ps -f name=db -q)
+$ docker inspect --format '{{ .NetworkSettings.IPAddress }}' $(docker ps -f name=nginx -q)
+# unix seulement (sur Windows, modifier ce fichier C:\Windows\System32\drivers\etc\hosts)
+$ sudo echo "171.17.0.1 symfony.dev" >> /etc/hosts
 ```
 
-*Pour Redis, il faudra remplacer 'db' par 'redis'*. Cette même commande vous permettra aussi de connaitre l'IP à mettre dans le host (/etc/hosts).
+Vous devrez aussi modifier le fichier parameters.yml de votre application :
+
+```yml
+# path/to/sfApp/app/config/parameters.yml
+parameters:
+    redis_host: redis
+    database_host: mysqldb
+```
 
 Et voilà !  
 
@@ -196,26 +198,44 @@ Et voilà !
 
 Accédez à votre application sur [symfony.dev](http://symfony.dev/) pour voir votre application et sur [symfony.dev:81](http://symfony.dev:81/) pour consulter les logs avec Kibana.  
 
-Le code source est sur mon répo GitHub : https://github.com/maxpou/docker-symfony  
+**Le code source est sur mon répo GitHub** : https://github.com/maxpou/docker-symfony  
 
-C'est tout pour aujourd'hui !  
-J'ai écrit ce billet après avoir passé une semaine à temps plein sur Docker. J'ai essayé de suivre au maximum les [Best Practices de Docker](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/).
+## Et je veux mon PHPMyAdmin moi !
+
+C'est très simple, il suffit d'ajouter ceci à votre fichier docker-compose :
+
+```yml
+phpmyadmin:
+   image: corbinu/docker-phpmyadmin
+   ports :
+    - "8080:80"
+   environment:
+    - MYSQL_USERNAME=root
+    - MYSQL_PASSWORD=root
+   links:
+    - db:mysql
+```
+
+Accédez ensuite à l'interface web via : [symfony.dev:8080](http://symfony.dev:8080/)
 
 ## Boîte à outils
 
 Voici quelques commandes qui peuvent-être utiles :
 
 ```bash
-# Composer (ex : composer update)
-$ docker exec -ti $(docker ps -f name=php -q) sh -c  "cd /var/www/symfony/ && composer update"
-# Commandes Symfony
-$ docker exec -ti $(docker ps -f name=php -q) php /var/www/symfony/app/console cache:clear
 # Acceder en bash
-$ docker exec -ti $(docker ps -f name=php -q) /bin/bash
+$ docker-compose exec php bash
+# Composer (ex : composer update)
+$ docker-compose exec php composer update
+# Commandes Symfony
+$ docker-compose exec php php /var/www/symfony/app/console cache:clear
+# Commandes Symfony bis (avec un alias = plus simple!)
+$ docker-compose exec php bash
+$ sf cache:clear
 # Commandes MySQL
-$ docker exec -ti $(docker ps -f name=db -q) mysql -uroot -p"root"
+$ docker-compose exec db mysql -uroot -p"root"
 # Commandes Redis
-$ docker exec -ti $(docker ps -f name=redis -q) sh -c 'exec redis-cli'
+$ docker-compose exec redis redis-cli
 # F***ing cache/logs ;)
 $ sudo chmod -R 777 symfony/app/cache symfony/app/logs
 # Vérifier la consommation de CPU
