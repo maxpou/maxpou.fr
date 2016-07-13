@@ -206,14 +206,11 @@ C'est très simple, il suffit d'ajouter ceci à votre fichier docker-compose :
 
 ```yml
 phpmyadmin:
-   image: corbinu/docker-phpmyadmin
-   ports :
-    - "8080:80"
-   environment:
-    - MYSQL_USERNAME=root
-    - MYSQL_PASSWORD=root
-   links:
-    - db:mysql
+    image: phpmyadmin/phpmyadmin
+    ports:
+        - "8080:80"
+    links:
+        - db
 ```
 
 Accédez ensuite à l'interface web via : [symfony.dev:8080](http://symfony.dev:8080/)
