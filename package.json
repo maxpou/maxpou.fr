@@ -1,5 +1,6 @@
 {
   "name": "hpstr-theme",
+  "version": "0.0.1",
   "author": "Michael Rose <michael@mademistakes.com>",
   "homepage": "http://mmistakes.github.io/hpstr-jekyll-theme/",
   "repository": {
