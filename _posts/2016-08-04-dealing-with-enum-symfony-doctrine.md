@@ -13,13 +13,13 @@ Using Enum in a Symfony App isn't obvious. If your Enum is short, you can direct
 
 ## The problem
 
-Ok given, you want to create an Alert object which contain an attribute called `type`. Like [Twitter Bootstrap's Alert](http://getbootstrap.com/components/#alerts), your alert must contain some specific strings (e.g. info, success...).  
+Ok given, you want to create an Message object which contain an attribute called `type`. Like [Twitter Bootstrap's Alert](http://getbootstrap.com/components/#alerts), your Message type's attribute must contain some specific strings (e.g. info, success...).  
 
 In the [official documentation](http://doctrine2.readthedocs.io/en/latest/cookbook/mysql-enums.html), Doctrine provide 2 solutions for MySQL Database. What happen if we want to use another Database like PostgreSQL? By the way, you can also take a look at these solutions. As far as i am concerned, I don't like them because it didn't solve the problem on the *PHP side*.
 
 Obviously, we can also create a Table called MessageType. But according to me, a database table must be used to store data. In this case, a type isn't managed by a human.
 
-So we need custom **reusable** Enum.  
+So we need custom **reusable** PHP Enum.  
 Let's do this!
 
 ![]({{ site.url }}/images/articles/enum-symfony-doctrine/ship-kid.gif)
@@ -32,7 +32,7 @@ First, you need to create a MessageTypeEnum.
 ```php
 <?php
 
-namespace DemoBundle\Model\Enum;
+namespace DemoBundle\Enum;
 
 abstract class MessageTypeEnum
 {
@@ -76,6 +76,17 @@ abstract class MessageTypeEnum
     }
 
 ```
+
+Here is an example of use:
+
+```php
+<?php
+echo MessageTypeEnum::TYPE_INFO;
+//info
+echo MessageTypeEnum::getTypeName(MessageTypeEnum::TYPE_INFO);
+//Information
+```
+
 
 Now, you need to adapt your Entity:
 
