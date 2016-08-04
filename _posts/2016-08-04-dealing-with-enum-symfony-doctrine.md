@@ -13,7 +13,7 @@ Using Enum in a Symfony App isn't obvious. If your Enum is short, you can direct
 
 ## The problem
 
-Ok given, you want to create an Alert object which contain an attribute called `type`. As a [Twitter Bootstrap Alert](http://getbootstrap.com/components/#alerts), your alert must contain some specific strings (e.g. info, success...).  
+Ok given, you want to create an Alert object which contain an attribute called `type`. Like [Twitter Bootstrap's Alert](http://getbootstrap.com/components/#alerts), your alert must contain some specific strings (e.g. info, success...).  
 
 In the [official documentation](http://doctrine2.readthedocs.io/en/latest/cookbook/mysql-enums.html), Doctrine provide 2 solutions for MySQL Database. What happen if we want to use another Database like PostgreSQL? By the way, you can also take a look at these solutions. As far as i am concerned, I don't like them because it didn't solve the problem on the *PHP side*.
 
