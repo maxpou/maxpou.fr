@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Hello world !
+title: Hello world!
 comments: false
 modified: 2015-08-14
 image:
@@ -33,5 +33,5 @@ L'objectif de ce blog est triple :
 
 Si vous le souhaitez, vous pouvez me contacter via :
 
-* [Mail](mailto:maxence.poutord@gmail.com)
+* [Mail : hello@maxpou.fr](mailto:hello@maxpou.fr)
 * [LinkedIn](http://fr.linkedin.com/in/maxpou)
