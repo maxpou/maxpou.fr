@@ -58,4 +58,4 @@ Si vous travaillez en équipe, ne négligez pas le côté humain de notre métie
 Enfin, dernier outil qu'il ne faut pas négliger : **tester (et automatiser) les tests de son application**
 
 
-Si vous ne devez retenir qu'une seule chose : si vous ne vous préoccupez pas maintenant de la qualité de vos livrables, ça vous reviendra dans les dents puissance 10.
+Si vous ne devez retenir qu'une seule chose : si vous ne vous préoccupez pas maintenant de la qualité de vos livrables, ça vous reviendra dans les dents puissance 10 (ou plus !). Parfois la dette technique est inévitable (deadline courte/lancement de produit...). Par contre, comme toute dette, vous devrez la rembourser un jour. Et pour être plus serein, prévoyez du temps pour la **rembourser** (c'est pas pour rien que l'on appelle ça une dette). Sinon un autre projet/fonctionnalité supplémentaire viendra se juxtaposer à la date de fin de projet et ce sera fini !
