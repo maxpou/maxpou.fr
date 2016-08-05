@@ -6,8 +6,6 @@ tags: ["Symfony", "CLI", "PHP"]
 lang: en
 image:
     feature: articles/vagrant-windows/header.png
-    credit: dargadgetz
-    creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
 
 # Vagrant, Symfony and Windows are not incompatibles
