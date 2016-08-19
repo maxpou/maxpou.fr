@@ -3,16 +3,15 @@ layout: post
 title: Else, the unnecessary expression
 lang: en
 image:
-    feature: abstract-3.jpg
-    credit: dargadgetz
-    creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+image:
+    feature: articles/else-unnecessary/header.jpg
 ---
 
 # Else, the unnecessary expression
 
-First time I was using PHP Mess Detector (a PHP Quality Tool), I was very surprise. Because, when I type an **Else expression, it raises an error** which it said: *"An if expression with an else branch is never necessary"*. What the f***, I never see this before.  
+First time I was using PHP Mess Detector (a PHP Quality Tool), I was very surprise. Because, when I type an **Else expression, it raises an error** which it said: *"An if expression with an else branch is never necessary"*. What the f***, I have never seen something like this before.  
 
-After few researches, this principle came from Jeff BAY in **Object Calisthenics**, an exercise-chapter from the **The ThoughWorks Anthology** (written by many well-known programmers like Martin FOWLER). In this chapter, Jeff BAY define 9 rules to write better software. *Avoid else expression* is one of them.
+Indeed, this principle came from Jeff BAY in **Object Calisthenics**, an exercise-chapter from the **The ThoughWorks Anthology** (written by many well-known programmers like Martin FOWLER). In this chapter, Jeff BAY define 9 rules to write better software. *Avoid else expression* is one of them.
 
 > Whaaaaaaaaaaaaaaaaaaaaaaaaaaaaaat?!  
 — **one of my colleague** when I say 'Else is unnecessary'
@@ -332,7 +331,7 @@ As far as I'm concerned, I prefer this pattern when he's combined with patterns 
 
 ## Conclusion
 
-I apply this principle every day. And now 90% of my if blocks, does not contain any else expression! (yeah, I am lazy sometime ;-)). Most of time, the first solution is the solution. Sometimes too much design patterns lead your application to **overengineering**. First, make sure it's relevant: **pragmatism over theory**.
+I apply this principle every day. And now 90% of my if blocks, does not contain any else expression! (yeah, I am lazy sometime ;-)). Most of time, the first solution is the solution. Take care, sometimes too much design patterns lead your application to **overengineering**. First, make sure it's relevant and remember: **pragmatism over theory**.
 
 ![]({{ site.url }}/images/articles/else-unnecessary/overengineering.jpg)
 
