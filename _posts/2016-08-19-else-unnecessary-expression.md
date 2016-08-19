@@ -55,7 +55,7 @@ And because, we're not beasts, we should inverse condition (avoid finish your fu
 function getUserDenomination(User $aUser)
 {
     if (!$aUser->getFirstName() && !$aUser->getLastName()) {
-        return "Unknown user.";
+        return "Unknown user."; // <-- early return
     }
 
     return $aUser->getFirstName() ." ". $aUser->getLastName();

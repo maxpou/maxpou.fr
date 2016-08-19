@@ -7,7 +7,7 @@ image:
     feature: coffee.jpg
 ---
 
-Hi, my name is Maxence, a **French** software craftmanshit... or a web developer if you prefer. My main technologies are PHP and JavaScript.
+Hi, my name is Maxence, a **French** software craftsman... or a web developer if you prefer. My main technologies are PHP and JavaScript.
 
 ## Why I want to move in Dublin?
 
