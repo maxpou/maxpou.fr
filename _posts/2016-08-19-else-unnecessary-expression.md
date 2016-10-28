@@ -1,13 +1,11 @@
 ---
 layout: post
-title: Else, the unnecessary expression
+title: "\"Else\": the unnecessary expression"
 lang: en
 image:
 image:
     feature: articles/else-unnecessary/header.jpg
 ---
-
-# Else, the unnecessary expression
 
 First time I was using PHP Mess Detector (a PHP Quality Tool), I was very surprise. Because, when I type an **Else expression, it raises an error** which it said: *"An if expression with an else branch is never necessary"*. What the f***, I have never seen something like this before.  
 
