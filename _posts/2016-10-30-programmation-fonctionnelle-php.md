@@ -6,14 +6,14 @@ image:
     feature: articles/functional-php/banner.png
 ---
 
-Depuis quelques temps déjà, j'entends de plus en plus parler d'un autre paradigme de programmation: la **programmation fonctionnelle**. Pourtant ce concept n'est pas tout neuf, puisqu'il remonte même au siècle dernier. L'idée ici n'est pas de vous faire une introduction à la programmation fonctionnelle, beaucoup d'articles/conférences sur la toile le font très bien. L'idée est plutôt de reprendre des concepts clefs de la PF et de voir ce que l'on peut en faire avec PHP.
+Depuis quelques temps déjà, j'entends de plus en plus parler d'un autre paradigme de programmation: la **programmation fonctionnelle** (*PF*). Pourtant ce concept n'est pas tout neuf, puisqu'il remonte même au siècle dernier. L'idée ici n'est pas de vous faire une introduction à la programmation fonctionnelle, beaucoup d'articles/conférences sur la toile le font très bien. Je vais plutôt de reprendre des concepts clefs de la PF et de voir ce que l'on peut en faire avec PHP.
 
 Si vous n'en avez jamais entendu parler, voici ce que vous devez retenir :
 
 * C'est que c'est un autre paradigme de programmation, tout comme l'est la Programmation Orientée Objet (POO). Ça peut sembler rebutant au premier abord... mais souvenez-vous qu'au début, le polymorphisme, l'héritage... n'étaient que de vilains gros mots !
 * Ces deux paradigmes ne sont pas incompatibles entre eux.
 * On prévilégie l'évaluation de fonctions pour éviter les changements d'état.
-* Adopter un style fonctionnel réduit le nombre de bugs potentiels et diminue les effets de bord.
+* Adopter un style fonctionnel réduit le nombre de bugs potentiels et diminue les effets de bord. Ça améliore donc potentiellement la qualité du code.
 
 
 ## Immutabilité (ou immuabilité)
@@ -59,15 +59,17 @@ Vous noterez que c'est sur ce système de closure que s'appuient les frameworks 
 
 ## Récursion
 
-Quand il y a dans votre code une notion de parenté qui s'étend à plusieurs niveaux, il peut-être intéressant de créer des fonctions qui s'appelleront elles-même. On va en trouver dans différents cas d'usage: fonction mathématiques (exemple ci-après avec la suite de Fibonacci), la recherche d'un fichier dans un file system... C'est une bonne alternative aux bons vieux while (qui utilisent des variables).
+Quand il y a dans votre code une notion de parenté qui s'étend à plusieurs niveaux, il peut-être intéressant de créer des fonctions qui s'appelleront elles-même. On va en trouver dans différents cas d'usage: fonction mathématiques (exemple ci-après avec la suite de Fibonacci), la recherche d'un fichier dans un file system... C'est une bonne alternative aux bons vieux while/for bien crades (qui utilisent des variables).
 
 ```php
 <?php
-function fibonacci(int $n)
+function fibonacci(int $n): int
 {
    return $n < 2 ? $n : fibonacci($n-1) + fibonacci($n-2);
 }
 ```
+
+Notez cependant qu'utiliser la récursion peut s'évérer assez gourmande en ressources si la fonction s'appelle elle-même un très grand nombre de fois. Attention aussi au boucles infinies :) *(une fois sur deux j'oublie le return et c'est la catastrophe!)*
 
 ## Fonction de premier ordre et fonction d'ordre supérieur
 
@@ -103,7 +105,22 @@ Si vous êtes perdus, voici une petite anti-sèche:
 <blockquote class="twitter-tweet" data-lang="fr"><p lang="en" dir="ltr">Map/filter/reduce in a tweet:<br><br>map([🌽, 🐮, 🐔], cook)<br>=&gt; [🍿, 🍔, 🍳]<br><br>filter([🍿, 🍔, 🍳], isVegetarian)<br>=&gt;  [🍿, 🍳]<br><br>reduce([🍿, 🍳], eat)<br>=&gt; 💩</p>&mdash; Steven Luscher (@steveluscher) <a href="https://twitter.com/steveluscher/status/741089564329054208">10 juin 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Bon par contre deux points noirs :
+Autre utilisation des fonctions d'ordre supérieur, créer une fonction qui retourne une fonction.
+
+```php
+<?php
+function greaterThan($n) {
+    return function($m) use ($n) {
+        return $m > $n;
+    };
+}
+
+$greaterThan10 = greaterThan(10);
+$greaterThan10(11); //true
+$greaterThan10(9);  //false
+```
+
+Bon par contre **deux points noirs** :
 
 * dans ces fonctions, la position du callback est différente d'une fonction à l'autre : array_filter($array, **$callback**) et array_filter(**$callback**, $array);
 * le chaînage n'est pas possible et sa variante n'est vraiment pas sexy :
@@ -119,21 +136,6 @@ $isEven = function($v) {
 
 array_map($addTen,
           array_filter([1, 2, 3, 4, 5, 6], $isEven));
-```
-
-Autre utilisation des fonctions d'ordre supérieur, créer une fonction qui retourne une fonction.
-
-```php
-<?php
-function greaterThan($n) {
-    return function($m) use ($n) {
-        return $m > $n;
-    };
-}
-
-$greaterThan10 = greaterThan(10);
-$greaterThan10(11); //true
-$greaterThan10(9);  //false
 ```
 
 
@@ -196,11 +198,12 @@ for($i=0; $i < count($input); $i++) {
 
 // style fonctionnel
 $odds = array_filter($input, function($v) {
-    return $v%2 != 0;
+    return $v % 2 !== 0;
 });
 ```
 
 **Mais pourquoi est-ce si étranger en PHP ?**  
 
-Adopter un style fonctionnel est nécessaire dans un langage où les zones mémoires peuvent-être partagées. C'est d'ailleurs pour celà que l'immutabilité et la pureté des fonctions est si primordiale. PHP a été conçu pour afficher des pages web en un temps inférieur à 1s. Une fois que la page est chargée, toute la mémoire qui a été nécessaire pour afficher la page disparaît. On est dans une *Share Nothing Architecture*, ce qui veut dire que chaque processus qui est chargé d'afficher une page en PHP ne va pas partager sa mémoire avec un autre (pas comme en Java où certains threads partagent de la mémoire).  
+Adopter un style fonctionnel est nécessaire dans un langage où les zones mémoires peuvent-être partagées. C'est d'ailleurs pour celà que l'immutabilité et la pureté des fonctions est si primordiale.  
+PHP a été conçu pour afficher des pages web en un temps inférieur à 1s. Une fois que la page est chargée, toute la mémoire qui a été nécessaire pour afficher la page disparaît. On est dans une **Share Nothing Architecture**, ce qui veut dire que chaque processus qui est chargé d'afficher une page en PHP ne va pas partager sa mémoire avec un autre (pas comme en Java où certains threads partagent de la mémoire).  
 C'est pour ces raisons que l'on entend si peu parler de Programmation Fonctionnelle en PHP.
