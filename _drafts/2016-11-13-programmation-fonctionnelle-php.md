@@ -175,6 +175,29 @@ Cette fonction n'est en effet pas pure car elle interagit avec un élément d'I/
 
 Vous l'aurez compris, une fonction pure va de paire avec l'acronyme *KISS (Keep It Simple, Stupid)*. Comme vu dans la partie sur l'immuabilité, PHP nous protège pas mal des effets de bord. Essayez donc au maximum de mettre dans votre code un maximum de fonctions pures et de limiter celles avec des effets de bord. En plus c'est plus facilement testable !  
 
+## Mémoization
+
+L'idée derrière ce concept est de créer un **pseudo cache à l'intérieur même de votre fonction**. Parfois on a des calcul assez important dans une fonction et cette dernière est susceptible d'être rappelée ultérieurement avec les mêmes paramètres. Au lieu de repatienter une seconde fois, la
+
+```php
+<?php
+$memoMD5 = function ($value) {
+    static $cache = [];
+    if (isset($cache[$value])) {
+        echo "memoize - ";
+        return $cache[$value];
+    }
+
+    sleep(5);
+    $cache[$value] = md5($value);
+
+    return $cache[$value];
+};
+
+echo $memoMD5(1); // affiche après ~5s: c4ca4238a0b923820dcc509a6f75849b
+echo $memoMD5(2); // affiche après ~5s: c81e728d9d4c2f636f067f89cc14862c
+echo $memoMD5(1); // affiche après ~0s: memoize - c4ca4238a0b923820dcc509a6f75849b
+```
 
 ## Conclusion
 
