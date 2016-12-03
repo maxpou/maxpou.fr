@@ -17,7 +17,7 @@ Voici quelques questions que je pose aux recruteurs pour m'assurer de choisir la
 
 **Entreprise/équipe en général :**
 
-* Quel est le process de recrutement ?
+* Quel est le process de recrutement ? *(dans certaines entreprises, ces process peuvent-être très long!)*
 * Que pensez-vous de l'open source ? Vous contribuez ? *(La première question ne sert qu'à amener la deuxième. Toutes les entreprises vous diront que l'OS c'est super...)*
 * C'est quoi le truc que vous aimez le plus dans cette entreprise ?
 * Vous pratiquez quoi comme méthodologie de travail ? (agile&co)
@@ -29,6 +29,7 @@ Voici quelques questions que je pose aux recruteurs pour m'assurer de choisir la
   * MacOS, Unix ou Windows ?
   * Virtualisation ? Conteneurisation ?
   * Quel éditeur/IDE ?
+  * Quel framework ? Pourquoi celui-ci ?
   * Versioning avec Git (+ GitHub ?) ou SVN ?
 
 
@@ -70,7 +71,7 @@ Pendant les entretiens techniques, j'aime bien aussi vérifier le niveau techniq
 * *"J'aime bien Docker, c'est comme une mini machine virtuelle..."*
 * *["Symfony n'est pas MVC"](http://fabien.potencier.org/what-is-symfony2.html#is-symfony2-an-mvc-framework)*
 * *"Quel est votre Design Pattern préféré ? Bah le Singleton pardi!"*
-* *"`var_dump()` c'est la vie !"*
+* *"var_dump() c'est la vie !"*
 * Parler de *"protocole REST..."* ou bien *"REST tout le monde en parle mais personne ne sait ce que c'est vraiment"*
 
 Pourquoi ? Parce qu'en général, on ne met pas le dernier de la classe pour évaluer vos compétences techniques. Si le type en face est une bille, ça peut en dire long sur le reste de l'équipe... et donc sur vos potentiels futurs collègues !  
