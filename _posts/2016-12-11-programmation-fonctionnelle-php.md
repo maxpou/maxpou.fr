@@ -20,7 +20,7 @@ Si vous n'en avez jamais entendu parler, voici ce que vous devez retenir :
 
 Une variable est une valeur qui peut-être amenée à être modifiée dans le temps. Elle va *varier*, en passant d'un état à un autre. Un des concepts clefs de la PF est de supprimer cette notion de temps (d'état) ou du moins, de la minimiser. On va donc parler d'**immutabilité**.
 
-En PHP pour pouvoir accéder à une variable à l'intérieur d'une fonction, il faut que cette variable soit passée en paramètre d'une fonction. Il est aussi possible d'utiliser les variables globales (mais c'est pas bien de faire ça en PHP!).
+Dans PHP, le support des variables immutables est très faible. On va avoir [const (pour les constantes de classe)](http://php.net/manual/en/language.oop5.constants.php) et [define](http://php.net/manual/en/function.define.php). Mais elles ne couvrent pas tous les besoins, il est difficile de s'affranchir du bon vieux `$maVariable`. Heureusement la portée d'une variable de s'étend pas jusque dans une fonction. C'est à dire que pour pouvoir accéder à une variable à l'intérieur d'une fonction, il faut que cette variable soit passée en paramètre. Il est aussi possible d'utiliser les variables globales (mais c'est pas bien de faire ça en PHP!).
 
 Ce qui veut dire que si vous tentez d'exécuter ce bout de code:
 
@@ -49,15 +49,51 @@ $someFunction = function ($value) use ($ten) {
     return $value + $ten;
 };
 
-someFunction(12); // 33
-echo $ten;        // 10
+echo $someFunction(12); // 33
+echo $ten;              // 10
 ```
 
-Note: la variable `$ten` est passée par valeur. Pour la passer par référence, il faut utiliser le symbole **&amp;** comme ceci : `&$ten` lors de la déclaration de la variable dans la fonction. Le `echo $ten` renverra 21 mais surtout, le code perdra son immutabilité.
+Note: la variable `$ten` est passée par valeur. Pour la passer par référence, il faut utiliser le symbole **&amp;** comme ceci : `&$ten` lors de la déclaration de la variable dans la fonction. Le `echo $ten` renverra alors 21 mais surtout, le code perdra son immutabilité.
 
 Vous noterez que c'est sur ce système de closure que s'appuient les frameworks [Silex](http://silex.sensiolabs.org/doc/master/usage.html#example-get-route) et [Laravel](https://laravel.com/docs/5.1/routing#basic-routing) pour leurs systèmes de routing.
 
+
+## Immutabilité et Objets
+
+Il n'y a rien de plus facile que de faire évoluer une variable en PHP. Mais qu'en est-il pour nos objets ?  
+Et bien, le concept d'immutabilité n'existe pas non plus en PHP OO. On aurait vite tendance à croire qu'en mettant un attribut final à une classe et en supprimant les setters, le tour est joué. Mais en PHP, on peut appeler un constructeur autant de fois que l'on veut.
+
+
+```php
+<?php
+final class Fruit
+{
+    private $name;
+
+    public function __construct($name) {
+        $this->name = $name;
+    }
+}
+$fruit = new Fruit('Banana');
+$fruit->__construct('Kiwi');
+```
+
+On pourait aussi rendre le constructeur privé... mais avec la [réflexion](http://php.net/manual/en/class.reflectionclass.php) c'est devenu complètement impossible :
+
+```php
+<?php
+$refObject   = new ReflectionObject($fruit);
+$refProperty = $refObject->getProperty('name');
+$refProperty->setAccessible(true);
+$refProperty->setValue($event, 'Apple');
+```
+
+L'immuabilité est donc juste une histoire de conventions.
+
 ## Récursion
+
+![loop]({{ site.url }}/images/articles/functional-php/loop.gif)
+
 
 Quand il y a dans votre code une notion de parenté qui s'étend à plusieurs niveaux, il peut-être intéressant de créer des fonctions qui s'appelleront elles-même. On va en trouver dans différents cas d'usage: fonction mathématiques (exemple ci-après avec la suite de Fibonacci), la recherche d'un fichier dans un file system... C'est une bonne alternative aux bons vieux while/for bien crades (qui utilisent des variables).
 
@@ -109,8 +145,8 @@ Autre utilisation des fonctions d'ordre supérieur, créer une fonction qui reto
 
 ```php
 <?php
-function greaterThan($n) {
-    return function($m) use ($n) {
+function greaterThan(int $n): callable {
+    return function(int $m) use (int $n): boolean {
         return $m > $n;
     };
 }
@@ -152,8 +188,8 @@ function add($number)
     return $myNumber = $myNumber + $number;
 }
 
-add(5); //6
-add(5); //11
+echo add(5); //6
+echo add(5); //11
 ```
 
 Cette fonction n'est pas pure car elle ne renvoie pas toujours le même résultat pour le même paramètre d'entrée.
@@ -171,13 +207,12 @@ sum(3,7); //10
 sum(3,7); //10
 ```
 
-Cette fonction n'est en effet pas pure car elle interagit avec un élément d'I/O, à savoir : le logger. Bon du coup si on supprime le logger, on peut dire que cette fonction sera pure. Par ailleurs, n'hésitez pas à exploiter pleinement les nouveautés de [PHP 7](http://php.net/manual/en/migration70.new-features.php#migration70.new-features.return-type-declarations) et [PHP 7.1](http://php.net/manual/en/migration71.new-features.php#migration71.new-features.nullable-types) améliorent grandement le typage de fonctions.
-
-Vous l'aurez compris, une fonction pure va de paire avec l'acronyme *KISS (Keep It Simple, Stupid)*. Comme vu dans la partie sur l'immuabilité, PHP nous protège pas mal des effets de bord. Essayez donc au maximum de mettre dans votre code un maximum de fonctions pures et de limiter celles avec des effets de bord. En plus c'est plus facilement testable !  
+Cette fonction n'est en effet pas pure car elle interagit avec un élément d'I/O, à savoir : le logger. Bon du coup si on supprime le logger, on peut dire que cette fonction est pure.
+Vous l'aurez compris, une fonction pure va de paire avec l'acronyme *KISS (Keep It Simple, Stupid)*. Comme vu dans la partie sur l'immuabilité, PHP nous protège pas mal des effets de bord. Essayez donc au maximum de mettre un maximum de fonctions pures dans votre code et de limiter celles avec des effets de bord. Vous gagnerez grandement en testabilité ! Pour les développeurs OO, il faudra donc éviter de trop jouer avec le `$this`.
 
 ## Mémoization
 
-L'idée derrière ce concept est de créer un **pseudo cache à l'intérieur même de votre fonction**. Parfois on a des calcul assez important dans une fonction et cette dernière est susceptible d'être rappelée ultérieurement avec les mêmes paramètres. Au lieu de repatienter une seconde fois, la
+Parfois on a des calcul assez conséquents au sein d'une fonction et cette dernière est susceptible d'être rappelée ultérieurement avec les mêmes paramètres. C'est à ce moment que le concept de mémoization entre en jeu. Pour éviter de patienter une deuxième fois pour un calcul déjà fait, il est possible de créer un **pseudo-cache à l'intérieur même de votre fonction**.
 
 ```php
 <?php
@@ -188,7 +223,7 @@ $memoMD5 = function ($value) {
         return $cache[$value];
     }
 
-    sleep(5);
+    sleep(5); //imaginez ici un long calcul
     $cache[$value] = md5($value);
 
     return $cache[$value];
