@@ -1,0 +1,99 @@
+---
+layout: post
+title: Hubot
+tags: ["GitHub", "Bot"]
+image:
+    feature: articles/hubot/hubot_shema.jpg
+---
+
+Je regardais l'autre jour une conférence d'Alain Hélaïli sur le fonctionnement du site Github.com. Dans son talk, Alain montre comment ils utilisent Github en interne *(dogfooding)* et surtout comment une entreprise *remote-first* arrive à déployer en production plusieurs dizaines de fois par jour et ce, en toute sereinité. Quand je vois le mal qu'ont certaines équipes (dont j'ai pu faire parti !), à déployer ne serait-ce qu'une fois par jour, je me dis qu'il y a forcément du bon à prendre là-dedans ! :-)
+
+![Hubot]({{ site.url }}/images/articles/hubot/hubot.jpg)
+
+Bon en fait, le secret de Github c'est **Hubot**, aussi appelé *employé le plus productif*. N'allez pas chercher son profil Linkedin puisque Hubot est un bot. Pour faire simple, ce robot va exécuter tout un panel de scripts qu'on lui aura demandé de faire, via son client de chat préféré (Slack, Skype, XMPP...).
+
+![Slack exemple]({{ site.url }}/images/articles/hubot/slack.png)
+*exemple d'intégration avec Slack*
+
+Et Parmi les types de scripts on pourra trouver :
+
+* des trucs funs : trouve moi des photos de chats (va ensuite chercher sur Google Image), trouve moi des gif d'animaux, affiche moi le dernier CommitStrips, où sont les restos dans le coin ouverts...
+* des utilitaires : traduit moi cette phrase en serbe, dessine moi le plan de Dublin...
+* des graphs : statistiques de fréquentation, statistiques de temps de réponse...
+* des outils métiers internes à la boîte : qui est malade aujourd'hui ? où est le bureau de tel collègue...
+* des outils ops : déploie-moi tout ça en production (ou sur un serveur en particulier), création automatique d'issue si un [test du singe a cassé](https://github.com/marmelab/gremlins.js/)...
+
+Bref, il n'y a pas vraiment de limites.
+L'objectif du ChatOps c'est de s'affranchir de tous ces différents portail tout gérer par le chat de manière ouverte et transparente.
+
+
+## Super, on commence quand ?
+
+Après cette introduction, on va rentrer un peu plus dans le technique.
+Hubot a besoin de NodeJS pour tourner. Pour ne pas polluer sa machine avec NodeJS, j'ai créé une image Docker qui fait tourner le tout : [github.com/maxpou/hubot-docker](https://github.com/maxpou/hubot-docker).
+
+Voici le processus d'installation :
+
+```bash
+git clone https://github.com/maxpou/hubot-docker
+cd hubot-docker
+# construction de l'image
+docker build -t hubot --rm .
+# création + exécution du conteneur
+docker run -it -v $PWD/hubot:/hubot hubot bash
+# A l'intérieur du conteneur, on lance le générateur Yéoman
+yo hubot
+```
+
+Répondez ce que vous voulez aux questions du générateur
+
+```bash
+docker@100dc27cbdb2:/hubot$ yo hubot
+                     _____________________________  
+                    /                             \
+   //\              |      Extracting input for    |
+  ////\    _____    |   self-replication process   |
+ //////\  /_____\   \                             /
+ ======= |[^_/\_]|   /----------------------------  
+  |   | _|___@@__|__                                
+  +===+/  ///     \_\                               
+   | |_\ /// HUBOT/\\                             
+   |___/\//      /  \\                            
+         \      /   +---+                            
+          \____/    |   |                            
+           | //|    +===+                            
+            \//      |xx|                            
+
+? Owner John DOE
+? Bot name mybot
+? Description my superhero
+? Bot adapter slack
+# et après, tout plein de npm info pour dire que ça télécharge/installe
+```
+
+Dans cet exemple, j'ai utilisé le provider de slack. Pour l'utilisation que l'on va en avoir, vous pouvez vous créer un compte gratos.
+Une fois fait, allez dans `/apps`, recherchez hubot quand, cliquez sur installer et donnez lui un petit nom comme demandé.
+Ensuite, copier dans le presse papier le token généré. Retournez dans la console et éxécutez ceci : `HUBOT_SLACK_TOKEN=xoxb-119480690023-J6sFQXo0jE1VKQW7dWLVsDxi bin/hubot --adapter slack`.
+
+Surprise, vous voyez dans Slack un nouvel invité, c'est **Hubot**. Invitez le ("/invite hubot") dans une room et commencez à papoter.
+
+![Une conversation très intéressante]({{ site.url }}/images/articles/hubot/slack-blabla.png)
+
+Et voilà le travail ! C'est tout !
+
+![Slack exemple]({{ site.url }}/images/articles/hubot/bb8_thumbsup.gif)
+
+## Pimp my bot
+
+Bon si vous voulez un peu pimper votre bot c'est pas bien compliqué. La communauté a fournit pas mal de scripts sur étagère que l'on peut trouver ici: https://github.com/hubot-scripts.  
+Si ce n'est pas suffisant ou si vous voulez créer le votre commencez par ouvrir le fichier scripts/example.coffee. Comme pas mal de projets de Github, le Javascript est compilé à partir de [CoffeeScript](http://coffeescript.org/).
+
+La [documentation officielle](https://hubot.github.com/docs/scripting/) est aussi un très bon point de départ.
+
+
+
+## Cadeau bonus
+
+Bonus, la conférence en question. Elle figure dans mon top 3 des conférences les plus intéressantes du cru 2016 de Devoxx France.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jCwzf9adAtE" frameborder="0" allowfullscreen></iframe>
