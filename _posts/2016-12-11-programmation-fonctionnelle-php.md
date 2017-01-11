@@ -173,7 +173,7 @@ $greaterThan10(9);  //false
 
 Bon par contre **deux points noirs** :
 
-* dans ces fonctions, la position du callback est différente d'une fonction à l'autre : array_filter($array, **$callback**) et array_filter(**$callback**, $array);
+* dans ces fonctions, la position du callback est différente d'une fonction à l'autre : array_filter($array, **$callback**) et array_map(**$callback**, $array);
 * le chaînage n'est pas possible et sa variante n'est vraiment pas sexy :
 
 ```php
