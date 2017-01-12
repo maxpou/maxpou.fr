@@ -17,10 +17,10 @@ Let's recapitulate...
 
 **New OS:**
 
-I really wanted to learn Linux this year. I was using Microsoft since my young years, but this OS got a big drawback for web development: the native console is messy and the writing files is a very slow operation (Symfony Framework use a lot of files). I was a Ubuntu in a Vagrant box, so I wasn't so stranger. This is why I choose Ubuntu.  
+I really wanted to learn Linux this year. I was using Microsoft since my young years, but this OS got a big drawback for web development: the native console is messy and the writing files is a very slow operation (Symfony Framework use a lot of files). I was already using Ubuntu in a Vagrant box, so I wasn't so stranger. This is why I choose Ubuntu.  
 During the Ubuntu installation, I completely erase my Windows. After few tears, I accept it. And to be honest, few month after I didn't plan to roll back.
 
-When I start my new job, they ask me my favorite OS. Unfortunately Linux wasn't in the list and I have to choose between Windows 10 and MacOS... I choose the iMac! It was a bit weird for me, because I don't stick to Apple's philosophy. But to be honest, I like it (except the shitty defaults softwares).
+When I start my new job, they ask me my favorite OS. Unfortunately Linux wasn't in the list and I have to choose between Windows 10 and MacOS... I choose the second one (iMac)! It was a bit weird for me, because I don't stick to Apple's philosophy. But to be honest, I like it (except the 💩 defaults softwares).
 
 **Tame the whale (Docker):**
 
@@ -42,10 +42,10 @@ This year, I went to a lot of meet-ups, read a huge amount of blog and watch a l
 
 After absorbing this amount of knowledge, I found obvious to share it to the community.
 
-* **Keep blogging**. It's very important for me. It helps me to deal with criticism, meet people (really!) and also to become more precise (writing lead me to read a lot before publishing). This year, I got 9300 pages viewed on my blog! (I didn't expect so much!)
-* **Gave my first talk** about [Rest & Symfony](https://www.youtube.com/watch?v=F0BRnczxTWQ&feature=youtu.be&t=2220). I really like it and one month later, I give another one called *GraphQL/Falcor: Why Killing REST?* (quickie format);
-* *(try to)* **Contributing to Open Source** by putting all new projects/POC on Github. Now my account is a part of my resume (it can also bring me new opportunities). And stop being an *issue watcher* by trying to fix issues on Github. Unfortunately, I participate by updating the codebase;
-* **Training people**. After 3.5 years in a (gas) training center, yes I did it! I was pretty proud when my employer ask me to train colleagues! So I draft two trainings: one about PHP and one other about Symfony2. I reuse this second one for one of our customer (La Poste, the french postman company). Now, I can understand my trainers when I was sleeping (or doing something else) during the course!
+* **Keep blogging**. It's very important for me. It helps me to deal with criticism, meet people (yes, really!) and also to become more precise (writing lead me to read a lot before publishing). This year, I got 9300 pages viewed on my blog! (I didn't expect so much!)
+* **Gave my first talk** about [Rest & Symfony](https://www.youtube.com/watch?v=F0BRnczxTWQ&feature=youtu.be&t=2220). I really like it! One month later, I give another one called *GraphQL/Falcor: Why Killing REST?* (quickie format);
+* **Contributing to Open Source** by putting all new projects/POC on Github. Now my account is a part of my resume (it also brought me new opportunities). And stop being an *issue watcher* by trying to fix issues on Github and help people. Unfortunately, I didn't participate by updating some codebases;
+* **Training people**. I have been working for 3.5 years with instructors (at Energy Formation, a gaz training center). So I was pretty proud when my employer (Conserto) ask me to train colleagues! So I draft two trainings: one about PHP and one other about Symfony2 ([slides](http://slides.maxpou.fr)). I reuse this second one for one of our customer (La Poste, the french postman company). Now, I can understand my trainers when I was sleeping (or doing something else) during the course!
 
 
 ## Meet the world! *(nothing related to my new company!)*
@@ -58,7 +58,9 @@ And one day, I see this talk:
 
 <iframe src="https://embed.ted.com/talks/larry_smith_why_you_will_fail_to_have_a_great_career" width="640" height="360" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
-Then, a lot of things happen in my head. After much soul-searching, I take my decision. I decide to leave my company to move in Ireland, in Dublin! The beginning was a little bit complicated but now it's ok. I join [Hostelworld.com](http://www.hostelworld.com/) and I did not regret my choice to came here. At all! For sure, my English level improves considerably... but I'm still not fluent!
+Then, a lot of things happen in my head...  
+
+After much soul-searching, I take my decision: let's be the CEO of my own life! So, I left my company, buy a single ticket to Dublin. *"See you Nantes! 🐘"*. To be honest, the beginning wasn't easy... but now, it's (almost) ok! I found an accommodation and start a new job at [Hostelworld.com](http://www.hostelworld.com/) in a multicultural team. For now, I did not regret my choice to came here. At all! My English level improves considerably... but I'm still not fluent!
 
 
 ## git checkout -b 2017
@@ -66,10 +68,10 @@ Then, a lot of things happen in my head. After much soul-searching, I take my de
 For 2017 my new goals are pretty much the same:
 
 * Running out of my comfort zone by learning new languages (and perfect my JS), technologies, programming paradigm...
-* Share more knowledge by writing more in my blog and somewhere else, give more talks (in English as well)...
-* Meet the world again and again by traveling more and more (and further!) and perfect my English.
+* Share more knowledge by writing more (I hope somewhere else as well), give more talks (French + English now)...
+* Meet the world again and again by traveling more and more (and further!, perfect my English...
 
-I also start to think about (gradually) leave the PHP world. It's not about the technology itself. Today, PHP fast as hell, and the last version (7 and 7.1) bring amazing features (such as type hinting). I just want to get several strings to my bow.
+I also start thinking about gradually leave the PHP world. It's not about the technology itself. Today, PHP fast as hell, and the last version (7 and 7.1) bring amazing features (such as type hinting). I just want to put another strings to my bow.
 
 I also have some more personal goals, but this isn't the right place ;-)  
 
