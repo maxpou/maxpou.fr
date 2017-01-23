@@ -3,9 +3,13 @@ layout: post
 title: Github Tips&tricks
 tags: ["GitHub"]
 lang: en
+image:
+    feature: articles/github-tips-tricks/banner.png
+    credit: Github.com
+    creditlink: https://enterprise.github.com/aws
 ---
 
-## github = git + hub
+## GitHub = git + hub
 
 [Hub](https://hub.github.com) is a command line wrapper for Git. Once installed, you can use this new git commands:
 
@@ -24,8 +28,8 @@ alias git=hub
 
 Using ZSH? Don't forget to add the plugin!
 
-```
-~/.zshrc file
+```bash
+#~/.zshrc file
 plugins=(git github ...)
 ```
 
@@ -48,7 +52,7 @@ svn co --depth empty https://github.com/user/repo
 Github provides an URL shortener such as bit.ly for your GitHub repositories: https://git.io/
 
 
-## Clone everything you want
+## Gist are also repository
 
 ```
 git clone https://gist.github.com/maxpou/e6cad8d4699f731c86df628358cba3d6
@@ -93,38 +97,76 @@ Example:
 Even if it's a web application, using your mouse isn't mandatory. In fact, GitHub offer a lot of differents shortcuts.
 To see them, just press " ? " *(doesn't matter where you are!)*.
 
-![](images/articles/github-tips-tricks/keyboard-shortcuts-help.png)
+![]({{ site.url }}/images/articles/github-tips-tricks/keyboard-shortcuts-help.png)
 
 
 ## Markdown on steroid (Github Flavored Markdown)
 
-https://github.com/maxpou-slides/github-tips-tricks/issues/1
+Github use his own version of markdown: Github Flavored Markdown (GFM). It provides severals additionnals features such as:
 
-Taks lists, table, reference commits/issues/PR ...
+* Task lists (`- [ ] <task description>`). On the issue summary, a task list will also appear ([example](https://github.com/maxpou-slides/github-tips-tricks/issues))
 
+    ```markdown
+    Todo:
+    - [x] Write an article about Github tips and tricks
+    - [ ] Conquer the world
+    ```
 
-This markdown also supports some HTML such as details/summary tags (kind of spoiler tag)
+    ![]({{ site.url }}/images/articles/github-tips-tricks/tasklist.gif)
 
-```HTML
-<details>
-  <summary>License (MIT)</summary>
-  The MIT License (MIT)
+* Tables:
 
-  Copyright (c) 2017 Maxence POUTORD
+    ```markdown
+    | First Header  | Second Header |
+    | ------------- | ------------- |
+    | Content Cell  | Content Cell  |
+    | Content Cell  | Content Cell  |
+    ```
 
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software")
-  [...]
-</details>
-```
+* Syntax color
+
+    ```markdown
+        ```javascript
+        console.log("youpi")
+        ```
+    ```
+* reference commits/issues/PR ...
+
+* Other interesting HTML tags such as details/summary tags (kind of spoiler tag)
+
+    ```HTML
+    <details>
+      <summary>License (MIT)</summary>
+      The MIT License (MIT)
+
+      Copyright (c) 2017 Maxence POUTORD
+
+      Permission is hereby granted, free of charge, to any person obtaining a copy
+      of this software and associated documentation files (the "Software")
+      [...]
+    </details>
+    ```
+    The output will be like this: *(click on License)*
+    <details>
+      <summary>License (MIT)</summary>
+      The MIT License (MIT) <br>
+      Copyright (c) 2017 Maxence POUTORD<br>
+      Permission is hereby granted, free of charge, to any person obtaining a copy
+      of this software and associated documentation files (the "Software")
+      [...]
+    </details>
 
 
 ## Emoji
 
 Yes, you can use emoji (almost) everywhere on Github!  
-For my needs, I prefix everything related to Docker (repositories/commits) with the whale icon (![](https://assets-cdn.github.com/images/icons/emoji/unicode/1f433.png)).
+But they aren't only present to decorate your text. For example, I prefix everything related to Docker (repositories/commits) with a whale icon.
 
-A better implementation is the [Atom contributing's style guides](https://github.com/atom/atom/blob/master/CONTRIBUTING.md#styleguides).
+A better implementation is the [Atom contributing's style guides](https://github.com/atom/atom/blob/master/CONTRIBUTING.md#styleguides):
+
+![]({{ site.url }}/images/articles/github-tips-tricks/commit-message-atom.png)
+
+
 
 Here's a [cheat sheet](http://www.webpagefx.com/tools/emoji-cheat-sheet/)
 
@@ -133,15 +175,20 @@ Here's a [cheat sheet](http://www.webpagefx.com/tools/emoji-cheat-sheet/)
 
 ## Disable whitespace on code review
 
-`?w=1`
+If a commit is polluted by whitespace simply add `?w=1` at the end of the URI.
 
-Example:
-https://github.com/maxpou-slides/github-tips-tricks/commit/42dd9a084b713ff35e5298453e1304047680a9e4
-https://github.com/maxpou-slides/github-tips-tricks/commit/42dd9a084b713ff35e5298453e1304047680a9e4?w=1
+![]({{ site.url }}/images/articles/github-tips-tricks/whitespace.gif)
+
+Example: [with](https://github.com/maxpou-slides/github-tips-tricks/commit/2616cbecc713389f8455b066711bc74891a593a6) and [without](https://github.com/maxpou-slides/github-tips-tricks/commit/2616cbecc713389f8455b066711bc74891a593a6?w=1) whitespace pollution.
+
+
+## Filtering commits
+
+?author=maxpou
 
 
 
-## highlight lines
+## Highlight lines
 
 click on the line number to highlight one line. For multiple, press shift.
 
