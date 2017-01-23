@@ -3,7 +3,6 @@ layout: post
 title: "\"Else\": the unnecessary expression"
 lang: en
 image:
-image:
     feature: articles/else-unnecessary/header.jpg
 ---
 
