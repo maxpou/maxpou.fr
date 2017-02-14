@@ -1,12 +1,11 @@
 ---
 layout: post
-title: Chaining filters recursively
+title: Chaining Javascript filters recursively
 tags: ["Javascript"]
 lang: en
 ---
 
-I recently realize some POC with vueJs. I was confronted to this problem: how to apply an unknown number of filter to a collection.
-
+I recently realize a POC with [VueJs](https://github.com/maxpou/find-a-room-vuejs2). I was confronted to this problem: how to apply an unknown number of filter to a collection.
 Given the following data:
 
 ```javascript
@@ -21,7 +20,7 @@ const heros = [
 ];
 ```
 
-And the following filters
+And the following filters:
 
 ```js
 // not DC Comics
@@ -48,18 +47,18 @@ Looping inside an array can be a solution:
 
 ```js
 var filteredHeros = heros
-for (var filterIndex in activeFilters) {
+for (let filterIndex in activeFilters) {
   filteredHeros = filteredHeros.filter(activeFilters[filterIndex])
 }
 ```
 
-But it isn't stateless. I mean, it's not very functionnal because `filteredHeros` is a mutating variable...
+But it isn't stateless at all. I mean, it's not very functionnal because `filteredHeros` is a mutating variable...
 A better solution is to use a functionnal approach by using recursion:
 
 ```js
 function recursive_filter (data, arrayFilters, index = 0) {
     if (arrayFilters.length === 0) {
-        return data;
+        return data
     }
     if (index === arrayFilters.length - 1) {
         return data.filter(arrayFilters[index])
