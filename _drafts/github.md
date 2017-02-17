@@ -235,9 +235,9 @@ To see them, just press " ? " *(doesn't matter where you are!)*.
 ![]({{ site.url }}/images/articles/github-tips-tricks/keyboard-shortcuts-help.png)
 
 
-## Emoji
+## Emoji 😍
 
-Yes, you can use emoji (almost) everywhere on Github!  
+Good news, you can use emoji (almost) everywhere on Github!  
 But they aren't only present to decorate your text. For example, I prefix everything related to Docker (repositories/commits) with a whale icon.
 
 A better implementation is the [Atom contributing's style guides](https://github.com/atom/atom/blob/master/CONTRIBUTING.md#styleguides):
@@ -245,8 +245,7 @@ A better implementation is the [Atom contributing's style guides](https://github
 ![]({{ site.url }}/images/articles/github-tips-tricks/commit-message-atom.png)
 
 
-
-Here's a [cheat sheet](http://www.webpagefx.com/tools/emoji-cheat-sheet/)
+Here's a good [cheat sheet](http://www.webpagefx.com/tools/emoji-cheat-sheet/).
 
 
 ## Disable whitespace on code review
@@ -277,7 +276,12 @@ PDF, 3D visualisation
 
 ## API (~REST or GraphQL)
 
+Github provide 2 types of API:
+* https://api.github.com/
+* https://developer.github.com/early-access/graphql/explorer/
 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Playing with GitHub GraphQL API 😀 - <a href="https://t.co/Mo2X9HX3l4">https://t.co/Mo2X9HX3l4</a> <a href="https://t.co/9lA5dylfDN">pic.twitter.com/9lA5dylfDN</a></p>&mdash; Maxence POUTORD (@_maxpou) <a href="https://twitter.com/_maxpou/status/776343643867254784">September 15, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## The power of Webhooks
 
