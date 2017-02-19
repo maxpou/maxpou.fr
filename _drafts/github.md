@@ -11,14 +11,25 @@ image:
 
 Summary:
 
-* [GitHub = git + hub / Manage your repo by CLI](#)
-* [GitHub = git + hub / Manage your repo by CLI](#)
-* [GitHub = git + hub / Manage your repo by CLI](#)
-* [GitHub = git + hub / Manage your repo by CLI](#)
-* [GitHub = git + hub / Manage your repo by CLI](#)
-* [GitHub = git + hub / Manage your repo by CLI](#)
-* [GitHub = git + hub / Manage your repo by CLI](#)
-
+* [GitHub = git + hub / Manage your repo by CLI](#github--git--hub-manage-your-repo-by-cli)
+* [Github AKA SVNHub?](#github-aka-svnhub)
+* [Markdown on steroid (Github Flavored Markdown)](#markdown-on-steroid-github-flavored-markdown)
+* [Gist, another kind of repository](#gist-another-kind-of-repository)
+* [Issue/Pull request Templates](#issuepull-request-templates)
+* [Github Pages ❤️️](#github-pages-️️)
+* [Sign your commits](#sign-your-commits)
+* [Playing with URL](#playing-with-url)
+    * [URL everywhere](#url-everywhere)
+    * [Disable whitespace on code review](#disable-whitespace-on-code-review)
+    * [.diff and .patch](#diff-and-patch)
+    * [Highlight lines](#highlight-lines)
+    * [Filtering commits](#filtering-commits)
+* [Keyboard shortcuts](#keyboard-shortcuts)
+* [Emoji 😍](#emoji-)
+* [git.io a Github URL shortener](#gitio-a-github-url-shortener)
+* [Not only for your code](#not-only-for-your-code)
+* [API (~REST or GraphQL)](#api-rest-or-graphql)
+* [Bonus: Octodex](#bonus-octodex)
 
 
 ## GitHub = git + hub (Manage your repo by CLI)
@@ -35,7 +46,7 @@ Summary:
 * `ci-status`      Show the CI status of a commit
 
 ```sh
-alias git=hub
+alias git='hub'
 ```
 
 Using ZSH? Don't forget to add the plugin!
@@ -59,9 +70,10 @@ svn co --depth empty https://github.com/user/repo
 
 ...but who uses SVN anyway? ;-)
 
-## GFM: a markdown on steroid
 
-Github use his own version of markdown: Github Flavored Markdown (GFM). It provides severals additionnals features such as:
+## Markdown on steroid (Github Flavored Markdown)
+
+Github use his own version of markdown: Github Flavored Markdown (GFM). It provides severals additional features such as:
 
 * Task lists (`- [ ] <task description>`). On the issue summary, a task list will also appear ([example](https://github.com/maxpou-slides/github-tips-tricks/issues))
 
@@ -116,13 +128,7 @@ Github use his own version of markdown: Github Flavored Markdown (GFM). It provi
     </details>
 
 
-
-## URL shortener
-
-Github provides an URL shortener such as bit.ly for your GitHub repositories: https://git.io/
-
-
-## Gist an other kind of repository
+## Gist, another kind of repository
 
 Each [gist](https://gist.github.com/) is a Github repository. So you can clone and fork them, exactly like a Github repository:
 
@@ -145,6 +151,7 @@ Everyone who maintain an open source project on Github had already get this kind
 To avoid this repetitive task, you can add an issue template to your repository.
 
 ```markdown
+(ISSUE_TEMPLATE.md)
 
 | Q                | A
 | ---------------- | -----
@@ -172,24 +179,25 @@ To avoid this repetitive task, you can add an issue template to your repository.
 ```
 
 Now you can ensure that each contributors will provide the corrects informations!
-You can do exactly the same with Pull-request content (*"what does it fix? Tests status?"*).
+You can do exactly the same with Pull-request content (*"what does it fix? Tests status?"*). In this case, call this file: PULL_REQUEST_TEMPLATE.md.
 
-## Github Pages
+## Github Pages ❤️️
 
 Github can host severals type of websites:
 
-* plain old HTML pages: https://github.com/maxpou-slides/maxpou-slides.github.io
-* websites which use [Jekyll](https://jekyllrb.com/) (like this website)
-example: my blog where you read this lines :) (https://github.com/maxpou/maxpou.github.io)
+* plain old HTML pages (can be interesting if you want to test the last trending JS Framework!);
+* blogs which use **[Jekyll](https://jekyllrb.com/)**, like this blog where you read this lines :) [github.com/maxpou/maxpou.github.io](https://github.com/maxpou/maxpou.github.io).
+
+To deploy, `git push` and that's all!
 
 There is severals url pattern:
 * <username/organisationName>.github.io
 * <username/organisationName>.github.io/projectname. In this case, you need to push the HTML/Jekyll files in a branch call gh-pages.
-* ... or whatever custom domain. In this case, put a CNAME file on your repository. Further more informations are availables in the documentation (https://help.github.com/articles/using-a-custom-domain-with-github-pages/).
+* ... or whatever custom domain. In this case, put a CNAME file on your repository. Further more informations are available [in the documentation](https://help.github.com/articles/using-a-custom-domain-with-github-pages/).
 
 You can also [secure your Github Pages site with HTTPS](https://help.github.com/articles/securing-your-github-pages-site-with-https/). Unfortunately it is not compatible with custom domains.
 
-I'am a big fan of Github Pages! They currently host this website ([www.maxpou.fr](http://www.maxpou.fr/)), an other one dedicated to my slides ([slides.maxpou.fr](http://slides.maxpou.fr/)), some Proof of Concepts (ie: my [Dictionary Game](https://github.com/maxpou/dictionary-game)) and all of my slides (I put them into an [organization](https://github.com/maxpou-slides) for a better visibility).
+Personally, I'm a big user of Github Pages. For now, they currently host this website ([www.maxpou.fr](http://www.maxpou.fr/)), an other one dedicated to my slides ([slides.maxpou.fr](http://slides.maxpou.fr/)), some Proof of Concepts (*ie: [Dictionary Game](https://github.com/maxpou/dictionary-game) with VueJs 2*) and all of my slides (I put them into an [organization](https://github.com/maxpou-slides) for a better visibility).
 
 For managing dependencies, I recommend you to use [Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules). For instance my slides repositories use [RevealsJS](https://github.com/hakimel/reveal.js/). I don't want to manage this library inside each repositories.
 It is exactly the same for my [Vim plugins](https://github.com/maxpou/dotfiles/tree/master/vim/bundle). I prefer stock a reference to the repositories in my dotfiles instead of the repository itself.
@@ -204,12 +212,14 @@ $ git config --global user.name 'Linus Torvalds'
 $ git config --global user.email linus@fake.com
 ```
 
-Now, you can usurp the identity of someone else! To avoid this, you can sign a commit (with GPG key).
+Now, you can usurp the identity of someone else! To avoid this, you can sign a commit. It works with GPG key.
 
 ![]({{ site.url }}/images/articles/github-tips-tricks/gpgsign.png)
 
 
-## URL everywhere
+## Playing with URL
+
+### URL everywhere
 
 One of GitHub's motto is: *to exist, each action must have a specific URL*. By action, I mean:
 
@@ -218,13 +228,36 @@ One of GitHub's motto is: *to exist, each action must have a specific URL*. By a
 * comment (on commit, issue, pull request...)
 * ...
 
-By the way, you can easily generate a diff/patch file by addind **.diff** or **.patch** at the end of the Pull-request/commit.  
+### Disable whitespace on code review
+
+If a commit is polluted by whitespace simply add `?w=1` at the end of the URI.
+
+![]({{ site.url }}/images/articles/github-tips-tricks/whitespace.gif)
+
+Example: [with](https://github.com/maxpou-slides/github-tips-tricks/commit/2616cbecc713389f8455b066711bc74891a593a6) and [without](https://github.com/maxpou-slides/github-tips-tricks/commit/2616cbecc713389f8455b066711bc74891a593a6?w=1) whitespace pollution.
+
+
+### .diff and .patch
+
+You can generate a diff/patch file by addind **.diff** or **.patch** at the end of the Pull-request/commit.  
 
 Example:
 
-* Original commit: https://github.com/maxpou/maxpou.github.io/commit/470da95b366bbb3efd8fa481308c906c955304db
-* Diff: https://github.com/maxpou/maxpou.github.io/commit/470da95b366bbb3efd8fa481308c906c955304db.diff
-* Patch: https://github.com/maxpou/maxpou.github.io/commit/470da95b366bbb3efd8fa481308c906c955304db.patch
+* Original commit: [github.com/user/repo/commit/example](https://github.com/maxpou/maxpou.github.io/commit/470da95b366bbb3efd8fa481308c906c955304db)
+* Diff: [github.com/user/repo/commit/example.diff](https://github.com/maxpou/maxpou.github.io/commit/470da95b366bbb3efd8fa481308c906c955304db.diff)
+* Patch: [github.com/user/repo/commit/example.patch](https://github.com/maxpou/maxpou.github.io/commit/470da95b366bbb3efd8fa481308c906c955304db.patch)
+
+
+### Highlight lines
+
+When visualizing a commit, click on the line number to highlight one line.
+You can now share the link: [github.com/user/repo/commit/example#L3-L5](https://github.com/maxpou/dictionary-game/blob/77df749b615b76d661a6bead1084be5650fd438e/.travis.yml#L3-L5)
+
+For multiple, press shift *(or play with url!)*.
+
+### Filtering commits
+
+A last URL tip, is filtering in URL. If you want to retrieve one of your commit, you can suffix the URL with `?author=user`.
 
 
 ## Keyboard shortcuts
@@ -248,44 +281,34 @@ A better implementation is the [Atom contributing's style guides](https://github
 Here's a good [cheat sheet](http://www.webpagefx.com/tools/emoji-cheat-sheet/).
 
 
-## Disable whitespace on code review
+## git.io a Github URL shortener
 
-If a commit is polluted by whitespace simply add `?w=1` at the end of the URI.
-
-![]({{ site.url }}/images/articles/github-tips-tricks/whitespace.gif)
-
-Example: [with](https://github.com/maxpou-slides/github-tips-tricks/commit/2616cbecc713389f8455b066711bc74891a593a6) and [without](https://github.com/maxpou-slides/github-tips-tricks/commit/2616cbecc713389f8455b066711bc74891a593a6?w=1) whitespace pollution.
-
-
-## Filtering commits
-
-?author=maxpou
-
-
-
-## Highlight lines
-
-click on the line number to highlight one line. For multiple, press shift.
-
-https://github.com/maxpou/dictionary-game/blob/77df749b615b76d661a6bead1084be5650fd438e/.travis.yml#L3-L5
+[git.io](https://git.io/) is an URL shortener 5such as bit.ly) for your GitHub repositories.
 
 
 ## Not only for your code
 
-PDF, 3D visualisation
+GitHub can host specific files like PDF, stl (3D visualisation) and render them.
+Example with this file: [github.com/skalnik/secret-bear-clip/blob/master/stl/clip.stl](https://github.com/skalnik/secret-bear-clip/blob/master/stl/clip.stl)
+
+<script src="https://embed.github.com/view/3d/skalnik/secret-bear-clip/master/stl/clip.stl"></script>
+
 
 ## API (~REST or GraphQL)
 
 Github provide 2 types of API:
+
 * https://api.github.com/
 * https://developer.github.com/early-access/graphql/explorer/
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Playing with GitHub GraphQL API 😀 - <a href="https://t.co/Mo2X9HX3l4">https://t.co/Mo2X9HX3l4</a> <a href="https://t.co/9lA5dylfDN">pic.twitter.com/9lA5dylfDN</a></p>&mdash; Maxence POUTORD (@_maxpou) <a href="https://twitter.com/_maxpou/status/776343643867254784">September 15, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-## The power of Webhooks
 
 ## Bonus: Octodex
 
-Octodex is a kind of Octocat gallery, the mascot fot GitHub.
-https://octodex.github.com/
+
+[Octodex (octodex.github.com)](https://octodex.github.com/) is an Octocat gallery, the mascot fot GitHub.
+
+
+![]({{ site.url }}/images/articles/github-tips-tricks/gobbleotron.gif)
