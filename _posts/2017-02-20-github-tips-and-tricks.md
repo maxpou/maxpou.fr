@@ -239,7 +239,7 @@ Example: [with](https://github.com/maxpou-slides/github-tips-tricks/commit/2616c
 
 ### .diff and .patch
 
-You can generate a diff/patch file by addind **.diff** or **.patch** at the end of the Pull-request/commit.  
+You can generate a diff/patch file by adding **.diff** or **.patch** at the end of the Pull-request/commit.  
 
 Example:
 
@@ -308,7 +308,7 @@ Github provide 2 types of API:
 ## Bonus: Octodex
 
 
-[Octodex (octodex.github.com)](https://octodex.github.com/) is an Octocat gallery, the mascot fot GitHub.
+[Octodex (octodex.github.com)](https://octodex.github.com/) is an Octocat gallery, the mascot of GitHub.
 
 
 ![]({{ site.url }}/images/articles/github-tips-tricks/gobbleotron.gif)
