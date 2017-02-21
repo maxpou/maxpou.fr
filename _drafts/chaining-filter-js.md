@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Chaining Javascript filters recursively
-tags: ["Javascript"]
+tags: ["Javascript", "Functional Programming"]
 lang: en
 ---
 
@@ -10,13 +10,14 @@ Given the following data:
 
 ```javascript
 const heros = [
-  { id: 1, name: 'Wolverine',    family: 'Marvel'    },
-  { id: 2, name: 'Deadpool',     family: 'Marvel'    },
-  { id: 3, name: 'Magneto',      family: 'Marvel'    },
-  { id: 4, name: 'Batman',       family: 'DC Comics' },
-  { id: 4, name: 'Harley Quinn', family: 'DC Comics' },
-  { id: 5, name: 'Legolas',      family: 'Tolkien'   },
-  { id: 6, name: 'Gandalf',      family: 'Tolkien'   }
+  { id: 1, name: 'Wolverine',    family: 'Marvel',     isEvil: false },
+  { id: 2, name: 'Deadpool',     family: 'Marvel',     isEvil: false },
+  { id: 3, name: 'Magneto',      family: 'Marvel',     isEvil: true  },
+  { id: 4, name: 'Batman',       family: 'DC Comics',  isEvil: false },
+  { id: 4, name: 'Harley Quinn', family: 'DC Comics',  isEvil: true  },
+  { id: 4, name: 'Saruman',      family: 'DC Comics',  isEvil: true  },
+  { id: 5, name: 'Legolas',      family: 'Tolkien',    isEvil: false },
+  { id: 6, name: 'Gandalf',      family: 'Tolkien',    isEvil: false }
 ];
 ```
 
@@ -26,7 +27,7 @@ And the following filters:
 // not DC Comics
 const f1 = h => h.family !== 'DC Comics'
 // no evil hero
-const f2 = h => h.name !== 'Magneto' && h.name !== 'Harley Quinn'
+const f2 = h => h.isEvil === false
 ```
 
 I can now chain the filters like this:
