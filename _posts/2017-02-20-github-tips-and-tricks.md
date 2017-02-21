@@ -262,7 +262,7 @@ A last URL tip, is filtering in URL. If you want to retrieve one of your commit,
 
 ## Keyboard shortcuts
 
-Even if it's a web application, using your mouse isn't mandatory. In fact, GitHub offer a lot of differents shortcuts.
+Even if it's a web application, using your mouse isn't mandatory. In fact, GitHub offer a lot of different shortcuts.
 To see them, just press " ? " *(doesn't matter where you are!)*.
 
 ![]({{ site.url }}/images/articles/github-tips-tricks/keyboard-shortcuts-help.png)
