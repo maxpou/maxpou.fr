@@ -10,14 +10,15 @@ Given the following data:
 
 ```javascript
 const heros = [
-  { id: 1, name: 'Wolverine',    family: 'Marvel',     isEvil: false },
-  { id: 2, name: 'Deadpool',     family: 'Marvel',     isEvil: false },
-  { id: 3, name: 'Magneto',      family: 'Marvel',     isEvil: true  },
-  { id: 4, name: 'Batman',       family: 'DC Comics',  isEvil: false },
-  { id: 4, name: 'Harley Quinn', family: 'DC Comics',  isEvil: true  },
-  { id: 4, name: 'Saruman',      family: 'DC Comics',  isEvil: true  },
-  { id: 5, name: 'Legolas',      family: 'Tolkien',    isEvil: false },
-  { id: 6, name: 'Gandalf',      family: 'Tolkien',    isEvil: false }
+  { name: 'Wolverine',      family: 'Marvel',    isEvil: false },
+  { name: 'Deadpool',       family: 'Marvel',    isEvil: false },
+  { name: 'Magneto',        family: 'Marvel',    isEvil: true  },
+  { name: 'Charles Xavier', family: 'Marvel',    isEvil: false },
+  { name: 'Batman',         family: 'DC Comics', isEvil: false },
+  { name: 'Harley Quinn',   family: 'DC Comics', isEvil: true  },
+  { name: 'Legolas',        family: 'Tolkien',   isEvil: false },
+  { name: 'Gandalf',        family: 'Tolkien',   isEvil: false },
+  { name: 'Saruman',        family: 'Tolkien',   isEvil: true  }
 ];
 ```
 
@@ -58,13 +59,13 @@ A better solution is to use a functionnal approach by using recursion:
 
 ```js
 function recursive_filter (data, arrayFilters, index = 0) {
-    if (arrayFilters.length === 0) {
-        return data
-    }
-    if (index === arrayFilters.length - 1) {
-        return data.filter(arrayFilters[index])
-    }
-    return recursive_filter(data.filter(arrayFilters[index]), arrayFilters, (index + 1))
+  if (arrayFilters.length === 0) {
+    return data
+  }
+  if (index === arrayFilters.length - 1) {
+    return data.filter(arrayFilters[index])
+  }
+  return recursive_filter(data.filter(arrayFilters[index]), arrayFilters, (index + 1))
 }
 ```
 
