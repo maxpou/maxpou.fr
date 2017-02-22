@@ -23,7 +23,7 @@ var heros = [
   { name: 'Legolas',        family: 'Tolkien',   isEvil: false },
   { name: 'Gandalf',        family: 'Tolkien',   isEvil: false },
   { name: 'Saruman',        family: 'Tolkien',   isEvil: true  }
-];
+]
 
 function slugifyHero(hero) {
     return encodeURIComponent(hero.family + '-' + hero.name)
@@ -52,7 +52,6 @@ There is 3 problems here:
 * after my loop, my datas are altered. After the loop, heros variable doesn't represent heros anymore. It breaks the S from SOLID.
 * this code itsn't thread safe. What happen if you want to use your heros during the loop? With this kind of code, it can be risky to parallelize tasks.
 * there is already 2 levels of indentation. Adding a third rule will probably add another level of indentation.
-
 
 ## Array.map and Array.filter to the rescue!
 
@@ -150,13 +149,13 @@ const searchedItem = heros.find(h => h.name === 'Gandalf')
 An other function is always present when we speak about Functional programming & high order function: [Array.reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
 
 ```js
-var squadHeroes = [
+const squadHeroes = [
   { name: 'Wolverine',      ennemiesKilled: 4  },
   { name: 'Magneto',        ennemiesKilled: 8  },
   { name: 'Charles Xavier', ennemiesKilled: 15 },
   { name: 'Batman',         ennemiesKilled: 16 },
   { name: 'Harley Quinn',   ennemiesKilled: 23 },
-  { name: 'Gandalf',        ennemiesKilled: 42 },
+  { name: 'Gandalf',        ennemiesKilled: 42 }
 ];
 
 var totalScore = 0
@@ -166,3 +165,52 @@ for (var i=0; i < squadHeroes.length; i++) {
 
 var totalScore = squadHeroes.reduce((accumulator, current) => accumulator + current.ennemiesKilled, 0)
 ```
+
+## Set theory
+
+If you want to deal with unique items, you should use the [Set object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set). It takes an iterable object as a parameter (such as an array). Then to convert a Set to a classic array, we use the [spread operator (...iterable)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator).
+
+```js
+const exampleSet = new Set([1, 2, 3, 1])
+exampleSet.size // 3. On instantiation, the duplicated entry was removed (here 1)
+
+// To transform a Set object into an array
+const exampleArray = [...exampleSet] //[1, 2, 3]
+```
+
+Let's take the previous example and see
+
+```js
+const heros = [
+  { name: 'Wolverine',      family: 'Marvel',    isEvil: false },
+  { name: 'Deadpool',       family: 'Marvel',    isEvil: false },
+  { name: 'Magneto',        family: 'Marvel',    isEvil: true  },
+  { name: 'Charles Xavier', family: 'Marvel',    isEvil: false },
+  { name: 'Batman',         family: 'DC Comics', isEvil: false },
+  { name: 'Harley Quinn',   family: 'DC Comics', isEvil: true  },
+  { name: 'Legolas',        family: 'Tolkien',   isEvil: false },
+  { name: 'Gandalf',        family: 'Tolkien',   isEvil: false },
+  { name: 'Saruman',        family: 'Tolkien',   isEvil: true  }
+];
+
+const tolkienHeros = heros.filter(h => h.family === 'Tolkien')
+const evilHeros    = heros.filter(h => h.isEvil === true)
+
+var tolkienHerosSet = new Set(tolkienHeros)
+var evilHerosSet    = new Set(evilHeros)
+```
+
+![set theory]({{ site.url }}/images/articles/no-more-loop/set-theory.png)
+
+```js
+// Union: tolkienHeros ∪ evilHeros
+var union = new Set([...tolkienHerosSet, ...evilHerosSet])
+
+// Intersection tolkienHeros ∩ evilHeros (element which are both in tolkienHeros and evilHeros)
+var intersection = new Set([...tolkienHerosSet].filter(h => evilHerosSet.has(h)))
+
+// Difference tolkienHeros \ evilHeros (objects from tolkienHeros which are not in evilHeros)
+var difference = new Set([...tolkienHerosSet].filter(h => !evilHerosSet.has(h)))
+```
+
+Note: if the 2 arrays are built from different API, your object will probably not share the same reference. I mean `tolkienHeros[y] === evilHeros[y]`. In this case, your Set should only contain the object id.
