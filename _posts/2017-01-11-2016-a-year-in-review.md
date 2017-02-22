@@ -4,7 +4,7 @@ title: 2016 - A Year In Review
 tags: ["My life"]
 lang: en
 image:
-    feature: articles/2016-year-in-review/banner-tree-planting.jpg
+    feature: articles/2017/2016-year-in-review/banner-tree-planting.jpg
 ---
 
 2016 just ended, and now it's time to look backward, evaluate success and failures for 2017. First of all, 2016 was probably one of the most productive and exciting year in my life.

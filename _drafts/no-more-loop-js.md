@@ -26,7 +26,7 @@ var heros = [
 ]
 
 function slugifyHero(hero) {
-    return encodeURIComponent(hero.family + '-' + hero.name)
+  return encodeURIComponent(hero.family + '-' + hero.name)
 }
 ```
 
@@ -163,7 +163,8 @@ for (var i=0; i < squadHeroes.length; i++) {
   totalScore += squadHeroes[i].ennemiesKilled
 }
 
-var totalScore = squadHeroes.reduce((accumulator, current) => accumulator + current.ennemiesKilled, 0)
+var totalScore = squadHeroes.reduce(
+  (accumulator, current) => accumulator + current.ennemiesKilled, 0)
 ```
 
 ## Set theory
@@ -196,21 +197,21 @@ const heros = [
 const tolkienHeros = heros.filter(h => h.family === 'Tolkien')
 const evilHeros    = heros.filter(h => h.isEvil === true)
 
-var tolkienHerosSet = new Set(tolkienHeros)
-var evilHerosSet    = new Set(evilHeros)
+const tolkienHerosSet = new Set(tolkienHeros)
+const evilHerosSet    = new Set(evilHeros)
 ```
 
-![set theory]({{ site.url }}/images/articles/no-more-loop/set-theory.png)
+![set theory]({{ site.url }}/images/articles/2017/no-more-loop/set-theory.png)
 
 ```js
 // Union: tolkienHeros ∪ evilHeros
-var union = new Set([...tolkienHerosSet, ...evilHerosSet])
+const union = new Set([...tolkienHerosSet, ...evilHerosSet])
 
 // Intersection tolkienHeros ∩ evilHeros (element which are both in tolkienHeros and evilHeros)
-var intersection = new Set([...tolkienHerosSet].filter(h => evilHerosSet.has(h)))
+const intersection = new Set([...tolkienHerosSet].filter(h => evilHerosSet.has(h)))
 
 // Difference tolkienHeros \ evilHeros (objects from tolkienHeros which are not in evilHeros)
-var difference = new Set([...tolkienHerosSet].filter(h => !evilHerosSet.has(h)))
+const difference = new Set([...tolkienHerosSet].filter(h => !evilHerosSet.has(h)))
 ```
 
 Note: if the 2 arrays are built from different API, your object will probably not share the same reference. I mean `tolkienHeros[y] === evilHeros[y]`. In this case, your Set should only contain the object id.

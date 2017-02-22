@@ -3,16 +3,16 @@ layout: post
 title: Hubot
 tags: ["GitHub", "Bot"]
 image:
-    feature: articles/hubot/hubot_shema.jpg
+    feature: articles/2017/hubot/hubot_shema.jpg
 ---
 
 Je regardais l'autre jour cette conférence d'Alain Hélaïli à propos sur le fonctionnement interne de [Github.com](https://github.com). Autant, je connaissais bien l'outil, mais pas du tout l'entreprise derrière. Bon il s'avère, qu'ils sont ~600 githubber et pour une bonne partie, éparpillés aux quatre coins du globe. Arrivé à ce moment de la présentation de la boîte, je me suis dit que ça devait-être assez chaud patate côté communication (sans compter les problèmes de timezone)... Et bien en fait non ! Ils déploient même en production plusieurs dizaines de fois par jour, les doigts dans le nez !
 
-![Hubot]({{ site.url }}/images/articles/hubot/hubot.jpg)
+![Hubot]({{ site.url }}/images/articles/2017/hubot/hubot.jpg)
 
 Bon en fait, le secret de Github c'est **Hubot**, AKA l'*employé le plus productif de Github*. N'allez pas chercher son profil Linkedin puisque Hubot est un bot. Pour faire simple, ce robot va exécuter tout un panel de scripts qu'on lui aura demandé de faire, via son client de chat préféré (Slack, Skype, XMPP...).
 
-![Slack exemple]({{ site.url }}/images/articles/hubot/slack.png)
+![Slack exemple]({{ site.url }}/images/articles/2017/hubot/slack.png)
 *exemple d'intégration avec Slack*
 
 Et Parmi les types de scripts on pourra trouver :
@@ -77,11 +77,11 @@ Ensuite, copier dans le presse papier le token généré. Retournez dans la cons
 
 Surprise, vous voyez dans Slack un nouvel invité, c'est **Hubot**. Invitez le ("/invite hubot") dans une room et commencez à papoter.
 
-![Une conversation très intéressante]({{ site.url }}/images/articles/hubot/slack-blabla.png)
+![Une conversation très intéressante]({{ site.url }}/images/articles/2017/hubot/slack-blabla.png)
 
 Et voilà le travail ! C'est tout !
 
-![Slack exemple]({{ site.url }}/images/articles/hubot/bb8_thumbsup.gif)
+![Slack exemple]({{ site.url }}/images/articles/2017/hubot/bb8_thumbsup.gif)
 
 ## Pimp my bot
 

@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Github Tips&tricks
+title: "Github: Tips&tricks"
 tags: ["GitHub"]
 lang: en
 image:
-    feature: articles/github-tips-tricks/banner.png
+    feature: articles/2017/github-tips-tricks/banner.png
     credit: Github.com
     creditlink: https://enterprise.github.com/aws
 ---
@@ -83,7 +83,7 @@ Github use his own version of markdown: Github Flavored Markdown (GFM). It provi
     - [ ] Conquer the world
     ```
 
-    ![]({{ site.url }}/images/articles/github-tips-tricks/tasklist.gif)
+    ![]({{ site.url }}/images/articles/2017/github-tips-tricks/tasklist.gif)
 
 * Tables:
 
@@ -214,7 +214,7 @@ $ git config --global user.email linus@fake.com
 
 Now, you can usurp the identity of someone else! To avoid this, you can sign a commit. It works with GPG key.
 
-![]({{ site.url }}/images/articles/github-tips-tricks/gpgsign.png)
+![]({{ site.url }}/images/articles/2017/github-tips-tricks/gpgsign.png)
 
 
 ## Playing with URL
@@ -232,7 +232,7 @@ One of GitHub's motto is: *to exist, each action must have a specific URL*. By a
 
 If a commit is polluted by whitespace simply add `?w=1` at the end of the URI.
 
-![]({{ site.url }}/images/articles/github-tips-tricks/whitespace.gif)
+![]({{ site.url }}/images/articles/2017/github-tips-tricks/whitespace.gif)
 
 Example: [with](https://github.com/maxpou-slides/github-tips-tricks/commit/2616cbecc713389f8455b066711bc74891a593a6) and [without](https://github.com/maxpou-slides/github-tips-tricks/commit/2616cbecc713389f8455b066711bc74891a593a6?w=1) whitespace pollution.
 
@@ -265,7 +265,7 @@ A last URL tip, is filtering in URL. If you want to retrieve one of your commit,
 Even if it's a web application, using your mouse isn't mandatory. In fact, GitHub offer a lot of different shortcuts.
 To see them, just press " ? " *(doesn't matter where you are!)*.
 
-![]({{ site.url }}/images/articles/github-tips-tricks/keyboard-shortcuts-help.png)
+![]({{ site.url }}/images/articles/2017/github-tips-tricks/keyboard-shortcuts-help.png)
 
 
 ## Emoji 😍
@@ -275,7 +275,7 @@ But they aren't only present to decorate your text. For example, I prefix everyt
 
 A better implementation is the [Atom contributing's style guides](https://github.com/atom/atom/blob/master/CONTRIBUTING.md#styleguides):
 
-![]({{ site.url }}/images/articles/github-tips-tricks/commit-message-atom.png)
+![]({{ site.url }}/images/articles/2017/github-tips-tricks/commit-message-atom.png)
 
 
 Here's a good [cheat sheet](http://www.webpagefx.com/tools/emoji-cheat-sheet/).
@@ -311,4 +311,4 @@ Github provide 2 types of API:
 [Octodex (octodex.github.com)](https://octodex.github.com/) is an Octocat gallery, the mascot of GitHub.
 
 
-![]({{ site.url }}/images/articles/github-tips-tricks/gobbleotron.gif)
+![]({{ site.url }}/images/articles/2017/github-tips-tricks/gobbleotron.gif)
