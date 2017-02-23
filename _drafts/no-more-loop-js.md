@@ -167,19 +167,19 @@ var totalScore = squadHeroes.reduce(
   (accumulator, current) => accumulator + current.ennemiesKilled, 0)
 ```
 
-## Set theory
+## Set theory: union (∪), intersection (∩) and difference (∖)
 
 If you want to deal with unique items, you should use the [Set object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set). It takes an iterable object as a parameter (such as an array). Then to convert a Set to a classic array, we use the [spread operator (...iterable)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator).
 
 ```js
 const exampleSet = new Set([1, 2, 3, 1])
-exampleSet.size // 3. On instantiation, the duplicated entry was removed (here 1)
+exampleSet.size // 3. On instantiation, Set don't keep the second 1
 
 // To transform a Set object into an array
 const exampleArray = [...exampleSet] //[1, 2, 3]
 ```
 
-Let's take the previous example and see
+Let's take the previous example and see how do it in JavaScript!
 
 ```js
 const heros = [
@@ -201,7 +201,9 @@ const tolkienHerosSet = new Set(tolkienHeros)
 const evilHerosSet    = new Set(evilHeros)
 ```
 
-![set theory]({{ site.url }}/images/articles/2017/no-more-loop/set-theory.png)
+If you cannot reminder what is the Set theory, here's a schema:
+
+![set theory]({{ site.url }}/images/articles/2017/no-more-loop/set-theory-extended.png)
 
 ```js
 // Union: tolkienHeros ∪ evilHeros
@@ -210,8 +212,17 @@ const union = new Set([...tolkienHerosSet, ...evilHerosSet])
 // Intersection tolkienHeros ∩ evilHeros (element which are both in tolkienHeros and evilHeros)
 const intersection = new Set([...tolkienHerosSet].filter(h => evilHerosSet.has(h)))
 
-// Difference tolkienHeros \ evilHeros (objects from tolkienHeros which are not in evilHeros)
+// Difference tolkienHeros ∖ evilHeros (objects from tolkienHeros which are not in evilHeros)
 const difference = new Set([...tolkienHerosSet].filter(h => !evilHerosSet.has(h)))
 ```
 
-Note: if the 2 arrays are built from different API, your object will probably not share the same reference. I mean `tolkienHeros[y] === evilHeros[y]`. In this case, your Set should only contain the object id.
+**Notes:**
+* if the 2 arrays are built from different API, your object will probably not share the same reference. I mean `tolkienHeros[y] === evilHeros[y]`. In this case, your Set should only contain the object id.
+* the Set Object keep the objects references (no copy will be created on instantiation).
+  ```js
+  // I update an object property
+  heros[7].name = "Gandalf the white"
+
+  [...tolkienHerosSet].find(h => h.name === 'Gandalf') // undefined
+  [...tolkienHerosSet].find(h => h.name === 'Gandalf the white') // Object {...}
+  ```
