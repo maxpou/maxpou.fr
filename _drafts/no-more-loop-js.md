@@ -5,12 +5,12 @@ tags: ["Javascript", "Functional Programming"]
 lang: en
 ---
 
-Few months ago, I start moving my Javascript code from a Oriented Object code to something close to Functional Programming.
+Few months ago, I start moving my Javascript code from a Oriented Object/unorganized code to something much more close to Functional Programming.
 In this paradigm, I found interesting concepts such as immutability and high order functions...
 
-And few days ago, colleague submit a pull request with a javascript loop. And I suddenly remember how far was my last loop in Javascript.
+And few days ago, colleague submit a pull request with a javascript loop. And I suddenly remember how far was my last loop in Javascript...
 
-Let's start from the beginning. With the following datas:
+Let's start from the beginning, with the following data and a default function:
 
 ```js
 var heros = [
@@ -25,12 +25,16 @@ var heros = [
   { name: 'Saruman',        family: 'Tolkien',   isEvil: true  }
 ]
 
-function slugifyHero(hero) {
-  return encodeURIComponent(hero.family + '-' + hero.name)
+function stringifyHero (hero) {
+  var heroStatus = hero.isEvil ? "😈" : "😇"
+  return `${heroStatus} ${hero.name} (${hero.family})`
 }
+
+// usage
+stringifyHero(heros[0]) === "😇 Wolverine (Marvel)" // true
 ```
 
-The goal is to create a new squad of Heros which are good and not from DC Comics. I also want to create a new attribute slug (build from hero family&name).
+The goal is to create a new squad of Heros which are good and not from DC Comics. I also want to stringify each one.
 
 ## The plain old loop way
 
@@ -40,8 +44,8 @@ With a loop the code should be like this:
 var heroCount = heros.length
 var squadAlpha = []
 for (var i=0; i < heroCount; i++) {
-  heros[i].slug = slugifyHero(heros[i])
   if (!heros[i].isEvil && heros[i].family !== 'DC Comics') {
+      heros[i]['tostring'] = stringifyHero(heros[i])
       squadAlpha.push(heros[i])
   }
 }
@@ -57,26 +61,10 @@ There is 3 problems here:
 
 In a few words:
 
-* Array.map: browse an array and apply something;
+* Array.map: browse an array and apply something on each element;
 * Array.filter: filter an array.
 
 Now the same code with this two high order functions:
-
-```js
-var sluggedHeros = heros.map(function(hero){
-  hero.slug = slugifyHero(hero)
-  return hero
-})
-var squadAlpha = sluggedHeros
-  .filter(function(hero){
-    return !hero.isEvil
-  })
-  .filter(function(hero){
-    return hero.family !== 'DC Comics'
-  })
-```
-
-If I don't need `sluggedHeros` outside this part of code, we can also add this to the chain:
 
 ```js
 var squadAlpha = heros
@@ -86,19 +74,39 @@ var squadAlpha = heros
   .filter(function(hero){
     return hero.family !== 'DC Comics'
   })
-  .map(function(hero){
-    hero.slug = slugifyHero(hero)
-    return hero
-  })
+// [Object, Object, Object, Object, Object]
+
+var squadAlphaStr = squadAlpha.map(function(hero){
+  return stringifyHero(hero)
+})
+//["😇 Wolverine (Marvel)", "😇 Deadpool (Marvel)", "😇 Charles Xavier (Marvel)", "😇 Legolas (Tolkien)", "😇 Gandalf (Tolkien)"]
 ```
+
+If I don't need `squadAlpha` outside this part of code, we can also add this to the chain:
+
+```js
+var squadAlphaStr = heros
+  .filter(function(hero){
+    return !hero.isEvil
+  })
+  .filter(function(hero){
+    return hero.family !== 'DC Comics'
+  })
+  .map(function(hero){
+    return stringifyHero(hero)
+  })
+// ["😇 Wolverine (Marvel)", "😇 Deadpool (Marvel)", "😇 Charles Xavier (Marvel)", "😇 Legolas (Tolkien)", "😇 Gandalf (Tolkien)"]
+```
+
+Now hero object isn't changed and herosExtended is a copy of hero which contain a new property.
 
 ## Embrace the power of es6 (or es2015)
 
 First of all it is recommended to drop the `var` keyword in favor of `const`.
-Then if you think that anonymous function reduce visibility and are redundant, I've a good new. es6 bring something call arrow functions. Arrow function provide an shortness way to write function.
+Then if you think that anonymous function reduce visibility and are redundant, I've a good new. es6 bring something call [Arrow functions](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions). Arrow function provide an shortness way to write function.
 
 ```js
-const squadAlpha = heros
+const squadAlphaStr = heros
   .filter(hero => {
     return !hero.isEvil
   })
@@ -106,29 +114,30 @@ const squadAlpha = heros
     return hero.family !== 'DC Comics'
   })
   .map(hero => {
-    hero.slug = slugifyHero(hero)
-    return hero
+    return stringifyHero(hero)
   })
+// ["😇 Wolverine (Marvel)", "😇 Deadpool (Marvel)", "😇 Charles Xavier (Marvel)", "😇 Legolas (Tolkien)", "😇 Gandalf (Tolkien)"]
 ```
 
 It's nicer but we can also go deeper with implicit return (drop the curly braces):
 
 ```js
-const squadAlpha = heros
+const squadAlphaStr = heros
   .filter(hero => !hero.isEvil)
   .filter(hero => hero.family !== 'DC Comics')
-  .map(hero => {
-    hero.slug = slugifyHero(hero)
-    return hero
-  })
+  .map(hero => stringifyHero(hero))
+
+// ["😇 Wolverine (Marvel)", "😇 Deadpool (Marvel)", "😇 Charles Xavier (Marvel)", "😇 Legolas (Tolkien)", "😇 Gandalf (Tolkien)"]
 ```
 
-Now the this code is **trade safe**, the **initial datas aren't altered** and over all: it's **much more readable**.**
+Now the this code is **trade safe**, the **initial datas aren't altered** and over all: it's **much more readable**.
 
-**Note:** with arrow function ugly you will also forget this ugly `var self = this`. But don't think that arrow function bind the this! It completely wrong!
+**Note:** with arrow function you will also forget this ugly hack `var self = this`. But don't think that arrow function bind the this! It completely wrong!
 In a nutshell, when you write function with the `function` keyword, this function redefine 4 things (this, arguments, new.target and super). With the arrow function, it redefine none of them. That's why `var self = this` isn't necessary anymore.
 
 ## Not enough?
+
+### Array.find
 
 I also enjoy [Array.find](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find). You can use it like this:
 
@@ -144,27 +153,79 @@ while (typeof searchedItem === 'undefined' && heros[i]) {
 }
 
 const searchedItem = heros.find(h => h.name === 'Gandalf')
+// Object {name: "Gandalf", family: "Tolkien", isEvil: false}
 ```
+
+### Array.reduce
 
 An other function is always present when we speak about Functional programming & high order function: [Array.reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
 
 ```js
 const squadHeroes = [
-  { name: 'Wolverine',      ennemiesKilled: 4  },
-  { name: 'Magneto',        ennemiesKilled: 8  },
-  { name: 'Charles Xavier', ennemiesKilled: 15 },
-  { name: 'Batman',         ennemiesKilled: 16 },
-  { name: 'Harley Quinn',   ennemiesKilled: 23 },
-  { name: 'Gandalf',        ennemiesKilled: 42 }
-];
+  { name: 'Wolverine',      family: 'Marvel',    ennemiesKilled: 4  },
+  { name: 'Magneto',        family: 'Marvel',    ennemiesKilled: 8  },
+  { name: 'Charles Xavier', family: 'Marvel',    ennemiesKilled: 15 },
+  { name: 'Batman',         family: 'DC_Comics', ennemiesKilled: 16 },
+  { name: 'Harley Quinn',   family: 'DC_Comics', ennemiesKilled: 23 },
+  { name: 'Gandalf',        family: 'Tolkien',   ennemiesKilled: 42 }
+]
 
-var totalScore = 0
-for (var i=0; i < squadHeroes.length; i++) {
-  totalScore += squadHeroes[i].ennemiesKilled
+// before
+let squadScore = 0
+for (let i=0; i < squadHeroes.length; i++) {
+  squadScore += squadHeroes[i].ennemiesKilled
 }
 
+// after
 var totalScore = squadHeroes.reduce(
   (accumulator, current) => accumulator + current.ennemiesKilled, 0)
+```
+
+An other use case, a bit less know, is to create custom objects from Array.reduce:
+
+```js
+const squadFamilies = squadHeroes.reduce((accumulator, current) => {
+  if (typeof accumulator[current.family] === 'undefined') {
+    accumulator[current.family] = 1
+
+  } else {
+    accumulator[current.family]++
+  }
+  return accumulator
+}, {}) // Object {Marvel: 23, DC_Comics: 2, Tolkien: 1}
+```
+
+
+### Array.sort
+
+Then sorting an array is also common in JS. In this case, we use [Array.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort).
+
+```js
+const squadHeroesSortedByName = squadHeroes.sort((currentHero, nextHero) => currentHero.name > nextHero.name)
+```
+
+## Array and Immutability
+
+It isn't recommended to alter the original object. But if we need to update it (add a property for instance), it's recommended to work with **a copy** of this object, to keep the original one immutable.
+[Object.assign](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) is fine for cloning, and it works like this:
+
+```js
+var originalObj = { prop: 1 }
+var copy = Object.assign({}, originalObj)
+obj.prop = 42
+console.log(copy)    // { prop: 1 }
+originalObj === copy // false
+```
+
+So in our case, adding a new property will produce a code like this:
+
+```js
+const herosExtended = heros
+  .map(hero => Object.assign({}, hero))
+  .map(hero => {
+    hero.toStr = stringifyHero(hero)
+    return hero
+  })
 ```
 
 ## Set theory: union (∪), intersection (∩) and difference (∖)
@@ -173,10 +234,10 @@ If you want to deal with unique items, you should use the [Set object](https://d
 
 ```js
 const exampleSet = new Set([1, 2, 3, 1])
-exampleSet.size // 3. On instantiation, Set don't keep the second 1
+exampleSet.size // 3. On instantiation, the duplicated entry was removed (here 1)
 
 // To transform a Set object into an array
-const exampleArray = [...exampleSet] //[1, 2, 3]
+const exampleArray = [...exampleSet] // [1, 2, 3]
 ```
 
 Let's take the previous example and see how do it in JavaScript!
@@ -192,7 +253,7 @@ const heros = [
   { name: 'Legolas',        family: 'Tolkien',   isEvil: false },
   { name: 'Gandalf',        family: 'Tolkien',   isEvil: false },
   { name: 'Saruman',        family: 'Tolkien',   isEvil: true  }
-];
+]
 
 const tolkienHeros = heros.filter(h => h.family === 'Tolkien')
 const evilHeros    = heros.filter(h => h.isEvil === true)
@@ -217,12 +278,18 @@ const difference = new Set([...tolkienHerosSet].filter(h => !evilHerosSet.has(h)
 ```
 
 **Notes:**
-* if the 2 arrays are built from different API, your object will probably not share the same reference. I mean `tolkienHeros[y] === evilHeros[y]`. In this case, your Set should only contain the object id.
+
+* if the 2 arrays are built from different API, your object will probably not share the same reference. I mean `tolkienHeros[y] === evilHeros[y]`. In this case, your Set should only contain the object id (to ensure unicity).
 * the Set Object keep the objects references (no copy will be created on instantiation).
   ```js
   // I update an object property
   heros[7].name = "Gandalf the white"
-
   [...tolkienHerosSet].find(h => h.name === 'Gandalf') // undefined
   [...tolkienHerosSet].find(h => h.name === 'Gandalf the white') // Object {...}
   ```
+
+## Bonus: console.table
+
+When working with array, you can debug your array in something much more nicer than `console.log`: `console.table` (you can click on the header to sort the datas).
+
+![console.table]({{ site.url }}/images/articles/2017/no-more-loop/console-table.png)
