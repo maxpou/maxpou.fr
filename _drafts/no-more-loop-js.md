@@ -3,6 +3,8 @@ layout: post
 title: No more loop in Javascript
 tags: ["Javascript", "Functional Programming"]
 lang: en
+image:
+    feature: articles/2017/no-more-loop/banner.jpg
 ---
 
 Few months ago, I start moving my Javascript code from a Oriented Object/unorganized code to something much more close to Functional Programming.
@@ -31,7 +33,7 @@ function stringifyHero (hero) {
 }
 
 // usage
-stringifyHero(heros[0]) === "😇 Wolverine (Marvel)" // true
+stringifyHero(heros[0]) // "😇 Wolverine (Marvel)"
 ```
 
 The goal is to create a new squad of Heros which are good and not from DC Comics. I also want to stringify each one.
@@ -57,12 +59,15 @@ There is 3 problems here:
 * this code itsn't thread safe. What happen if you want to use your heros during the loop? With this kind of code, it can be risky to parallelize tasks.
 * there is already 2 levels of indentation. Adding a third rule will probably add another level of indentation.
 
+We call this approach: **imperative programming**. We explicitly declare **how** to get what we want, step by step.  
+By opposition of this approach, we have the **declarative programming**. It consists in focusing on the **what**, without specifying how to get it...
+
 ## Array.map and Array.filter to the rescue!
 
 In a few words:
 
-* Array.map: browse an array and apply something on each element;
-* Array.filter: filter an array.
+* [Array.map](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/map): browse an array and apply on each element;
+* [Array.filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter): filter an array.
 
 Now the same code with this two high order functions:
 
@@ -82,7 +87,7 @@ var squadAlphaStr = squadAlpha.map(function(hero){
 //["😇 Wolverine (Marvel)", "😇 Deadpool (Marvel)", "😇 Charles Xavier (Marvel)", "😇 Legolas (Tolkien)", "😇 Gandalf (Tolkien)"]
 ```
 
-If I don't need `squadAlpha` outside this part of code, we can also add this to the chain:
+If I don't need `squadAlpha` variable, we can chain everything:
 
 ```js
 var squadAlphaStr = heros
@@ -100,10 +105,10 @@ var squadAlphaStr = heros
 
 Now hero object isn't changed and herosExtended is a copy of hero which contain a new property.
 
-## Embrace the power of es6 (or es2015)
+## Embrace the power of ES6 (or es2015)
 
-First of all it is recommended to drop the `var` keyword in favor of `const`.
-Then if you think that anonymous function reduce visibility and are redundant, I've a good new. es6 bring something call [Arrow functions](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions). Arrow function provide an shortness way to write function.
+First of all, [it is recommended](https://medium.com/javascript-scene/javascript-es6-var-let-or-const-ba58b8dcde75#.vr0mzbszd) to drop the `var` keyword in favor of `const`.  
+Then, if you think that anonymous function reduce visibility and are redundant, I've a good new! ES6 bring something call [Arrow functions](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions), a shortness way to write functions.
 
 ```js
 const squadAlphaStr = heros
@@ -130,10 +135,10 @@ const squadAlphaStr = heros
 // ["😇 Wolverine (Marvel)", "😇 Deadpool (Marvel)", "😇 Charles Xavier (Marvel)", "😇 Legolas (Tolkien)", "😇 Gandalf (Tolkien)"]
 ```
 
-Now the this code is **trade safe**, the **initial datas aren't altered** and over all: it's **much more readable**.
+Now the this code is **trade safe**, the **initial datas aren't altered** and over all: it's **much more readable**. ❤️️
 
-**Note:** with arrow function you will also forget this ugly hack `var self = this`. But don't think that arrow function bind the this! It completely wrong!
-In a nutshell, when you write function with the `function` keyword, this function redefine 4 things (this, arguments, new.target and super). With the arrow function, it redefine none of them. That's why `var self = this` isn't necessary anymore.
+**Note:** with arrow function you will also forget this ugly hack: `var self = this`.
+In fact, it did not bind the this. When you write function with the `function` keyword, this function redefine 4 things (this, arguments, new.target and super). With the arrow function, it redefine none of them.
 
 ## Not enough?
 
@@ -177,7 +182,7 @@ for (let i=0; i < squadHeroes.length; i++) {
 }
 
 // after
-var totalScore = squadHeroes.reduce(
+const totalScore = squadHeroes.reduce(
   (accumulator, current) => accumulator + current.ennemiesKilled, 0)
 ```
 
@@ -187,7 +192,6 @@ An other use case, a bit less know, is to create custom objects from Array.reduc
 const squadFamilies = squadHeroes.reduce((accumulator, current) => {
   if (typeof accumulator[current.family] === 'undefined') {
     accumulator[current.family] = 1
-
   } else {
     accumulator[current.family]++
   }
@@ -201,12 +205,13 @@ const squadFamilies = squadHeroes.reduce((accumulator, current) => {
 Then sorting an array is also common in JS. In this case, we use [Array.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort).
 
 ```js
-const squadHeroesSortedByName = squadHeroes.sort((currentHero, nextHero) => currentHero.name > nextHero.name)
+const squadHeroesSortedByName = squadHeroes
+  .sort((currentHero, nextHero) => currentHero.name > nextHero.name)
 ```
 
 ## Array and Immutability
 
-It isn't recommended to alter the original object. But if we need to update it (add a property for instance), it's recommended to work with **a copy** of this object, to keep the original one immutable.
+It isn't recommended to alter the original object. But if we need to update it (add a property for instance), you should work with **a copy** of this object, to keep the original one immutable.
 [Object.assign](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) is fine for cloning, and it works like this:
 
 ```js
@@ -217,7 +222,7 @@ console.log(copy)    // { prop: 1 }
 originalObj === copy // false
 ```
 
-So in our case, adding a new property will produce a code like this:
+So in our case, adding a new property will produce a code like this (we need to copy each object):
 
 ```js
 const herosExtended = heros
@@ -230,7 +235,7 @@ const herosExtended = heros
 
 ## Set theory: union (∪), intersection (∩) and difference (∖)
 
-If you want to deal with unique items, you should use the [Set object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set). It takes an iterable object as a parameter (such as an array). Then to convert a Set to a classic array, we use the [spread operator (...iterable)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator).
+If you want to deal with unique items, you should use the [Set object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set). It takes an iterable object as a parameter (such as an array). Then to convert a Set to a classic array, we use the [spread operator (`...iterable`)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator).
 
 ```js
 const exampleSet = new Set([1, 2, 3, 1])
