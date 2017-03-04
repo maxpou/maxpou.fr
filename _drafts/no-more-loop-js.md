@@ -1,6 +1,6 @@
 ---
 layout: post
-title: No more loop in Javascript
+title: No more loop in JavaScript
 tags: ["Javascript", "Functional Programming"]
 lang: en
 image:
@@ -61,6 +61,10 @@ There is 3 problems here:
 
 We call this approach: **imperative programming**. We explicitly declare **how** to get what we want, step by step.  
 By opposition of this approach, we have the **declarative programming**. It consists in focusing on the **what**, without specifying how to get it...
+
+
+![]({{ site.url }}/images/articles/2017/no-more-loop/mario.gif)
+
 
 ## Array.map and Array.filter to the rescue!
 
@@ -124,7 +128,7 @@ const squadAlphaStr = heros
 // ["😇 Wolverine (Marvel)", "😇 Deadpool (Marvel)", "😇 Charles Xavier (Marvel)", "😇 Legolas (Tolkien)", "😇 Gandalf (Tolkien)"]
 ```
 
-It's nicer but we can also go deeper with implicit return (drop the curly braces):
+It's nicer... but we can also go deeper with implicit return (drop the curly braces):
 
 ```js
 const squadAlphaStr = heros
@@ -285,7 +289,7 @@ const difference = new Set([...tolkienHerosSet].filter(h => !evilHerosSet.has(h)
 **Notes:**
 
 * if the 2 arrays are built from different API, your object will probably not share the same reference. I mean `tolkienHeros[y] === evilHeros[y]`. In this case, your Set should only contain the object id (to ensure unicity).
-* the Set Object keep the objects references (no copy will be created on instantiation).
+* the **Set Object keep the objects references** (no copy will be created on instantiation).
   ```js
   // I update an object property
   heros[7].name = "Gandalf the white"
