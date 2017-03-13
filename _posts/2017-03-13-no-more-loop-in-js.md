@@ -15,7 +15,7 @@ And few days ago, colleague submit a pull request with a javascript loop (plain 
 Let's start from the beginning, with the following data and a simple function:
 
 ```js
-var heros = [
+var heroes = [
   { name: 'Wolverine',      family: 'Marvel',    isEvil: false },
   { name: 'Deadpool',       family: 'Marvel',    isEvil: false },
   { name: 'Magneto',        family: 'Marvel',    isEvil: true  },
@@ -33,31 +33,31 @@ function stringifyHero (hero) {
 }
 
 // usage
-stringifyHero(heros[0]) // "😇 Wolverine (Marvel)"
+stringifyHero(heroes[0]) // "😇 Wolverine (Marvel)"
 ```
 
-The goal is to create a new squad of Heros which are good and not from DC Comics. I also want to stringify each one.
+The goal is to create a new squad of Heroes which are good and not from DC Comics. I also want to stringify each one.
 
 ## The plain old loop way
 
 With a loop the code should be like this:
 
 ```js
-var heroCount = heros.length
+var heroCount = heroes.length
 var squadAlpha = []
 for (var i=0; i < heroCount; i++) {
-  if (!heros[i].isEvil && heros[i].family !== 'DC Comics') {
-      heros[i]['tostring'] = stringifyHero(heros[i])
-      squadAlpha.push(heros[i])
+  if (!heroes[i].isEvil && heroes[i].family !== 'DC Comics') {
+      heroes[i]['tostring'] = stringifyHero(heroes[i])
+      squadAlpha.push(heroes[i])
   }
 }
 ```
 
-There is 3 problems here:
+There are 3 problems here:
 
-* after my loop, my datas are altered. After the loop, heros variable doesn't represent heros anymore. It breaks the S from SOLID.
-* this code itsn't thread safe. What happen if you want to use your heros during the loop? With this kind of code, it can be risky to parallelize tasks.
-* there is already 2 levels of indentation. Adding a third rule will probably add another level of indentation.
+* after my loop, my data are altered. After the loop, heroes variable doesn't represent heroes anymore. It breaks the S from SOLID.
+* this code itsn't thread safe. What happen if you want to use your heroes during the loop? With this kind of code, it can be risky to parallelize tasks.
+* there are already 2 levels of indentation. Adding a third rule will probably add another level of indentation.
 
 We call this approach: **imperative programming**. We explicitly declare **how** to get what we want, step by step.  
 By opposition of this approach, we have the **declarative programming**. It consists in focusing on the **what**, without specifying how to get it...
@@ -76,7 +76,7 @@ In a few words:
 Now the same code with this two high order functions:
 
 ```js
-var squadAlpha = heros
+var squadAlpha = heroes
   .filter(function(hero){
     return !hero.isEvil
   })
@@ -94,7 +94,7 @@ var squadAlphaStr = squadAlpha.map(function(hero){
 If I don't need `squadAlpha` variable, we can chain everything:
 
 ```js
-var squadAlphaStr = heros
+var squadAlphaStr = heroes
   .filter(function(hero){
     return !hero.isEvil
   })
@@ -107,7 +107,7 @@ var squadAlphaStr = heros
 // ["😇 Wolverine (Marvel)", "😇 Deadpool (Marvel)", "😇 Charles Xavier (Marvel)", "😇 Legolas (Tolkien)", "😇 Gandalf (Tolkien)"]
 ```
 
-Now hero object isn't changed and herosExtended is a copy of hero which contain a new property.
+Now hero object isn't changed and heroesExtended is a copy of hero which contain a new property.
 
 ## Embrace the power of ES6 (or es2015)
 
@@ -115,7 +115,7 @@ First of all, [it is recommended](https://medium.com/javascript-scene/javascript
 Then, if you think that anonymous function reduce visibility and are redundant, I've a good new! ES6 bring something call [Arrow functions](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions), a shortness way to write functions.
 
 ```js
-const squadAlphaStr = heros
+const squadAlphaStr = heroes
   .filter(hero => {
     return !hero.isEvil
   })
@@ -131,7 +131,7 @@ const squadAlphaStr = heros
 It's nicer... but we can also go deeper with implicit return (drop the curly braces):
 
 ```js
-const squadAlphaStr = heros
+const squadAlphaStr = heroes
   .filter(hero => !hero.isEvil)
   .filter(hero => hero.family !== 'DC Comics')
   .map(hero => stringifyHero(hero))
@@ -139,10 +139,10 @@ const squadAlphaStr = heros
 // ["😇 Wolverine (Marvel)", "😇 Deadpool (Marvel)", "😇 Charles Xavier (Marvel)", "😇 Legolas (Tolkien)", "😇 Gandalf (Tolkien)"]
 ```
 
-Now the this code is **trade safe**, the **initial datas aren't altered** and over all: it's **much more readable**. ❤️️
+Now this code is **trade safe**, the **initial data aren't altered** and over all: it's **much more readable**. ❤️️
 
-**Note:** with arrow function you will also forget this ugly hack: `var self = this`.
-In fact, it did not bind the this. When you write function with the `function` keyword, this function redefine 4 things (this, arguments, new.target and super). With the arrow function, it redefine none of them.
+**Note:** with arrow function, you will also forget this ugly hack: `var self = this`.
+In fact, it did not bind the `this`. When you write function with the `function` keyword, this function redefines 4 things (this, arguments, new.target and super). With the arrow function, it redefines none of them.
 
 ## Not enough?
 
@@ -154,20 +154,20 @@ I also enjoy [Array.find](https://developer.mozilla.org/en-US/docs/Web/JavaScrip
 // instead of:
 let searchedItem
 let i = 0
-while (typeof searchedItem === 'undefined' && heros[i]) {
-  if (heros[i].name === 'Gandalf') {
-    searchedItem = heros[i]
+while (typeof searchedItem === 'undefined' && heroes[i]) {
+  if (heroes[i].name === 'Gandalf') {
+    searchedItem = heroes[i]
   }
   i++
 }
 
-const searchedItem = heros.find(h => h.name === 'Gandalf')
+const searchedItem = heroes.find(h => h.name === 'Gandalf')
 // Object {name: "Gandalf", family: "Tolkien", isEvil: false}
 ```
 
 ### Array.reduce
 
-An other function is always present when we speak about Functional programming & high order function: [Array.reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+Another function is always present when we speak about Functional programming & high order function: [Array.reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
 
 ```js
 const squadHeroes = [
@@ -190,7 +190,7 @@ const totalScore = squadHeroes.reduce(
   (accumulator, current) => accumulator + current.ennemiesKilled, 0)
 ```
 
-An other use case, a bit less know, is to create custom objects from Array.reduce:
+It can also be useful for creating a custom object from an array of object:
 
 ```js
 const squadFamilies = squadHeroes.reduce((accumulator, current) => {
@@ -229,7 +229,7 @@ originalObj === copy // false
 So in our case, adding a new property will produce a code like this (we need to copy each object):
 
 ```js
-const herosExtended = heros
+const heroesExtended = heroes
   .map(hero => Object.assign({}, hero))
   .map(hero => {
     hero.toStr = stringifyHero(hero)
@@ -252,7 +252,7 @@ const exampleArray = [...exampleSet] // [1, 2, 3]
 Let's take the previous example and see how do it in JavaScript!
 
 ```js
-const heros = [
+const heroes = [
   { name: 'Wolverine',      family: 'Marvel',    isEvil: false },
   { name: 'Deadpool',       family: 'Marvel',    isEvil: false },
   { name: 'Magneto',        family: 'Marvel',    isEvil: true  },
@@ -264,11 +264,11 @@ const heros = [
   { name: 'Saruman',        family: 'Tolkien',   isEvil: true  }
 ]
 
-const tolkienHeros = heros.filter(h => h.family === 'Tolkien')
-const evilHeros    = heros.filter(h => h.isEvil === true)
+const tolkienHeroes = heroes.filter(h => h.family === 'Tolkien')
+const evilHeroes    = heroes.filter(h => h.isEvil === true)
 
-const tolkienHerosSet = new Set(tolkienHeros)
-const evilHerosSet    = new Set(evilHeros)
+const tolkienHeroesSet = new Set(tolkienHeroes)
+const evilHeroesSet    = new Set(evilHeroes)
 ```
 
 If you cannot reminder what is the Set theory, here's a schema:
@@ -276,29 +276,29 @@ If you cannot reminder what is the Set theory, here's a schema:
 ![set theory]({{ site.url }}/images/articles/2017/no-more-loop/set-theory-extended.png)
 
 ```js
-// Union: tolkienHeros ∪ evilHeros
-const union = new Set([...tolkienHerosSet, ...evilHerosSet])
+// Union: tolkienHeroes ∪ evilHeroes
+const union = new Set([...tolkienHeroesSet, ...evilHeroesSet])
 
-// Intersection tolkienHeros ∩ evilHeros (element which are both in tolkienHeros and evilHeros)
-const intersection = new Set([...tolkienHerosSet].filter(h => evilHerosSet.has(h)))
+// Intersection tolkienHeroes ∩ evilHeroes (element which are both in tolkienHeroes and evilHeroes)
+const intersection = new Set([...tolkienHeroesSet].filter(h => evilHeroesSet.has(h)))
 
-// Difference tolkienHeros ∖ evilHeros (objects from tolkienHeros which are not in evilHeros)
-const difference = new Set([...tolkienHerosSet].filter(h => !evilHerosSet.has(h)))
+// Difference tolkienHeroes ∖ evilHeroes (objects from tolkienHeroes which are not in evilHeroes)
+const difference = new Set([...tolkienHeroesSet].filter(h => !evilHeroesSet.has(h)))
 ```
 
 **Notes:**
 
-* if the 2 arrays are built from different API, your object will probably not share the same reference. I mean `tolkienHeros[y] === evilHeros[y]`. In this case, your Set should only contain the object id (to ensure unicity).
+* if the 2 arrays are built from different API, your object will probably not share the same reference. I mean `tolkienHeroes[y] === evilHeroes[y]`. In this case, your Set should only contain the object's id (to ensure unicity).
 * the **Set Object keep the objects references** (no copy will be created on instantiation).
   ```js
   // I update an object property
-  heros[7].name = "Gandalf the white"
-  [...tolkienHerosSet].find(h => h.name === 'Gandalf') // undefined
-  [...tolkienHerosSet].find(h => h.name === 'Gandalf the white') // Object {...}
+  heroes[7].name = "Gandalf the white"
+  [...tolkienHeroesSet].find(h => h.name === 'Gandalf') // undefined
+  [...tolkienHeroesSet].find(h => h.name === 'Gandalf the white') // Object {...}
   ```
 
 ## Bonus: console.table
 
-When working with array, you can debug your array in something much more nicer than `console.log`: `console.table` (you can click on the header to sort the datas).
+When working with array, you can debug your array in something much more nicer than `console.log`: `console.table` (you can click on the header to sort the data).
 
 ![console.table]({{ site.url }}/images/articles/2017/no-more-loop/console-table.png)
