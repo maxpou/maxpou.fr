@@ -1,6 +1,6 @@
 ---
 layout: post
-title: No more loop in JavaScript
+title: No more for/while loop in JavaScript
 tags: ["Javascript", "Functional Programming"]
 lang: en
 image:
