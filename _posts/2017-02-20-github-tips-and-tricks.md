@@ -280,6 +280,12 @@ A better implementation is the [Atom contributing's style guides](https://github
 
 Here's a good [cheat sheet](http://www.webpagefx.com/tools/emoji-cheat-sheet/).
 
+After your can run the following command:
+
+```bash
+git log --grep=":penguin:"
+```
+
 
 ## git.io a Github URL shortener
 
