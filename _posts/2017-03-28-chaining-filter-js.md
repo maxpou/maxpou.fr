@@ -9,7 +9,9 @@ image:
     creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
 
-I recently realize a POC with [VueJs](https://github.com/maxpou/find-a-room-vuejs2). I was confronted to this problem: **how to apply an unknown number of filter to a collection.**
+I recently realize a POC with [Vue.js](https://github.com/maxpou/find-a-room-vuejs2). I was confronted to this problem: **how to apply an unknown number of filter to a collection?**
+
+My previous POC works like this: when I click to a filter, this filter is automatically push in an array of filter. And printed datas depends on this array of filters.
 
 ![]({{ site.url }}/images/articles/2017/chaining-filter-js/example.png)
 
@@ -86,9 +88,10 @@ const filteredHeroes = recursive_filter(heroes, activeFilters)
 
 ## Bad solution: extending native prototype
 
-As [explained in the MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#Bad_practice_Extension_of_native_prototypes), it is not recommended to extend native object such as Array. So the following code works despite the good practice violation.
+As [explained in the MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#Bad_practice_Extension_of_native_prototypes), it is not recommended to extend native object (Array in our case). So the following code will works **despite the good practice violation**.
 
 ```js
+// DON't DO IT!
 Array.prototype.recursive_filter = function (arrayFilters, index = 0) {
   if (arrayFilters.length === 0) {
     return this
