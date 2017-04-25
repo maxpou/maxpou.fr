@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Ecrits
+title: Writing
 description: ""
 share: true
 ---
 
-# Ecrits
+# Writing
 
 ## 2015
 

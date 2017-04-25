@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Projects
+title: Open-source Projects
 description: "Personal projects open-source"
 share: true
 image:
