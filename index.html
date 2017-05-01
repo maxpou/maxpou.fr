@@ -1,6 +1,6 @@
 ---
 layout: post-index
-title: Blog technique de Maxence POUTORD
+title: Maxence POUTORD's Tecnical Blog
 description: "My own new blog"
 tags: ["développement web", "outils", "PHP"]
 comments: false
@@ -20,9 +20,9 @@ image:
     {% endif %}
 
     {% if post.lang == "en" %}
-        <li class="entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}"><img src="{{ site.url }}/images/uk-flag.png" alt="article en anglais"> {{ post.title }}</a></li>
+        <li class="entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}"><img src="{{ site.url }}/images/uk-flag.png" alt="english post"> {{ post.title }}</a></li>
     {% else %}
-        <li class="entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+        <li class="entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}"><img src="{{ site.url }}/images/fr-flag.png" alt="french post"> {{ post.title }}</a></li>
     {% endif %}
 
     {% if forloop.last %}

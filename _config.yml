@@ -1,9 +1,8 @@
 title:            www.maxpou.fr
-description:      Blog technique de Maxence POUTORD
+description:      Maxence POUTORD's Tecnical Blog
 disqus_shortname: maxpou
 reading_time:     false
 words_per_minute: 240
-# Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
 # url:              http://172.17.0.2:4000
 url:              http://www.maxpou.fr
 
@@ -11,17 +10,11 @@ url:              http://www.maxpou.fr
 owner:
   name:           Maxence POUTORD
   avatar:         avatar.jpg
-  bio:            "Apprenant à vie. Passionné par le web. Motard."
+  bio:            "Lifelong learner. Tech enthusiast. Biker."
   email:          hello@maxpou.fr
-  # Social networking links used in footer. Update and remove as you like.
   twitter:        _maxpou
-  facebook:
   github:         maxpou
-  stackexchange:
   linkedin:       maxpou
-  instagram:
-  flickr:
-  tumblr:
 
 # Background image to be tiled on all pages
 background:
