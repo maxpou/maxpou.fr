@@ -7,7 +7,7 @@ lang: en
 ## Javascript and Memoization
 
 ```js
-function fact(n) {
+function fact (n) {
   return n > 0 ? n * fact(n - 1) : 1
 }
 ```
@@ -16,7 +16,7 @@ Evil way (global var)
 
 ```js
 var cache = []
-function fact(n) {
+function fact (n) {
   return n > 0 ? n * fact(n - 1) : 1
 }
 ```
@@ -25,7 +25,7 @@ function fact(n) {
 Good way
 
 ```js
-function fact(n) {
+function fact (n) {
   if (!fact.cache[n]) {
     fact.cache[n] = n > 0 ? n * fact(n - 1) : 1
     console.log(`compute ${n} ${fact.cache[n]}`)
@@ -36,7 +36,7 @@ fact.cache = []
 ```
 
 ```js
-function fact(n) {
+function fact (n) {
   if (typeof fact.cache === 'undefined') {
     fact.cache = []
   }
@@ -52,7 +52,7 @@ function fact(n) {
 of also: put cache inside the function object (without subproperty cache)
 
 ```js
-function fact(n) {
+function fact (n) {
   if (!fact[n]) {
     fact[n] = n > 0 ? n * fact(n - 1) : 1
     console.log(`compute ${n} ${fact[n]}`)

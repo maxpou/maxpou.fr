@@ -12,17 +12,22 @@ variable = something which can change, can mute, depending on the time.
 
 Immutables = the opposite. Once created, a constant cannot change. I like me you come from the OOP world, you probably already use them to store un change data (ie `const PI = 3.14`).
 
-If you follow the JavaScript trends, you probably heard about functionnal programming. It's getting popular since the ES2015 version of JavaScript. Immutability is one pilliar of this paradigm. It means, there is no more variables in FP, only constants. You're manipulating a list of users? Put them into a constant. You want to update your users? Create this new list into another constant. 
+If you follow the JavaScript trends, you probably heard about **functionnal programming**. It's getting popular since the ES2015 version of JavaScript. Immutability is one pilliar of this paradigm. The notion behind is very simple: *"Forget about variables, everything is a constant"*. You're manipulating a list of users? Put them into a constant. You want to add an users? The list must be another structure. 
 
 ## Why you need to embrace Immutability?
 
-### We no longer need variables
+### Time traveling
+
+Because mutation hide change.
+CQRS. No update/delete only create. Same for Git. 
+
+<!--### We no longer need variables
 
 Libraries/framework oriented component (i.e. React, VueJS...) push developer to create stateless components for dumb/presentational components. For presentational components, the state management is delegated to a state container (such as Redux, Flux, Vuex...).
 
 If you embrace this philosophy, there is no more need for you to use variables.
 
-TODO: React include immutability in components?
+TODO: React include immutability in components?-->
 
 ### Unwanted mutations
 
@@ -65,13 +70,14 @@ print(bills)
 ```
 
 The previous examples bring severals problems:
-* after mutation, the variable's name and her associated values doesn't match anymore. I mean the initial structure behind `bills` are changed. `changeBillsCurrency()` function change data behind bills. So the values associated to bills doesnt represent bills.
-* we can't to reorder the functions call order. For example, I cannot start by printing the bill, then using the `doSomething()` and finish with `doSomethingElse()`.
+* after mutation, the variable's name and her associated values doesn't match anymore. I mean the initial structure behind `bills` are changed. `changeBillsCurrency()` function change data behind bills. So the values associated to bills doesnt represent bills anymore.
+* we can't to reorder the functions call. For example, I cannot start by `print(bills)`, then using the `doSomething()bills` and finish with `doSomethingElse(bills)`. Theses function use differents version of the same variable.
 
+if data is mutable, you have to know the order access of this data.
 
-### Thread safety
+### Thread safety
 
-Due to the browser, JavaScript is fully asynchronous.
+One last advantage for moving into immutable object is the Thread safety. On a multi-threaded application, two threads can manipulate 2 differents versions of one data structure. However, JavaScript is concurent by default, so we're not really impected by this aspect (I didn't try with [parallel.js](https://parallel.js.org/)).
 
 
 ## Pitfalls & Misconceptions
@@ -109,24 +115,25 @@ The object signature is still the same, only his parameters change. But it's not
 
 ### mutables states inside `map()`
 
-map() vs forEach(). forEach create side effect while map prevent them by creating a new structure. Cool! So I can do some operations with my objects in a Array.map() loop, and it will preserve my initial values! Well... not exactly!
+To loop an array, [forget about for/while loop](http://www.maxpou.fr/no-more-loop-in-js/) and start using Array.prototype.map(). Array.prototypeforEach() is a sibling to map() but it create side effect, while map prevent them by creating a new structure. So map() looks cool now right? So I can do some operations with my objects in a Array.map() loop, and it will preserve my initial values! Well... not exactly!
 
 ```js
 const newHeroes = heroes.map(h => {
-  h.toString = h.name.toUpperCase()
+  h.name = h.name.toUpperCase()
   return h
 })
 
-console.table(newHeroes) // newHeroes now contains toString attribute
-console.table(heroes)    // heroes now contains toString attribute 😓
+console.table(newHeroes) // newHeroes now contains toString attribute 👍
+console.table(heroes)    // heroes now contains toString attribute 👎
 ```
 
-As expected, I created a new structure of heroes with a toString property. 
-But Javascript always pass variables by value... except when this variable refer to an object. In the map() loop, `h` refer to the object reference. That why I have updated the heroes 
+As expected, I created a new structure of heroes with a toString property.  
+But Javascript always pass variables by value... (except when this variable refer to an object). In the map() loop, `h` refer to the object reference. That why I have updated the heroes
+
 
 ## Solutions
 
-### Object.freeze() & Object.seal() & Object.assign()
+### Object.freeze() vs. Object.seal() vs. Object.assign()
 
 Hopefully, the language offer severals quick win to create immutables structures. I'm gonna use the following structure for this functions 
 
@@ -140,7 +147,7 @@ const hero = {
 }
 ```
 
-* **Object.freeze()**: freeze the given object (only the first level)
+* **[Object.freeze()](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze)**: freeze the given object (only the first level)
 
     ```js
     Object.freeze(hero)
@@ -154,16 +161,28 @@ const hero = {
 
     To freeze the object and his subobjects, we need to create a deepFreeze method (by using recursion).
 
-* **Object.seal()**
+* **[Object.seal()](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/seal)**: prevent adding new properties to a given object
 
     ```js
+    Object.seal(hero)
 
+    hero.name = 'Jessica Jones'
+    console.log(hero.name === 'Jessica Jones') // true
+
+    hero.weapon = 'staff'
+    console.log(hero.weapon) // undefined
     ```
 
-* **Object.assign()**: create copy
+* **[Object.assign()](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)**: create copy of a given object
 
     ```js
     const copy = Object.assign({}, hero)
+
+    copy.name = 'Jessica Jones'
+    console.log(hero.name === 'Jessica Jones') // false
+
+    copy.location.city = 'Dublin'
+    console.log(hero.location.city === 'Dublin') // true
     ```
 
 
@@ -183,3 +202,9 @@ Performances
 https://medium.com/@dtinth/immutable-js-persistent-data-structures-and-structural-sharing-6d163fbd73d2
 
 https://www.youtube.com/watch?v=K2NYwP90bNs
+
+
+Other
+TO REORDER: Be consistent be predictable => be immutable.
+Statelessness
+
