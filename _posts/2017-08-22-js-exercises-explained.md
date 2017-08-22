@@ -1,14 +1,18 @@
 ---
 layout: post
 title: Typicals JavaScript interview exercises (explained)
+tags: ["Javascript"]
+lang: en
+image:
+    feature: articles/2017/js-exercises-explained/banner.jpg
 ---
 
 Few weeks ago I found on my twitter feed a very interesting blog post: ["The Best Frontend JavaScript Interview Questions (written by a Frontend Engineer)"](https://performancejs.com/post/hde6d32/The-Best-Frontend-JavaScript-Interview-Questions-%28written-by-a-Frontend-Engineer%29) written by Boris Cherny.  
 As you may guess, the author show some interesting questions to ask during a job interview. Questions are splitted in 4 parts: Concepts, Coding, Debugging, and System Design. Here, I'll focus on the **Debugging** part.
 
-I really like theses question, because they deal with the specificities of Javascript: object comparison, event loop, scope, this, prototypal inheritance and the equal operator combined with [Abstract Equality Comparison Algorithm](http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.3).
+I really like theses question, because they deal with the specificities of JavaScript: object comparison, event loop, scope, this, prototypal inheritance and the equal operator combined with [Abstract Equality Comparison Algorithm](http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.3).
 
-Before reading the solution, I'd recommend to find the answer by yourself.
+Before reading the solution, I'd recommend you to find the answer by yourself.
 
 ## Exercise 1
 
@@ -243,7 +247,7 @@ isBig([3])  // true
 We are using here the simple equality operator (*e.g.* ==) by opposition to strict comparison (*e.g.* ===). With this operator, it's not mandatory to compare the same type.
 
 * `isBig(1)` pass the condition `thing == 1` as expected.
-* `isBig([2])` will pass the condition `thing == 2`. When comparing an array to a number, the array will be converted to a number. This is a part of the [Abstract Equality Comparison Algorithm](http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.3). According to this algorithm, if we compare a number with an Object *(reminder: array are object in JS)*, this array will be converted to an array. Here, there is only one item inside so `[2] == 2`.
+* `isBig([2])` will pass the condition `thing == 2`. When comparing an array to a number, the array will be converted to a number. This is a part of the [Abstract Equality Comparison Algorithm](http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.3). According to this algorithm, if we compare a number with an Object *(reminder: arrays are object in JS)*, this array will be converted to an array. Here, there is only one item inside so `[2] == 2`.
 
 Because this algorithm is obscure for the most common developers, we should aboid this operator ([ESLint eqeqeq rule is your friend 👍](http://eslint.org/docs/rules/eqeqeq)).
 
@@ -261,7 +265,7 @@ Because this algorithm is obscure for the most common developers, we should aboi
 
 ## Exercise 6 (bonus)
 
-> How to preserve the immutability on my heroes list? ()
+> How to preserve the immutability on my heroes list?
 
 ```js
 const heroes = [
@@ -282,4 +286,5 @@ const newHeroes = heroes.map(h => {
 })
 ```
 
-Do you have any idea? 🙂
+Do you have any idea? 🙂  
+*answer will be in the next post!*
