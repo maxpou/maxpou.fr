@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Typicals JavaScript interview exercises (explained)
+title: Typical JavaScript interview exercises (explained)
 tags: ["Javascript"]
 lang: en
 image:
