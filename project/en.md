@@ -7,8 +7,6 @@ image:
     feature: articles/opensource/bg.png
 ---
 
-([french version](/project/fr/))
-
 # Personal projects open-source
 
 ## Docker-Symfony
