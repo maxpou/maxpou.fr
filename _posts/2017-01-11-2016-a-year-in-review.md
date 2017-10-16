@@ -9,7 +9,7 @@ image:
 
 2016 just ended, and now it's time to look backward, evaluate success and failures for 2017. First of all, 2016 was probably one of the most productive and exciting year in my life.
 
-At the end of 2015, I fix some goals for 2016. I don't want to have this kind of *good resolutions* which are in reality unreachable goals. So I use some SMART criteria. In a nutshell, this acronym mean: **S**pecific - **M**esurable - **A**ttainable - **R**ealistic - **T**ime related.
+At the end of 2015, I fix some goals for 2016. I didn't wanted to have this kind of *good resolutions* which are in reality unreachable goals. So, I used some SMART criteria. In a nutshell, this acronym mean: **S**pecific - **M**esurable - **A**ttainable - **R**ealistic - **T**ime related.
 
 Let's recapitulate...
 
@@ -17,14 +17,14 @@ Let's recapitulate...
 
 **New OS:**
 
-I really wanted to learn Linux this year. I was using Microsoft since my young years, but this OS got a big drawback for web development: the native console is messy and the writing files is a very slow operation (Symfony Framework use a lot of files). I was already using Ubuntu in a Vagrant box, so I wasn't so stranger. This is why I choose Ubuntu.  
-During the Ubuntu installation, I completely erase my Windows. After few tears, I accept it. And to be honest, few month after I didn't plan to roll back.
+I really wanted to learn Linux this year. I was using Microsoft since my young years, but this OS got a big drawback for web development: the native console is messy and writing files is a very slow operation (Symfony Framework use a lot of files). I was already using Ubuntu in a Vagrant box, so I wasn't so stranger. This is why I choose Ubuntu.  
+During the Ubuntu installation, I completely erase my Windows. After few tears, I accept it. And to be honest, few months after I didn't plan to roll back.
 
-When I start my new job, they ask me my favorite OS. Unfortunately Linux wasn't in the list and I have to choose between Windows 10 and MacOS... I choose the second one (iMac)! It was a bit weird for me, because I don't stick to Apple's philosophy. But to be honest, I like it (except the 💩 defaults softwares).
+When I started my new job, they ask me my favorite OS. Unfortunately Linux wasn't in the list and I have to choose between Windows 10 and MacOS... I choose the second one (iMac)! It was a bit weird for me, because I don't stick to Apple's philosophy. But to be honest, I like it (except the 💩 defaults softwares).
 
 **Tame the whale (Docker):**
 
-At the end of 2015, I heard a lot about Docker. Every time I try to understand the aim of this tool, I fail. So I went to the Docker's Birthday event in Nantes. It was a kind of *hand on* with a pertinent getting started (plain old voting app!). A few weeks after, a project ended. So I ask to my employer some free time to go deeper with Docker. During this week, I have created a stack to run a Symfony application on Docker (with Compose).  
+At the end of 2015, I heard a lot about Docker. Every time I try to understand the aim of this tool, I failed. So I went to the Docker's Birthday event in Nantes. It was a kind of *hand on* with a pertinent getting started (plain old voting app!). A few weeks after, a project ended. So I ask to my employer some free time to go deeper with Docker. During this week, I have created a stack to run a Symfony application on Docker (with Compose).  
 I was pretty proud of my job, so I put everything [on Github](https://github.com/maxpou/docker-symfony) and I wrote [a blog post](http://www.maxpou.fr/docker-pour-symfony/) about it.
 
 This blog post, written in April 11th (a symbolic date for me 😉) reach ~3000 views on the 31th of December.
