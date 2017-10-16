@@ -8,7 +8,7 @@ image:
 ---
 
 Last month, I gave a talk about [*Immutability for functional JavaScript* in the DublinJS meetup (slides)](http://slides.maxpou.fr/immutability-js/).  
-I discovered Immutability almost 2 years ago in a French Meetup dedicated to Functional Programming but I didn't gave a try. 6 months later, after another talk, I decided to learn and understand this paradigm. It changed my way of writing code, mostly when I adopted Immutability as a rule of thumb.
+I discovered Immutability almost 2 years ago in a French Meetup dedicated to Functional Programming but I didn't gave a try. 6 months later, after another talk, I decided to learn and understand this paradigm. It changed my way of writing code, mostly, when I started to adopt Immutability as a rule of thumb.
 
 ## Immutability? Kezako?
 
