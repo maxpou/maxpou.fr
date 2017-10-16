@@ -1,25 +1,30 @@
 ---
 layout: post
-title: Immutability in JS
+title: Immutability without JS library
+tags: ["Javascript", "Functional Programming"]
 lang: en
 image:
     feature: articles/2017/immutability-js/banner.jpg
 ---
 
+Last month, I gave a talk about [*Immutability for functional JavaScript* in the DublinJS meetup (slides)](http://slides.maxpou.fr/immutability-js/).  
+I discovered Immutability almost 2 years ago in a French Meetup dedicated to Functional Programming but I didn't gave a try. 6 months later, after another talk, I decided to learn and understand this paradigm. It changed my way of writing code, mostly when I adopted Immutability as a rule of thumb.
+
 ## Immutability? Kezako?
 
-variable = something which can change, can mute, depending on the time. 
+If you follow the JavaScript trends, you probably heard about **functional programming**. It's getting popular since the ES2015 version of JavaScript. Immutability is one pillar of this paradigm. The notion behind is very simple: *"Forget about variables, everything is a constant"*. You're manipulating a list of users? Put them into a constant. You want to add an users? The list must be another structure.
 
-Immutables = the opposite. Once created, a constant cannot change. I like me you come from the OOP world, you probably already use them to store un change data (ie `const PI = 3.14`).
+```js
+var heroName = 'Logan'
+heroName     = 'Groot' // 🚫 Unauthorized!
+```
 
-If you follow the JavaScript trends, you probably heard about **functionnal programming**. It's getting popular since the ES2015 version of JavaScript. Immutability is one pilliar of this paradigm. The notion behind is very simple: *"Forget about variables, everything is a constant"*. You're manipulating a list of users? Put them into a constant. You want to add an users? The list must be another structure. 
 
-
-## Why you need to embrace Immutability?
+## Why Immutability is important?
 
 ### Unwanted mutations
 
-Moment is a really nice library to manage your date in JS. The first time I was using it, I fall into a classic trap: an unwanted mutation. Look:
+Let's take our first example with Moment. Moment is a really nice library to manage your date in JS. The first time I was using it, I fall into a classic trap: an unwanted mutation.:
 
 ```js
 const today = moment()
@@ -32,34 +37,40 @@ By mistake -and because I didn't read the full documentation :) - I changed the 
 
 ### Mutables variables give you headache
 
-Given a function `changeBillsCurrency()` like the following one.
+> Mutable state is the new spaghetti code  
+— **Rich Hickey, author of Clojure**
+
+Given a function `hulkify()` in a Hero class like the following one.
 
 ```js
-function changeBillsCurrency (bills) {
-  for (var i = 0; i < bills.length; i++) {
-    bill[i].currency = 'USD'
-    bill[i].amount = bill[i].amount * 1.12
+class Hero {
+  constructor () {
+    this.color = 'beige'
+    this.strengh = 1
   }
-  return bills
+
+  hulkify () {
+    this.color = 'green'
+    this.strengh = 1000
+  }
 }
 ```
 
 and a code like this:
 
 ```js
-// ...
-doSomething(bills)
-// ...
-changeBillsCurrency(bills) // bring bills mutation
-// ...
-doSomethingElse(bills)
-// ..
-print(bills)
+const bruceBanner = new Hero()
+// ... do something ...
+bruceBanner.goToRestaurant()
+// ... do something ...
+bruceBanner.hulkify() // bring mutation
+// ... do something ...
+bruceBanner.fight()
 ```
 
 The previous examples bring severals problems:
-* after mutation, the variable's name and her associated values doesn't match anymore. I mean the initial structure behind `bills` are changed. `changeBillsCurrency()` function change data behind bills. So the values associated to bills doesnt represent bills anymore.
-* we can't to reorder the functions call. For example, I cannot start by `print(bills)`, then using the `doSomething()bills` and finish with `doSomethingElse(bills)`. Theses function use differents version of the same variable.
+* after mutation, the variable's name and her associated values doesn't match anymore. After `bruceBanner.hulkify()`, `bruceBanner` became Hulk. For a better readability/maintainability, it deserves it own variable.
+* what if I reorder the functions calls? Then, I will send Hulk in a restaurant and the Human version of Bruce Banner in a fight...
 
 If data have some mutations, you have to keep in mind the mutation order.
 
@@ -69,7 +80,7 @@ If data have some mutations, you have to keep in mind the mutation order.
 ![Back to the future]({{ site.url }}/images/articles/2017/immutability-js/back-to-the-future.jpg)
 
 There is a really nice pattern called CQRS *(Command Query Responsibility Segregation)*. The starting point is the following: editing something may be harmful. Because mutation hide change.
-So this pattern consist in removing any update/delete statement only create. If you take a look, that exactly how Git works. If you delete some code, you can retreive it later. 
+So this pattern consist in removing any update/delete statement only create. If you take a look, that exactly how Git works. If you delete some code, you can retrieve it later.
 
 ```js
 const heroPet[] = 'cat'
@@ -84,7 +95,7 @@ This approach will allow the hero to play with his previous pet, even if he chan
 
 ### Thread safety?
 
-One last advantage for moving into immutable object is the Thread safety. On a multi-threaded application, two threads can manipulate 2 differents versions of one data structure. However, JavaScript is concurent by default, so we're not really impected by this aspect (I didn't try with [parallel.js](https://parallel.js.org/)).
+One last advantage for moving into immutable object is the Thread safety. On a multi-threaded application, two threads can manipulate 2 different versions of one data structure. However, JavaScript is concurrent by default, so we're not really impacted by this aspect (I didn't try with [parallel.js](https://parallel.js.org/)).
 
 
 ## Pitfalls & Misconceptions
@@ -104,8 +115,8 @@ const meaningOfLife = 42
 meaningOfLife = 'boom' // Uncaught TypeError: Assignment to constant variable
 ```
 
-Then came a big confusion on the internets. People start to think that const was made for immutables structures.
-In fact `const` only create an immutabe binding between the identifier and the value. If you assing an object as a value, you're free to change this object.
+Then came a big confusion on the internets. People start to think that `const` was made for immutable structures.
+In fact `const` only create an immutable binding between the identifier and the value. If you assign an object as a value, you're free to change this object.
 
 ```js
 const hero = {
@@ -120,9 +131,9 @@ console.log(hero) // Object {name: "Daredevil"}
 The object signature is still the same, only his parameters change. But it's not an excuse for not using it!
 
 
-### mutables states inside `map()`
+### mutable states inside `map()`
 
-To loop an array, [forget about for/while loop](http://www.maxpou.fr/no-more-loop-in-js/) and start using Array.prototype.map(). Array.prototypeforEach() is a sibling to map() but it create side effect, while map prevent them by creating a new structure. Now, map() looks cool right? I can do some operations with my objects in a Array.map() loop, and it will preserve my initial values! Well... not exactly!
+To loop an array, [forget about for/while loop](http://www.maxpou.fr/no-more-loop-in-js/) and start using Array.prototype.map(). Array.prototype.forEach() is a sibling to map() but it create side effect, while map prevent them by creating a new structure. Now, map() looks cool right? I can do some operations with my objects in a Array.map() loop, and it will preserve my initial values? Well... not exactly!
 
 ```js
 const newHeroes = heroes.map(h => {
@@ -130,19 +141,19 @@ const newHeroes = heroes.map(h => {
   return h
 })
 
-console.table(newHeroes) // newHeroes now contains toString attribute 👍
-console.table(heroes)    // heroes now contains toString attribute 👎
+console.table(newHeroes) // newHeroes now contains name in uppercase 👍
+console.table(heroes)    // heroes now contains name in uppercase 👎
 ```
 
 As expected, I created a new structure of heroes with a toString property.  
-But Javascript always pass variables by value... except when this variable refer to an object. And almost everything is an object in JS! 
+But JavaScript always pass variables by value... except when this variable refer to an object. And almost everything is an object in JS!
 In the map() loop, `h` refer to a hero reference. That why the heroes are updated!
 
 ![]({{ site.url }}/images/articles/2017/immutability-js/pass-by-reference-vs-pass-by-value-animation.gif)
 
 ## Solutions
 
-Hopefully, JavaScript offer severals quick wins to deal with immutability. To keep everything consistend, I'm gonna use the following structure for this functions:
+Hopefully, JavaScript offer severals quick wins to deal with immutability. To keep everything consistent, I'm gonna use the following structure for this functions:
 
 ```js
 const hero = {
@@ -192,7 +203,7 @@ const hero = {
     console.log(hero.location.city === 'Dublin') // true (hero.location has been changed)
     ```
 
-* **[Object Spread Properties - Stage 3 (Draft)](https://github.com/tc39/proposal-object-rest-spread)**: It's in stage 3, which mean it's only available through compilers (Babel, TypeScript...).
+* **[Object Spread Properties - Stage 3 (Draft)](https://github.com/tc39/proposal-object-rest-spread)**: an alternative to Object.assign() - currently in stage 3 (only available through compilers: Babel, TypeScript...).
 
     ```js
     const newHero = {
@@ -211,7 +222,7 @@ Whatever we use, we always face the same problem: we need a **deep clone**. Usua
 
 ### And what about JSON?
 
-When we Google the following term: *Immutable and Javascript*, some StackOverflow results redirects to **JSON.parse(JSON.stringify())**. At first sight, it could be interesting because it solves all previous problems.
+When we Google the following term: *Immutable + Javascript*, some StackOverflow results redirects to **JSON.parse(JSON.stringify())**. At first sight, it could be interesting because it solves all previous problems.
 
 ```js
 const hero = {
@@ -232,12 +243,12 @@ console.log(hero.location.city === 'Dublin') // true (hero.location in unchanged
 
 🎉 Tadaaa!
 
-Well... I have a bad news: JSON for **JavaScript** Stantard Object Notation* is a **language agnostic format**. Yes. Really!
+Well... I have a bad news: JSON for **JavaScript** Standard Object Notation* is a **language agnostic format**. Yes. Really!
 
-> It does not attempt to impose ECMAScript’s internal data representations on other programming languages. 
+> It does not attempt to impose ECMAScript’s internal data representations on other programming languages.  
 — **[Final draft of the TC39 “The JSON Data Interchange Format” standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)** *(look at the introduction)*
 
-After, it's makes sence. Ruby/Scala/Python/PHP/... should not implement some Javascript specificities such as Symbols, undefined... or even the functions! 
+After, it's makes sence. Ruby/Scala/Python/PHP/... should not implement some Javascript specificities such as Symbols, undefined... or even the functions!
 
 
 **How are handle non-stringifiable types?**
@@ -268,12 +279,12 @@ JSON.parse(JSON.stringify(daredevil))
 // Uncaught TypeError: Converting circular structure to JSON
 ```
 
-So for both of this reason, I would reccomend to use this with an extreme precaution.
+So for both of this reason, I would recommend to use this with an extreme precaution.
 
 
 ## Persistent data structure
 
-I now want to save the world against a huge zombie. Let's grab my heroes. Yes, ALL of them!
+I now want to save the world against a big attack. Let's grab my heroes. Yes, ALL of them!
 
 ```js
 const heroes = [
@@ -281,7 +292,7 @@ const heroes = [
   { name: 'Wolverine', isReady: false, /* ... others properties ... */ },
   { name: 'Deadpool', isReady: false,  /* ... others properties ... */ },
   { name: 'Magneto', isReady: false,   /* ... others properties ... */ },
-  { name: 'Gandalf', isReady: false,   /* ... others properties ... */ },
+  { name: 'Gandalf', isReady: true,   /* ... others properties ... */ },
   ⋮
   (100 000 heroes)
 ]
@@ -297,12 +308,7 @@ heroes.map(h => {
 })
 ```
 
-To update just one field, I have to create 100 000 copies of my objects. And also, duplicate a lot of unchanged properties.
-There is probably a better way to do it!
+To update just one field, I have to create 100 000 copies of my objects. And also, duplicate a lot of unchanged properties, including the Hero Gandalf which is already prepared...
+We are going to face performances issues... there is probably a better way to do it!
 
-
-
-Reading:
-- https://facebook.github.io/immutable-js/#the-case-for-immutability
-- https://www.youtube.com/watch?v=K2NYwP90bNs
-- https://medium.com/@dtinth/immutable-js-persistent-data-structures-and-structural-sharing-6d163fbd73d2
+If you have this problem, it's time to switch to libraries such as [Immutable.js](https://facebook.github.io/immutable-js/) or [Mori](http://swannodette.github.io/mori/#title)
