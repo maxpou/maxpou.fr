@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Immutability without JS library
+title: "Immutability in JavaScript (without library)"
 tags: ["Javascript", "Functional Programming"]
 lang: en
 image:
