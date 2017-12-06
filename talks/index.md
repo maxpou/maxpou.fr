@@ -14,6 +14,9 @@ image:
 
 <h2>Talks:</h2>
 <ul class="talk-container__list">
+  <li><a href="http://slides.maxpou.fr/vuejs-yet-another-js-framework/index.html">🇬🇧 VueJS - Yet another JavaScript Framework</a><br>
+    <em class="talk-container__event">🗓 12/2017, Hostelworld Technology Submit, Dublin, Ireland</em>
+  </li>
   <li><a href="http://slides.maxpou.fr/immutability-js/index.html">🇬🇧 Immutability for functional JavaScript</a><br>
     <em class="talk-container__event">🗓 09/2017, DublinJS, Dublin, Ireland</em>
   </li>
