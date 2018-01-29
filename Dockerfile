@@ -1,6 +1,6 @@
 FROM ruby:2.3.3
 
-MAINTAINER Maxence POUTORD <maxence.poutord@gmail.com>
+MAINTAINER Maxence Poutord <maxence.poutord@gmail.com>
 
 RUN apt-get update
 

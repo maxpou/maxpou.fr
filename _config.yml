@@ -1,5 +1,5 @@
 title:            www.maxpou.fr
-description:      Maxence POUTORD's Tecnical Blog
+description:      Maxence Poutord's Technical Blog
 disqus_shortname: maxpou
 reading_time:     false
 words_per_minute: 240
@@ -8,7 +8,7 @@ url:              http://www.maxpou.fr
 
 # Owner/author information
 owner:
-  name:           Maxence POUTORD
+  name:           Maxence Poutord
   avatar:         avatar.jpeg
   bio:            "Lifelong learner. Tech enthusiast. Biker."
   email:          hello@maxpou.fr
