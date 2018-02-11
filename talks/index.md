@@ -9,12 +9,12 @@ image:
 ---
 
 <div class="talk-container__info">
-    📌 All my slides are available on GitHub (<a href="https://github.com/maxpou-slides">github.com/maxpou-slides</a>)
+    📌 Slides's sources are available on GitHub (<a href="https://github.com/maxpou-slides">github.com/maxpou-slides</a>)
 </div>
 
 <h2>Talks:</h2>
 <ul class="talk-container__list">
-  <li><a href="http://slides.maxpou.fr/vuejs-yet-another-js-framework/index.html">🇬🇧 VueJS - Yet another JavaScript Framework</a><br>
+  <li><a href="http://slides.maxpou.fr/vuejs-yet-another-js-framework/index.html">🇬🇧 Vue.js - Yet another JavaScript Framework</a><br>
     <em class="talk-container__event">🗓 12/2017, Hostelworld Technology Submit, Dublin, Ireland</em>
   </li>
   <li><a href="http://slides.maxpou.fr/immutability-js/index.html">🇬🇧 Immutability for functional JavaScript</a><br>
@@ -40,9 +40,12 @@ image:
 
 <h2>Trainings:</h2>
 <ul class="talk-container__list">
+  <li><a href="http://slides.maxpou.fr/vue-workshop/index.html">🇬🇧 Vue.js Workshop - Build a StackOverflow app using Vue.js</a><br>
+    <em class="talk-container__event">🗓 02/2018, DublinJS, Dublin, Ireland</em>
+  </li>
   <li>
-    <a href="http://slides.maxpou.fr/vuejs-training/index.html">🇬🇧 VueJS 2 Training</a><br>
-    <a href="http://slides.maxpou.fr/vuejs-training/_book/docs/">🇬🇧 VueJS 2 Workshop</a><em> — Training for <a href="http://www.hostelworld.com/">Hostelworld</a></em>
+    <a href="http://slides.maxpou.fr/vuejs-training/index.html">🇬🇧 Vue.js Training</a><br>
+    <a href="http://slides.maxpou.fr/vuejs-training/_book/docs/">🇬🇧 Vue.js Workshop</a><em> — Training for <a href="http://www.hostelworld.com/">Hostelworld</a></em>
   </li>
   <li><a href="http://slides.maxpou.fr/symfony2-basics-conserto/index.html">🇬🇧 Symfony2 Basics</a> — <em>PHP training for <a href="http://www.conserto.pro/">Conserto</a> &amp; <a href="http://www.laposte.fr">La Poste</a></em></li>
   <li><a href="http://slides.maxpou.fr/php-basics-conserto/index.html">🇬🇧 PHP Basics</a> — <em>PHP training for <a href="http://www.conserto.pro/">Conserto</a></em></li>
