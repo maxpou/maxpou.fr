@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Open-source Projects
-description: "Personal projects open-source"
+description: "Personal projects and open-source contributions"
 share: true
 image:
     feature: articles/opensource/bg.png
@@ -9,12 +9,23 @@ image:
 
 # Personal projects open-source
 
+*Here's a collection of projects I have been involved in over the past few years.*
+
+## GitVub
+
+Project's source: [github.com/maxpou/gitvub](https://github.com/maxpou/gitvub)
+
+GitVub (Github + Vue) is a Vue.js **Progressive Web App (PWA)** based on GitHub API.
+
+![](https://raw.githubusercontent.com/maxpou/gitvub/master/docs/mobile-screens.png)
+
 ## Docker-Symfony
 
 Project's source: [github.com/maxpou/docker-symfony](https://github.com/maxpou/docker-symfony)
 
 Docker-symfony is a complete stack to run a Symfony app into multiple containers (PHP7-FPM - NGINX - MySQL - ELK - REDIS) by using Docker compose. I've written [an article (in french sorry)](http://www.maxpou.fr/docker-pour-symfony/) to explain each steps to realize this whole.
 
+![](https://raw.githubusercontent.com/maxpou/docker-symfony/master/doc/schema.png)
 
 ## Symfony Rest Beer Edition
 
