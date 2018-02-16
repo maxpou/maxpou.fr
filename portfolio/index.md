@@ -4,7 +4,7 @@ title: Open-source Projects
 description: "Personal projects and open-source contributions"
 share: true
 image:
-    feature: articles/opensource/bg.png
+    feature: opensource.png
 ---
 
 # Personal projects open-source
@@ -17,7 +17,19 @@ Project's source: [github.com/maxpou/gitvub](https://github.com/maxpou/gitvub)
 
 GitVub (Github + Vue) is a Vue.js **Progressive Web App (PWA)** based on GitHub API.
 
-![](https://raw.githubusercontent.com/maxpou/gitvub/master/docs/mobile-screens.png)
+![GitVub Game screenshots](https://raw.githubusercontent.com/maxpou/gitvub/master/docs/mobile-screens.png)
+
+<hr>
+
+## Dictionary Game
+
+Project's source: [github.com/maxpou/gitvub](https://github.com/maxpou/dictionary-game)
+
+Dictionary Game is a Vue.js application to improve my english vocabulary (fr/en). This app also uses Firebase.
+
+![Dictionary Game screenshots](https://raw.githubusercontent.com/maxpou/dictionary-game/master/screenshots.png)
+
+<hr>
 
 ## Docker-Symfony
 
@@ -25,7 +37,9 @@ Project's source: [github.com/maxpou/docker-symfony](https://github.com/maxpou/d
 
 Docker-symfony is a complete stack to run a Symfony app into multiple containers (PHP7-FPM - NGINX - MySQL - ELK - REDIS) by using Docker compose. I've written [an article (in french sorry)](http://www.maxpou.fr/docker-pour-symfony/) to explain each steps to realize this whole.
 
-![](https://raw.githubusercontent.com/maxpou/docker-symfony/master/doc/schema.png)
+![Docker-Symfony screenshots](https://raw.githubusercontent.com/maxpou/docker-symfony/master/doc/schema.png)
+
+<hr>
 
 ## Symfony Rest Beer Edition
 
@@ -40,6 +54,7 @@ Symfony Rest Beer Edition is an application to present some REST's best practice
 
 I try to maintain a high quality degree with a strong code coverage.
 
+<hr>
 
 ## MEAN APISpark Beer
 
@@ -52,13 +67,15 @@ This project is a POC to test some technologies. There is 3 parts/steps inside:
 * step 3: Take 2nd step, remove APISpark and integrate all this application into a MEAN Stack (Mongodb, Express, AngularJs & Node.js).
 There is also tests with mocha.
 
+<hr>
 
 ## Scotchbox
 
 Project's source: [github.com/maxpou/scotch-box](https://github.com/maxpou/scotch-box)
 
-This is a fork from [Scotch.io's Vagrant box](https://box.scotch.io/). If you want the real capital gain, checkout the 'pimpMyBox' folder. There is some customization insite (how to install PHP7, setup aliases, add a custom virtual host).
+This is a fork from [Scotch.io's Vagrant box](https://box.scotch.io/). The real capital gain is in the 'pimpMyBox' folder. There is some customization inside (how to install PHP7, setup aliases, add a custom virtual host).
 
+<hr>
 
 ## analyticsCNIL
 
@@ -73,6 +90,7 @@ In France, you must advertise your visitors if you track down yours users with w
 
 There is also an option which recognize the DoNotTrack browser's option. If she active, user will never see this headband. Obviously, you can't use this option with the dontCare mod.
 
+<hr>
 
 ## pomodoro-ninja.gadget
 
