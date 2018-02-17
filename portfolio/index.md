@@ -14,7 +14,7 @@ image:
 ## GitVub
 
 * Sources: [github.com/maxpou/gitvub](https://github.com/maxpou/gitvub)
-* [Demo](http://www.maxpou.fr/givub/)
+* [Demo](http://www.maxpou.fr/gitvub/)
 
 GitVub (Github + Vue) is a Vue.js **Progressive Web App (PWA)** based on GitHub API.
 
