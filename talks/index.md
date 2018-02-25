@@ -14,6 +14,9 @@ image:
 
 <h2>Talks:</h2>
 <ul class="talk-container__list">
+  <li><a href="http://slides.maxpou.fr/pwa-app-on-steroids/index.html">🇬🇧 Progressive Web Apps: Your web app on steroids</a><br>
+    <em class="talk-container__event">🗓 03/2017, Voxxed Days, Vienna, Austria</em>
+  </li>
   <li><a href="http://slides.maxpou.fr/vuejs-yet-another-js-framework/index.html">🇬🇧 Vue.js - Yet another JavaScript Framework</a><br>
     <em class="talk-container__event">🗓 12/2017, Hostelworld Technology Submit, Dublin, Ireland</em>
   </li>
