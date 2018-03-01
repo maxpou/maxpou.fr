@@ -1,0 +1,18 @@
+{
+  "name": "www.maxpou.fr",
+  "short_name": "maxpou",
+  "author": "Maxence Poutord",
+  "default_locale": "en",
+  "description": "Maxence Poutord's Technical Blog",
+  "start_url": "https://www.maxpou.fr/?launcher=true",
+  "icons": {
+    "32": "favicon.png",
+    "57": "/images/apple-touch-icon-precomposed.png",
+    "64": "favicon.ico",
+    "72": "/images/apple-touch-icon-72x72-precomposed.png",
+    "114": "/images/apple-touch-icon-114x114-precomposed.png",
+    "144": "/images/apple-touch-icon-144x144-precomposed.png"
+  },
+  "display": "fullscreen",
+  "theme_color": "#e8e8e8"
+}
