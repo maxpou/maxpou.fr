@@ -197,7 +197,7 @@ There is severals url pattern:
 
 You can also [secure your Github Pages site with HTTPS](https://help.github.com/articles/securing-your-github-pages-site-with-https/). Unfortunately it is not compatible with custom domains.
 
-Personally, I'm a big user of Github Pages. For now, they currently host this website ([www.maxpou.fr](http://www.maxpou.fr/)), an other one dedicated to my slides ([slides.maxpou.fr](http://slides.maxpou.fr/)), some Proof of Concepts (*ie: [Dictionary Game](https://github.com/maxpou/dictionary-game) with VueJs 2*) and all of my slides (I put them into an [organization](https://github.com/maxpou-slides) for a better visibility).
+Personally, I'm a big user of Github Pages. For now, they currently host this website ([www.maxpou.fr](https://www.maxpou.fr/)), an other one dedicated to my slides ([slides.maxpou.fr](https://slides.maxpou.fr/)), some Proof of Concepts (*ie: [Dictionary Game](https://github.com/maxpou/dictionary-game) with VueJs 2*) and all of my slides (I put them into an [organization](https://github.com/maxpou-slides) for a better visibility).
 
 For managing dependencies, I recommend you to use [Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules). For instance my slides repositories use [RevealsJS](https://github.com/hakimel/reveal.js/). I don't want to manage this library inside each repositories.
 It is exactly the same for my [Vim plugins](https://github.com/maxpou/dotfiles/tree/master/vim/bundle). I prefer stock a reference to the repositories in my dotfiles instead of the repository itself.

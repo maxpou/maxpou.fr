@@ -7,7 +7,7 @@ image:
     feature: articles/2017/immutability-js/banner.jpg
 ---
 
-Last month, I gave a talk about [*Immutability for functional JavaScript* in the DublinJS meetup (slides)](http://slides.maxpou.fr/immutability-js/).  
+Last month, I gave a talk about [*Immutability for functional JavaScript* in the DublinJS meetup (slides)](https://slides.maxpou.fr/immutability-js/).  
 I discovered Immutability almost 2 years ago in a French Meetup dedicated to Functional Programming but I didn't gave a try. 6 months later, after another talk, I decided to learn and understand this paradigm. It changed my way of writing code, mostly, when I started to adopt Immutability as a rule of thumb.
 
 ## Immutability? Kezako?
@@ -133,7 +133,7 @@ The object signature is still the same, only his parameters change. But it's not
 
 ### mutable states inside `map()`
 
-To loop an array, [forget about for/while loop](http://www.maxpou.fr/no-more-loop-in-js/) and start using Array.prototype.map(). Array.prototype.forEach() is a sibling to map() but it create side effect, while map prevent them by creating a new structure. Now, map() looks cool right? I can do some operations with my objects in a Array.map() loop, and it will preserve my initial values? Well... not exactly!
+To loop an array, [forget about for/while loop](https://www.maxpou.fr/no-more-loop-in-js/) and start using Array.prototype.map(). Array.prototype.forEach() is a sibling to map() but it create side effect, while map prevent them by creating a new structure. Now, map() looks cool right? I can do some operations with my objects in a Array.map() loop, and it will preserve my initial values? Well... not exactly!
 
 ```js
 const newHeroes = heroes.map(h => {

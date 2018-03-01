@@ -4,7 +4,7 @@ disqus_shortname: maxpou
 reading_time:     false
 words_per_minute: 240
 # url:              http://172.17.0.2:4000
-url:              http://www.maxpou.fr
+url:              https://www.maxpou.fr
 
 # Owner/author information
 owner:

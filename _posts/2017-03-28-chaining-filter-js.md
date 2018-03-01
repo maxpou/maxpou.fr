@@ -64,7 +64,7 @@ for (let filterIndex in activeFilters) {
 }
 ```
 
-But as I explain in [my previous post](http://www.maxpou.fr/no-more-loop-in-js/): imperative programming is not very elegant.
+But as I explain in [my previous post](https://www.maxpou.fr/no-more-loop-in-js/): imperative programming is not very elegant.
 
 ## Solution: using recursion
 

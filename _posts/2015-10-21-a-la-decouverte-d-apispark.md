@@ -99,7 +99,7 @@ Et voilà, quelques minutes, je viens de transformer mon tableur en une source d
 
 ### Méthodes PATCH absente
 
-La modification partielle d'une ressource via la méthode PATCH n'est pas gérée. Si vous souhaitez modifier une ressource existante, il faudra passer par méthode PUT et lui passer la ressource entière, conformément aux [bonnes pratiques REST](http://www.maxpou.fr/rest-crud/).
+La modification partielle d'une ressource via la méthode PATCH n'est pas gérée. Si vous souhaitez modifier une ressource existante, il faudra passer par méthode PUT et lui passer la ressource entière, conformément aux [bonnes pratiques REST](https://www.maxpou.fr/rest-crud/).
 
 ### HATEOAS
 

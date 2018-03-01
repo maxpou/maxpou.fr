@@ -25,7 +25,7 @@ When I started my new job, they ask me my favorite OS. Unfortunately Linux wasn'
 **Tame the whale (Docker):**
 
 At the end of 2015, I heard a lot about Docker. Every time I try to understand the aim of this tool, I failed. So I went to the Docker's Birthday event in Nantes. It was a kind of *hand on* with a pertinent getting started (plain old voting app!). A few weeks after, a project ended. So I ask to my employer some free time to go deeper with Docker. During this week, I have created a stack to run a Symfony application on Docker (with Compose).  
-I was pretty proud of my job, so I put everything [on Github](https://github.com/maxpou/docker-symfony) and I wrote [a blog post](http://www.maxpou.fr/docker-pour-symfony/) about it.
+I was pretty proud of my job, so I put everything [on Github](https://github.com/maxpou/docker-symfony) and I wrote [a blog post](https://www.maxpou.fr/docker-pour-symfony/) about it.
 
 This blog post, written in April 11th (a symbolic date for me 😉) reach ~3000 views on the 31th of December.
 
@@ -45,7 +45,7 @@ After absorbing this amount of knowledge, I found obvious to share it to the com
 * **Keep blogging**. It's very important for me. It helps me to deal with criticism, meet people (yes, really!) and also to become more precise (writing lead me to read a lot before publishing). This year, I got 9300 pages viewed on my blog! (I didn't expect so much!)
 * **Gave my first talk** about [Rest & Symfony](https://www.youtube.com/watch?v=F0BRnczxTWQ&feature=youtu.be&t=2220). I really like it! One month later, I give another one called *GraphQL/Falcor: Why Killing REST?* (quickie format);
 * **Contributing to Open Source** by putting all new projects/POC on Github. Now my account is a part of my resume (it also brought me new opportunities). And stop being an *issue watcher* by trying to fix issues on Github and help people. Unfortunately, I didn't participate by updating some codebases;
-* **Training people**. I have been working for 3.5 years with instructors (at Energy Formation, a gaz training center). So I was pretty proud when my employer (Conserto) ask me to train colleagues! So I draft two trainings: one about PHP and one other about Symfony2 ([slides](http://slides.maxpou.fr)). I reuse this second one for one of our customer (La Poste, the french postman company). Now, I can understand my trainers when I was sleeping (or doing something else) during the course!
+* **Training people**. I have been working for 3.5 years with instructors (at Energy Formation, a gaz training center). So I was pretty proud when my employer (Conserto) ask me to train colleagues! So I draft two trainings: one about PHP and one other about Symfony2 ([slides](https://slides.maxpou.fr)). I reuse this second one for one of our customer (La Poste, the french postman company). Now, I can understand my trainers when I was sleeping (or doing something else) during the course!
 
 
 ## Meet the world! *(nothing related to my new company!)*

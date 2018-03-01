@@ -14,7 +14,7 @@ image:
 ## GitVub
 
 * Sources: [github.com/maxpou/gitvub](https://github.com/maxpou/gitvub)
-* [Demo](http://www.maxpou.fr/gitvub/)
+* [Demo](https://gitvub.azurewebsites.net/#/)
 
 GitVub (Github + Vue) is a Vue.js **Progressive Web App (PWA)** based on GitHub API.
 
@@ -25,7 +25,7 @@ GitVub (Github + Vue) is a Vue.js **Progressive Web App (PWA)** based on GitHub 
 ## Dictionary Game
 
 * Sources: [github.com/maxpou/dictionary-game](https://github.com/maxpou/dictionary-game)
-* [Demo](http://www.maxpou.fr/dictionary-game/)
+* [Demo](https://www.maxpou.fr/dictionary-game/)
 
 Dictionary Game is a Vue.js application to improve my english vocabulary (fr/en). Words are stored in Firebase database.
 
@@ -37,7 +37,7 @@ Dictionary Game is a Vue.js application to improve my english vocabulary (fr/en)
 
 * Sources: [github.com/maxpou/docker-symfony](https://github.com/maxpou/docker-symfony)
 
-Docker-symfony is a complete stack to run a Symfony app into multiple containers (PHP7-FPM - NGINX - MySQL - ELK - REDIS) by using Docker compose. I've written [an article (in french sorry)](http://www.maxpou.fr/docker-pour-symfony/) to explain each steps to realize this whole.
+Docker-symfony is a complete stack to run a Symfony app into multiple containers (PHP7-FPM - NGINX - MySQL - ELK - REDIS) by using Docker compose. I've written [an article (in french sorry)](https://www.maxpou.fr/docker-pour-symfony/) to explain each steps to realize this whole.
 
 ![Docker-Symfony screenshots](https://raw.githubusercontent.com/maxpou/docker-symfony/master/doc/schema.png)
 
