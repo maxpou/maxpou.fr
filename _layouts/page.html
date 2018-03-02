@@ -17,8 +17,8 @@
   {% if page.image.credit %}<div class="image-credit">Image source: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></div><!-- /.image-credit -->{% endif %}
   <div class="entry-image">
     <img src="{{ site.url }}/images/{{ page.image.feature }}" alt="{{ page.title }}">
-  </div><!-- /.entry-image -->
-</div><!-- /.entry-header -->
+  </div>
+</div>
 {% endif %}
 
 <div id="main" role="main">
@@ -31,9 +31,9 @@
           <i class="fa fa-clock-o"></i>
           {% assign readtime = content | number_of_words | divided_by:site.words_per_minute %}
           Reading time ~{% if readtime <= 1 %}1 minute{% else %}{{ readtime }} minutes{% endif %}
-        </p><!-- /.entry-reading-time -->
+        </p>
         {% endif %}
-      </div><!-- /.header-title-wrap -->
+      </div>
     </header>
     <div class="entry-content">
       {{ content }}
@@ -42,16 +42,16 @@
         <span class="author vcard"><span class="fn">{{ site.owner.name }}</span></span>{% endif %}
         {% if page.share != false %}{% include social-share.html %}{% endif %}
       </footer>
-    </div><!-- /.entry-content -->
-    {% if page.comments != false %}<section id="disqus_thread"></section><!-- /#disqus_thread -->{% endif %}
+    </div>
+    {% if page.comments != false %}<section id="disqus_thread"></section>{% endif %}
   </article>
-</div><!-- /#main -->
+</div>
 
 <div class="footer-wrapper">
   <footer role="contentinfo">
     {% include footer.html %}
   </footer>
-</div><!-- /.footer-wrapper -->
+</div>
 
 {% include scripts.html %}
 
