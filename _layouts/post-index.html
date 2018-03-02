@@ -18,25 +18,25 @@
   {% if page.image.feature %}
     <div class="entry-image">
       <img src="{{ site.url }}/images/{{ page.image.feature }}" alt="{{ page.title }}">
-    </div><!-- /.entry-image -->
+    </div>
   {% endif %}
   <div class="header-title">
     <div class="header-title-wrap">
       <h1>{{ site.title }}</h1>
       <h2>{{ page.title }}</h2>
-    </div><!-- /.header-title-wrap -->
-  </div><!-- /.header-title -->
-</div><!-- /.entry-header -->
+    </div>
+  </div>
+</div>
 
 <div id="main" role="main">
   {{ content }}
-</div><!-- /#main -->
+</div>
 
 <div class="footer-wrapper">
   <footer role="contentinfo">
     {% include footer.html %}
   </footer>
-</div><!-- /.footer-wrapper -->
+</div>
 
 {% include scripts.html %}
 
