@@ -9,15 +9,18 @@ image:
 ---
 
 <div class="talk-container__info">
-    📌 Slides's sources are available on GitHub (<a href="https://github.com/maxpou-slides">github.com/maxpou-slides</a>)
+  📌 Slides's sources are available on GitHub (<a href="https://github.com/maxpou-slides">github.com/maxpou-slides</a>)
 </div>
 
 <h2>Talks:</h2>
 <ul class="talk-container__list">
   <li><a href="https://slides.maxpou.fr/pwa-app-on-steroids/index.html">🇬🇧 Progressive Web Apps: Your web app on steroids</a><br>
+    <em class="talk-container__event">🗓 09/2018, DublinJS, Dublin, Ireland</em><br>
+    <em class="talk-container__event">🗓 06/2018, Devoxx, Kraków, Poland — <a class="talk-container__media-link" href="https://www.youtube.com/watch?v=6Qids36T7DA">🇬🇧 video (YouTube)</a></em><br>
+    <em class="talk-container__event">🗓 05/2018, VSWare, Dublin, Ireland</em><br>
     <em class="talk-container__event">🗓 03/2018, Voxxed Days, Vienna, Austria — <a class="talk-container__media-link" href="https://www.youtube.com/watch?v=sS6IDU6pVHo">🇬🇧 video (YouTube)</a></em>
   </li>
-  <li><a href="https://slides.maxpou.fr/vuejs-yet-another-js-framework/index.html">🇬🇧 Vue.js - Yet another JavaScript Framework</a><br>
+  <li><a href="https://slides.maxpou.fr/vuejs-yet-another-js-framework/index.html">🇬🇧 Vue.js - Yet another JavaScript Framework (company conference)</a><br>
     <em class="talk-container__event">🗓 12/2017, Hostelworld Technology Submit, Dublin, Ireland</em>
   </li>
   <li><a href="https://slides.maxpou.fr/immutability-js/index.html">🇬🇧 Immutability for functional JavaScript</a><br>
