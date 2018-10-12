@@ -1,3 +1,13 @@
+---
+title: Hello Gatsby, goodbye Jekyll
+slug: "hello-gatsby-goodbye-jekyll"
+description: "Liste des commandes console utilisées lors du développement d’un projet sous Symfony2"
+language: en
+date: 2018-10-12
+tags: 
+    - Gatsby
+---
+
 # Hello Gatsby, goodbye Jekyll
 
 Few weeks ago, I was in the DublinJS meetup. As usual, the talk I came for, wasn't the most interesting one! The most interesting one was about [ember-ghost](https://github.com/stonecircle/ember-ghost). A static generation website using Ember (JavaScript).
