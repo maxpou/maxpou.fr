@@ -1,10 +1,9 @@
 ---
 layout: post
 title: Atom, un éditeur qui vous veut du bien
-description: "Retour d'expérience avec l'éditeur de texte Atom"
 slug: atom
+description: "Retour d'expérience avec l'éditeur de texte Atom"
 date: 2015-08-14
-modified: 2016-11-18
 tags: ["Atom", "GitHub"]
 cover: ./atom-mark.png
 ---
@@ -12,8 +11,6 @@ cover: ./atom-mark.png
 > [18/11/2016] : ajout de ma configuration perso + quelques plugins  
 > [26/08/2015] : ajout de la gestion des favoris  
 > [24/11/2015] : l'éditeur est beaucoup plus stable qu'avant
-
-# Atom, un éditeur qui vous veut du bien
 
 ## C'est quoi ?
 

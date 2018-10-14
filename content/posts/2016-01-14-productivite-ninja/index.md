@@ -4,14 +4,9 @@ title: Productivité Ninja !
 slug: productivite-ninja
 description: "Retour d'expérience sur la mise en oeuvre de certaines pratiques telles que les TODO list, pomodoro..."
 date: 2016-01-14
-tags: ["Développement personnel", "Productivité", "Time management"]
-image:
-    feature: abstract-5.jpg
-    credit: dargadgetz
-    creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+tags: ["Productivity", "TimeManagement"]
+cover: ./abstract-5.jpg
 ---
-
-# Productivité Ninja !
 
 Entre le [multitasking](https://fr.wikipedia.org/wiki/Multitasking), les mails pro, les notifications push sur votre téléphone (SMS, mail perso, Facebook, Twitter...), un collègue qui vient vous voir...on a vite fait de procrastiner au bureau.
 

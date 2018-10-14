@@ -5,10 +5,7 @@ tags: ["JavaScript", "FunctionalProgramming"]
 date: 2017-03-28
 slug: chaining-filter-js
 language: en
-image:
-    feature: abstract-8.jpg
-    credit: dargadgetz
-    creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+cover: ./abstract-8.jpg
 ---
 
 I recently realize a POC with [Vue.js](https://github.com/maxpou/find-a-room-vuejs2). I was confronted to this problem: **how to apply an unknown number of filter to a collection?**

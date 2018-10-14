@@ -1,18 +1,11 @@
 ---
 layout: post
 title: Utilisez un framework PHP
-description: "Utilisez un framework PHP"
 date: 2015-07-18
-modified: 2015-10-02
-tags: ["PHP", "Symfony2", "silex"]
+tags: ["PHP", "Symfony2", "Silex"]
 slug: utilisez-un-framework-php
-image:
-    feature: abstract-4.jpg
-    credit: dargadgetz
-    creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+cover: ./abstract-4.jpg
 ---
-
-# Utilisez un framework PHP
 
 Aujourd'hui je vais vous parler de framework dans l'écosystème PHP.  
 L'idée de cet article m'est venue suite à la suite d'une mission de plus chez un client qui préférait utiliser son framework maison plutôt qu'un framework open source. Je n'adhère pas vraiment à cette philosophie et l'objectif de cet article est de vous présenter pourquoi.  

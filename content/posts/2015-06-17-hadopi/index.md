@@ -1,17 +1,11 @@
 ---
 layout: post
 title: "Hadopi : fonctionnement et contournement"
-description: "Hadopi : fonctionnement et contournement"
 date: 2015-06-17
-modified: 2015-07-21
 slug: hadopi
 tags: [Hadopi]
-image:
-  feature: articles/hadopi/tbp.jpg
-  credit: ThePirateBay
+cover: ./tbp.jpg
 ---
-
-# Hadopi : fonctionnement et contournement
 
 *Ca y est, vous venez de recevoir votre premier courrier HADOPI et c'est la panique.
 Vous avez Googlelé "contourner HADOPI" et vous voici arrivé ici.*

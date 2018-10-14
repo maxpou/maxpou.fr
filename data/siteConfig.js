@@ -18,7 +18,7 @@ module.exports = {
   background_color: '#ffffff',
   theme_color: '#222222',
   display: 'minimal-ui',
-  icon: 'src/assets/gatsby-icon.png',
+  icon: 'src/assets/icon.jpeg',
   disqusShortname: 'maxpou',
   headerLinks: [
     {
