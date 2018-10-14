@@ -1,5 +1,5 @@
 # maxpou.github.io
-[![Build Status](https://travis-ci.org/maxpou/maxpou.github.io.svg?branch=master)](https://travis-ci.org/maxpou/maxpou.github.io)
+[![Build Status](https://travis-ci.org/maxpou/maxpou.github.io.svg?branch=master)](https://travis-ci.org/maxpou/maxpou.github.io) [![Greenkeeper badge](https://badges.greenkeeper.io/maxpou/maxpou.github.io.svg)](https://greenkeeper.io/)
 
 My blog using [HPSTR Jekyll Theme](https://github.com/mmistakes/hpstr-jekyll-theme) <3  
 If you find a typo, pull request are welcome. Thank you so much!
