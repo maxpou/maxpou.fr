@@ -69,7 +69,7 @@ And tadaaaa! `else` condition disappears!
 That was my colleague response when I talk about this. But you know, every developer write specific code (in 2016, CRUD are generated). If you don't, I'm sorry for you!  
 So, sometimes it's difficult to avoid this expression. Most of times, it came from another problem: **you don't know design patterns**.
 
-# Solution 2: State Pattern
+## Solution 2: State Pattern
 
 If your code look like this:
 

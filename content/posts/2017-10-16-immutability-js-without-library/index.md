@@ -6,6 +6,7 @@ language: en
 date: 2017-10-16
 tags:
     - JavaScript
+    - FunctionalProgramming
 ---
 
 Last month, I gave a talk about [*Immutability for functional JavaScript* in the DublinJS meetup (slides)](https://slides.maxpou.fr/immutability-js/).  

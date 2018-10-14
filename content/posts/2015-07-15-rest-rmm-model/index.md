@@ -1,18 +1,11 @@
 ---
 layout: post
 title: Non, votre API n'est pas REST !
-description: "Présentation de REST et du RMM"
 date: 2015-07-15
-modified: 2015-10-20
 slug: rest-rmm-model
-tags: [REST, JSON, XML, HTTP]
-image:
-    feature: abstract-3.jpg
-    credit: dargadgetz
-    creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+tags: [REST]
+cover: ./abstract-3.jpg
 ---
-
-# Non, votre API n'est pas REST !
 
 ## Etat des lieux
 

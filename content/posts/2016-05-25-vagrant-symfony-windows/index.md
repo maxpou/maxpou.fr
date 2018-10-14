@@ -2,7 +2,7 @@
 layout: post
 title: Vagrant, Symfony and Windows are not incompatibles
 slug: vagrant-symfony-windows
-tags: ["Symfony2", "CLI", "PHP"]
+tags: ["Symfony2", "PHP"]
 language: en
 date: 2016-05-25
 cover: ./header.png

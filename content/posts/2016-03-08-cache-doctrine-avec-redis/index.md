@@ -8,8 +8,6 @@ tags: ["Symfony2", "Doctrine", "Redis"]
 cover: ./header.png
 ---
 
-# Utiliser Redis pour stocker le cache de Doctrine
-
 > La meilleur requête est celle que l'on a pas à faire
 — **un inconnu**
 

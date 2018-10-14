@@ -9,8 +9,8 @@ tags:
     - JavaScript
 ---
 
-Few weeks ago I found on my twitter feed a very interesting blog post: ["The Best Frontend JavaScript Interview Questions (written by a Frontend Engineer)"](https://performancejs.com/post/hde6d32/The-Best-Frontend-JavaScript-Interview-Questions-%28written-by-a-Frontend-Engineer%29) written by Boris Cherny.  
-As you may guess, the author show some interesting questions to ask during a job interview. Questions are splitted in 4 parts: Concepts, Coding, Debugging, and System Design. Here, I'll focus on the **Debugging** part.
+A few weeks ago I found on my twitter feed a very interesting blog post: ["The Best Frontend JavaScript Interview Questions (written by a Frontend Engineer)"](https://performancejs.com/post/hde6d32/The-Best-Frontend-JavaScript-Interview-Questions-%28written-by-a-Frontend-Engineer%29) written by Boris Cherny.  
+As you may guess, the author shows some interesting questions to ask during a job interview. Questions are split in 4 parts: Concepts, Coding, Debugging, and System Design. Here, I'll focus on the **Debugging** part.
 
 I really like theses question, because they deal with the specificities of JavaScript: object comparison, event loop, scope, this, prototypal inheritance and the equal operator combined with [Abstract Equality Comparison Algorithm](http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.3).
 
@@ -35,7 +35,7 @@ greet({ name: 'amy' })
 
 **Answer**
 
-Here the problem is the following: `{ name: 'amy' } != { name: 'amy' }`. When comparing two object with equality or strict equality, JavaScript gonna compare the related internal references. Here, these two objects have the same properties and the same value. But in memory, this is 2 different objects.
+Here the problem is the following: `{ name: 'amy' } != { name: 'amy' }`. When comparing two objects with equality or strict equality, JavaScript gonna compare the related internal references. Here, these two objects have the same properties and the same value. But in memory, this is 2 different objects.
 
 A solution here could be:
 
@@ -63,26 +63,26 @@ for (var i = 0; i < 4; i++) {
 
 **Problem**
 
-I like this one because it's a bit trickier and it deal with scope and the JavaScript Event Loop. 
+I like this one because it's a bit trickier and it deals with scope and the JavaScript Event Loop. 
 
 The classic pitfall here is the **Zero delays**. `setTimeout(callback, 0)` doesn't mean that the callback will be fire after zero milliseconds.
 
-Here's what happen on the event loop side:
+Here's what happens on the event loop side:
 
 1. Current Call Stack is set to the first setTimeout(). 
-2. windows.setTimeout() is considered as a Web APIs (for better **Non-Blocking I/O**). So the call stack send this part of code to correct Web APIs. 
-After 0 milliseconds, the callback (here an anonymous function) would be send to the Queue (not to the call stack).
+2. windows.setTimeout() is considered as a Web APIs (for better **Non-Blocking I/O**). So the call stack sends this part of the code to correct Web APIs. 
+After 0 milliseconds, the callback (here an anonymous function) would be sent to the Queue (not to the call stack).
 3. As the call stack is free, for-loop can continue to the second setTimeout
 ...(repeat after we meet this condition i < 4)...
 4. Now the loop is over and `i === 4`. JS can now execute the callback queue one by one. Each console.log(i) will print the 4.
 
-Do you feel lost? I hope this animation will better helps you!
+Do you feel lost? I hope this animation will better help you!
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CzXPF3zwWGs" frameborder="0" allowfullscreen></iframe>
 
 *Animation made with [Loupe (try it it's fun!)](http://latentflip.com/loupe/?code=Y29uc29sZS5sb2coIlN0YXJ0ISIpOwoKZm9yIChsZXQgaSA9IDA7IGkgPCA0OyBpKyspIHsKICBzZXRUaW1lb3V0KGZ1bmN0aW9uICgpIHsKICAgICAgY29uc29sZS5sb2coaSk7CiAgfSwgMCk7Cn0KCmNvbnNvbGUubG9nKCJFbmQhIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D)*
 
 
-The second problem is related to scope. The 4 instance of setTimeout function share the same instance of `i`.
+The second problem is related to scope. The 4 instances of setTimeout function shares the same instance of `i`.
 
 ```js
 var foo = 'bim'
@@ -163,7 +163,7 @@ The previous code return `undefined`. Why? Looks, on the first let condition, we
 
 ## Exercise 4
 
-> I want my dog to bark(), but instead I get an error. Why?
+> I want my dog to bark(), but instead, I get an error. Why?
 
 ```js
 function Dog (name) {
@@ -180,7 +180,7 @@ fido.bark()
 
 **Answer**
 
-We got the following error *TypeError: fido.bark is not a function*. On the previous code, we set the bark function on an another function (`Dog()`), which is also a constructor. Is it possible because in JavaScript, functions are objects.
+We got the following error *TypeError: fido.bark is not a function*. On the previous code, we set the bark function on another function (`Dog()`), which is also a constructor. Is it possible because in JavaScript, functions are objects.
 
 
 2 solutions:
@@ -251,7 +251,7 @@ We are using here the simple equality operator (*e.g.* ==) by opposition to stri
 * `isBig(1)` pass the condition `thing == 1` as expected.
 * `isBig([2])` will pass the condition `thing == 2`. When comparing an array to a number, the array will be converted to a number. This is a part of the [Abstract Equality Comparison Algorithm](http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.3). According to this algorithm, if we compare a number with an Object *(reminder: arrays are object in JS)*, this array will be converted to an array. Here, there is only one item inside so `[2] == 2`.
 
-Because this algorithm is obscure for the most common developers, we should aboid this operator ([ESLint eqeqeq rule is your friend 👍](http://eslint.org/docs/rules/eqeqeq)).
+Because this algorithm is obscure for the most common developers, we should avoid this operator ([ESLint eqeqeq rule is your friend 👍](http://eslint.org/docs/rules/eqeqeq)).
 
 ```js
 // weird results
@@ -289,4 +289,4 @@ const newHeroes = heroes.map(h => {
 ```
 
 Do you have any idea? 🙂  
-*answer will be in the next post!*
+*The answer will be in the next post!*

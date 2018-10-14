@@ -8,8 +8,6 @@ date: 2016-05-15
 cover: ./intro.jpg
 ---
 
-# La qualité logicielle et les trois petits cochons
-
 Il y a quelques temps, j'ai eu affaire à une situation un peu particulière à mon travail. Pendant le standing-up matinal, mon chef m'a fait remarquer que mes tickets avançaient moins qu'un autre collègue.
 Bon rien de bien méchant en soi, nous n'avons pas tous la même vélocité à pondre des lignes de codes. Là où la réflexion est vexante, c'est que si mes tickets avançaient si lentement, c'est qu'une bonne partie de mon temps était consacrée repasser derrière le bon élève qui avance *visiblement* plus vite que moi. De plus, je suis partisan de faire les choses qu'une seule fois et de les faire bien (même si cela prend plus de temps).
 En retournant à mon bureau, je me suis souvenu de cette histoire que l'on me racontait quand j'étais petit : les trois petits cochons...
