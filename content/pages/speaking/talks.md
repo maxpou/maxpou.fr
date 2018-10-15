@@ -1,5 +1,5 @@
 ---
-title: speaking
+title: Speaking
 slug: speaking
 cover: ./talks.png
 type: page

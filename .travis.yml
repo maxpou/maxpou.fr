@@ -10,7 +10,7 @@ script:
   - yarn lint
 
 before_deploy:
-  - yarn build --prefix-paths
+  - yarn build
 
 deploy:
   provider: pages
