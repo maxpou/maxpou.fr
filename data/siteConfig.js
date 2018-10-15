@@ -58,6 +58,10 @@ module.exports = {
         label: 'Speaking',
         url: '/speaking',
       },
+      {
+        label: 'Portfolio',
+        url: '/portfolio',
+      },
     ],
     [
       'Follow me',
