@@ -5,16 +5,25 @@ cover: ./talks.png
 type: page
 ---
 
-<div class="talk-container__info">
-  📌 Slides's sources are available on GitHub (<a href="https://github.com/maxpou-slides">github.com/maxpou-slides</a>)
-</div>
+I love to deliver technical talk. If you want to hear me, just <a href="mailto:hello@maxpou.fr?subject=Speaking+Inquiry">contact me</a>.
 
-<h2>Talks:</h2>
+Currently I’m focusing on giving presentations in the following areas:
+
+* **Progressive Web Apps** (PWA) and **Offline pattern**. How to take leverage of new browser capabilities. Building offline first applications.
+* **Performances**: How to easily manage your frontend performances and sleep at night.
+* **Vue.js**: Scaling Vue.js applications.
+* **Testing**: how to effectively test your Vue/React application
+
+
+All my slides's sources are available under this GitHub organisation: [github.com/maxpou-slides](https://github.com/maxpou-slides).
+
+## Talks:
+
 <ul class="talk-container__list">
   <li><a href="https://slides.maxpou.fr/pwa-app-on-steroids/index.html">🇬🇧 Progressive Web Apps: Your web app on steroids</a><br>
     <em class="talk-container__event">🗓 09/2018, DublinJS, Dublin, Ireland</em><br>
     <em class="talk-container__event">🗓 06/2018, Devoxx, Kraków, Poland — <a class="talk-container__media-link" href="https://www.youtube.com/watch?v=6Qids36T7DA">🇬🇧 video (YouTube)</a></em><br>
-    <em class="talk-container__event">🗓 05/2018, VSWare, Dublin, Ireland</em><br>
+    <em class="talk-container__event">🗓 05/2018, VSware, Dublin, Ireland</em><br>
     <em class="talk-container__event">🗓 03/2018, Voxxed Days, Vienna, Austria — <a class="talk-container__media-link" href="https://www.youtube.com/watch?v=sS6IDU6pVHo">🇬🇧 video (YouTube)</a></em>
   </li>
   <li><a href="https://slides.maxpou.fr/vuejs-yet-another-js-framework/index.html">🇬🇧 Vue.js - Yet another JavaScript Framework (company conference)</a><br>
@@ -41,7 +50,8 @@ type: page
   </li>
 </ul>
 
-<h2>Trainings:</h2>
+## Trainings & Workshop
+
 <ul class="talk-container__list">
   <li><a href="https://slides.maxpou.fr/vue-workshop/index.html">🇬🇧 Vue.js Workshop - Build a StackOverflow app using Vue.js</a><br>
     <em class="talk-container__event">🗓 02/2018, DublinJS, Dublin, Ireland</em>
@@ -54,7 +64,8 @@ type: page
   <li><a href="https://slides.maxpou.fr/php-basics-conserto/index.html">🇬🇧 PHP Basics</a> — <em>PHP training for <a href="http://www.conserto.pro/">Conserto</a></em></li>
 </ul>
 
-<h2>Others presentations:</h2>
+## Others presentations:
+
 <ul class="talk-container__list">
   <li><a href="https://slides.maxpou.fr/js-today-2017/index.html">🇬🇧 JS Today - a (re-)introduction to JavaScript</a> — <em>Presentation for <a href="http://www.hostelworld.com/">Hostelworld</a> (06/2017)</em></li>
   <li><a href="https://slides.maxpou.fr/redis-doctrine-sf/index.html">🇫🇷 Redis et l'écosysteme Symfony</a> — <em>Presentation for <a href="http://www.laposte.fr">La Poste</a> (03/2016) — <a class="talk-container__media-link" href="https://www.maxpou.fr/cache-doctrine-avec-redis/">🇫🇷 blog post</a></em></li>
@@ -62,3 +73,27 @@ type: page
   <li><a href="#">🇫🇷 Pourquoi utiliser un framework comme Symfony2</a> — <em>Presentation for <a href="http://www.conserto.pro/">Conserto</a> clients</em></li>
   <li><a href="https://slides.maxpou.fr/afcepf-soutenance-memoire/index.html">🇫🇷 Dissertation defense (Software Architect degree)</a></li>
 </ul>
+
+<style>
+.talk-container__list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.talk-container__list > li {
+  margin-bottom: 10px;
+}
+
+.talk-container__event {
+  margin-left: 10px;
+}
+
+.talk-container__media-link {
+  border-bottom: 1px dotted rgba(162,162,162,0.8);
+  font-style: normal;
+}
+
+.talk-container__list > li > a {
+  font-size: 18px;
+}
+</style>
