@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/maxpou/maxpou.github.io.svg?branch=master)](https://travis-ci.org/maxpou/maxpou.github.io)
 
-# maxpou.github.io
+# maxpou.fr
 
 My own website built with GatsbyJS v2 and using [gatsby-starter-morning-dew](https://github.com/maxpou/gatsby-starter-morning-dew).
 
