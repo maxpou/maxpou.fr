@@ -2,6 +2,7 @@ module.exports = {
   siteTitle: 'maxpou.fr',
   siteDescription: "👋 Hey I'm Max",
   authorName: 'Maxence Poutord',
+  twitterUsername: '_maxpou',
   authorAvatar: '/images/avatar.jpeg',
   multilangPosts: true, // enable/disable flags in post lists
   authorDescription: `
@@ -11,6 +12,7 @@ module.exports = {
   Do you want to know more? <a href="/about">Read this!</a>
   `,
   siteUrl: 'https://www.maxpou.fr/',
+  disqusSiteUrl: 'https://www.maxpou.fr/',
   // Prefixes all links. For cases when deployed to maxpou.fr/gatsby-starter-morning-dew/
   pathPrefix: '/', // Note: it must *not* have a trailing slash.
   siteCover: '/images/cover.jpg',
