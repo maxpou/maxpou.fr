@@ -67,7 +67,7 @@ All my slides's sources are available under this GitHub organisation: [github.co
 ## Others presentations:
 
 <ul class="talk-container__list">
-  <li><a href="https://slides.maxpou.fr/effective-frontend-testing/">🇬🇧 Effective Frontend testing</a> — <em>Presentation for <a href="http://vsware.ie">VSware</a> (10/2017)</em></li>
+  <li><a href="https://slides.maxpou.fr/effective-frontend-testing/">🇬🇧 Effective Frontend testing</a> — <em>Presentation for <a href="http://vsware.ie">VSware</a> (10/2018)</em></li>
   <li><a href="https://slides.maxpou.fr/js-today-2017/index.html">🇬🇧 JS Today - a (re-)introduction to JavaScript</a> — <em>Presentation for <a href="https://www.hostelworld.com/">Hostelworld</a> (06/2017)</em></li>
   <li><a href="https://slides.maxpou.fr/redis-doctrine-sf/index.html">🇫🇷 Redis et l'écosysteme Symfony</a> — <em>Presentation for <a href="http://www.laposte.fr">La Poste</a> (03/2016) — <a class="talk-container__media-link" href="https://www.maxpou.fr/cache-doctrine-avec-redis/">🇫🇷 blog post</a></em></li>
   <li><a href="https://slides.maxpou.fr/elasticsearch-php/index.html">🇫🇷 Présentation d'Elasticsearch</a> — <em>Presentation for <a href="http://www.laposte.fr">La Poste</a> (03/2016)</em></li>
