@@ -1,7 +1,6 @@
 ---
 title: Hello GatsbyJS!
 slug: hello-gatsby
-description: "Liste des commandes console utilisées lors du développement d’un projet sous Symfony2"
 language: en
 cover: ./cover.jpeg
 date: 2018-10-17
