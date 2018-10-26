@@ -10,7 +10,7 @@ I love to deliver technical talk. If you want to hear me, just <a href="mailto:h
 Currently I’m focusing on giving presentations in the following areas:
 
 * **Progressive Web Apps** (PWA) and **Offline pattern**. How to take leverage of new browser capabilities. Building offline first applications.
-* **Performances**: How to easily manage your frontend performances and sleep at night.
+* **Performances**: How to manage your frontend performances and sleep at night.
 * **Vue.js**: Scaling Vue.js applications.
 * **Testing**: how to effectively test your Vue/React application
 
