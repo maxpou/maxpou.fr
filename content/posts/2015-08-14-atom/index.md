@@ -6,6 +6,7 @@ description: "Retour d'expérience avec l'éditeur de texte Atom"
 date: 2015-08-14
 tags: ["Atom", "GitHub"]
 cover: ./atom-mark.png
+generate-card: false
 ---
 
 > [18/11/2016] : ajout de ma configuration perso + quelques plugins  

@@ -1,6 +1,7 @@
 ---
 title: "Immutability in JavaScript (without library)"
 cover: ./banner.jpg
+generate-card: false
 slug: immutability-js-without-library
 language: en
 date: 2017-10-16

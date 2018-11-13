@@ -2,6 +2,7 @@
 title: Speaking
 slug: speaking
 cover: ./talks.png
+disqus: false
 type: page
 ---
 

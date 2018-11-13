@@ -2,6 +2,7 @@
 type: page
 title: Writing
 slug: writing
+disqus: false
 ---
 
 # Writing

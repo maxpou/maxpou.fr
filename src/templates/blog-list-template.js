@@ -3,37 +3,51 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 
 import Layout from '../components/layout'
-import PostsList from '../components/PostsList'
 import Wrapper from '../components/Wrapper'
-import SEO from '../components/SEO'
 import Hero from '../components/Hero'
+import PostsList from '../components/PostsList'
+import Pagination from '../components/Pagination'
+import SEO from '../components/SEO'
 
-class Tags extends React.Component {
+class BlogList extends React.Component {
   render() {
-    const pageTitle = `#${this.props.pageContext.tag}`
+    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
+    const { pageContext } = this.props
 
     return (
-      <Layout location={this.props.location} title={pageTitle}>
-        <SEO title={pageTitle} />
-        <Hero title={pageTitle} />
+      <Layout location={this.props.location}>
+        <SEO />
+        <Hero title={siteTitle} />
 
         <Wrapper>
-          <h1>Posts tagged as "{this.props.pageContext.tag}"</h1>
           <PostsList posts={posts} />
         </Wrapper>
+
+        <Pagination
+          nbPages={pageContext.nbPages}
+          currentPage={pageContext.currentPage}
+        />
       </Layout>
     )
   }
 }
 
-export default Tags
+export default BlogList
 
 export const pageQuery = graphql`
-  query PostsByTag($tag: String!) {
+  query blogListQuery($skip: Int!, $limit: Int!) {
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tags: { eq: $tag } } }
+      filter: { frontmatter: { type: { ne: "page" } } }
+      limit: $limit
+      skip: $skip
     ) {
       edges {
         node {

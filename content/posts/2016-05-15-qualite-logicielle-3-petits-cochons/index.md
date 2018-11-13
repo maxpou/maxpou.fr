@@ -6,6 +6,7 @@ tags: ["Qualité logicielle", "Gestion de projet"]
 slug: qualite-logicielle-3-petits-cochons
 date: 2016-05-15
 cover: ./intro.jpg
+generate-card: false
 ---
 
 Il y a quelques temps, j'ai eu affaire à une situation un peu particulière à mon travail. Pendant le standing-up matinal, mon chef m'a fait remarquer que mes tickets avançaient moins qu'un autre collègue.

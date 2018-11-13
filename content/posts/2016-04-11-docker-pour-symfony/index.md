@@ -5,6 +5,8 @@ date: 2016-04-11
 slug: docker-pour-symfony
 tags: ["Docker", "Symfony2", "PHP"]
 cover: ./bg-intro.jpg
+imageTw: ./docker-pour-symfony-tw.png
+imageFb: ./docker-pour-symfony-fb.png
 ---
 
 > [05/07/2016] : màj du docker-compose (suppression conteneur code+alias) + màj schéma + ajout PHPMyAdmin + simplification toolbox.  

@@ -6,6 +6,7 @@ date: 2016-03-08
 slug: cache-doctrine-avec-redis
 tags: ["Symfony2", "Doctrine", "Redis"]
 cover: ./header.png
+generate-card: false
 ---
 
 > La meilleur requête est celle que l'on a pas à faire
