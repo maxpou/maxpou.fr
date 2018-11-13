@@ -5,6 +5,7 @@ tags: ["PHP", "FunctionalProgramming"]
 date: 2016-12-11
 slug: programmation-fonctionnelle-php
 cover: ./banner.png
+generate-card: false
 ---
 
 Depuis quelque temps, j'entends de plus en plus parler d'un autre paradigme de programmation : la **programmation fonctionnelle** (ou *PF* pour les intimes). Bon, je ne vais pas vous faire une introduction à la programmation fonctionnelle, des [articles](https://medium.com/@cscalfani/so-you-want-to-be-a-functional-programmer-part-1-1f15e387e536)/conférences sur la toile le font très bien. L'idée est plutôt de reprendre des concepts clefs et voir ce que l'on peut en faire avec dans notre merveilleux monde de PHP.

@@ -2,6 +2,7 @@
 type: page
 title: Portfolio
 slug: portfolio
+disqus: false
 cover: ./opensource.png
 ---
 

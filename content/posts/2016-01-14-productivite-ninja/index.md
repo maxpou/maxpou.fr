@@ -6,6 +6,7 @@ description: "Retour d'expérience sur la mise en oeuvre de certaines pratiques 
 date: 2016-01-14
 tags: ["Productivity", "TimeManagement"]
 cover: ./abstract-5.jpg
+generate-card: false
 ---
 
 Entre le [multitasking](https://fr.wikipedia.org/wiki/Multitasking), les mails pro, les notifications push sur votre téléphone (SMS, mail perso, Facebook, Twitter...), un collègue qui vient vous voir...on a vite fait de procrastiner au bureau.

@@ -7,6 +7,7 @@ date: 2015-10-21
 modified: 2015-10-21
 tags: ["REST", "APISpark", "Restlet"]
 cover: ./background.png
+generate-card: false
 ---
 
 [TL;DR](#points-forts)

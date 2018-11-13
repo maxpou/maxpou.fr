@@ -5,6 +5,7 @@ date: 2015-07-15
 slug: rest-rmm-model
 tags: [REST]
 cover: ./abstract-3.jpg
+generate-card: false
 ---
 
 ## Etat des lieux

@@ -6,29 +6,30 @@ slug: github-tips-and-tricks
 date: 2017-02-20
 language: en
 cover: ./banner.png
+generate-card: false
 ---
 
 Summary:
 
-* [GitHub = git + hub / Manage your repo by CLI](#github--git--hub-manage-your-repo-by-cli)
-* [Github AKA SVNHub?](#github-aka-svnhub)
-* [Markdown on steroid (Github Flavored Markdown)](#markdown-on-steroid-github-flavored-markdown)
-* [Gist, another kind of repository](#gist-another-kind-of-repository)
-* [Issue/Pull request Templates](#issuepull-request-templates)
-* [Github Pages ❤️️](#github-pages-️️)
-* [Sign your commits](#sign-your-commits)
-* [Playing with URL](#playing-with-url)
-    * [URL everywhere](#url-everywhere)
-    * [Disable whitespace on code review](#disable-whitespace-on-code-review)
-    * [.diff and .patch](#diff-and-patch)
-    * [Highlight lines](#highlight-lines)
-    * [Filtering commits](#filtering-commits)
-* [Keyboard shortcuts](#keyboard-shortcuts)
-* [Emoji 😍](#emoji-)
-* [git.io a Github URL shortener](#gitio-a-github-url-shortener)
-* [Not only for your code](#not-only-for-your-code)
-* [API (~REST or GraphQL)](#api-rest-or-graphql)
-* [Bonus: Octodex](#bonus-octodex)
+- [GitHub = git + hub (Manage your repo by CLI)](#github--git--hub-manage-your-repo-by-cli)
+- [Github AKA SVNHub?](#github-aka-svnhub)
+- [Markdown on steroid (Github Flavored Markdown)](#markdown-on-steroid-github-flavored-markdown)
+- [Gist, another kind of repository](#gist-another-kind-of-repository)
+- [Issue/Pull request Templates](#issuepull-request-templates)
+- [Github Pages ❤️️](#github-pages-%E2%9D%A4%EF%B8%8F%EF%B8%8F)
+- [Sign your commits](#sign-your-commits)
+- [Playing with URL](#playing-with-url)
+    - [URL everywhere](#url-everywhere)
+    - [Disable whitespace on code review](#disable-whitespace-on-code-review)
+    - [.diff and .patch](#diff-and-patch)
+    - [Highlight lines](#highlight-lines)
+    - [Filtering commits](#filtering-commits)
+- [Keyboard shortcuts](#keyboard-shortcuts)
+- [Emoji 😍](#emoji-%F0%9F%98%8D)
+- [git.io a Github URL shortener](#gitio-a-github-url-shortener)
+- [Not only for your code](#not-only-for-your-code)
+- [API (~REST or GraphQL)](#api-rest-or-graphql)
+- [Bonus: Octodex](#bonus-octodex)
 
 
 ## GitHub = git + hub (Manage your repo by CLI)

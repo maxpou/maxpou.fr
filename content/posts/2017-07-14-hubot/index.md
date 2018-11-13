@@ -5,6 +5,7 @@ tags: ["GitHub", "Bot"]
 date: "2017-07-14"
 slug: hubot
 cover: ./hubot_shema.jpg
+generate-card: false
 ---
 
 Je regardais l'autre jour cette conférence d'Alain Hélaïli à propos sur le fonctionnement interne de [Github.com](https://github.com). Autant, je connaissais bien la plateforne, mais pas du tout l'entreprise derrière. D'après les chiffres, il y aurait ~600 githubber et dont une bonne partie éparpillés aux quatre coins du globe. Arrivé à ce moment de la présentation de la boîte, je me suis dit que ça devait-être assez chaud patate côté communication (sans compter les problèmes de timezone)... Et bien en fait non ! Ils déploient même en production plusieurs dizaines de fois par jour, les doigts dans le nez !

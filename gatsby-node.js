@@ -1,12 +1,15 @@
 const {resolve} = require('path');
 const { createFilePath } = require('gatsby-source-filesystem')
+const config = require('./data/siteConfig');
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const blogPostTemplate = resolve('./src/templates/blog-post.js')
-  const pageTemplate = resolve('./src/templates/page.js')
-  const postsBytagTemplate = resolve('./src/templates/tags.js')
+  const BlogPostTemplate = resolve('./src/templates/blog-post.js')
+  const BlogPostShareImage = resolve('./src/templates/blog-post-share-image.js')
+  const PageTemplate = resolve('./src/templates/page.js')
+  const PostsBytagTemplate = resolve('./src/templates/tags.js')
+  const ListPostsTemplate = resolve('./src/templates/blog-list-template.js')
 
   const allMarkdown = await graphql(
     `
@@ -32,24 +35,68 @@ exports.createPages = async ({ graphql, actions }) => {
     throw Error(allMarkdown.errors)
   }
 
-  const markdownFiles = allMarkdown.data.allMarkdownRemark.edges;
+  const markdownFiles = allMarkdown.data.allMarkdownRemark.edges
+
+  const posts = markdownFiles
+    .filter(item => item.node.frontmatter.type !== 'page')
+  
+  // generate paginated post list
+  const postsPerPage = config.postsPerPage;
+  const nbPages = Math.ceil(posts.length / postsPerPage)
+
+  Array.from({ length: nbPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/` : `/pages/${i + 1}`,
+      component: ListPostsTemplate,
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        currentPage: i + 1,
+        nbPages: nbPages,
+      },
+    })
+  })
 
   // generate blog posts
-  markdownFiles
-    .filter(item => item.node.frontmatter.type !== 'page')
+  posts
     .forEach((post, index, posts) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1].node;
       const next = index === 0 ? null : posts[index - 1].node;
 
       createPage({
         path: post.node.frontmatter.slug,
-        component: blogPostTemplate,
+        component: BlogPostTemplate,
         context: {
           slug: post.node.frontmatter.slug,
           previous,
           next,
         },
       })
+
+      // generate post share images (dev only)
+      if (process.env.gatsby_executing_command.includes('develop')) {
+        createPage({
+          path: `${post.node.frontmatter.slug}/image_tw`,
+          component: BlogPostShareImage,
+          context: {
+            slug: post.node.frontmatter.slug,
+            width: 440,
+            height: 220,
+            type: 'twitter',
+          }
+        })
+        createPage({
+          path: `${post.node.frontmatter.slug}/image_fb`,
+          component: BlogPostShareImage,
+          context: {
+            slug: post.node.frontmatter.slug,
+            width: 1200,
+            height: 630,
+            type: 'facebook',
+          }
+        })
+      }
+
     })
 
   // generate pages
@@ -58,7 +105,7 @@ exports.createPages = async ({ graphql, actions }) => {
     .forEach(page => {
       createPage({
         path: page.node.frontmatter.slug,
-        component: pageTemplate,
+        component: PageTemplate,
         context: {
           slug: page.node.frontmatter.slug,
         },
@@ -72,7 +119,7 @@ exports.createPages = async ({ graphql, actions }) => {
     .forEach(uniqTag => {
       createPage({
         path: `tags/${uniqTag}`,
-        component: postsBytagTemplate,
+        component: PostsBytagTemplate,
         context: {
           tag: uniqTag
         },

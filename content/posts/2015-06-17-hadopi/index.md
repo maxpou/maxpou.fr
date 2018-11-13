@@ -5,6 +5,7 @@ date: 2015-06-17
 slug: hadopi
 tags: [Hadopi]
 cover: ./tbp.jpg
+generate-card: false
 ---
 
 *Ca y est, vous venez de recevoir votre premier courrier HADOPI et c'est la panique.
