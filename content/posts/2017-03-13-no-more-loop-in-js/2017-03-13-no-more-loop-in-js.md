@@ -6,6 +6,7 @@ slug: no-more-loop-in-js
 date: 2017-03-13
 language: en
 cover: ./banner.jpg
+enerate-card: false
 ---
 
 Few months ago, I start moving my Javascript code from a Oriented Object/unorganized code to something much more close to Functional Programming.
