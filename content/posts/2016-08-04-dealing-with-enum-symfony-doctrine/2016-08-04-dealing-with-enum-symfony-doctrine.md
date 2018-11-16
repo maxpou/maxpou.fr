@@ -5,10 +5,8 @@ slug: dealing-with-enum-symfony-doctrine
 date: 2016-08-04
 language: en
 tags: ["Symfony2", "PHP", "Doctrine"]
-image:
-    feature: abstract-1.jpg
-    credit: dargadgetz
-    creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+enerate-card: false
+cover: ./abstract-1.jpg
 ---
 
 Using Enum in a Symfony App isn't obvious. If your Enum is short, you can directly put it on your entity. But if it grows, it will be quickly unmanageable.
