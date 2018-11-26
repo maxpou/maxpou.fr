@@ -3,7 +3,7 @@ title: My first month in Lisbon as a Digital Nomad
 slug: nomad-in-lisbon
 language: en
 cover: ./cover.jpg
-imageTw: ./nomad-in-lisbon.jpg
+imageTw: ./nomad-in-lisbon-tw.jpg
 date: 2018-11-26
 tags: 
     - Life
