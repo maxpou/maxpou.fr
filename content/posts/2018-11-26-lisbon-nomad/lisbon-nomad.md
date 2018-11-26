@@ -4,7 +4,7 @@ slug: nomad-in-lisbon
 language: en
 cover: ./cover.jpg
 imageTw: ./nomad-in-lisbon.jpg
-date: 2018-11-30
+date: 2018-11-26
 tags: 
     - Life
 ---
