@@ -28,7 +28,7 @@ GitVub (Github + Vue) is a Vue.js **Progressive Web App (PWA)** based on GitHub 
 
 Dictionary Game is a Vue.js application to improve my english vocabulary (fr/en). Words are stored in Firebase database.
 
-![Dictionary Game screenshots](https://raw.githubusercontent.com/maxpou/dictionary-game/master/screenshots.png)
+![Dictionary Game screenshots](https://raw.githubusercontent.com/maxpou/dictionary-game/master/src/assets/screens/all-screens.png)
 
 <hr>
 
