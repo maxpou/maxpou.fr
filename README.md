@@ -22,6 +22,8 @@ yarn format
 yarn lint
 ```
 
-## Tools
+## Tools I use
 
-* [Hemingway](http://www.hemingwayapp.com/)
+* [Hemingway](http://www.hemingwayapp.com) - "Hemingway App makes your writing bold and clear."
+* [Squoosh](https://squoosh.app) - Image compression
+* [Grammarly](https://app.grammarly.com/) - Helps me to remove typos
