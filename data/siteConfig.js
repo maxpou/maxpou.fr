@@ -83,6 +83,14 @@ module.exports = {
         url: 'https://twitter.com/_maxpou',
         iconClassName: 'fa fa-twitter',
       },
+      {
+        label: 'Nomad List',
+        url: 'https://nomadlist.com/@maxpou',
+      },
+      {
+        label: 'Dev',
+        url: 'https://dev.to/maxpou',
+      },
     ],
   ],
 }
