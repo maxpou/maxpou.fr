@@ -87,7 +87,7 @@ My feedback about Lisbon is **very positive**. I really liked this city and I me
 
 
 * 🌤 **Weather**. I still remember the pilot saying: "Welcome to Lisbon [...] temperature is 27°c"...in October! Usually, in Winter, it gets around 10-15°c and around 30°c in Summer.
-* 📢 **Language**. The language barrier wasn't very strong. Most of the people there speak with very good English.
+* 🗣 **Language**. The language barrier wasn't very strong. Most of the people there speak with very good English.
 * 👨🏼‍💻 **Nomad friendly**. As I said in the coffee section above, there are a lot of coffee places to work from. Despite the fact that I didn't use coworking spaces at all, there are everywhere in the city. When I come back, I'd love one day to try some fancy ones like [Second Home](https://secondhome.io/lisbon) :)
 * 🍴 **Food**. In general, good is good and cheap! Especially the seafood! I really miss the Pastel de Nata with my coffee!
 * 🌉 **Size of the city**. For me, it's a perfect size: not too big, not too small. Be careful, Lisbon can be hilly sometimes!

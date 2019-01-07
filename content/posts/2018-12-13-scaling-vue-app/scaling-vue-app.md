@@ -21,7 +21,7 @@ The file architecture given by `vue-cli` is great. But after 3-4 pages, your fil
 You might be tempted to put separate your components into multiple folders. But, again, after 10 pages, you will face the same issue again.
 
 The idea is to split your application by notions. Stick to one unique word.
-For example, in a shop application, we could get *Catalog*, *Basket* and *Payment*. Now 
+For example, in a shop application, we could get *Catalog*, *Basket* and *Payment*. 
 
 ```
 ├─ src/
@@ -96,7 +96,7 @@ Remember: **Global CSS are evil**. Avoid them as much as you can!
 
 Testing application is a very complex topic, who deserves an entire blog post. To keep it simple, let's take the previous file architecture and see what to test and how to do it.
 
-* Components: Low priority, easy to do. write unit tests for each component. it should be easy to do.
+* Components: Low priority, easy to do. write unit tests for each component. It should be easy to do.
 * Pages: High priority, hard to do. You probably gonna have to mock api/browser parts.
 * Routes: Usually bugs aren't here. Leave it for E2E tests.
 * Services:
@@ -195,7 +195,7 @@ Here are few tips to keep your store maintainable.
 
 **Don't overuse the store**
 
-There are a lot of misconceptions about the store. I don't know why, but many people think that: "Vue is to manage the UI and Vuex is to manage application state". I strongly disagree with this. Based on my experience, moving all the logic in the store lead to overhead and unnecessary complex features. Also, more code = to more surface area for bugs.
+There are a lot of misconceptions about the store. I don't know why, but many people think that: "Vue is to manage the UI and Vuex is to manage application state". I strongly disagree with this. Based on my experience, moving all the logic in the store lead to overhead and unnecessary complex features. Also, more code === to more surface area for bugs.
 
 Usually, when we have existential questions like this, we turn to the creators.
 

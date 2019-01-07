@@ -295,7 +295,7 @@ const heroes = [
   { name: 'Wolverine', isReady: false, /* ... others properties ... */ },
   { name: 'Deadpool', isReady: false,  /* ... others properties ... */ },
   { name: 'Magneto', isReady: false,   /* ... others properties ... */ },
-  { name: 'Gandalf', isReady: true,   /* ... others properties ... */ },
+  { name: 'Gandalf', isReady: true,    /* ... others properties ... */ },
   ⋮
   (100 000 heroes)
 ]
@@ -304,7 +304,7 @@ const heroes = [
 Oops, I need them to get ready.
 
 ```javascript
-heroes.map(h => {
+heroes.map(hero => {
   const newHero = Object.assign({}, hero)
   newHero.isReady = true
   return newHero
