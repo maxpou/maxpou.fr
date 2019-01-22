@@ -8,7 +8,7 @@ cover: ./cover.jpg
 tags: ["Life"]
 ---
 
-*Before starting, I've to say: I mostly write this blog post for myself. Writing my Year in review helps me to celebrate my biggest wins, see what was wrong and define plans for the upcoming year.*
+*Disclaimer: I mostly wrote this blog post for myself. Writing my Year in review helps me to celebrate my biggest wins, see what was wrong and define goals for the upcoming year.*
 
 2018 was a whirlwind year full of a lot of great opportunities and travel.
 
@@ -39,7 +39,7 @@ To make this shift successful, I set up some rules to avoid procrastination and 
 * Communicate, communicate, communicate. Communication is the key!
 * Every day, I write down my [MIT (Most Important Thing)](https://about.gitlab.com/2018/05/17/eliminating-distractions-and-getting-things-done/?utm_medium=social&utm_source=twitter#2-write-down-your-mits) to keep focus and avoid distractions;
 * No overwork;
-* Come back to the office every now and then to say a physical "hello".
+* Come back to the office every now and then to say "hello".
 
 I've found a big difference between full-time remote and part-time remote. You can't postpone a meeting because you're in the office next week and it's more convenient...
 
@@ -49,9 +49,12 @@ I wasn’t a very prolific author in 2018. I only blogged 3 times! The main reas
 Jekyll started to be too heavy to me. So, I [moved my personal website to Gatsby](https://www.maxpou.fr/hello-gatsby). Working with this tool is pure pleasure. Hot reload, performances, fancy technologies... I don't regret it at all!  
 Another important thing for me: I decided to release the template to the community. It was a good idea because it seems that [other people](https://twitter.com/ekaoddlass/status/1078329646981120005) enjoy using it 💜
 
-In 2017 I had 36,546 pages view on my website. In 2018, I blogged less and I reach 64,700 pages view!
+![pages view on maxpou.fr](./page-views.png)
 
-![pages view on maxpou.fr](./page-views.jpg)
+In 2017 I had a total of 36,546 pages view on my website. In 2018, I blogged less and I reached 64,700 pages view! There are a few reasons:
+* Gatsby made my website more SEO friendly;
+* I also posted my posts on Reddit. The community here is great, I had really good feedback!
+* [I cross-posted blog the Vue.js article on Dev.to platform](https://dev.to/maxpou/3-tips-for-scaling-large-vuejs-application-2edi). With only 2 posts, I have more followers on Dev.to (~400) than Twitter (~280) 🤷‍♂️ 
 
 Also, [docker-symfony](https://github.com/maxpou/docker-symfony) reached 1 000 ⭐️ on GitHub! Yay! Unfortunately, I can't maintain it since I stopped using PHP.
 
@@ -82,18 +85,18 @@ Since I've got a [NomadList profile](https://nomadlist.com/@maxpou), I can now t
 ## ✨ Random stuff
 
 * 🍀 **Farewell Dublin**. as you guess, I left Ireland after 2 years living as an expat. Apart from the chaotic housing situation, I still really like this country. And I don't exclude to come back!
-* 🎒 **Minimalism**. After watching [The Minimalist (available on Netflix)](https://www.theminimalists.com/films/) and [Matt D'Avella podcats](https://www.youtube.com/watch?v=tG2GJZcBKOE), I decided to try this way of life. Now, all my clothes, electronics... fit in a [backpack](https://www.minaal.com/collections/bags/products/minaal-carry-on-bag).
+* 🎒 **Minimalism**. After watching [The Minimalist (available on Netflix)](https://www.theminimalists.com/films/) and [Matt D'Avella's podcast](https://www.youtube.com/watch?v=tG2GJZcBKOE), I decided to try this way of life. Now, all my clothes, electronics... fit in a [backpack](https://www.minaal.com/collections/bags/products/minaal-carry-on-bag). The only thing I miss is my Xbox!
 * 🥗 **Eat better**. This year I also started eating better: more vegetables and fruits and less meat/fish. But, I didn't become a vegan or a vegetarian (and I don't want to be).
 * 📕 **Readings**. [According to my Pocket stats](https://getpocket.com/stats/2018/0eca961094), I've read the equivalent of 7 books. But I think I've read much more since I didn't use this app for months.
 
 
 ## Previous goals
 
-* ✅ Get a new job 🎉
+* ✅ Get a new job
 * 😐 Continue to give talks. *I gave a few talks this year. But not as much as I wanted to.*
 * ✅ Give talks in other countries than France & Ireland. *Vienna (Austria), Krakow (Poland) and Madrid (Spain)*
 * ✅ Switch to a frontend position.
-* 😐 ~ ✅ Travel 1 country / month. *I think this goal was a bit unrealistic. But, I'm happy with my 9 destinations!*
+* 😐 ~ ✅ Travel 1 country / month. *I think this goal was a bit unrealistic. But, I'm happy with what I did!*
 * 😐 Keep blogging. *Only 3 blog post this year!*
 * 😐 Sport. *No gym for me in 2018! After, I used to walk 1-2h/day.*
 
@@ -111,4 +114,7 @@ In 2019, I'm going to work from Asia, I have a few goals attached to this trip.
 * Dry January - *one month without alcohol or anything else...*
 * Give meditation another try;
 * Continue to give talks & workshops;
+* ~~Reach 500 followers on Twitter~~. *Nah I'm jocking. Getting more followers is everything but not a priority for me!*
 * Write my 2019 year in review on time! 🙃
+
+As you can see, 2018 was a great year for me. I can't wait to see what 2019 has in store!
