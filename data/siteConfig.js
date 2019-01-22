@@ -88,7 +88,7 @@ module.exports = {
         url: 'https://nomadlist.com/@maxpou',
       },
       {
-        label: 'Dev',
+        label: 'Dev.to',
         url: 'https://dev.to/maxpou',
       },
     ],
