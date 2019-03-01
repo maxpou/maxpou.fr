@@ -3,9 +3,9 @@ title: Enhance your git log with conventional commits
 slug: git-conventional-commits
 language: en
 date: 2019-03-01
+imageTw: ./git-conventional-commits-tw.png
 cover: ./cover.jpg
 tags: 
-    - CLI
     - Git
 ---
 
