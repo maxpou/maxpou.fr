@@ -19,7 +19,7 @@ module.exports = {
   googleAnalyticsId: 'UA-67868977-1',
   background_color: '#ffffff',
   theme_color: '#222222',
-  display: 'minimal-ui',
+  display: 'standalone',
   icon: 'src/assets/icon.jpeg',
   postsPerPage: 10,
   disqusShortname: 'maxpou',
