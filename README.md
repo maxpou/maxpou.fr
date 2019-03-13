@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/maxpou/maxpou.fr.svg?branch=master)](https://travis-ci.org/maxpou/maxpou.fr) [![Greenkeeper badge](https://badges.greenkeeper.io/maxpou/maxpou.fr.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/maxpou/maxpou.fr.svg?branch=master)](https://travis-ci.org/maxpou/maxpou.fr)
 
 # maxpou.fr
 
