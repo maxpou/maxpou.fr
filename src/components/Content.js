@@ -81,6 +81,20 @@ const ContentBody = styled.div`
     font-size: 0.94em;
     border-radius: 0.3rem;
   }
+
+  & table {
+    margin-top: 1em;
+    border-collapse: collapse;
+    border-radius: 1em;
+    overflow: hidden;
+
+    & th,
+    & td {
+      padding: 0.5em;
+      background: #e8e8e8;
+      border-bottom: 2px solid white; 
+    }
+  }
 `
 
 class Content extends React.Component {
