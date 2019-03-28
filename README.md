@@ -10,16 +10,16 @@ If you find a typo, pull request are welcome. Thank you ♥
 
 ```sh
 # working locally
-yarn dev
+npm run dev
 
 # generate build
-yarn build
+npm run build
 
 # format code
-yarn format
+npm run format
 
 # lint code
-yarn lint
+npm run lint
 ```
 
 ## Tools I use
