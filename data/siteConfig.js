@@ -74,14 +74,17 @@ module.exports = {
         {
           label: 'GitHub',
           url: 'https://github.com/maxpou',
+          iconClassName: 'fa fa-github',
         },
         {
           label: 'LinkedIn',
           url: 'https://www.linkedin.com/in/maxpou/',
+          iconClassName: 'fa fa-linkedin',
         },
         {
           label: 'Twitter',
           url: 'https://twitter.com/_maxpou',
+          iconClassName: 'fa fa-twitter',
         },
         {
           label: 'Nomad List',

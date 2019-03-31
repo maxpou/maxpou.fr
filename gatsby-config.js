@@ -1,4 +1,3 @@
-const path = require('path')
 const config = require('./data/siteConfig')
 
 module.exports = {
@@ -9,7 +8,5 @@ module.exports = {
     ...config,
   },
   pathPrefix: config.pathPrefix,
-  __experimentalThemes: [
-    "gatsby-starter-morning-dew"
-  ]
+  __experimentalThemes: ['gatsby-starter-morning-dew'],
 }
