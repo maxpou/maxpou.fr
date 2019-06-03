@@ -8,10 +8,11 @@
     "url": "https://github.com/maxpou/maxpou.fr/issues"
   },
   "dependencies": {
-    "gatsby": "^2.0.118",
-    "gatsby-starter-morning-dew": "file:../gatsby-starter-maxpou",
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0"
+    "gatsby": "^2.7.1",
+    "gatsby-plugin-manifest": "^2.1.1",
+    "gatsby-starter-morning-dew": "2.0.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {
     "eslint": "^5.7.0",
