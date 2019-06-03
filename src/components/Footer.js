@@ -117,7 +117,7 @@ class Footer extends React.Component {
       <FooterWrapper>
         <nav>
           <div className="footer-col">
-            <h5 className="footer-title">{authorName} © 2018</h5>
+            <h5 className="footer-title">{authorName} © 2019</h5>
             <p className="footer-item-text">
               Built with{' '}
               <a className="footer-link" href="https://www.gatsbyjs.org">

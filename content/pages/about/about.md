@@ -8,8 +8,8 @@ type: page
 
 ## Hello World!
 
-Hey, I'm **Maxence Poutord**, passionate software engineer, speaker, blogger and mentor.
-I started coding [in my early age, at 11](https://twitter.com/_maxpou/status/771701472199340032) with the QBasic language. 18 years later, I'm still coding (I just hope my code is better 😃).
+Hey, I'm **Maxence Poutord**, passionate software engineer, speaker, blogger and [mentor](https://mentors.codingcoach.io/?name=Maxence+Poutord).
+I started coding [in my early age, at 11](https://twitter.com/_maxpou/status/771701472199340032) with the QBasic language. 19 years later, I'm still coding (I just hope my code is better 😃).
 
 After 2 years as an expat in Dublin, I recently became a digital nomad. I now live where the WIFI and the sun is 😎
 
