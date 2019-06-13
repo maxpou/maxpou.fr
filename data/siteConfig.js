@@ -3,7 +3,7 @@ module.exports = {
   siteDescription: "👋 Hey I'm Max",
   authorName: 'Maxence Poutord',
   twitterUsername: '_maxpou',
-  authorAvatar: '/images/avatar.jpeg',
+  authorAvatar: 'avatar.jpeg',
   multilangPosts: true, // enable/disable flags in post lists
   authorDescription: `
   For the last decade, Maxence Poutord has worked with a variety of web technologies. He is currently focused on front-end development.
@@ -15,12 +15,12 @@ module.exports = {
   disqusSiteUrl: 'https://www.maxpou.fr/',
   // Prefixes all links. For cases when deployed to maxpou.fr/gatsby-starter-morning-dew/
   pathPrefix: '/', // Note: it must *not* have a trailing slash.
-  siteCover: '/images/cover.jpg',
+  siteCover: 'cover.jpg',
   googleAnalyticsId: 'UA-67868977-1',
   background_color: '#ffffff',
   theme_color: '#222222',
   display: 'standalone',
-  icon: 'src/assets/icon.jpeg',
+  icon: 'content/images/icon.jpeg',
   postsPerPage: 10,
   disqusShortname: 'maxpou',
   headerLinks: [
@@ -47,50 +47,51 @@ module.exports = {
     url: 'https://github.com',
   },
   footerLinks: [
-    [
-      'Explore',
-      {
-        label: 'Blog',
-        url: '/',
-      },
-      {
-        label: 'About',
-        url: '/about',
-      },
-      {
-        label: 'Speaking',
-        url: '/speaking',
-      },
-      {
-        label: 'Portfolio',
-        url: '/portfolio',
-      },
-    ],
-    [
-      'Follow me',
-      {
-        label: 'GitHub',
-        url: 'https://github.com/maxpou',
-        iconClassName: 'fa fa-github',
-      },
-      {
-        label: 'LinkedIn',
-        url: 'https://www.linkedin.com/in/maxpou/',
-        iconClassName: 'fa fa-linkedin',
-      },
-      {
-        label: 'Twitter',
-        url: 'https://twitter.com/_maxpou',
-        iconClassName: 'fa fa-twitter',
-      },
-      {
-        label: 'Nomad List',
-        url: 'https://nomadlist.com/@maxpou',
-      },
-      {
-        label: 'Dev.to',
-        url: 'https://dev.to/maxpou',
-      },
-    ],
+    {
+      sectionName: 'Explore',
+      links: [
+        {
+          label: 'Blog',
+          url: '/',
+        },
+        {
+          label: 'About',
+          url: '/about',
+        },
+        {
+          label: 'Speaking',
+          url: '/speaking',
+        },
+        {
+          label: 'Portfolio',
+          url: '/portfolio',
+        },
+      ],
+    },
+    {
+      sectionName: 'Follow me',
+      links: [
+        {
+          label: 'GitHub',
+          url: 'https://github.com/maxpou',
+        },
+        {
+          label: 'LinkedIn',
+          url: 'https://www.linkedin.com/in/maxpou/',
+        },
+        {
+          label: 'Twitter',
+          url: 'https://twitter.com/_maxpou',
+        },
+        {
+          label: 'Nomad List',
+          url: 'https://nomadlist.com/@maxpou',
+        },
+        {
+          label: 'Dev.to',
+          url: 'https://dev.to/maxpou',
+        },
+      ],
+    },
   ],
 }
