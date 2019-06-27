@@ -4,6 +4,7 @@ slug: busting-nomad-myths
 language: en
 date: 2019-06-27
 cover: ./cover.jpeg
+imageTw: ./cover-tw.jpeg
 tags: 
     - Life
 ---
