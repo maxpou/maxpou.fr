@@ -2,7 +2,7 @@
 title: "Digital Nomad: the Golden Ticket?"
 slug: busting-nomad-myths
 language: en
-date: 2019-06-12
+date: 2019-06-27
 cover: ./cover.jpeg
 tags: 
     - Life
