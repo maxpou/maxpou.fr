@@ -3,7 +3,6 @@ title: Speaking
 slug: speaking
 cover: ./talks.png
 disqus: false
-type: page
 ---
 
 I love to deliver technical talk. If you want to hear me, just <a href="mailto:hello@maxpou.fr?subject=Speaking+Inquiry">contact me</a>.

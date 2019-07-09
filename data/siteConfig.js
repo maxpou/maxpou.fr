@@ -1,6 +1,6 @@
 module.exports = {
   siteTitle: 'maxpou.fr',
-  siteDescription: "👋 Hey I'm Max",
+  siteDescription: "Software engineer • Public speaker • Remote worker",
   authorName: 'Maxence Poutord',
   twitterUsername: '_maxpou',
   authorAvatar: 'avatar.jpeg',
@@ -23,11 +23,8 @@ module.exports = {
   icon: 'content/images/icon.jpeg',
   postsPerPage: 10,
   disqusShortname: 'maxpou',
+  headerLinksIcon: '',
   headerLinks: [
-    {
-      label: '🏡',
-      url: '/',
-    },
     {
       label: 'Blog',
       url: '/',

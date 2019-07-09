@@ -1,5 +1,4 @@
 ---
-type: page
 title: Portfolio
 slug: portfolio
 disqus: false
@@ -25,7 +24,7 @@ Dictionary Game is a Vue.js application created to improve my english vocabulary
 * Sources: [github.com/maxpou/gatsby-starter-morning-dew](https://github.com/maxpou/gatsby-starter-morning-dew)
 * [Demo](https://maxpou.github.io/gatsby-starter-morning-dew/)
 
-gatsby-starter-morning-dew is a [Gatsby](https://www.gatsbyjs.org/) starter for creating static blog/website. The code is written in React 16 and fetch data through a GraphQL API.
+gatsby-starter-morning-dew is a [Gatsby](https://www.gatsbyjs.org/) theme and a starter for creating static blog/website. The code is written in React 16 and fetch data through a GraphQL API.
 
 Features / highlights:
 * Write posts/pages in Markdown

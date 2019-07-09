@@ -25,7 +25,7 @@ module.exports = {
         background_color: config.background_color,
         theme_color: config.theme_color,
         display: config.display,
-        icon: 'content/images/icon.jpeg',
+        icon: 'content/images/avatar.jpeg',
       },
     },
   ],
