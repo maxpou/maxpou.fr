@@ -8,8 +8,11 @@ module.exports = {
     ...config,
   },
   pathPrefix: config.pathPrefix,
-  __experimentalThemes: ['gatsby-starter-morning-dew'],
   plugins: [
+    {
+      resolve: 'gatsby-starter-morning-dew',
+      options: {},
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
