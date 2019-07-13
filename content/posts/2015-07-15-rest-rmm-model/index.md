@@ -15,26 +15,12 @@ REST (**RE**presentational **S**tate **T**ransfer) est un style d'architecture c
 Contrairement à ce que l'on peut lire sur certains sites, REST ne repose pas sur le protocole HTTP... bien que ce dernier soit le meilleur exemple.
 
 Aujourd'hui, on voit des API REST un peu partout :  
-<div style="width:540px">
-    <a href="http://www.indeed.com/jobtrends?q=soap+api%2C+rest+api" title="soap api, rest api Job Trends">
-        <img width="540" height="300" src="http://www.indeed.com/trendgraph/jobgraph.png?q=soap+api%2C+rest+api" border="0" alt="soap api, rest api Job Trends graph" />
-    </a>
-    <table width="100%" cellpadding="6" cellspacing="0" border="0" style="font-size:80%"><tr>
-        <td><a href="http://www.indeed.com/jobtrends?q=soap+api%2C+rest+api">soap api, rest api Job Trends</a></td>
-        <td align="right"><a href="http://www.indeed.com/jobs?q=Soap+API">Soap API jobs</a> - <a href="http://www.indeed.com/jobs?q=Rest+API">Rest API jobs</a></td>
-    </tr></table>
-</div>
+
+*(Graphique non disponible)*
 
 Par contre, en prenant des valeurs relatives, la différence est encore plus marquée :
-<div style="width:540px">
-    <a href="http://www.indeed.com/jobtrends?q=soap+api%2C+rest+api&relative=1&relative=1" title="soap api, rest api Job Trends">
-        <img width="540" height="300" src="http://www.indeed.com/trendgraph/jobgraph.png?q=soap+api%2C+rest+api&relative=1" border="0" alt="soap api, rest api Job Trends graph" />
-    </a>
-    <table width="100%" cellpadding="6" cellspacing="0" border="0" style="font-size:80%"><tr>
-        <td><a href="http://www.indeed.com/jobtrends?q=soap+api%2C+rest+api&relative=1&relative=1">soap api, rest api Job Trends</a></td>
-        <td align="right"><a href="http://www.indeed.com/jobs?q=Soap+API">Soap API jobs</a> - <a href="http://www.indeed.com/jobs?q=Rest+API">Rest API jobs</a></td>
-    </tr></table>
-</div>
+
+*(Graphique non disponible)*
 
 Il faut dire aussi que son principal concurrent : SOAP n'est pas aussi simple d'approche et peu paraître contraignant (XML, WSDL, ...). Ceci étant, il ne faut pas voir REST comme un marteau doré qui résout tous les problèmes. SOAP a aussi ses avantages.
 
