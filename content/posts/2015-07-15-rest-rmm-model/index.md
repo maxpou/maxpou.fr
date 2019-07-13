@@ -17,7 +17,7 @@ Contrairement à ce que l'on peut lire sur certains sites, REST ne repose pas su
 Aujourd'hui, on voit des API REST un peu partout :  
 <div style="width:540px">
     <a href="http://www.indeed.com/jobtrends?q=soap+api%2C+rest+api" title="soap api, rest api Job Trends">
-        <img width="540" height="300" src="http://www.indeed.com/trendgraph/jobgraph.png?q=soap+api%2C+rest+api" border="0" alt="soap api, rest api Job Trends graph">
+        <img width="540" height="300" src="http://www.indeed.com/trendgraph/jobgraph.png?q=soap+api%2C+rest+api" border="0" alt="soap api, rest api Job Trends graph" />
     </a>
     <table width="100%" cellpadding="6" cellspacing="0" border="0" style="font-size:80%"><tr>
         <td><a href="http://www.indeed.com/jobtrends?q=soap+api%2C+rest+api">soap api, rest api Job Trends</a></td>
@@ -28,7 +28,7 @@ Aujourd'hui, on voit des API REST un peu partout :
 Par contre, en prenant des valeurs relatives, la différence est encore plus marquée :
 <div style="width:540px">
     <a href="http://www.indeed.com/jobtrends?q=soap+api%2C+rest+api&relative=1&relative=1" title="soap api, rest api Job Trends">
-        <img width="540" height="300" src="http://www.indeed.com/trendgraph/jobgraph.png?q=soap+api%2C+rest+api&relative=1" border="0" alt="soap api, rest api Job Trends graph">
+        <img width="540" height="300" src="http://www.indeed.com/trendgraph/jobgraph.png?q=soap+api%2C+rest+api&relative=1" border="0" alt="soap api, rest api Job Trends graph" />
     </a>
     <table width="100%" cellpadding="6" cellspacing="0" border="0" style="font-size:80%"><tr>
         <td><a href="http://www.indeed.com/jobtrends?q=soap+api%2C+rest+api&relative=1&relative=1">soap api, rest api Job Trends</a></td>
@@ -64,7 +64,7 @@ Première étape, je souhaite récupérer la carte du restaurant de Nantes :
 POST /pizzaService HTTP/1.1
 [various other headers]
 
-<demandeCarteRequest date = "2015-07-15" ville = "Nantes"/>
+<demandeCarteRequest date="2015-07-15" ville="Nantes"/>
 ```
 
 En retour, le serveur me renverra la liste des pizzas pour le magasin de Nantes :
@@ -87,7 +87,7 @@ POST /pizzaService HTTP/1.1
 [various other headers]
 
 <livraisonRequest>
-    <client id = "mpoutord"/>
+    <client id="mpoutord"/>
     <commande date="16-07-2015 22:45">
         <pizza id="calzone" />
     </commande>
@@ -101,7 +101,7 @@ HTTP/1.1 200 OK
 [various headers]
 
 <reservation>
-    <client id = "mpoutord"/>
+    <client id="mpoutord"/>
     <horraireLivraison debut="22:30" fin="23:00" />
 </reservation>
 ```
@@ -130,7 +130,7 @@ Ainsi pour demander la carte du restaurant, voici la requête qui sera envoyée 
 POST /pizzas HTTP/1.1
 [various other headers]
 
-<demandeCarteRequest date = "2015-07-15" ville = "Nantes"/>
+<demandeCarteRequest date="2015-07-15" ville="Nantes"/>
 ```
 
 A part l'URI, rien ne change. Côté réponse le résultat sera le même qu'au niveau 0.
@@ -154,7 +154,7 @@ POST /reservation HTTP/1.1
 [various other headers]
 
 <livraisonRequest>
-    <client id = "mpoutord"/>
+    <client id="mpoutord"/>
     <commande date="16-07-2015 22:45">
         <pizza id="calzone" />
     </commande>
@@ -196,7 +196,7 @@ Toujours en reprenant le même exemple, pour demander la carte voici ce que nous
 GET /pizzas HTTP/1.1
 [various other headers]
 
-<demandeCarteRequest date = "2015-07-15" ville = "Nantes"/>
+<demandeCarteRequest date="2015-07-15" ville="Nantes"/>
 ```
 
 Une fois de plus, la réponse sera la même :
@@ -219,7 +219,7 @@ POST /reservation HTTP/1.1
 [various other headers]
 
 <livraisonRequest>
-    <client id = "mpoutord"/>
+    <client id="mpoutord"/>
     <commande date="16-07-2015 22:45">
         <pizza id="calzone" />
     </commande>
@@ -231,7 +231,7 @@ En cas de succès, la réponse suivante sera retournée par le serveur :
 HTTP/1.1 201 Created
 [various headers]
 <livraison>
-    <client id = "mpoutord"/>
+    <client id="mpoutord"/>
     <commande date="16-07-2015 22:45">
         <pizza id="calzone" />
     </commande>
@@ -246,7 +246,7 @@ HTTP/1.1 409 Conflict
 [various headers]
 
 <livraison>
-    <client id = "mpoutord"/>
+    <client id="mpoutord"/>
     <commande date="16-07-2015 22:45">
         <pizza id="calzone" />
     </commande>

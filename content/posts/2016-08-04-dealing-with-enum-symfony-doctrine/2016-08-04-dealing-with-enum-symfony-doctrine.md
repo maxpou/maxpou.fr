@@ -147,8 +147,8 @@ Your Form should look like this:
 
 <div class="notice">
 <form>
-    <input type="text" name="demobundle_message[content]">
-    <br>
+    <input type="text" name="demobundle_message[content]" />
+    <br/>
     <select name="type" name="demobundle_message[type]">
         <option value="info">Information</option>
         <option value="warning">Attention</option>

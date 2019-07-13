@@ -11,25 +11,25 @@ generate-card: false
 
 Summary:
 
-- [GitHub = git + hub (Manage your repo by CLI)](#github--git--hub-manage-your-repo-by-cli)
-- [Github AKA SVNHub?](#github-aka-svnhub)
-- [Markdown on steroid (Github Flavored Markdown)](#markdown-on-steroid-github-flavored-markdown)
-- [Gist, another kind of repository](#gist-another-kind-of-repository)
-- [Issue/Pull request Templates](#issuepull-request-templates)
-- [Github Pages ❤️️](#github-pages-%E2%9D%A4%EF%B8%8F%EF%B8%8F)
-- [Sign your commits](#sign-your-commits)
-- [Playing with URL](#playing-with-url)
-    - [URL everywhere](#url-everywhere)
-    - [Disable whitespace on code review](#disable-whitespace-on-code-review)
-    - [.diff and .patch](#diff-and-patch)
-    - [Highlight lines](#highlight-lines)
-    - [Filtering commits](#filtering-commits)
-- [Keyboard shortcuts](#keyboard-shortcuts)
-- [Emoji 😍](#emoji-%F0%9F%98%8D)
-- [git.io a Github URL shortener](#gitio-a-github-url-shortener)
-- [Not only for your code](#not-only-for-your-code)
-- [API (~REST or GraphQL)](#api-rest-or-graphql)
-- [Bonus: Octodex](#bonus-octodex)
+- [GitHub = git + hub (Manage your repo by CLI)](#GitHub--git--hub-Manage-your-repo-by-CLI)
+- [Github AKA SVNHub?](#Github-AKA-SVNHub)
+- [Markdown on steroid (Github Flavored Markdown)](#Markdown-on-steroid-Github-Flavored-Markdown)
+- [Gist, another kind of repository](#Gist-another-kind-of-repository)
+- [Issue/Pull request Templates](#IssuePull-request-Templates)
+- [Github Pages ❤️️](#Github-Pages-%E2%9D%A4%EF%B8%8F%EF%B8%8F)
+- [Sign your commits](#Sign-your-commits)
+- [Playing with URL](#Playing-with-URL)
+  - [URL everywhere](#URL-everywhere)
+  - [Disable whitespace on code review](#Disable-whitespace-on-code-review)
+  - [.diff and .patch](#diff-and-patch)
+  - [Highlight lines](#Highlight-lines)
+  - [Filtering commits](#Filtering-commits)
+- [Keyboard shortcuts](#Keyboard-shortcuts)
+- [Emoji 😍](#Emoji-%F0%9F%98%8D)
+- [git.io a Github URL shortener](#gitio-a-Github-URL-shortener)
+- [Not only for your code](#Not-only-for-your-code)
+- [API (~REST or GraphQL)](#API-REST-or-GraphQL)
+- [Bonus: Octodex](#Bonus-Octodex)
 
 
 ## GitHub = git + hub (Manage your repo by CLI)
@@ -120,8 +120,8 @@ Github use his own version of markdown: Github Flavored Markdown (GFM). It provi
     The output will be like this: *(click on License)*
     <details>
       <summary>License (MIT)</summary>
-      The MIT License (MIT) <br>
-      Copyright (c) 2017 Maxence POUTORD<br>
+      The MIT License (MIT) <br/>
+      Copyright (c) 2017 Maxence POUTORD<br/>
       Permission is hereby granted, free of charge, to any person obtaining a copy
       of this software and associated documentation files (the "Software")
       [...]
