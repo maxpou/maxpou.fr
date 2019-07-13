@@ -9,8 +9,7 @@ export const Item = styled.li`
   margin-bottom: 10px;
 `
 
-export const Link = styled.a`
-`
+export const Link = styled.a``
 
 export const Event = styled.em`
   margin-left: 10px;
@@ -18,7 +17,7 @@ export const Event = styled.em`
 `
 
 export const Media = styled.a`
-  border-bottom: 1px dotted rgba(162,162,162,0.8);
+  border-bottom: 1px dotted rgba(162, 162, 162, 0.8);
   font-style: normal;
 `
 
@@ -28,4 +27,4 @@ export default {
   Link,
   Event,
   Media,
-};
+}
