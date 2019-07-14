@@ -19,7 +19,7 @@ En retournant à mon bureau, je me suis souvenu de cette histoire que l'on me ra
 Ce conte raconte l'histoire de trois petits cochons qui doivent construire une maison. Seule contrainte : la maison doit-être assez solide pour résister au "Grand méchant loup". Les trois petits cochons entreprirent alors la construction de leur maison avec différents matériaux. Le premier construisa en un rien de temps une maison en paille. Le second mit un peu plus de temps pour construire sa maison en bois et le dernier construisa sa maison en brique (en un temps plus long).
 Vient le "grand méchant loup", qui parvient à détruire les maisons des deux premiers et les dévore (en commençant par la maison en paille, la plus facile). Par contre, il ne vient pas à bout de la dernière maison en brique. Puis, par un habile ruse, le troisième cochon parvient à tuer le grand méchant loup.
 
-![](./third-pig.jpg)
+![3e cochon](./third-pig.jpg)
 
 Voilà pour l'histoire.  
 

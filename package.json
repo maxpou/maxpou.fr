@@ -1,5 +1,6 @@
 {
   "name": "maxpou.fr",
+  "private": true,
   "description": "Maxence Poutord's Blog",
   "version": "1.0.0",
   "author": "Maxence Poutord <maxence.poutord@gmail.com>",
@@ -7,34 +8,12 @@
     "url": "https://github.com/maxpou/maxpou.fr/issues"
   },
   "dependencies": {
-    "babel-plugin-styled-components": "^1.8.0",
-    "core-js": "^3.1.2",
-    "disqus-react": "^1.0.5",
-    "gatsby": "^2.7.1",
-    "gatsby-image": "^2.1.0",
-    "gatsby-plugin-feed": "2.2.1",
-    "gatsby-plugin-google-analytics": "2.0.20",
-    "gatsby-plugin-manifest": "^2.1.1",
-    "gatsby-plugin-offline": "^2.1.1",
-    "gatsby-plugin-page-creator": "^2.0.13",
-    "gatsby-plugin-react-helmet": "^3.0.12",
-    "gatsby-plugin-sharp": "^2.1.0",
-    "gatsby-plugin-styled-components": "^3.0.4",
-    "gatsby-remark-autolink-headers": "^2.0.12",
-    "gatsby-remark-copy-linked-files": "^2.0.12",
-    "gatsby-remark-images": "^3.0.12",
-    "gatsby-remark-prismjs": "^3.2.9",
-    "gatsby-remark-responsive-iframe": "^2.1.1",
-    "gatsby-remark-smartypants": "^2.0.8",
-    "gatsby-source-filesystem": "^2.0.37",
-    "gatsby-transformer-remark": "^2.3.12",
-    "gatsby-transformer-sharp": "^2.1.19",
-    "lodash": "^4.17.5",
-    "prismjs": "^1.16.0",
+    "gatsby": "^2.13.4",
+    "gatsby-plugin-google-analytics": "^2.1.4",
+    "gatsby-plugin-manifest": "^2.2.1",
+    "gatsby-starter-morning-dew": "2.3.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1",
-    "styled-components": "^4.2.0"
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {
     "eslint": "^5.7.0",
@@ -46,17 +25,15 @@
   "homepage": "https://github.com/maxpou/maxpou.fr#readme",
   "keywords": [
     "gatsby",
-    "blog",
-    "starter"
+    "blog"
   ],
   "license": "MIT",
-  "main": "n/a",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/maxpou/maxpou.fr"
   },
   "scripts": {
-    "dev": "gatsby develop",
+    "start": "gatsby develop",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write 'src/**/*.js' 'data/siteConfig.js' 'gatsby-config.js'",

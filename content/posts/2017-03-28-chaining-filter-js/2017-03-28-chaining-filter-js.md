@@ -13,7 +13,7 @@ I recently realize a POC with [Vue.js](https://github.com/maxpou/find-a-room-vue
 
 My previous POC works like this: when I click to a filter, this filter is automatically push in an array of filter. And printed datas depends on this array of filters.
 
-![](./example.png)
+![example](./example.png)
 
 Let's start with the following data:
 

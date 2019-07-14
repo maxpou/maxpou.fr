@@ -22,7 +22,7 @@ Obviously, we can also create a Table called MessageType. But according to me, a
 So we need custom **reusable** PHP Enum.  
 Let's do this!
 
-![](./ship-kid.gif)
+![a kid on a ship](./ship-kid.gif)
 
 
 ## A solution
@@ -147,8 +147,8 @@ Your Form should look like this:
 
 <div class="notice">
 <form>
-    <input type="text" name="demobundle_message[content]">
-    <br>
+    <input type="text" name="demobundle_message[content]" />
+    <br/>
     <select name="type" name="demobundle_message[type]">
         <option value="info">Information</option>
         <option value="warning">Attention</option>

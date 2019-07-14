@@ -1,6 +1,6 @@
 module.exports = {
-  siteTitle: 'maxpou.fr',
-  siteDescription: "👋 Hey I'm Max",
+  siteTitle: 'Maxence Poutord',
+  siteDescription: 'Software engineer • Public speaker • Nomadic worker',
   authorName: 'Maxence Poutord',
   twitterUsername: '_maxpou',
   authorAvatar: 'avatar.jpeg',
@@ -8,7 +8,7 @@ module.exports = {
   authorDescription: `
   For the last decade, Maxence Poutord has worked with a variety of web technologies. He is currently focused on front-end development.
   On his day to day job, he is working as a senior front-end engineer at VSware. He is also a tech speaker and mentor.
-  As a digital nomad, he is living where the WiFi and sun is 😎 <br>
+  As a digital nomad, he is living where the WiFi and sun is 😎 <br/>
   Do you want to know more? <a href="/about">Read this!</a>
   `,
   siteUrl: 'https://www.maxpou.fr/',
@@ -23,11 +23,9 @@ module.exports = {
   icon: 'content/images/icon.jpeg',
   postsPerPage: 10,
   disqusShortname: 'maxpou',
+  headerTitle: 'maxpou.fr',
+  headerLinksIcon: '',
   headerLinks: [
-    {
-      label: '🏡',
-      url: '/',
-    },
     {
       label: 'Blog',
       url: '/',

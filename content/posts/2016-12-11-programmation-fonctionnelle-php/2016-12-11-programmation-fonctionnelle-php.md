@@ -155,7 +155,7 @@ $inputAddTen = array_map($addTen, $input); // [11, 12, 13, 14, 15, 16]
 
 Si vous êtes perdus, voici une petite anti-sèche:
 
-<blockquote class="twitter-tweet" data-lang="fr"><p lang="en" dir="ltr">Map/filter/reduce in a tweet:<br><br>map([🌽, 🐮, 🐔], cook)<br>=&gt; [🍿, 🍔, 🍳]<br><br>filter([🍿, 🍔, 🍳], isVegetarian)<br>=&gt;  [🍿, 🍳]<br><br>reduce([🍿, 🍳], eat)<br>=&gt; 💩</p>&mdash; Steven Luscher (@steveluscher) <a href="https://twitter.com/steveluscher/status/741089564329054208">10 juin 2016</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="fr"><p lang="en" dir="ltr">Map/filter/reduce in a tweet:<br/><br/>map([🌽, 🐮, 🐔], cook)<br/>=&gt; [🍿, 🍔, 🍳]<br/><br/>filter([🍿, 🍔, 🍳], isVegetarian)<br/>=&gt;  [🍿, 🍳]<br/><br/>reduce([🍿, 🍳], eat)<br/>=&gt; 💩</p>&mdash; Steven Luscher (@steveluscher) <a href="https://twitter.com/steveluscher/status/741089564329054208">10 juin 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Autre utilisation des fonctions d'ordre supérieur : créer une fonction qui retourne une fonction.

@@ -20,7 +20,7 @@ Je développe des applications web depuis quelques temps sur une stack [Vagrant 
 
 Tout d'abord, le temps d'initialisation de la box est particulièrement long. Deuxième argument, si on se plante on est obligé de tout réinstaller (*ex:* récemment j'ai oublié de mettre un point avant le slash de cette commande... `sudo rm -rf /`). Et enfin, si on souhaite instancier plusieurs machines sur une seule, le PC hôte se retrouve rapidement sur les rotules.
 
-![](./multishipsonship.png)
+![one ship with carrying multiples ships](./multishipsonship.png)
 
 Ce sont donc ces trois points qui m'ont motivé à migrer mon poste de dev sur Docker (et puis si autant de monde en parle, c'est sans doutes que ça vaut le détour !).
 
@@ -30,7 +30,7 @@ Je vais volontairement passer sous silence l'étape de présentation de Docker. 
 ## Un conteneur pour les gouverner tous ?
 
 Lors de mes premières expériences avec Docker, j'étais parti sur un méga-conteneur qui portait PHP, Apache, MySQL... tout ce qui est nécessaire pour faire tourner une application web. Et puis j'ai vite lâché l'affaire car je ne voyais pas la plus-value de cet outil comparé à ma vagrant.
-![](./shiponship.gif)
+![one ship with carrying one ship](./shiponship.gif)
 *(ma première expérience avec Docker)*
 
 
@@ -40,7 +40,7 @@ A l'occasion du [3e anniversaire de Docker](https://github.com/docker/docker-bir
 
 Voici l'objectif vers lequel je souhaite tendre :
 
-![](./schema-v2.png)
+![schema](./schema-v2.png)
 
 Détail des conteneurs :
 
@@ -196,7 +196,7 @@ parameters:
 
 Et voilà !  
 
-![](./etvoila.gif)
+![et voila gif](./etvoila.gif)
 
 Accédez à votre application sur [symfony.dev](http://symfony.dev/) pour voir votre application et sur [symfony.dev:81](http://symfony.dev:81/) pour consulter les logs avec Kibana.  
 

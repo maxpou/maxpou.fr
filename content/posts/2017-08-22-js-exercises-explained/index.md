@@ -32,7 +32,7 @@ function greet (person) {
 greet({ name: 'amy' })
 ```
 
-<hr>
+<hr />
 
 **Answer**
 
@@ -60,7 +60,7 @@ for (var i = 0; i < 4; i++) {
 }
 ```
 
-<hr>
+<hr />
 
 **Problem**
 
@@ -94,7 +94,7 @@ foo = 'boum'
 getFoo() // 'boum'
 ```
 
-<hr>
+<hr />
 
 **Answer**
 
@@ -134,7 +134,7 @@ let sayName = dog.sayName
 sayName()
 ```
 
-<hr>
+<hr />
 
 **Answer**
 
@@ -177,7 +177,7 @@ let fido = new Dog('fido')
 fido.bark()
 ```
 
-<hr>
+<hr />
 
 **Answer**
 
@@ -243,7 +243,7 @@ isBig([2])  // false
 isBig([3])  // true
 ```
 
-<hr>
+<hr />
 
 **Answer**
 
