@@ -22,7 +22,7 @@ Obviously, we can also create a Table called MessageType. But according to me, a
 So we need custom **reusable** PHP Enum.  
 Let's do this!
 
-![](./ship-kid.gif)
+![a kid on a ship](./ship-kid.gif)
 
 
 ## A solution

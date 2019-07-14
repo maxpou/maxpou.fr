@@ -27,7 +27,7 @@ In a few words, this is some features already in this box:
 It is a good base.  
 For my needs, I pimp this box (take a look on [my fork (on GitHub)](https://github.com/maxpou/scotch-box)). I found it pretty cool on my own linux... but on my Windows, it's **really SLOW!**
 
-![](./snail-1.gif)
+![funny snail gif](./snail-1.gif)
 
 *Before: running a Symfony app into a Vagrant box*
 
@@ -140,6 +140,6 @@ And... tadaaaa! It took Some hundred milliseconds ♥ (I also add some SQL reque
 
 ![step 3](./3.png)
 
-![](./snail-2.gif)
+![funny gif turbo-snail](./snail-2.gif)
 
 *After: running a Symfony app into a Vagrant box*

@@ -65,7 +65,7 @@ We call this approach: **imperative programming**. We explicitly declare **how**
 By opposition of this approach, we have the **declarative programming**. It consists in focusing on the **what**, without specifying how to get it...
 
 
-![](./mario.gif)
+![smash bross recursion](./mario.gif)
 
 
 ## Array.map and Array.filter to the rescue!

@@ -152,7 +152,7 @@ As expected, I created a new structure of heroes with a toString property.
 But JavaScript always pass variables by value... except when this variable refer to an object. And almost everything is an object in JS!
 In the map() loop, `h` refer to a hero reference. That why the heroes are updated!
 
-![](./pass-by-reference-vs-pass-by-value-animation.gif)
+![pass by reference vs pass by value animation](./pass-by-reference-vs-pass-by-value-animation.gif)
 
 ## Solutions
 

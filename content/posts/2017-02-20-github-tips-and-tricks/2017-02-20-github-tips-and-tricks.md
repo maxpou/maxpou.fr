@@ -11,25 +11,25 @@ generate-card: false
 
 Summary:
 
-- [GitHub = git + hub (Manage your repo by CLI)](#GitHub--git--hub-Manage-your-repo-by-CLI)
-- [Github AKA SVNHub?](#Github-AKA-SVNHub)
-- [Markdown on steroid (Github Flavored Markdown)](#Markdown-on-steroid-Github-Flavored-Markdown)
-- [Gist, another kind of repository](#Gist-another-kind-of-repository)
-- [Issue/Pull request Templates](#IssuePull-request-Templates)
-- [Github Pages ❤️️](#Github-Pages-%E2%9D%A4%EF%B8%8F%EF%B8%8F)
-- [Sign your commits](#Sign-your-commits)
-- [Playing with URL](#Playing-with-URL)
-  - [URL everywhere](#URL-everywhere)
-  - [Disable whitespace on code review](#Disable-whitespace-on-code-review)
-  - [.diff and .patch](#diff-and-patch)
-  - [Highlight lines](#Highlight-lines)
-  - [Filtering commits](#Filtering-commits)
-- [Keyboard shortcuts](#Keyboard-shortcuts)
-- [Emoji 😍](#Emoji-%F0%9F%98%8D)
-- [git.io a Github URL shortener](#gitio-a-Github-URL-shortener)
-- [Not only for your code](#Not-only-for-your-code)
-- [API (~REST or GraphQL)](#API-REST-or-GraphQL)
-- [Bonus: Octodex](#Bonus-Octodex)
+- [GitHub = git + hub (Manage your repo by CLI)](#github--git--hub-manage-your-repo-by-cli)
+- [Github AKA SVNHub?](#github-aka-svnhub)
+- [Markdown on steroid (Github Flavored Markdown)](#markdown-on-steroid-github-flavored-markdown)
+- [Gist, another kind of repository](#gist-another-kind-of-repository)
+- [Issue/Pull request Templates](#issuepull-request-templates)
+- [Github Pages ❤️️](#github-pages-%E2%9D%A4%EF%B8%8F%EF%B8%8F)
+- [Sign your commits](#sign-your-commits)
+- [Playing with URL](#playing-with-url)
+    - [URL everywhere](#url-everywhere)
+    - [Disable whitespace on code review](#disable-whitespace-on-code-review)
+    - [.diff and .patch](#diff-and-patch)
+    - [Highlight lines](#highlight-lines)
+    - [Filtering commits](#filtering-commits)
+- [Keyboard shortcuts](#keyboard-shortcuts)
+- [Emoji 😍](#emoji-)
+- [git.io a Github URL shortener](#gitio-a-github-url-shortener)
+- [Not only for your code](#not-only-for-your-code)
+- [API (~REST or GraphQL)](#api-rest-or-graphql)
+- [Bonus: Octodex](#bonus-octodex)
 
 
 ## GitHub = git + hub (Manage your repo by CLI)
@@ -83,7 +83,7 @@ Github use his own version of markdown: Github Flavored Markdown (GFM). It provi
     - [ ] Conquer the world
     ```
 
-    ![](./tasklist.gif)
+    ![tasklist](./tasklist.gif)
 
 * Tables:
 
@@ -214,7 +214,7 @@ git config --global user.email linus@fake.com
 
 Now, you can usurp the identity of someone else! To avoid this, you can sign a commit. It works with GPG key.
 
-![](./gpgsign.png)
+![gpgsign](./gpgsign.png)
 
 
 ## Playing with URL
@@ -232,7 +232,7 @@ One of GitHub's motto is: *to exist, each action must have a specific URL*. By a
 
 If a commit is polluted by whitespace simply add `?w=1` at the end of the URI.
 
-![](./whitespace.gif)
+![toggle whitespace animation](./whitespace.gif)
 
 Example: [with](https://github.com/maxpou-slides/github-tips-tricks/commit/2616cbecc713389f8455b066711bc74891a593a6) and [without](https://github.com/maxpou-slides/github-tips-tricks/commit/2616cbecc713389f8455b066711bc74891a593a6?w=1) whitespace pollution.
 
@@ -265,7 +265,7 @@ A last URL tip, is filtering in URL. If you want to retrieve one of your commit,
 Even if it's a web application, using your mouse isn't mandatory. In fact, GitHub offer a lot of different shortcuts.
 To see them, just press " ? " *(doesn't matter where you are!)*.
 
-![](./keyboard-shortcuts-help.png)
+![keyboard shortcuts help](./keyboard-shortcuts-help.png)
 
 
 ## Emoji 😍
@@ -275,7 +275,7 @@ But they aren't only present to decorate your text. For example, I prefix everyt
 
 A better implementation is the [Atom contributing's style guides](https://github.com/atom/atom/blob/master/CONTRIBUTING.md#styleguides):
 
-![](./commit-message-atom.png)
+![atom commit message](./commit-message-atom.png)
 
 
 Here's a good [cheat sheet](http://www.webpagefx.com/tools/emoji-cheat-sheet/).
@@ -317,4 +317,4 @@ Github provide 2 types of API:
 [Octodex (octodex.github.com)](https://octodex.github.com/) is an Octocat gallery, the mascot of GitHub.
 
 
-![](./gobbleotron.gif)
+![Octocat](./gobbleotron.gif)

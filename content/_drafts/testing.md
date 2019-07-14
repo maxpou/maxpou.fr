@@ -157,7 +157,7 @@ with new version of Jest, snapshot are inline. Its good. Enforce to use small sn
 
 Covering 100% is time-consuming!
 
-![](https://jeroenmols.com/img/blog/coverageproblem/effortvalue.png)
+![testing - effort vs. value](https://jeroenmols.com/img/blog/coverageproblem/effortvalue.png)
 
 
 Funny stuff I saw when I aimed 100% cc:

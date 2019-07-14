@@ -94,7 +94,7 @@ At the moment, there are only 3 available starters for blogging in markdown (the
 
 Before migrating this blog to a new one, I wanted to release the starter first. It took me two months to get something good. And now I'm very happy with the result.
 
-![](./additions-deletions.png)
+![git addition / deletion](./additions-deletions.png)
 <center><i>I removed 9 000 line of code for this new blog!</i></center>
 
 The full list of features is available on the [starter's README](https://github.com/maxpou/gatsby-starter-morning-dew). In a nutshell:

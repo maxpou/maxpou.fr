@@ -332,6 +332,6 @@ As far as I'm concerned, I prefer this pattern when he's combined with patterns 
 
 I apply this principle every day. And now 90% of my if blocks, does not contain any else expression! (yeah, I am lazy sometime ;-)). Most of time, the first solution is the solution. Take care, sometimes too much design patterns lead your application to **overengineering**. First, make sure it's relevant and remember: **pragmatism over theory**.
 
-![](./overengineering.jpg)
+![overengineering](./overengineering.jpg)
 
 Oh, by the way, I implement this patterns [in a Github repository](https://github.com/maxpou/design-pattern-php). You can take a look, it's fully tested!
