@@ -64,6 +64,10 @@ module.exports = {
           label: 'Portfolio',
           url: '/portfolio',
         },
+        {
+          label: 'Uses',
+          url: '/uses',
+        },
       ],
     },
     {

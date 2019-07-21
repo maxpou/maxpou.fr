@@ -1,22 +1,24 @@
 ---
-title: Uses
+title: Apps, Tools, and Gear I Use
 slug: uses
 disqus: true
-cover: ./laptop.jpg
+cover: ./desktop.jpg
 ---
 
-This page is inspired from [Wes Bos' Uses](https://wesbos.com/uses/) page.
+This page is somewhat inspired by [Wes Bos' Uses](https://wesbos.com/uses/) page. Keep in mind that I'm mostly doing Frontend development and I'm also a nomadic worker. In other words, I'm 100% remote and I travel. A lot.
 
 
-## Computer
+## Hardware
 
 ![laptop picture](./laptop.jpg)
 
 * MacBook Pro (13-inch)
 * **No extra screen.** I've found myself more focus with only one screen
-* [Roost Laptop Stand](https://www.therooststand.com/) *(note: [I don't use it when I work from coffee shop !](https://twitter.com/NikkitaFTW/status/1139607268452777984))*. When I use the rooststand, I also use the Magic keyboard 2 with the Magic trackpad 2.
+* [Roost Laptop Stand](https://www.therooststand.com/) *(note: [I don't use it when I work from a coffee shop!](https://twitter.com/NikkitaFTW/status/1139607268452777984))*. 
+* Magic keyboard 2 and the Magic trackpad 2
+* Notepad where [I write my daily MIT](https://about.gitlab.com/2018/05/17/eliminating-distractions-and-getting-things-done/#2-write-down-your-mits)
 
-As a digital nomad, I don't have space for a desk on my backpack!
+As a digital nomad, I don't have space for a desk on my backpack! ;)
 
 
 ## IDE
@@ -27,17 +29,17 @@ As a digital nomad, I don't have space for a desk on my backpack!
 
 ![my ide](./ide.png)
 
-All of my config files (VS Code settings, bash aliases, git config...) are accessible on [my dotfiles GitHub repository ](https://github.com/maxpou/dotfiles).
+All of my config files (VS Code settings, bash aliases, git config...) are accessible on [my dotfiles GitHub repository](https://github.com/maxpou/dotfiles).
 
 
 ## Browser
 
-My main browser is [Brave](https://brave.com/). I love Brave because this browser is super fast and also keep my privacy 💛
+My main browser is [Brave](https://brave.com/). I also use the following plugins:
 
 * [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
 * [Pocket (Save to Pocket)](https://chrome.google.com/webstore/detail/save-to-pocket/niloccemoadcdkdjlinkgdfekeahmflj)
-* LastPass
-* Devtool extensions: vue and react
+* [LastPass](https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd)
+* Devtool extensions: [Vue.js](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) and [React](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
 
 I used to have Wappalyzer... but I've found this extension quite curious so I removed it!
 
@@ -48,14 +50,14 @@ I mostly use my terminal in VSCode. Otherwise, I use iTerm (not a big fan!). My 
 
 ![terminal screenshot](./term.png)
 
-This is the list of plugins I use:
+This is the list of plugins/apps I use:
 
-* [Zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH) and [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh): A framework to manage Zsh configuration.
+* [Zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH) with [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh). Oh My Zsh is a framework for managing zsh configuration.
+* [Lighthouse (CLI)](https://github.com/GoogleChrome/lighthouse) - Auditing, performance metrics, and best practices for Progressive Web Apps.
 * [Hub](https://github.com/github/hub) - a wrapper for Git command *(Git+Hub=GitHub)*
-* [lighthouse (CLI)](https://github.com/GoogleChrome/lighthouse#cli-options) - Auditing, performance metrics, and best practices for Progressive Web Apps
-* [vtop](https://github.com/MrRio/vtop) - a good alternative to activity monitor.
-* [Tree](https://formulae.brew.sh/formula/tree) - for presentation
-* [n](https://github.com/tj/n) - a super handy tool for node version management
+* [vtop](https://github.com/MrRio/vtop) - an alternative to activity monitor.
+* [Tree](https://formulae.brew.sh/formula/tree) - to generate a tree (like the Tree Windows command).
+* [n](https://github.com/tj/n) - a super handy tool for node version management.
 
 I also use Vim from time to time.
 
@@ -64,21 +66,21 @@ I also use Vim from time to time.
 
 ## Desktop Apps
 
-I have a very minimalistic approach when it cames to my dock. If I don't use an app -at least- once a day, I remove it from the dock.
+I have a very minimalistic approach when it comes to my dock. If I don't use an app -at least- once a day, I remove it from the dock.
 
 ![app screenshot](./apps.png)
 
-I also use this applications:
+I also use these applications:
 
-* [ProtonVPN](https://protonvpn.com) and I pay for it!
-* [Giphy Capture](https://giphy.com/apps/giphycapture) is my go-to screen recording when I need to share something with my colleagues. It's very simple to use.
-* OBS - screen recording but for longer video. It don't use it much...
+* [ProtonVPN](https://protonvpn.com) is my VPN and I happily pay for it!
+* [Giphy Capture](https://giphy.com/apps/giphycapture) is my go-to screen recording when I need to share something with my colleagues. I found it simple to use.
+* OBS - screen recording but for a longer video. I don't use it much...
 * [Sequel Pro](https://www.sequelpro.com/) - when I need a GUI for MySQL.
 
 
 ## Blogging
 
-This site made with Gatsby.js and [gatsby-starter-morning-dew](https://github.com/maxpou/gatsby-starter-morning-dew). 
+This site made with Gatsby.js and [gatsby-starter-morning-dew](https://github.com/maxpou/gatsby-starter-morning-dew). I use these applications to help me write:
 
 * [Grammarly](https://app.grammarly.com/) - Helps me to remove typos / proofread my posts.
 * [Hemingway](http://www.hemingwayapp.com) - "Hemingway App makes your writing bold and clear."
@@ -88,4 +90,4 @@ This site made with Gatsby.js and [gatsby-starter-morning-dew](https://github.co
 
 ## Other Gear
 
-Having a good backpack is essential when you travel the most of your time. I use the The [Minaal Carry-on 2.0](https://www.minaal.com/products/minaal-carry-on-bag/?variant=12494163140) (with packing cubes). I love it!
+Having a good backpack is essential when you travel the most of your time. I use the [Minaal Carry-on 2.0](https://www.minaal.com/products/minaal-carry-on-bag/?variant=12494163140) (with packing cubes). I love it!
