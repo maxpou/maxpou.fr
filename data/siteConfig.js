@@ -31,12 +31,12 @@ module.exports = {
       url: '/',
     },
     {
-      label: 'About',
-      url: '/about',
-    },
-    {
       label: 'Speaking',
       url: '/speaking',
+    },
+    {
+      label: 'About',
+      url: '/about',
     },
   ],
   // Footer information (ex: Github, Netlify...)
@@ -53,10 +53,6 @@ module.exports = {
           url: '/',
         },
         {
-          label: 'About',
-          url: '/about',
-        },
-        {
           label: 'Speaking',
           url: '/speaking',
         },
@@ -67,6 +63,10 @@ module.exports = {
         {
           label: 'Uses',
           url: '/uses',
+        },
+        {
+          label: 'About',
+          url: '/about',
         },
       ],
     },

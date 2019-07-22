@@ -8,6 +8,7 @@ imageFb: ./hello-gatsby-fb.png
 date: 2018-10-17
 tags: 
     - Gatsby
+    - JavaScript
 ---
 
 
