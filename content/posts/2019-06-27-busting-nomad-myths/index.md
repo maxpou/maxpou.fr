@@ -94,9 +94,9 @@ Building connection becomes harder when you grow up. It's even more when you're 
 
 * **Remote working**. Being a part-time remote is challenging. But, 100% remote is another level. It requires a lot of discipline. When I switched to 100% remote, I realised how I underestimate this aspect. You can't postpone a meeting because you're not in the office today (and you will be next week), you don't know if your colleague is joking or not, overworking, managing interruptions, communication issues, etc.  
 **Remote working requires hustle and grit.**  
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Mh4f9AYRCZY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    
-    *Tips: Always double-check your environment before turning on your webcam* 😉
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mh4f9AYRCZY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+*Tips: Always double-check your environment before turning on your webcam* 😉
 
 
 * **Administrative nightmares**: I'm French working for an Irish company, I own an Irish Phone number and I spend most of my time in South-West Asia living in short term accommodations (changing once or twice a month).  
