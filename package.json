@@ -8,12 +8,12 @@
     "url": "https://github.com/maxpou/maxpou.fr/issues"
   },
   "dependencies": {
-    "gatsby": "^2.13.4",
-    "gatsby-plugin-google-analytics": "^2.1.4",
-    "gatsby-plugin-manifest": "^2.2.1",
-    "gatsby-starter-morning-dew": "2.4.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "gatsby": "^2.15.0",
+    "gatsby-plugin-google-analytics": "^2.1.21",
+    "gatsby-plugin-manifest": "^2.2.20",
+    "gatsby-starter-morning-dew": "2.4.3",
+    "react": "^16.10.0",
+    "react-dom": "^16.10.0"
   },
   "devDependencies": {
     "eslint": "^5.7.0",
@@ -34,6 +34,7 @@
   },
   "scripts": {
     "start": "gatsby develop",
+    "gatsby": "gatsby",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write 'src/**/*.js' 'data/siteConfig.js' 'gatsby-config.js'",
