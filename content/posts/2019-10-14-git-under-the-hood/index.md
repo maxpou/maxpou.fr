@@ -2,21 +2,27 @@
 title: "What's happens when you `git commit`"
 slug: git-under-the-hood
 language: en
-date: 2019-10-13
+date: 2019-10-14
 cover: ./cover.jpg
 tags: 
     - Git
 ---
 
 Nowadays, most of our project use Git as a version control system. It means most of our project have a `.git` folder. But, have you ever tried to open it?
-I tried once... and I closed it within a minute! I've been using Git as a black box for years.
+I tried once... and I closed it within a minute!
+
+I've been using Git as a "black box" for years.
 
 ![git explained](./git-explained.png)
 
-A year ago I took a new resolution in my life. I decided to pick a new topic every 3-4 months and understand how it works under the hood.
-A few months ago, I decided to tackle git. I was kind of tired of using it every day and not understand how it works. 
+Until a year ago. I was tired of using it without knowing how it works under the hood. I finally grab the bull by the horns and started to learn it. I read [Pro Git](https://git-scm.com/book/en/v2) and make tons of experimentations. I've found out that it's not as complicated as it looks like!
 
-Especially, what happens when I `git commit`. It time to fix this!
+So, If you:
+* are the guy in the picture above,
+* want to understand what's in this `.git` folder,
+* already "lost code with git"...
+
+...this blog post is for you! 😃
 
 
 ## Step 1: Git Data Model
@@ -30,8 +36,9 @@ To make things more understandable, I will start with a new basic project (2 fil
 
 Now let's see what we have in the .git folder:
 
-```bash
+```
 $ tree .git/objects
+
 .git/objects
 ├── 2d
 │   └── 1a41ebd2d32cb426b6d32e61e063f330aa1af8
@@ -56,10 +63,10 @@ Here's how the files are linked together:
 ![git data model](./git-data-model.png)
 
 💡 Git object model has 4 different types: 
-* commit: contain the committer, date, message and also the directory tree;
-* tree: reference other trees and/or blobs;
-* blob: store file data; 
-* tag: store a commit reference (not addressed in this blog post).
+* **commit**: contain the committer, date, message and also the directory tree;
+* **tree**: reference other trees and/or blobs;
+* **blob**: store file data; 
+* **tag**: store a commit reference (not addressed in this blog post).
 
 Please note that blobs don't store their filename (and location). That's one of the reasons why sometimes git lost history when you change file location ;)
 
@@ -74,7 +81,7 @@ Now we want to update `index.js` and add a second line to the file:
 
 We now have 3 more entries:
 
-```bash{4,5,14,15,16,17}
+```html{4,5,14,15,16,17}
 $ tree .git/objects
 
 .git/objects
@@ -102,7 +109,7 @@ We now have something like this:
 
 ![git data model with 2 commits](./git-data-model-2.png)
 
-👀 Something interesting here: Git doesn't store diff between files! 
+👀 Something interesting here: Git doesn't store diff between files! Thanks to the **packfiles** (in `.git/objects/pack`), Git keeps a reasonable place on the disk.
 
 
 ## Step 3: Playing with time and f*** up everything 🤦‍♂️
@@ -114,7 +121,7 @@ In this last step, we are going to add one commit. Then, we will go back in the 
 
 As you might guess now, git created 3 new files. The structure is similar from step 2.
 
-```bash
+```
 .git/objects
 ├── 00
 │   └── ee8c50f8d74eaf1d3a4160e9d9c9eb1c683132
@@ -127,14 +134,14 @@ As you might guess now, git created 3 new files. The structure is similar from s
 12 directories, 10 files
 ```
 
-Now, let's pretend we want to go back in the past from 1 commit (`git reset HEAD~ --hard`).
+Now, let's pretend we want to go back in the past from 1 commit (`git reset HEAD~1 --hard`).
 
 ![git reset --hard](./hard-reset.png)
 
 ...and now you think you fucked up everything and your commit is gone forever. Right?
 Maybe. Let's count how many git objects we have...
 
-```bash
+```
 $ tree .git/objects
 
 .git/objects
@@ -148,13 +155,13 @@ Look: we still have 10 files! Nothing was deleted! Guess what? If I `git cat-fil
 > "You can't lose code with git."  
 > —Me
 
-Believe me, I use `git push --force`, `git rebase` and `git reset --hard` daily and I never lost anything. But, we are human and human make mistakes.
+More seriously, I use `git push --force`, `git rebase` and `git reset --hard` daily and I never lost anything. But, we are human and humans are fallible.
 
 Don't worry, if you want to rollback, you don't have to go threw all those files. There's a magic trick!
 
 ## reflog: the magic wand ✨
 
-If you try to retrieve the git history with `git log`, you will not see the "Third commit". But, if you add the additional option `-g` (for `--walk-reflogs`), then you'll see the third commit. 
+If you try to retrieve the history with `git log`, you will not see the "Third commit". But, if you add the additional option `-g` (for `--walk-reflogs`), then you'll see the third commit. 
 
 To make it nicer, you can do `git log -g --abbrev-commit --pretty=oneline`.
 
@@ -184,9 +191,11 @@ In some cases, `git reflog` __will not__ help you:
 Also, if you use git commit like you `ctrl + s`, you might be easily lost. I'm sorry, but, can't do anything for you, except recommending you to read my post about the [conventional commits](https://www.maxpou.fr/git-conventional-commits). In my opinion, it's the cleanest way to use git.
 
 
-## Wrapping up
+## Wrapping up ~ TL;DR
 
 * there are 4 different types of git objects: commit, tree, blob and tag.
-* blobs don't know their name. That's why we sometimes lose history during a move.
-* git doesn't store diffs.
+* blobs don't know their name (it's the reason why you lose history during a move).
+* Git doesn't store diffs.
 * committed code cannot be lost. `git reflog` can help you.
+
+That's it for today!
