@@ -7,6 +7,8 @@ disqus: false
 
 ## Hello World!
 
+![a picture of me](../../images/me.jpeg)
+
 Hey, I'm **Maxence Poutord**, passionate software engineer, speaker, blogger and [mentor](https://mentors.codingcoach.io/?name=Maxence+Poutord).
 I started coding [in my early age, at 11](https://twitter.com/_maxpou/status/771701472199340032) with the QBasic language. 19 years later, I'm still coding (I just hope my code is better 😃).
 
@@ -21,7 +23,7 @@ I am currently a Senior Software Engineer at [VSware](http://vsware.ie/) where I
 * **🚦 Test**. Defining strategies to **effectively** test a web app.
 * **💎 Code quality**. I ❤️ crafting code.
 * **🏎 Performances**. Because users want something fast!
-* **[🗣 Tech trainer](./speaking#trainings--workshop)** and **[public speaker](./speaking)**.
+* **🗣 [Tech trainer](./speaking#trainings--workshop)** and **[public speaker](./speaking)**.
 
 
 ## What I do for fun
@@ -38,5 +40,8 @@ I am currently a Senior Software Engineer at [VSware](http://vsware.ie/) where I
 Do you have a question regarding one of my projects? a blog post? ...or something else?  
 Don't be shy. **Let's talk**. I do my best to be as accessible as possible.
 
-* [hello@maxpou.fr](mailto:hello@maxpou.fr)
-* [LinkedIn](http://fr.linkedin.com/in/maxpou)
+Here's how you can contact me:
+
+* The best way is to tweet me at [@_maxpou](https://twitter.com/_maxpou);
+* If you're patient, send me an email at [hello@maxpou.fr](mailto:hello@maxpou.fr);
+* Connect with me on [LinkedIn](http://fr.linkedin.com/in/maxpou).
