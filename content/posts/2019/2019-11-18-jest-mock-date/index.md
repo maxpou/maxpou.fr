@@ -32,7 +32,7 @@ module.exports = {
 See also: [the full list of timezones (column *TZ database name*)](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 
 
-## Mock JavaScript's Date object
+## Mock Date.now
 
 Let's say I want to test a dashboard component which tells me "hello" with the date of the day. The lazy way is to only test the Hello part (without the date). Because it changes every day. But you won't test the date formatting part. 
 

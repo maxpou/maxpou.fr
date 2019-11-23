@@ -67,11 +67,13 @@ When it comes to software testing, usually, a "Testing Pyramid" pop-up somewhere
 
 In a nutshell, this pyramid said that we shoud write a lot of unit test (because they're cheap and fast), some integration test and a few E2E tests. I don't know about you but I don't like this pyramid.
 
-I have been working with component oriented franework/lib (React/Vue). Almost 80% of my bug don't come from the component but how compenents interact together.
+I have been working with component oriented franework/lib (React/Vue). 
+
+**Most of the bug don't come from the component, but, how compenents interact together.**
 
 ![titanic sinking but all tests are green](./titanic.jpg)
 
-That's why I think the Pyramid is not relevant for frontend. Let me introduce you something else: the Testing Trophy!
+That's why I think the Pyramid is not relevant for frontend world. Let me introduce you something else: the Testing Trophy!
 
 ![testing trophy (© kentcdodds)](./trophy.jpg)
 
@@ -88,18 +90,7 @@ A typical component oriented application usually follow a similar structure:
 └── store/
 ```
 
-If you're not familiar with the dumb container approach, you can read [this post (by Dan Abramov)](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0).
-
-
-| Item                     | Type of test      | Notes                        |
-|--------------------------|-------------------|------------------------------|
-| ALL                      | static tests      |                              |
-| Reusable components      | unit tests        |                              |
-| components (dumbs)       | (none)            | covered by integration tests |
-| pages (smart components) | integration tests |                              |
-| routes                   | (none)            | covered by integration tests |
-| service                  | (none)            | covered by integration tests |
-| store                    | (none)            | covered by integration tests |
+*If you're not familiar with the dumb container approach, you can read [this post (by Dan Abramov)](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0).*
 
 
 
@@ -109,7 +100,7 @@ Here's 4 points that makes a great test:
 
 > 🐟 Dead simple ~ No complexity (1 level of indentation maximum)  
 > ⚡️ Lightning fast ~ Nobody like to wait!  
-> 🤯 Doesn't test external library  
+> 🤯 Doesn't test an external library  
 > 🛌 Cover the most common usages. It's "ok" not to cover everything.  
 
 Some clarification about the 3rd point. If a component redirect to another page threw router, don't test if the URL had changed. Instead, test that `$router.push()` have been called.
@@ -135,9 +126,9 @@ In a nutshell, static analysis help us to focus on what really matter ❤️
 
 ### how to unit test a function?
 
-I found unit test relevant for: **formatter**, **helpers** and **reusable components**. By reusable components, I mean components that are reused accross your application or multiple application.
+I found unit test relevant for: **formatter**, **helpers** and **reusable components**. By reusable components, I mean components that are reused accross your application or multiple applications.
 
-If you don't know how to unit test a function, you can follow the AAA Method which stand for: Arrange-Act-Assert.
+If you don't know how to write an unit test, you can follow the AAA Method which stand for: **Arrange-Act-Assert**.
 
 ```js
 const vatCalculator = require('../path/to/vatCalculator')
@@ -145,8 +136,8 @@ const vatCalculator = require('../path/to/vatCalculator')
 it('should return the expected VAT', () => {
   // Arrange
   const menu = [
-    { item: '🍺', price: 3 },
-    { item: '🍔', price: 3 },
+    { item: '🍺', price: 3, quantity: 1 },
+    { item: '🍔', price: 5, quantity: 1 },
   ]
 
   // Act
@@ -192,33 +183,70 @@ Integration tests provides a way to test the application with a higher scope. Th
 > Write tests. Not too many. Mostly integration.  
 > − [Guillermo Rauch](https://twitter.com/rauchg/status/807626710350839808)
 
-💡*Reccomended tool: Testing library.*
+💡*Reccomended tool: Jest & Testing library.*
 
 
-## End-to-end testing
+## End-to-end testing (E2E)
 
-* Things taht can be tested: full login flow
-* Use Lighthouse on a "production-like" environment - example Gatsby-starter...
+When you write e2e tests, keep in mind that this tests will probably slow down your build time. Use them with parcimony and where you think it's relevant. For instance, you can use end-to-end tests to test a login flow.
+
+I also like to deploy my app on a static version of my app on a platform like Netlify/now.sh. Once my app is deployed, I use tool like Lighthouse to perform an audit on different pages. So you can easily spot accessibility/SEO/... regression.
+
+![lighthouse](./lighthouse.png)
+
+You can also, do some smoke test with this environment. Like a `curl` request on a page and then ensure result is an HTTP 200 and the HTML body contain a specific words...
+
+In [this github repository (maxpou/gatsby-starter-morning-dew)](https://github.com/maxpou/gatsby-starter-morning-dew/pull/87), lighthouse tests are performed on every commit (and a new environment is also deployed).
+
+💡*Reccomended tool: Cypress, Lighthouse.*
 
 
-💡*Reccomended tool: Cypress.*
+## About: Performances
+
+You probably saw in the lighthouse screenshot, I volontary disabled performances. This is a very tricky topic that can't be covered in this blog post.
+
+In the most of cases, false positive and false negative are legion when we do an audit performances. Here's a few reasons:
+* your localhost is the same as the final server;
+* you don't know the traffic variation between 2 tests;
+* your network quality probably changed between 2 tests (i.e. a colleague download something);
+* your laptop CPU probably changed between 2 tests (i.e. your OS is secretely installing something);
+* ...
+
+And maybe you're not testing a [real world usecase](https://twitter.com/dan_abramov/status/1013823489609011200).
+
+Testing your app on an iPhone X (when it's not a 26' screen) + ligthning fast Wifi is not relevant
 
 
 ## About: Mocking
 
 One thing to know is that mocks sucks. 
 
-> Every time we mock, we diverge from the real world scenario. 
+> Every time we mock, we diverge from the real world scenario.
 
 For this reason, you should avoir them as much as posible. But, sometimes we have no other option but to use it:
 
 * for external API calls (HTTP GET/POST/...);
-* for browsers API (local/session storage, navigator...).
+* for browsers API (local/session storage, navigator...);
+* ... and for time. 
+
+If you're testing a "calendar"  
+
+```js
+const RealDate = Date;
+
+beforeEach(() => {
+  Date.now = jest.fn(() => new Date('2019-04-22T10:20:30Z').getTime());
+});
+
+afterEach(() => {
+  global.Date = RealDate;
+});
+```
 
 
 ## About: Mount vs. ShallowMount
 
-There are big debates on the testing communities about `Mount()` and `ShallowMount()`.
+There are big debates on the testing communities about `Mount()` and `ShallowMount()` and which one people should use.
 
 In a nutshell:
 * `mount()` mount the component **with** his child components.
@@ -226,12 +254,8 @@ In a nutshell:
 
 ![Mount vs. ShallowMount](./mountshallowmount.png)
 
-I tend to favor ShallowMount over Mount for the same reason as I prefer Integration Test over Unit test.
-
-
-
-But on the other hand, if you change a component used in a multiple places, things can potentially breaks everywhere.
-
+I tend to favor `ShallowMount` over `Mount` for the same reason as I prefer Integration Test over Unit test.
+But on the other hand, if you change a component used in a multiple places, things can "potentially" breaks everywhere.
 
 
 ## About: Snapshot testing
@@ -264,25 +288,26 @@ Here iss how Jest is working with Snapshot assertion:
 
 ![jest snapshot flow](http://slides.maxpou.fr/vuejs-training/img/jest-snapshot-flow-3.png)
 
-**Warning:**
+**⚠️ Warning:**
 * Snapshot are great. But it tends to be irrelevant on big components.
 * The purpose of behind snapshot testing is not to replace existing assertions. It's an **easy and lazy way to provide test where there's not!**
 * Snapshot testing & visual regression testing are 2 differents things!
 * Never update a snapshot manually. Let the testing framework doing it for you!
 * Don’t fall into the temptation of quickly update snapshot without checking the real change!
+* When you review a pull request, **always** check the snapshot diff.
 
 If you end up with huge snapshot, remember one thing. Test are also about confidence. And you will not be confident with big snapshot for a simple reason. No one want to review huge snapshots. If you face this problem, use something else :)
 
 ## About: Code coverage
 
-Covering 100% is time-consuming!
+On a small library, getting a 100% code coverage can be easy. But, on a real world application, reaching 100% of code coverage is time-consuming. Most of the time, it does not worth the trouble.
 
 ![testing - effort vs. value](https://jeroenmols.com/img/blog/coverageproblem/effortvalue.png)
 
 
-Funny stuff I saw when I aimed 100% cc:
+Once, I was in a team where Funny stuff I saw when we aimed to reach 100% code coverage:
 
-**Write code for tests**
+**#1 Write code for tests**
 
 ```js
 function foo(a, unitTest = false) {
@@ -297,10 +322,8 @@ function foo(a, unitTest = false) {
 
 ```
 
-Code coverage != quality of tests
 
-
-**Focus too much on coverage instead of quality**
+**#2 low quality of tests**
 
 ```js
 function divide(a, b = 0) {
@@ -311,13 +334,17 @@ describe('divide', () => {
   it('should divide two numbers', () => {
     expect(divide(6, 2)).toBe(3);
   });
+
+  // The "zero" case is missing.
 });
 ```
+
+Code coverage is "just" one metrics. As every metrics, don't focus too much on it!
 
 
 ## About: The importance of automation
 
-> "You forget a semicolon", "Indendation is wrong", "test is broken"...
+> "You forgot a semicolon", "Indendation is wrong", "test is broken"...
 
 I'm sure you already received comment like these on your Pull Request. I see 2 problems here:
 * the person who write this is doing a robot job. **If a robot can do your job there's something wrong.**
@@ -330,15 +357,9 @@ It's like when you cross the road. We don't feel hurt when the sign say no.
 (Thanks Jason Lengstorf for this example!).
 
 
-## About performances
-
-Warning with benchmarks: https://twitter.com/dan_abramov/status/1013823489609011200
-Testing your app on an iPhone X + Wifi is not relevant: 
-  * Average price for a mobile: 200e
-  * 53% of world population is still with a 2g network
-
-
 ## Final thoughts
 
+Testing is not a nice to have. It's a deliverable.
 
 (use CI, Totem, don't comment tests, testing is not a nice to have)
+

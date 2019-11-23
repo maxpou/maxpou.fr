@@ -2,7 +2,7 @@
 title: "Git: Cheat Sheet (advanced)"
 slug: git-cheat-sheet
 language: en
-date: 2019-10-19
+date: 2019-11-21
 cover: ./git-toolbox.png
 tags: 
     - Git
@@ -10,8 +10,14 @@ tags:
 
 If you find git confusing, I created this little cheat sheet! Please, note that I voluntary skipped the basic commands like `git commit`, `git pull/push`... This cheat sheet is intented for an advanced usage of git.
 
-![Git Cheat Sheet](https://thepracticaldev.s3.amazonaws.com/i/ipejw88vw13j8rji8xjv.png)
+![Git Cheat Sheet](./git-flows.png)
 
+
+## 🧭 Navigation - Go to the previous branch
+
+```bash
+git checkout -
+```
 
 ## 🔍 Get the history
 
@@ -39,9 +45,7 @@ git reset HEAD@{4}
 git reset --hard <commit-sha1>
 ```
 
-For more detail about this command, I wrote another post:
-
-{% post https://dev.to/maxpou/what-s-happens-when-you-git-commit-59n7 %}
+For more detail about this command, I wrote another post: [What's happens when you 'git commit'](https://www.maxpou.fr/git-under-the-hood).
 
 
 ## 🤦‍♀️Ooops #2: I mixed-up with my local repo. How to clean it?
@@ -72,32 +76,46 @@ git add . && git commit --amend --no-edit
 git commit --allow-empty -m "chore: re-trigger build"
 ```
 
-## ♻️ Squash commit
+*If you don't know what to put in your commit messages, I wrote [a post about conventional commits](https://www.maxpou.fr/git-conventional-commits).*
+
+## ♻️ Squash commits
 
 *Let say I want to rebase the last 3 commits:*
 
 1. `git rebase -i HEAD~3`
-2. Leave the first "pick" and replace the rest by "squash"
+2. Leave the first "pick" and replace the rest by "`squash`" (or "`s`")
 3. Tidy up the commit message and save (`:wq` in vi).
 
-{% youtube Waa9A_h4eHI %}
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Waa9A_h4eHI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 🎯Fixup
 
-# TODO
+*Let say I want to add something in the commit `fed14a4c`*
 
-
-## 📼Be kind rewind
-
-You have multiple commit and you want to  
-
-## TODO: graphic here!
+![git commit --fixup](./fixup.png)
 
 ```bash
-# Rebase + run command on every commit ❤️
-git rebase master --exec "npm run test"
+git add .
+
+git commit --fixup HEAD~1
+# or replace HEAD~1 by the commit hash (fed14a4c)
+
+git rebase -i HEAD~3 --autosquash
+# save&quit the file (:wq in VI)
 ```
+
+
+## 🕹Execute command on each commit when rebasing
+
+For massives features, you might end-up with a branch with a few commit inside. And then test are failing and you want to identify the "guilty commit". You can use `rebase --exec` to execute a command on each commit of the history.
+
+
+```bash
+# Will run "npm test" command on the last 3 commit ❤️
+git rebase HEAD~3 --exec "npm run test"
+```
+
+![rebase --exec](./rebase-exec.png)
 
 
 ## 🦋Stash
@@ -118,6 +136,7 @@ git stash drop stash@{1}
 git stash pop stash@{1}
 ```
 
+
 ## 🗑 Clean
 
 ```bash
@@ -128,7 +147,8 @@ git fetch -p
 git fetch -p && git branch --remote | fgrep greenkeeper | sed 's/^.\{9\}//' | xargs git push origin --delete
 ```
 
-## 🐙GitHub = `Git` + `Hub`
+
+## 🐙 GitHub = `Git` + `Hub`
 
 I use [Hub](https://github.com/github/hub) as a wrapper for git. To enable it you've to set hub as an alias for git (`alias git='hub'`).
 
@@ -138,6 +158,7 @@ git browse
 ```
 
 Other commands [are available here](https://hub.github.com/hub.1.html).
+
 
 ## 🦄 Bonus: my favourite git aliases
 
@@ -164,3 +185,5 @@ git-standup() {
     git log --all --since "$since" --oneline --author="$AUTHOR"
 }
 ```
+
+And you, what's your favourite git command?
