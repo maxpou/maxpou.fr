@@ -2,13 +2,13 @@
 title: "Git: Cheat Sheet (advanced)"
 slug: git-cheat-sheet
 language: en
-date: 2019-11-21
+date: 2019-11-28
 cover: ./git-toolbox.png
 tags: 
     - Git
 ---
 
-If you find git confusing, I created this little cheat sheet! Please, note that I voluntary skipped the basic commands like `git commit`, `git pull/push`... This cheat sheet is intented for an advanced usage of git.
+If you find git confusing, I created this little cheat sheet! Please, note that I voluntary skipped the basic commands like `git commit`, `git pull/push`... This cheat sheet is intended for advanced usage of git.
 
 ![Git Cheat Sheet](./git-flows.png)
 
@@ -107,7 +107,7 @@ git rebase -i HEAD~3 --autosquash
 
 ## 🕹Execute command on each commit when rebasing
 
-For massives features, you might end-up with a branch with a few commit inside. And then test are failing and you want to identify the "guilty commit". You can use `rebase --exec` to execute a command on each commit of the history.
+For massives features, you might end up with a branch with a few commits inside. And then tests are failing and you want to identify the "guilty commit". You can use `rebase --exec` to execute a command on each commit of the history.
 
 
 ```bash
@@ -140,7 +140,7 @@ git stash pop stash@{1}
 ## 🗑 Clean
 
 ```bash
-# remove branch that no longer exist on remote
+# remove branches that no longer exist on remote
 git fetch -p
 
 # remove all branch that contains "greenkeeper"
