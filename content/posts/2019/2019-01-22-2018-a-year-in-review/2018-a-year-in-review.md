@@ -5,7 +5,7 @@ slug: 2018-a-year-in-review
 date: 2019-01-22
 language: en
 cover: ./cover.jpg
-tags: ["Life"]
+tags: ["Life", "Year In Review"]
 ---
 
 *Disclaimer: I mostly wrote this blog post for myself. Writing my Year in review helps me to celebrate my biggest wins, see what was wrong and define goals for the upcoming year.*
