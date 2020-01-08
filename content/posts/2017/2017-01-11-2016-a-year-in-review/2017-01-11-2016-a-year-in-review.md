@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 2016 - A Year In Review
-tags: ["Life"]
+tags: ["Life", "Year In Review"]
 slug: 2016-a-year-in-review
 date: 2017-01-11
 language: en
