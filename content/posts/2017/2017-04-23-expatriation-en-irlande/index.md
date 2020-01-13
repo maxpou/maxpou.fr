@@ -5,8 +5,7 @@ tags: ["Life"]
 slug: expatriation-en-irlande
 date: 2017-04-23
 cover: ./banner.jpg
-imageTw: ./expatriation-en-irlande-tw.png
-imageFb: ./expatriation-en-irlande-fb.png
+imageShare: ./expatriation-en-irlande-share.png
 ---
 
 

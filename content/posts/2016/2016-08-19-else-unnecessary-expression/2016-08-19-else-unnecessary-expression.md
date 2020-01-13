@@ -4,7 +4,7 @@ title: "\"Else\": the unnecessary expression"
 slug: else-unnecessary-expression
 date: 2016-08-19
 language: en
-enerate-card: false
+generate-card: false
 cover: ./header.jpg
 ---
 

@@ -2,8 +2,7 @@
 title: "Typical JavaScript interview exercises (explained)"
 language: en
 cover: ./banner.jpg
-imageTw: ./js-exercises-explained-tw.png
-imageFb: ./js-exercises-explained-fb.png
+imageShare: ./js-exercises-explained-share.png
 slug: js-exercises-explained
 date: "2017-10-16"
 tags:

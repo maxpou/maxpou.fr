@@ -3,8 +3,7 @@ title: Hello GatsbyJS!
 slug: hello-gatsby
 language: en
 cover: ./cover.jpeg
-imageTw: ./hello-gatsby-tw.png
-imageFb: ./hello-gatsby-fb.png
+imageShare: ./hello-gatsby-share.png
 date: 2018-10-17
 tags: 
     - Gatsby

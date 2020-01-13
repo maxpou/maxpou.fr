@@ -5,8 +5,7 @@ slug: 2019-a-year-in-review
 date: 2020-01-08
 language: en
 cover: ./cover.png
-imageTw: ./2019-a-year-in-review-tw.png
-imageFb: ./2019-a-year-in-review-tw.png
+imageShare: ./2019-a-year-in-review-share.png
 tags: ["Life", "Year In Review"]
 ---
 

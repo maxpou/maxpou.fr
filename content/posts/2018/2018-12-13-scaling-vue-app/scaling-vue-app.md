@@ -2,6 +2,7 @@
 title: 3 tips for scaling large Vue.js application
 slug: 3-tips-scaling-vue-application
 cover: ./cover.jpg
+imageShare: ./3-tips-scaling-vue-application-share.png
 language: en
 date: 2018-12-13
 tags: 
