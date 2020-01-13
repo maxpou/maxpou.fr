@@ -319,7 +319,6 @@ function foo(a, unitTest = false) {
 
   return bar;
 }
-
 ```
 
 
