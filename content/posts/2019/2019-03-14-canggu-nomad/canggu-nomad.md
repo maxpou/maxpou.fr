@@ -4,6 +4,7 @@ slug: nomad-in-canggu
 language: en
 date: 2019-03-14
 cover: ./cover.jpg
+imageShare: ./nomad-in-canggu-share.png
 tags: 
     - Life
 ---

@@ -5,6 +5,7 @@ slug: 2018-a-year-in-review
 date: 2019-01-22
 language: en
 cover: ./cover.jpg
+generate-card: false
 tags: ["Life", "Year In Review"]
 ---
 
