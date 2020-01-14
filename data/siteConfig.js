@@ -93,6 +93,10 @@ module.exports = {
           label: 'Dev.to',
           url: 'https://dev.to/maxpou',
         },
+        {
+          label: 'RSS',
+          url: 'https://www.maxpou.fr/rss.xml',
+        },
       ],
     },
   ],
