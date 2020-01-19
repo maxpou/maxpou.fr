@@ -19,10 +19,10 @@ tags: ["Life", "Year In Review"]
 * I am still working as a Sr Frontend Engineer at VSware where I'm building software for education. 
 * On a day to day, I work with:
   * A (too?) [big Vue.js application](https://www.maxpou.fr/3-tips-scaling-vue-application). I don't touch the backend (in Java).
-  * Frontend Infrastructure: like scaling monorepo, continuous deployment/integration...
+  * Frontend Infrastructure: with interesting problems like scaling monorepo, continuous deployment/integration...
   * Vue.js Testing. I converted a few colleagues to Testing-library 🎉
-  * Interesting features to develop. Like creating a kinda Google Calendar from scratch. I've met interesting problems.
-* I'm still 100% remote and most of my colleagues are in Ireland.
+  * Interesting features to develop. For example, I created a sort of Google Calendar from scratch.
+* I'm still 100% remote and the most of my colleagues are in the same office in Ireland. In 2019, I spent a lot of time in Asia.
   * timezone diff is great in the morning because I can work without being polluted by Slack;
   * timezone diff can be tough... when I was in Bali (+8h), I had to end meetings at 1 AM 😬
   * timezone diff sometimes pushed me to do overwork.
@@ -116,10 +116,6 @@ I also went to Rodellar (Sierra de Guara, Spain), but it was for holidays.
 * ❌Read 2 books ~ *I read only one*.
 * ✅Explore Malaysian Islands
 * ✅Stop overworking
-
-
-<!-- TODO: Find Tweet 90days before NYE -->
-<!-- https://twitter.com/_maxpou/status/1176158709933674497 -->
 
 ## High-level 2020 goals
 

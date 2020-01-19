@@ -19,8 +19,8 @@ After 2 years as an expat in Dublin, I became a digital nomad. I now live where 
 I am currently a Senior Software Engineer at [VSware](http://vsware.ie/) where I am building software for education. I'm focusing on:
 
 * **🏗 Architecture**. Scaling application, organising workflows.
-* **🧙‍♂️ Simplify** complex process and make my co-worker's life easier.
-* **🚦 Test**. Defining strategies to **effectively** test a web app.
+* **🧙‍♂️ Simplifying** complex process and make my co-worker's life easier.
+* **🚦 Testing**. Defining strategies to **effectively** test a web app.
 * **💎 Code quality**. I ❤️ crafting code.
 * **🏎 Performances**. Because users want something fast!
 * **🗣 [Tech trainer](./speaking#trainings--workshop)** and **[public speaker](./speaking)**.
