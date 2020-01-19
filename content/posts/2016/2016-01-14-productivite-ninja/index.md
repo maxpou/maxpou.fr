@@ -4,6 +4,7 @@ title: Productivité Ninja !
 slug: productivite-ninja
 description: "Retour d'expérience sur la mise en oeuvre de certaines pratiques telles que les TODO list, pomodoro..."
 date: 2016-01-14
+language: fr
 tags: ["Productivity", "TimeManagement"]
 cover: ./abstract-5.jpg
 generate-card: false

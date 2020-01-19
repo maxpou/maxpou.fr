@@ -3,6 +3,7 @@ layout: post
 title: "Hadopi : fonctionnement et contournement"
 date: 2015-06-17
 slug: hadopi
+language: fr
 tags: [Hadopi]
 cover: ./tbp.jpg
 generate-card: false

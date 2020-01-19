@@ -3,6 +3,7 @@ layout: post
 title: PHP et Programmation fonctionnelle
 tags: ["PHP", "FunctionalProgramming"]
 date: 2016-12-11
+language: fr
 slug: programmation-fonctionnelle-php
 cover: ./banner.png
 generate-card: false

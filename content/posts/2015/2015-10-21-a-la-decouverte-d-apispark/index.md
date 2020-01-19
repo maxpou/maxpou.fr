@@ -5,6 +5,7 @@ description: "Retour d'expérience avec la plateforme APISpark"
 slug: a-la-decouverte-d-apispark
 date: 2015-10-21
 modified: 2015-10-21
+language: fr
 tags: ["REST", "APISpark", "Restlet"]
 cover: ./background.png
 generate-card: false

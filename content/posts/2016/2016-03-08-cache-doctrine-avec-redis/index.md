@@ -3,6 +3,7 @@ layout: post
 title: Utiliser Redis pour stocker le cache de Doctrine
 description: "Améliorer les performances de doctrine en utilisant son cache et en stockant les informations sur Redis"
 date: 2016-03-08
+language: fr
 slug: cache-doctrine-avec-redis
 tags: ["Symfony2", "Doctrine", "Redis"]
 cover: ./header.png

@@ -4,6 +4,7 @@ title: Atom, un éditeur qui vous veut du bien
 slug: atom
 description: "Retour d'expérience avec l'éditeur de texte Atom"
 date: 2015-08-14
+language: fr
 tags: ["Atom", "GitHub"]
 cover: ./atom-mark.png
 generate-card: false

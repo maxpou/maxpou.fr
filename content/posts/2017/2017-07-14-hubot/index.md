@@ -4,6 +4,7 @@ title: A la découverte d'Hubot
 tags: ["GitHub", "Bot"]
 date: "2017-07-14"
 slug: hubot
+language: fr
 cover: ./hubot_shema.jpg
 generate-card: false
 ---

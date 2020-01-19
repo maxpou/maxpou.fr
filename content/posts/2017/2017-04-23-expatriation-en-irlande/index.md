@@ -4,6 +4,7 @@ title: "Mon expat à Dublin"
 tags: ["Life"]
 slug: expatriation-en-irlande
 date: 2017-04-23
+language: fr
 cover: ./banner.jpg
 imageShare: ./expatriation-en-irlande-share.png
 ---

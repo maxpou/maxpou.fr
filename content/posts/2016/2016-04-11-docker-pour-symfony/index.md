@@ -2,6 +2,7 @@
 layout: post
 title: Une stack Docker pour votre application Symfony
 date: 2016-04-11
+language: fr
 slug: docker-pour-symfony
 tags: ["Docker", "Symfony2", "PHP"]
 cover: ./bg-intro.jpg
