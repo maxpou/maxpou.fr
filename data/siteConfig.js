@@ -78,12 +78,12 @@ module.exports = {
           url: 'https://github.com/maxpou',
         },
         {
-          label: 'LinkedIn',
-          url: 'https://www.linkedin.com/in/maxpou/',
-        },
-        {
           label: 'Twitter',
           url: 'https://twitter.com/_maxpou',
+        },
+        {
+          label: 'LinkedIn',
+          url: 'https://www.linkedin.com/in/maxpou/',
         },
         {
           label: 'Nomad List',
@@ -95,7 +95,7 @@ module.exports = {
         },
         {
           label: 'RSS',
-          url: 'https://www.maxpou.fr/rss.xml',
+          url: '/rss',
         },
       ],
     },

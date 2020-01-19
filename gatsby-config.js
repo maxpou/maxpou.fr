@@ -47,43 +47,77 @@ module.exports = {
           }
         `,
         feeds: [
-          {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
-                return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.excerpt,
-                  date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + '/' + edge.node.frontmatter.slug,
-                  guid: site.siteMetadata.siteUrl + '/' + edge.node.frontmatter.slug,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
-                })
-              })
-            },
-            query: `
-              {
-                allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                  filter: {fileAbsolutePath: {regex: "/content/posts/"}}
-                ) {
-                  edges {
-                    node {
-                      excerpt
-                      html
-                      frontmatter {
-                        title
-                        date
-                        slug
-                      }
-                    }
-                  }
-                }
-              }
-            `,
-            output: "/rss.xml",
-            title: "Maxence Poutord Blog RSS Feed",
-          },
+          getBlogFeed('eq: "en"', {
+            output: '/rss-en.xml',
+            title: 'Maxence Poutord • Maxpou Blog (EN)',
+          }),
+          getBlogFeed('ne: "en"', {
+            output: '/rss-fr.xml',
+            title: 'Maxence Poutord • Maxpou Blog (FR)',
+          }),
+          getBlogFeed(null, {
+            output: '/rss.xml',
+            title: 'Maxence Poutord • Maxpou Blog',
+          }),
         ],
       },
     },
   ],
+}
+
+function getBlogFeed(filter, overrides) {
+  const queryFilter = filter ? `language: {${filter}}` : ''
+
+  return {
+    serialize: ({ query: { site, allMarkdownRemark } }) => {
+      return allMarkdownRemark.edges.map(edge => {
+        const siteUrl = site.siteMetadata.siteUrl;
+        const postText = `
+          <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog at maxpou.fr. You can read it online by <a href="${siteUrl +
+            edge.node.frontmatter.slug}">clicking here</a>.)</div>
+        `;
+        let html = edge.node.html;
+        // Hacky workaround for https://github.com/gaearon/overreacted.io/issues/65
+        html = html
+          .replace(/href="\//g, `href="${siteUrl}/`)
+          .replace(/src="\//g, `src="${siteUrl}/`)
+          .replace(/"\/static\//g, `"${siteUrl}/static/`)
+          .replace(/,\s*\/static\//g, `,${siteUrl}/static/`);
+        return Object.assign({}, edge.node.frontmatter, {
+          description: edge.node.excerpt,
+          date: edge.node.frontmatter.date,
+          url: site.siteMetadata.siteUrl + '/' + edge.node.frontmatter.slug,
+          guid: site.siteMetadata.siteUrl + '/' + edge.node.frontmatter.slug,
+          custom_elements: [{ 'content:encoded': html + postText }],
+        })
+      })
+    },
+    query: `
+      {
+        allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___date] },
+          filter: {
+            fileAbsolutePath: {regex: "/content/posts/"}
+            frontmatter: { 
+              published: { ne: false } 
+              ${queryFilter}
+            }
+          }
+        ) {
+          edges {
+            node {
+              excerpt(pruneLength: 250)
+              html
+              frontmatter {
+                title
+                date
+                slug
+              }
+            }
+          }
+        }
+      }
+    `,
+    ...overrides,
+  }
 }
