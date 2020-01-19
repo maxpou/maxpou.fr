@@ -4,8 +4,10 @@ slug: git-cheat-sheet
 language: en
 date: 2019-11-28
 cover: ./git-toolbox.png
-tags: 
-    - Git
+tags: ["Git"]
+translations:
+  - link: 'https://qiita.com/rana_kualu/items/42f8b36974eb07e2abb1'
+    language: 'Japanese'
 ---
 
 If you find git confusing, I created this little cheat sheet! Please, note that I voluntary skipped the basic commands like `git commit`, `git pull/push`... This cheat sheet is intended for advanced usage of git.
