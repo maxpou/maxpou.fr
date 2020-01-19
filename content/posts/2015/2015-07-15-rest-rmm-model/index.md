@@ -2,6 +2,7 @@
 layout: post
 title: Non, votre API n'est pas REST !
 date: 2015-07-15
+language: fr
 slug: rest-rmm-model
 tags: [REST]
 cover: ./abstract-3.jpg
