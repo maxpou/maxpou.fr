@@ -28,7 +28,7 @@ The idea behind this post is to show you how to generate preview images like thi
 
 Social share images are used by social media (Twitter/Facebook/LinkedIn...) and also some conversational applications (Slack/Telegram/WhatsApp/...).
 
-Before we start, keep in mind that Gatsby is static website generator. We can't generate image *"on the fly"* as we do with other languages (i.e. PHP...). 
+Before we start, keep in mind that Gatsby is static website generator. We can't generate images *"on the fly"* as we do with other dynamic languages (i.e. PHP...). 
 
 ## Step 1: create the preview page
 
