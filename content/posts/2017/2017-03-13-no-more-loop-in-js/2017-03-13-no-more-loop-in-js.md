@@ -9,10 +9,10 @@ cover: ./banner.jpg
 generate-card: false
 ---
 
-Few months ago, I start moving my Javascript code from a Oriented Object/unorganized code to something much more close to Functional Programming.
+A few months ago, I start moving my Javascript code from an Oriented Object/unorganized code to something much more close to Functional Programming.
 In this paradigm, I found interesting concepts such as immutability and high order functions...
 
-And few days ago, colleague submit a pull request with a javascript loop (plain old for). And I suddenly remember how far was my last loop in Javascript...
+And later on, colleague submitted a pull request with a javascript loop (plain old "for"). I suddenly remember how far was my last loop in Javascript...
 
 Let's start from the beginning, with the following data and a simple function:
 
@@ -55,14 +55,14 @@ for (var i=0; i < heroCount; i++) {
 }
 ```
 
-There are 3 problems here:
+I see 3 problems here:
 
-* after my loop, my data are altered. After the loop, heroes variable doesn't represent heroes anymore. It breaks the S from SOLID.
-* this code itsn't thread safe. What happen if you want to use your heroes during the loop? With this kind of code, it can be risky to parallelize tasks.
-* there are already 2 levels of indentation. Adding a third rule will probably add another level of indentation.
+* after my loop, my data are altered. After the loop, the `heroes` variable doesn't represent heroes anymore. It breaks the S from SOLID.
+* this code isn't "thread-safe". What happens if you want to use your heroes during the loop? With this kind of code, it can be risky to parallelize tasks.
+* there are already 2 levels of indentation. Adding the third rule will probably add another level of indentation.
 
 We call this approach: **imperative programming**. We explicitly declare **how** to get what we want, step by step.  
-By opposition of this approach, we have the **declarative programming**. It consists in focusing on the **what**, without specifying how to get it...
+Otherwise, we have the **declarative programming**. It consists of focusing on the **what**, without specifying how to get it...
 
 
 ![smash bross recursion](./mario.gif)
@@ -75,7 +75,7 @@ In a few words:
 * [Array.map](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/map): browse an array and apply on each element;
 * [Array.filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter): filter an array.
 
-Now the same code with this two high order functions:
+Now the same code with these two high order functions:
 
 ```js
 var squadAlpha = heroes
@@ -113,8 +113,8 @@ Now hero object isn't changed and heroesExtended is a copy of hero which contain
 
 ## Embrace the power of ES6 (or es2015)
 
-First of all, [it is recommended](https://medium.com/javascript-scene/javascript-es6-var-let-or-const-ba58b8dcde75#.vr0mzbszd) to drop the `var` keyword in favor of `const`.  
-Then, if you think that anonymous function reduce visibility and are redundant, I've a good new! ES6 bring something call [Arrow functions](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions), a shortness way to write functions.
+First of all, [it is recommended](https://medium.com/javascript-scene/javascript-es6-var-let-or-const-ba58b8dcde75#.vr0mzbszd) to drop the `var` keyword in favour of `const`.  
+Then, if you think that anonymous function reduces visibility and are redundant, I've got good news! ES6 bring something call [Arrow functions](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions), a shortness way to write functions.
 
 ```js
 const squadAlphaStr = heroes
@@ -141,10 +141,10 @@ const squadAlphaStr = heroes
 // ["😇 Wolverine (Marvel)", "😇 Deadpool (Marvel)", "😇 Charles Xavier (Marvel)", "😇 Legolas (Tolkien)", "😇 Gandalf (Tolkien)"]
 ```
 
-Now this code is **trade safe**, the **initial data aren't altered** and over all: it's **much more readable**. ❤️️
+Now, this code is **thread-safe**, the **initial data aren't altered** and overall: it's **much more readable**. ❤️️
 
-**Note:** with arrow function, you will also forget this ugly hack: `var self = this`.
-In fact, it did not bind the `this`. When you write function with the `function` keyword, this function redefines 4 things (this, arguments, new.target and super). With the arrow function, it redefines none of them.
+**Note:** with an arrow function, you can also forget this ugly hack: `var self = this`.
+In fact, it did not bind the `this`. When you write a function with the `function` keyword, this function redefines 4 things (this, arguments, new.target and super). With the arrow function, it redefines none of them.
 
 ## Not enough?
 
