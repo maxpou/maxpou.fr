@@ -12,7 +12,7 @@ tags:
 
 > TL;DR: Generating share images can be done in 3 steps:  
 > 1. create a preview page;  
-> 2. screenshot it (with pupetter);  
+> 2. screenshot it (with Pupetter);  
 > 3. add the image in the page's metatags.  
 
 

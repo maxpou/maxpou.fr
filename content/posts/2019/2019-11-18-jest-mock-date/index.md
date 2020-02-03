@@ -44,14 +44,14 @@ If you want to, you gonna have to mock `Date.now()` and put a default one.
 ```js
 // your-test.spec.js
 
-const RealDate = Date
+const RealNow = Date.now
 
 beforeAll(() => {
   global.Date.now = jest.fn(() => new Date('2019-04-07T10:20:30Z').getTime())
 })
 
 afterAll(() => {
-  global.Date = RealDate
+  global.Date.now = RealNow
 })
 ```
 
@@ -84,4 +84,7 @@ module.exports = moment;
 
 With this solution, you don't need `beforeAll()`/`afterAll()` listener. This mock will be effective for all tests.
 And, every time `moment()` is called, return date will be the same 🎉
+
+> Big shout out to Avalander for pointing out some errors.
+> https://dev.to/avalander/comment/ibc7
 
