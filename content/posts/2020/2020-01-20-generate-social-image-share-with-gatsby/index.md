@@ -12,7 +12,7 @@ tags:
 
 > TL;DR: Generating share images can be done in 3 steps:  
 > 1. create a preview page;  
-> 2. screenshot it (with Pupetter);  
+> 2. screenshot it (with Puppeteer);  
 > 3. add the image in the page's metatags.  
 
 
@@ -86,7 +86,7 @@ After that, the preview should be accessible at `http://localhost:8000/your-arti
 
 ## Step 2: screenshot the preview
 
-To take a screenshot, I use pupetter. Here's a part of the script I am using to take a screenshot:
+To take a screenshot, I use Puppeteer. Here's a part of the script I am using to take a screenshot:
 
 ```js
 // scripts/generatePostPreviewImages.js

@@ -30,15 +30,18 @@ Just by reading the name of the name of the file and the 4 descriptions, I alrea
 Also, if the *"should hide non-available products"* test breaks, I know exactly where to start my investigations.
 
 
-## #2 - Keep it small
+## #2 - Isolate your tests
 
-Small tests are **easier to understand and easier to maintain**.
+![side effects](./side-effects.gif)
 
-One of the first blocker for not writing tests is the time-consuming aspect. If it takes a few minutes to understand what the purpose of the test is, there's something wrong. And if the test fails in the future, next dev will be probably more inclined to remove this test. 
+To better organise your test file, you can group related assertions under the same test (= the same `it()`/`test()`). Try to keep your reasonably small. Smaller tests are **easier to understand and easier to maintain**.
 
-Also, by reducing the size of your test, you **enforce your test's isolation**. So you're sure not to test the same thing many times.
+Sometimes, we need to test a full process. Like a payment flow where you have a few different steps *(i.e. payment info > user address > confirmation)*.
 
-**Exception**: if you want to test a process (like the full payment flow).
+If you hesitate between creating one big test vs one test per step, where "step 2" depends on "step 1", go for the first option. It's OK to have some longer tests.
+
+Sharing a state between tests is a bad idea. They're hard to debug and soon or later, you will face weird issues caused by side effects.
+**Always keep your tests isolated**. Tests should not depend on each other.
 
 
 ## #3 - Keep it flat
@@ -92,7 +95,7 @@ What's wrong here?
 > The more your tests resemble the way your software is used, the more confidence they can give you.  
 > — Kent C. Dodds
 
-Let say you want to login on your favourite social network. You fill your username and your password. Then what? Do you search in the DOM for the button with `id="login-form-btn"`? or do you click on the button called "Log In"?
+Let say you want to login on your favourite social network. You fill your username and your password. And after that: do you search in the DOM for the button with `id="login-form-btn"`? or do you click on the button called "Log In"? Why do you test differently?
 
 If the keyword "Log In" is already present on the page, you can query your item with accessibility attribute *(i.e. `aria-label`, ...)*. In this way, you will enforce your component accessibility.
 
@@ -147,13 +150,13 @@ expect(wrapper.prop('aria-label').toEqual('liked')
 expect(spy.mock.calls[0][0]).toBe(true)
 ```
 
-## #9 - Automate everything
+## #9 - Always green
 
 ![Bender kill all human](./kill-all-humans.jpg)
 
-*I remember when I joined a company a few years ago. On Day One, I couldn't start the application. After investigations, it turns out someone forgot a `;` in a SQL file and pushed it to master. The application was broken because of a god damn semicolon. With basic tooling, those kinds of problems should never happen.*
+*I remember when I joined a company a few years ago. On Day One, I couldn't start the application. After investigations, it turns out someone had forgotten a `;` in a SQL file and pushed it to master. The application was broken because of a god damn semicolon. With basic tooling, those kinds of problems should never happen.*
 
-If you ask a dev to run the run manually the test before opening a pull request, it's not gonna work. Humans are fallible. Plus, this is a dumb job. Better delegate this job to a robot, they are cheap and never lie.
+If you ask a dev to run the run manually the test before opening a pull request, it's not gonna work. Humans are fallible. Plus, this is a dumb job. Better delegate this job to a robot, they are cheap and never lie. Automated jobs will ensure your tests are always green.
 
 Because I don't even trust myself, all of my side projects have CI enabled by default. The only way for me to merge my own code is [to open a pull request and get a green build](https://github.com/maxpou/gatsby-starter-morning-dew/pulls?q=is%3Apr+is%3Aclosed).
 
@@ -163,7 +166,7 @@ Because I don't even trust myself, all of my side projects have CI enabled by de
 > "When a measure becomes a target, it ceases to be a good measure"  
 > － Goodhart's law
 
-I see a lot of people writing *Coverage Driven Test™️*. Because their manager asked to, or because they want to show off with a "100% code coverage" on the GitHub repository.
+I see a lot of people writing *Coverage-Driven Test™️*. Because their manager asked to, or because they want to show off with a "100% code coverage" on the GitHub repository.
 
 In my opinion, this is a really bad idea. And for a few reasons:
 
