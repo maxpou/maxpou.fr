@@ -35,6 +35,15 @@ I am currently a Senior Software Engineer at [VSware](http://vsware.ie/) where I
 * 👨🏼‍💻 **Play with code**. Sometimes, it ends up in an open source contribution or a blog post!
 
 
+## Why this blog?
+
+I started this blog in 2014 because I wanted to keep track of my experiements. At the begining, it was all private. I learnt a lot on the internets so, I realised I had to give something back to the community. That's why, I decided to make it public in order to share my knowledge to the world.
+
+My site has no ads, sponsored content or bullshit. It is my blog, my ideas.
+
+If you enjoyed my content, please let me know :) You can also [follow me on Twitter (@_maxpou)](https://twitter.com/_maxpou).
+
+
 ## Contact
 
 Do you have a question regarding one of my projects? a blog post? ...or something else?  

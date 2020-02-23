@@ -1,5 +1,5 @@
 ---
-title: 10 tips for writing better tests
+title: 10 Tips for Writing Better Tests
 slug: 10-tips-write-better-tests
 date: 2020-02-04
 language: en
