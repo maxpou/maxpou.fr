@@ -4,7 +4,7 @@ slug: busting-nomad-myths
 language: en
 date: 2019-06-27
 cover: ./cover.jpeg
-tags: ["Life"]
+tags: ["Life", "remote"]
 translations:
   - link: './busting-nomad-myths-fr'
     language: 'French'

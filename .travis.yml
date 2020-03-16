@@ -7,7 +7,7 @@ dist: trusty
 
 script:
   - yarn install
-  - yarn lint
+  - yarn format
   - yarn build
 
 deploy:

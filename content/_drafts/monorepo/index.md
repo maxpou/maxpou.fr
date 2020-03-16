@@ -43,7 +43,7 @@ a plain old ctrl + F is enough
 **Tip:** I use [semantic commit]() and always put in parenthesis the name of the package. So if I want to retrieve one old commit, it's super easy
 ```bash
 # will list all feature added in package-B
-git log --all --grep='glogg --grep "feat(package-B):"'
+git log --all --grep="feat(package-B):"
 ```
 
 * authorization. When you set user permission on GitLab/GitHub/etc., it's for the whole repo. You can't manage user permission per sub-package.
