@@ -5,8 +5,7 @@ language: fr
 date: 2020-01-18
 unlisted: true
 cover: ./cover.jpeg
-imageShare: ./busting-nomad-myths-share.png
-tags: ["Life"]
+tags: ["Life", "remote"]
 translations:
   - link: './busting-nomad-myths'
     language: 'English'
