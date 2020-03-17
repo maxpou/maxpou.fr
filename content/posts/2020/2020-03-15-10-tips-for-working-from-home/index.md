@@ -14,16 +14,16 @@ I’m working 100% remotely since October 2018. Here are my tips to avoid the mo
 
 ## Workspace
 
-### 1. 🛌 NEVER work from your bed.
+### 1. 🛌 NEVER work from your bed
 I know how comfy and warm a bed can be. This is not a reason to work from it. If you start to establish a mental association between your sleep and your work, the quality of your sleep will decrease. Also, you’ll start to think more and more about work when you are in your bed.
 
 For the reasons mentioned above, also avoid working from your bedroom. Instead, you can use a spare room. If you don’t have one, you can create an "office corner" in the kitchen.
 
 
 ### 2. 🪑 Find the best workspace
-Working from the couch or a long/armchair can be ok for a meeting or a 1,5h working session. It’s not viable for more. Otherwise, you will end up with [RSI](https://en.wikipedia.org/wiki/Repetitive_strain_injury)/back pain/etc. The strict minimum to have a decent working session is a table, a chair and some natural light. I also found myself better with a laptop stand + external keyboard&trackpad. Also, don’t neglect the decoration. Add plants!
+Working from the couch or a long/armchair can be ok for a meeting or a 1,5h working session. It’s not viable for more. Otherwise, you will end up with [<abbr title="Repetitive Stress Injury">RSI</abbr>](https://en.wikipedia.org/wiki/Repetitive_strain_injury)/back pain/etc. The strict minimum to have a decent working session is a table, a chair and some natural light. I also found myself better with a laptop stand + external keyboard&trackpad. Also, don’t neglect the decoration. Add plants!
 
-If you want some inspiration, [here's my setup](/uses).
+If you want, [here's my setup](/uses).
 
 **Note:** if the virus spread were not a thing, I’d recommend you to find some cafe to work from. Having a group of people to work with once a week is also super cool.
 
@@ -35,12 +35,12 @@ Here are some counterspells:
 * install a blocker and disallow social media from 9 am to 5 pm;
 * schedule deep work sessions and turn off slack. When I was in Asia (7-8H ahead of my coworkers), I used to do 90% of my day job in the morning. If you wonder how, the answer is simple: nobody was connected. This tool can be good for communication but it’s a productivity annihilator.
 
-**Note:** your boss might expect you to keep the same level of productivity while working remotely. To be brief: it’s impossible. You’re going to introduce a wholesale change in the way you and your teamwork, your productivity will be impacted. Plus some people also have to manage kids, anxiety...
+**Note:** your boss might expect you to keep the same level of productivity while working remotely. To be brief: [it’s impossible](https://twitter.com/dhh/status/1239626937577828352). You’re going to introduce a wholesale change in the way you and your teamwork, your productivity will be impacted. Plus some people also have to manage kids, anxiety...
 
 ## Work
 
 ### 4. ✋ Know when to stop
-Sometimes we have close to zero output of our workday. As a software engineer, I often work all day on a bug and solution results in a one-line fix. You feel a bit guilty but it's ok to do so. Because in an office, *people see you working*.
+Sometimes we have close to zero output of our workday. As a software engineer, I often work all day on a bug and the solution results in a one-line fix. You feel a bit guilty but it's ok to do so. Because in an office, *people see you working*.
 
 **It does not have to be different when you're working remotely**. You don't have to work more just because you think you should have done more. Have some rest, you will do better tomorrow! 💪
 
@@ -65,9 +65,9 @@ Just make sure you don't have a bottle of beer next to you. If you're live on th
 ### 7. ☑️ Have a checklist of things to do
 Balancing time is hard. You can write down your MITs (Most Important Things). 
 
-MIT helped me a lot to organise my workday and also tell my manager what I've done over the last week. I've to admit that I haven't used it for a long time.
+MIT helped me a lot to organise my workday and also tell my manager what I've done over the last week. Also, it feels good to check boxes. At the end of the day, you know what you achieved.
 
-If you find it hard to manage your priorities, you can use the Eisenhower Matrix. It's my go-to tool when it comes to priorities.
+If you find it hard to manage priorities, you can use the [Eisenhower Matrix](https://www.eisenhower.me/eisenhower-matrix/). It's my go-to tool when it comes to priorities.
 
 ## Life
 
@@ -80,7 +80,7 @@ Also, don't hesitate to take a five-minute break to step away from your laptop. 
 
 
 ### 9. 🍃 Take care of yourself
-This one might sound stupid but some people slowly forget some basics things in life like having a shower, eating healthy, doing exercise...
+This one might sound stupid but some people slowly forget some basics things in life like having a shower, eating healthy, doing exercise... Doing a meeting without a pant can be fun. But it shouldn't be a habit.
 
 We're not (yet) in a post-apocalyptic world. Life can't be resumed to sleep-work-eat-work-netflix-sleep. Repeat.
 
