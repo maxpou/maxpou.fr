@@ -5,6 +5,10 @@ date: 2020-03-15
 language: en
 cover: ./cover.jpeg
 tags: ["remote"]
+translations:
+  - link: './10-tips-for-working-from-home-fr'
+    language: 'French'
+
 ---
 
 Because of the Coronavirus, a lot of people are going to experiment with the “home office”. Working From Home can be great but it can also be terrible if you don’t follow the right habits from the start.
@@ -33,7 +37,7 @@ When no one is watching you, it might be tempting to waste your time on your pho
 Here are some counterspells:
 * put your phone in silent mode (or Do Not Disturb mode);
 * install a blocker and disallow social media from 9 am to 5 pm;
-* schedule deep work sessions and turn off slack. When I was in Asia (7-8H ahead of my coworkers), I used to do 90% of my day job in the morning. If you wonder how, the answer is simple: nobody was connected. This tool can be good for communication but it’s a productivity annihilator.
+* schedule deep work sessions and turn off Slack. When I was in Asia (7-8H ahead of my coworkers), I used to do ~85% of my day job in the morning. If you wonder how, the answer is simple: nobody was connected. This tool can be good for communication but it’s a productivity annihilator.
 
 **Note:** your boss might expect you to keep the same level of productivity while working remotely. To be brief: [it’s impossible](https://twitter.com/dhh/status/1239626937577828352). You’re going to introduce a wholesale change in the way you and your teamwork, your productivity will be impacted. Plus some people also have to manage kids, anxiety...
 
@@ -80,7 +84,7 @@ Also, don't hesitate to take a five-minute break to step away from your laptop. 
 
 
 ### 9. 🍃 Take care of yourself
-This one might sound stupid but some people slowly forget some basics things in life like having a shower, eating healthy, doing exercise... Doing a meeting without a pant can be fun. But it shouldn't be a habit.
+This one might sound stupid but some people slowly forget some basics things in life like having a shower, eating healthy, doing exercise... Doing a meeting without a pant is fun once or twice. But it shouldn't be a habit.
 
 We're not (yet) in a post-apocalyptic world. Life can't be resumed to sleep-work-eat-work-netflix-sleep. Repeat.
 
