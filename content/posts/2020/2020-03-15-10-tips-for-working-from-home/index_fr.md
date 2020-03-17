@@ -38,7 +38,7 @@ Quand personne ne vous regarde, on vite fait de procrastiner sur les reseaux soc
 Voici quelques contre-sorts:
 * mettez votre téléphone en mode silencieux (ou en mode *"ne pas déranger"*);
 * installer un bloqueur et interdire les médias sociaux de 9 à 17h;
-* planifier des sessions de travail approfondies et désactiver Slack. Quand j'étais en Asie (7-8H avant mes collègues), je produisait ~85% de mon travail jour le matin. Si vous vous demandez comment, la réponse est simple: tous mes collegues dormaient. Les messageries instantannees c'est un outil genial pour communiquer. Mais c'est un désastre pour la productivité.
+* planifier des sessions de travail approfondies et désactiver Slack. Quand j'étais en Asie (7-8H de décalage), je produisait ~85% de mon travail jour le matin. Si vous vous demandez comment, la réponse est simple: tous mes collegues dormaient. Les messageries instantannees c'est un outil genial pour communiquer. Mais c'est un désastre pour la productivité.
 
 **Note aux managers:** 
 n'attendez pas à ce que votre équipe conserve sa vélocité. [C'est impossible](https://twitter.com/dhh/status/1239626937577828352). Oui, pour beaucoup le télétravail est un vecteur de productivité. Mais quand on introduit un changement radical dans sa façon de travailller (au niveau de la personne et de l'équipe), la productivité en est forcement impactée. C'est comme ca. **Travailler "100% remote", ce n'est pas comme travailler à la maison une fois tous les 15 jours**. De plus, certaines personnes doivent également gérer les enfants qui courent partout dans la maison, l'anxiété, etc.
