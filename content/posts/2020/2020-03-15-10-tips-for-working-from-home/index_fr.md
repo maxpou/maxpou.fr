@@ -101,9 +101,9 @@ Le bureau à domicile supprime tous les temps de trajets. Ce temps c'est le vôt
 
 Voici ma morning routine: *(c'est de l'à-peu-près)*
 * 07h15 réveil (après 8h de sommeil)
-* 07h30 Twitter + Mail + checker les groupes groupes Telegram & WhatsApp
+* 07h30 Twitter + Mail + checker les groupes Telegram & WhatsApp
 * 07h45 faire quelques exercices + se préparer
-* 08h00 préparer le petit déjeuner (pain grillé / salades de fruits 👨‍🍳) + boire mon café + regarder la vidéo / lire un article de blog
+* 08h00 préparer le petit déjeuner (avo toast / salades de fruits 👨‍🍳) + boire mon café + regarder une vidéo / lire un article de blog
 * 08h30 commencer à travailler
 
 *Et quand j'ai besoin de plus de sommeil, je recommence plus tard. Je ne commence jamais à travailler sans avoir d'abord du temps pour moi.*

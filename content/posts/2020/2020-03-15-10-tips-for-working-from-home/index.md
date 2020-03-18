@@ -39,7 +39,7 @@ Here are some counterspells:
 * install a blocker and disallow social media from 9 am to 5 pm;
 * schedule deep work sessions and turn off Slack. When I was in Asia (7-8H ahead of my coworkers), I used to do ~85% of my day job in the morning. If you wonder how, the answer is simple: nobody was connected. This tool can be good for communication but it’s a productivity annihilator.
 
-**Note:** your boss might expect you to keep the same level of productivity while working remotely. To be brief: [it’s impossible](https://twitter.com/dhh/status/1239626937577828352). You’re going to introduce a wholesale change in the way you and your teamwork, your productivity will be impacted. Plus some people also have to manage kids, anxiety...
+**Note:** your boss might expect you to keep the same level of productivity while working remotely. To be brief: [it’s impossible](https://twitter.com/dhh/status/1239626937577828352). You’re going to introduce a wholesale change in the way you and your team work, your productivity will be impacted. Plus some people also have to manage kids, anxiety...
 
 ## Work
 
@@ -62,12 +62,13 @@ People can blame you if you don't communicate. But if you overcommunicate, no on
 
 
 ### 6. 📽 Turn on your webcam during meetings
-Enabling the camera removes a lot of stupid problems like: "is he serious or is he joking?". Also, it makes the conversation more human.
+Enabling the camera removes a lot of stupid problems like: "is he serious or is he joking?". Also, it makes the conversation more human. What I mean is it can also reduce the feeling of isolation that is present in many remote workers. You may have people by your side, but not everyone have. Maybe your face is the only face your colleague will see today. Think about it.
+
 Just make sure you don't have a bottle of beer next to you. If you're live on the TV, [put the kid away](https://www.youtube.com/watch?v=Mh4f9AYRCZY&feature=emb_title) ;)
 
 
 ### 7. ☑️ Have a checklist of things to do
-Balancing time is hard. You can write down your MITs (Most Important Things). 
+Balancing time is hard. You can write down your MITs (Most Important Things). It's a mix between a daily log and a todo list.
 
 MIT helped me a lot to organise my workday and also tell my manager what I've done over the last week. Also, it feels good to check boxes. At the end of the day, you know what you achieved.
 
