@@ -73,8 +73,9 @@ function getBlogFeed(filter, overrides) {
       return allMarkdownRemark.edges.map(edge => {
         const siteUrl = site.siteMetadata.siteUrl
         const postText = `
-          <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog at maxpou.fr. You can read it online by <a href="${siteUrl +
-            edge.node.frontmatter.slug}">clicking here</a>.)</div>
+          <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog at maxpou.fr. You can read it online by <a href="${
+            siteUrl + edge.node.frontmatter.slug
+          }">clicking here</a>.)</div>
         `
         let html = edge.node.html
         // Hacky workaround for https://github.com/gaearon/overreacted.io/issues/65
