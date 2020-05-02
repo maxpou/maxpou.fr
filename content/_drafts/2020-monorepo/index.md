@@ -34,7 +34,7 @@ a plain old ctrl + F is enough
 
 ## Cons
 
-### 🍴 Git & code hosting platforms (GitLab/Hub...)
+### 🍴 Git & code hosting platforms (GitLab/GitHub...)
 
 * Clean usage of git: squash commit + forks.
   * unreadable/unusable git log.
@@ -65,6 +65,7 @@ git log --all --grep="feat(package-B):"
 
 * if you work with 10% of the codebase, you probably don't care about the 90% remaining
 
+* deployment problem: if 2 team bump versions and one version is refused by QA, can block other team to release
 
 ## Tools (JavaScript)
 

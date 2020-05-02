@@ -17,6 +17,10 @@ This page is somewhat inspired by [Wes Bos' Uses](https://wesbos.com/uses/) page
 * [Roost Laptop Stand](https://www.therooststand.com/) *(note: [I don't use it when I work from a coffee shop!](https://twitter.com/NikkitaFTW/status/1139607268452777984))*. 
 * Magic keyboard 2 and the Magic trackpad 2
 * Notepad where [I write my daily MIT](https://about.gitlab.com/2018/05/17/eliminating-distractions-and-getting-things-done/#2-write-down-your-mits)
+* Xiaomi 9t Pro (and a old Huawei as a back up)
+* Sony MDR 1000X. A noise cancelling headphone with 2 modes: wired or wiredless (bluetooth). I also have some [Airpods](https://www.apple.com/fr/airpods-2nd-generation/).
+* Travel&daily bag is a [Minaal Carry-on 2.0](https://www.minaal.com/products/minaal-carry-on-bag/?variant=12494163140) (with packing cubes). I love it!
+* [Xbox Elite Controller Series 2](https://www.xbox.com/en-IE/accessories/controllers/elite-wireless-controller-series-2). For gaming!
 
 As a digital nomad, I don't have space for a desk on my backpack! ;)
 
@@ -75,19 +79,21 @@ I also use these applications:
 * [ProtonVPN](https://protonvpn.com) is my VPN and I happily pay for it!
 * [Giphy Capture](https://giphy.com/apps/giphycapture) is my go-to screen recording when I need to share something with my colleagues. I found it simple to use.
 * OBS - screen recording but for a longer video. I don't use it much...
-* [Sequel Pro](https://www.sequelpro.com/) - when I need a GUI for MySQL.
+* [Sequel Pro](https://www.sequelpro.com) - when I need a GUI for MySQL.
+* [Transmission](https://transmissionbt.com) - for torrents ;)
 
 
 ## Blogging
 
 This site made with Gatsby.js and [gatsby-starter-morning-dew](https://github.com/maxpou/gatsby-starter-morning-dew). I use these applications to help me write:
 
-* [Grammarly](https://app.grammarly.com/) - Helps me to remove typos / proofread my posts.
+* [Grammarly](https://app.grammarly.com/) - Helps me to remove typos / proofread my posts. 
+* [Google Docs](http://docs.new/) - Same as Grammarly, I use it to fix my typos/grammar.
 * [Hemingway](http://www.hemingwayapp.com) - "Hemingway App makes your writing bold and clear."
 * [Squoosh](https://squoosh.app) - Image compression
 * [Remove.bg](https://www.remove.bg) - Remove background on png
 
+## Gaming
 
-## Other Gear
-
-Having a good backpack is essential when you travel the most of your time. I use the [Minaal Carry-on 2.0](https://www.minaal.com/products/minaal-carry-on-bag/?variant=12494163140) (with packing cubes). I love it!
+* I have a dual boot with Windows 10 so I can play Age Of Empire 2 DE on my mac 😊
+* [GeForce Now](https://www.nvidia.com/en-us/geforce-now/) and [XCloud (Beta test)](https://www.xbox.com/en-IE/xbox-game-streaming/project-xcloud) for cloud gaming.
