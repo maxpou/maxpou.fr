@@ -1,7 +1,19 @@
+---
+title: "Does Monorepo worth the trouble?"
+slug: monorepo-worth-trouble
+language: en
+date: 2020-05-30
+cover: ./cover.jpeg
+tags: 
+    - Architecture
+---
+
+
+
 # Does Monorepo worth the trouble?
 
 Trends today is to splits application. Microservices, microFrontends...  
-<!-- a contrecourant --> some companies had decided to put multiple application/libraries under the same git repository.
+against this trend, some companies had decided to put multiple application/libraries under the same git repository.
 
 
 ## Pros
@@ -67,6 +79,11 @@ git log --all --grep="feat(package-B):"
 
 * deployment problem: if 2 team bump versions and one version is refused by QA, can block other team to release
 
+
+### Coupled dependencies
+
+
+
 ## Tools (JavaScript)
 
 You might have heard about git submodules functionnality. 
@@ -75,7 +92,9 @@ But generally speaking, please don't use them for a monorepo. It
 
 Lerna combined with Yarn workspaces is a great combo.
 
+Slack integration is a must i.e.
+> Released @company/common-components, new version: 1.21.0
 
 ## Conclusion
 
-Overall I love monorepo. But it can become your worse nightmare if you don't follow simple rules like a good usage of git or
+Overall I love monorepo. But it can become your worse nightmare if you don't follow simple rules like a good usage of git or if you have bad tools

@@ -1,8 +1,8 @@
 ---
-title: "async/await without try..catch"
+title: "async/await without try..catch!"
 slug: async-await-without-try-catch
 language: en
-date: 2020-04-27
+date: 2020-05-25
 cover: ./cover.jpeg
 tags: 
     - JavaScript
@@ -45,9 +45,7 @@ Now in your code, you can remove those `try..catch` and replace them with the fo
 ```js
 import { to } from 'utils/async-utils';
 
-const [err, response] = await to(
-  http.get('https://api.github.com/users/maxpou')
-)
+const [err, response] = await to(http.get('https://api.github.com/users/maxpou'))
 
 if (err) {
   // error handling
@@ -65,9 +63,7 @@ In my actual company, we heavily rely on this wrapper. One day, a dev tried to d
 
 ```js
 // ⚠️ this won't works! ⚠️
-const [err, { data }] = await to(
-  http.get('https://api.github.com/users/maxpou')
-)
+const [err, { data }] = await to(http.get('https://api.github.com/users/maxpou'))
 ```
 
 In case of an error, this code won't works. You will have `Cannot read property 'data' of null`. You can destructure if it's not defined, even if you don't use it!
