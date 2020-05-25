@@ -1,5 +1,5 @@
 ---
-title: "Code Coverage: The Great Illusion"
+title: "Why you shouldn't pay too much attention to your code coverage"
 slug: code-coverage
 date: 2020-05-04
 language: en
@@ -7,8 +7,9 @@ cover: ./cover.jpg
 tags: ["Testing", "JavaScript"]
 ---
 
+*Edit 25/05/2020: The title of this article has been edited.*
 
-The company I'm working for recently set a code coverage rule requirement. I'm strongly against this and I believe this metric should never be used as a target. But first, let's understand how code coverage works under the hood.
+The company I'm working for recently set a code coverage rule requirement.  Although I believe tests improve the software quality and help developers to write code with confidence, I'm strongly against this coverage rules. I believe this metric should never be used as a target. But first, let's understand how code coverage works under the hood.
 
 *This article is intended for web application testing. Not for a library (open source or not).*
 
@@ -137,7 +138,7 @@ Here are a few example of low quality tests:
   }
   ```
 * [implementation detail](/10-tips-write-better-tests#8---avoid-implementation-detail) a.k.a. tests that result with false positives and false negatives. You have a lot of them when you search for react/vue components on GitHub;
-* reducing code lisibility when code cannot be tested. Less lines of code === less uncovered percentage. You can also write more verbose code on the covered part to gain even more percent.
+* reducing code readability when code cannot be tested. Less lines of code === less uncovered percentage. You can also write more verbose code on the covered part to gain even more percent.
   ```js
   // given generatePdf() is hard to test...
   const filename = `${user.name}-${user.lastname}.pdf`
@@ -169,9 +170,9 @@ Of course not!
 
 Sometimes, *but not always*, Code Coverage can help to highlight untested parts of an application. But it's just a metric. So please, use it as a metric, as a tool to help you to take the right decision. Not the opposite. And stop writing *Coverage-Driven Test™️* 🙏
 
-**Using a metric as a target is ALWAYS a bad idea**.
+**Using a metric as a target is a bad idea**.
 * Evaluate developers velocity with number of commit / day and they will add 30 commits per pull request;
 * Evaluate a team velocity based on the number of lines and they will abuse from auto generated code;
 * Evaluate a code quality with the usage of design pattern/code complexity and we will ends up with over complicated code (you can have a look at the famous [FizzBuzzEnterpriseEdition repository](https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition))
-* Evaluate a code quality with code coverage and you will ends up with all the things I mentionned before.
+* Evaluate a code quality with code coverage and you will ends up with all the things I mentioned before.
 * Etc.
