@@ -32,6 +32,10 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {},
+    },
+    {
       resolve: `gatsby-plugin-feed`,
       options: {
         query: `
