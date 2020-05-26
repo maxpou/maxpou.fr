@@ -8,7 +8,6 @@ cover: ./abstract-1.jpg
 generate-card: false
 tags: 
     - Symfony2
-    - CLI
     - PHP
 ---
 

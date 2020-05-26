@@ -6,6 +6,7 @@ date: 2016-08-19
 language: en
 generate-card: false
 cover: ./header.jpg
+tags: ["architecture"]
 ---
 
 First time I was using PHP Mess Detector (a PHP Quality Tool), I was very surprise. Because, when I type an **Else expression, it raises an error** which it said: *"An if expression with an else branch is never necessary"*. What the f***, I have never seen something like this before.  

@@ -6,14 +6,13 @@ slug: a-la-decouverte-d-apispark
 date: 2015-10-21
 modified: 2015-10-21
 language: fr
-tags: ["REST", "APISpark", "Restlet"]
+tags: ["Tool", "REST"]
 cover: ./background.png
 generate-card: false
 ---
 
 [TL;DR](#points-forts)
 
-# A la découverte d'APISpark
 
 J'ai découvert cet outil suite à la présentation de [@jplegoff](https://twitter.com/jplegoff) lors d'un instant technique chez Conserto.
 [APISpark](http://restlet.com/products/apispark/) est une plateforme *as a service* créé par Restlet, permettant à n'importe qui de fournir en toute simplicité une Web API. En plus de fournir des Web API APISpark vous propose de la consommer et de la documenter.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A la découverte d'Hubot
-tags: ["GitHub", "Bot"]
+tags: ["Tool"]
 date: "2017-07-14"
 slug: hubot
 language: fr
