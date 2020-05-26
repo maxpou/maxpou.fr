@@ -1,5 +1,5 @@
 ---
-title: "async/await without try..catch!"
+title: "async/await without try...catch!"
 slug: async-await-without-try-catch
 language: en
 date: 2020-05-25
