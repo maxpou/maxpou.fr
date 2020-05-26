@@ -2,7 +2,7 @@
 layout: post
 title: Utilisez un framework PHP
 date: 2015-07-18
-tags: ["PHP", "Symfony2", "Silex"]
+tags: ["PHP", "Symfony2"]
 slug: utilisez-un-framework-php
 cover: ./abstract-4.jpg
 language: fr

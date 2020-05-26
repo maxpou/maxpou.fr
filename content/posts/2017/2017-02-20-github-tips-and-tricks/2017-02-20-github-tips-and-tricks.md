@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Github: Tips&tricks"
-tags: ["GitHub"]
+tags: ["GitHub", "Tool"]
 slug: github-tips-and-tricks
 date: 2017-02-20
 language: en
