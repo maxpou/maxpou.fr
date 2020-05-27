@@ -4,8 +4,10 @@ slug: async-await-without-try-catch
 language: en
 date: 2020-05-25
 cover: ./cover.jpeg
-tags: 
-    - JavaScript
+tags: ["JavaScript"]
+translations:
+  - link: './async-await-without-try-catch-fr'
+    language: 'French'
 ---
 
 When `async/await` feature came with ECMAScript 2017, it literally brought promises to the next level.
