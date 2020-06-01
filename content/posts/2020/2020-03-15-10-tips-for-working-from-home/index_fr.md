@@ -8,7 +8,8 @@ cover: ./cover.jpeg
 tags: ["remote"]
 translations:
   - link: './10-tips-for-working-from-home'
-    language: 'English'
+    language: English
+    hreflang: en
 ---
 
 À cause du Coronavirus, beaucoup de gens vont expérimenter le «home office». Le travail à domicile peut être formidable, mais il peut aussi être terrible si vous ne suivez pas les bonnes habitudes dès le départ.
