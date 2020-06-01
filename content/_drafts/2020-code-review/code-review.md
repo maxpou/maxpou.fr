@@ -24,7 +24,7 @@ Be a better developper. Reading code is probably the best way to improve your co
 * 1 issue, 1 PR.
 * All CI steps MUST be green: build/
 * minimum 2 approvals before merge.
-  * more reviewers don’t necessarily mean fewer defects
+  * more reviewers don't necessarily mean fewer defects
   * more reviewers spend less time
 * UI/UX changes? add screenshots/capture. Need a tool for video recording? Use [Giphy](https://itunes.apple.com/us/app/giphy-capture-the-gif-maker/id668208984)!
 
