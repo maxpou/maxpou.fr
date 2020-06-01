@@ -7,8 +7,8 @@ cover: ./cover.jpeg
 tags: ["remote"]
 translations:
   - link: './10-tips-for-working-from-home-fr'
-    language: 'French'
-
+    language: French
+    hreflang: fr
 ---
 
 Because of the Coronavirus, a lot of people are going to experiment with the “home office”. Working From Home can be great but it can also be terrible if you don’t follow the right habits from the start.

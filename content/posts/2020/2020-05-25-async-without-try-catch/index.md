@@ -7,7 +7,8 @@ cover: ./cover.jpeg
 tags: ["JavaScript"]
 translations:
   - link: './async-await-without-try-catch-fr'
-    language: 'French'
+    language: French
+    hreflang: fr
 ---
 
 When `async/await` feature came with ECMAScript 2017, it literally brought promises to the next level.

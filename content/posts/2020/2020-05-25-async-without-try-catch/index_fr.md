@@ -5,8 +5,11 @@ language: fr
 unlisted: true
 date: 2020-05-27
 cover: ./cover.jpeg
-tags: 
-    - JavaScript
+tags: [JavaScript]
+translations:
+  - link: './async-await-without-try-catch'
+    language: English
+    hreflang: en
 ---
 
 Lorsque la fonctionnalité `async/await` est sortie avec ECMAScript 2017, ca a littéralement donné un bons gros coup de boost au promises (promesses).
