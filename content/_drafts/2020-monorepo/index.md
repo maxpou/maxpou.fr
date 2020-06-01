@@ -52,7 +52,7 @@ a plain old ctrl + F is enough
   * unreadable/unusable git log.
   * unreasonable git branches
 
-**Tip:** I use [semantic commit]() and always put in parenthesis the name of the package. So if I want to retrieve one old commit, it's super easy
+**Tip:** I use [conventional commit](git-conventional-commits) and always put in parenthesis the name of the package. So if I want to retrieve one old commit, it's super easy
 ```bash
 # will list all feature added in package-B
 git log --all --grep="feat(package-B):"

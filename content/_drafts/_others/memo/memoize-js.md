@@ -43,7 +43,6 @@ function fact (n) {
 
   if (!fact.cache[n]) {
     fact.cache[n] = n > 0 ? n * fact(n - 1) : 1
-    console.log(`compute ${n} ${fact.cache[n]}`)
   }
   return fact.cache[n]
 }
