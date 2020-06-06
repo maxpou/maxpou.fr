@@ -2,7 +2,7 @@
 title: "Does Monorepo worth the trouble?"
 slug: monorepo-worth-trouble
 language: en
-date: 2020-05-30
+date: 2020-06-30
 cover: ./cover.jpeg
 tags: 
     - Architecture

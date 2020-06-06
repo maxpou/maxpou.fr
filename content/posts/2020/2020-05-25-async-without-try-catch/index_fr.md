@@ -1,5 +1,5 @@
 ---
-title: "Utiliser async/await sans bloc try..catch !"
+title: "Utiliser async/await sans bloc try...catch !"
 slug: async-await-without-try-catch-fr
 language: fr
 unlisted: true
