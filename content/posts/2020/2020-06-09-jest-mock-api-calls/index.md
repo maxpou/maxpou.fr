@@ -4,7 +4,7 @@ slug: jest-mock-axios-calls
 cover: ./cover.jpeg
 generate-card: false
 language: en
-date: 2020-06-08
+date: 2020-06-09
 tags: [JavaScript, Testing]
 ---
 
