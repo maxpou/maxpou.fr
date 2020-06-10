@@ -1,5 +1,5 @@
 ---
-title: "Vue.js Testing Made it Easy (with Testing-library)"
+title: "Vue.js Testing Made it Easy (with Testing Library)"
 slug: vue-js-testing-library
 language: en
 date: 2020-06-11
@@ -13,7 +13,7 @@ Today, I want to talk about testing in the Vue.js ecosystem. Between my previous
 
 > The more your tests resemble the way your software is used, the more confidence they can give you.
 >   
-> － [Kent C. Dodds](https://kentcdodds.com), author of Testing-Library
+> － [Kent C. Dodds](https://kentcdodds.com), author of Testing Library
 
 
 We were already using the official library: vue-test-utils. It provides good results for unit testing components. But, we were not completely convinced by the integration tests. In addition, I don't think unit testing components bring much value. We decided to give a try.
@@ -114,7 +114,7 @@ I mentioned before, I use Jest-dom. To extend Jest's `expect()` function, you ne
 
 Usually, Vue.js components are not aware of the router. We have to provide the routes to the render function.
 
-We could define the routes on every test... but I don't like to write the same code multiple times. Instead, I recommend you to overload testing-library's `render()` function with our defined routes.
+We could define the routes on every test... but I don't like to write the same code multiple times. Instead, I recommend you to overload Testing Library's `render()` function with our defined routes.
 
 ```js
 // tests/render.js
@@ -162,7 +162,7 @@ export function getDefaultStore () {
 export default new Vuex.Store(getDefaultStore())
 ```
 
-After that, you can override testing-library's `render()` function with your custom stuff.
+After that, you can override Testing Library's `render()` function with your custom stuff.
 
 ```js
 // tests/render.js
