@@ -110,7 +110,7 @@ Remember, `getByText` throws an error when the text is not present!
 
 I mentioned before, I use Jest-dom. To extend Jest's `expect()` function, you need to register it on the config files ([like this](https://github.com/maxpou/vue-testing-library-sample/blob/master/jest.config.js#L6-L8)).
 
-## Routing (with vue-router)
+## Testing the router (with vue-router)
 
 Usually, Vue.js components are not aware of the router. We have to provide the routes to the render function.
 
@@ -142,7 +142,7 @@ it('basket should be empty', async () => {
 You probably noticed the `findByText()`. I could not use `getByText()` because new page rendering is asynchronous.
 `findByXXX` is good when you want to find something that is not accessible straight away.
 
-## Store (with Vuex)
+## Testing the store (with Vuex)
 
 This part is a little bit trickier than the router part.
 
@@ -198,7 +198,7 @@ it('should add items to basket', async () => {
 
 See! It doesn't look like I'm testing a store 🙂
 
-## One render to rule them all!
+## One render function to rule them all!
 
 Let's sum up. We created a custom wrapper for the vue-router and another one for Vuex. I could post a render function like this:
 
