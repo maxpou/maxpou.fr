@@ -95,6 +95,9 @@ Lerna combined with Yarn workspaces is a great combo.
 Slack integration is a must i.e.
 > Released @company/common-components, new version: 1.21.0
 
+
+Some issues with IDE (eslint)
+
 ## Conclusion
 
 Overall I love monorepo. But it can become your worse nightmare if you don't follow simple rules like a good usage of git or if you have bad tools

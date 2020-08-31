@@ -54,7 +54,7 @@ After absorbing this amount of knowledge, I found obvious to share it to the com
 
 > "The world is big, life is short"
 
-Every day, I wrote code in English. I read in English... but my **English was weak** *(in fact, it's still!)*. On the other hand, a little voice in my head shows me the way to the expatriation. But you know, there is a real pit between thinking about living in another country. A lot of developers dream about the Silicon Valley/{pick whatever country}... but (almost) nobody tries to move there.
+Every day, I wrote code in English. I read in English... but my **English was weak** *(in fact, it's still!)*. On the other hand, a little voice in my head shows me the way to the expatriation. But you know, there is a real pit between thinking about living in another country. A lot of developers dream about the Silicon Valley/[pick whatever country]... but (almost) nobody tries to move there.
 
 And one day, I see this talk:
 

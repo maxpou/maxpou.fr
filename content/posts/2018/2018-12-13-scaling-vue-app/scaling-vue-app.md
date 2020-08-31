@@ -6,7 +6,7 @@ imageShare: ./3-tips-scaling-vue-application-share.png
 language: en
 date: 2018-12-13
 tags: 
-    - Vue
+    - Vue.js
     - JavaScript
 ---
 
