@@ -6966,10 +6966,10 @@ gatsby-source-filesystem@^2.2.5:
     valid-url "^1.0.9"
     xstate "^4.13.0"
 
-gatsby-starter-morning-dew@3.3.3:
-  version "3.3.3"
-  resolved "https://registry.yarnpkg.com/gatsby-starter-morning-dew/-/gatsby-starter-morning-dew-3.3.3.tgz#90e801ad7cae583ecda3e1fde48398d8fb194396"
-  integrity sha512-8DapoMUGkkevwaS3mbJxcRoKGgqpGZI+l2RAUb8f+hE7kZucIuiyEkZTe3g5CclxwCSTjjDvj0y6t2NTESJtng==
+gatsby-starter-morning-dew@3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/gatsby-starter-morning-dew/-/gatsby-starter-morning-dew-3.4.1.tgz#c294e5966e092558ff04b677640fcc86ec075745"
+  integrity sha512-8oEKT2Ve33Rbuy15/MZF0CudauRMsmy9Oxpu1RUExt9+nSeW19Fo6S7ikgyofGmtVbsu42oD8r214RgbV0brEg==
   dependencies:
     "@mdx-js/mdx" "^1.5.9"
     "@mdx-js/react" "^1.5.9"
@@ -7000,6 +7000,7 @@ gatsby-starter-morning-dew@3.3.3:
     react-dom "^16.13.1"
     react-helmet "^6.0.0"
     styled-components "^5.1.0"
+    terser "^4.6.11"
 
 gatsby-telemetry@^1.3.36:
   version "1.3.36"
@@ -14400,7 +14401,7 @@ terser-webpack-plugin@^2.3.8:
     terser "^4.6.12"
     webpack-sources "^1.4.3"
 
-terser@^4.1.2, terser@^4.6.12:
+terser@^4.1.2, terser@^4.6.11, terser@^4.6.12:
   version "4.8.0"
   resolved "https://registry.yarnpkg.com/terser/-/terser-4.8.0.tgz#63056343d7c70bb29f3af665865a46fe03a0df17"
   integrity sha512-EAPipTNeWsb/3wLPeup1tVPaXfIaU68xMnVdPafIL1TV05OhASArYyIfFvnvJCNrR2NIOvDVNNTFRa+Re2MWyw==
