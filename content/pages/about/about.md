@@ -16,13 +16,12 @@ After 2 years as an expat in Dublin, I became a digital nomad. I now live where 
 
 ## What I do for a living
 
-I am currently a Senior Software Engineer at [VSware](http://vsware.ie/) where I am building software for education. I'm focusing on:
+I am currently a Senior Software Engineer at VSware where I am building software for education. I'm focusing on:
 
-* **🏗 Architecture**. Scaling application, organising workflows.
-* **🧙‍♂️ Simplifying** complex process and make my co-worker's life easier.
-* **🚦 Testing**. Defining strategies to **effectively** test a web app.
-* **💎 Code quality**. I ❤️ crafting code.
-* **🏎 Performances**. Because users want something fast!
+* **🏗 Architecture/Infrastructure** of a massive Vue.js application (~5k vue&js files / ~650k lines of codes);
+* **🚦 Testing** (mostly with Vue Testing Library);
+* **👨‍🦯 Accessibility (a11y)**
+* **🏎 Performances**
 * **🗣 [Tech trainer](./speaking#trainings--workshop)** and **[public speaker](./speaking)**.
 
 

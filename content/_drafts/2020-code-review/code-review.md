@@ -2,40 +2,35 @@
 title: "A survival kit for healthy code reviews"
 slug: code-review-guidelines
 language: en
-date: 2020-05-01
+date: 2020-10-01
 cover: ./cover.jpeg
 tags: 
     - Code Quality
 ---
 
-# Code review guide lines
-
 ## Benefits of PR
 
 * Discuss about the code: I have a problem, this is how I solved it;
 * Spot potentials bugs;
-* Discuss about the architecture
+* Discuss about the architecture.
 
-Be a better developper. Reading code is probably the best way to improve your coding skills!
+And also be a better developper. **Reading code is probably the best way to improve your coding skills**!
 
 ## Definition of Done
 
 **Author**
 * 1 issue, 1 PR.
-* All CI steps MUST be green: build/
-* minimum 2 approvals before merge.
+* PR MUST be marked green by CI.
+* 2 approvals before merging.
   * more reviewers don't necessarily mean fewer defects
   * more reviewers spend less time
 * UI/UX changes? add screenshots/capture. Need a tool for video recording? Use [Giphy](https://itunes.apple.com/us/app/giphy-capture-the-gif-maker/id668208984)!
+* Your PR is described and follow the template.
 
 **Reviewer**
 * You don't see apparent bugs/regression;
-* You understand the problem and how the author solved it. 
-* You are able to maintain the code;
-* You fully understand the code and the underlying changes;
-* The pull request meet all requirements:
-  * Naming: no variables called `var1`;
-  * Comments: it's clear;
+* You understand the problem and how the author solved it;
+* You fully understand the code and the underlying changes (you can maintain the code);
 * No dead code or TODOs;
 * Code is consistent with the rest of the application;
 * Code is tested and documented.
@@ -67,7 +62,7 @@ Have some doubt? `git pull` the code and test it locally!
 * Final editorial control rests with the pull request author.
 * Avoid ownership words ("mine", "not mine", "yours"). Once the code is merged, it's everybody's code. Not yours.
 * Avoid statements words like "obviously", "everyone knows", "just"... something "simple" for you is not necessarily that simple for someone else.
-* Favour one-to-one conversation
+* Favour one-to-one conversation.
 * [Respectful Reviews === Useful Reviews](https://testing.googleblog.com/2019/11/code-health-respectful-reviews-useful.html)
 * You're not on a Reddit forum. Move philosophical/academic conversation to the weekly meeting ...or not!
 * You are not your code.
@@ -81,7 +76,7 @@ Have some doubt? `git pull` the code and test it locally!
   > ask a programmer to review 10 lines of codes, they'll fill 10 issues
   > ask them to review 500 lines of code, they will say it looks good.
 * Big change? communicate! If your PR includes big change (framework version...), the team must be aware!
-* Try to respond to every comment.
+* (Try to) respond to every comment.
 * Don't do sneaky updates. Don't take leverage of a big pull request to force or hide a change. Same, don't add big changes after getting approvals! It's unfair!
 * Provide context. It's ok to copy/paste code from somewhere, we all do. If you did or if you followed random tutorial, add the link to the pull request (or in a comment in the code).
 * Keep the git log clean.
@@ -93,8 +88,8 @@ Have some doubt? `git pull` the code and test it locally!
 
 * Don't do someone else's job. 
   * "You forget a semicolon" => Stop. It's worthless because it's a robot job, not a human job. 
-  * "Tests are failing" => Same. We have robot for that.
-* Prefix Nitpicking comments with "nit" or "nitpicking".
+  * "Tests are failing" => Same. We have robots for that.
+* Prefix *nitpicky comments* with "nit" or "nitpicking".
 * The code review's author is not a piñata. So, don't be a jerk.
   * Avoid: "your code is unreadable".
   * Prefer proposing alternative implementations "You can also split this code into 2 different functions. What do you think about?" (assume the author already considered them)
@@ -114,9 +109,9 @@ If the pull request bring something you consider harmful for the project, you ca
 
 ## Tips for better code review
 
-* Use the hide whitespace option.
-* If your PR is not ready, mark it as WIP (prefix it with `WIP:`). Don't waste someone else time!
-* Asking junior to review your code first. If a junior 
+* To remove noise, you can use the "hide whitespace" option.
+* If your PR is not ready, mark it as *in progress* (prefix it with `WIP:` in GitLab). Don't waste someone else time!
+* Asking junior to review your code first. If a senior developper review the PR first, the junior will be less eager to spot issues. 
 
 
 *Inspired by [thoughtbot code review guide](https://github.com/thoughtbot/guides/tree/master/code-review).*
