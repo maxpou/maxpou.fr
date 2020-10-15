@@ -30,7 +30,7 @@ Instead of having 6 small projects, pick one. And polish it!
 
 > "I don't put it on GitHub unless it's perfect"
 
-This one comes from a senior dev I used to work with in my previous company. I think it's a pity to think like that. In general, **people who are afraid of making mistakes end up doing nothing**.
+This quote comes from a senior dev I used to work with. I think it's a pity to think like that. In general, **people who are afraid of making mistakes end up doing nothing**. If you look at popular repositories on GitHub, most of them are far from perfect. And it's fine!
 
 And also, if one day someone checks your project's git log and finds out that you forgot a bracket/semicolon, I don't think he will blame you for that. And if he does, it's good for you. Nobody wants to work with toxic people.
 
@@ -71,8 +71,8 @@ At some point, you might face the situation where you have to rethink the way yo
 
 ### And also...
 
-* Manage your todo list with tickets/issues (please do NOT use Jira). If you have a few tickets, you can group them into different categories: "bug", "enhancement"... If people spot a bug or have a feature request, they will probably open an "issue" on your repository! Also, one small tip: fix all bugs before starting any new feature!
-* [Write tests](/10-tips-write-better-tests)! Lot of recruiters like to see tests when they review code. The project you're working on can be a good opportunity to write some!
+* Manage your todo list with tickets/issues. If you have a few tickets, you can group them into different categories: "bug", "enhancement"... If people spot a bug or have a feature request, they will probably open an "issue" on your repository! Also, one small tip: fix all bugs before starting any new feature!
+* [Write tests](/10-tips-write-better-tests)! Lot of dev recruiters like to see tests when they review code. The project you're working on can be a good opportunity to write some!
 * Add **continuous integration (CI)**. Every time you add code a robot will check if tests are passing and if you don't have dead code/oversights/... You can use tools like TravisCI, GitHub Actions...
 * Automate the deployment. Many tools allow you to deploy your app on the web once you `git push` to the `master` branch. You can check Netlify, GitLab Pages, GitHub Pages, Vercel...
 * Make your app [accessible (a11y)](https://developers.google.com/web/fundamentals/accessibility), so people with disabilities can use your app.
