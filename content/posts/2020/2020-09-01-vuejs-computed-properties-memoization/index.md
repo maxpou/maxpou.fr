@@ -1,7 +1,7 @@
 ---
 title: "Vue.js Performance Improvement with Memoization"
 slug: vuejs-performance-improvement-with-memoization
-lang: en
+language: en
 date: 2020-09-01
 cover: ./cover.png
 tags:
