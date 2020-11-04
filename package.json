@@ -8,18 +8,18 @@
     "url": "https://github.com/maxpou/maxpou.fr/issues"
   },
   "dependencies": {
-    "gatsby": "^2.20.36",
-    "gatsby-plugin-feed": "^2.5.0",
-    "gatsby-plugin-google-analytics": "^2.2.5",
-    "gatsby-plugin-manifest": "^2.3.7",
-    "gatsby-plugin-sitemap": "^2.4.3",
-    "gatsby-starter-morning-dew": "3.4.1",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0"
+    "gatsby": "^2.25.2",
+    "gatsby-plugin-feed": "^2.6.0",
+    "gatsby-plugin-google-analytics": "^2.4.0",
+    "gatsby-plugin-manifest": "^2.5.2",
+    "gatsby-plugin-sitemap": "^2.5.0",
+    "gatsby-starter-morning-dew": "3.4.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "devDependencies": {
     "prettier": "^2.0.5",
-    "puppeteer": "^1.9.0",
+    "puppeteer": "^5.4.1",
     "yaml": "^1.0.0"
   },
   "homepage": "https://github.com/maxpou/maxpou.fr#readme",
