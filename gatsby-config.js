@@ -1,4 +1,5 @@
 const config = require('./data/siteConfig')
+const resume = require('./data/resume-maxpou')
 
 module.exports = {
   siteMetadata: {
@@ -6,6 +7,7 @@ module.exports = {
     author: config.authorName,
     description: config.siteDescription,
     ...config,
+    resume,
   },
   pathPrefix: config.pathPrefix,
   plugins: [
