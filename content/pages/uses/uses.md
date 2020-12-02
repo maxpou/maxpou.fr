@@ -21,6 +21,7 @@ This page is somewhat inspired by [Wes Bos' Uses](https://wesbos.com/uses/) page
 * Sony MDR 1000X. A noise cancelling headphone with 2 modes: wired or wiredless (bluetooth). I also have some [Airpods](https://www.apple.com/fr/airpods-2nd-generation/).
 * Travel&daily bag is a [Minaal Carry-on 2.0](https://www.minaal.com/products/minaal-carry-on-bag/?variant=12494163140) (with packing cubes). I love it!
 * [Xbox Elite Controller Series 2](https://www.xbox.com/en-IE/accessories/controllers/elite-wireless-controller-series-2). For gaming!
+* [G403 HERO Mouse](https://www.logitechg.com/en-us/products/gaming-mice/g403-hero-gaming-mouse.910-005630.html). For gaming only!
 
 As a digital nomad, I don't have space for a desk on my backpack! ;)
 
@@ -44,8 +45,9 @@ My main browser is [Brave](https://brave.com/). I also use the following plugins
 * [Pocket (Save to Pocket)](https://chrome.google.com/webstore/detail/save-to-pocket/niloccemoadcdkdjlinkgdfekeahmflj)
 * [LastPass](https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd)
 * Devtool extensions: [Vue.js](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) and [React](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+* [Accessibility Insights](https://accessibilityinsights.io) and [axe](https://www.deque.com/axe/) for Accessibility audits
 
-I used to have Wappalyzer... but I've found this extension quite curious so I removed it!
+I used to have Wappalyzer... but I've found this extension quite curious so, I removed it!
 
 
 ## Terminal & Command Line Apps
@@ -96,4 +98,4 @@ This site made with Gatsby.js and [gatsby-starter-morning-dew](https://github.co
 ## Gaming
 
 * I have a dual boot with Windows 10 so I can play Age Of Empire 2 DE on my mac 😊
-* [GeForce Now](https://www.nvidia.com/en-us/geforce-now/) and [XCloud (Beta test)](https://www.xbox.com/en-IE/xbox-game-streaming/project-xcloud) for cloud gaming.
+* [GeForce Now](https://www.nvidia.com/en-us/geforce-now/) and [XCloud](https://www.xbox.com/en-IE/xbox-game-streaming/project-xcloud) for cloud gaming.

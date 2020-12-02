@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Menu from '../components/Menu'
 import Header from '../components/Header'
 import Highlights from '../components/Highlights'
 import Experience from '../components/Experience'
@@ -49,6 +50,7 @@ const Resume = resume => (
   <>
     <Header basics={resume.basics} />
     <Description>{resume.basics.description}</Description>
+    <Menu />
     <Layout>
       <LeftColumn>
         <Profile {...resume.basics} />
