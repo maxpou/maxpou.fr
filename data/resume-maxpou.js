@@ -15,7 +15,7 @@ module.exports = {
       I enjoy challenges and I am not afraid of getting my hands dirty.
       Because knowledge sharing matters to me, I spend a non-negligible part of my time sharing things through blog posts, mentoring sessions or conferences.
     `,
-    lastUpdate: "4 November 2020",
+    lastUpdate: "30 November 2020",
     profiles: [
       {
         network: "Twitter",
@@ -156,8 +156,8 @@ module.exports = {
   ],
 
   hobbies: `
-    Personal development, canyoning (I guide), running, hiking, cinema (especially Danish), 
-    cooking, travelling.
+    Canyoning (I guide group), hiking, cinema (especially Danish),
+    cooking, travelling, video games (Age of Empire II) and personal development.
   `,
 
   values: ['knowledge sharing', 'user privacy', 'diversity']

@@ -149,7 +149,7 @@ It the beginning, I thought Bali will be cheap. I don't know how but, it turns o
 | Food/Fun/Beers       | 350€        |
 | Coworking space      | 112€        |
 | Fun                  | 50€         |
-| Visa run ✈️          | 50€         |
+| Visa run ✈️           | 50€         |
 | Visa                 | 35€         |
 | Insurance            | 30€         |
 | Taxi/Scooter rental  | 30€         |

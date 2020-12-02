@@ -68,6 +68,10 @@ module.exports = {
           label: 'About',
           url: '/about',
         },
+        {
+          label: 'Resume',
+          url: '/cv',
+        },
       ],
     },
     {
