@@ -8,7 +8,7 @@ tags: ['career']
 ---
 
 A few weeks ago 2 people asked me the same question on Twitter: *"how do I make a better portfolio?"*
-Since, it's not the first time I have this question, I decided to *answer in public™️*.
+Since it's not the first time I have this question, I decided to *answer in public™️*.
 
 Before I start, just want to highlight something. Having a GitHub profile is not and should never be mandatory. It's "a nice to have".
 

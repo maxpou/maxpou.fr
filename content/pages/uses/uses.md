@@ -20,8 +20,6 @@ This page is somewhat inspired by [Wes Bos' Uses](https://wesbos.com/uses/) page
 * Xiaomi 9t Pro (and a old Huawei as a back up)
 * Sony MDR 1000X. A noise cancelling headphone with 2 modes: wired or wiredless (bluetooth). I also have some [Airpods](https://www.apple.com/fr/airpods-2nd-generation/).
 * Travel&daily bag is a [Minaal Carry-on 2.0](https://www.minaal.com/products/minaal-carry-on-bag/?variant=12494163140) (with packing cubes). I love it!
-* [Xbox Elite Controller Series 2](https://www.xbox.com/en-IE/accessories/controllers/elite-wireless-controller-series-2). For gaming!
-* [G403 HERO Mouse](https://www.logitechg.com/en-us/products/gaming-mice/g403-hero-gaming-mouse.910-005630.html). For gaming only!
 
 As a digital nomad, I don't have space for a desk on my backpack! ;)
 
@@ -89,13 +87,17 @@ I also use these applications:
 
 This site made with Gatsby.js and [gatsby-starter-morning-dew](https://github.com/maxpou/gatsby-starter-morning-dew). I use these applications to help me write:
 
-* [Grammarly](https://app.grammarly.com/) - Helps me to remove typos / proofread my posts. 
-* [Google Docs](http://docs.new/) - Same as Grammarly, I use it to fix my typos/grammar.
-* [Hemingway](http://www.hemingwayapp.com) - "Hemingway App makes your writing bold and clear."
+* [Grammarly](https://app.grammarly.com/) - Helps me to remove typos / proofread my posts
+* [Google Docs](http://docs.new/) - Helps me to remove typos / proofread my posts
+* [Hemingway](http://www.hemingwayapp.com) - "Hemingway App makes your writing bold and clear"
 * [Squoosh](https://squoosh.app) - Image compression
 * [Remove.bg](https://www.remove.bg) - Remove background on png
+* [Keynote (by Apple)](https://www.apple.com/keynote/) - To draw schemas
 
 ## Gaming
 
-* I have a dual boot with Windows 10 so I can play Age Of Empire 2 DE on my mac 😊
-* [GeForce Now](https://www.nvidia.com/en-us/geforce-now/) and [XCloud](https://www.xbox.com/en-IE/xbox-game-streaming/project-xcloud) for cloud gaming.
+* I play mostly Age Of Empire 2 DE on my macbook (with a dual boot) 😊
+* For other games, I use Cloud Gaming platforms such as [GeForce Now](https://www.nvidia.com/en-us/geforce-now/), Stadia and [XCloud](https://www.xbox.com/en-IE/xbox-game-streaming/project-xcloud)
+* [Xbox Elite Controller Series 2](https://www.xbox.com/en-IE/accessories/controllers/elite-wireless-controller-series-2)
+* [G403 HERO Mouse](https://www.logitechg.com/en-us/products/gaming-mice/g403-hero-gaming-mouse.910-005630.html)
+* [PowerA Moga](https://www.powera.com/moga/) for mobile gaming clip
