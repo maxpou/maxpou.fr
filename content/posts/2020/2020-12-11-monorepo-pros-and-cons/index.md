@@ -1,9 +1,9 @@
 ---
-title: "Monorepo: Good or Bad Idea?"
-slug: monorepo-good-or-bad-idea
+title: "Monorepo: is it worth jumping the bandwagon?"
+slug: monorepo-pros-and-cons
 language: en
-date: 2020-11-20
-cover: ./cover.jpeg
+date: 2020-12-11
+cover: ./cover.jpg
 tags: 
     - Architecture
     - Git
@@ -11,9 +11,11 @@ tags:
 
 
 The trend today is to split things and make them thinner. We witnessed the emergence of microservices, micro-frontends...
+
 Against this trend, some companies and projects had decided to put multiple applications/libraries under the same git repository. We call this architectural concept a monorepo (or mono repository).
 
 ![mono vs. multiple repository](./mono-vs-multi.png)
+
 
 I've been using and maintaining a monorepo for 2 years now. Here are my thoughts about it.
 
@@ -24,9 +26,6 @@ _Context: the monorepo I'm working on contains ~40 npm packages, mostly standalo
 
 ### 🤝 Teamwork
 
-**Single source of truth**:  
-The project I'm working on used to have a very weird name for the main branch. When we changed this name to another one, some repositories were updated, some were not (oversight). With a monorepo, You only have to find this information once.
-
 **Favour contribution**:  
 When you already have the code, contributing is easier. You don't need to search for the repo, clone it and install it beforehand.
 
@@ -35,13 +34,18 @@ When you already have the code, contributing is easier. You don't need to search
 You already have all the source code. So you don't need to find the repo url, clone it.
 A plain old ctrl + F is enough.
 
+
 **Favour large refactoring**:  
 Let's say you want to change something in one package used everywhere else. You can update all the packages in one commit!
+
 
 **Remove unused code with confidence**:  
 How many times you wanted to remove code but you didn't because you didn't know if code was used somewhere else? 
 With monorepo, you don't need to go through all repo to see if this code is used or not. It's very handy.
 
+
+**Single source of truth**:  
+The project I'm working on used to have a very weird name for the main branch. When we changed this name to another one, some repositories were updated, some were not (oversight). With a monorepo, you only have to find this information once.
 
 ### 👨‍👩‍👧 Dependencies
 
@@ -59,7 +63,7 @@ Diamond dependency problem: https://www.youtube.com/embed/W71BTkUbdqE?start=1189
 make backward compatible changes easily, in one commit you can revert change in multiple packages -->
 
 **Adding a new package is simple**:  
-For us, all our packages are under a `package` folder. Adding a new package is very straightforward: no need to parameter the continuous integration, set the permissions... everything is already there.
+For us, all our packages are under a `packages` folder. Adding a new package is very straightforward: no need to parameter the continuous integration/package manager credentials, set the repository permissions... everything is already there.
 
 ## Cons
 
@@ -76,24 +80,27 @@ packages/app-2 @user2
 ```
 *With the example above, if user2 opens a merge request to change app-1, user1 will have to approve it.*
 
+
 **Git log may become unreadable**:  
-If merge requests are merged "as it", with no squashing option (with 10-15 commits), the `git log` will quickly become unreadable, and so unusable.
+If merge requests are merged "as is", with no squashing option (with 10-15 commits), the `git log` will quickly become unreadable, and so unusable.
 
 **💡 Tip:** You can use [conventional commit](git-conventional-commits) and put in parenthesis the name of the package. So if you want to retrieve one old commit, it becomes straightforward.
 ```bash
 # will list all feature added in package-B
 git log --all --grep="feat(package-B):"
-```
 
-_Note: you can also do something similar with `git log path/to/package-b`._
+# or:
+git log --all path/to/package-b
+```
 
 
 **Git log may become unusable**:  
-If you have a lot of commits/living branches/tags, it means you will have a lot of git objects stored. Although, git works fine, 
-And if you merge without squashing, git with struggle.
+If you have a lot of commits/living branches/tags, it means you will have a lot of git objects stored. git will probably have trouble getting the history of a specific file.
+
 
 **Forget your long-lived branches**:  
-If the main branch is the only source of truth, you can't have a `next` branch. If you want to experiment with new things, you can mimic this behaviour with feature flags.
+If the main branch is the only source of truth, you can't have a `next` branch. If you want to have some features only available for a specific environment, then I recommend you to use feature flags.
+
 
 **Repository may become oversized**:  
 The `.git` folder on your monorepo root might reach a few Gb.
@@ -110,7 +117,7 @@ The `.git` folder on your monorepo root might reach a few Gb.
     --no-checkout \
     --filter=blob:none \
     <repo-url>
-  git checkout master -- packages/package-a
+  git checkout main -- packages/package-a
   ```
 
 _Note: learn more about [partial cloning](https://docs.gitlab.com/ee/topics/git/partial_clone.html)._
@@ -118,12 +125,13 @@ _Note: learn more about [partial cloning](https://docs.gitlab.com/ee/topics/git/
 ### 🤖 Continuous Integration (CI)
 
 **When it's broken, everybody is!**  
-If the `master` branch is marked red by your continuous integration, everybody is impacted. You can put this problem under the carpet. It needs to be addressed directly.
+If the `main` branch is marked red by your continuous integration, everybody is impacted. You cannot put this problem under the carpet. It needs to be addressed directly.
+
 
 **The Continuous Integration dilemma**:  
 If codebases are mutualized, you have more code. And more code means more work for continuous integration (CI) for jobs like testing, linting, building...
 
-When dealing with CI, time and reliability are the heart of the matter. On the one hand, you want it to be as fast as possible but, on the other hand, you want it to be reliable. I mean, when my CI give me a green light, I'm more confident to merge my work.
+When dealing with CI, time and reliability are the heart of the matter. On the one hand, you want it to be as fast as possible but, on the other hand, you want it to be reliable. I mean, when my CI gives me a green light, I'm more confident to merge my work.
 
 It can be tempting to reduce the number of packages analysed to gain some time. But, continuous integration will lose interest because it will not be able to spot a "cross-repository" regression.
 
@@ -131,20 +139,20 @@ It can be tempting to reduce the number of packages analysed to gain some time. 
 |-------------------------------------|--------------------|------------------|-------------------|
 | Build/lint/test Speed               | 🐌 Slow            | 🚀 Fast           | 🚗 Medium         |
 | Spot cross-packages<br/>regression? | ✅ Yes             | ❌ No             | ✅ Yes            |
-| Easy to set up?                     | ✅ Yes             | ✅ Yes            | ❌ No             |
+| Easy to set up?                     | 😀 Yes             | 😀 Yes            | 😟 No             |
 
 The 3rd option is, in my opinion, the most viable. But, you will have to do it manually. 
 A 4th option could use filters. "important" labelled packages use the 1st strategy and the rest use the 2nd strategy.
 
 **💡 Tips:**
-  * If your pipeline is good enough and you have parallel tasks CI, enable the fail-fast option.
+  * If your CI pipeline is good enough and you have parallel tasks, don't forget to enable the fail-fast option.
   * I recommend you to add a specific label to short-circuit the CI. Like if you change a typo in the README, you don't need to run unnecessary commands. (i.e. If the pull request have a "NO_CI" label, the build will not be triggered)
 
 
 ### 🤝 Teamwork
 
 **Hidden changes**:  
-Some repos are usually more sensitive than others. It's easy to add a small piece of code with a big impact.
+Some repos are sometimes more "sensitive" than others. It's easy to add a small piece of code with a big impact. It can be problematic if it's done by mistake.
 
 
 **Amount of code can be intimidating**:  
@@ -155,5 +163,6 @@ If you work with 10% of a codebase, you probably don't care about the 90% remain
 
 ## Conclusion
 
-Overall, I like this monorepo thing. In our case, it makes our life easier. All the packages are a part of the same big application and we're not a thousand of devs working on this project every day.
-But not all projects and teams are the same. Converting all your repos to a single monorepo is not a silver bullet. 
+Overall, I think a monorepo can be a good thing.
+
+In our case, it makes our life easier. All our packages are a part of the same big application and are written in the same language. Because they're a part of the same application, they _"communicate between each other"_. Also, we're a human-sized team working on it. 
