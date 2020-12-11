@@ -163,6 +163,8 @@ If you work with 10% of a codebase, you probably don't care about the 90% remain
 
 ## Conclusion
 
+![monorepo are become relevant when packages are connected and written in the same language](./relevant-monorepo.png)
+
 Overall, I think a monorepo can be a good thing.
 
 In our case, it makes our life easier. All our packages are a part of the same big application and are written in the same language. Because they're a part of the same application, they _"communicate between each other"_. Also, we're a human-sized team working on it. 
