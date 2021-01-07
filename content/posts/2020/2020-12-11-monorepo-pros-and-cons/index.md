@@ -4,9 +4,11 @@ slug: monorepo-pros-and-cons
 language: en
 date: 2020-12-11
 cover: ./cover.jpg
-tags: 
-    - Architecture
-    - Git
+# translations:
+#   - link: './monorepo-pros-and-cons-fr'
+#     language: French
+#     hreflang: fr
+tags: ['Architecture', 'Git']
 ---
 
 
@@ -26,7 +28,7 @@ _Context: the monorepo I'm working on contains ~40 npm packages, mostly standalo
 
 ### 🤝 Teamwork
 
-**Favour contribution**:  
+**Favour contributions**:  
 When you already have the code, contributing is easier. You don't need to search for the repo, clone it and install it beforehand.
 
 
@@ -57,10 +59,6 @@ _Note: I know npm 7.0 now supports workspaces. However, it's still in the early 
 
 **Cross-package hot-reload**:  
 Some tools automatically symlink local dependencies together. Which means, if package-a is used in package-b, you can work on package-a and see the live result in package-b.
-
-<!-- **No Diamond dependency problem**  
-Diamond dependency problem: https://www.youtube.com/embed/W71BTkUbdqE?start=1189
-make backward compatible changes easily, in one commit you can revert change in multiple packages -->
 
 **Adding a new package is simple**:  
 For us, all our packages are under a `packages` folder. Adding a new package is very straightforward: no need to parameter the continuous integration/package manager credentials, set the repository permissions... everything is already there.
