@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/maxpou/maxpou.fr.svg?branch=master)](https://travis-ci.org/maxpou/maxpou.fr)
+![CI](https://github.com/maxpou/maxpou.fr/workflows/CI/badge.svg)
 
 # maxpou.fr
 
