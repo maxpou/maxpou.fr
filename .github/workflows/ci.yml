@@ -1,11 +1,35 @@
 name: CI
 on: [push]
 jobs:
+  # see https://github.com/actions/setup-node
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - run: yarn install
+      - run: yarn build
+      - run: yarn format
+
+  # see: https://github.com/GoogleChrome/lighthouse-ci
   lighthouseci:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
-      - run: yarn install && npm install -g @lhci/cli@0.4.x
+      - run: yarn install && npm install -g @lhci/cli@0.6.x
       - run: yarn build
       - run: lhci autorun --upload.target=temporary-public-storage
+
+  # see https://github.com/peaceiris/actions-gh-pages
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - name: Deploy
+        if: github.ref == 'refs/heads/master'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
