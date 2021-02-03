@@ -110,8 +110,7 @@ module.exports = {
       location: "Nantes, France",
       activities: [
         "Creation of a web application based on the Symfony Framework (expose/consume API)",
-        "Lead a project which aims to reduce paper consumption by supplying dematerialized documentation to customers",
-        'Monitor project that empowers technical people of Storengy. Project awarded by the "transverse award (prix transverse)" at innovation challenge of Storengy',
+        "Led a project which aims to reduce paper consumption by supplying dematerialized documentation to customers",
       ],
     },
   ],

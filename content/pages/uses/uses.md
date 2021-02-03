@@ -96,8 +96,8 @@ This site made with Gatsby.js and [gatsby-starter-morning-dew](https://github.co
 
 ## Gaming
 
-* I play mostly Age Of Empire 2 DE on my macbook (with a Windows dual boot) 😊
-* For other games, I use Cloud Gaming platforms such as [GeForce Now](https://www.nvidia.com/en-us/geforce-now/), Stadia and [XCloud](https://www.xbox.com/en-IE/xbox-game-streaming/project-xcloud)
+* I play mostly Age Of Empire 2 DE on my MacBook (I've a Windows dual boot)
+* For other games, I rely on Cloud Gaming platforms such as [GeForce Now](https://www.nvidia.com/en-us/geforce-now/), Stadia and [XCloud](https://www.xbox.com/en-IE/xbox-game-streaming/project-xcloud)
 * [Xbox Elite Controller Series 2](https://www.xbox.com/en-IE/accessories/controllers/elite-wireless-controller-series-2) is my controller. A bit pricey, but very comfortable.
 * [G403 HERO Mouse](https://www.logitechg.com/en-us/products/gaming-mice/g403-hero-gaming-mouse.910-005630.html) as a gaming mouse (I use the Magic trackpad 2 for non-gaming stuffs)
 * [PowerA Moga](https://www.powera.com/moga/) for mobile gaming clip
