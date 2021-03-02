@@ -9,16 +9,11 @@ const formatProps = props => {
     subtitle: `${prop.school}, ${prop.location}`,
     period: prop.period,
     content: prop.detail ? prop.detail : [],
-
-    // leftPartTitle: prop.period,
-    // leftPartContent: [prop.school, prop.location],
-    // rightPartTitle: prop.degree,
-    // rightPartContent: prop.detail ? prop.detail : [],
-    // noTitle: true,
   }))
 }
 
 const EducationContainer = styled.section`
+  page-break-inside: avoid;
   & h3 {
     font-size: 1em;
   }

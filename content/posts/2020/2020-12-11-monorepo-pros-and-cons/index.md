@@ -4,10 +4,10 @@ slug: monorepo-pros-and-cons
 language: en
 date: 2020-12-11
 cover: ./cover.jpg
-# translations:
-#   - link: './monorepo-pros-and-cons-fr'
-#     language: French
-#     hreflang: fr
+translations:
+  - link: './monorepo-pros-and-cons-fr'
+    language: French
+    hreflang: fr
 tags: ['Architecture', 'Git']
 ---
 

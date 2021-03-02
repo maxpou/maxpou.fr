@@ -15,7 +15,7 @@ module.exports = {
       I enjoy challenges and I am not afraid of getting my hands dirty.
       Because knowledge sharing matters to me, I spend a non-negligible part of my time sharing things through blog posts, mentoring sessions or conferences.
     `,
-    lastUpdate: "30 November 2020",
+    lastUpdate: "February 2021",
     profiles: [
       {
         network: "Twitter",
