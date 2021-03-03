@@ -1,4 +1,206 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Maxence Poutord • Maxpou Blog (FR)]]></title><description><![CDATA[Software engineer • Public speaker • Nomadic worker]]></description><link>https://www.maxpou.fr</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 04 Feb 2021 18:57:59 GMT</lastBuildDate><item><title><![CDATA[Utiliser async/await sans bloc try...catch !]]></title><description><![CDATA[Lorsque la fonctionnalité async/await est sortie avec ECMAScript 2017, ca a littéralement donné un bons gros coup de boost au promises (promesses).
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Maxence Poutord • Maxpou Blog (FR)]]></title><description><![CDATA[Software engineer • Public speaker • Nomadic worker]]></description><link>https://www.maxpou.fr</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 03 Mar 2021 08:07:42 GMT</lastBuildDate><item><title><![CDATA[Monorepo: est-ce que ça vaut le coup?]]></title><description><![CDATA[La tendance actuelle est de diviser nos codebases. Ces dernières années, on a vu apparaître des concepts comme les microservices, les micro-frontends... Et puis à contre-courant, on voit aussi des projets se rassembler sous un seul et unique…]]></description><link>https://www.maxpou.fr/monorepo-pros-and-cons-fr</link><guid isPermaLink="false">https://www.maxpou.fr/monorepo-pros-and-cons-fr</guid><pubDate>Tue, 22 Dec 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;La tendance actuelle est de diviser nos codebases. Ces dernières années, on a vu apparaître des concepts comme les microservices, les micro-frontends...&lt;/p&gt;
+&lt;p&gt;Et puis à contre-courant, on voit aussi des projets se rassembler sous un seul et unique repository git. On appelle cela des monorepos (ou monorepository).&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://www.maxpou.fr/static/b0c137ebd7cfe7057ffd30472e33252c/df88b/mono-vs-multi.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 49.69325153374233%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAACxUlEQVQozy1Ta0gUYRQ9M/se1818rSWVqKRsUkFJVkSURUFJJJJ/+lEQBNYuEVoQIvkjssTKUjGCIlEkXNqifKw7q6vsWlEQFbWagSZZZlZalrO7urc70sD5zndm5h7mnrkfCGcBPBaIAHu1EYtaqhfAO/UeFScIr3OtqFhl2dKWmbQXMOiBZbGA0cyFyawtrHmfEAMIVgw6jL7x23gTbIKMrZBeOYyXxy4KwdE2vHVX4eDYY9W6ApXmhGxyJO2N9qE22o0W8uICG4J6YF9QtQ+3nzVgG342pxIFMmimyxJOXIHkiTtLPVF3Ji0EUuh5o6GU/DGgB2b+Kuh+v4BN6bVSqD+NFDl2aqgCBsW7ZEDpS6NIXzIFm/Ql+PzQMB3qMdNXl26Sq+JH2rT3Zz0xNNtlooE6sSQiaxD2iTpAGxNqx/qQbJwPeWMp5NGNzrVAy+xRZDNFeowUvCscw7XTyLtVil3XTyJPzazKgdWNZchvPIWd5YeRWOcAPNXgTBE/7xVNShfyGQWKG1uVRwDzur8dKOCW91wpQRo+2CX/ZAveDTfDh90wv3VINV8uaYbHXRiSL6PomwuYfgQNG1rCHjGVze4wnIyayMcG1bBsrhP3FzxoDdzADvy4t5zoaSbNuOMjSSmcYXOcvODlDP1qhvpSCphA/UZu2WT6244NSm8KZ5hOSs/S7yPnoVe8cU8U1mqGg03aE/jk0k396ZZo3KmbUNsabhWd050mmukwkP+GcFxxi/jVrmYoShSALeI1zIa9EoVl3XsKQhOWtR2qjvoMNHhXOIqqI8hyliPLVYmV69N4IiuR4DyHrHo7csqKYVEzBM8TX4n7Nwsremtw4OVNFD6pQz7PoNR3FXn+WhQzH3IUIhtnitV3hXRecgQBNuY1rFcDVmHfJmBPLoSi7cDadIj8TFR/HFMGL2rNRoZt8QD8xz8LzERw8ayufAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;mono vs. mulAstucele repository&quot;
+        title=&quot;mono vs. mulAstucele repository&quot;
+        src=&quot;https://www.maxpou.fr/static/b0c137ebd7cfe7057ffd30472e33252c/a6d36/mono-vs-multi.png&quot;
+        srcset=&quot;https://www.maxpou.fr/static/b0c137ebd7cfe7057ffd30472e33252c/222b7/mono-vs-multi.png 163w,https://www.maxpou.fr/static/b0c137ebd7cfe7057ffd30472e33252c/ff46a/mono-vs-multi.png 325w,https://www.maxpou.fr/static/b0c137ebd7cfe7057ffd30472e33252c/a6d36/mono-vs-multi.png 650w,https://www.maxpou.fr/static/b0c137ebd7cfe7057ffd30472e33252c/e548f/mono-vs-multi.png 975w,https://www.maxpou.fr/static/b0c137ebd7cfe7057ffd30472e33252c/3c492/mono-vs-multi.png 1300w,https://www.maxpou.fr/static/b0c137ebd7cfe7057ffd30472e33252c/df88b/mono-vs-multi.png 1906w&quot;
+        sizes=&quot;(max-width: 650px) 100vw, 650px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Ça va faire pas loin de 2 ans maintenant que j’en utilise et maintient un. Cet article est un condensé de ce que j’aime et n’aime pas avec les monorepos.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Contexte: le monorepo sur lequel je travaille contient ~ 40 packages (npm), principalement des applications vue.js. Toutes ces petites applications font partie d’une plus grande application. Nous avons décidé de diviser une énorme application en plus petites, car la maintenance était devenue ingérable. On est à peu près 15 à travailler sur ce monorepo (pas à plein temps).&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;Avantages&lt;/h2&gt;
+&lt;h3&gt;🤝 Teamwork&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Favorise les contributions&lt;/strong&gt;:&lt;br&gt;
+Lorsque vous avez déjà le code, c&apos;est plus facile de contribuer. Vous avez déjà tout sous la main. Plus besoin de rechercher le repo, de le cloner et d&apos;installer les dépendances.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Meilleure vue d&apos;ensemble de l&apos;ensemble du système&lt;/strong&gt;:&lt;br&gt;
+Quand on a tout le code au même endroit, les informations comme &lt;em&gt;&quot;combien de fois est utilisé tel ou tel composant?&quot;&lt;/em&gt; ou bien &lt;em&gt;&quot;ou est utilisé cet endpoint&quot;&lt;/em&gt; se trouvent en un clin d&apos;oeil (avec bon vieux &lt;code&gt;ctrl + F&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Privilégie les grands refactoring&lt;/strong&gt;:&lt;br&gt;
+Par la, j&apos;entends que vous pouvez changer un composant présent dans plusieurs packages en un seul commit. Pareil si vous voulez changer la version d&apos;une librairie...&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Supprimez du code mort en toute confiance&lt;/strong&gt;:&lt;br&gt;
+Combien de fois avez-vous voulu supprimer du code, mais vous ne l&apos;avez pas fait parce que vous ne saviez pas si le code était utilisé ailleurs?
+Encore un avantage d&apos;avoir tout le code sous la main.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Source unique de vérité&lt;/strong&gt;:&lt;br&gt;
+Le projet sur lequel je travaille avait un nom très étrange pour la branche principale. Et puis un jour on a décidé d’utiliser un autre nom tout aussi étrange pour le remplacer. Certains repos étaient mis à jour et d’autres non. A chaque fois que quelqu&apos;un clonait le repo, un bourde n&apos;était jamais bien loin.&lt;/p&gt;
+&lt;h3&gt;👨‍👩‍👧 Dependencies&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Plus de place sur le disque dur&lt;/strong&gt;:&lt;br&gt;
+Si vous êtes familiers avec l’écosystème JavaScript, vous savez probablement que le dossier node&lt;em&gt;module peut être [extrêmement lourd](&lt;a href=&quot;https://www.reddit.com/r/ProgrammerHumor/comments/6s0wov/heaviest&quot;&gt;https://www.reddit.com/r/ProgrammerHumor/comments/6s0wov/heaviest&lt;/a&gt;&lt;/em&gt;objects&lt;em&gt;in&lt;/em&gt;the&lt;em&gt;universe/). Lorsque nous avions environ 30 applications / packages, cela prenait 12 Go sur le disque dur. Oui, 12 Go! Nous avions des dépendances comme Vue.js installées 30 fois. Heureusement, certains outils (comme yarn) créent un lien symbolique _(symlinks)&lt;/em&gt; entre les dépendances redondantes lorsque les workspaces sont activés. Grâce à cette fonctionnalité, &lt;a href=&quot;https://twitter.com/_maxpou/status/1263426573379739651&quot;&gt;nous sommes passés de 12 Go à 1.7 Go&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://www.maxpou.fr/static/b8b8ab847d44244af6ef9755151e4c6b/8c48a/dependency-management.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.41717791411043%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAADy0lEQVQ4y02Sf1DTdRjH3xsbgWiR/B6QQIBoBsGVKVw0OoEOuUo4Q+8Qgn4YJdE8EMnUnYRdkjjA+KkhQwYMSQbM3CbjC4sfAV1ZIhVngqgpnQxigGvY02fwT5+71+dzz32e533PL9xNywAtLYGIMH9jAo39d8AMlMhuwhibJ5pNVUzOSFQmxuxMWuP0TGLp8/qTi8AMIVLGIbiD4FT6B/bsScHysQr9deyLTx4UnW6/l3P4tdEcGY42qBxilWOeCeU9AVxuu7/lU5WX6bjO+5ZE4fNu1bBP1Nnv/aI7/1yNFMIv6nD+IvcU36x/nG+qYYKmA0dwT5K3aepwQdRIVq5Ieq4CKCN/vxbSujaTBrX0XFb1MHpLOdB1wPkCKXxbaAA1lJTbVQ/SA5beDbBwLiDtSpIYO3gE48cqcVcWAermez7QeqdyypCw6x1hCUad9y76RrSaKlIEC1rRzp9aQrcPqzZvvf3t+owJpUPw/Ut+0RaDb5KFc9xG0+BZ9fg7/NcLinY9Y0skxJTqsWdN3Mb8hTa8+JALTF/oDjx4aRJ2VEUw9Tl9uDjIjzN32UQuGkILjCpEGDs3ps4PRB+d0/vtPb4dQqug3Qo8u3XOsAeSbVhbrd1dfq0Mvl4ROfSePE7z6g+be8QdEW+g3pEo5H8+EkY0sx2Yzlq35bK9iHjL0fmMcsZvjCuE37MznExvKa5QppIjSaPekn5++NbbNa+IT7D/+4xiYmHpfCIxH/AABJlFPFQNYlWZDoIGgm0dbXBV/HPAvc6cDQUlYx/ZiMsmXQLPmT72PWOU+p1dfMFRQ3BvpsSnG+alrgrzbgRoYC1KGJ/N7mI2piKdq7CkKza8nzk2PQoNaqXPYtpvyz5Sqy/LW98MYJN+IlT9rzRMTUX2SgpHC8GtmVK2qB4WujVROqxy0Yw6hqiyG2vKe0q8zvSSXZkhBhVTkHSzFZEjgAZ4CrYW6ZXaPNi1EXitBPuGm9A1RNlTHzKp36OYDMihWgjoPJPtZAmuqf0R/l9p4gMr9cqQUy2+yBizNpunqE8Iv2bYKR/S75Cuq+YcpAYSHtKMrgpWEf9qx37B+HdxojtX9/tMGGI8fy0A74YMGL/sBXwg/VxQvzfxyabdYpdTkvedoSM++ghrq4zb3C+QykVJbUI5bcWXhC3NszZD7fvQaRgRzPVFgUaSYOnbhOlCYO40YNayubyTfxJc8ksYetkJ1VlpAEc8vpbg8fVUfNDFR9eCLi79bC9fEqOQcEg9atvFcbZcV6fAuhB/DyXzzIZAzLPsFipWBP8DlYvfIQ53kwMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;dependency-management&quot;
+        title=&quot;dependency-management&quot;
+        src=&quot;https://www.maxpou.fr/static/b8b8ab847d44244af6ef9755151e4c6b/a6d36/dependency-management.png&quot;
+        srcset=&quot;https://www.maxpou.fr/static/b8b8ab847d44244af6ef9755151e4c6b/222b7/dependency-management.png 163w,https://www.maxpou.fr/static/b8b8ab847d44244af6ef9755151e4c6b/ff46a/dependency-management.png 325w,https://www.maxpou.fr/static/b8b8ab847d44244af6ef9755151e4c6b/a6d36/dependency-management.png 650w,https://www.maxpou.fr/static/b8b8ab847d44244af6ef9755151e4c6b/e548f/dependency-management.png 975w,https://www.maxpou.fr/static/b8b8ab847d44244af6ef9755151e4c6b/3c492/dependency-management.png 1300w,https://www.maxpou.fr/static/b8b8ab847d44244af6ef9755151e4c6b/8c48a/dependency-management.png 2096w&quot;
+        sizes=&quot;(max-width: 650px) 100vw, 650px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;em&gt;Note: Je sais que npm 7.0 supporte maintenant les workspaces. Cependant, c&apos;est encore un petit peu tôt et &lt;a href=&quot;https://github.com/npm/rfcs/pull/117/files&quot;&gt;certaines commandes ne sont pas encore supportées&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;hot-reload entre les packages&lt;/strong&gt;:&lt;br&gt;
+Certains outils lient automatiquement les dépendances locales entre elles. Ce qui signifie que si package-a est utilisé dans package-b, vous pouvez travailler sur package-a et voir le résultat en direct dans package-b.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Ajouter un package est plus simple&lt;/strong&gt;:&lt;br&gt;
+Pour nous, tous nos packages sont dans un dossier &lt;code&gt;packages&lt;/code&gt;. L&apos;ajout d&apos;un nouveau package est très simple. Pas besoin de paramétrer l&apos;intégration continue (CI), le registre npm, ni de redéfinir les permissions du GitLab... tout a déjà été fait!&lt;/p&gt;
+&lt;h2&gt;Inconvénients&lt;/h2&gt;
+&lt;h3&gt;🛠 Git &amp;#x26; code hosting platforms (GitLab/GitHub...)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Autorisation&lt;/strong&gt;:&lt;br&gt;
+Quand on met des permissions de lecture/ecriture sur GitLab/GitHub/etc., c&apos;est pour le repo tout entier. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;💡 Astuce:&lt;/strong&gt; Vous pouvez créer un fichier CODEOWNERS (&lt;a href=&quot;https://docs.gitlab.com/ee/user/project/code_owners.html&quot;&gt;doc GitLab&lt;/a&gt;, &lt;a href=&quot;https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners&quot;&gt;doc GitHub&lt;/a&gt;) pour définir des règles d’autorisation.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-md&quot;&gt;# .gitlab/CODEOWNERS
+packages/app-1 @user1
+packages/app-2 @user2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;em&gt;Avec l&apos;exemple du dessus, user2 devra avoir l&apos;approbation de user1 pour modifier app-1.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Un Git log peu lisible&lt;/strong&gt;:&lt;br&gt;
+Si les merge requests sont mergées dans l&apos;état avec 10-15 commits, vous allez peut-être avoir quelques soucis le jour où vous aurez besoin d&apos;utiliser git log.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;💡 Astuce:&lt;/strong&gt; Si vous pouvez utiliser la méthode du &lt;a href=&quot;git-conventional-commits&quot;&gt;&quot;conventional commit&quot;&lt;/a&gt; vous pouvez mettre entre parenthèse le nom du package. Comme ça, ce sera plus facile pour voir l&apos;historique d&apos;un paquet spécifique.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;# Lister toutes les features du package-B
+git log --all --grep=&quot;feat(package-B):&quot;
+
+# ou bien:
+git log --all path/to/package-b
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Git log peut devenir inutilisable&lt;/strong&gt;:&lt;br&gt;
+Si vous avez beaucoup de commits / branches / tags, cela signifie que vous aurez beaucoup d&apos;objets git stockés. git peinera peut-être lorsque vous souhaitez obtenir l&apos;historique (git log/git blame).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;💡 Astuce:&lt;/strong&gt; faites un petit flush du garbage collector de temps à autres (&lt;code&gt;git gc&lt;/code&gt;). N&apos;oubliez pas non plus de supprimer vos vieilles branches (&lt;code&gt;git fetch --all --prune&lt;/code&gt; marche bien).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Oubliez les branches de type &quot;next&quot;&lt;/strong&gt;:&lt;br&gt;
+Votre branche &lt;code&gt;main&lt;/code&gt; / &lt;code&gt;master&lt;/code&gt; doit être seule source de vérité. Vous ne pouvez pas avoir de branche &lt;code&gt;next&lt;/code&gt;. Ça va être un enfer à maintenir...
+Si vous souhaitez que certaines fonctionnalités ne soient disponibles que pour un environnement spécifique, je vous recommande chaudement d&apos;utiliser des &lt;em&gt;&quot;feature flags&quot;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Le repo peut devenir très lourd&lt;/strong&gt;:&lt;br&gt;
+A un moment, le répertoire &lt;code&gt;.git&lt;/code&gt; a la racine du monorepo va peut-être atteindre quelques Gb.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;💡 Astuce:&lt;/strong&gt; Voici 2 options si vous souhaitez économiser de l&apos;espace disque.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;# Clone le repo mais sans historique
+git clone --depth 1 &amp;#x3C;repo-url&gt; 
+
+# 1. clone un repo vide et sans historique 
+# 2. pull uniquement le package-a de la branche main
+git clone \
+  --depth 1 \
+  --no-checkout \
+  --filter=blob:none \
+  &amp;#x3C;repo-url&gt;
+git checkout main -- packages/package-a
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;em&gt;Note: Voici un peu de lecture si vous souhaitez en apprendre plus sur le [&quot;partial cloning&quot;](&lt;a href=&quot;https://docs.gitlab.com/ee/topics/git/partial&quot;&gt;https://docs.gitlab.com/ee/topics/git/partial&lt;/a&gt;&lt;/em&gt;clone.html) (en anglais)._&lt;/p&gt;
+&lt;h3&gt;🤖 Continuous Integration (CI)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Quand c&apos;est cassé, tout le monde est bloqué!&lt;/strong&gt;&lt;br&gt;
+Si la branche &lt;code&gt;main&lt;/code&gt; est marquée en rouge par votre intégration continue, tout le monde est impacté. Vous ne pouvez pas mettre ce problème sous le tapis. Ça doit être traité immédiatement.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Le dilemme de l&apos;intégration continue&lt;/strong&gt;:&lt;br&gt;
+Si les bases de code sont mutualisées, vous avez plus de code. Qui dit plus de code, dit plus de travail pour l&apos;intégration continue (CI). Donc plus de tests, de lint, de build...&lt;/p&gt;
+&lt;p&gt;Lorsqu&apos;il s&apos;agit de CI, le temps est le nerf de la guerre. D&apos;une part, on veut que ce soit le plus rapide possible et d&apos;autre part on recherche aussi de la fiabilité. Je veux dire, quand mon CI me donne le feu vert, je suis plus confiant pour fusionner mon travail.&lt;/p&gt;
+&lt;p&gt;Il peut être tentant de réduire le nombre de packages analysés pour gagner du temps. Mais l&apos;intégration continue perdra son intérêt car elle ne pourra pas repérer une régression &quot;cross-repo&quot;.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;Toute la codebase&lt;/th&gt;
+&lt;th&gt;Package sélectionné&lt;/th&gt;
+&lt;th&gt;Packages affecté&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Vitesse de Build/lint/test&lt;/td&gt;
+&lt;td&gt;🐌 Lent&lt;/td&gt;
+&lt;td&gt;🚀 Rapide&lt;/td&gt;
+&lt;td&gt;🚗 Normal&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Détecte les cross-packages&lt;br/&gt;régression?&lt;/td&gt;
+&lt;td&gt;✅ Oui&lt;/td&gt;
+&lt;td&gt;❌ Non&lt;/td&gt;
+&lt;td&gt;✅ Oui&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Facile à mettre en place?&lt;/td&gt;
+&lt;td&gt;😀 Oui&lt;/td&gt;
+&lt;td&gt;😀 Oui&lt;/td&gt;
+&lt;td&gt;😟 Non&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;La 3e option est, à mon avis, la plus viable. Mais vous devrez tout faire manuellement.
+Une 4e option pourrait utiliser des filtres. Les packages étiquetés &quot;importants&quot; utilisent la 1ère stratégie et les autres utilisent la 2ème stratégie.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;💡 Astuces:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Je vous recommande d&apos;ajouter un label spécifique pour shunter la CI (ex &lt;code&gt;NO_CI&lt;/code&gt;). Si vous modifiez une typo dans le README, vous n&apos;avez pas besoin d&apos;exécuter toute une batterie de tests.&lt;/li&gt;
+&lt;li&gt;Si votre pipeline (CI) comporte des tâches parallèles, n&apos;oubliez pas d&apos;activer l&apos;option &quot;fail-fast&quot;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;🤝 Teamwork&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Changements cachés&lt;/strong&gt;:&lt;br&gt;
+Certains repos sont parfois plus &quot;sensibles&quot; que d&apos;autres. Une erreur d&apos;inattention lors d&apos;une revue de code et vous vous retrouvez vite avec quelque chose de non désiré.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;La quantité de code peut être intimidante&lt;/strong&gt;:&lt;br&gt;
+La première fois que j&apos;ai &quot;git pull&quot; le code source de Gatsby.js, j&apos;ai extrait l&apos;historique complet d&apos;environ 90 paquets. Le projet avait ~5 ans et 3000 contributeurs. Je vous laisse imaginer ma tête quand j&apos;ai ouvert tout ça dans mon IDE. J&apos;étais complètement dépassé. La quantité de code était juste énorme!&lt;/p&gt;
+&lt;p&gt;Si vous travaillez avec 10% d&apos;une base de code, vous ne vous souciez probablement pas des 90% restants.&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://www.maxpou.fr/static/afd85baf1de6c79686485253b9fb6373/093ec/relevant-monorepo.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 53.37423312883436%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAADS0lEQVQozzWRe0yTVxjGX+USQrwk7g91arxlkuENJODUiSYyEoVNvFGhl09qKwUUEEQppe10KHYgXilRtroB5dLVUhmaKcULFZ2X4USnnZmighcsVIquw6k8O5+rJ/nlnDznvM+b9zn04yeBi4nInzHcyxjGCMYwRiBjHMPn0NRRy3dPoDns7Oe9G8kY66358HYqIU4Y0yW37LqXVKF3yUw5TKSBJLO0Y2OD3pXSsLc5On8JADoT7Dsfq1QCT55+D3QFZa9lZhGFEf2tqFSiSFuKbUcLtwQJIwjiq3NbUsqhyNuJJ1LjU4SUB/RKqi8YdtvRknsKd5fqcvkmvOmrlZcVvVWL0F4/Ak5JRVPmmB8m9eft6LvbSnigToYp5KCABsWmSKesFo6sWvSLazpvyAz+LyTV5xw5jehKs+L32KIc3owf9TV3Mq27MA+/aaR4nFRxdt2sDTP7tx7uaS9OQMemEpgWaNcQuHPD3RnWeChtoh6xMfpmqoFcXPX8t5oT4sH04/H7wmUzmVkAnxWy6se7N94XIudNgp07sGzR5xGfPku1xb7LHBRB5YiLHT9jOiGt+eMeceVO57rKYhdXk3H1q11D+rgaiYcz7xmQWgotXyg/fFrgv4lNoW5NbvHb0vUlA0mm1UsXxs3+U1pUMFieqHujLP46fYoonBBbtbh1mxXZDVfQKavrRlhpQC9XfTE/JB4N0fl4lGhQekf28aw8n9FjjMR1yzB0ir+/pJi4L+gf9TeuP+yE+6pkmEMPCQgrzPPacn/Gdst1OOV1D/Ftq38fV2v7LioTLXE6dAjKs+n/NRTrTyc7txfgljILz+VVZ1SfZU32bDn6+E5BCsu7FHUL1asof/qaoGuJ+7feVpRpmiNLhHz4tpgdCfdSqzR3xEeU2tmCSKb5MkYblmya2yY/pnJs/kVbv0Afxet2kT7tdnqz+qbCmP3luNDw962hBcFmos4bESu67cvUaLUSDjPtoIdwiu0b7DRn9BRffnToGJe6yNketfmpPUaIs8cIZUyrBHmjYYbmI34Pzw+hl41h8v7GYOVf18YyrcYPJQ988Jw9lDTSjI8mvS/AyRO+bb8Sua3BWvfxaWsdTaz+tNEPP70bynv9B2n0rGB5CsMuAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;un monorepo devient pertinent lorsque les packages sont connectés et écrits dans le même langage&quot;
+        title=&quot;un monorepo devient pertinent lorsque les packages sont connectés et écrits dans le même langage&quot;
+        src=&quot;https://www.maxpou.fr/static/afd85baf1de6c79686485253b9fb6373/a6d36/relevant-monorepo.png&quot;
+        srcset=&quot;https://www.maxpou.fr/static/afd85baf1de6c79686485253b9fb6373/222b7/relevant-monorepo.png 163w,https://www.maxpou.fr/static/afd85baf1de6c79686485253b9fb6373/ff46a/relevant-monorepo.png 325w,https://www.maxpou.fr/static/afd85baf1de6c79686485253b9fb6373/a6d36/relevant-monorepo.png 650w,https://www.maxpou.fr/static/afd85baf1de6c79686485253b9fb6373/e548f/relevant-monorepo.png 975w,https://www.maxpou.fr/static/afd85baf1de6c79686485253b9fb6373/3c492/relevant-monorepo.png 1300w,https://www.maxpou.fr/static/afd85baf1de6c79686485253b9fb6373/093ec/relevant-monorepo.png 1930w&quot;
+        sizes=&quot;(max-width: 650px) 100vw, 650px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Dans l&apos;ensemble, je pense qu&apos;utiliser un monorepo peut être une bonne chose.&lt;/p&gt;
+&lt;p&gt;Dans notre cas, cela nous facilite grandement la vie. Sur nos 40 packages, 35 sont des applications vue.js avec une structure et des dépendances très similaires. Et chaque application est une petite partie d&apos;une grande application. On a pas mis dans le même repo des apps qui n&apos;ont rien à voir entre elles.&lt;/p&gt;
+&lt;p&gt;De plus, on reste une équipe à taille humaine. Donc les problèmes énoncés plus hauts se fixent plutôt rapidement.&lt;/p&gt;
+          &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(This is an article posted to my blog at maxpou.fr. You can read it online by &lt;a href=&quot;https://www.maxpou.frmonorepo-pros-and-cons-fr&quot;&gt;clicking here&lt;/a&gt;.)&lt;/div&gt;
+        </content:encoded></item><item><title><![CDATA[Utiliser async/await sans bloc try...catch !]]></title><description><![CDATA[Lorsque la fonctionnalité async/await est sortie avec ECMAScript 2017, ca a littéralement donné un bons gros coup de boost au promises (promesses).
 En deux mots, grâce aux fonctions asynchrones (async), on supprime l'effet Pyramid of doom (a.k.a…]]></description><link>https://www.maxpou.fr/async-await-without-try-catch-fr</link><guid isPermaLink="false">https://www.maxpou.fr/async-await-without-try-catch-fr</guid><pubDate>Wed, 27 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Lorsque la fonctionnalité &lt;code&gt;async/await&lt;/code&gt; est sortie avec ECMAScript 2017, ca a littéralement donné un bons gros coup de boost au promises (promesses).
 En deux mots, grâce aux fonctions asynchrones (&lt;code&gt;async&lt;/code&gt;), on supprime l&apos;effet Pyramid of doom (&lt;em&gt;a.k.a. Callback hell&lt;/em&gt;) lié aux promises telles qu&apos;elles avait ete definies en ECMAScript 2015 (ES6). Le code asynchrone est tout de suite plus facile à lire.&lt;/p&gt;
 &lt;p&gt;Si votre application utilise des API, je suppose que vous écrivez beaucoup de code comme ceci:&lt;/p&gt;

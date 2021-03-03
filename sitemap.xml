@@ -6,6 +6,7 @@
 <url> <loc>https://www.maxpou.fr/pages/4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.maxpou.fr/pages/5</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.maxpou.fr/2020-a-year-in-review</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.maxpou.fr/monorepo-pros-and-cons-fr</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.maxpou.fr/monorepo-pros-and-cons</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.maxpou.fr/tips-for-your-github-portfolio</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.maxpou.fr/vuejs-performance-improvement-with-memoization</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
