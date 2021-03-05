@@ -308,7 +308,7 @@ Bon alors, votre API est-elle toujours REST ? ;-)
 ##Pour aller plus loin...
 
 * [Thèse de Roy T. Fielding : Architectural Styles and the Design of Network-based Software Architectures](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm)
-* [Comment bien utiliser PATCH (par William Durand)](http://williamdurand.fr/2014/02/14/please-do-not-patch-like-an-idiot/)
+* [Comment bien utiliser PATCH (par William Durand)](https://williamdurand.fr/2014/02/14/please-do-not-patch-like-an-idiot/)
 * [Pour terminer, ma section préférée de la thèse de Roy T. Fielding : Code-On-demand (COD)](http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm#sec_5_1_7)
 
 

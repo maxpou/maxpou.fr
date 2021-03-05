@@ -16,12 +16,6 @@ module.exports = {
       options: {},
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: config.googleAnalyticsId,
-      },
-    },
-    {
       resolve: `gatsby-plugin-plausible`,
       options: {
         domain: `maxpou.fr`,

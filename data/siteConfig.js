@@ -16,7 +16,7 @@ module.exports = {
   // Prefixes all links. For cases when deployed to maxpou.fr/gatsby-starter-morning-dew/
   pathPrefix: '/', // Note: it must *not* have a trailing slash.
   siteCover: 'cover.jpg',
-  googleAnalyticsId: 'UA-67868977-1',
+  googleAnalyticsId: '',
   background_color: '#ffffff',
   theme_color: '#222222',
   display: 'standalone',
