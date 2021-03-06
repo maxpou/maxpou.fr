@@ -80,10 +80,12 @@ module.exports = {
         {
           label: 'GitHub',
           url: 'https://github.com/maxpou',
+          rel: 'me',
         },
         {
           label: 'Twitter',
           url: 'https://twitter.com/_maxpou',
+          rel: 'me',
         },
         {
           label: 'LinkedIn',
