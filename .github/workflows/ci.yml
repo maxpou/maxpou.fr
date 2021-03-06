@@ -7,8 +7,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
-          with:
-            node-version: '12'
+        with:
+          node-version: '12'
       - run: yarn install
       - run: yarn build
       - run: yarn format
@@ -19,8 +19,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
-          with:
-            node-version: '12'
+        with:
+          node-version: '12'
       - run: yarn install && npm install -g @lhci/cli@0.6.x
       - run: yarn build
       - run: lhci autorun --upload.target=temporary-public-storage
@@ -31,8 +31,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
-          with:
-            node-version: '12'
+        with:
+          node-version: '12'
       - run: yarn install
       - run: yarn build
       - name: Deploy
