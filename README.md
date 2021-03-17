@@ -4,7 +4,7 @@
 
 My own website built with GatsbyJS v2 and using [gatsby-starter-morning-dew](https://github.com/maxpou/gatsby-starter-morning-dew).
 
-If you find a typo, pull request are welcome. Thank you ♥
+If you find a typo, pull requests are welcome. Thank you ♥
 
 ## Commands
 
@@ -28,3 +28,4 @@ npm run lint
 * [Squoosh](https://squoosh.app) - Image compression
 * [Grammarly](https://app.grammarly.com) - Helps me to remove typos
 * [Google docs](http://docs.new) - Helps me to remove typos
+* [Unsplash.com](https://unsplash.com/) - For images

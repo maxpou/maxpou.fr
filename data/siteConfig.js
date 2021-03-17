@@ -6,10 +6,10 @@ module.exports = {
   authorAvatar: 'avatar.jpeg',
   defaultLang: 'en', // show flag if lang is not default. Leave empty to enable flags in post lists
   authorDescription: `
-  Maxence Poutord is a software engineer specialized in web technologies. 
-  On his day to day job, he is working as a senior front-end engineer at VSware.
-  As a digital nomad, he lives where the WiFi and sun are!<br>
-  You can also find him on Twitter <a href="https://twitter.com/_maxpou" rel="noopener" target="_blank">@_maxpou</a>.
+  Hey, I'm Maxence Poutord, a software engineer specialized in web technologies. 
+  In my day-to-day job, I'm working as a senior front-end engineer at VSware.
+  As a digital nomad, I'm living where the WiFi and sun are!<br>
+  You can also find me on Twitter <a href="https://twitter.com/_maxpou" rel="noopener" target="_blank">@_maxpou</a>.
   `,
   siteUrl: 'https://www.maxpou.fr/',
   disqusSiteUrl: 'https://www.maxpou.fr/',

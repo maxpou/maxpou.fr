@@ -15,7 +15,7 @@ module.exports = {
       I enjoy challenges and I am not afraid of getting my hands dirty.
       Because knowledge sharing matters to me, I spend a non-negligible part of my time sharing things through blog posts, mentoring sessions or conferences.
     `,
-    lastUpdate: "February 2021",
+    lastUpdate: "March 2021",
     profiles: [
       {
         network: "Twitter",
@@ -39,11 +39,11 @@ module.exports = {
     },
     {
       category: "Comfortable",
-      content: ["React.js", "Gatsby.js", "CI/CD", "Web Accessibility (A11Y)", "Web Performances", "Functional Programming"],
+      content: ["React.js", "Gatsby.js", "CI/CD", "Web Accessibility (A11Y)", "Web Performances", "Node.js"],
     },
     {
       category: "Familiar",
-      content: ["Node.js", "Docker", "Firebase", "GraphQL"],
+      content: ["Docker", "Firebase", "GraphQL", "Functional Programming"],
     },
   ],
 
@@ -73,10 +73,10 @@ module.exports = {
       period: "May 2018 - Present",
       location: "Remote",
       activities: [
-        "Improving the frontend infrastructure of a massive Vue.js application (~5k vue&js files / ~650k lines of codes). Frontend part rely on a big monorepo",
+        "Improving the frontend infrastructure of a massive Vue.js application (~5k vue&js files / ~650k lines of codes). Frontend rely on a big monorepo",
         "Working on the application architecture",
-        "Introduced and maintaining a testing culture (for unit and integration testing)",
-        "Working on application accessibility (A11Y) to meet AA criteria (WCAG)",
+        "Introduced and maintaining a testing culture (from 0 to 3.1k unit & integration tests)",
+        "Working on accessibility (A11Y) to meet WCAG AA conformance",
         "Maintaining decent performances optimisation",
         "Mentoring developers",
       ],
@@ -109,7 +109,7 @@ module.exports = {
       period: "October 2011 - January 2015",
       location: "Nantes, France",
       activities: [
-        "Creation of a web application based on the Symfony Framework (expose/consume API)",
+        "Creation of a web application based on the Symfony2 Framework (expose/consume API)",
         "Led a project which aims to reduce paper consumption by supplying dematerialized documentation to customers",
       ],
     },

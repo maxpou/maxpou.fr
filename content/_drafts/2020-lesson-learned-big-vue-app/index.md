@@ -1,14 +1,6 @@
 
 ## How big?
 
-```sh
-# number of files
-find . -name "*.vue" -not -path "**/node_modules/**" | wc -l
-
-# loc
-find . -name '*.vue' -not -path "**/node_modules/**" | xargs wc -l
-```
-
 monorepo/app
 
 ```
