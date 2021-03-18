@@ -1,4 +1,171 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Maxence Poutord • Maxpou Blog]]></title><description><![CDATA[Software engineer • Public speaker • Nomadic worker]]></description><link>https://www.maxpou.fr</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 06 Mar 2021 10:05:00 GMT</lastBuildDate><item><title><![CDATA[2020 - A Year In Review]]></title><description><![CDATA[Disclaimer: I mostly wrote this blog post for myself. Writing my Year in review helps me to celebrate my biggest wins, see what was wrong and define goals for the upcoming year.  👨‍💻 Work I am still working at VSware as a Sr Software Engineer. This…]]></description><link>https://www.maxpou.fr/2020-a-year-in-review</link><guid isPermaLink="false">https://www.maxpou.fr/2020-a-year-in-review</guid><pubDate>Thu, 07 Jan 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;Disclaimer: I mostly wrote this blog post for myself. Writing my &lt;a href=&quot;https://www.maxpou.fr/tags/Year%20In%20Review&quot;&gt;Year in review&lt;/a&gt; helps me to celebrate my biggest wins, see what was wrong and define goals for the upcoming year.&lt;/em&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Maxence Poutord • Maxpou Blog]]></title><description><![CDATA[Software engineer • Public speaker • Nomadic worker]]></description><link>https://www.maxpou.fr</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 18 Mar 2021 08:25:26 GMT</lastBuildDate><item><title><![CDATA[Bash for developers]]></title><description><![CDATA[Like many developers, I use the terminal on a daily basis.  I actually use 2 different terminals: the one embedded in VScode and iTerm2 (I'm on macOS).
+Although this post contains the word bash, I don't use it directly. I use zsh with ohmyzsh. If you…]]></description><link>https://www.maxpou.fr/bash-for-dev</link><guid isPermaLink="false">https://www.maxpou.fr/bash-for-dev</guid><pubDate>Wed, 17 Mar 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Like many developers, I use the terminal on a daily basis.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://www.maxpou.fr/static/1e298046185c29446d1c535eae42b3bb/81ebd/shell.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 52.760736196319016%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAACx0lEQVQoz1XRyU8TURwH8PcvGKBAN9oOnS6UTlvqTFuxC0xbFpXFJYAbxAWjyFYTHLFFYzVxOahHj549WePBizcTIqFRiYIEkZa+mU4lMCUCUXF8Q6vBwyff3/yS982bGfBjcRJfhdPuDW6RXIfzFJybpjKzU9TXD2+p1McklZpLUkuzSWr+/SS19ClJLX9+R32ZmdrJ1cyChPyWmvOwCzNycWsFgMjA6MshZmL7yrX7a5GxO/kLl6P5/oGYcGnken5geFwYGY4hUWFoaFwYHBwXhtEcGZ3II0Isek+4eePBCsPcFvv7I/FHD58CoDE2vrCRnesE2c7ZXR281dmWJciOrNl+gNMaaLZU7oaSMoUHllS6EVdxdsGSCpeUKWRjj8wRV+HdAFSbGhJGa7NgqG2GBksTZ6gtwEw0hxkbWZ2hgS0kDTGJkWalrDYF0Z6GaJ/GjMFNNVYf31t/EQClPpAw1HXkHd4ezunt5p2+HuQ476J7eNJ3lPd4u3jSczgrFUjwmjBrsIRZM9HCSbPeHEqj3FLrioVV2P6Eg2zP0+FTXKilNxdsOs2jmQ+19OWCzb18A5qd7s6sdDONPsCqdD6o0vnh31Rj/jSyqdC44wR1DgA15k0QzjYhEDrJhVr7clKRVOIPnuDrA91ZH11IB9XO6dEN0WFYVR3YLY1sKjWeuM11Hv0Uve+523tMKoTkviMs4TwErXUHocXWCvGaUMaEvq0Ob8wotd5lVLaMDu/kLkto9x0V3topVOkDr7SW1p/IqhIPCgo9gocEtZkWMEtQwM1hAb3eGjr0H43eLxStoE8hqrSeu3bXWQDK5NauUrktWiInrsoUdqZcaWdkSgdTrrYzFSobU6m0MbJKKyOTWwv5l/yfsXIFESutMPtt1BkAmCcieC2KIIXkkLVi/kbEoq3i8/Yu0v5XMZ+9EUHssQgIqg/8ARPId9CXiPLrAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;How my terminal looks like&quot;
+        title=&quot;How my terminal looks like&quot;
+        src=&quot;https://www.maxpou.fr/static/1e298046185c29446d1c535eae42b3bb/a6d36/shell.png&quot;
+        srcset=&quot;https://www.maxpou.fr/static/1e298046185c29446d1c535eae42b3bb/222b7/shell.png 163w,https://www.maxpou.fr/static/1e298046185c29446d1c535eae42b3bb/ff46a/shell.png 325w,https://www.maxpou.fr/static/1e298046185c29446d1c535eae42b3bb/a6d36/shell.png 650w,https://www.maxpou.fr/static/1e298046185c29446d1c535eae42b3bb/e548f/shell.png 975w,https://www.maxpou.fr/static/1e298046185c29446d1c535eae42b3bb/3c492/shell.png 1300w,https://www.maxpou.fr/static/1e298046185c29446d1c535eae42b3bb/81ebd/shell.png 1868w&quot;
+        sizes=&quot;(max-width: 650px) 100vw, 650px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;I actually use 2 different terminals: the one embedded in VScode and iTerm2 (I&apos;m on macOS).
+Although this post contains the word bash, I don&apos;t use it directly. I use zsh with &lt;a href=&quot;https://ohmyz.sh&quot;&gt;ohmyzsh&lt;/a&gt;. If you never heard about it before, it supercharges bash and adds more interactivity. It also gives me interesting feedbacks like the branch and working directory I am currently in.&lt;/p&gt;
+&lt;p&gt;By the way, if you like the theme I&apos;m using, feel free to steal &lt;a href=&quot;https://github.com/maxpou/dotfiles&quot;&gt;my dotfiles&lt;/a&gt;.
+Also, I won&apos;t be covering the Git part as I already did in &lt;a href=&quot;https://www.maxpou.fr/git-cheat-sheet&quot;&gt;this blog post&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Cheatsheet&lt;/h2&gt;
+&lt;h3&gt;How many &quot;.js&quot; files does this folder contains?&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;find . -name &quot;*.js&quot; | wc -l
+
+# You can also exclude a folder (i.e. node_modules)
+find . -name &quot;*.js&quot; -not -path &quot;**/node_modules/**&quot; | wc -l
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;How many lines of code in this folder?&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;find . -name &apos;*.vue&apos; | xargs wc -l
+
+# You can also exclude a folder (i.e. node_modules)
+find . -name &apos;*.vue&apos; -not -path &quot;**/node_modules/**&quot; | xargs wc -l
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Find all occurrences&lt;/h3&gt;
+&lt;p&gt;Example: list where &quot;console.log&quot; is used in the codebase.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;grep -Ril &quot;console.log&quot; .
+
+# You can also exclude folders (i.e. .cache and node_modules)
+grep -Ril &quot;console.log&quot; . --exclude-dir={\*cache,node_modules\*}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;How big is my folder?&lt;/h3&gt;
+&lt;p&gt;Example: list where &quot;console.log&quot; is used in the codebase.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;du -sh .
+
+# same but excluding git folder
+du -sh -I .git .
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;What about Vim?&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://www.maxpou.fr/static/a736ef6eef40d42337c1ac83140ef422/332b4/spacevim.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 81.59509202453987%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAADPUlEQVQ4y6WTW2/URhTHDQhUKKBgniC33bXX47E947HXDuFalVQq6iNbIa6CZDcIWMiFpkWifav4CH3iG/AAkWAf6EPfGiiqqBqlG5IoBb4DAmLv0XDGWYfbAw+s9NMZnTn7n//MOdZuXru1fnHm/tDs7INjy63Fo8utJ1XF09ZCdfHfuerjmUfVv/+cqf7z8C/kUfV/3Hv2ZHGN5wtLRxdm544/fvAwhhevNU2Qw13Xr44t//zLNfnDxFU5cWVcTo6Ny/GxCTkxOSlH63V57uyIHD5XkyPDdXnxQkNeunh5FVw3MP449ZNsXBq793RpSdM2apt1y3H/80IuC8XiSm9vf9JfKKb9JSP1fJYSx8J1f1oyetKevr5kV3fv++zuedXd0yd3dRfuVL//Tgnu0HkgWmKgIontpGXLbtvUbTsugyCKYGBPDGHFA5vSNrFznLcQukKIIw3TmT5//oyGP11nvt+qDEayTGhqlkkbRcHzBcSH9oJFXTAwZ5h22yyvovbVwQqsX8EoS4Y9XaufUoJf6nEUzcdRiKdYyiFgEQjmQ+xziJkBwrVA8DIwhNhE7SuhPGaCRSVYO6kEN+sDcTx/+NA+yRnLHJooKvDKQ5EDe9V1bRuoQzJsSnJ3eew4pNOjo6eV4Bf6/sHB+W+/PiCFz1PDJG2LEEDHcOQAh8HQAdfjKMbaOep9kXaHFURaxJuemrqsZY/4zVcH548MHcwEOyejExc814aKMIFS9QzKTXbNT115hy64aIWBkLiR5sVcCPCCAIoGNmQ19+41IV9/1JTtXQW9UCItbIhEF2tdxs5DGHrgu+iUMsDxgHzvrcMPBGsouGVbr26WacvCZO4QxwcCwaAScQhxfKjtZoL5qHzAmmC93hEslKw55RB5jYIJnpwwzhI/4AlnJOEeTQJPJC51k5JRTrDuXV6q/xZL5PbwyAlN29ZV2Mn8ynPGhVTdwunPYhgNSBFWpMeEdD1fUsfDtS9VHeNBB5HlcArwo/DuNxo1Tdu6fffWINzzGxb8Tmz3Lo5NE2NTBFEThZqYz6LKoXiT+2GTi0rTR9Qac3cdl/9hmPT6rzduZGOzDtmAbPoMNiLrXc9Z9wYp0cKgFoFrSgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;SpaceVim a game changer for vim&quot;
+        title=&quot;SpaceVim a game changer for vim&quot;
+        src=&quot;https://www.maxpou.fr/static/a736ef6eef40d42337c1ac83140ef422/a6d36/spacevim.png&quot;
+        srcset=&quot;https://www.maxpou.fr/static/a736ef6eef40d42337c1ac83140ef422/222b7/spacevim.png 163w,https://www.maxpou.fr/static/a736ef6eef40d42337c1ac83140ef422/ff46a/spacevim.png 325w,https://www.maxpou.fr/static/a736ef6eef40d42337c1ac83140ef422/a6d36/spacevim.png 650w,https://www.maxpou.fr/static/a736ef6eef40d42337c1ac83140ef422/e548f/spacevim.png 975w,https://www.maxpou.fr/static/a736ef6eef40d42337c1ac83140ef422/3c492/spacevim.png 1300w,https://www.maxpou.fr/static/a736ef6eef40d42337c1ac83140ef422/332b4/spacevim.png 1826w&quot;
+        sizes=&quot;(max-width: 650px) 100vw, 650px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;I mostly use Vim for Git commits. It can also be handy when your IDE struggle to open 10 0000 lines long files.
+To &lt;em&gt;pimp my vim™&lt;/em&gt;, I installed something called &lt;a href=&quot;https://spacevim.org&quot;&gt;SpaceVim&lt;/a&gt;. It adds fancy things like a file explorer and the syntax color.&lt;/p&gt;
+&lt;h2&gt;Aliases&lt;/h2&gt;
+&lt;h3&gt;Everything verbose!&lt;/h3&gt;
+&lt;p&gt;Since you&apos;re there, I aliased all my filesystem commands to make them more verbose.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;# mv, rm, cp
+alias mv=&apos;mv -v&apos;
+alias rm=&apos;rm -v&apos;
+alias cp=&apos;cp -v&apos;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;RAM consumption&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;alias ram=&apos;ps aux | awk &apos;&quot;&apos;&quot;&apos;{print $6/1024 &quot; MB\t\t&quot; $11}&apos;&quot;&apos;&quot;&apos; | sort -rn | head -25&apos;
+
+
+# Usage
+$ ram
+507.039 MB              /usr/local/bin/node
+461.391 MB              /Applications/Brave
+358.879 MB              /Applications/Visual
+...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;🏴‍☠️ Change your mac address&lt;/h3&gt;
+&lt;p&gt;This one is not really tech-related. I mostly use this one in airports/coffee shops to renew mac address (and get illimited access).&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;function airport() {
+  local mac=$(openssl rand -hex 6 | sed &apos;s/\(..\)/\1:/g; s/.$//&apos;)
+  sudo ifconfig en0 ether $mac
+  sudo ifconfig en0 down
+  sudo ifconfig en0 up
+  echo &quot;Your new physical address is $mac&quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;🙃 The Russian Roulette&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;alias russian-roulette=&apos;
+  [ $(( $RANDOM % 6 )) == 0 ] &amp;#x26;&amp;#x26; rm -rf / || echo &quot;You live&quot;&apos;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;em&gt;If you like to live on the edge... but please, be smart! And don&apos;t run commands you don&apos;t know the effects of!&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;Bonus #1: Tree&lt;/h2&gt;
+&lt;p&gt;I use &lt;a href=&quot;https://formulae.brew.sh/formula/tree&quot;&gt;tree&lt;/a&gt; to display directories as trees. It very cool to write documentation.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ tree content/pages
+
+├── components
+│   ├── button.js
+│   └── checkbox.jpg
+├── pages
+│   ├── about.js
+│   └── dashboard.js
+├── index.js
+└── README.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Bonus #2: Gtop&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/aksakalli/gtop&quot;&gt;Gtop&lt;/a&gt; is a system monitoring dashboard. Typing Gtop on my keyboard is usually quicker than opening the activity monitor (for some unknown reasons I always struggle to find it).&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://www.maxpou.fr/static/066abc5feae3cac09dd4dccde50cc460/7da7d/gtop.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 69.93865030674846%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAADIklEQVQ4y52SW2/TSBTHDdI+LaJA40Kq2M6MHV9iu3XTpkuT5p44SaNCi7iIl11uqVpAK7QIRPkQfAIEfAB4QrRISDzwAoigooYiIbUpEorttLk0Eh+AM05hKx6x9NN/Zs6ZM/8zHurzvYd/bLx5Gl5dex3drK5OrH/8ENnYZb36IVJbW41U372OfHr/1h2vV1ciGwQ37irZM/nu1UvjyaP7+6lSbIa9eu2/r/P/Lnbn5hdb5YXF9l7mgIvlW+1Lc7fdcW/9brs839O5hbvN8vydb/9cvrkSS5eOUIe9OvaqmU2ajTr9vok6YO3Fw0QsiFk0B/hjPeUmLQ/bUy+fsvzBYtsrJN8fHJRoysuNImzka34p1QAs9AtYTls4mLWxkvkJgjVezdkkHtBNSxs/2RZ0s9LP6B7qGAphrJk1rJoNXjNtRBKD/+MnKFlXOaIA5P5cA7U4OdP0B7OVo2iYpgaYEayMT29KRnFLNoo2r+V7iS5wwB6wVnAEo+Qoo9MOiQeGS44wNGX5VbOFNLMywOk0ddRnYBTKbzKBZMMnJCxQF1ZM2ZyYBlIuZC7qUw4PRREcCq52HeYscNmEeaXfS+4Qj2G/mquxcqYBLZGgm/wrELcZKIr1gi2Fph1Oztq8XnCwloefkmtBDXCo0RTNDGG4qxq06hZkpcyell0HrvJq1kYKOJbALXTAyeBcTtqsEK+zQqLJBuIVjy9IU4NCGIcT574Yx2e3jYlTjv7XrEPcuJcOxYgT4io8e705du5mSy1e3Q7mF7ZDp2+0Rs7caAULC1va1PWukrm4cuSwz0MNsAbSxk9sqOGTjjJ2oi6OlCxoo45+oJp1KFgfmilvDZ+9thUslRuKebmhgarFKw0x/rctJS+0A9HzFfoYT57NKA9PxUJKtsuI6TYrpjvwLHbg3joEVkp3kFboBKLTXT461eWPF3c4JdlBRraDQrkdBsWaDB/7xoqJ6qA0TlP9XnnQF4g9Bp4zgdgSwSdMLvmI7sKI8SVWSS67qKllRkosAcuMDIjxZ4yYeMGIsQeHPP4+Cr79wAHgEND3m5C9fwL7vgMFD4piWaWZCwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;how gtop looks like&quot;
+        title=&quot;how gtop looks like&quot;
+        src=&quot;https://www.maxpou.fr/static/066abc5feae3cac09dd4dccde50cc460/a6d36/gtop.png&quot;
+        srcset=&quot;https://www.maxpou.fr/static/066abc5feae3cac09dd4dccde50cc460/222b7/gtop.png 163w,https://www.maxpou.fr/static/066abc5feae3cac09dd4dccde50cc460/ff46a/gtop.png 325w,https://www.maxpou.fr/static/066abc5feae3cac09dd4dccde50cc460/a6d36/gtop.png 650w,https://www.maxpou.fr/static/066abc5feae3cac09dd4dccde50cc460/e548f/gtop.png 975w,https://www.maxpou.fr/static/066abc5feae3cac09dd4dccde50cc460/3c492/gtop.png 1300w,https://www.maxpou.fr/static/066abc5feae3cac09dd4dccde50cc460/7da7d/gtop.png 2120w&quot;
+        sizes=&quot;(max-width: 650px) 100vw, 650px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+          &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(This is an article posted to my blog at maxpou.fr. You can read it online by &lt;a href=&quot;https://www.maxpou.frbash-for-dev&quot;&gt;clicking here&lt;/a&gt;.)&lt;/div&gt;
+        </content:encoded></item><item><title><![CDATA[2020 - A Year In Review]]></title><description><![CDATA[Disclaimer: I mostly wrote this blog post for myself. Writing my Year in review helps me to celebrate my biggest wins, see what was wrong and define goals for the upcoming year.  👨‍💻 Work I am still working at VSware as a Sr Software Engineer. This…]]></description><link>https://www.maxpou.fr/2020-a-year-in-review</link><guid isPermaLink="false">https://www.maxpou.fr/2020-a-year-in-review</guid><pubDate>Thu, 07 Jan 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;Disclaimer: I mostly wrote this blog post for myself. Writing my &lt;a href=&quot;https://www.maxpou.fr/tags/Year%20In%20Review&quot;&gt;Year in review&lt;/a&gt; helps me to celebrate my biggest wins, see what was wrong and define goals for the upcoming year.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; &quot;
