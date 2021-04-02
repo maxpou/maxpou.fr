@@ -1,13 +1,21 @@
-
+---
+layout: post
+title: 2020-lesson-learned-big-vue-app
+slug: lesson-learned-big-vue-app
+date: 2021-03-17
+cover: ./cover.png
+language: en
+tags: ["Vue.js"]
+---
 ## How big?
 
 monorepo/app
 
 ```
-252073 (74913+177160) loc vue
-402287 (273396+128891) loc js
-2479 (1320+1159) js files
-2947 (615+2332) vue files
+252 073 (74913+177160) loc vue
+402 287 (273396+128891) loc js
+2 479 (1320+1159) js files
+2 947 (615+2332) vue files
 1 big app divided in 35 apps
 ```
 
@@ -31,13 +39,14 @@ monorepo/app
 * Design system & Component library
   * slots are great. Use it!
   * have a centralised design system. In one place put all common components (buttons, checkboxes...), icons, fonts and colors.
+  * Storybook is a great tool to visualize your components
 
 * components
 
 * Store (Vuex): 
   * [Don’t overuse your Vuex store](https://www.maxpou.fr/3-tips-scaling-vue-application#tip-3-be-kind-with-your-store-vuex)
   * store make your app harder to test
-  * store are hard to unregister.
+  * store are hard to unregister. Unecessary information can be kept in memory
 
 * Testing: test your app!
   * lint your code. No one like comment like "you forgot a semicolon" on pull requests. Find a rule and follow it blindly. If you start to discuss about it, you open a door for bikeshedding.
