@@ -27,7 +27,7 @@ const SEO = props => {
   const internalTranslations = (props.translations || []).filter(
     t => !t.link.startsWith('http')
   )
-  const url = formatedSiteUrl + withPrefix(path)
+  const url = new URL(formatedSiteUrl + withPrefix(path))
 
   return (
     <>
@@ -35,15 +35,11 @@ const SEO = props => {
         {/* General tags */}
         <html lang={lang} />
         <meta name="description" content={description} />
-        <link rel="canonical" href={url} />
+        <link rel="canonical" href={url.href} />
 
         {/* Each language version must list itself + all other language versions */}
         {internalTranslations.length > 0 && (
-          <link
-            rel="alternate"
-            hreflang={lang}
-            href={url}
-          />
+          <link rel="alternate" hreflang={lang} href={url.href} />
         )}
         {internalTranslations.map(translation => (
           <link
@@ -55,7 +51,7 @@ const SEO = props => {
         ))}
 
         {/* OpenGraph tags */}
-        <meta property="og:url" content={url} />
+        <meta property="og:url" content={url.href} />
         <meta property="og:type" content={isBlogPost ? 'article' : 'website'} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
@@ -67,6 +63,15 @@ const SEO = props => {
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={image} />
+
+        <link
+          rel="webmention"
+          href={`https://webmention.io/${url.host}/webmention`}
+        />
+        <link
+          rel="pingback"
+          href={`https://webmention.io/${url.host}/xmlrpc`}
+        />
       </Helmet>
       <SchemaOrg
         isBlogPost={isBlogPost}
