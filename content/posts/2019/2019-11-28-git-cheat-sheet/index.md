@@ -4,6 +4,7 @@ slug: git-cheat-sheet
 language: en
 date: 2019-11-28
 cover: ./git-toolbox.png
+featured: true
 tags: ["Git"]
 translations:
   - link: 'https://qiita.com/rana_kualu/items/42f8b36974eb07e2abb1'

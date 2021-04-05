@@ -7,6 +7,7 @@ date: 2020-01-01
 published: false
 unlisted: true
 generate-card: false
+featured: false
 language: fr
 cover: ./cover.jpeg
 imageShare: ./cover.jpeg

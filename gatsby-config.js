@@ -77,6 +77,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,

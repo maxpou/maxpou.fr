@@ -27,6 +27,7 @@ const PageBtn = styled(Link)`
   color: var(--color-white);
   padding: 8px 20px;
   min-width: 130px;
+  transition: background 0s;
 
   &:hover {
     background-color: var(--color-white);
