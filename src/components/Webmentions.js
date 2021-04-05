@@ -52,6 +52,7 @@ const UserLikeListItem = styled.li`
 
 const UserImg = styled.img`
   border-radius: 40px;
+  height: 48px;
 `
 
 const WebmentionsWrapper = props => {
@@ -106,7 +107,7 @@ const WebmentionsWrapper = props => {
 
       <Text>
         <Link href={`https://twitter.com/search?q=${currentUrl}`}>
-          You can like / tweet about this post
+          You can like or tweet about this post
         </Link>{' '}
         and it will show up here!
       </Text>

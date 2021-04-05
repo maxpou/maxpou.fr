@@ -40,6 +40,7 @@ export const ThemeProvider = ({ children }) => {
         )
       })
 
+      root.style.setProperty(INITIAL_COLOR_MODE_CSS_PROP, newValue)
       rawSetColorMode(newValue)
     }
 
