@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import useSiteMetadata from '../hooks/use-site-config'
@@ -47,11 +48,13 @@ const Preview = styled.article`
 `
 
 const PreviewCover = styled.div`
-  width: auto;
-  height: 200px;
-  background: #c5d2d9 no-repeat 50%;
-  background-size: cover;
-  border-radius: 5px 5px 0 0;
+  & > * {
+    width: auto;
+    height: 200px;
+    background: #c5d2d9 no-repeat 50%;
+    background-size: cover;
+    border-radius: 5px 5px 0 0;
+  }
 `
 
 const PreviewContent = styled.div`
@@ -71,8 +74,7 @@ const PreviewContent = styled.div`
 const PrevNextPost = props => {
   const { previous, next } = props
   const articles = [previous, next].filter(i => i).map(item => ({ node: item }))
-  const { siteCover, defaultLang } = useSiteMetadata()
-  const { fluid } = useSiteImages(siteCover)
+  const { defaultLang } = useSiteMetadata()
 
   return (
     <Fragment>
@@ -86,14 +88,14 @@ const PrevNextPost = props => {
             slug,
             language,
           } = article.node.frontmatter
-          const heroImg = (cover && cover.publicURL) || fluid.src
+          const image = getImage(cover)
 
           return (
             <Preview key={`prev-next-${i}`}>
               <Link to={`/${slug}`} aria-label={`View ${title} article`}>
-                <PreviewCover
-                  style={{ backgroundImage: `url("${heroImg}")` }}
-                />
+                <PreviewCover>
+                  <GatsbyImage image={image} alt={`View ${title} article`} />
+                </PreviewCover>
                 <PreviewContent>
                   <header>
                     <h2>

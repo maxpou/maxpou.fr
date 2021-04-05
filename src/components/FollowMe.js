@@ -11,6 +11,7 @@ const TwitterButton = styled.a`
   border-radius: 3px;
   padding: 10px 20px 10px 25px;
   font-weight: 600;
+  transition: background 0s;
 
   &:hover {
     background-color: #fff;

@@ -21,10 +21,10 @@ const ReadPost = styled(Link)`
   letter-spacing: 0.05em;
   line-height: 2;
   color: var(--color-text);
+  border-radius: 0.25rem;
 
   &:hover {
     background-color: var(--color-grey600);
-    border-radius: 0.25rem;
     color: var(--color-white);
   }
 `
