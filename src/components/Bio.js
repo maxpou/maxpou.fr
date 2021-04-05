@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Text } from './Commons'
+import FollowMe from './FollowMe'
 import useSiteMetadata from '../hooks/use-site-config'
 import useSiteImages from '../hooks/use-site-images'
 
@@ -44,6 +45,10 @@ const BioWrapper = styled.div`
     margin: -100px auto 0 auto;
     box-shadow: none;
   }
+
+  & .followMeWrapper {
+    padding-top: 10px;
+  }
 `
 
 const BioText = styled(Text)`
@@ -70,8 +75,11 @@ const Bio = () => {
         />
       </figure>
       <section>
-        <h4>About the author</h4>
+        <h2>About the author</h2>
         <BioText dangerouslySetInnerHTML={{ __html: authorDescription }} />
+        <div className="followMeWrapper">
+          <FollowMe />
+        </div>
       </section>
     </BioWrapper>
   )

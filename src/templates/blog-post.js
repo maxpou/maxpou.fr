@@ -6,7 +6,7 @@ import Hero from '../components/Hero'
 import Article from '../components/Article'
 import PrevNextPost from '../components/PrevNextPost'
 import SEO from '../components/SEO'
-import Disqus from '../components/Disqus'
+import Webmentions from '../components/Webmentions'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -38,7 +38,10 @@ class BlogPostTemplate extends React.Component {
         </Wrapper>
 
         <Wrapper as="aside">
-          <Disqus slug={post.frontmatter.slug} title={post.frontmatter.title} />
+          <Webmentions
+            slug={post.frontmatter.slug}
+            title={post.frontmatter.title}
+          />
         </Wrapper>
 
         <PrevNextPost previous={previous} next={next} />

@@ -1,13 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import { createGlobalStyle } from 'styled-components'
-import { Link } from 'gatsby'
+import { Link as GatsbyLink } from 'gatsby'
 
 export const GlobalStyle = createGlobalStyle`
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  transition: background 1s ease;
 }
 
 body {
@@ -44,7 +45,16 @@ ol {
   background-color: var(--color-secondary);
 }
 `
-export const StyledLink = styled(Link)`
+export const Link = styled.a`
+  box-shadow: 0 2px 0 0 var(--color-secondary);
+
+  &:hover {
+    filter: brightness(150%);
+    box-shadow: none;
+  }
+`
+
+export const StyledLink = styled(GatsbyLink)`
   box-shadow: 0 2px 0 0 var(--color-secondary);
 
   &:hover {

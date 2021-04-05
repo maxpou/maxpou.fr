@@ -2,7 +2,7 @@
 title: About
 slug: about
 cover: ./helloworld.jpg
-disqus: false
+webmentions: false
 ---
 
 ## Hello World!
