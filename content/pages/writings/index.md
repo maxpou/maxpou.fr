@@ -1,7 +1,7 @@
 ---
 title: Writing
 slug: writing
-disqus: false
+webmentions: false
 ---
 
 # Writing

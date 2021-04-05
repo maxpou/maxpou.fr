@@ -6,7 +6,7 @@ import Content from '../components/Content'
 import Wrapper from '../components/Wrapper'
 import Hero from '../components/Hero'
 import SEO from '../components/SEO'
-import Disqus from '../components/Disqus'
+import Webmentions from '../components/Webmentions'
 
 const Page = props => {
   const page = props.data.page
@@ -31,9 +31,12 @@ const Page = props => {
         </article>
       </Wrapper>
 
-      {page.frontmatter.disqus && (
+      {page.frontmatter.webmentions && (
         <Wrapper as="aside">
-          <Disqus slug={page.frontmatter.slug} title={page.frontmatter.title} />
+          <Webmentions
+            slug={page.frontmatter.slug}
+            title={page.frontmatter.title}
+          />
         </Wrapper>
       )}
     </Layout>
@@ -51,7 +54,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         slug
-        disqus
+        webmentions
         cover {
           publicURL
         }

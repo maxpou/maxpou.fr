@@ -20,6 +20,7 @@ const FooterWrapper = styled.footer`
     max-width: 900px;
     margin: 0 auto;
 
+    // padding-bottom: 2em;
     .footer-col {
       flex: 1 auto;
       display: inline-flex;
@@ -79,6 +80,7 @@ const FooterWrapper = styled.footer`
   @media (max-width: 564px) {
     .footer-col:first-child {
       width: 100%;
+      padding-bottom: 2em;
     }
   }
 `

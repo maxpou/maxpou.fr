@@ -1,7 +1,7 @@
 ---
 title: Apps, Tools, and Gear I Use
 slug: uses
-disqus: true
+webmentions: true
 cover: ./desktop.jpg
 ---
 

@@ -223,15 +223,7 @@ const MobileHeader = ({ headerLinks }) => {
 }
 
 const Header = () => {
-  const {
-    headerLinks,
-    siteTitle,
-    headerTitle,
-    headerLinksIcon,
-  } = useSiteMetadata()
-  const iconSrc = headerLinksIcon
-    ? useSiteImages(headerLinksIcon).fluid.src
-    : null
+  const { headerLinks, headerTitle } = useSiteMetadata()
 
   return (
     <HeaderWrapper>
@@ -240,7 +232,6 @@ const Header = () => {
           Skip to main content
         </SkipMainContent>
         <HeaderLinkTitle to={`/`} aria-label={`View home page`}>
-          {iconSrc && <HeaderImage src={iconSrc} alt={siteTitle} />}
           <HeaderLinkTitleContent>{headerTitle}</HeaderLinkTitleContent>
         </HeaderLinkTitle>
         <HeaderLinksContainer>

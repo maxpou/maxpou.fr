@@ -8,11 +8,9 @@ module.exports = {
   authorDescription: `
   Hey, I'm Maxence Poutord, a software engineer specialized in web technologies. 
   In my day-to-day job, I'm working as a senior front-end engineer at VSware.
-  As a digital nomad, I'm living where the WiFi and sun are!<br>
-  You can also find me on Twitter <a href="https://twitter.com/_maxpou" rel="noopener" target="_blank">@_maxpou</a>.
+  As a digital nomad, I'm living where the WiFi and sun are!
   `,
   siteUrl: 'https://www.maxpou.fr/',
-  disqusSiteUrl: 'https://www.maxpou.fr/',
   // Prefixes all links. For cases when deployed to maxpou.fr/gatsby-starter-morning-dew/
   pathPrefix: '/', // Note: it must *not* have a trailing slash.
   siteCover: 'cover.jpg',
@@ -22,9 +20,7 @@ module.exports = {
   display: 'standalone',
   icon: 'content/images/icon.jpeg',
   postsPerPage: 10,
-  disqusShortname: 'maxpou',
   headerTitle: 'maxpou.fr',
-  headerLinksIcon: '',
   headerLinks: [
     {
       label: 'Blog',

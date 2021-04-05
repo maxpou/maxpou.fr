@@ -1,7 +1,7 @@
 ---
 title: Portfolio
 slug: portfolio
-disqus: false
+webmentions: false
 cover: ./opensource.png
 ---
 
