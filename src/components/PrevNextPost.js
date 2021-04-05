@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import useSiteMetadata from '../hooks/use-site-config'
