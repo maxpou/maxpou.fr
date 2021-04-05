@@ -63,9 +63,7 @@ const WebmentionsWrapper = props => {
   const [retweets, setRetweets] = useState(0)
   const [likes, setLikes] = useState(0)
   useEffect(() => {
-    fetch(
-      `https://webmention.io/api/count.json?target=${currentUrl}/`
-    )
+    fetch(`https://webmention.io/api/count.json?target=${currentUrl}/`)
       .then(response => response.json())
       .then(resultData => {
         setLikes(resultData.type.like || 0)
@@ -87,17 +85,31 @@ const WebmentionsWrapper = props => {
     <div>
       <MentionTitle>Webmentions</MentionTitle>
       <Bull />
-      <LikeContainer>{likes} <LikeIcon height="24px" width="24px"/></LikeContainer>
-      <RetweetContainer>{retweets} <RetweetIcon height="24px" width="24px"/></RetweetContainer>
+      <LikeContainer>
+        {likes} <LikeIcon height="24px" width="24px" />
+      </LikeContainer>
+      <RetweetContainer>
+        {retweets} <RetweetIcon height="24px" width="24px" />
+      </RetweetContainer>
 
       {likesUsers.length > 0 && (
         <LikeListContainer>
-          <LikedByImg src={BirdHeartIcon} alt="Liked by:" height="48px" width="56px"/>
+          <LikedByImg
+            src={BirdHeartIcon}
+            alt="Liked by:"
+            height="48px"
+            width="56px"
+          />
           <UserLikeList>
             {likesUsers.map(mention => (
               <UserLikeListItem key={`liked-by-${mention['wm-id']}`}>
                 <a href={mention.author.url}>
-                  <UserImg src={mention.author.photo} alt={mention.author.name} width="48px" height="48px" />
+                  <UserImg
+                    src={mention.author.photo}
+                    alt={mention.author.name}
+                    width="48px"
+                    height="48px"
+                  />
                 </a>
               </UserLikeListItem>
             ))}
