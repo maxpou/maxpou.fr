@@ -9,9 +9,10 @@ import { media } from '../tokens'
 
 const SiteContent = styled.div`
   margin: 0 0;
+  background-color: var(--color-siteBackground);
 
   @media ${media.medium} {
-    margin: 60px 0;
+    padding: 60px 0;
   }
 `
 
