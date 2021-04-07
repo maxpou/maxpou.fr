@@ -23,10 +23,17 @@ class Template extends React.Component {
     return (
       <>
         <Helmet>
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
           <link
+            rel="preload"
+            as="style"
             href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap"
+          />
+          <link
             rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap"
+            media="print"
+            onload="this.media='all'"
           />
         </Helmet>
         <GlobalStyle />
