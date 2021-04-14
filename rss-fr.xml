@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Maxence Poutord • Maxpou Blog (FR)]]></title><description><![CDATA[Software engineer • Public speaker • Nomadic worker]]></description><link>https://www.maxpou.fr</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 14 Apr 2021 20:01:55 GMT</lastBuildDate><item><title><![CDATA[Monorepo: est-ce que ça vaut le coup?]]></title><description><![CDATA[La tendance actuelle est de diviser nos codebases. Ces dernières années, on a vu apparaître des concepts comme les microservices, les micro-frontends... Et puis à contre-courant, on voit aussi des projets se rassembler sous un seul et unique…]]></description><link>https://www.maxpou.fr/monorepo-pros-and-cons-fr</link><guid isPermaLink="false">https://www.maxpou.fr/monorepo-pros-and-cons-fr</guid><pubDate>Tue, 22 Dec 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;La tendance actuelle est de diviser nos codebases. Ces dernières années, on a vu apparaître des concepts comme les microservices, les micro-frontends...&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Maxence Poutord • Maxpou Blog (FR)]]></title><description><![CDATA[Software engineer • Public speaker • Nomadic worker]]></description><link>https://www.maxpou.fr</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 14 Apr 2021 21:20:21 GMT</lastBuildDate><item><title><![CDATA[Monorepo: est-ce que ça vaut le coup?]]></title><description><![CDATA[La tendance actuelle est de diviser nos codebases. Ces dernières années, on a vu apparaître des concepts comme les microservices, les micro-frontends... Et puis à contre-courant, on voit aussi des projets se rassembler sous un seul et unique…]]></description><link>https://www.maxpou.fr/monorepo-pros-and-cons-fr</link><guid isPermaLink="false">https://www.maxpou.fr/monorepo-pros-and-cons-fr</guid><pubDate>Tue, 22 Dec 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;La tendance actuelle est de diviser nos codebases. Ces dernières années, on a vu apparaître des concepts comme les microservices, les micro-frontends...&lt;/p&gt;
 &lt;p&gt;Et puis à contre-courant, on voit aussi des projets se rassembler sous un seul et unique repository git. On appelle cela des monorepos (ou monorepository).&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -13,7 +13,7 @@
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 49.69325153374233%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAACxUlEQVQozy1Ta0gUYRQ9M/se1818rSWVqKRsUkFJVkSURUFJJJJ/+lEQBNYuEVoQIvkjssTKUjGCIlEkXNqifKw7q6vsWlEQFbWagSZZZlZalrO7urc70sD5zndm5h7mnrkfCGcBPBaIAHu1EYtaqhfAO/UeFScIr3OtqFhl2dKWmbQXMOiBZbGA0cyFyawtrHmfEAMIVgw6jL7x23gTbIKMrZBeOYyXxy4KwdE2vHVX4eDYY9W6ApXmhGxyJO2N9qE22o0W8uICG4J6YF9QtQ+3nzVgG342pxIFMmimyxJOXIHkiTtLPVF3Ji0EUuh5o6GU/DGgB2b+Kuh+v4BN6bVSqD+NFDl2aqgCBsW7ZEDpS6NIXzIFm/Ql+PzQMB3qMdNXl26Sq+JH2rT3Zz0xNNtlooE6sSQiaxD2iTpAGxNqx/qQbJwPeWMp5NGNzrVAy+xRZDNFeowUvCscw7XTyLtVil3XTyJPzazKgdWNZchvPIWd5YeRWOcAPNXgTBE/7xVNShfyGQWKG1uVRwDzur8dKOCW91wpQRo+2CX/ZAveDTfDh90wv3VINV8uaYbHXRiSL6PomwuYfgQNG1rCHjGVze4wnIyayMcG1bBsrhP3FzxoDdzADvy4t5zoaSbNuOMjSSmcYXOcvODlDP1qhvpSCphA/UZu2WT6244NSm8KZ5hOSs/S7yPnoVe8cU8U1mqGg03aE/jk0k396ZZo3KmbUNsabhWd050mmukwkP+GcFxxi/jVrmYoShSALeI1zIa9EoVl3XsKQhOWtR2qjvoMNHhXOIqqI8hyliPLVYmV69N4IiuR4DyHrHo7csqKYVEzBM8TX4n7Nwsremtw4OVNFD6pQz7PoNR3FXn+WhQzH3IUIhtnitV3hXRecgQBNuY1rFcDVmHfJmBPLoSi7cDadIj8TFR/HFMGL2rNRoZt8QD8xz8LzERw8ayufAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 49.69325153374233%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAACyUlEQVQozy2TbWhTdxSHn3ubm5ukaaZ9d+JWarFSxQkqVovI1omCkzGR9cs+TBCEbg0irYMhZf0gVqXzrUpFUCwtIg1mYlsTc9MmJdENB0NFU9eBL1itzs3WVf0nMT1yyz6cA7/DOT84z+Eg/AD0ayLQdMjFrPac0ECwa9JQpN1aVUbrx761fVUlm8B0wrwCcHmBUjB9MM8LRfmglTHqd8XGz3A71Y1FHZ6bftfBR/u11IM+7oTb+epRv23dSpu3aLH4SzbNxDk6c5VeibIPQIZoytk6xpnfTrKOlz3zRZILZSrkyxQvoHTi7NzITLhKcslyudFlNksiH/nF6wSM/36nRg2XSXqkQpRV8OJeK6aKfnBNxSskGy+VVLezkSeXzMn0kFeeBY3nTii83+e4OB3Jl+mQW6516o1ZK49MTDfAkZ8eYHnacr1LRwskHTEevO3FkY4YEWV5JTvkktQ5bQdHdlN7upnPj31Prc2s3c+irhbqu3bx2d5vKO70Q+QQGlD4Lqq7VYh6FWKLClOnLoMK88mbQbZIjI0/N1LBX02exPNe7o71EGMD3jt+T8fTA3lj40HuWQfZ9ncQJi+TB/gyEX2+CnFWhQioEB3Zhydtw5a3V7iYi3A+eZxP+ffChyK/VslUuDBbUk7pRM8cKxetklzCZuhslqQbGXEZ4Ha/GWCFGi6X9EilqKG5/9z/CaeKzrmuRipnGY52O77jcdB48fqqR8YDxoS91th5PTB5xS1Tg6Ykjms7VVjn1YDNUPdIkpps1JzORD2SsYw/JUVexnIM2nomZsroOW077d9SHdhLdbCNj5ZXQH8bRYEfqT7RxNKWBnw2Q6izU/EXa7QFwx18+ccptl7vpB5MT/wwtYmjNMQP87V/K4vZ02D3apXAUk2jBlgC2iIo0zavho2r0Lath2WV6IBuHw70hYA9sxKomX2A/+M9C8xEcD2QJXcAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -44,7 +44,7 @@ Encore un avantage d&apos;avoir tout le code sous la main.&lt;/p&gt;
 Le projet sur lequel je travaille avait un nom très étrange pour la branche principale. Et puis un jour on a décidé d’utiliser un autre nom tout aussi étrange pour le remplacer. Certains repos étaient mis à jour et d’autres non. A chaque fois que quelqu&apos;un clonait le repo, un bourde n&apos;était jamais bien loin.&lt;/p&gt;
 &lt;h3&gt;👨‍👩‍👧 Dependencies&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Plus de place sur le disque dur&lt;/strong&gt;:&lt;br&gt;
-Si vous êtes familiers avec l’écosystème JavaScript, vous savez probablement que le dossier node&lt;em&gt;module peut être [extrêmement lourd](&lt;a href=&quot;https://www.reddit.com/r/ProgrammerHumor/comments/6s0wov/heaviest&quot;&gt;https://www.reddit.com/r/ProgrammerHumor/comments/6s0wov/heaviest&lt;/a&gt;&lt;/em&gt;objects&lt;em&gt;in&lt;/em&gt;the&lt;em&gt;universe/). Lorsque nous avions environ 30 applications / packages, cela prenait 12 Go sur le disque dur. Oui, 12 Go! Nous avions des dépendances comme Vue.js installées 30 fois. Heureusement, certains outils (comme yarn) créent un lien symbolique _(symlinks)&lt;/em&gt; entre les dépendances redondantes lorsque les workspaces sont activés. Grâce à cette fonctionnalité, &lt;a href=&quot;https://twitter.com/_maxpou/status/1263426573379739651&quot;&gt;nous sommes passés de 12 Go à 1.7 Go&lt;/a&gt;.&lt;/p&gt;
+Si vous êtes familiers avec l’écosystème JavaScript, vous savez probablement que le dossier node_module peut être &lt;a href=&quot;https://www.reddit.com/r/ProgrammerHumor/comments/6s0wov/heaviest_objects_in_the_universe/&quot;&gt;extrêmement lourd&lt;/a&gt;. Lorsque nous avions environ 30 applications / packages, cela prenait 12 Go sur le disque dur. Oui, 12 Go! Nous avions des dépendances comme Vue.js installées 30 fois. Heureusement, certains outils (comme yarn) créent un lien symbolique &lt;em&gt;(symlinks)&lt;/em&gt; entre les dépendances redondantes lorsque les workspaces sont activés. Grâce à cette fonctionnalité, &lt;a href=&quot;https://twitter.com/_maxpou/status/1263426573379739651&quot;&gt;nous sommes passés de 12 Go à 1.7 Go&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; &quot;
@@ -58,7 +58,7 @@ Si vous êtes familiers avec l’écosystème JavaScript, vous savez probablemen
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 64.41717791411043%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAADy0lEQVQ4y02Sf1DTdRjH3xsbgWiR/B6QQIBoBsGVKVw0OoEOuUo4Q+8Qgn4YJdE8EMnUnYRdkjjA+KkhQwYMSQbM3CbjC4sfAV1ZIhVngqgpnQxigGvY02fwT5+71+dzz32e533PL9xNywAtLYGIMH9jAo39d8AMlMhuwhibJ5pNVUzOSFQmxuxMWuP0TGLp8/qTi8AMIVLGIbiD4FT6B/bsScHysQr9deyLTx4UnW6/l3P4tdEcGY42qBxilWOeCeU9AVxuu7/lU5WX6bjO+5ZE4fNu1bBP1Nnv/aI7/1yNFMIv6nD+IvcU36x/nG+qYYKmA0dwT5K3aepwQdRIVq5Ieq4CKCN/vxbSujaTBrX0XFb1MHpLOdB1wPkCKXxbaAA1lJTbVQ/SA5beDbBwLiDtSpIYO3gE48cqcVcWAermez7QeqdyypCw6x1hCUad9y76RrSaKlIEC1rRzp9aQrcPqzZvvf3t+owJpUPw/Ut+0RaDb5KFc9xG0+BZ9fg7/NcLinY9Y0skxJTqsWdN3Mb8hTa8+JALTF/oDjx4aRJ2VEUw9Tl9uDjIjzN32UQuGkILjCpEGDs3ps4PRB+d0/vtPb4dQqug3Qo8u3XOsAeSbVhbrd1dfq0Mvl4ROfSePE7z6g+be8QdEW+g3pEo5H8+EkY0sx2Yzlq35bK9iHjL0fmMcsZvjCuE37MznExvKa5QppIjSaPekn5++NbbNa+IT7D/+4xiYmHpfCIxH/AABJlFPFQNYlWZDoIGgm0dbXBV/HPAvc6cDQUlYx/ZiMsmXQLPmT72PWOU+p1dfMFRQ3BvpsSnG+alrgrzbgRoYC1KGJ/N7mI2piKdq7CkKza8nzk2PQoNaqXPYtpvyz5Sqy/LW98MYJN+IlT9rzRMTUX2SgpHC8GtmVK2qB4WujVROqxy0Yw6hqiyG2vKe0q8zvSSXZkhBhVTkHSzFZEjgAZ4CrYW6ZXaPNi1EXitBPuGm9A1RNlTHzKp36OYDMihWgjoPJPtZAmuqf0R/l9p4gMr9cqQUy2+yBizNpunqE8Iv2bYKR/S75Cuq+YcpAYSHtKMrgpWEf9qx37B+HdxojtX9/tMGGI8fy0A74YMGL/sBXwg/VxQvzfxyabdYpdTkvedoSM++ghrq4zb3C+QykVJbUI5bcWXhC3NszZD7fvQaRgRzPVFgUaSYOnbhOlCYO40YNayubyTfxJc8ksYetkJ1VlpAEc8vpbg8fVUfNDFR9eCLi79bC9fEqOQcEg9atvFcbZcV6fAuhB/DyXzzIZAzLPsFipWBP8DlYvfIQ53kwMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 64.41717791411043%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAADxElEQVQ4y02SfVDTBRjHv/ux0RAtkvcBCQSIZhBcmcJFoxPokKuEM/QOIejFKInmgUim7iTsksQBxquGDBkwJPkBM7fJ+MHiJUZXlkjFmSBqSicbMZhr2NMN/um5+97zz/N87vl+78HdzGzQ0hKICAs3ptAydAcgQrnsJowJhaK5DMW0ScKaTRJ2zpTZMmtKqXhed9ICmAgxMg5h3QTXij+wZ086lssO+uvYF588KD3ddS//8Gvj+TIcbWadE5QTPslV/cFcQVeQ7VPW13xc63dLovB/t3bUP/bs94FxPX+uRjrhF1UUY+GeYqy6xxlzPQDzgSO4JyncNHO4OHYst0AkPVcNVFJQYDtpPNpIjQZ6LrduFAMVHOg64HaBFAHtNIx6Si3obQLpANvABtg4d5Bm5UhMHDyCyWM1uCuLBvUxPg80fhmcMjzyendkslHrt4u+Ea2m6nT+oka086f2iO2j7Oatt79dnz2ldA67fykwzqYPSLVxLttoFjw7j9kRtJ5fuusZRyIBZtjHnjVzG4sWO/HiQy4ka7Ev5OClaQiplmAedP3QMsIkWnsdYiz6iGIji2hjz8aMheG4o/O6wL3Ht0NgBwpXxBOuc4MTkOZAtJzucrdr5PXqGMN78kT1qz9s7hd3R7+BJhei8P/NSEAUB8BZCKz1XLbtS8Rb3i4ioIqA3wi4Qvg9L9vV/JbiCuUoOZK06GxZ50dvvV3/ivgEAfcJKCMQZTFEYgbwBvg5pTzUjmBVpRb8ZoJjI23wUPxzwKvRmgcFpWEfOYgrp91Dzpk/DjhjlAaetbzgoiZ4tVHK080LUg+FdTeC1bCbEiTlASjTAaVaD0F5b0LUEMGr9VFEaAd9Ft91W/aRSnVZ3vFmMBroiQjVv9JIFZU6KSkK7QTPNkrfwj4s8WylLNhxcQQ0EiCq6cOaqv5y3zMDJKzUx6N6BpI+DiRHMA3zFKRDVo2mEMJOAq+D4NR8E9rmWCcaRA4NeZeRHvnUAD6dB6gHwJqGHxH0lToppEanDD/VHoDsCXvYPEVTctQ1/U65QbdDuq6Oc5bqSXBIPb4qjCXmavd+/uR3iaI7V/f7T+njfX4tBu+GDJi87At8IP2c37Q35cnW3WL3U5L33aAlBoOEtbXGbV4XiHVXUqdATlvxJWFL25yDoWsfevRj/PnBWNBYKmyDmzBbAsyfBqwaBnin6CS4tJdgeNkVdbmZAEc8RkPw/nomKfTio2uhF5d+dpIviVFCOKQad+zlOEeut4dvf4i/DWk8qz4ECzJgsXoF+B+Vi98hVVLA5QAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -80,7 +80,7 @@ Pour nous, tous nos packages sont dans un dossier &lt;code&gt;packages&lt;/code&
 &lt;h2&gt;Inconvénients&lt;/h2&gt;
 &lt;h3&gt;🛠 Git &amp;#x26; code hosting platforms (GitLab/GitHub...)&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Autorisation&lt;/strong&gt;:&lt;br&gt;
-Quand on met des permissions de lecture/ecriture sur GitLab/GitHub/etc., c&apos;est pour le repo tout entier. &lt;/p&gt;
+Quand on met des permissions de lecture/ecriture sur GitLab/GitHub/etc., c&apos;est pour le repo tout entier.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;💡 Astuce:&lt;/strong&gt; Vous pouvez créer un fichier CODEOWNERS (&lt;a href=&quot;https://docs.gitlab.com/ee/user/project/code_owners.html&quot;&gt;doc GitLab&lt;/a&gt;, &lt;a href=&quot;https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners&quot;&gt;doc GitHub&lt;/a&gt;) pour définir des règles d’autorisation.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-md&quot;&gt;# .gitlab/CODEOWNERS
 packages/app-1 @user1
@@ -117,7 +117,7 @@ git clone \
   &amp;#x3C;repo-url&gt;
 git checkout main -- packages/package-a
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;em&gt;Note: Voici un peu de lecture si vous souhaitez en apprendre plus sur le [&quot;partial cloning&quot;](&lt;a href=&quot;https://docs.gitlab.com/ee/topics/git/partial&quot;&gt;https://docs.gitlab.com/ee/topics/git/partial&lt;/a&gt;&lt;/em&gt;clone.html) (en anglais)._&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: Voici un peu de lecture si vous souhaitez en apprendre plus sur le &lt;a href=&quot;https://docs.gitlab.com/ee/topics/git/partial_clone.html&quot;&gt;&quot;partial cloning&quot;&lt;/a&gt; (en anglais).&lt;/em&gt;&lt;/p&gt;
 &lt;h3&gt;🤖 Continuous Integration (CI)&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Quand c&apos;est cassé, tout le monde est bloqué!&lt;/strong&gt;&lt;br&gt;
 Si la branche &lt;code&gt;main&lt;/code&gt; est marquée en rouge par votre intégration continue, tout le monde est impacté. Vous ne pouvez pas mettre ce problème sous le tapis. Ça doit être traité immédiatement.&lt;/p&gt;
@@ -182,7 +182,7 @@ La première fois que j&apos;ai &quot;git pull&quot; le code source de Gatsby.js
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 53.37423312883436%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAADS0lEQVQozzWRe0yTVxjGX+USQrwk7g91arxlkuENJODUiSYyEoVNvFGhl09qKwUUEEQppe10KHYgXilRtroB5dLVUhmaKcULFZ2X4USnnZmighcsVIquw6k8O5+rJ/nlnDznvM+b9zn04yeBi4nInzHcyxjGCMYwRiBjHMPn0NRRy3dPoDns7Oe9G8kY66358HYqIU4Y0yW37LqXVKF3yUw5TKSBJLO0Y2OD3pXSsLc5On8JADoT7Dsfq1QCT55+D3QFZa9lZhGFEf2tqFSiSFuKbUcLtwQJIwjiq3NbUsqhyNuJJ1LjU4SUB/RKqi8YdtvRknsKd5fqcvkmvOmrlZcVvVWL0F4/Ak5JRVPmmB8m9eft6LvbSnigToYp5KCABsWmSKesFo6sWvSLazpvyAz+LyTV5xw5jehKs+L32KIc3owf9TV3Mq27MA+/aaR4nFRxdt2sDTP7tx7uaS9OQMemEpgWaNcQuHPD3RnWeChtoh6xMfpmqoFcXPX8t5oT4sH04/H7wmUzmVkAnxWy6se7N94XIudNgp07sGzR5xGfPku1xb7LHBRB5YiLHT9jOiGt+eMeceVO57rKYhdXk3H1q11D+rgaiYcz7xmQWgotXyg/fFrgv4lNoW5NbvHb0vUlA0mm1UsXxs3+U1pUMFieqHujLP46fYoonBBbtbh1mxXZDVfQKavrRlhpQC9XfTE/JB4N0fl4lGhQekf28aw8n9FjjMR1yzB0ir+/pJi4L+gf9TeuP+yE+6pkmEMPCQgrzPPacn/Gdst1OOV1D/Ftq38fV2v7LioTLXE6dAjKs+n/NRTrTyc7txfgljILz+VVZ1SfZU32bDn6+E5BCsu7FHUL1asof/qaoGuJ+7feVpRpmiNLhHz4tpgdCfdSqzR3xEeU2tmCSKb5MkYblmya2yY/pnJs/kVbv0Afxet2kT7tdnqz+qbCmP3luNDw962hBcFmos4bESu67cvUaLUSDjPtoIdwiu0b7DRn9BRffnToGJe6yNketfmpPUaIs8cIZUyrBHmjYYbmI34Pzw+hl41h8v7GYOVf18YyrcYPJQ988Jw9lDTSjI8mvS/AyRO+bb8Sua3BWvfxaWsdTaz+tNEPP70bynv9B2n0rGB5CsMuAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 53.37423312883436%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAADRklEQVQozzVRbVATBBh+lI/jOLW7+uFnl+kVF2qCHFia6J3EnUKFmizYl8xNBlNAEGWMbWkoLhAtZZxSs4DxMeeYiJ7K8INFVhomli4vRQMzHCxGtTCVp5vN9+79877v8zz3PC++fCV8GYBQABMDPQXAJAATAIQDmA4g6MDs59/b/SIWAAgJ7J4DMDWAeXY7G0wRJvUrbLtuZdQaPXJLIQCMZlhlvRtbjZ6s1r0diSXLSeJsZPAirtEIfMXGPTSUVj+UW0WIAf5W1qlZrq/itsNlWyKEcaD40sLOrBoqi3fyN5n5PqNqwoYkDV+ZdjvZWXSaN1cYivwiftK/Vn+rHKpfyp6WSXRLatvzpnwxc6R4x/DNLvCONpOWqP0CjIkt8W55E135TRwRN/ZdlZtC/5A0nHcVtrFfZecPyeWFfjK/1YfSk6qBsmJ+r5PxXkbtuXWvb5g3svXgYE9FGns3VdKyWL8WlJ6f6M21p1LtEA2KzYnXsk3wSBsWPdadEI/lHEvdFyufByDMnxXzW2Z4N94WsvBRmlP66cqlb8W99nu2I/lJ3piIGldK8oy5c0BVx7RBcd1O97q6Co+0MffSu7vGDUsbJT6pdc+ozFZme1v97Gnh/6a3R3t1RRWPq9ZXjmZY3l+xJGX+z7Ly0rGadMMjdcWHObNEsWBy/bKubXYWtH7HPnnzAGOqwoakDV+XRKWyNbGEv6ab1AHLQb7VF3IHzfG8YpvAPvHnF5Uv7Yv4R/uR5ycneFuTSWv0AQG4yvpmd9FxbrddoVvRfJcfd4UOS5scnyXksTPFwF5BTQH+r/FcfybTvb2UP6rz+UBRf1bzRv7Lvi2H790ozWK/qorNS7RrUDJnbcTl9E+2XldW6zriK4X+8B1JO9JuZdfrbogPqfXzBfEAggFMNi3ftLBbcVTj2nxK37LYmOCfO0VG1fWcDu01pbngnenRsU+lqSfosKDvatyqAedKLbvs4EGC+33gaYIbnFgweVaw3zoNBC/2w92TsPm+M0nIc0fBaoJ1RCAagNZDIXcvjMOfbTGKkbZI9S+Xp4LWxhBW3gniA4KSNsx9YeZTAE+eCO7+BvDaI/XeY69+4GoHeMYcwiNPxvvJ/gNp9KxgUMsYlgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -221,7 +221,7 @@ export function to(promise) {
     .catch(err =&gt; [err, null]);
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Comme vous pouvez le voir, cette fonction retourne un tableau avec plusieurs valeurs possibles: &lt;/p&gt;
+&lt;p&gt;Comme vous pouvez le voir, cette fonction retourne un tableau avec plusieurs valeurs possibles:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;null&lt;/code&gt; &lt;strong&gt;et&lt;/strong&gt; la valeur de la promesse resolue;&lt;/li&gt;
 &lt;li&gt;l&apos;erreur de la promesse &lt;strong&gt;et&lt;/strong&gt; &lt;code&gt;null&lt;/code&gt;.&lt;/li&gt;
@@ -307,7 +307,7 @@ n&apos;attendez pas à ce que votre équipe conserve sa vélocité. &lt;a href=&
 &lt;p&gt;Créez votre routine selon vos besoins. Il n&apos;y a pas besoin de faire quelque chose d&apos;exceptionnel. Soyez simple et constant.&lt;/p&gt;
           &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(This is an article posted to my blog at maxpou.fr. You can read it online by &lt;a href=&quot;https://www.maxpou.fr10-tips-for-working-from-home-fr&quot;&gt;clicking here&lt;/a&gt;.)&lt;/div&gt;
         </content:encoded></item><item><title><![CDATA[Digital Nomad: le ticket doré?]]></title><description><![CDATA[Depuis octobre 2018, je suis ce que l'on appelle un "digital nomad" (ou nomade digital). Si vous n'en avez jamais entendu parlé, l'idée c'est de combiner le télétravail avec le voyage. Ce qui me permet de travailler depuis des endroits assez cool…]]></description><link>https://www.maxpou.fr/busting-nomad-myths-fr</link><guid isPermaLink="false">https://www.maxpou.fr/busting-nomad-myths-fr</guid><pubDate>Sat, 18 Jan 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Depuis octobre 2018, je suis ce que l&apos;on appelle un &quot;digital nomad&quot; (ou nomade digital). Si vous n&apos;en avez jamais entendu parlé, l&apos;idée c&apos;est de combiner le télétravail avec le voyage. Ce qui me permet de travailler depuis des endroits assez cool comme la Thaïlande, Bali, etc.&lt;/p&gt;
-&lt;p&gt;Par contre, quand je rentre en France ou bien quand je lis des articles sur internet, je me rends compte que ma vie est complètement différente de ce que beaucoup de gens pensent. &lt;/p&gt;
+&lt;p&gt;Par contre, quand je rentre en France ou bien quand je lis des articles sur internet, je me rends compte que ma vie est complètement différente de ce que beaucoup de gens pensent.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;L&apos;idée de cet article est de démystifier quelques mythes autour des nomades.&lt;/em&gt;&lt;/p&gt;
 &lt;h2&gt;Mythe #1: Tu travailles depuis la plage&lt;/h2&gt;
 &lt;p&gt;Commençons par le début. Quand on Google &quot;Digital Nomad&quot;, on obtient ceci :&lt;/p&gt;
@@ -429,7 +429,7 @@ n&apos;attendez pas à ce que votre équipe conserve sa vélocité. &lt;a href=&
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 53.987730061349694%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAC4jAAAuIwF4pT92AAADbUlEQVQozxWR+09bdQDFb4w/qT+aJf4FZpujA122KNNFZnTOJRI3NwH9AQKoUZcMyGAzw6EDNreBlMcYfYy2lFcp5dEO2qYv29rS9tL1XdrSjVI2WJkO2w7Kvd9jPb+e5HzOyaEW7hx/xS8/edEzXdkbMjQPLTt5sriTJ42YbvQt6Zp/Sdhaqh6ZGk/E9Jc4cWvvng1z48vUa6DeP1hB/S/ZT5yXdNyK1wFQNkUHRdHiwpEV3efIRpvwYm0A2/9okUmpsRmXIEHfgn28FhZJBUz80m0r/0TKJT2z4p2s8gdVP9JL2npPzHApFja0ZkNW3lXgNkV5hw++wHI5wUZLDltiBsTOMFkzk3ki300FuTl6sian6jzOyq8WwNJdBJf4Y/jkZxFR12LF0oCU/zoySQmWbHyopPx3qdBE0UZ68QvEjNXs1sMesh4VI/TXH+SRq4OsurrwhL5NQrOVxHr3GDF3v83SohLWJz/NxjTVzJq9kXkWuMGkk2Im6hyEQtBdTLmHCv6OKo9h01vH+jQ/YMl4ATtbBrgVX2PZ1IrN8Bi8E19B1X4Ac9cLoOs6DEPfUSwMn4VVdAoR/XkS0Dcj4hASOa/rMOUQ7v93WXUUW6F6lp46h5C+Ac8fz8I9VYmw5nskrJfhkZfBOXgExs59MPQUwS4thXemGg8UZfDrmkjU1oKY697uaG9HERWeKMquGU/CqywjTwPXkH6qzJv9SHj6QCuqYRv+BmpuCQzcQqh/P5BveAgLkk9gk3wJx1gF4paLxHv/O8Ro8fbo3R4OFZYXZhAtB7Nyhd1ZF7AP3Vw24eOTmK2NeOcuEKeskjjy8/TcYmLoLIT5TjFM/SWwS0rhV9aQlK+dfRblIeoQpkeFon35lzlA9BwhyZ+RW+chGRhAMngPQeMVuGe/Zc2iMzlN90e7Gu4HzMxve1lF2yHyJ//TPKicJKwN5Hmkg02vDOYDBTsykfgtakFUPBRSnUbcWrcdd9zMJAKj6WRoPLvqFTBRSzuC2iZ4pmpg7v8Qmpsc6HveAz1SipCqCqvWOmz627BKd8JtEIZlY8o3KHq+59X7osunxgUD72i1c3tNZuOb2tmR/abJ7iOL2r7PfPquWre6/ZZT+eu0Xd7gdinqHy/ONGYezDXnPOprWfd865pznkvPyMY42mkp9R8vgG3IY08srAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 53.987730061349694%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAC4jAAAuIwF4pT92AAADaklEQVQozxXB/VPTdQAH8O91/VT92HXXX9CpyYTy9ArLC7sy8y4uDQPqBziguh7uBE7QTpIS0FSIMRDZg2xj42GM8bAJ225PbWtj25e5B7ax75gyhoJgSduE8f1+3l2vFzV/+8RLYfWpC4Gpqt6opWVo2StUJb1CRdx2vW/J1PJLytVa/dDWdDJhvshLOntf27A3vUi9Auq9Q5XU/1Q/8l4w8StfBUC5NJ0URcsKh1dMnyHHNOP52gB2/jEiu6nHVlKOFH0T7rE6OOSVsIlKd5yik5s+xdmV4ER1OKL7gV4yNgQSlouJmKUtF3UKrwC3KCqoPPQcyxUEG615bMtYEDfL5uxs9rF6bzPCz9MTtXld1wlOfaUAjp4i+GQfIaQuQ1xfhxVHIzbD15BNy7HkEkGnEL1DRceLNjILnyNhreG2HwjIOiND9K8/yENfJ1n1deMxfYtEZ6qI885xYu95i6OlJVxIfYZLGGrYNXcT+3TxOptJy1jGOwiNuKeY8g8V/M1oj2MrWM+FDN9jyXoeu9sW+DVfYdnWhq3YKILjX0LXcRCz1wpg6j4CS98xzCvL4JSeRtz8E1k0tyDukRC1sPsI5ZEc+HdZdwzb0QaOnjyHqLkRzx7NwD9ZhZjhO6SclxBQl8M7eBTWrv2wCIrgVpQiOF2D+5pyhE3NhHG1IuG7uzfS21lExcaLcmvWUwhqy8mTxavIPNEi4etHKtAHWlMDl/Jr6PklsPALof/9IEzdhzEv/xgu+RfwjFYi6bhAgve+RYKW7YzcEfComLowC6YC7MplbnddzD3w87lUSEQSrnYSnD1PvKoq4lGWwcwvJpauQthvF8PWXwK3vBRhbS3ZDHVwTxkhGI8kMyKR7qeCSh7AnCMk/TPy60KkFweQjtxFxHoZ/plvOLv0bN7Q8+Gegf8+O/3bPk7Tfpj8KfqEeFUVJOVsJM/inVxmZRCMR7yrksrepOalxUNR3RkknfU7Sc+NbGpxJJOOjuVWg2KWcXQgYmxGYLIW9v4PYLjBg1nwLujhUkR11Vh11mMr3I5Vugt+iySmGtW+TtFzgpfvSS+dHhMPvG00zu6z2a1vGGeGD9gmeo4uGPs+DZm76/z6jpte7a9TbnWj36dpeLQw3ZS9P9uSD+iv5vxzbWveOT49rRrlGacU1H8vgG3IME8GFgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -443,24 +443,30 @@ n&apos;attendez pas à ce que votre équipe conserve sa vélocité. &lt;a href=&
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;... et j&apos;ai aussi entendu &quot;tu mènes la vie parfaite !&quot;. &lt;/p&gt;
+&lt;p&gt;... et j&apos;ai aussi entendu &quot;tu mènes la vie parfaite !&quot;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Ne vous méprenez pas&lt;/strong&gt;. Je n&apos;ai pas écrit cet article pour me plaindre et dire ma vie est difficile. Non. Je l&apos;adore.&lt;/p&gt;
 &lt;p&gt;Mais s’il vous plaît : ne soyez pas naïf. Chaque situation vient avec son lot d’avantages mais aussi d’inconvénients. Dans cet article, je me suis pas mal attardé aux clichés relatifs à ce style de vie. Il y a aussi quelques inconvénients que je n’ai pas mentionné comme :&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Problèmes de santé mentale&lt;/strong&gt; : un autre sujet sous-représenté mais important. Sans doute parce que c&apos;est toujours mieux pour son ego de poser des photos les pieds dans le sable plutôt que de parler de ses problèmes. Et puis de toutes façons quand on vit sur une ile paradisiaque nos problèmes deviennent vite inaudibles. Si, vous voulez en savoir plus, je vous renvoie à l&apos;&lt;a href=&quot;https://medium.com/@timgrassin/why-digital-nomad-life-can-be-hard-on-your-mental-health-994af0ce32f3&quot;&gt;article de Tim Grassin (en Anglais)&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Solitude&lt;/strong&gt; : pour être transparent, &lt;strong&gt;l&apos;isolement est l&apos;aspect le plus difficile de la vie nomade&lt;/strong&gt;. J&apos;en ai parlé avec pas mal de nomades avec même certain plutôt chevronnés. On s&apos;accorde tous là-dessus. C&apos;est ce qui fait que beaucoup de personnes quittent la vie nomade après 6-12 mois.
-C&apos;est un combat permanent. Quand on voyage, on rencontre de nouvelles personnes sur Meetup/Facebook/Tinder/... et quelques semaines après, chacun prend un chemin différent.
-Se faire des amis c&apos;est difficile quand on grandit. Ça l&apos;est encore plus quand vous changez d&apos;endroit tous les mois ou presque. C&apos;est pour cette raison que quand je voyage, je vais souvent dans des spots avec une communauté déjà présente. Ça permet aussi de retrouver des gens que l’on a rencontré dans d’autres villes&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Télétravail&lt;/strong&gt;. Faire du télétravail de temps à autre peut-être challengeant. Mais passer &quot;100% remote&quot; c’est complètement différent. Quand je suis passé au télétravail, je me suis rapidement aperçu que j&apos;avais sous-estimé certains aspects. Vous ne pouvez plus reporter une réunion parce que vous n&apos;êtes pas au bureau aujourd&apos;hui (et que vous le serez la semaine prochaine), vous ne savez pas si votre collègue plaisante ou non, le surmenage, la gestion des interruptions, problèmes de communication, etc.&lt;br&gt;
-&lt;strong&gt;Le télétravail requiert de la rigueur et de l&apos;organisation.&lt;/strong&gt;&lt;/p&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Mh4f9AYRCZY&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;strong&gt;Problèmes de santé mentale&lt;/strong&gt; : un autre sujet sous-représenté mais important. Sans doute parce que c&apos;est toujours mieux pour son ego de poser des photos les pieds dans le sable plutôt que de parler de ses problèmes. Et puis de toutes façons quand on vit sur une ile paradisiaque nos problèmes deviennent vite inaudibles. Si, vous voulez en savoir plus, je vous renvoie à l&apos;&lt;a href=&quot;https://medium.com/@timgrassin/why-digital-nomad-life-can-be-hard-on-your-mental-health-994af0ce32f3&quot;&gt;article de Tim Grassin (en Anglais)&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Solitude&lt;/strong&gt; : pour être transparent, &lt;strong&gt;l&apos;isolement est l&apos;aspect le plus difficile de la vie nomade&lt;/strong&gt;. J&apos;en ai parlé avec pas mal de nomades avec même certain plutôt chevronnés. On s&apos;accorde tous là-dessus. C&apos;est ce qui fait que beaucoup de personnes quittent la vie nomade après 6-12 mois.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;C&apos;est un combat permanent. Quand on voyage, on rencontre de nouvelles personnes sur Meetup/Facebook/Tinder/... et quelques semaines après, chacun prend un chemin différent.
+Se faire des amis c&apos;est difficile quand on grandit. Ça l&apos;est encore plus quand vous changez d&apos;endroit tous les mois ou presque. C&apos;est pour cette raison que quand je voyage, je vais souvent dans des spots avec une communauté déjà présente. Ça permet aussi de retrouver des gens que l’on a rencontré dans d’autres villes&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Télétravail&lt;/strong&gt;. Faire du télétravail de temps à autre peut-être challengeant. Mais passer &quot;100% remote&quot; c’est complètement différent. Quand je suis passé au télétravail, je me suis rapidement aperçu que j&apos;avais sous-estimé certains aspects. Vous ne pouvez plus reporter une réunion parce que vous n&apos;êtes pas au bureau aujourd&apos;hui (et que vous le serez la semaine prochaine), vous ne savez pas si votre collègue plaisante ou non, le surmenage, la gestion des interruptions, problèmes de communication, etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Le télétravail requiert de la rigueur et de l&apos;organisation.&lt;/strong&gt;&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Mh4f9AYRCZY&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;em&gt;Petit conseil : toujours vérifier son environnement avant d&apos;allumer la webcam&lt;/em&gt; 😉&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Cauchemars administratifs&lt;/strong&gt; : Je suis Français travaillant pour une entreprise en Irlande (ancien expat). Mon téléphone est irlandais et je passe la plupart de mon temps en Asie du Sud-est. Je n&apos;ai plus d&apos;adresse car ça change en moyenne entre une et deux fois par mois. Je vous laisse imaginer tous les problèmes de formulaire web que j&apos;ai pu avoir 😄.&lt;br&gt;
-Un achat sur internet vous demande une adresse de facturation? Je donne une fausse adresse. Un justificatif de domicile ? Photoshop. Et pour les trucs administratifs ? Et bien &lt;a href=&quot;https://www.service-public.fr/particuliers/vosdroits/F17317&quot;&gt;c’est la croix et la bannière&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cauchemars administratifs&lt;/strong&gt; : Je suis Français travaillant pour une entreprise en Irlande (ancien expat). Mon téléphone est irlandais et je passe la plupart de mon temps en Asie du Sud-est. Je n&apos;ai plus d&apos;adresse car ça change en moyenne entre une et deux fois par mois. Je vous laisse imaginer tous les problèmes de formulaire web que j&apos;ai pu avoir 😄.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Un achat sur internet vous demande une adresse de facturation? Je donne une fausse adresse. Un justificatif de domicile ? Photoshop. Et pour les trucs administratifs ? Et bien &lt;a href=&quot;https://www.service-public.fr/particuliers/vosdroits/F17317&quot;&gt;c’est la croix et la bannière&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;L&apos;enfer des fuseaux horaires&lt;/strong&gt; : Mes collègues travaillent en Irlande. Quand, je suis en Thaïlande, j&apos;ai +6 heures de décalage (+7 en hiver). Ce qui veut dire que lorsque mes collègues commencent leur journée de travail, la mienne est sur le point de se terminer. Il faut savoir s&apos;arrêter sinon on a vite fait de faire deux journées en une. Mais cela pourrait être pire. J&apos;ai rencontré des gens qui travaillent avec 12h de décalage !&lt;/p&gt;
 &lt;p&gt;&lt;span
@@ -476,7 +482,7 @@ Un achat sur internet vous demande une adresse de facturation? Je donne une faus
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 36.809815950920246%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABoUlEQVQoz0WRQWvUQBTH80U8ixfvgljQDyB49KYiFXrtSVAQT0LRIlU8tNJlPSlYZIuKImIXJV2ULpUlpkuLViXb7Hbt7k6SmcwkPydJqw/+8Gbem9/M+4+T5zlFaK0ZjScUq0JRIomloqrCRAhS21OF3ZVRldm06JtEcbl2kiTBGENulSoFWWa3rTJ7ONdlbo5qRtMTmi+h5OPviHZf/r8AUwEtCTeIeewJFq3qvmDBj5jdEFxtjVnsRjzfSah3Y5a2JLV2j2tP1ri00uFWO+FOw2Xm6TozDY+m9x2nGFVpQ6IzUpMxVhkXa7ucuP2NYzc87r0PiWNB8EcwGAlbNxxIw1BIbCsnl32cuS7O/DabwbgCFiOVZlgpC23e/cqr6SbvLq/xsu4zNfeMMzeXOb7QYmt4NGYV3iijFaa09yt/S6AuPLSwrFDpIf8+49Mgxbn/C+fBLs7DgNm3O1youZxa2ePKh2Hp4+dQ4fYk/lAdAnUFzA+Bxr5S66zEdvYVp1+EnFvtc7bR583PhGagWP2R4O5Jrq8fcP71oKw96kz4Cz6s9eDtPYYsAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 36.809815950920246%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABm0lEQVQoz0WRTWsTURSG54+4FjfuBVHQHyC4dKciCt12JSiIK6FokSouqjTElYJFUlQUERuUaVAMShinwaJVmXSSxmZyZ+beuR+PzEyqBw6cw3t5Du97PeccZWmtmSRTyq3sNJdkUlGrMBWCQuvZ5kCm9eSo3k3TrNq9PM8xxuCMoVAKrAUsWA1OV7PZ14xmIDQfY8m73yndofx/AFMDcQY/yngQCJYDQTMULIUp858EFzoJy/2UJ1s5zX7G/U1Jozvg0sN1zq72uNbNudHymXu0wVwroB18xyutKm3ItaUwlkRZzjS2OXT9KweuBNx6E5NlguiPYDQRJMqwJw1jIVEWDq+EeAt9vMVvfI6SGlhaqsJwDmUs7ZtfeH6xzetz6zxrhhxfeMyxqyscXOqwOd63WVcwsXTigu5unW8F1GWGzmHLrjLk32e8HxV4t3/h3dnGuxsx/2qL0w2fI6s7nH87rnL8ECv8gSQcqxlQ10A3Axpj0dpW2N6u4ujTmJNrQ060hrz8mdOOFGs/cvwdyeWNPU69GFXavd6Uvz6s9eAO1BnuAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -492,7 +498,9 @@ Un achat sur internet vous demande une adresse de facturation? Je donne une faus
     &lt;/span&gt;
 &lt;em&gt;Le décalage horaire affecte aussi mes soirées!&lt;/em&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;Mais aussi: les WiFi peu fiables, les pannes de courant, taxes, assurance maladie, etc..&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Mais aussi: les WiFi peu fiables, les pannes de courant, taxes, assurance maladie, etc..&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;On récapitule&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Je n&apos;ai pas gagné LE ticket d&apos;or, j&apos;ai gagné MON ticket doré&lt;/em&gt;.&lt;/p&gt;
@@ -541,7 +549,7 @@ Un achat sur internet vous demande une adresse de facturation? Je donne une faus
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 55.828220858895705%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACQUlEQVQoz5WSXUhTYRzGD953YZGUl2EQSUiaWZrOmkm6qdvc0vyoJCKMgrqILrqJpPCmwLqIurKu+zDo48YKKytNLMuaiqhZ6ubcdqbbOWcf5/w6Z5A0DKk/PDwX7/v+eB7+r3DM1kKj2UVFjhlXiQ33Vzczs3NIkowsyyiKoruupMtEYzE0DV1ailRVJRAUEepbWqk7coIDribqGo/T+7KHwYF+QqJIIh5H0y9qmpr0JOkv8ydUcDoOU+toprLShdN+lM9vuhl3f2LKGyQQlhAlBTGiEJKjBHX3ihJBKYYoxwiFFonHE8tQYwSnyUF9aS01BRbshVZ8Xj/S0iy+H/1IwW9E/EN4JvpYmB5g5OMLuh48xOcPoOdN1ldVLSWl4Cxz0VBej3W3BVtxNV6Pn0RkGnn+LbHQMEuzvYy9v4d/4jUzI68Y7nuGEgmtqPx7hFqTnTodWmUA91TpwAUS0jRhTy+ok4wOdtF+2o7sG2Bh6h1TQ0+Qw8GUVCmVrbsqMWQpqEgmnPcEiIojhH8+1o+/0H2/g7OOEuZHHyHNPWfyw12kRd+KZMsJjWSGDGBNkVXfrkTP01tcOrWFO9fKaTtppTp/B53tB+m4kMfF1jxmvo8lHxtbXRVYXWghElbovHmZvTlpNFRs5FyTmfPNTs4cKsK1by22kkwmxt3/DpT0r3H7+hV2ZqVhN2Viys6gPGcTlvxMvcF6ynI3MD72H0A5EuXG1Ta2Zgjsz83AvD2d4uw1lG5LpyBrDfmb160K/AWGKbHlHIAxbAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 55.828220858895705%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACPElEQVQoz5WRS0hUYRiGD+5dWCTlMgwiCUkzS9OxxiSdUWfGOWleKokIo6AW0aJNJIWbAmsRtbLWXQy6bKywstLEsqxRETVLnXGcmTM65zKXc544A0mDEfXCy7f6H56XXzjqaKXJKlKZa0UsdeD54mF2bh5FUVFVFU3TUFUNNXlVorEYhgGGYaRU13WCIQmhobWN+sPH2S82U990jL4XvQwNDhCWJBLxOIauYxh68iZJf8jvUMHtOkSdq4WqKhG38wifXvcw4fnItC9EMKIgKRqSrBFWo4RkDZ+kEFJiSGqMcHiJeDyxAjUjuC0uGsrqqC204Syy4/cFUJbn8H8fQAl9RQ4M453sZ3FmkNEPz+m+/wB/IIgOyfm6bqRYCu5ykcaKBuy7bDhKavB5AyTkGdSFN8TCIyzP9TH+7i6ByVfMjr5kpP8pmhxeNflXhDqLk/pykWoTuLsan3eRhDJDxNsH+hRjQ910nHKi+gdZnH7L9PBj1EgoxSplsn1nFWZthZVJwwVvkKg0SuTHI+AzPfc6OeMqZWHsIcr8M6be30FZ8q8yWzE0zcyawNpiO2FJoffJTS6e3MztqxW0n7BTU7Cdro4DdJ7P50JbPrPfxpOPzV/9K7CmyIYc0ei6cYk9uWk0Vm7gbLOVcy1uTh8sRty7BkdpFpMTnn8HKrLGrWuX2ZGdhtOShSUnk4rcjdgKsqgtXkd53nomxv8DqMpRrl9pZ0umwL68TKzbMijJSadsawaF2ekUbFr7V+BPhimx5ZGgMREAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -619,7 +627,7 @@ Ensuite, copier dans le presse papier le token généré. Retournez dans la cons
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 58.89570552147239%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAABYElEQVQoz51SyW7CMBD1/39OVbUnzpV6qdRTQ1JI4iyQkFUQ4myvMwajUkFBjPTkQ+y3TcTy8w2rdYrtdou2bQkKRaPQDyN4pmm6CXOPR8xenxGEEZRSeHQMmSaUX+9wQxtJskaW5cjzHJvNBlVRYewHdF2nxdg9nwaHNC3GcTx32KoO1tzGYrGA43wTHNiEmFwn8RpRFKGqKuz3+zM0TaMxDMMfQlLxfakfJkmCIAjheT58KeF6HiR9K8g5P97tdrprPq9GZjXX9TSplAHSNEVRlDp6lmVISYQJ2SWL82OOeWkpDMHKljXHcunCth1ymaLve6hOnSnfO4JLD8MQcbxCHMU6ekpLKcoSdV2fujLguMbpJYiyqimuDxkER+KYtpzpyBydYx+Qn2rgk7v8DRbnBYnZy9MxaoKSXDEOpU8P/ZMitD4oYqaJKlLhJZni/8PVyKobTj+tuXiL7Bo48g+Ba6F3B+iSZAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 58.89570552147239%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAABYklEQVQoz51Sy07DMBDM/38OQnDqGYkLEifSmDax82gdOy+1qZ3XoHWbiqIWUFca7cU7szNeb/3+gs02x263gzEGxliUrUU/jKCapulPzO+ovMXzI+IkhbUW99ZM5gjFxyvCJICUW2hdoCgKKKVQlzXGfkDXdU6Mtqc+4+jGYBzHyw2N7eAvA6xWKzD2CcYYAsaQJSlktkWapqjrGofD4QJt2zoMw/CD0BhwLtyglBJxnCCKOLgQCKMIgguUunDD+/3eZU39pmVSC8PIkQoRI89zlGXlrGutkUvpCGlLEqdhsnntUwgeKfv+Eut1iCBgkDJH3/ewnb1Q/m95FHqSJMiyDbI0c9ZzpVBWFZqmOWc1g+zOm16DV9UNOOcQcXwizqCUdpbJOtk+ojjHQJ2y/A4Spw/yFk8PJ6sSVVU5HEOf7rpJL/HfkCvtiOqmcScxB/8bblq23XA+2vnhX2S3QJa/AIFroXfY7ZddAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -726,7 +734,7 @@ $wtf  = &quot;cinq&quot;;
 // et enfin
 $wtf  = new Banana();
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Il en va de même pour les enrichissements de tableaux dans des boucles... pensez &lt;strong&gt;stateless&lt;/strong&gt; !  &lt;/p&gt;
+&lt;p&gt;Il en va de même pour les enrichissements de tableaux dans des boucles... pensez &lt;strong&gt;stateless&lt;/strong&gt; !&lt;/p&gt;
 &lt;p&gt;Dans PHP, le support des variables immuables n&apos;est pas dingue-dingue. On va avoir :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://php.net/manual/en/function.define.php&quot;&gt;define&lt;/a&gt; : qui associera à un nom une constante au moment de l&apos;exécution;&lt;/li&gt;
@@ -832,7 +840,7 @@ $greaterThan10(9);  //false
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Bon par contre &lt;strong&gt;deux points noirs&lt;/strong&gt; :&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;dans ces fonctions, la position du callback est différente d&apos;une fonction à l&apos;autre : array&lt;em&gt;filter($array, &lt;strong&gt;$callback&lt;/strong&gt;) et array&lt;/em&gt;map(&lt;strong&gt;$callback&lt;/strong&gt;, $array);&lt;/li&gt;
+&lt;li&gt;dans ces fonctions, la position du callback est différente d&apos;une fonction à l&apos;autre : array_filter($array, &lt;strong&gt;$callback&lt;/strong&gt;) et array_map(&lt;strong&gt;$callback&lt;/strong&gt;, $array);&lt;/li&gt;
 &lt;li&gt;le chaînage n&apos;est pas possible et sa variante n&apos;est vraiment pas sexy :&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre&gt;&lt;code class=&quot;language-php&quot;&gt;&amp;#x3C;?php
@@ -915,7 +923,7 @@ $odds = array_filter($input, function($v) {
 });
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Vous améliorerez grandement la qualité de votre en utilisant des variables immuables et des fonctions pures. La récursion est très utile, même si elle peut s&apos;avérer triviale lors de débug. Pour le reste, c&apos;est au cas par cas.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Mais pourquoi est-ce si étranger en PHP ?&lt;/strong&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mais pourquoi est-ce si étranger en PHP ?&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Adopter un style fonctionnel est nécessaire dans un langage où les zones mémoires peuvent être partagées. C&apos;est d&apos;ailleurs pour celà que l&apos;immuabilité et la pureté des fonctions sont si primordiales.&lt;br&gt;
 PHP a été conçu pour afficher des pages web en un temps inférieur à 1s. Une fois que la page est chargée, toute la mémoire qui a été nécessaire pour afficher la page disparaît. On est dans une &lt;strong&gt;Share Nothing Architecture&lt;/strong&gt;, ce qui veut dire que chaque processus qui est chargé d&apos;afficher une page en PHP ne va pas partager sa mémoire avec un autre (pas comme en Java où certains threads partagent de la mémoire).&lt;br&gt;
 C&apos;est pour ces raisons que l&apos;on entend si peu parler de Programmation Fonctionnelle en PHP.&lt;/p&gt;
@@ -955,7 +963,7 @@ Vient le &quot;grand méchant loup&quot;, qui parvient à détruire les maisons 
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Voilà pour l&apos;histoire.  &lt;/p&gt;
+&lt;p&gt;Voilà pour l&apos;histoire.&lt;/p&gt;
 &lt;h2&gt;Mon rapprochement avec la qualité logicielle&lt;/h2&gt;
 &lt;p&gt;Pour ne pas se faire dévorer, notre premier cochon aurait pu construire une 2e maison en paille pour s&apos;y abriter le temps que le loup reprenne son souffle. Il aurait pu aussi essayer de mettre des rustines... Mais vous vous imaginez bien, qu&apos;à force, il aurait dépensé plus de temps et donc d&apos;énergie à maintenir sa maison debout, que le 3e.&lt;/p&gt;
 &lt;p&gt;Revenons maintenant à nos moutons... euh non, à nos cochons ! Pour faire le rapprochement, on va dire que les 3 petits cochons sont des développeurs et le grand méchant loup est un mixte entre : la &lt;strong&gt;dette technique&lt;/strong&gt;, les bugs, failles de sécurité, un client concurrent...&lt;br&gt;
@@ -990,26 +998,28 @@ A l&apos;instar des petits cochons, nous développeurs, sommes aussi des constru
 &lt;p&gt;Et bien dites-vous qu&apos;en terme de qualité logicielle, c&apos;est exactement pareil. Si vous n&apos;apportez pas ou peu d&apos;attention à la qualité de votre code, vous rendez votre application beaucoup plus vulnérable aux bugs, régressions fonctionnelles, failles... Alors, certes on peut avoir l&apos;impression que le travail est bien fait parce que le développeur enchaîne les tickets. Mais, dites-vous bien, que vous voyez peut-être que le sommet de l&apos;iceberg.&lt;/p&gt;
 &lt;h2&gt;Les clefs du succès (ou plutôt quelques-unes)&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Codez toujours en pensant que la personne qui maintiendra votre code est un violent psychopathe qui sait où vous habitez.&lt;br&gt;
-— &lt;strong&gt;Martin Golding&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Codez toujours en pensant que la personne qui maintiendra votre code est un violent psychopathe qui sait où vous habitez.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;— &lt;strong&gt;Martin Golding&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Si vous cherchez la solution miracle, sachez qu&apos;il existe quelques outils : certains vont s&apos;assurer du bon respect des normes (framework et/ou langage), d&apos;autres vont détecter le bon respect des règles de Clean Code (complexité cyclomatique, NPATH, nombre de lignes dupliquées, respect des principes SOLID...), des tests unitaires/comportementaux/singe...&lt;/p&gt;
 &lt;p&gt;En complément de ces outils, il existe quelques principes :&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;KISS&lt;/strong&gt; &lt;em&gt;(Keep It Simple Stupid)&lt;/em&gt; : ne dit-on pas que les explications les plus simples sont les plus claires ? Et bien c&apos;est pareil pour votre code ! Pondre du code archi-compliqué pour prouver aux autres que c&apos;est vous la boss ne sert à rien.
-Si vous doutez encore, rappelez-vous ce que disait Leonardo da Vinci : &lt;em&gt;&quot;La simplicité est la sophistication ultime.&quot;&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;KISS&lt;/strong&gt; &lt;em&gt;(Keep It Simple Stupid)&lt;/em&gt; : ne dit-on pas que les explications les plus simples sont les plus claires ? Et bien c&apos;est pareil pour votre code ! Pondre du code archi-compliqué pour prouver aux autres que c&apos;est vous la boss ne sert à rien.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Si vous doutez encore, rappelez-vous ce que disait Leonardo da Vinci : &lt;em&gt;&quot;La simplicité est la sophistication ultime.&quot;&lt;/em&gt;.&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;DRY&lt;/strong&gt; &lt;em&gt;(Don&apos;t Repeat Yourself)&lt;/em&gt; ou son homologue DIE &lt;em&gt;(Duplication Is Evil)&lt;/em&gt;. Que dire de plus ? Si vous vous répétez, vous vous doutez bien qu&apos;il y a un problème quelque part ! Un peu de (re-)factorisation ne fait jamais de mal !&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;YAGNI&lt;/strong&gt; &lt;em&gt;(You Ain&apos;t Gonna Need It/Vous n&apos;en aurez pas besoin)&lt;/em&gt; Si la fonctionnalité n&apos;est pas dans les specs ça ne sert à rien de la rajouter (ou bien rajoutez-la dedans !). C&apos;est déjà bien assez difficile de terminer un projet dans les temps, ne rajoutez pas un degré de complexité supplémentaire. En plus des risques d&apos;overengineering, vous allez passer du temps à développer, maintenir, tester et documenter une fonctionnalité non demandée et sans doute inutile.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Maintenir un code de qualité est un travail qui se fait quotidiennement. Si vous laissez une qualité médiocre s&apos;installer, le développeur va moins prendre soin de l&apos;application. On appelle aussi ça la &lt;strong&gt;&lt;a href=&quot;https://fr.wikipedia.org/wiki/Hypoth%C3%A8se_de_la_vitre_bris%C3%A9e&quot;&gt;théorie de la vitre brisée&lt;/a&gt;&lt;/strong&gt;. Pour y remédier, appliquez la règle du boy scout : &lt;em&gt;&quot;Laissez le campement plus propre que vous ne l&apos;avez trouvé en arrivant&quot;&lt;/em&gt;.  &lt;/p&gt;
-&lt;p&gt;Si vous travaillez en équipe, ne négligez pas le côté humain de notre métier, mis en avant par certaines pratiques agiles telles que les code reviews, le pair/mob programming...  &lt;/p&gt;
+&lt;p&gt;Maintenir un code de qualité est un travail qui se fait quotidiennement. Si vous laissez une qualité médiocre s&apos;installer, le développeur va moins prendre soin de l&apos;application. On appelle aussi ça la &lt;strong&gt;&lt;a href=&quot;https://fr.wikipedia.org/wiki/Hypoth%C3%A8se_de_la_vitre_bris%C3%A9e&quot;&gt;théorie de la vitre brisée&lt;/a&gt;&lt;/strong&gt;. Pour y remédier, appliquez la règle du boy scout : &lt;em&gt;&quot;Laissez le campement plus propre que vous ne l&apos;avez trouvé en arrivant&quot;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Si vous travaillez en équipe, ne négligez pas le côté humain de notre métier, mis en avant par certaines pratiques agiles telles que les code reviews, le pair/mob programming...&lt;/p&gt;
 &lt;p&gt;Enfin, dernier outil qu&apos;il ne faut pas négliger : &lt;strong&gt;tester (et automatiser) les tests de son application&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Si vous ne devez retenir qu&apos;une seule chose : si vous ne vous préoccupez pas maintenant de la qualité de vos livrables, ça vous reviendra dans les dents puissance 10 (ou plus !). Parfois la dette technique est inévitable (deadline courte/lancement de produit...). Par contre, comme toute dette, vous devrez la rembourser un jour. Et pour être plus serein, prévoyez du temps pour la &lt;strong&gt;rembourser&lt;/strong&gt; (c&apos;est pas pour rien que l&apos;on appelle ça une dette). Sinon un autre projet/fonctionnalité supplémentaire viendra se juxtaposer à la date de fin de projet et ce sera fini !&lt;/p&gt;
           &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(This is an article posted to my blog at maxpou.fr. You can read it online by &lt;a href=&quot;https://www.maxpou.frqualite-logicielle-3-petits-cochons&quot;&gt;clicking here&lt;/a&gt;.)&lt;/div&gt;
-        </content:encoded></item><item><title><![CDATA[Une stack Docker pour votre application Symfony]]></title><description><![CDATA[05/07/2016 : màj du docker-compose (suppression conteneur code+alias) + màj schéma + ajout PHPMyAdmin + simplification toolbox. Un grand merci à tous ceux qui m'ont fait des retours ♥ TL;DR : Répo Github du projet Une stack Docker pour votre…]]></description><link>https://www.maxpou.fr/docker-pour-symfony</link><guid isPermaLink="false">https://www.maxpou.fr/docker-pour-symfony</guid><pubDate>Mon, 11 Apr 2016 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-&lt;p&gt;[05/07/2016] : màj du docker-compose (suppression conteneur code+alias) + màj schéma + ajout PHPMyAdmin + simplification toolbox.&lt;br&gt;
-Un grand merci à tous ceux qui m&apos;ont fait des retours ♥&lt;/p&gt;
+        </content:encoded></item><item><title><![CDATA[Une stack Docker pour votre application Symfony]]></title><description><![CDATA[[05/07/2016] : màj du docker-compose (suppression conteneur code+alias) + màj schéma + ajout PHPMyAdmin + simplification toolbox. Un grand merci à tous ceux qui m'ont fait des retours ♥ TL;DR : Répo Github du projet Une stack Docker pour votre…]]></description><link>https://www.maxpou.fr/docker-pour-symfony</link><guid isPermaLink="false">https://www.maxpou.fr/docker-pour-symfony</guid><pubDate>Mon, 11 Apr 2016 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;[05/07/2016] : màj du docker-compose (suppression conteneur code+alias) + màj schéma + ajout PHPMyAdmin + simplification toolbox.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;Un grand merci à tous ceux qui m&apos;ont fait des retours ♥&lt;/p&gt;
 &lt;p&gt;TL;DR : &lt;a href=&quot;https://github.com/maxpou/docker-symfony&quot;&gt;Répo Github du projet&lt;/a&gt;&lt;/p&gt;
 &lt;h1&gt;Une stack Docker pour votre application Symfony&lt;/h1&gt;
 &lt;p&gt;Je développe des applications web depuis quelques temps sur une stack &lt;a href=&quot;https://github.com/maxpou/scotch-box&quot;&gt;Vagrant que j&apos;ai un peu pimpé&lt;/a&gt;. Bosser sur une VM est vraiment plus agréable/malléable qu&apos;un WAMP. Cependant, cette solution si miraculeuse soit-elle a aussi ses inconvénients.&lt;/p&gt;
@@ -1048,7 +1058,7 @@ Un grand merci à tous ceux qui m&apos;ont fait des retours ♥&lt;/p&gt;
 &lt;img src=&quot;./shiponship.gif&quot; alt=&quot;one ship with carrying one ship&quot;&gt;
 &lt;em&gt;(ma première expérience avec Docker)&lt;/em&gt;&lt;/p&gt;
 &lt;h2&gt;1 application (process) = 1 conteneur&lt;/h2&gt;
-&lt;p&gt;A l&apos;occasion du &lt;a href=&quot;https://github.com/docker/docker-birthday-3&quot;&gt;3e anniversaire de Docker&lt;/a&gt;, j&apos;ai vraiment vu l&apos;intérêt de cet outil. Sans doutes, parce que le TP était plus pertinent que bon nombre d&apos;articles sur la toile. Il faut donc lancer un process par conteneur. Le tout se fera avec docker-compose, qui jouera le rôle de chef d&apos;orchestre de tous mes conteneurs.  &lt;/p&gt;
+&lt;p&gt;A l&apos;occasion du &lt;a href=&quot;https://github.com/docker/docker-birthday-3&quot;&gt;3e anniversaire de Docker&lt;/a&gt;, j&apos;ai vraiment vu l&apos;intérêt de cet outil. Sans doutes, parce que le TP était plus pertinent que bon nombre d&apos;articles sur la toile. Il faut donc lancer un process par conteneur. Le tout se fera avec docker-compose, qui jouera le rôle de chef d&apos;orchestre de tous mes conteneurs.&lt;/p&gt;
 &lt;p&gt;Voici l&apos;objectif vers lequel je souhaite tendre :&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -1063,7 +1073,7 @@ Un grand merci à tous ceux qui m&apos;ont fait des retours ♥&lt;/p&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 64.41717791411043%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABcRAAAXEQHKJvM/AAADrklEQVQ4y3VSX0xbZRQ/BeXPkISROU3QxMQHY3SGGWeM0WjgabyQGJ9mgkFMMBJBInM4hPCAPigISwCrpSNzY4xZSpld10L/wYAMRqHU3rb0fy+93Nvb3sKV0lugcLwXs0UfPMnJOfm+c37n9/2+AyaHgyc2XPzEqjYZSzJZX9itnXpggltW/Ut6+8p2IsnyLMdwNEuhN+TSeAJOkAwRQWtfJaKRAJJa1UGcFGOMZGE7tXtko4mjH+cUB+mDDMY55r7UYFi6+86ax529OXLzSKlU7hunjRhlyFnxKu/Tbz98Woyl7F7Gtb22hua3yvd4wokCZhn4a3cbbZQTzd4FDG5toMhoUZru8C2d8/vX0bZsw/n5eXSsOdAX9qyKQCf/MKnyxVggZHZJhomhxWjCcJjEvX0hDRS7MRMkA7NTZsMMxyceuv3O/ngqCg6v7QW3n7CSVGQmFAmY3euEzRMgfpAYXvjq/ElpKM0EB4Ok3/D75G0N4bLrwpT/xrEWcAKeHLj2faGUf/5JE9TV1cH/2WsfnIL3a149Dc9B8fW5uf6NGGngeE7jpjZ1osa/AcgAripu5Im1MhHw1KWvL/UODAx88U97+3/ApIHnP3vzOC8+A2WuaJRmU/t4KHAYZ4PIcHEeSuB5aLnYkm+xWgpqa2vfraqqwsrKSlZqKizOky0s3wfT7BishsOyLGKuCPqE6LLyc5BHJ7nICsmh1/MQD1k78jybhK6uLujt7S2orq7OFwufbW5unmxoaPjuEStG1wMWfxwexPYhLTLEf3lk0zcej0c9WoPORvh8TpIOmR4/5VhLgLKSkpKzpaWlZ8T8GelgQD0i69eMweBdVZl2xTbI7yTkTIL6eXcnI09y20oqRl0VDgVl5mj/mifo7AOz2QxGo/GV0dHRC62traUiRq60EkVFRQXBYBA0em0ukYjBwrrrDXfIj9bJPsykUuhKLOC9dQVK5rYv4sK0GlPp1C7I5XIYHh7u6OnpQZVK9XJFRUXO0NDQCYVCUdDe3l7Y2/fTUxJTb8T3djjgTDV9VC4kY1R6OWZIy5e+FLgsI1g1w+n+jo8P+J2tsKQf1NTUvNfY2NjQ3d1dolaroaWlJae+vl7W2dkJxllDzsyiGayLptf9AS+uLU4hQ0dREH93PfQnbm0lkaZp3NykMRQJCo+1E/1FaWkffUZHR8exX59QyH4duQK/jFw5rbpz6xvDjKVNb9ZdNli1bbfHx9osc9Ntd/QTlyd14+2TelXT33faZq61WxFSAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 64.41717791411043%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABcRAAAXEQHKJvM/AAADrElEQVQ4y3VSX0xbdRQ+BeXPkKRr5jRBExMfjNEZNM4Yo9HA03ghMT7NBIOYYCSCRLbhEMID+qAgLAGsFkbmxhizQJldbaH/YNCsjEKp/Uf/3LaXXu7tbW/pldJbSuGYi2GJD37JSU5+yXe+7/edAwaHg3dtufmZdXUylmTy/rBHPffQAHfM2pe09rVUIsnyLMdwNEuhL+RWeYNOEIGIoLavu6KRIJJq5UGcDCIZI1lIpfeObLTr6MclxUHmIItxjnkgEnQr99/d8Hryt8dvH42Ojub083qMMuQiABR99u1HTwOAjN3PulMbG2h8u3KfdzlRwDwDf++l0EY50eizILGzhYkkaxXVHf6V84HAJtpWbbi8vIyODQf6w951ADj9h0FZDAAlQnaPZJgYmvQGDIdJ3M8JGaDYrQWCDC7OGXULHJ945Ak4B+PpKDh8thc8AZeZpCILoUjQ6Nl02bxB1w+iw4tfXzgtitIMMUyQAd3vs3dVLrddE6YCt46zgFPw5NCN70vF/otPW6ChoQH+D699eAY+qHv1LDwH5TeXlga3YqSO4zmVh9rW+ELu3wAkANcVt4oAQIKIZ65cvtI/NDT05b/0zv8MEwUvfP7WcV9+Dirc0SjNpnN4KHAYZwlkuDgPUnge2i61FZvMppL6+vr3ampqsLq6mhVJpeVFEsvqAzAsTsJ6OCzJIxYi4hOIKKk8D0V0kouskRz6vI/wkLUjz7NJ6Onpgf7+/pLa2tpiRHy2tbV1tqmp6bsTV4ymD0yBODyM5SCDeOzypCLb/ql4POpV6zQ2l9/vJOmQ4fFXjrMEqJBKpa/LZLJzAPCM+DA0PS4ZVE3C8H1lhXrNNszvJuRMgvp5bzcrT3KpUSpGXRcOhdHsUe6Gl3AOgNFoBL1e/8rExMTF9vZ2GQAUiidRVlZWQhAEqLTqQlciBpZN95ueUADNswOYTafRnbDgn5sKFOGxW9EyP43pTHoP5HI5jI2NdfX19aFSqXy5qqqqYGRk5JRCoSjp7Ows7R/46SnRqS/ifyccdKZbPq4UkjEqsxrTZeQrXwlcnhHMqrHMYNcnB/zuTljMD+rq6t5vbm5u6u3tlU5PT0NbW1tBY2OjpLu7G/SLuoIFqxHMVsMbgaAPN6xzyNBRFNI53Az9hTs7SaRpGre3aQxFCOFxdgDwoni0J8vo6uo6rpszCsmv49fgl/FrZ5X37nyjWzB1aI2aqzqzuuPu1GSHaWm+45525uqsZqpzVqts+Qd32mauvAOfTAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -1208,10 +1218,10 @@ parameters:
     redis_host: redis
     database_host: mysqldb
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Et voilà !  &lt;/p&gt;
+&lt;p&gt;Et voilà !&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;./etvoila.gif&quot; alt=&quot;et voila gif&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Accédez à votre application sur &lt;a href=&quot;http://symfony.dev/&quot;&gt;symfony.dev&lt;/a&gt; pour voir votre application et sur &lt;a href=&quot;http://symfony.dev:81/&quot;&gt;symfony.dev:81&lt;/a&gt; pour consulter les logs avec Kibana.  &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Le code source est sur mon répo GitHub&lt;/strong&gt; : &lt;a href=&quot;https://github.com/maxpou/docker-symfony&quot;&gt;https://github.com/maxpou/docker-symfony&lt;/a&gt;  &lt;/p&gt;
+&lt;p&gt;Accédez à votre application sur &lt;a href=&quot;http://symfony.dev/&quot;&gt;symfony.dev&lt;/a&gt; pour voir votre application et sur &lt;a href=&quot;http://symfony.dev:81/&quot;&gt;symfony.dev:81&lt;/a&gt; pour consulter les logs avec Kibana.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Le code source est sur mon répo GitHub&lt;/strong&gt; : &lt;a href=&quot;https://github.com/maxpou/docker-symfony&quot;&gt;https://github.com/maxpou/docker-symfony&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Et je veux mon PHPMyAdmin moi !&lt;/h2&gt;
 &lt;p&gt;C&apos;est très simple, il suffit d&apos;ajouter ceci à votre fichier docker-compose :&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-yaml&quot;&gt;phpmyadmin:
@@ -1245,12 +1255,11 @@ $ docker stats $(docker inspect -f &quot;{{ .Name }}&quot; $(docker ps -q))
 $ docker rm $(docker ps -a -q)
 &lt;/code&gt;&lt;/pre&gt;
           &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(This is an article posted to my blog at maxpou.fr. You can read it online by &lt;a href=&quot;https://www.maxpou.frdocker-pour-symfony&quot;&gt;clicking here&lt;/a&gt;.)&lt;/div&gt;
-        </content:encoded></item><item><title><![CDATA[Utiliser Redis pour stocker le cache de Doctrine]]></title><description><![CDATA[La meilleur requête est celle que l'on a pas à faire
-— un inconnu Dans mon actuelle mission, nous développons une application sous Symfony2 avec Doctrine comme ORM.
+        </content:encoded></item><item><title><![CDATA[Utiliser Redis pour stocker le cache de Doctrine]]></title><description><![CDATA[La meilleur requête est celle que l'on a pas à faire — un inconnu Dans mon actuelle mission, nous développons une application sous Symfony2 avec Doctrine comme ORM.
 Voici grossièrement à quoi ressemble l'architecture globale :  Comme vous le voyez, l…]]></description><link>https://www.maxpou.fr/cache-doctrine-avec-redis</link><guid isPermaLink="false">https://www.maxpou.fr/cache-doctrine-avec-redis</guid><pubDate>Tue, 08 Mar 2016 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-&lt;p&gt;La meilleur requête est celle que l&apos;on a pas à faire
-— &lt;strong&gt;un inconnu&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;La meilleur requête est celle que l&apos;on a pas à faire&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;— &lt;strong&gt;un inconnu&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Dans mon actuelle mission, nous développons une application sous Symfony2 avec Doctrine comme ORM.
 Voici grossièrement à quoi ressemble l&apos;architecture globale :&lt;/p&gt;
 &lt;p&gt;&lt;span
@@ -1266,7 +1275,7 @@ Voici grossièrement à quoi ressemble l&apos;architecture globale :&lt;/p&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 58.89570552147239%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABcSAAAXEgFnn9JSAAADOklEQVQoz22Tf1CLcRzHP8/TDyyrROnmuMzP46bzK8sWjtWosOhycU7MMoXEUtqamNra+mEada2yYS5Ol+YOba1rXJ2jtMIJOXSVnU5FzvlDvr7Pk/7rc/e+53l/nvu+vp/P8/l+QVvfDO/cI4AQAioq26WEspGP/Qh4eBIs76leS3B6FpYf1hQSPNj4uQBrKkwW+tvWg72DwxIM3EX5W90nQdO2EYqfbae/d/2ohYu56nCJRGpZxw1X4BTp783yJKYBMSnwhOkRqmt9hXmor+alJiT36eqAsq7EIH3HzkB1447ZCN3zihKtV4Rz+SiUs8q9m5U1gxsogsyYMqLB/pB0Op2k2WwGShaLBSBbXTJ2IlOBqqoqepzfrizJbQljGTri5112iebqnLtCOhHf91jGIWV0tBCdTpMNqSKtsbgOwiR5Ds0tDnA4HPTvYrPZ4xX/+NrPvVSs45lMN0Ipf7cvHYpebAV9hwguvl4GdT1q6B90z5Gfqc573Pom/o8dMZIXlXMwhLA1NoTb7fYN1HtwcPB4y+jvKJw8ehgyzmTT/m5/GlH8IprAQML5JJukdsfy+SLP7OxVKpKf7TkFB72VM7QJ1qSampqfNpvtT2pq6nK8NMgfByir78Dw7zG67MQPAMauJKKwXUgDXS7tBHD6QFbG+9GSotQHWw6AePq5mZq4e/uNRuNHq9U6IBaLF1NAXxygv3N/24c+dyxeFAGFAKY3R0DXHkm3XDayBsqaZFB5rXrh/r2KSs7KTdIsro6ZtuI6B8AX8tQqtrHCSMGAwWCMtyy70YAcLz9TU3abXfKl+W0RrKudCfRQVI9i5n9HUj9hHO88j8dHq0LDhiVLL8fSVd9GkF94AaqqqunumEzm+FDSVUUoRZaNLDevf2odMoWcfcwJuNKRQB+baz0HZiHUTIqPJ2YKBAKUIk3pRS7E2Lc1hYbkF6jI2tpa0mAwQGlpKWg0GoC3rzrjtAWa+PLyCgG1gfOXFgraNkNJ2w6YuB2GS+V8RY6iot5aL+MJ1gbiXKAPk+E16cFuabJBskQMcnkO7ZtHdaDvjoILDULw8CZmMv0Ys3Hah7oh/xVEepAU1HMy3j/E4m3RxWj2xQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 58.89570552147239%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABcSAAAXEgFnn9JSAAADQklEQVQoz22Te0yTZxTGn+/joiu21AtIumiwOjWajniZK2vVRasoMi1KMMwYL7VYYRPdijBaK7NKS8vFShVCAYtag0ai1GRKSw3VQIyCLejiZZhtBFwzM2GyLPtDd5bvY/7HSU7yPnmT3znPe94DW1snnkdGQUTgoqFXx5g6lCAaRVQ0I4mdHLMAwAwA8QAmsYiSApgLYDImCsdl757BVyNaItrK6UtPD8HasxpV97/g7/vftOJEqSVVq9V5PpWnGgGw4lhJNPMBmAmBB9236Fr3YyKioZZH1uTSe8um1fbnJDpCWxIsHZtnEl2PWa/+zJgqV1KKbGlkm6R4qjxBjaJNtUy7/yYbDAbZ5uZmcOnxeIASS/W7g0VGamysHwj+cWZBadcKiTOUNft0WD3LHtya3EdK0VeFe03p6Wn0bYH+tXmdNwMA49Y+QGdXAIFAgH8uqVQ63vGb34flp6rsCrf7Qgqnrw4dRuXDDXCE1Djx4yJcG7Bg+FXkQ8ORppN3up9kvfWTIPejOhkRMb6O9lS/37+KOyclJY1bpn/HcOjAPhQeKeH11eECpuphOuMIqZng3RKWq05Ecb8ZivoGTcbc+9u/wZ5Y01Rbtnd3S0vLXz6f721+fv5iAIlisVgMU9MVjPzzjm875wXg6t/NVPSm8cBw2PYeOOVlceFPY9WV+T+s3QXNlGPTrZnXd7pcrp+9Xu9LjUYznwOKRCIRHFdubHwxFMkgopWoANxP9sPeu463XDu6HLW39Wg41zRv55fGBtmSz3XFcruw4OPzMkCEkxaz1FXv4mAQCATjlvUX2inw6FduypHmsGFhWc9Kydm+bH4o5lub5vxJuvi0TMX3CoWSlqasGNEuPJ3Bd32ZUFZxHI2NTbw7oVA4PpTD5krK05eQ5+L5X7pfu5O/uyObdiaUzX+bcwO7ZhB1spqvc4pUKhXl6fIGKUyCHRvyeEhZuZltbW1lnU4nampqYLVagWeP+zJt5dasurp6FVcg+LcN5T1rUN2zGe+3w3mqTmk8aqxv87bpFapPEgAkxAkFMRN+7K7bPuRqNTAYjvK6c8wOx9P1ON6ehqhYZrowXjATQBy3If9nIhvFctDoiYD/AcTibdGJcK+lAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -1480,7 +1489,7 @@ Avec cette technique &lt;s&gt;de fainéant&lt;/s&gt;, on garde la main sur le no
 &lt;li&gt;&lt;a href=&quot;http://doctrine-orm.readthedocs.org/projects/doctrine-orm/en/latest/reference/second-level-cache.html&quot;&gt;2e niveau de cache de Doctrine (encore à l&apos;état expérimental)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Tips&lt;/h2&gt;
-&lt;p&gt;Utiliser les pipes unix avec le redis-cli : &lt;code&gt;echo &quot;KEYS *&quot; | ./path/to/redis-cli | grep beer&lt;/code&gt;&lt;br&gt;
+&lt;p&gt;Utiliser les pipes unix avec le redis-cli : &lt;code&gt;echo  &quot;KEYS *&quot; | ./path/to/redis-cli | grep beer&lt;/code&gt;&lt;br&gt;
 Vérifier le &lt;abbr title=&quot;Time To Live&quot;&gt;TTL&lt;/abbr&gt; d&apos;une clef: &lt;code&gt;TTL [beer-id-42][1]&lt;/code&gt;&lt;/p&gt;
           &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(This is an article posted to my blog at maxpou.fr. You can read it online by &lt;a href=&quot;https://www.maxpou.frcache-doctrine-avec-redis&quot;&gt;clicking here&lt;/a&gt;.)&lt;/div&gt;
         </content:encoded></item><item><title><![CDATA[Productivité Ninja !]]></title><description><![CDATA[Entre le multitasking, les mails pro, les notifications push sur votre téléphone (SMS, mail perso, Facebook, Twitter...), un collègue qui vient vous voir...on a vite fait de procrastiner au bureau. L'objectif de cet article est donc de faire un…]]></description><link>https://www.maxpou.fr/productivite-ninja</link><guid isPermaLink="false">https://www.maxpou.fr/productivite-ninja</guid><pubDate>Thu, 14 Jan 2016 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Entre le &lt;a href=&quot;https://fr.wikipedia.org/wiki/Multitasking&quot;&gt;multitasking&lt;/a&gt;, les mails pro, les notifications push sur votre téléphone (SMS, mail perso, Facebook, Twitter...), un collègue qui vient vous voir...on a vite fait de procrastiner au bureau.&lt;/p&gt;
@@ -1506,7 +1515,7 @@ Et puis, le problème avec les outils web, c&apos;est qu&apos;on a tendance à e
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 133.12883435582822%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAbCAYAAAB836/YAAAACXBIWXMAABYlAAAWJQFJUiTwAAAGDklEQVRIx01WZ1OTWRjNH3FthBQIAUJISEIJNUG6ZkXF7ljHdXSXWXWsIysi0rsmpgGBdEogQOjjOvurzp57A7P74c5bbt5zz3naiUJ5Khe5J1VQnVJBc1qF/DNqFJzVoEiphUGVB4u2ALZ8PWw6PaoKi+SzSZ0PkyofxfxNYY4GurNq+Z32tBqK3FNZMC1fiA0BVJJLoLwCVOqL0GA0oqnMjHpe6wxG1BQbUE5wK/fLtDqU8lADv9GThI4YCsnsjAoFOVlWZWRQUVCIGkMJ2sqt6Ky1o8tRgxvn6nC53s53NjRbLHCUmlBrMMhDbflZ1gYSkQzVlKojYCEBjdwQp1cXGdBqtcBVVY4rdVW47qiGq9KGRjJt4GGVZGnRUHquVrI0qvOygIKh8oQS5cVGvP/9AT6/for+188w+K5brp4/HuH1w1vovnUFT6914tnNLjzu6sRdVweuNp1Dp8OBBrMFxUJhjhYKNQOp/kUJp82G0Z4/Md77Eu7h9/g+0oMF9xdE/SNyhb8PIeoblvfJ2QnEA2NYdA8i7h/Fy4e3YVZpZcIUIhnak0o0V1Zi9OMLDH14jpmBdxj/9BozQx/gHvsI/3Q/Iv4xhDzD8I73IT47ibmvg7z/hNC3Qbx5ch92hqCCSwJqBGBVJSb7XmHqy1u4yS7kGUSELKLBccQIsLTwFYn5GXlNRT1Yi33HWvw7tpZ88PDgBlZAFZOpEKWiYy26GurhGfkAz+hfCMz0wz/VTzACLX5DyDvKNQbf9CBWogRZncP2Wgi76QUcbIYZmiG0Wa2oZsYV+QTMI8PORgeCU33wTfZhwTsiT19P+nn1YTXqxWrMx+cgNlfmCbaA/c0o9jbC+LETR8Q3jkZTGawihgXMjGB4uakRvolezAz3YM49jHBgApHgFKKz00iE3NhOR7BLkJ2NqLwebCdwsBUjYALJ+WnWZzljSMmi9vSM46VzjVhkJuc9Q2TkQXopgAyZiLVLEAG4fXTd24oTNEami/i5t4Q4D75UW40ms5mSc7Ix7Gx0MnNf4BnrhXeyX7JbCnsQn/+GVNyPjdUQVmJ+vmMyhPTUAuY848ikQogx1m1WGxzG0mwM9Wy9TqeD1CeYxRnMu0ek1BXGbicdJqMYdo9WZj0i2R3uJrkXwSGlRwOTcJrM7J6irGTROjfbW7gximRoBusJHzaZyd2NLNi2AM3EKZlyMwnsbArgMA747pBLVEOzxcqWZR0aOYYq2NyPLp1HYPozZlmo8bkpJuIrtihnPRHEKiVn1heRSgSk9JR4R/mpeADLYS9iZHin2YlWSxkUpWxwOwvynquNG6NSciQ4IUtFJCS9NIvkooclM8v7uazMnSR+7C5TbpxZTmKT5dXddQHX6uxQmNQ6OTkeXGxncMewvCgkM3brIX4Qw95mBCnW4D6l71DyznpYgvzcX8bfzPA/hyvILAfx4oYLt521WckWjp4751vYHX2UPICVCDPL1lpeZP1R9sZSkN0xz1gxUREvn2d5aEAucR9jzb67exm/dTizSSlm6VxqbGDFD7FfJ2Wv7qyxvVJzsr322V6Z1DwyTNQ+GYtDRPuJ5G0kA1hhfz92taKTs1OhYVGrTuSgxW5HcLIXfrZemL27zFimkz7spUNIi6xTVirmlWzTCT92GZIU+3o17IZ3tBcdFZWoKSzmgOW01pxSwqY3oPveDQy87cbU5zeYFOOr/x2m+95g+tMrzHASTfQ8x9j7bgy8eobe7sd4z7H18v5t3GlvRUOJEXYxHI7dThiMcDEb+7HBaEILp8ev9ipcra/BvRYnnria8fRiCx60OmQ2XfSWtrIyOEuMcnTV0RbKRS8fu14eAfUc48IXhFFVk34je7OjolwCX3PU4rqTRkXTulBVgRZpVKUSyC6NSg+zRicAc//zZLZhIafPMahdgJpMaLNZCWxDu3S8MtmztbRTMV3E2D/26pKs69Hoj0DVR0YvQIWlihMrC4rkx/WUJlZ1UTHKyUaAmDUFEGVXTOcTBiW8WaEkiPJ/oIJp3plsTEUIxI9LVFnGZhq7YFGq0skl7sXB4p+GIJJHw/sX1rvDIns6/c4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 133.12883435582822%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,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&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -1525,8 +1534,10 @@ Et puis, le problème avec les outils web, c&apos;est qu&apos;on a tendance à e
 &lt;li&gt;&lt;strong&gt;Irréaliste&lt;/strong&gt; : 1 todo list = 1 journée. Là, il n&apos;y a pas de doutes, une journée ne suffira pas. Vous terminerez votre journée déçu de ne pas avoir accompli toutes vos &lt;em&gt;missions&lt;/em&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Découpage des tâches&lt;/strong&gt; : La tâche qui consiste à développer la gestion des utilisateurs est beaucoup trop grande. Ne pas hésiter à la découper en sous-tâches. Vous aurez l&apos;impression d&apos;aller plus vite.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Pas d&apos;indications sur la durée des tâches&lt;/strong&gt; : Pour voir si votre liste est pertinente, il est primordial d&apos;indiquer le temps passé pour chaque tâche. Pensez aussi à laisser de la place pour l&apos;&lt;strong&gt;imprévu&lt;/strong&gt;, en occupant votre journée à hauteur de 70% maximum.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Gestion des priorités&lt;/strong&gt; : il est très important de séparer vos tâches en deux parties. Les tâches prioritaires et les secondaires. Mettez la vraie priorité de la journée tout en haut. C&apos;est souvent ce genre de tâches que l&apos;on a tendance à fuir. Si cette tâche est noyée dans plein d&apos;autres, c&apos;est un prétexte de plus pour ne pas la faire. En général, il faut garder les tâches les plus ardues pour le matin.&lt;br&gt;
-Un bon outil est la &lt;a href=&quot;https://fr.wikipedia.org/wiki/Matrice_d%27Eisenhower&quot;&gt;matrice d&apos;Eisenhower&lt;/a&gt;. Cette matrice va vous aider à prioriser vos tâches en fonction de son caractère urgent et/ou important.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gestion des priorités&lt;/strong&gt; : il est très important de séparer vos tâches en deux parties. Les tâches prioritaires et les secondaires. Mettez la vraie priorité de la journée tout en haut. C&apos;est souvent ce genre de tâches que l&apos;on a tendance à fuir. Si cette tâche est noyée dans plein d&apos;autres, c&apos;est un prétexte de plus pour ne pas la faire. En général, il faut garder les tâches les plus ardues pour le matin.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Un bon outil est la &lt;a href=&quot;https://fr.wikipedia.org/wiki/Matrice_d%27Eisenhower&quot;&gt;matrice d&apos;Eisenhower&lt;/a&gt;. Cette matrice va vous aider à prioriser vos tâches en fonction de son caractère urgent et/ou important.&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Tâches inutiles&lt;/strong&gt; : Twitter/Facebook, c&apos;est du divertissement. Pas besoin de le noter pour y aller. Ça n&apos;a rien à faire sur une todo list (à moins d&apos;être community manager !).&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Wording&lt;/strong&gt; : En un coup d&apos;œil, vous devrez savoir où vous en êtes dans votre journée. Il faut donc être le plus bref possible et donc éviter les verbes d&apos;action qui sont induits.&lt;/li&gt;
 &lt;/ul&gt;
@@ -1544,7 +1555,7 @@ Un bon outil est la &lt;a href=&quot;https://fr.wikipedia.org/wiki/Matrice_d%27E
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 133.12883435582822%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,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&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 133.12883435582822%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,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&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -1573,13 +1584,13 @@ J&apos;ai découvert la &lt;a href=&quot;http://pomodorotechnique.com/&quot;&gt;
 &lt;li&gt;Tous les 4 &lt;em&gt;pomodori&lt;/em&gt;, faire une longue pause (15 minutes)&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;“Qui fait, en se hâtant, deux choses à la fois ne fait bien ni l&apos;une ni l&apos;autre.”&lt;br&gt;
-— &lt;strong&gt;Publius Syrus&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;“Qui fait, en se hâtant, deux choses à la fois ne fait bien ni l&apos;une ni l&apos;autre.”&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;— &lt;strong&gt;Publius Syrus&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Pomodori :&lt;/strong&gt; Pendant ces 25 minutes, il faut garder le focus sur une seule et unique tâche et s&apos;interdire toute distraction (Facebook, SMS, spi0n...). Il en va de même pour les requêtes de votre chef. Essayez (si possible) de le faire patienter jusqu&apos;au prochain pomodori.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Pauses :&lt;/strong&gt; l&apos;objectif est d&apos;éliminer le stress et de se régénérer pour réattaquer la prochaine session dans les meilleures conditions. N&apos;hésitez donc pas à vous lever pour aller aérer le bureau, aller boire un verre d&apos;eau, bouger, faire couler un café, répondre au SMS arrivé pendant le pomodori...  &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Pauses :&lt;/strong&gt; l&apos;objectif est d&apos;éliminer le stress et de se régénérer pour réattaquer la prochaine session dans les meilleures conditions. N&apos;hésitez donc pas à vous lever pour aller aérer le bureau, aller boire un verre d&apos;eau, bouger, faire couler un café, répondre au SMS arrivé pendant le pomodori...&lt;/p&gt;
 &lt;p&gt;Encore une fois : il n&apos;y a rien de figé. N&apos;hésitez pas à adapter la durée des &lt;em&gt;pomodori&lt;/em&gt; à votre durée de concentration.&lt;/p&gt;
-&lt;p&gt;Si vous le souhaitez, j&apos;ai développé un Gadget pour Windows Vista et 7 permettant de gérer votre temps. Le code source (et donc l&apos;application) est open source et donc disponible sur mon &lt;a href=&quot;https://github.com/maxpou/pomodoro-ninja.gadget&quot;&gt;répo GitHub&lt;/a&gt; :)  &lt;/p&gt;
+&lt;p&gt;Si vous le souhaitez, j&apos;ai développé un Gadget pour Windows Vista et 7 permettant de gérer votre temps. Le code source (et donc l&apos;application) est open source et donc disponible sur mon &lt;a href=&quot;https://github.com/maxpou/pomodoro-ninja.gadget&quot;&gt;répo GitHub&lt;/a&gt; :)&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 167px; &quot;
@@ -1593,7 +1604,7 @@ J&apos;ai découvert la &lt;a href=&quot;http://pomodorotechnique.com/&quot;&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 71.77914110429448%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAIAAACgpqunAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC20lEQVQoz42RW0jTURzHz0OMzBDRIUEWIpH0EEmvMS8PxZxS5tzKdHNqItSD5UNQKWmo5RRSUtJcm5qYipr36ZxWTrzt/t9V3Vq1vOziberUbf+dzhxIj/7Ohy+/3/l+Dxz4gbK2YJ4wljse0/yd1DZF6pwhdc+RuudjuuZJXyXxfdKEQfmdEewuH6PyVVShJm1CwxRp8ybVGcPSWNAyFgch9KJzsvJ6caTrDtm4/DZoFcY63bBV4+DI7Dxs84PYOmbanTLv1cu3eNj2J5UDWZh1n6fc5EhWmzS79fJNqQXu7MhEYjroEcTbDmFEpfz0466gXC4gF2WMuZ4KNwhVy8Q3WFApFlm/8l7uDKv+HZDNDS4YIFRbS6Zd0KmcFtEBfyjR7obX2NOh90uJcQwQHs1qnCycx4nlyshX4xE1huvN1kbl3uWG5XM5teG5dWE1v9gSD9xRzY0wwGg7bR3CqHwuACDoyg2k6eyOQjEMrdBGvhVfeKePbrI26rwXnw8hixAYdCargY1BuKGZ6XwEBJwMGw59XuD5gFtPwL3aB/22gm8OAvtPSPHc2deKSxxbHXYYUqYAxCjCVcqpckOJ2A3XtKLKXMD/+PDQCweWnN363d6l/U4jPrvqVljdX9TbffqtfpNn0Higtx/2Gl09i/tIOxYO9A5o1ysbc5JBewXTv4H/1/FDMLhlszg2LGq5WCyaWFmzHUV8GRz3rUorl+alkEHtyyw0eHCvxwv9oMjnlia+YOLvqmVYMNrW2iqalaCMy4MjFynqVQopg0YBVcXPfI/dbtzj8ePFPSajwWw27zn31+22n0aD1WY/zrhdLtQrZWImelxZWnT8pZOU/9tqpYxFTwTFL/KXFjR6rQqxoFMvaH3o1JhOg6EbnUZ11CNX7c+g0WRc5A/0sOhJICc9iUG7yUglZ9ISWUdk0ihMOoWRmoBg0hKYqT4yqOR0KhkpA5GCwpTstOR/k6dSYrlJ62IAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 71.77914110429448%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAIAAACgpqunAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC60lEQVQoz42RW0iTcRjG/xcxOjGiRIIOhETSRRTdxrQuijmlrLl1cN80TYS66HARdJAstHIKFSlZrs1qmIma5WE6Dx0Wls6dvtM+dWvV8rCDp6lbbt/3vTEH0mUPP15eeJ8XHnhQad0GbU+qpjflxUdR3RdRw1dR04CoaTClcVD0dujQO3Nam/VYJ35cj0v1hLSHOt1HKY104WdS0WFORS+7DwIADzz8n3ieA4CpoKXXehTpelJDUdBRQbUloMVnnph83e6FL57FauusFp97TgR1VBD3hbX2GfXQRC21UG2dMXthft5iNMlRs+GQfwl2lFtXX2gUFmiQuEjRHbncMy2oGEu4hwtL8KTq8cfWUOLDn2vyNBuutAoe+m73RyBk7zfKkb49PRCFvar+TadKEg5iaOu+3JrPNwe5hLv2pFu9Ox4597/w1dgXdz0d25xfubWgKvHRD9UQC/PEQCeGuuplUwDJFzUIIeHuAwihbNWbmybYVEYn3Tdte8Dsq/XVOPjt19oRQoJ1wrVnn6pwgGnqa8N5ZFAr/BzEbuu2rDlyCZ2sPPPef+VDUKD6tbF4YP0d2061vwpf2lhqQwnJgj2SVXedt01RmKSN5QVI/+zcEg+to6EmZqFlNNzg4r5NRG2+6Gty7h0z+97Ntrn+MIGlFlekeSTc4oq8Gf7DBCHA2GvyM1F9mTLewL91fDK0zfq9wWkvaTWZjH3jk/5lS8zDcbGqaKu58IQYVd44CwAsx7M8xOEBXr2s1Rv6fk94OwxddTqd8dsQAERYjuVjEwAImxmTSVBF8dXYczTKsWwcnmPdLqfH41kMhacC/u8up88fWPFEIxEAsFtMSpkElZcUrUT6H8Vjk3ZLrjwdFV+/ODpMMTTB0MSwgxymYzhI3EHhDE04KGJ5JxiajHscJO52jehbm3PlGSg/OwOTHcayxDmy9NxlcmQSpVyCZaVhWWlKWZoyK4ZCKs6WihVSMSYVYyfEOTJJ3unMv5OnUmKjojORAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -1616,9 +1627,9 @@ Pourquoi ? Tout simplement parce que ce n&apos;est pas à mon téléphone me dir
 &lt;h2&gt;Gestion des mails&lt;/h2&gt;
 &lt;p&gt;Mettons, nous d&apos;accord. Un mail est &lt;strong&gt;asynchrone&lt;/strong&gt;. Si vous voulez avertir d&apos;un éventuel retard en réunion, si vous voulez une réponse dans la minute... et que vous utilisez le mail, c&apos;est que vous vous trompez de canal de diffusion.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;“L&apos;email est à l&apos;origine d&apos;une crise de la productivité dans les entreprises... il est le cancer silencieux des entreprise”&lt;br&gt;
-— &lt;strong&gt;Nancy FLYNN&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;“L&apos;email est à l&apos;origine d&apos;une crise de la productivité dans les entreprises... il est le cancer silencieux des entreprise”&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;— &lt;strong&gt;Nancy FLYNN&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Dans mon ancien boulot, ma boîte mail était ouverte en permanence en arrière-plan. Dès que je recevais un mail, j&apos;arrêtais mon travail pour répondre presque au tac-o-tac. C&apos;est bien, on se sent utile, mais côté productivité on est à la rue, car sans arrêt interrompu.&lt;/p&gt;
 &lt;p&gt;La technique du pomodoro requière que l&apos;on ne fasse qu&apos;une activité en même temps. Il a donc fallu que je me planifie des &lt;em&gt;emails sessions&lt;/em&gt;. Je consulte donc mes mails 3 fois par jour :&lt;/p&gt;
 &lt;ul&gt;
@@ -1632,13 +1643,13 @@ Si vous avez vraiment, mais vraiment trop de mails à gérer, passez au plan B :
 &lt;p&gt;Véritable Saint Graal du développement personnel, le Miracle Morning est une technique du livre éponyme d&apos;Hal Elrod. Cette technique consiste à prendre du temps le matin pour soi pour faire diverses activités (méditation, sport, lecture, écriture...). Ainsi fini les matins où on arrive au travail avec un demi café dans le ventre et le cerveau complètement à côté de la plaque.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;./alarm-clock-smash.gif&quot; alt=&quot;réveil&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Bon je ne vais pas trop détailler cette technique. J&apos;ai tenté de mettre en place cette technique en me levant à 5h30 le matin. Ça a duré... 3 jours ! Dès le 4e jour, j&apos;ai re-réglé mon réveil comme avant.&lt;br&gt;
-Pourquoi ? Parce que le temps de sommeil est incompressible. Se lever plus tôt, implique de se coucher plus tôt. A mon jeune âge, je me vois mal me coucher à l&apos;heure des poules et ne pas pouvoir profiter d&apos;une soirée un vendredi soir parce que je suis trop fatigué.  &lt;/p&gt;
+Pourquoi ? Parce que le temps de sommeil est incompressible. Se lever plus tôt, implique de se coucher plus tôt. A mon jeune âge, je me vois mal me coucher à l&apos;heure des poules et ne pas pouvoir profiter d&apos;une soirée un vendredi soir parce que je suis trop fatigué.&lt;/p&gt;
 &lt;p&gt;Qui sait, c&apos;est peut-être comme le café et le vin rouge... une histoire de temps ;-)&lt;/p&gt;
 &lt;h2&gt;Stop au présentéisme. Reposez-vous !&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;“Je ne suis pas né pour augmenter le produit national brut.”&lt;br&gt;
-— &lt;strong&gt;Pierre RABHI&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;“Je ne suis pas né pour augmenter le produit national brut.”&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;— &lt;strong&gt;Pierre RABHI&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Et il ne faut pas oublier le plus important : avoir une vie en dehors du travail. Je ne vois pas comment on peut être efficace, si on ne prend pas le temps de décompresser et même de vivre !&lt;/p&gt;
 &lt;p&gt;Après une demi-journée de réunion intense, un collègue est venu solliciter mon aide, mais nos cerveaux étaient littéralement à plat. Je lui ai proposé de laisser de &lt;em&gt;laisser décanter&lt;/em&gt; et de revoir ça ensemble le lendemain matin. Il m&apos;a dit qu&apos;il préférait rester le nez dans le guidon et qu&apos;il allait cogiter dessus toute sa soirée. Le lendemain, je n&apos;ai pas été étonné de voir que le problème était toujours d&apos;actualité. Problème qui a été résolu en prenant de la hauteur et en abordant le problème sous un autre angle de vue.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;./sleep-work.gif&quot; alt=&quot;surcharge de travail&quot;&gt;&lt;/p&gt;
@@ -1684,7 +1695,7 @@ Après quelques minutes de bidouillage, voici ce que j&apos;obtiens :&lt;/p&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 26.380368098159508%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAmUlEQVQY04VPWw7DIAzj/tfkawOmslDerYfRNlXVHpEsSHBso0QEy+KxbRv2fZ/oraH3PufGOqSUkHOe5y+UUqBijNBaI4QAFgVZNOCbSMDFWND4BS62YXoEZzRVVPbez0RHQfYkyDC6GjfvnH3DW5DJnHMz0TkhCWFdYd0N6SnY/gmyWcfSOSEFSfJ3gRmCJPNrtdaPIJd4AKUahupE9inUAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 26.380368098159508%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAmklEQVQY04VQWw7DIAzr/a/Zr42mKksotNB6crRN656RLEgwtqFTVUxTxLZt2Pfd0WpFa83nYRDknFFK8fUXlmVBN88z+r6HmYFFQRYNeKZqOIUBNL6DF2utB3BG047KMUZP9CzIngQ1wzmI7zn7hocgk4mIJ3pNSIKlhEFG5Jtg/SfIJqX0lpCCJMWLIsjoZD5tXdePIJd/eAWlGobq+tm8EwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -1713,7 +1724,7 @@ Il est possible de consulter et d&apos;ajouter des ressources via l&apos;écran 
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 34.96932515337423%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAA+0lEQVQoz52RTUsDQQyG59faghc9iRcFD1alqBcRj/4XQdAFt2pbQavnndn5avf7sK/JyGqFCmrgIZkwyWTeCPzD2raFMSZgrYWUMnilFISfL1BVVaCpa8hUg3NN06CmXE25VZRl+UVRfHoxuLjE1vAM28fn2Ng/CazvDdHbOUB/9xC9H+h/4whrdH9zcAoRP05wdRPhOrpDPJ4iGj3gNr7H9OUVk+fZrxkTT7M3CGs0lEyg0zSM7J3D3LtOrT/wYYKFTBIZhGWRU2rMAnvv4VZBD3bY5ZhquF4UJKa2DkqbICwLzgviuFvWMnmeI88yLIiCfpTxmeCmPMQ7d4L771HI8ykAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 34.96932515337423%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAA/ElEQVQoz52RTUsDMRCG82ttwYuexEsFD7ZKUS8iHv0vgqALbtW2Ql09bz42Sbv52sO+kkhrhQrqwMPMBDIMzxD8I9q2RVVVCSklKKUpM8ZA9HwB732iCQGUC8S3pmkQvEcIYSPOuS+sXWXSv7rG3vAC+6eX2Dk6S2wfDtHpDdA9OEbnB7rfOMFWb4Dd/jlI/jzBzV2G2+wB+XiKbPSE+/wR09c3TGbFrxnPCrwU7yCyEmC0hOA8rayVwlyrpa0/8BkkiixLmsRGyZzzJFhrDbUJpVbI9VrK9J9Y5yCkAhNVEhuFxwPFenmsdYwxMHWNRV3DWos69sakoXGJD3eC++9dM0o3AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -1731,7 +1742,7 @@ Il est possible de consulter et d&apos;ajouter des ressources via l&apos;écran 
 &lt;p&gt;Maintenant, il ne reste plus qu&apos;à construire la Web API !
 Après avoir donné un petit nom à votre Web API, déterminé le point d&apos;entrée et bien... presque tout est terminé !&lt;br&gt;
 Si vous voulez PIMPER l&apos;API, sachez qu&apos;il est possible de gérer les permissions (qui a le droit de faire un POST, PUT, ...), le &lt;abbr title=&quot;Time To Live&quot;&gt;TTL&lt;/abbr&gt; du cache, le filtre d&apos;IP (liste blanche/noire), la révision...&lt;/p&gt;
-&lt;p&gt;Tout est prêt, vous pouvez maintenant requêter votre API !  &lt;/p&gt;
+&lt;p&gt;Tout est prêt, vous pouvez maintenant requêter votre API !&lt;/p&gt;
 &lt;p&gt;Dans Overview &gt; Ressources &gt; [la méthode de votre choix], vous aurez quelques exemples de requêtes dans différents langages (Shell, Node, Java, Python, PHP, ...).&lt;br&gt;
 Voici un exemple avec cURL :&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;curl --request POST \  
@@ -1749,7 +1760,7 @@ Voici un exemple avec cURL :&lt;/p&gt;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 72.39263803680981%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAB1UlEQVQ4y5WTyY7bMAyG/cR9ir5OX6BFTwPMYXooumAmmSa2E8uLZNlarThOir/0kkFQFEVy+EBKln6RJhm9//yIp20KJiRkOEB2AbXvbkY4D9ZqJLJBTX707uMHPGxekJY5ElEi1y1EZ8H9bYxnC6uwlRzcGUSfvit8iyXWO47nuASrHYQ9gpv+Ro4oVY99HSDpXsRbg23RIJOeUhgg/ZFC7+9CLlaHAVHCHVZMYZW12JQWOb0m3AncDjcjiMoMUN0JkdIVGhlDiC2sYei6Ct4Xd1LCuRw+0D8MLkVbPsHyr/Bi5uRXOIf1Hbzi3L2gDwKRNwkU/4LQ/kCvfmKwz3eK/SVonICzDEZnZPM5hTF8d5WSm3GL/W/KcaGwzhokXGNHJFTxvLaoNLUEFWcsUO3PE7L7Pa0vRbv48/oEFagoGybwuucoG4NCajSOpsWGiYYQ2mOd5ohzgV3VoGgcPVojq/W0l0tDVT5QAIGqTH24FwabokVcahI0qM0oQiNlaLQITn5Wm4m9UKhUR41M321P1lNjHyZ/tJPgmOIvJpFyg7iQYJJGig5UdIAvCIJRRIxErwUudqTSi+Aur5CykrqdRqj1b6/zK8H58izM/8G4Xy0R/gF3GCI3PfI5nQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 72.39263803680981%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABzklEQVQ4y5WRyY7TUBBF/cV8Bb/DD4BYIbFoFohB3UmTxBk8vcF+s+MkjQ6yk0YNQihZHN2qUtV9VXrZ6/cfuVuuKaRG93t06lExXY0MkaKz5LpFhUj26u0bPiweWNcluawpbYdMHhGvY+ytvGGpBSI4sndfDV9WmvlGcL+qKVRA+gPCDVdyoDYDW9Wj/YFMdI5l1bLTERWP6HhAheEm9EVtfyTLRWBWGGa7jkXtKc2ADCeEP16N9Ecad8SkE5mxDa1eIeUS7wpSaoixupGaEEpi78j6sKar7/DiM1GeOcUZT/38Bh55Sg8MvSSLLseIT/TdNwbznaO/v9HsL0MXJMEXOLsj+PJ8wrh+eHFSOBMu+t+TV5VhvmvJhWUjLHnVUipPYwdEOE0fpOLThE4/p/z5057jc37C9CeyRSF53Arq1lFpSxv2aN9PtL5H2sh8XbIqJZumpWoDeaXYKTvVSu2Qfk9je0w6kG2lY1F1rGpLpR3KjSYJ6RLKJYRN7JSb2EpDYxK1SUg/UJuIcPspHnUyHE/8UWjWwrGqNIX2CD/QuP3UNA24PYWyFMr9YfCsI429GG7KhnVRo8OBuou/XxcvDM/DZ2PxD8Z6c9nwF3cYIjdCgtgMAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -1779,7 +1790,7 @@ Pour tester cette fonctionnalité, je me suis créé un tableur sur mon drive qu
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 46.012269938650306%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABtElEQVQoz0VS21LcMAzNl/Ff/SzemBYYKMsyy8ATDC872zbkasfOPXbiJHsqebs0M2dkKdLxkeTg4vIbKl0iTRMIIVBVFbq2Q9/3WJYFzk0Eh5lBPsfmecbxeETTNJBS4HLX4PZjxWH/geD7r1eIXBByIk1Rao0szZBnGYpCoiw1tFJkSyitkFGcL2YoH9d4fNd4jxz+/N4jcJ2lwsIXdR0rM2i7ns4nDIMhO6D39hQry4ryhi/fWepmNJ482B9CXF1rXN0M+HGT4/4uw3ZbY7NReH422DxovLxMePhZkG+x27WEnjDg6akha/G4LQkGb28JgjTL0Q0ObgWSVEAKSbNpoQrt5ybIX5bVj8XaEeu6Eo5o29ZbVjuOI/kdoihEwHMZRwv+JM2F2+fWNc1ynh0RK78I9qdpIpLFk3IOW54t17OfJBER0uysPRPKL8KmbjwhK2NCvozzTgrXfwpXv2mvkGri+BOBlBLGGE+Y06aZgJOU0kQ0I4ljjNQqK7XmP+FZYU25bnKY6F8cfZ4UhmFI/Ud0Q+yfDltusa5r2r72bTH4jXKMcT43VY1Y5TjohN5kjr90+qXQygaOHgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 46.012269938650306%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABvElEQVQoz0VSXW/cIBD0L+v/6s/KW9Q2VdvcXeRT+pQoL6dre/EXYLCNsY2N4aZaLpcgjZZdLcPsQPLp5jNa1aAsC3DO0bYtTG8wDAO893BugXMOK8H7WFvXFefzGVprCMFxk2p8fwk4Hl6QfPnzG5xxcMZQliUapVCVFVhVoa4FmkZBSYmmaSCVRFVV8WKCjHWF7bPCc+bw7+8BiTMWdV3HQ8aQsgm9GWDeMI4TjBkxxHipNU2LYRjfc2cH+HmK5MnheMLtN4XbuxFf7xh+/qiw23XYbCT2+wmbe4XHxwX3v2rs9xZp2iNNB6TpiIcHjTS12O4abHcTnp4KJGXFYEYHF4Ci5BBcQOseslbRN84FvA/RFmtnhBAQwhl938dIaud5Rt8bZNkJCfkyzxa0BOdxfBpdKYV1dZC1jA9B+bIsCMFHUuqhSN7SecqLIkNCxlp7JRTvhLrTkZCUESFdRn0XheFNYYgvHRUagzx/RSKEwDRNkZAxFgmoSUoF71cUeY7ZzlGpnT4Irwo7reEWh2WyyLPXi8LT6YQsy5Dnefw6FGnEruugpIpjEeiPUo1w3eu2Qy4ZjqqAEAz/AXT6pdCAN+zQAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -1807,7 +1818,7 @@ Pour tester cette fonctionnalité, je me suis créé un tableur sur mon drive qu
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 82.20858895705521%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABAUlEQVQ4y62U2YqDQBBF8/8f6YMK4r7vS82cgpIgmcQO01C2aHu891br4zgOaZpGyrLUGoZBa9s24Z5L7fsuD/kdcRxLFEVaeZ5LmqayLAu33IFd10lVVeJ5ngRBcIK+gSlwnmdp21Z831coL5imSbjOQpdxWuaE3LCbZZnO5InaO+rMjQI5WddV+r6Xoig0xzAMNQbUct0eeDVeAukoCmkOOQKq61rn5yydgOM4KpAOmzKUv1P3J9AsY5cGUc/qnC0DRGGSJAq6Zuds2YDYpciTmSi+smwZsl1oBuruNORjhrYHzfb1gdv70FSy9wDypVyBn8YJ5PBukfPPwT7q/6of7YfrcZ23MlkAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 82.20858895705521%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABAElEQVQ4y62U16qEQBBE9/8/0gcVxJxz6MtpaFlkg7PcgXZEx2NV9ejjOA5pmkbKstQahkFr2zbhnkvt+y4PEZE4jiWKIq08zyVNU1mWhVvuwK7rpKoq8TxPgiA4Qb/AFDjPs7RtK77vK5QXTNMkXGehyzgtc0Ju2M2yTGfyRO0ddeZGgZys6yp930tRFJpjGIYaA2q5bg+8Gi+BdBSFNIccAdV1rfNzlk7AcRwVSIdNGco/qXsLNMvYpUHUszpnywBRmCSJgq7ZOVs2IHYp8mQmip8sW4ZsF5qBujsN+Zqh7UGzfX3g9j40lew9gHwpV+C3cQI5fFrk/HOwj/q/6g/th+txC1C6agAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -1842,7 +1853,7 @@ Pour tester cette fonctionnalité, je me suis créé un tableur sur mon drive qu
 &lt;p&gt;Il faudra attendre une version future de la plateforme pour atteindre le saint graal d&apos;une API REST et faire plaisir au papa de REST :&apos;-(&lt;/p&gt;
 &lt;h2&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;APISpark est une plateforme très intéressante qui mérite le détour.
-Quelques fonctionnalités sont (ou semblent) absentes, mais les principales sont là.  &lt;/p&gt;
+Quelques fonctionnalités sont (ou semblent) absentes, mais les principales sont là.&lt;/p&gt;
 &lt;p&gt;Je suis actuellement en train d&apos;apprendre la &lt;abbr title=&quot;MongoDB ExpressJS AngularJS NodeJS&quot;&gt;stack MEAN&lt;/abbr&gt;. J&apos;ai choisi d&apos;utiliser APISpark comme source de données et le résultat est plutôt satisfaisant. Le code source se trouve &lt;a href=&quot;https://github.com/maxpou/mean-apispark-beer&quot;&gt;sur mon répo Github (voir Step 2)&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -1857,7 +1868,7 @@ Quelques fonctionnalités sont (ou semblent) absentes, mais les principales sont
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD1ElEQVQ4y8WUDUxbVRTHz2sLj4av2TlljGwVpNvYgDHJIE7UMUOySYyixrlNl0EYDpYJtLAYYGbKyjKzGYmZU0Zc3MZidEGTEZ1BB7NYXaEUyrrR71dKX7+/gNpK6fW+uqTWhMRoojf5v5N73n2/e+555x6A/3uYvUEwOBaAcgaAcgRA55iPXzDrDgLtCYLdFyRcC2Gi57M+xk0wj6ICPouxidwHIWP1GgIhRMz6FsHkCcGk0UXcmfHAFOUCmcYWA6qwk1EEIQhi7dj5DHA4nMokkhCwuVlRHofDeokkyQc+/ORTGFebuJQ7xJ3EoCmTG4OdINPaY0CNxQda2g/+X8OrcJR8HAULi3lVBrCXt2VDCrawsvpQPT7iXLHJtdChs891yvWODAWG4SiJuAi1NAZavCmz7sApiyfQO+P0t8kolHul65FTl08XIWlfoUv55bod3iX0lNHu79fb5oanaZ9crnOIvIsRYDaPA47iyc/36AoN7ftJb/NLjM7AzQtX+oeqnt2Kuhr5qLz8SfR+5z4qFF7o11j84zjK2xraL5GpbUffvCGBs9fH4oGDCgpuTpqKlUbXF5RjfkRv9f34+fWhiUOvbQ9cPZ0b6f9gMxroO+i4ZwtInXOLUryhVGFwXpWq6HyJchZuT1sJmc4SA34tnYbBMT1LorLsxz9nwGDzy9R0QPKeuN7cc3wt6jmZG2l9Pjt8XtQyIz53wfCDVPHNXTr0uDuCQK6mQaa2w6jitxhwSGmGb+UGqO36CG4pzdvvmFzdZ89fnmhvLJ8/vGcdajwgiFA3NiKtcNeSqKpmLOut5qzq1g74vraOgxMIU9YQON4Rx4DDU2bmyNHae+VAHaSnJW1J5vG7Bnorrqm+2oTM3+Uvio8VLu0u3YpObMwJ/FJTV38OLw61HwdbsxCG+HzwilpjwJG7dDTK7ovX4MzHl3Ahp0RrOiGBHC7KX4syM1ejHEEuutWzDalKHkUT28qQq+GI1iFsed1yohOoNxrAI2qJvy0DI0pYuSoDF3RC9IYkkqQgMZFd3PvuhjMXO9cj9WBBmO4uCBuz86zm7JxLMzsrTjqbhC9ajxwF8569hOfPES43CgVcSE1Lh6Z9vOraVx9uq+OtfwyVPsfzpmaAbncl2JuEoD/cAKqql8Hfcmx50NMlDzGGc39agtWBVYDVhpVXQSaTb+dtIkcP1rDFT5RB8+Z8QOOTy/IYUDpWKtYLWIjNgva0FLYAJ7cX5yOIffuxTcI2+e90J6a7cOGPD0qxKrFWYK2578/BymTSjMX+py2Q+IuFfwNiLQP/78bvc9za3koLaEsAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD20lEQVQ4y8WUC0ybVRTH/19bKA0vZU4ZI1sF6TY2YEwyiBN1zJA4iVHUOLfpMgjDwTJ5FBYDzEwZLDObkZg5ZcTFbSxGFzQZ0Rl0MIvVlUdpoRttafu1pR/t19IHUFspvaZ1ScWExGiiJ7n35J577u+ee3POAf5vMbt80LMLoO1e0KwXU+z8cofpWR8Ypw82t49yLASozs+6Q2YqNOVmCzkhHS14AMlr1lKEEGravQij0w+FwUFNmJwYpx2QaawRoMrkDI8gIfARgp27ngaPxyuJ4VMiriA1zOPxOC/x+fz7P/zkU4yqjQJ61i9Q0A6MG2ehMNgh09oiQI3FDS3jgefXwGqb2yckhHAIIaGtQmBv0taNcYUAVpUdqgLNzuUZHQstU7a51hEdmyw32DFhclLLItQybmgtrrjpWe8pi9PbZbJ7mmQ0ybjS/vCpy6dzibQ7x6H8cv1O1xJ50mDz9OiscwOTjHtkZIoVuxaDCF2+DDikseLnu0yxhnH/pLN6JAa79+aFKz39pc9uI+01QlJU9AR5v3Uf7Q8s9GgsnlGanbutYTwSmdp69M0bEpy9Prwc2CencVNhzFMaHF/Q7Pygbsb94+fX+8cOvbbDe/V0RrDngy2kt/sge9fqldrnFqUGu1cq19uvSlVMlkQ5jduTM5RsyhIBfi2dRN+wjiNRWfarTM5evdUjUzNeyXttVebO4+tI58mMYOPzaYHz4gZT27kL+h+k8m/uMP7HZoMEI2oGMrUNQ/LfIsB+pRnfjuhR0f4RbinNOyaMjo6z5y+PNdcUzR/es57UHBAF6RubiLb+mSVxaflw6lt1qWWNLfi+opIHQjA+4wf7TlsEODBuDj05nHuvHKhEYkLM1tgkYXtvV/E11Vebifm7rMW2YzlLuwu2kROb0r2/lFdWnQPgbz4Oa109+oVCuMSNEeDgHSYcZcfFazjz8SUOEBfO6ago/kBu1jqSkrKGpIsyyK3O7USV/wgZ215IHNVHtGx9w+uWE62g36iGU9ywvFp6B5VYtToZPF5UuEKi+XxRdDQ3r+vdjWcutm4g6r7sANORHTCkZc6Y09IvmXYVn7TX1r84c+QozHv2Us4/R7iS5IgEiE9IRO2+pLKKVx9qqkza8CgpeC7JFZ+Mqd0lsNXWQ3e4GqrSl+FpOLYy6Kn8B0OKd2+ZD6AFQDaAJgCZxfxY/tuZm/lDB8u5bY8Xom5LFsioYkVeCJQIIB7ACwAIl4PmhDiuiAN0UYAPwH4KiAEQ+3e6U6i7CPDHgQIAJQDuA7D2nj0dQEromwFw/2kLpP6i8W9AnBXg/538DnPc2t77DY2DAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -1898,9 +1909,9 @@ DELETE  | Non  | Oui&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Focus sur le DELETE :&lt;/strong&gt; On serait tenté de dire que DELETE n&apos;est pas idempotent car on ne peut pas supprimer deux fois le même objet. Ceci étant, si l&apos;on regarde la RFC, DELETE doit bien retourner un code 200 (Success) en cas de réussite et non pas un 204 (No Content). Si l&apos;API n&apos;a pas été bien conçue et qu&apos;elle renvoie un 404 (Not Found), alors le DELETE ne sera plus idempotent comme elle devrait l&apos;être.&lt;/p&gt;
 &lt;h2&gt;Cachabilité&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&quot;La requête la plus performante est celle que l&apos;on a pas à faire !&quot;&lt;br&gt;
-— &lt;strong&gt;Un inconnu&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&quot;La requête la plus performante est celle que l&apos;on a pas à faire !&quot;&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;— &lt;strong&gt;Un inconnu&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;La mise en cache est l&apos;une des contraintes les plus importantes des architectures web. En effet, elle permet de :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;décharger votre serveur en lui évitant de refaire la même chose deux fois,&lt;/li&gt;
@@ -1920,7 +1931,7 @@ GET api.mon-application.org/utilisateurs/42?action=envoyerMailConfirmation
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Ce sont de mauvaises pratiques liées à une mauvaise compréhension des verbes HTTP. Quand il y a un nom d&apos;action CRUD dans l&apos;URI c&apos;est qu&apos;il y a un problème.
 De plus, dans la partie précédente, je parle de cachabilité. Si vous faites une recherche avec POST, le serveur n&apos;utilisera pas le cache... mais il le mettra peut-être à jour (pour d&apos;éventuels GET à venir qui ne viendront jamais).&lt;br&gt;
-Si vous utilisez un POST au lieu d&apos;un PUT (ou autre méthode idempotent) et que par mégarde, vous exécutez cet appel plusieurs fois, il peut y avoir des effets de bords non désirés.  &lt;/p&gt;
+Si vous utilisez un POST au lieu d&apos;un PUT (ou autre méthode idempotent) et que par mégarde, vous exécutez cet appel plusieurs fois, il peut y avoir des effets de bords non désirés.&lt;/p&gt;
 &lt;h2&gt;Création POST vs. PUT&lt;/h2&gt;
 &lt;p&gt;Lors d&apos;une création de ressource, il y a deux cas de figure : le serveur a la main sur la génération de l&apos;id (ou du nom de la ressource) ou bien le cas contraire. Dans le premier cas, il faut privilégier le POST et dans l&apos;autre le PUT. En d&apos;autres termes, n&apos;utilisez PUT pour la création uniquement si c&apos;est au client connait l&apos;URI de la ressource à créer.&lt;/p&gt;
 &lt;p&gt;Exemple avec les ressources subordonnées.&lt;/p&gt;
@@ -1950,26 +1961,26 @@ Pourtant un ingrédient est... aussi une ressource ! Il faudra donc faire :&lt;/
 &lt;blockquote&gt;
 &lt;p&gt;&quot;On a qu&apos;à faire un PUT partiel et puis c&apos;est tout !&quot;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Et bien non ! Comme le dit si bien le papa de REST, un PUT partiel n&apos;est pas compatible avec une API RESTful. Par extension, il en va de même pour le POST partiel.  &lt;/p&gt;
+&lt;p&gt;Et bien non ! Comme le dit si bien le papa de REST, un PUT partiel n&apos;est pas compatible avec une API RESTful. Par extension, il en va de même pour le POST partiel.&lt;/p&gt;
 &lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;fr&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://twitter.com/mnot&quot;&gt;@mnot&lt;/a&gt; Oy, yes, PATCH was something I created for the initial HTTP/1.1 proposal because partial PUT is never RESTful. ;-)&lt;/p&gt;&amp;mdash; Roy T. Fielding (@fielding) &lt;a href=&quot;https://twitter.com/fielding/status/275471320685367296&quot;&gt;3 Décembre 2012&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&quot;https://www.maxpou.fr//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
-&lt;p&gt;Bref, c&apos;est toujours le même problème qui revient : &lt;strong&gt;Théorie Vs. Pragmatisme&lt;/strong&gt; :  &lt;/p&gt;
+&lt;p&gt;Bref, c&apos;est toujours le même problème qui revient : &lt;strong&gt;Théorie Vs. Pragmatisme&lt;/strong&gt; :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Soit vous collez à fond à la spec HTTP pour avoir une vrai API REST et utilisez PATCH ;&lt;/li&gt;
 &lt;li&gt;Soit vous oubliez avoir lu cet article et continuez d&apos;utiliser un POST/PUT partiel. Mais votre API ne sera pas pleinement REST ;-)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Sortir du cadre CRUD&lt;/h2&gt;
 &lt;p&gt;Même si ce n&apos;est pas l&apos;objet de cet article, je vais tout de même en parler un peu, car contrairement à ce que certains pensent, il est possible de sortir du cadre CRUD avec une API REST. Vous devrez alors utiliser la méthode POST, et ainsi profiter du caractère unsafe/non-idempotent de cette dernière. Utiliser POST vous protège d&apos;effets de bord évoqués précédemment (ex : retirer deux fois l&apos;argent sur le compte d&apos;un client, double envoi de mail, ...).&lt;/p&gt;
-&lt;p&gt;Exemple : &lt;code&gt;POST api.mon-application.org/utilisateurs/42/envoyer-mail-confirmation&lt;/code&gt;  &lt;/p&gt;
+&lt;p&gt;Exemple : &lt;code&gt;POST api.mon-application.org/utilisateurs/42/envoyer-mail-confirmation&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;N&apos;oubliez pas que c&apos;est un échange entre le client et le serveur. Par conséquent, il doit y avoir une réponse. Réponse qui se matérialise dans le cas présent par des &lt;a href=&quot;http://www.restapitutorial.com/httpstatuscodes.html&quot;&gt;codes&lt;/a&gt;. Dans le cas présent, il faudra renvoyer un &lt;em&gt;204 No Content&lt;/em&gt;.&lt;/p&gt;
 &lt;h2&gt;Sources&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Si vous voulez en savoir plus sur l&apos;utilisation de PATCH, je vous recommande cet article : &lt;a href=&quot;https://williamdurand.fr/2014/02/14/please-do-not-patch-like-an-idiot/&quot;&gt;blog de William DURAND - Please do not PATCH like an idiot&lt;/a&gt; dédié à ce sujet.  &lt;/li&gt;
-&lt;li&gt;J&apos;ai récement découvert cet ouvrage : &lt;a href=&quot;http://shop.oreilly.com/product/0636920021575.do&quot;&gt;REST API Design Rulebook (Mark Masse)&lt;/a&gt;. C&apos;est une véritable mine d&apos;or. Si vous vous posez des questions du type : quel code HTTP retourner ? Quelle forme d&apos;URL est la plus judicieuse ? Ai-je le droit de faire xxx ? ... ce livre est fait pour vous !  &lt;/li&gt;
+&lt;li&gt;Si vous voulez en savoir plus sur l&apos;utilisation de PATCH, je vous recommande cet article : &lt;a href=&quot;https://williamdurand.fr/2014/02/14/please-do-not-patch-like-an-idiot/&quot;&gt;blog de William DURAND - Please do not PATCH like an idiot&lt;/a&gt; dédié à ce sujet.&lt;/li&gt;
+&lt;li&gt;J&apos;ai récement découvert cet ouvrage : &lt;a href=&quot;http://shop.oreilly.com/product/0636920021575.do&quot;&gt;REST API Design Rulebook (Mark Masse)&lt;/a&gt;. C&apos;est une véritable mine d&apos;or. Si vous vous posez des questions du type : quel code HTTP retourner ? Quelle forme d&apos;URL est la plus judicieuse ? Ai-je le droit de faire xxx ? ... ce livre est fait pour vous !&lt;/li&gt;
 &lt;li&gt;Enfin, le &lt;a href=&quot;http://restcookbook.com&quot;&gt;restcookbook&lt;/a&gt; et l&apos;article de &lt;a href=&quot;http://jasonsirota.com/rest-partial-updates-use-post-put-or-patch&quot;&gt;Jason Sirota : REST Partial Updates: Use POST, PUT or PATCH?&lt;/a&gt; m&apos;ont beaucoup aidé.&lt;/li&gt;
 &lt;/ul&gt;
           &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(This is an article posted to my blog at maxpou.fr. You can read it online by &lt;a href=&quot;https://www.maxpou.frrest-crud&quot;&gt;clicking here&lt;/a&gt;.)&lt;/div&gt;
-        </content:encoded></item><item><title><![CDATA[Atom, un éditeur qui vous veut du bien]]></title><description><![CDATA[18/11/2016 : ajout de ma configuration perso + quelques plugins 26/08/2015 : ajout de la gestion des favoris 24/11/2015 : l'éditeur est beaucoup plus stable qu'avant C'est quoi ? Atom est un éditeur de texte développé par GitHub destiné aux…]]></description><link>https://www.maxpou.fr/atom</link><guid isPermaLink="false">https://www.maxpou.fr/atom</guid><pubDate>Fri, 14 Aug 2015 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+        </content:encoded></item><item><title><![CDATA[Atom, un éditeur qui vous veut du bien]]></title><description><![CDATA[[18/11/2016] : ajout de ma configuration perso + quelques plugins [26/08/2015] : ajout de la gestion des favoris [24/11/2015] : l'éditeur est beaucoup plus stable qu'avant C'est quoi ? Atom est un éditeur de texte développé par GitHub destiné aux…]]></description><link>https://www.maxpou.fr/atom</link><guid isPermaLink="false">https://www.maxpou.fr/atom</guid><pubDate>Fri, 14 Aug 2015 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;[18/11/2016] : ajout de ma configuration perso + quelques plugins&lt;br&gt;
 [26/08/2015] : ajout de la gestion des favoris&lt;br&gt;
 [24/11/2015] : l&apos;éditeur est beaucoup plus stable qu&apos;avant&lt;/p&gt;
@@ -1992,7 +2003,7 @@ Mais je vous ai un peu prémâché le travail en vous sélectionnant quelques &l
 &lt;li&gt;&lt;a href=&quot;https://atom.io/packages/file-icons&quot;&gt;file-icons&lt;/a&gt; : ajoute des petites icônes dans la &lt;em&gt;menubar&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://atom.io/packages/highlight-line&quot;&gt;highlight-line&lt;/a&gt; : permet de surligner la ligne courante&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://atom.io/packages/sublime-style-column-selection&quot;&gt;Sublime-Style-Column-Selection&lt;/a&gt; : permet de faire des sélection rectangulaires façon SublimeText.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://atom.io/packages/atom-alignment&quot;&gt;atom-alignment&lt;/a&gt; : aligne votre code.  &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://atom.io/packages/atom-alignment&quot;&gt;atom-alignment&lt;/a&gt; : aligne votre code.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Exemple :&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;var a = b;
@@ -2007,8 +2018,10 @@ var abcd  = d;
 var ddddd = d;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://atom.io/packages/docblockr&quot;&gt;docblockr&lt;/a&gt; : va générer la PHPDoc/JSDoc/... comme ci-dessous :
-&lt;img src=&quot;https://i.github-camo.com/75520d0785add27aad25b9111d5fbfe49eb85214/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f4e696b68696c4b616c6967652f646f63626c6f636b722f6d61737465722f7265736f75726365732f66756e6374696f6e2d74656d706c6174652e676966&quot; alt=&quot;docblockr&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://atom.io/packages/docblockr&quot;&gt;docblockr&lt;/a&gt; : va générer la PHPDoc/JSDoc/... comme ci-dessous :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.github-camo.com/75520d0785add27aad25b9111d5fbfe49eb85214/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f4e696b68696c4b616c6967652f646f63626c6f636b722f6d61737465722f7265736f75726365732f66756e6374696f6e2d74656d706c6174652e676966&quot; alt=&quot;docblockr&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://atom.io/packages/linter&quot;&gt;linter&lt;/a&gt; : affiche les erreurs dans votre code.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://atom.io/packages/linter-php&quot;&gt;linter-php&lt;/a&gt; : Vous indique vos erreurs PHP (soyez sûrs d&apos;avoir PHP dans votre PATH).&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://atom.io/packages/linter-phpcs&quot;&gt;linter-phpcs&lt;/a&gt; : PHP CS pour PHP CodeSniffer. Sniffera votre code pour vous dire là où vous n&apos;êtes pas en conformité avec les normes PSR. Fonctionne avec Linter.&lt;/li&gt;
@@ -2058,7 +2071,7 @@ Mais côté pratique, je préfère de loin utiliser &lt;a href=&quot;https://des
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 38.036809815950924%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAA7DAAAOwwHHb6hkAAABCElEQVQY043Qu0rEQBQG4HkXncz9zEwmt40x2SURdCPeXsRFF4sVA4KIYK2F/TZmrbVaxdKnMqKlWT18xQ+H/xQHFUURhpHWxhj7Pz+jtEFZOZb+AAufKEfhDwQCDBGGmECIPYr2bj/2r5cHN+/jq7eiWa6QN6/lxfNh0x417fZsIW2M6suX+rzdmbXV2WN22m5OF32y6dPwZF5P7nYn91vHD+ASZKNUB0mal9mwEuATDlToPkRYTzosHQOnwCAuFOMCuodZnzDuUbYKYdgja+uYMv5V9oMoSTeKUdkFpa1HOWHiV92KS8iL4aiswnggFSChdHfDWNcFJlRf8xvl0viBdQFoK5X+BJWJeCDjyxE9AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 38.036809815950924%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAA7DAAAOwwHHb6hkAAABAklEQVQY043Lu0rDUByA8fMuenLu/3PLrTEmLYmgjXh7EYsWh4oBQURw1sG9i6mzTlUcfSoRHU3147d+qCzLKIq1NsbY//lJaYPyaizdAAtHlKfwBwIhhhhDQiDCAUV7tx/718uDm/fx1VvZLlco2tfq4vmw7Y7abnu2kDZBzeVLc97tzLr67DE/7Taniz759Gl4Mm8md7uT+63jB/ApsnGmwzQrqnxYC3CEAxW6DxE2kB5Lz8ArMIgLxbgAbYx1hPGAslUIwwFZW8eU8a/ZhXGabZSjyoWx0jagnDDxq4ByLqEoh6OqjpKBVICE0gqMsV4ozYTqO79RLo0LrQ9BW6n0J5WJeCA4dBSjAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -2088,7 +2101,7 @@ Pour l&apos;activer : Ctrl + Shift + P &gt; Markdown preview: Toogle
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 20.858895705521473%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAsUlEQVQY043PwU6DQACEYR6GwrILCyxbCb4U0DSaEK5oL3DlkYzxgq/CQY6/216aamOc5DvOJOPlJiW3kiAU+P7O8X/YoXVC3/fM88zp9Mo4jkzTdJdXGEP5YMnSBCUjlLqKlSSKBFVV8bksbNsX67ryV9zgnqp8ZG81eSYddWFyRWFiUi0RQvD2/sF/4llboLPMlSKCIPzlfNu4F8PwwvHpmfZwoGka2ra9Udc1XdfxDfoivKSX59U/AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 20.858895705521473%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAsUlEQVQY043PPW7CMBxA8RzGBMcGx/7HFIVLJUEIpCgrLUuy5kgIdaFXyVDGh9ql6ocqnvQ7wEuC5IRoSOcapWYopX6Y4dySrusYx5HT6YW+7xmG4U9JIcL6KeLzJdZkWPtlYQ1ZpinLkrfrldvtnWma+K+kkBXlesMqOoI3BG8/SbAUsiB3Bq0158srj5TEWOC8R+uMNJ3/8rEtIhyPz+z2B5rtlrquaZrmm6qqaNuWO/oivKTKVHHrAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -2110,13 +2123,13 @@ Vous pouvez le faire via deux moyens :&lt;/p&gt;
 &lt;li&gt;En ligne de commande (possibilité de mettre plusieurs étoiles)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;code&gt;apm login&lt;/code&gt;&lt;br&gt;
-&lt;code&gt;apm star linter minimap anotherPackage&lt;/code&gt;  &lt;/p&gt;
+&lt;code&gt;apm star linter minimap anotherPackage&lt;/code&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Pourquoi faire ?&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;C&apos;est simple, si un jour vous changez de poste de travail, vous n&apos;aurez qu&apos;à faire :
 &lt;code&gt;apm stars --install&lt;/code&gt; pour installer vos favoris&lt;br&gt;
-&lt;code&gt;apm stars --user maxpou --install&lt;/code&gt; pour installer les favoris d&apos;un autre utilisateur (les miens dans ce cas présent).  &lt;/p&gt;
+&lt;code&gt;apm stars --user maxpou --install&lt;/code&gt; pour installer les favoris d&apos;un autre utilisateur (les miens dans ce cas présent).&lt;/p&gt;
 &lt;p&gt;Pour &lt;strong&gt;lister&lt;/strong&gt; les packages favoris d&apos;un autre utilisateur, supprimez l&apos;annotation &lt;code&gt;--install&lt;/code&gt;.&lt;/p&gt;
 &lt;h2&gt;Raccourcis claviers&lt;/h2&gt;
 &lt;p&gt;Vous les retrouverez tous dans File &gt; Settings &gt; Keybindings (avec la possibilité de faire des recherches).&lt;/p&gt;
@@ -2130,7 +2143,7 @@ Vous pouvez le faire via deux moyens :&lt;/p&gt;
 &lt;code&gt;Ctrl + /&lt;/code&gt; : Commente la ligne&lt;br&gt;
 &lt;code&gt;Ctrl + J&lt;/code&gt; : Joint la ligne courante et la suivante&lt;br&gt;
 &lt;code&gt;Ctrl + C/X (sans sélection)&lt;/code&gt; : Copie/coupe la ligne courante&lt;br&gt;
-&lt;code&gt;Ctrl + tab&lt;/code&gt; : Change d&apos;onglet  &lt;/p&gt;
+&lt;code&gt;Ctrl + tab&lt;/code&gt; : Change d&apos;onglet&lt;/p&gt;
 &lt;h2&gt;Limites&lt;/h2&gt;
 &lt;p&gt;Si Atom a souffert d&apos;horribles latences à son tout début, on peut dire qu&apos;il est beaucoup plus stable aujourd&apos;hui. Cependant, il se peut que l&apos;éditeur ne réponde plus si vous souhaitez ouvrir un fichier trop volumineux (un bon vieux fichier de logs par exemple). Bah oui, ce n&apos;est pas non plus VI !&lt;br&gt;
 &lt;span
@@ -2146,7 +2159,7 @@ Vous pouvez le faire via deux moyens :&lt;/p&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 38.036809815950924%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABSklEQVQoz5WR2W7CMBBF8/n8RRcCRXwIL/DWQsqSkDibQwglG1nJ7dhBqqgqtb3SkT0ez3hmrBiGgdVqJdE07Z7b+V8Q96fTKRSQ2rbFd3X4vxaLBRTfcyj7G2xmwTIZDF3HZrPBereFYe5xueSI4xjxOUaW5USKJE6QpimRkZ1Jv9B8PoeSJB/YUdvr9zX2ugFmO9C3OjSyTWsPxkx4ngdGj7muB+47cBmD47pUhC19pmWi67q+wqoowAOOIAxlkM85PN+jAAdVVcmL1+v1axRkC+7Gc7NlhWJTFiXqukbTNP1KiLUsC2q5wPFcwOURLCcEP9IIkhyn6IggOCCkQgLuyxyz2axP+Jsa4hBG2Oo20rI/y7OEOgsQnSJK6KKuWiyXr1DEV6uqitFo9CNj4vFZJcZ4Hr7g4UnFcCgYkl+VsWI/mUwwGAzwCdpHSYf933TvAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 38.036809815950924%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABUElEQVQoz5WR226bQBCGeXy/RVMbUssP4hv7ro2J7YBhOS3BpAEWc7DNV7GOFKWq1OSXPs3snDSaNVzXZbPZaGzb/shb/DOM9YvFAgPgcrnwtwa+rvV6jZHEIbb9i0D4+J7AdRx2ux3bpz2ud+B0qimKguK1QKkapSrKoqSqKqpKoZTS+VGr1QqjLH/z5LpsH7ccHBcRhDh7B/txi+cfEMIjjmOEJ4iiGJmEREIQRhGBCHTO8z2GYbht2DUNMpWkWaabEimJk5gwCum6Thder9f3UwyD5sN53t56w9Fpm5a+7zmfzzfb99q2bcPp1HB8bYhkjh9myGNNUda85EfS9Jksy0hlomcsl8vbwP/pDDxnOXsnoGpvsVqVyDQlf8lJZUTfXXh4+IkxfrVpmliW9U/uLYu7qcnd9J7p7AffvpvMZiMzLMvUvaM/n8+ZTCb8AdpHSYcuWjlXAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -2159,7 +2172,7 @@ Vous pouvez le faire via deux moyens :&lt;/p&gt;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
-    &lt;/span&gt;  &lt;/p&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Si vous avez un clavier français et que vous n&apos;arrivez pas à écrire ces caractère &quot;]&quot;, &quot;}&quot; et &quot;€&quot;, allez dans file &gt; Open Your Keymap.
 Un fichier CSON va s&apos;ouvrir. Ajoutez ces quelques lignes ci-dessous et enregistrez (pour surcharger le snippet existant).&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&apos;atom-workspace atom-text-editor:not([mini])&apos;:
@@ -2174,25 +2187,25 @@ Un fichier CSON va s&apos;ouvrir. Ajoutez ces quelques lignes ci-dessous et enre
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;Le mot de la Fin&lt;/h2&gt;
 &lt;p&gt;Le passage de SublimeText vers Atom a &lt;em&gt;presque&lt;/em&gt; été indolore pour moi. Beaucoup de raccourcis claviers, concepts... sont identiques (cas échéant, il vous est possible d&apos;adapter le fichier de keymap).&lt;br&gt;
-La quantité de packages et de thèmes est impressionnante, il y en a pour tous les goûts. A vrai dire, je suis étonné que si peu de mes collègues l&apos;utilisent.  &lt;/p&gt;
+La quantité de packages et de thèmes est impressionnante, il y en a pour tous les goûts. A vrai dire, je suis étonné que si peu de mes collègues l&apos;utilisent.&lt;/p&gt;
 &lt;p&gt;Et vous, vous en avez pensé quoi de cet éditeur ?&lt;/p&gt;
 &lt;h2&gt;Bonus : ma conf perso :)&lt;/h2&gt;
 &lt;p&gt;Voir mes &lt;a href=&quot;https://github.com/maxpou/dotfiles/tree/master/atom&quot;&gt;Dotfiles (répo GitHub)&lt;/a&gt;.&lt;/p&gt;
           &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(This is an article posted to my blog at maxpou.fr. You can read it online by &lt;a href=&quot;https://www.maxpou.fratom&quot;&gt;clicking here&lt;/a&gt;.)&lt;/div&gt;
         </content:encoded></item><item><title><![CDATA[Utilisez un framework PHP]]></title><description><![CDATA[Aujourd'hui je vais vous parler de framework dans l'écosystème PHP. L'idée de cet article m'est venue suite à la suite d'une mission de plus chez un client qui préférait utiliser son framework maison plutôt qu'un framework open source. Je n'adhère…]]></description><link>https://www.maxpou.fr/utilisez-un-framework-php</link><guid isPermaLink="false">https://www.maxpou.fr/utilisez-un-framework-php</guid><pubDate>Sat, 18 Jul 2015 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Aujourd&apos;hui je vais vous parler de framework dans l&apos;écosystème PHP.&lt;br&gt;
-L&apos;idée de cet article m&apos;est venue suite à la suite d&apos;une mission de plus chez un client qui préférait utiliser son framework maison plutôt qu&apos;un framework open source. Je n&apos;adhère pas vraiment à cette philosophie et l&apos;objectif de cet article est de vous présenter pourquoi.  &lt;/p&gt;
+L&apos;idée de cet article m&apos;est venue suite à la suite d&apos;une mission de plus chez un client qui préférait utiliser son framework maison plutôt qu&apos;un framework open source. Je n&apos;adhère pas vraiment à cette philosophie et l&apos;objectif de cet article est de vous présenter pourquoi.&lt;/p&gt;
 &lt;h2&gt;Framework, kezako ?&lt;/h2&gt;
-&lt;p&gt;Tout d’abord, qu’est-ce qu’un framework ?  &lt;/p&gt;
+&lt;p&gt;Tout d’abord, qu’est-ce qu’un framework ?&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Un framework est un ensemble cohérent de composants logiciels structurels, qui sert à créer les fondations ainsi que les grandes lignes de tout ou d’une partie d&apos;un logiciel.&lt;br&gt;
-— &lt;strong&gt;Wikipedia&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Un framework est un ensemble cohérent de composants logiciels structurels, qui sert à créer les fondations ainsi que les grandes lignes de tout ou d’une partie d&apos;un logiciel.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;— &lt;strong&gt;Wikipedia&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Il faut donc voir le framework comme une sorte de boîte à outil qui évite au développeur de &lt;em&gt;réinventer la roue&lt;/em&gt; à chaque projet. Les premières fondations de l&apos;application sont déjà posées et les fonctionnalités de base (routeur, gestion du cache, gestion des droits des utilisateurs, ...) sont déjà développées, testées et approuvées !&lt;br&gt;
 Je ne vais pas m&apos;étendre plus sur la définition d&apos;un framework. J&apos;imagine que si vous êtes ici, c&apos;est que vous savez ce que c&apos;est ;-)&lt;/p&gt;
 &lt;h2&gt;Pourquoi vous devez utiliser un framework&lt;/h2&gt;
 &lt;h3&gt;Capitalisation&lt;/h3&gt;
 &lt;p&gt;Si vous développez, vous le savez forcément : copier/coller du code, c&apos;est mal !
-L&apos;objectif d&apos;un framework est clair : se concentrer sur la partie métier du projet, et s&apos;assurer que chaque fonctionnalité codée soit unique. Si, à chaque fois que vous commencez un projet, vous redéveloppez la même fonctionnalité d&apos;authentification, c&apos;est qu&apos;il y a un problème. Vous ne capitalisez rien et vous perdez votre temps.  &lt;/p&gt;
+L&apos;objectif d&apos;un framework est clair : se concentrer sur la partie métier du projet, et s&apos;assurer que chaque fonctionnalité codée soit unique. Si, à chaque fois que vous commencez un projet, vous redéveloppez la même fonctionnalité d&apos;authentification, c&apos;est qu&apos;il y a un problème. Vous ne capitalisez rien et vous perdez votre temps.&lt;/p&gt;
 &lt;h3&gt;Vélocité&lt;/h3&gt;
 &lt;p&gt;L&apos;avantage d&apos;un framework, c&apos;est qu&apos;il va vous permettre de réaliser du bon code répondant à une architecture bien définie. Le code est ainsi plus maintenable et évolutif. Par exemple, avec le framework Symfony2, tous les formulaires se trouvent dans un répertoire appelé Form. Si on a besoin de modifier un formulaire, on devine l&apos;emplacement intuitivement.&lt;/p&gt;
 &lt;p&gt;&lt;span
@@ -2201,7 +2214,7 @@ L&apos;objectif d&apos;un framework est clair : se concentrer sur la partie mét
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 79.75460122699387%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABsklEQVQ4y51Uy07DMBDs//8OBw5IFQfoARBICHGAAgUaGpomTfzM04O9yFHiBpBYaWU7jiezs+PMMAhjjJ/QvM/O9HvDMXzmYhaCdV0Hg+mYAhjOJwH3SQoWb4ml3GxtJiiWb2iUHr3XtC1UqQ8ZDktzwTiH3OeosgLx+TVej+aIThb4XNyMDgslfwd0pRIgY6iahuZtWYGvInycXiC5ukNTlv3BjOVoLcsfNfRROMCqGj2rmUCZ5jDt90cLzohh2BwC3GxipGkGNzaWGef2sGcy0NvYPWE1zfYZVF1NghHg8ukZLy8rPDwuCUgIaYHbXnipFZjg4Foit8yKKEZX1T9a6LDkgiHebbFONvjYxaRV0zaUPtQ27csPLTQj3w2aoqTC7cM9jhdzzK/OsLi9RFmVvUd9s/RuP2LXMwzN6jRMshS5YLbEgsQndmZcWs0lOiuJCUAPjO0AvR3+E4eAQtiup5BSErgQghrlRm5N/70OU9Kes9vkXVZKQWvdp1s7B3S2EX7tR2WvpLYprfZ1XY+7HHrKhzu8jiK8va//lGM29ScJO+dYOxlWq1cy/9R7Pr8AdyDlO5e93yEAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 79.75460122699387%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABtElEQVQ4y51UTW+cMBDd//93cugh0qqHZg9NlEpR1cNm02ySJRBYs+BPwIZXeRpbwJJG6kijGRv7MfPmwQojG4YhJJRH74f4bBzne95Wc7C+7zFg2ZYAxvki4Klg4FlOVao0h0oL1LtnWG0m56xz0I05r3DcmjcuBNSpQlvWyK5u8XSxRnK5wdvmx+Sy1OrfgL5VAuQcrbWUu6aF2Cd4/fodxc1P2KaJF0tewTn3MYfBag/YtpO9jks0rMLg/r60FpwqnA+HANM0A2MlfLTWQgiJJlQy4nuwFjLNUZ5K6K5dBCPA3cNvPD7usb3fEZCUCta6SLwyGlwKCKNQCY46ydC33YcSOm+55siOOQ5FitdjRlxZZ8mD6ZzF9ucSWpHuRkPRSuNu+wtfNmusb75hc3eNpm2iRsOwzPE0qS5WOBer57AoGSrJUYmayKfqhmlrnVDonSOax6BnwvaAQQ7/Y+eAUoIxBqUUgUspaVA+CiHe13NX9MzLbfFb1lrDGBPdr70CetfHdYhaGxhtoJRG13XTKc81FcxfPiQJnl8On9KxWvqTzCfnq/Y07PdPJP6lc2EofwB3IOU7tBiWfAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -2240,12 +2253,20 @@ En plus au fil du temps, on le voit évoluer... on le considère un peu comme so
 &lt;p&gt;C&apos;est ce que l&apos;on appelle en psychologie sociale : &lt;strong&gt;la théorie de l&apos;engagement&lt;/strong&gt;. Sans rentrer dans les arcanes de cette théorie, sachez que c&apos;est exactement la même chose qui se produit lorsque vous attendez le tramway pour éviter un trajet à pieds de 10 minutes. Vous patientez 5, 6, 7, 9, puis 10 minutes votre tram. Si vous partez, vous réduisez à néant tous vos efforts (et vous prenez le risque de voir passer le tram sous votre nez). Vous ne voulez donc pas abandonner cette somme de petits efforts.&lt;/p&gt;
 &lt;p&gt;J&apos;ai donc pris une décision difficile ce jour-là en décidant de &lt;em&gt;couper le cordon&lt;/em&gt; et d&apos;arrêter le développement de mon framework. Aujourd&apos;hui, je ne regrette pas cette décision.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Communauté&lt;/strong&gt; : il y a une phrase que je me dis souvent : &quot;Si je me pose cette question, c&apos;est que quelqu&apos;un se l&apos;est déjà posé auparavant. Sinon c&apos;est que je me pose pas la bonne question&quot; (on est pas très loin de la règle 34). En utilisant un framework reconnu de tous vous trouverez rapidement une réponse à une question que vous vous posez.&lt;br&gt;
-Certains frameworks comme Symfony2 sont très modulaires. Ainsi vous pouvez réutiliser un module fait par un autre, l&apos;améliorer au passage... et pourquoi pas proposer un &lt;a href=&quot;https://help.github.com/articles/using-pull-requests/&quot;&gt;pull request&lt;/a&gt; !&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Sécurité&lt;/strong&gt; : en ce qui me concerne, je pense que la sécurité est presque un métier à part (ce n&apos;est pas pour autant qu&apos;il faut la négliger !). Le b.a.-ba de la sécurité que vous ne pouvez ignorer sont les 10 failles les plus courantes dans les applications web : l&apos;&lt;a href=&quot;https://www.owasp.org/index.php/Top_10_2013-Top_10&quot;&gt;OWASP top 10&lt;/a&gt;. Des framework comme Laravel et Symfony2 sont nativement protégé contre les failles CRSF, XSS, injection SQL... Mais ce n&apos;est pas parce qu&apos;un framework est nativement protégé que tout est joué pour autant ! Vous pouvez aussi laisser des failles dans votre code.&lt;br&gt;
-Autre élément intéressant, les constituantes de l&apos;outils auront été testé par énormément de personnes avant vous. Avec du &lt;em&gt;fait maison&lt;/em&gt;, il est plus difficile de tester la sécurité (car c&apos;est plus simple de trouver des erreurs dans le travail des autres).&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Documentation&lt;/strong&gt; : si vous utilisez un framework maison, n&apos;allez pas me faire croire que tout est documenté aux petits oignons ! Par contre avec les frameworks open source, c&apos;est tout l&apos;inverse. Il faut dire que si la documentation est mal conçue de base, peu de personnes utiliseront cet outil.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Rapidité d&apos;exécution&lt;/strong&gt; : si vous avez un recrutement à faire dans une équipe de développeurs, la montée en compétence du développeur sur le projet sera plus rapide car il connait déjà les outils. Avez un outil &lt;em&gt;home made&lt;/em&gt;, il faudra libérer une ressource d&apos;un projet pour le former et l&apos;encadrer.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Communauté&lt;/strong&gt; : il y a une phrase que je me dis souvent : &quot;Si je me pose cette question, c&apos;est que quelqu&apos;un se l&apos;est déjà posé auparavant. Sinon c&apos;est que je me pose pas la bonne question&quot; (on est pas très loin de la règle 34). En utilisant un framework reconnu de tous vous trouverez rapidement une réponse à une question que vous vous posez.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Certains frameworks comme Symfony2 sont très modulaires. Ainsi vous pouvez réutiliser un module fait par un autre, l&apos;améliorer au passage... et pourquoi pas proposer un &lt;a href=&quot;https://help.github.com/articles/using-pull-requests/&quot;&gt;pull request&lt;/a&gt; !&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Sécurité&lt;/strong&gt; : en ce qui me concerne, je pense que la sécurité est presque un métier à part (ce n&apos;est pas pour autant qu&apos;il faut la négliger !). Le b.a.-ba de la sécurité que vous ne pouvez ignorer sont les 10 failles les plus courantes dans les applications web : l&apos;&lt;a href=&quot;https://www.owasp.org/index.php/Top_10_2013-Top_10&quot;&gt;OWASP top 10&lt;/a&gt;. Des framework comme Laravel et Symfony2 sont nativement protégé contre les failles CRSF, XSS, injection SQL... Mais ce n&apos;est pas parce qu&apos;un framework est nativement protégé que tout est joué pour autant ! Vous pouvez aussi laisser des failles dans votre code.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Autre élément intéressant, les constituantes de l&apos;outils auront été testé par énormément de personnes avant vous. Avec du &lt;em&gt;fait maison&lt;/em&gt;, il est plus difficile de tester la sécurité (car c&apos;est plus simple de trouver des erreurs dans le travail des autres).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Documentation&lt;/strong&gt; : si vous utilisez un framework maison, n&apos;allez pas me faire croire que tout est documenté aux petits oignons ! Par contre avec les frameworks open source, c&apos;est tout l&apos;inverse. Il faut dire que si la documentation est mal conçue de base, peu de personnes utiliseront cet outil.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Rapidité d&apos;exécution&lt;/strong&gt; : si vous avez un recrutement à faire dans une équipe de développeurs, la montée en compétence du développeur sur le projet sera plus rapide car il connait déjà les outils. Avez un outil &lt;em&gt;home made&lt;/em&gt;, il faudra libérer une ressource d&apos;un projet pour le former et l&apos;encadrer.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Pourquoi ne pas utiliser de Framework&lt;/h2&gt;
 &lt;h3&gt;Courbe d&apos;apprentissage&lt;/h3&gt;
@@ -2274,8 +2295,8 @@ Si vous souhaitez passer sur un framework pour un projet et que les deadlines so
 &lt;h3&gt;Utiliser le bon outil&lt;/h3&gt;
 &lt;p&gt;Deuxième cas où vous pouvez vous sentir exempté d&apos;utiliser un framework : si vous êtes dans un marché de niche ou si vous gérez un très gros site (Amazon, Facebook, ...).
 Si aucun framework ne remplit vos besoins initiaux ou si vous avez un besoin assez important côté performances, n&apos;hésitez pas à créer votre propre framework.&lt;/p&gt;
-&lt;p&gt;Il en va de même pour l&apos;utilisation de Symfony2 (ou autre framework assez conséquent) pour une application minuscule qui doit se charger d&apos;envoyer des mail après soumission d&apos;un formulaire n&apos;est pas pertinent du tout.  &lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;./mouche-bazooka.gif&quot; alt=&quot;Utilisez le bon outil&quot;&gt;  &lt;/p&gt;
+&lt;p&gt;Il en va de même pour l&apos;utilisation de Symfony2 (ou autre framework assez conséquent) pour une application minuscule qui doit se charger d&apos;envoyer des mail après soumission d&apos;un formulaire n&apos;est pas pertinent du tout.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./mouche-bazooka.gif&quot; alt=&quot;Utilisez le bon outil&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Utilisez un framework plus approprié comme un &lt;strong&gt;micro framework&lt;/strong&gt; (&lt;a href=&quot;http://silex.sensiolabs.org&quot;&gt;Silex&lt;/a&gt;, &lt;a href=&quot;http://www.slimframework.com&quot;&gt;Slim&lt;/a&gt;, ...). Ils sont beaucoup plus légers et plus rapides à mettre en place (il en va de même pour la courbe d&apos;apprentissage).&lt;/p&gt;
 &lt;h3&gt;Développeur PHP ou développeur Symfony2/Laravel/... ?&lt;/h3&gt;
 &lt;p&gt;Un des dangers quand on utilise un framework, c&apos;est de brûler les étapes. &lt;strong&gt;C&apos;est bien d&apos;éviter de réinventer la roue, mais encore faut-il savoir comment elle est faite&lt;/strong&gt;.
@@ -2283,12 +2304,14 @@ De même, il n&apos;y a -à mon sens- pas beaucoup de mérite à réutiliser un 
 Si vous sentez qu&apos;il est trop tôt pour utiliser un framework, continuez l&apos;apprentissage du langage avant de griller les étapes.&lt;/p&gt;
 &lt;h2&gt;A vous de jouer !&lt;/h2&gt;
 &lt;p&gt;Je n&apos;ai pas envie de vous guider vers un framework plutôt qu&apos;un autre, pour la bonne et simple raison que chaque framework a sa spécificité, ses avantages et inconvénients. C&apos;est avant tout une question de goûts.&lt;br&gt;
-Pour ma part, j&apos;ai directement adhéré à Symfony2 et son petit frère Silex (pour les plus petits projets). Mais ce n&apos;est pas le cas de tout le monde.  &lt;/p&gt;
+Pour ma part, j&apos;ai directement adhéré à Symfony2 et son petit frère Silex (pour les plus petits projets). Mais ce n&apos;est pas le cas de tout le monde.&lt;/p&gt;
 &lt;p&gt;Néanmoins lorsque vous ferez votre benchmark, prenez en compte ces éléments :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Qualité de la documentation&lt;/strong&gt; : vous allez passer beaucoup de temps dessus au départ. Ne négligez pas pas ce point.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Fréquence de mises à jour&lt;/strong&gt; : Si vous travaillez sur un projet et que vous devez tout casser et tout réécrire tous les 2 mois pour être à jour sur la nouvelle version, vous n&apos;allez pas avancer. De même, si les mises à jour sont quasi inexistantes c&apos;est peut-être que peu de personnes l&apos;utilisent.&lt;br&gt;
-Je vous conseille de couper la poire en deux et d&apos;opter pour les version &lt;strong&gt;LTS (Long Term Support)&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fréquence de mises à jour&lt;/strong&gt; : Si vous travaillez sur un projet et que vous devez tout casser et tout réécrire tous les 2 mois pour être à jour sur la nouvelle version, vous n&apos;allez pas avancer. De même, si les mises à jour sont quasi inexistantes c&apos;est peut-être que peu de personnes l&apos;utilisent.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Je vous conseille de couper la poire en deux et d&apos;opter pour les version &lt;strong&gt;LTS (Long Term Support)&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Facilité à produire des API&lt;/strong&gt; : C&apos;est de plus en plus demandées dans les projets et ce n&apos;est pas prêt de s&apos;arrêter.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Popularité du framework&lt;/strong&gt; : il ne faut pas non plus que vous soyez tout seul au moindre problème. Testez la popularité de l&apos;outil sur la toile (avec des sites comme &lt;a href=&quot;http://stackoverflow.com/&quot;&gt;Stack Overflow&lt;/a&gt;) ET sur le marché de l&apos;emploi du lieu où vous travaillez (via des sites d&apos;emploi).&lt;/li&gt;
 &lt;/ul&gt;
@@ -2297,13 +2320,13 @@ Je vous conseille de couper la poire en deux et d&apos;opter pour les version &l
         </content:encoded></item><item><title><![CDATA[Non, votre API n'est pas REST !]]></title><description><![CDATA[Etat des lieux REST (REpresentational State Transfer) est un style d'architecture créé par Roy T. Fielding en 2000 pour sa thèse de doctorat. Roy Fielding est aussi l'un des 8 fondateurs de la fondation Apache, il a travaillé sur le Apache HTTP…]]></description><link>https://www.maxpou.fr/rest-rmm-model</link><guid isPermaLink="false">https://www.maxpou.fr/rest-rmm-model</guid><pubDate>Wed, 15 Jul 2015 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Etat des lieux&lt;/h2&gt;
 &lt;p&gt;REST (&lt;strong&gt;RE&lt;/strong&gt;presentational &lt;strong&gt;S&lt;/strong&gt;tate &lt;strong&gt;T&lt;/strong&gt;ransfer) est un style d&apos;architecture créé par Roy T. Fielding en 2000 pour sa thèse de doctorat. Roy Fielding est aussi l&apos;un des 8 fondateurs de la fondation Apache, il a travaillé sur le Apache HTTP Server (plus de 55% de parts de marché &lt;a href=&quot;http://w3techs.com&quot;&gt;selon W3Techs&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;Contrairement à ce que l&apos;on peut lire sur certains sites, REST ne repose pas sur le protocole HTTP... bien que ce dernier soit le meilleur exemple.&lt;/p&gt;
-&lt;p&gt;Aujourd&apos;hui, on voit des API REST un peu partout :  &lt;/p&gt;
+&lt;p&gt;Aujourd&apos;hui, on voit des API REST un peu partout :&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;(Graphique non disponible)&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Par contre, en prenant des valeurs relatives, la différence est encore plus marquée :&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;(Graphique non disponible)&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Il faut dire aussi que son principal concurrent : SOAP n&apos;est pas aussi simple d&apos;approche et peu paraître contraignant (XML, WSDL, ...). Ceci étant, il ne faut pas voir REST comme un marteau doré qui résout tous les problèmes. SOAP a aussi ses avantages.&lt;/p&gt;
-&lt;h2&gt;Différentes étapes du RMM (Richardson Maturity Model)&lt;/h2&gt;
-&lt;p&gt;&lt;em&gt;Les images de cette partie proviennent du &lt;a href=&quot;http://martinfowler.com/articles/richardsonMaturityModel.html&quot;&gt;Blog de Martin Fowler&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;##Différentes étapes du RMM (Richardson Maturity Model)
+&lt;em&gt;Les images de cette partie proviennent du &lt;a href=&quot;http://martinfowler.com/articles/richardsonMaturityModel.html&quot;&gt;Blog de Martin Fowler&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;En se basant sur le travail de Roy Fieldling, &lt;a href=&quot;http://www.crummy.com/self/&quot;&gt;Leonard Richardson&lt;/a&gt; a établi un modèle de maturité des services web REST appelé Richardsson Maturity Model (RMM pour les intimes). Ces 4 niveaux permettent d’évaluer une API par rapport aux contraintes REST. Le niveau 3 est une précondition pour REST.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -2318,7 +2341,7 @@ Je vous conseille de couper la poire en deux et d&apos;opter pour les version &l
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 58.89570552147239%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsTAAALEwEAmpwYAAACG0lEQVQoz4WQ/2sSYRzH798KzMg/QUwjUEnL/WRT1w/LL7NBRD9usGhfZBRTp65CRHTMRRem1kEMVt5588tZ8+489abIed/8cj26ijGQ3rx4+Dx8Pm8+7+eBlDma/JGCYSiGYQRBIMhXBEH6/R55XqlX0U6bgpT/iWFaJEW3OyxFN8kGKYpCu0UzTarXZaF5a4fSYChxQ5mbTGRFkZWJND2VEegOZZHrd0Bx3Twej4FTlqUCHDtOBj6kdtPxTUAmGTiMb+bhGM9z2Gn2Cxxh6Prc2L1um23TbIduNRsthgQwzcYF2xIEHskfpeOBXz8r0L+co9E0UhZO7e2uR4Ov3kYDsfD2QXg7lQgB0olQMr53fPgOBCuhJ7HQhiSJ0NV3gjOfzYRev4yGd2L7O5HgFgB4ZgQT798cpQ7A1Mm3wtbGcxABuvR0L1i0eIqXimc4Vinj5XIJL6F4CTvDUQz9cQla/A66YLiQg188WxYEAQI/BO6f4IzjkdXrXvQ8WfT7ltzLdptV/9ByZwYo9Dar4b5Ju+S0DUcj+GPmsXOB53kQe7p5MOCq1TJRqxJEtVar1Os1impcgyTPaZoEw+lU4oHl3tRssy1otdq7BoPJbLZYrEaj0WQy6/V6tVqt0Whu/xWoVSqVTqcDr4xGwrdu3uA4DlpbW/f6fP6ZVlefAq2s+D0et8PhcF6Ry+Wy2+2gC/4ol/vs9XpEUfwNgq82AG5YTLwAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 58.89570552147239%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsTAAALEwEAmpwYAAACKElEQVQoz4WP/WsScRzH798KzMg/QUwjmCNt7iebbv2wfNhuENGPGyzSTUbhw9RViIiOuehiqSXEYOWd53PN8zwfpozb3flw30/oKsZg9OLF57c37/cHgxtAfwCKIimKqlar2ezXbDZ7ft5nTku1MtlpNzD4HxzXYhpsu9NtsE2mzkiS2G6xXLPR73Wxm2pHg4vRgB8NeYSGAENAg8mFMQCMhhJ/3gGA62FZlhFCw+EgQ4QPY54P8Z1ExJWIuJIxz37ElSbCgsBTJ0dfiCDH1m6c3e+1u22222FbzXqLY1ocwzXrZ92WKArZ9EEi4vn1s4T92zkeTyYdEXHvzkbI9+ptyBMObO0FtuJRfzzqT0T9sYj3cP+djFCePA77NwcDCbv6JwCkj5L+1y9Dge3w7nbQ5w763LGId6ov+v7NQXwPITj+lnFvPhdFAbvM9M66ZO6EzucKNFUq0sVins6TdJ4q0CRF/riUzH0v0BQAZFLEi2fLoihisiwDwCciaXlsdNgW7E8XVp1LtmWzyaidM9ybqp0zaE1G3UO9eslqGo3HxMfkE+u8IAgYwKT54oIvl4vVSrlaLVcqpVqt0mjUr8kwpyzLAEAiHn1keDAJm0zzarX6vk6nn501GIwzMzN6/axWq1UqlSqV6u5fVCqVQqHQaDQIQSgYuHP7Fs/z2Pr6hsPpXJ2ytobjOL6ysmq32ywWi/UKi4uLZrMZx3GEUCr12eGwS5L0G4KvNgAOvHU6AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -2332,7 +2355,7 @@ Je vous conseille de couper la poire en deux et d&apos;opter pour les version &l
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;h3&gt;Niveau 0 - Bon vieux XML&lt;/h3&gt;
+&lt;p&gt;###Niveau 0 - Bon vieux XML&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 522px; &quot;
@@ -2346,7 +2369,7 @@ Je vous conseille de couper la poire en deux et d&apos;opter pour les version &l
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 34.355828220858896%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAIAAACHqfpvAAAACXBIWXMAAAsTAAALEwEAmpwYAAABl0lEQVQY021QWysEYRieH+AfuPEHuHLhcCvbXhDFlgjFqlVEO2Rbk8PK2nXhcOHCBYpCKyUpSdbuWIucw64SyWnHmjEzO9/3zewcPt/ee3vqred9n573fShm4sHrv2/vjkdjnxhjXTctCxOYJmmYk/jn9Nsbz119JT5EbvVhu4f1ucNj3r1gBimUy/PY7U3Y6qPBmStJgtw34DjwlVJ4HsmyJkoqQFkVGYvx0HPqlbmYbjilmyLu6vW22/cERfte6JFkTXNsyH+OLRNCHQBdEMGvrCgqSsu/P0BAukquQAj1X0w674acp0zNhvPo6Yxq6bpx9l7a6sL04LGcUQUBEfAC/E4DSSa2mgJV3TTIRxmodB2ONEbczfu0fbklnIxRdkekrpUtqdjpY1iygVQDqXpWMyUFyhCKAKTEn7TCZ01CZl1bntqNDkeos3KugU2eUAVFa4Vlm3n5C6OBGBEbhoX/q1x6GHeuDBQHbOXBqtJhe+L1kfIFDobHD/qZ3dv7DzLOhfyv2Mrxh9esf31qMjQ7v72kadofVVRKjzTZfi4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 34.355828220858896%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAIAAACHqfpvAAAACXBIWXMAAAsTAAALEwEAmpwYAAABmUlEQVQY022QSUsbcRxA5wP4DXrxC+ipB5drMeSgpKCCWLSgESIoLRlFiYNLpDHx4HLw4EEFBZWEQpFCKWKMY9xwR00EsYhaM8YZZybzX2b7/0TPvuODd3mcMHIRipy3dm5vpP8DgG27jAFj4LoMGEiafJ2/vZWlo4fMvSotXqx8E8PB5HDob6xADC7Qe9kZynjqNmITR5qGpUckSeghZ8gy0XVT1SgiFiXO7Hb8OncjHIw37PJfUsGa5ZbTuwzHh//xg1lfU7o/sg/MxdhGyFZU9KwbBiV5/fkJKcSmwIAQ0n0w6j/r9+8KvoR/82qPa+448X8/9NQm+b4tvUAVhSgKkRX8mEeaThExDUxt1wGAAjY61gcbU8GmVd4735zMpjlvfar2q1j26XeXIAIAoQ6htmW6moF1jFWEcupT3pAt17ZMK/Cr93OirT7eXjXVIGZ3uOLSpZKKn0UfZoaiaQBwHAbv8XoPoH2h52PUUxmrLh/wZm4uuXB0beDHWrfw5/T8HuBt8rsxe/Xrx2JkeWw0Pjm9Mmea5gtVVEqPdwjQtwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -2362,7 +2385,7 @@ Je vous conseille de couper la poire en deux et d&apos;opter pour les version &l
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;On est ici au plus bas niveau, le protocole est uniquement utilisé à des fins de transport.
 Les bons exemples de ce niveau zéro sont les protocoles SOAP et XML-RPC (l’ancêtre de SOAP). Ces derniers utilisent HTTP uniquement à des fins de transport du message. En tentant d’accéder à un service web auquel l’utilisateur n’a pas le droit, la réponse ne sera pas accompagnée d’un code d’erreur 403 (Forbidden).&lt;/p&gt;
-&lt;p&gt;Tout circule via un seul et unique point d&apos;entrée.  &lt;/p&gt;
+&lt;p&gt;Tout circule via un seul et unique point d&apos;entrée.&lt;/p&gt;
 &lt;p&gt;Pour illustration, voici ce que pourrait donner un service de livraison de pizzas.
 Vous noterez que les informations échangées sont sous la forme XML. Cependant, le format n’est pas figé, il peut aussi se trouver sous la forme JSON, YAML, ... et même des formats moins communs comme du PDF ou images.&lt;/p&gt;
 &lt;p&gt;Première étape, je souhaite récupérer la carte du restaurant de Nantes :&lt;/p&gt;
@@ -2410,7 +2433,7 @@ Vous noterez que les informations échangées sont sous la forme XML. Cependant,
     &amp;#x3C;message contenu=&quot;Le restaurant ferme à 22h30&quot; /&gt;
 &amp;#x3C;/reservationError&gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;Niveau 1 - Ressources&lt;/h3&gt;
+&lt;p&gt;###Niveau 1 - Ressources&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 522px; &quot;
@@ -2474,7 +2497,7 @@ Mais rien ne vous empêche de ne pas en mettre :
 &lt;a href=&quot;http://example.org/article/1&quot;&gt;http://example.org/article/1&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Essayez cependant de garder une certaine cohérence dans l&apos;ensemble de votre application.&lt;/p&gt;
 &lt;p&gt;Comme expliqué plus haut, il y a une URI par ressource.&lt;br&gt;
-Donc, si vous souhaitez fournir votre ressource sur différents formats, vous ne &lt;strong&gt;devez pas&lt;/strong&gt; utiliser des URI de la sorte : /pizzas/id.{format}  &lt;/p&gt;
+Donc, si vous souhaitez fournir votre ressource sur différents formats, vous ne &lt;strong&gt;devez pas&lt;/strong&gt; utiliser des URI de la sorte : /pizzas/id.{format}&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;/pizzas/123.json&lt;/li&gt;
 &lt;li&gt;/pizzas/123.xml&lt;/li&gt;
@@ -2482,7 +2505,7 @@ Donc, si vous souhaitez fournir votre ressource sur différents formats, vous ne
 &lt;/ul&gt;
 &lt;p&gt;Qui dit 3 URI différentes, dit 3 ressources différentes.
 A la place, utilisez la &lt;a href=&quot;https://fr.wikipedia.org/wiki/N%C3%A9gociation_de_contenu&quot;&gt;spécification HTTP : négociation de contenu&lt;/a&gt;.&lt;/p&gt;
-&lt;h3&gt;Niveau 2 - Verbes HTTP&lt;/h3&gt;
+&lt;p&gt;###Niveau 2 - Verbes HTTP&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 522px; &quot;
@@ -2512,11 +2535,13 @@ A la place, utilisez la &lt;a href=&quot;https://fr.wikipedia.org/wiki/N%C3%A9go
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;La 3e étape inclut la notion d&apos;action et d&apos;état. D&apos;un point de vue HTTP, cela se matérialise par l&apos;introduction des :&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;verbes HTTP tels que GET, POST, PUT, DELETE ... pour exprimer l&apos;action à réaliser sur la ressource.
-Ces 4 méthodes représentent le modèle CRUD (Obtention, Création, Modification et suppression).&lt;/li&gt;
-&lt;li&gt;codes HTTP (200, 404, ...) pour indiquer l&apos;état de la ressource.
-Ces codes sont régis par la &lt;a href=&quot;http://tools.ietf.org/html/rfc7231&quot;&gt;RFC 7231&lt;/a&gt;. Vous trouverez aussi la liste sur la &lt;a href=&quot;https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP&quot;&gt;page Wikipédia&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;verbes HTTP tels que GET, POST, PUT, DELETE ... pour exprimer l&apos;action à réaliser sur la ressource.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Ces 4 méthodes représentent le modèle CRUD (Obtention, Création, Modification et suppression).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;codes HTTP (200, 404, ...) pour indiquer l&apos;état de la ressource.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ces codes sont régis par la &lt;a href=&quot;http://tools.ietf.org/html/rfc7231&quot;&gt;RFC 7231&lt;/a&gt;. Vous trouverez aussi la liste sur la &lt;a href=&quot;https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP&quot;&gt;page Wikipédia&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Toujours en reprenant le même exemple, pour demander la carte voici ce que nous obtiendrons :&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-xml&quot;&gt;GET /pizzas HTTP/1.1
 [various other headers]
@@ -2554,6 +2579,7 @@ Ces codes sont régis par la &lt;a href=&quot;http://tools.ietf.org/html/rfc7231
         &amp;#x3C;pizza id=&quot;calzone&quot; /&gt;
     &amp;#x3C;/commande&gt;
 &amp;#x3C;/livraison&gt;
+
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Vous noterez le code (201 - Created) indiquant que le traitement a été effectué avec succès et qu&apos;une ressource a été créée.&lt;br&gt;
 En cas d&apos;échec, une réponse de ce type sera renvoyée :&lt;/p&gt;
@@ -2582,7 +2608,7 @@ En cas d&apos;échec, une réponse de ce type sera renvoyée :&lt;/p&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 33.12883435582822%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABw0lEQVQoz52PzU5TQRiGJyngT+KOmFBRMURaLQlBsRgjSQMRIrh2oYI1bowoF+HCwEpZeAHupFRD2KDW6F5FMWJMpAX6P9Oenx5sT6vUPo413oCTPHkz32SeeUfcjbnc0cy8crn1wmU6VmX6pcuNJYOr0SLXoopwVDL1tMilx0lG5t8Sevie0IN3jD5a4/KC5PqSxeSTFDfnIgj/1Cwnw3MEwrP4J+9z/Mo9Bm/Ps7hmshL/wfMvNm8+KWKfTZ6tO0RWJQurSiNZ/Fhg+WuZlY0qy+s2kdcfEC1dg4jDA4iOPkS7D3Ggi/bAeRzb4H+WONg/xj7fEOJoEM8xLff24z1zEWnYGEWDxEYclZckvsVJbiVJJ1Nsb26xGU+Q2k6RS2eQecXP3Tq79TrC0zNM64kLtPaEdNNT+oVeOk6PogyLX9UqrlLUDIPv+TxlKXVKynrW3Ous6FnVsqhrWaPRQLT5hmnzj+DpHqKl+xziyFkOBSdQRRNXCwumiVUqYe/sNNMqOdiOg2nbTYr6/A+1Wu2vcG/vOHsCY032900gOgfwBscp6Ia2vpDWX8rmcmQyWXI6lZJkszlMLXFdl0ql0uRfw9+gVau7cI7pMgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 33.12883435582822%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABxklEQVQoz53OXUuTcRzG8T9M7QE6E8GVZUhuNUEs2yIShpKSdtxBpS06Ca1eRAehR+VBL6CzNleIJ1aLOq9WRkaQm7qne///dj9sut33yrt9g0lvoB98uLhOLn7ifsLmXsLmwVubu69t5hIOc29sbi/r3IiXuRlXROKSmRdlrj7LMLb4gfCTT4Qff2T86RrXopJbyybTz7PcWYgh/DPznIksEIjM459+xKnrDwnNLrK0ZrCa+sWr7xbvvyoS3wxerleJJSXRpCKalCx9KbHyo8bqhsPKukXs3WdEW28I0TOM6B5EdPoQR3rpDFyiaun8z4muoQkO+UYQJ4J4ToYQ3iG8568gdQu9rJPeSKGKkvTPFJmtDLlMlu3NLTZTabLbWbRcHllU/N5z2XNdhKd/lPbTl2nvDyN6ziK6Bug+N47STf44DrZSNHSd3WKRmpTsFiU1pfa7UtSlxDFNXNel2WwiOnyjdPjH8PSN0NZ3EXH8AkeDU6iyge04lAwDs1LB2tlppVmpYlWrGJbVUjaMlkajsT94cGCSA4GJlsODU4hjw3iDk5R0E8uyyOXyFDSNfL6ApmkoJSkUNAzDwLZt6vV6y78P/wKgVau7w/WD4QAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -2599,7 +2625,7 @@ En cas d&apos;échec, une réponse de ce type sera renvoyée :&lt;/p&gt;
 &lt;em&gt;&lt;a href=&quot;https://dev.twitter.com/rest/reference/post/statuses/destroy/%3Aid&quot;&gt;Source&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Twitter est un mauvais élève. On ne supprime pas les données avec un POST mais bien avec un DELETE.&lt;br&gt;
 Il en va de même pour ceux qui confondent PATCH et GET. PATCH sert à envoyer un différentiel (en bas de l&apos;article se trouve un lien qui détaille un peu plus l&apos;utilisation de PATCH).&lt;/p&gt;
-&lt;h3&gt;Niveau 3 - Contrôle hypermedia (HATEOAS)&lt;/h3&gt;
+&lt;p&gt;###Niveau 3 - Contrôle hypermedia (HATEOAS)&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 546px; &quot;
@@ -2613,7 +2639,7 @@ Il en va de même pour ceux qui confondent PATCH et GET. PATCH sert à envoyer u
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 46.62576687116564%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC1klEQVQozy2RW0yScQDFjyiCXDQBkzTUMoNBtSzC7IK6/Jggmh9gOhBBRUzTgsouTGYXy7yUpXmjq1lZw1yUbkWXrZu6NnVu5VNr66XHXtv30j/aOtt5PL+dswN70wdvnXeRVDV9JqW2t78U6kAWEIqVJgcFyZwQXyoI8WR4zZWtCcYp8JOtEIf4hgGHz+DXiS2jTmnlzOFf1pceUj7VSIw3HR60tC0GTnV+J82+r0yF69Mfte5OMeT1In5BexZ0J1XI98lhOK6E7kSSBt9ipJsDAkGmWNC8fBbm4MGc2nkfqV/wM1VvjhH6gSsAb/vyZFvPD3LYv8JUumcJZZ6gtufNIXnAnoBRvTTiJAwVp2KgJBnXjAlguCCEoDp8FOVTTZR7qZ00fjnHVL9rJaYJ9yTqPHPTzb4VUuddYkyO90Srf2jQWZ9C7hhho8u0Ct0mCXroDPSWpaGXFqKhPmpktotV8vwQzBPuIueHk6Rm9jRjC3vJ/nu106Crw6FK9zwxOz8ylClM1Hm3i3ZRIezfusTiXbFB2GeH0NuC6DNWcC/YIu0A7Eb0zMpVFA5bSw+EDpGK5y1MZD7RD9tC0BqejBfSr0h+yYvf6oIpsnHbdW1mdgCUZZKF/0pz9kTx7MdZCm9b9D9g7q0a3fohWrntvNFovOUgpWM1vw0BOym4RI9Drr7RrcqdJHJNkMg23yXxso49SHnI46Rel7BTBiVs8agoCdNxyph5jkp5n2tYTgXVYS03dtKKXNfejAiE7LtsIfkXy0hOK9UNkexEjmRdx6PE9I5HvBR/NwQVQsQFuYk7/ZIMypfEtxxJw2nbBra/WhHraRCyHxfGRUpHoTE7mlWjSVA17Bna0qR9pnLtfiq3ZO+EVDGG9ZoFpO/4CpE8DMR7wFo7FMncATadQ+yPDTEYLBZjUC9Cv1EUOWg1Z8AiYffREvSbROjUC9Gq5eOoJqagOR9/Ae3PBDpNihK7AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 46.62576687116564%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC0UlEQVQozy3M6U+SARwH8K8oihyagEkaamXBpFoWYXagLB8WiMcDmA5CNBXzKqjsYDI7LEvtNCkos9sa5qJsKzq2LnNt5dzKV62tN73srXve9Gttff6AD1xt73yNvi+0o+0TVThf/1Zrw8uBaKIiIyLOSIqKFOKoUImXAuWiSLIav/hqWVRkHnL7zQGjzB6qV9Q+3f3b8dxL1ROtZLnm9qKz+0v4UN8P6vB/42qaPvzRGkfLoGqWigw9y2E8qEGJXwXz/nwYD6Tr8D1BsSosFi+TiTtmj8IW2VW4c9pPzZ8D3I5X+4i92xSGr2d2vHvgJ+0OzHG1nilibGPMuuKPyBhypSJkUiBkSkewLAtD5Rm4YEkFJwARoS62F9UTbYxnpodavx7j6t50kXXMM45G78fJDv8cNfpmOKv7LelN98xGxyOo3Ff4OG1dgH6rHANsLgarsjHIStDSHHdl6jSv/Ek7bGOebfXvDlLD1GHOGfNR5a2dk2DrYtFazzTZ6t9zjDVG2uLr2zYyUVSumeEJzzohOeeCxNeJ+CMOCE44QQRgE+Kfzp1H6WVHxfZoO9U86eRskV1kuuyMQm9+eLuUfUEl5c/mtYYJWrH2kn5ZQRiMfZyH/7LrB+KErv08ta87/l9YNNJgXBpk89cet1gsI26quNkwbw67yHCKvQ2V9mq/pmicVLoIKVfdoBRl72Zk3hMmZV2S8zOH5XxZSJqOyeT8hOkkTf4dgXk2C0yvo9rSx6qLmrbkGk6xtPWMnUpOVlFhF9MPqfJAoXxJ7/20nN77wsxAP8Q1EiRHBGkbAvJcxp8usu/JxmFnHj9Qp070tkj4D0qTAcShtSCe16BL1bRsDq5u0z/WNG16pLIXbIBCfRNLdZ+Rs/4bpKoYkOIFb3EQwCiw8hgSf+YlYLhMhmGTFBctUgywC5OG7HL+OVaOi1Yp+kwSdOlF2KtLMHSU4C/tzwQ6wD9oXQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -2651,7 +2677,7 @@ Dans une API REST, c&apos;est pareil !&lt;/p&gt;
     &amp;#x3C;/links&gt;
 &amp;#x3C;/carteRestaurant&gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;##Conclusion&lt;/p&gt;
 &lt;p&gt;On vient de voir au travers du RMM, les différents niveaux de maturité des services web REST.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Le niveau 0 : L&apos;état basique avec des XML dans tous les sens&lt;/li&gt;
@@ -2662,17 +2688,17 @@ Dans une API REST, c&apos;est pareil !&lt;/p&gt;
 &lt;p&gt;Bon alors REST/RESTful, c&apos;est quoi ? En ce qui me concerne, je pense que REST est une sorte de buzzword, un mot marketing que un mot qui fait &quot;cool&quot;. &lt;strong&gt;Si votre API n&apos;est pas de niveau 3, ne prétendez pas faire du REST car c&apos;est faux.&lt;/strong&gt;&lt;br&gt;
 Si votre API se contente de renvoyer juste des objets sérialisés au format JSON/XML/... parlez simplement d&apos;API ou d&apos; &lt;em&gt;API HTTP&lt;/em&gt; !&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;I am getting frustrated by the number of people calling any HTTP-based interface a REST API [...] Please try to adhere to them or choose some other buzzword for your API.&lt;br&gt;
-— &lt;strong&gt;&lt;a href=&quot;http://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven&quot;&gt;Roy T. Fielding - REST APIs must be hypertext-driven&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I am getting frustrated by the number of people calling any HTTP-based interface a REST API [...] Please try to adhere to them or choose some other buzzword for your API.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;— &lt;strong&gt;&lt;a href=&quot;http://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven&quot;&gt;Roy T. Fielding - REST APIs must be hypertext-driven&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Bon alors, votre API est-elle toujours REST ? ;-)&lt;/p&gt;
-&lt;h2&gt;Pour aller plus loin...&lt;/h2&gt;
+&lt;p&gt;##Pour aller plus loin...&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm&quot;&gt;Thèse de Roy T. Fielding : Architectural Styles and the Design of Network-based Software Architectures&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://williamdurand.fr/2014/02/14/please-do-not-patch-like-an-idiot/&quot;&gt;Comment bien utiliser PATCH (par William Durand)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm#sec_5_1_7&quot;&gt;Pour terminer, ma section préférée de la thèse de Roy T. Fielding : Code-On-demand (COD)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Sources&lt;/h2&gt;
+&lt;p&gt;##Sources&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.crummy.com/writing/speaking/2008-QCon/act3.html&quot;&gt;Blog de Leonard Richardson&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://martinfowler.com/articles/richardsonMaturityModel.html&quot;&gt;Blog de Martin Fowler sur le RMM&lt;/a&gt;&lt;/li&gt;
@@ -2686,7 +2712,7 @@ Avant toutes choses, il est nécessaire de comprendre comment…]]></description
 Vous avez Googlelé &quot;contourner HADOPI&quot; et vous voici arrivé ici.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Pas de panique, il existe des solutions.
 Avant toutes choses, il est nécessaire de comprendre comment tout fonctionne.&lt;/p&gt;
-&lt;h2&gt;1 - Différents méthodes de téléchargement&lt;/h2&gt;
+&lt;p&gt;##1 - Différents méthodes de téléchargement&lt;/p&gt;
 &lt;h3&gt;Mode centralisé&lt;/h3&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -2701,7 +2727,7 @@ Avant toutes choses, il est nécessaire de comprendre comment tout fonctionne.&l
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 57.668711656441715%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAA7CAAAOwgEVKEqAAAACAElEQVQoz32Tu24TURCG9wGoeAIKCmoaSujooQKJlgdAouFSREBFj5CA0ICCQDhGMSBsYmRwSBCWZQO25YtwvKwv8dpeO/Ftrx+7m11nF0v80q8zZ87MnJk5cwQCMAx9IVuW5fL/skMjGALBMEzniB+//nD2wk+iH0Yoo2nA2ZVCAU3HBZ3IRoXzl8tsZQ6YTme23kRQhkP6/R4PHj7j9LmXXLwSQ2wrzI1wpqHMbFZ3G6zcfcqpM6+4diPJaDhAURQEx2A+V6nVajZLpNNfXadypUJkPcqiNg+5XJ544iOaqtn2VYqFPJlM1rvIQrACxkFMJxPae10mqomq6XR7Q+b2Kg9GyLK8ZO+HEY76Yi6V5sDRp3ayvH73iXpDWrRhNpujadpSS4R/X8/fO4HcS2y+TXxh9XmU7W8Zmk0JURRpNES3Z2FfO0MroDDNI/rQDYtsvsRmapvxZLpUquHZ+4kI4RItjzDo9ymVq6hmOECj2Wa3Xg92LzS7gr+RWiOu36mTK86YaZAvlEgkEt7AGy4dFAsF3sc3XXnne4fb9yV+iyq6fnguNKUmXbnD49UIx0+uc+nqFlJnGHiUcAY+Wnstbq2scezEBjfvZe1+9hkM7DlUVZX9/QNSqc8kk2kePXnDeDz2MjOXvpt5+E3oyT3bJ0UslmTtRRzdfnHNHqu/5RqEq8cNoKsAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 57.668711656441715%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAA7CAAAOwgEVKEqAAAAB/klEQVQoz32TTW8SURSG5we48he4cOHajUvdudeVJm79ASZu/Fg06sq9MVHrRlOjkWKKGsFiRqmtkRBQgQATKSNfZYCBlq/5uPOYmTJ0RhLf5E3Ovfecc8957z0SAdi2tbAdx/H4f9ulHUyBZNvCPeLHrz+cvfCT6Ich+nASCPasUELhhmAR2Shz/nKJrfQBk8kUIQSSPhjQ63V58PAZp8+95OKVGGpLZ2aHKw1VBlR2a6zcfcqpM6+4diPJcNBH13Uk12E2M1AUBUUpkkp99YJK5TKR9SiL3ubIZnPEEx8xDRNFqVDI50inM/OLHCQn4BzEZDymtddhbAgM06LTHTAzLbT+EE3Tlvz9NNKRLmKpNRfuvryT4fW7T1Rr9YUM0+kM0zSXJJH+fT1/7SbyLhGCt4kvrD6Psv0tTaNRR1VVajXV0ywcC5IT2BDiiD4s2yGTK7IpbzMaT5Zatef+fiFSuEVnTuj3ehRLFQwRTlBrtNitVoPqhf6u5C/qzSHX71TJFqZMTcjliyQSifmHtz26KOTzvI9vevbO9za379f5rRpY1uG51Kg36GhtHq9GOH5ynUtXt6i3B4FHCVfgo7nX5NbKGsdObHDzXgZd79Hv60iGYbC/f4AsfyaZTPHoyRtGo9G8MrE0buJwTOhqXWRZJhZLsvYijmWamKbFX+UahKudXIKaAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -2717,8 +2743,8 @@ Avant toutes choses, il est nécessaire de comprendre comment tout fonctionne.&l
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;C&apos;est le mode de fonctionnement le plus utilisé. Quand vous avez besoin de récupérer un logiciel, des photos... C&apos;est le mode de fonctionnement d&apos;outils comme Megaupload, Rapid Share, Google Drive, ...&lt;br&gt;
 Ceci pose le problème suivant : plus le fichier est populaire, plus le serveur peinera à répondre à toutes les demandes.&lt;/p&gt;
-&lt;h3&gt;Mode décentralisé : P2P (peer-to-peer)&lt;/h3&gt;
-&lt;p&gt;&lt;span
+&lt;p&gt;###Mode décentralisé : P2P (peer-to-peer)
+&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 441px; &quot;
     &gt;
@@ -2731,7 +2757,7 @@ Ceci pose le problème suivant : plus le fichier est populaire, plus le serveur 
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 57.668711656441715%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAA7CAAAOwgEVKEqAAAACCklEQVQoz4VTu24TURDdD6DhDygo6CkoERV9OpBo+QAkGh4SCKjoERKQNEhBTmRANs/CkhEWSJgoibAjI8sEYyfEa3u9u97d+9h7D3O9XnsdXiONdPfemTNzzsxayFgcSyyaxp8tudfaeLzwYsWxmgRsf/mB00vbePbGheNGEEpDUOzAGaFe3wGPNZhUYEIh5CZHIl/4irPnG6hUfYRhBKUULGc0wmDQx737j3HyTA5LF4o4sF0wAjB5u+0OXr56TWAaAY8xZhJ0RHevgxu3V3Di1BouXSnBHQ3hOA4s0yZjHM1mE41GDZXKB3DO/kmZGsVBf4RWq4labQvV6sY0WsPSep6ksirRfaKRnlCZaEwyuJGEH8nfVZ3CzACDIECh+AJRxDKA82KGrhsS3VjN3k2hNC71GaDgHJ8+bxJdMU1IEne/t5Fbz9NQstPVf3EkGqagkTK05pTHTGHoBbDt3iGg+dmoodScjbVITU66kEYroselwv9NL+hupR+dPReXb33D1g7DkPbQDMC4kDEixkg7PfO00MdqD9fvdtBqc0iZLLjV7XTRs3/i4XIeR48/xbmLFez3PAS0wBHF1BtN5NbWQQ3Do+l6oaA3szb7uHZzFUeOFXD1zgbt4ADDIe0hp2F4no9y+R1Kpfd48Og5fH+c+R3jyQYcpmjbfcopo1gsYfXJW0ghIITEL667isfv1ss4AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 57.668711656441715%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAA7CAAAOwgEVKEqAAAAB/klEQVQoz4WTy2sTURTG5w9w43/gwoV7Fy7FlfvuFNz6BwhufICirtyL4GsjVNISlcbnIhAxKBhLW0xLJNQak9YmTSYz6czc908m79TXgQN37j3fd+733TMeU2GMZjYcf47BvnNpmpkTzxjbL1j78oOTc2s8exPgBwnKOpSBtt9lfX0DaRxCW4SyxDLFaLJLXzl9tkKx1COOE6y1eH63S7u9x527jzl+KsPcuRy7rQBhHCluq1bn5avXCO2IpGFfaLSDxnadazcfcezEAhcu5Qm6HXzfx0uvKYSkWq1SqZQpFj8gpfinZG1hd6/L5maVcnmVUml5WO3wnJuA7LRLzg09cn0pfY+tI0g0vUT/7uqQZkwYRRFLuRckiZginDRL5QaxRhs7Pk8bjepGOSZUUvLp8wpSqiFgANz6XiOzmEWa6dd1f0kGHo5IE5vKmkjeF5ZOGNFqNQ8QTdapG9ZO1Hiz0nT/Fjr1KtZIbfl/uBnfvdFHfTvg4o1vrG4IOkHSf4A0lTYkQqCNG+eo0cdSk6u362zWJFoPBtxr1Bs0Wz+5/zDL4aNPOXO+yE4zJFKWxMB6pUpmYZFYQ5howlgRqXRsdrhyfZ5DR5a4fGsZ32/T6fh4UkrCsEeh8I58/j33Hjyn19uf+h1NfwIOSmy19igUCuRyeeafvEUrhVKaX667isfx7/e+AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -2747,8 +2773,8 @@ Ceci pose le problème suivant : plus le fichier est populaire, plus le serveur 
     &lt;/span&gt;
 Comme son nom l&apos;indique, tous les ordinateurs sont égaux avec ce mode de fonctionnement. Un ordinateur peut aussi bien partager un fichier qu&apos;en télécharger un autre.
 Nota: Pour des soucis de simplification, j&apos;ai ôté le serveur du schéma. Mais il y a souvent un serveur&lt;/p&gt;
-&lt;h2&gt;2 - Fonctionnement d&apos;HADOPI&lt;/h2&gt;
-&lt;p&gt;Malheureusement, le P2P est, de par sa nature, assez bavard. Quand on regarde les clients qui partagent un torrent, on voit beaucoup d&apos;informations sur eux... notamment l&apos;adresse IP.&lt;br&gt;
+&lt;p&gt;##2 - Fonctionnement d&apos;HADOPI
+Malheureusement, le P2P est, de par sa nature, assez bavard. Quand on regarde les clients qui partagent un torrent, on voit beaucoup d&apos;informations sur eux... notamment l&apos;adresse IP.&lt;br&gt;
 En guise d&apos;exemple, voici le contenu de l&apos;onglet Client du logiciel µTorrent :
 &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -2763,7 +2789,7 @@ En guise d&apos;exemple, voici le contenu de l&apos;onglet Client du logiciel µ
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 52.14723926380368%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAA7CAAAOwgEVKEqAAAACKElEQVQoz02SzXISQRSF5yUsX0J3PoXP4NqVVdlZlqWvYGWRdSwXurCSmGRCrMQkQEL4kxAYpmeGv4HADKAYJiEg0MN4vN1DUSy66nbfe09/93Qr844Jr3IFr57B6/d7ePQ0gf19hqmj49ZmmLgVnByq0NLnMvbo7KFl4ChyjMdPvmPtnYZ+OYdhPY+5a0LxXQPTVgk9I4sTdRebmypikVOgb4E7DEHHwNAuYNzUZDx3GUYtE+nTCHa+HuDTxwM82NeYkIbQUkSToBQb3NYw/1OnuERiBjidify/rinXpM3gNRiGNwzoWcBvC0FXp0sMuUStJJw5YUGrlEUq+gP4VZZnS0ISGJDQfZOmIdH5omfWZuHFi9olYUhh0ZQ56Om4jGWBoO+Rh5E9sEyciCrLZpmnybhYCzG+KihuE5TTDjW1dUlwJ6koRxS+u0KyEJhVc+D0GHwlpwRd4QP50TMxIgHPNonKwuCGPHMt+OQd+lWyoSJpBJVP8SQbw7RCNRoJ0i8J6CygnNJjKbhakgoL+LAew7PnDJmkjcC8BNcuASOFaiqGRjYuY64l4Jez+Bs9xDR6jvH2N4yuL8hnDfe1PJSunkS7cIEGrY2Nz3jxchtbX86IWMfELgI0Rjl9htrPuIx5swhOzcNjFd1Xa+i/eQuvlIRDOm4xAUU+eUf8RZ080DB2CrirXcmvxDuh0eIx5Mhu6KVPlowzUQzUHQx2t8Creaqpysf8Dxe2yHCUfD3BAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 52.14723926380368%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAA7CAAAOwgEVKEqAAAACKUlEQVQoz02Sy3ISQRSGeQnLl9CdT+EzuHZlVXaWZekrWC6yjuVCF1YSkxBiGZMAuXAzIWSYnhmGO8wMQzCQkCDQgJ81TaRcnKq/u8/5++tzOjT1THr2Gb1ympdvN3nw+JitLcHI0bmqCIauzd5OGC11qHSvIrhtGHyP7PLw0TeW3mh0Cqf0y1mmrklo4hqMGnl8I8NeeIOVlTCxyD50LKQjmHkG/UqOQU1TeuoK7homqf0I61+2+fhhm9vKOcNGnsArFBQFlMGCqxLTX2Umbh7pGEjXUKZ/WqaKYVPQqwr6dQG+BZcWs5bO1DVUBLmKcOzMExr5DMnoD2gX1N6CsC7oVgU3NYNRU6ji4HzcFPOL73MXhHMKi451ip6KK60SAnrfZi+yiUjH4dJeFKtzz0QGcW8m/zcMbgsoR56NbOqK4FpRCcaOMS/4Z3RvMC6eIsvZRWvUk2etoA8W+CZ3VUGvYjL1Lbp1k6FrMWmZ0ClC21Y0AdWkbTPMxBjZJkMti7TPmLVtZp5JyBdJXC3BxMvx7n2MJ08F6USFmXmC1E7ASFJMxqhm4kpL7ZhJIcPv6A6j6CGDta/cnR/Rr2vclLKEWnqCZu6Iau6I5eVPPHu+xurnA/B1hpULcASF1AGln3GlZe0CWdfo74ZpvVii8+o1vXwCR0/gXhwTUiP3gr+oIx2NgZPjunSmvpL05o0OhqGe7M57OfEtBuko3fA63Y1VZDELl0U1zL8XtshwVCBQ/QAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -2794,7 +2820,7 @@ En guise d&apos;exemple, voici le contenu de l&apos;onglet Client du logiciel µ
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 25.153374233128833%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAA7CAAAOwgEVKEqAAAABF0lEQVQY0z1QS26DMBTk/st0n65LJDY9QaVGWO0FAhFKIEAwxgbzDZBk+uxWtTSakZ81bzxOFJ0QRRGyLAdXFaRUKEuBJLkgOITI0gxxnIDzksAhRGVRFBxaa3uvdYuS+Hot4DB/D/fNRZ7mGIbBYpomtPQ4PsWYlwVd26GuG8zzDHOez+cv/rQ5t+kGTkuc950Lz/OQJikulEpKiaZpoCjpMTha3XcdRFVhHMd/03Vd8Xg8rDasG42cful8sy8w3wdjjJjZLW3boqFE59MZfd9jHEYym9CRsZkZKFXjfr+jJp5oJoSwYZz9xydeNhtst6/YUdowCG03tVIIDwH1coWkdLKStg5jYtINtMTohSoxCc2s73r8AGXndG6pfG/hAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 25.153374233128833%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAA7CAAAOwgEVKEqAAAABGElEQVQY0z2QyWrDQBBE9f9H5+6cY4Mv+YJAjIbkB7wgbMvaRtKMNFpGtry8oElIQ9FFF1QX5QXBgSAIiOMEqUuU0uR5QRie2W52xFHM6RQiZY6UkqIoHbJMYoxxd2MacpmTphme8Ncs3hYkUULf9w7DMNAYw+lw4jqOtE1LVdVcr1emeT6fv/jj01yGCzKTeO/LBavViiiMOIdnlFLUdY1Wmv1273jXthRlibX23/R2u/F4PByftqkNSZzgfYsvhO8jhED4wn1pmoa6qjkejnRdh+0t1g60beu0CVpX3O93Kl0x2IGiKFwYb/3xyctsxnz+ynK5YLfduW4qrdlttqRpiipLVKlcHZPJlK7vrePjOLqEk9a1HT9l53RuqcOfRwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -2824,7 +2850,7 @@ Nous pourrions alors avoir quelque chose de la sorte :
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 50.306748466257666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAA7CAAAOwgEVKEqAAAACG0lEQVQoz2WSW08TURDH+6FM/ASamPhq4qfwyY/igy88Gi+JCaloQVQo4U6hbLc3QEq7t5aWpbQFdvfs5efsLmiCJ5mcyTlzfvOfOVPgbiVJku+Rgmmf64FNvXaOPx6hLm0xh+Cyn+2pxROHsWXT1IeEkxHx2CG6GlB4CIz8W5RxwFJxkUdPF1laqBLYOjdGE21zha62JX4D5dT58K7E42c/WF+uEPT2UXb7f2CsPHyzjqFtsr1SplPdgUGb0G7iG3VCS2DiX0uCzsEGW79W6Gk7ct8g7B9TSEH3loGVTyQPQqfF4ORQYC0CgaQPlN3KQJNuA89sZIkYHZFITJooA8ZxQhT9A8aBlwGnHY3qxirKambBkdNG217DqO/milOlchdIbKpY3QP5u3IgcYySklNlTNrEToOZ0WIq5puNrPRUvUrN0Am6NYm/O0+BVd3lY9HFVwlK3TK9OCMWBZauMTfXxD76jXd2SNSrMevUuBHlUVcjNHW83TX8SpXbrTKepeNbLQpv3pZ4/rLIceeKMBji9pYJzzuUit948mKB71+kxLM9kpN9jjZ+Yu6VQXwlNivNM3z1mvHn9wxPD7g8qVK4nk0Y9E18z8tLln5Gks1tb6Ovf6Vf3yTu5x8TOU3pb/o5ab/kpyuruPOfuKmUpQ1p2aJwNBphGKa0Ls5bGAZEMqSBa4naY4ILMx9aGe6HFs/OSXw327MzGew/sovdNvXhOsAAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 50.306748466257666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAA7CAAAOwgEVKEqAAAACGElEQVQoz2WS2W7TUBCG81BIPAFISNwi8RRc8ShccNNLxCIhVaGQlq1N1b1JU8exnTbgJt7iJnXSbLV97OMP7FCQ6EijkUbnfPPPUuKPZVm2jKmAaZ+579JqXhKNh4iRixh5xKN+EXOXE4+x46KrA5LJEDn2SK99Sv8D0+gGYZ2wUV7n3sN1NtYaxK7KwtJR9jbpKvssLA3htXjzqsL9R1/Z+VIj7tURbvsuUIqQyG5hKXscbFYxG4fgt0lcnchqkTgawtWZWzrmyS773zfpKYckrkbSP6eUg269AIuI1NVJPAO/cwq+QexoxQfhGgVo0tUIba0oxPCMzDeKQgVQyow0/QeUcVgAp6ZCY3cL4ejF49RroxxsY7WOlopzpY5O7OqFYnEL5K8tgUiJsFuFMiZtpKcxswymlkFka0XruXqRu6USd5uI23wObKgBb8sBkcgQ4obp1QXSb+OoCisrOu7ZD8KLU9Jek5nZZGEqpF2FxFYJj7aJag1u9quEjkrkGJRevKzw+GmZc/OaJB4Q9L6QXJpUyp948GSNzx+O4OKYrFPnbPcb9nEVOnVEp86sssrg2XPG718z+HnCqNOgNJ9N8Ps2URguW04zUkclaB+g7nyk39pD9peLST2dtFhOPi+deW2LYPUdi1qVxMvbNigNh0Msy0ZKuRxhEpOOPeLAIeidE1/Zy6MduXdczi7JoqCIRe73Yf8CsovdNjnfdwYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -2852,7 +2878,7 @@ Le VPN vous cachera derrière un PC situé dans un autre pays. Une fois install�
 &lt;/ul&gt;
 &lt;h2&gt;Partons du problème&lt;/h2&gt;
 &lt;p&gt;WAMP est très pratique pour développer en PHP. Ce produit propose une solution all-in-one, à la fois simple d&apos;installation et d&apos;utilisation. Mais une fois que l&apos;on veut bidouiller un peu la bête, ça devient l&apos;enfer.&lt;/p&gt;
-&lt;p&gt;Ce n&apos;est pas tout, voici quelques soucis classiques avec WAMP :  &lt;/p&gt;
+&lt;p&gt;Ce n&apos;est pas tout, voici quelques soucis classiques avec WAMP :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;disparité des environnements de dev dans une équipe de développeurs (que ce soit les version de WAMP, de l&apos;OS)&lt;/li&gt;
 &lt;li&gt;difficulté à partager un environnement de dev configuré&lt;/li&gt;
@@ -2866,12 +2892,12 @@ On est alors face à un autre problème : la mise en place est à la fois &lt;u&
 &lt;p&gt;La solution ? &lt;strong&gt;Vagrant&lt;/strong&gt; !&lt;/p&gt;
 &lt;h2&gt;Vagrant, c&apos;est quoi&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Create and configure lightweight, reproducible, and portable development environments.
-&lt;a href=&quot;https://www.vagrantup.com/&quot;&gt;www.vagrantup.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Create and configure lightweight, reproducible, and portable development environments.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.vagrantup.com/&quot;&gt;www.vagrantup.com&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Vagrant est un outil permettant de simplifier et automatiser des machines virtuelles.&lt;/p&gt;
 &lt;h2&gt;Installation&lt;/h2&gt;
-&lt;p&gt;Vous devez installer 2 choses :  &lt;/p&gt;
+&lt;p&gt;Vous devez installer 2 choses :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;un outil de virtualisation (virtualbox, vmware, ...)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.vagrantup.com/downloads.html&quot;&gt;Vagrant&lt;/a&gt;&lt;/li&gt;
@@ -2890,7 +2916,7 @@ On est alors face à un autre problème : la mise en place est à la fois &lt;u&
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 41.717791411042946%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAA7DAAAOwwHHb6hkAAABeElEQVQY01XMy07CQBQG4L6F8UIqdKYtODM1xEgUL3RaSks0GnXDQsFb2Rnj1q0L38EHcOvCBRE0BA0a5OItStGFC1ETX8JpqzEmX/7zz+TMcIXiQusy99KyneZG55/16/JKtbjs1Nedxp/H2tpdOVvbzbT2M9zO1tTYeISqiCawRokH+6iK1QTSVMxQDys6xakkVnWUz49xq6sxQQaKQuSwDEUAoABgyBP0iwD+AWJQFEM8z8+mFS6/oY7HJ01LjcWio6PDCIkMdkGEAHLzx5BfMCQESnJoaT7K2ZvxCJGJIiMsKUoYYwkjiWAXxiKDsPeXXxgCiQJFSVhkj3PZkcBgL4ABAQSAB0KWA7/6BUZwQSHgHfsA7Of5nhkrwu1sz01Ma4Zp6EZS02iSTUM3rZSVNj0pH7uhppo0dbZpWTSeoLad5qpXe2cXB61asXFdKJ0cdh4r7Yfyx9vtZ/fu1+1H9+br/aHkHDbbp85z/bV9dN6o3D8dfwOYfZ9/Zd9f0AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 41.717791411042946%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAA7DAAAOwwHHb6hkAAABeklEQVQY01XMyy4DURzH8XkLoSZDz2VGnf8ZaURDXXrOTKczDSHYWLjT7kRsbS28gwewtbAQRRoEKVW30MHCwi3xEjIzRCSf/PP9bf7KTmm0djrzXCv4lwuP/8yfl6dOSpP+xbxf/XNfmbspT1dWJ2rrE8rKUn93T0IKJjNgSR6CiBQgMswSYImgZRi2hFwWhM2KxW5ldjaFDGya3GgzCMWYIEziodYoEP4H01ZK45qmDeVNpbggetJ9ridSqWRXVwdjlDEKAcIYZsH90R4FEM6JbsTHR5JKYTGd4AY3DQa6abYB6MB0DgEACkAZhL+iAAqccJNQHY2NJJWZ6U61pRETFWEVhwhRMW7+FUM4hlCAIDWcTZjENK1h0EsoK8vDvQOW4zq2k7UsmXVsx7FdL+fl3VAu4no56Yqsazuu43kynZGFQl45OVs7ON6oVUrV85293c3H+8P6Xfnj9frz7ebX9cfb1df73Z6/eVnf958uXupbR9XD24ftb5h9n3/vipaWAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -2906,7 +2932,7 @@ On est alors face à un autre problème : la mise en place est à la fois &lt;u&
     &lt;/span&gt;&lt;/p&gt;
 &lt;h2&gt;Configuration&lt;/h2&gt;
 &lt;p&gt;Tout cela passe par un Vagrantfile, un fichier de configuration pour la machine.&lt;br&gt;
-Ce fichier contiendra divers éléments :  &lt;/p&gt;
+Ce fichier contiendra divers éléments :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;URL de la box (un squelette d&apos;un type de machine)&lt;/li&gt;
 &lt;li&gt;adresse IP de la machine&lt;/li&gt;
@@ -2934,14 +2960,22 @@ Et voilà, rendez-vous sur l&apos;url indiquée dans votre configuration (sites.
 &lt;p&gt;Pour l&apos;installation :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Base de données : pour installer phpMyAdmin : &lt;a href=&quot;https://files.phpmyadmin.net/phpMyAdmin/4.4.12/phpMyAdmin-4.4.12-all-languages.zip&quot;&gt;téléchargez manuellement l&apos;archive&lt;/a&gt;. Vous pouvez aussi utiliser &lt;a href=&quot;http://www.adminer.org&quot;&gt;Adminer&lt;/a&gt;. C&apos;est sensiblement la même chose sauf que tout est fait via un seul et unique script.&lt;/li&gt;
-&lt;li&gt;Mails : MailCatcher est installé. C&apos;est à dire qu&apos;aucun mail ne sortira de la machine, ils seront tous capturés. Par défaut l&apos;interface se trouve sur le &lt;a href=&quot;http://sites.local:1080&quot;&gt;port 1080&lt;/a&gt;. L&apos;outil est très simple d&apos;utilisation.
-&lt;span
+&lt;li&gt;Mails : MailCatcher est installé. C&apos;est à dire qu&apos;aucun mail ne sortira de la machine, ils seront tous capturés. Par défaut l&apos;interface se trouve sur le &lt;a href=&quot;http://sites.local:1080&quot;&gt;port 1080&lt;/a&gt;. L&apos;outil est très simple d&apos;utilisation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; &quot;
     &gt;
-      &lt;span
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://www.maxpou.fr/static/b9cccb79487732dd5f9442922b5e25e4/1ac66/mail.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 61.963190184049076%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAA7DAAAOwwHHb6hkAAABfUlEQVQoz62SW0+DMBTH+/0/hDFq1HhNfHe+mE2zMGHxFlBGlo1RSilTYMaN/e3pLs6HaYw+/HLac/lxksLuW3XcNBtwrCvc2hayJEKuBPIsWVKYKJDGIZQYYCg5RNhFEvUwelUm/6JzCQ/Btq8VTtolTjXHTom9VoGd5guO9PnQLnS+0LHErpVj4zLGvvVqapt1ga2GxP5NYfoOdM+ZrcCeFeBrOvP4lM7w5/cg+8z7+rzop3OH7vN+ynv8DQyY4n8AqvcSbJmazqhWMLnV+jrdzIdyNAKbTCYYj8egWFWVLk6/sFpfB9VpNs9zMKUUwjCE7/vwXA9tx8Hd7Z2Obdi2Dc/zIKVEmqbfQh7O+UwoZYIgCOBo2UXtArXzGmo6Olro+x0zQNJ1fBHyiJsNXdfF48Mjer0eut0uBgP9vw2HS9m6zaRMEUUR+v2+8bCYx4jj2IgI+hJBzUIIJEnyIzRP2xlhlmUgaBtiIfwNCwctwYS2x3oTeqW/Qq/9AUftisMTHUcfAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 61.963190184049076%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAA7DAAAOwwHHb6hkAAABg0lEQVQoz62RXW/TMBRA8/9/BEKA2MSASbwvfUEbaOrmRBtMDaRV1aaxHSfplqQTbXKQ3Q+6h4IQPBxd+34cX8nel6tzri8vCPqfuBF9yiylKjRVme2oXdTkKqHQM+ZGopMxWTph8VC4/L2RZDLBe/m54H3YcBo2vAsajq5qXl3e8zZoOBE1p2HNiWh43a949lFx3H9wtefnmhcXhuPr2vW9EQ0fRIH3vYC4gOEmfsvXxJv7qPyVj0vY9tvz0N43/TYfyUc86Pg/QPujwdulujXtHi63Xz+kW/toFgu81WrFcrnExrZt6bruCfv1Q9i6na2qCq8oCpIkIY5jokFEGATc3twSBiFCCKIowhhDnue/xXqklGuhMRmj0YggCOj5PfwzH9/vEQhBHA/dgJUe4olQptJtOBgMuPt6x2QyYTweM5vNmM/nO9mhzYzJSdOU6XTqPJ6SCqWUE1nsSxbbrLUmy7I/Yuftdk5YliUWu41lK/wbtg67hKeVQmntfulfsb/9E0ftisM6HRj7AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -2953,10 +2987,10 @@ Et voilà, rendez-vous sur l&apos;url indiquée dans votre configuration (sites.
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
-    &lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;h2&gt;Commandes utiles&lt;/h2&gt;
-&lt;p&gt;Voici quelques commandes utiles :  &lt;/p&gt;
+&lt;p&gt;Voici quelques commandes utiles :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;vagrant&lt;/code&gt; liste toutes les commandes&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;vagrant up&lt;/code&gt; Démarre la machine (du répertoire courant)&lt;/li&gt;
@@ -2970,9 +3004,9 @@ Et voilà, rendez-vous sur l&apos;url indiquée dans votre configuration (sites.
 &lt;/ul&gt;
           &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(This is an article posted to my blog at maxpou.fr. You can read it online by &lt;a href=&quot;https://www.maxpou.frvagrant&quot;&gt;clicking here&lt;/a&gt;.)&lt;/div&gt;
         </content:encoded></item><item><title><![CDATA[Mémo - Commandes Symfony2]]></title><description><![CDATA[Prérequis Il faut que la console point sur le répertoire du projet.
-La commande php app/console –s permet de ne plus écrire « php app/console ». Il est donc possible de créer un fichier .bat composé de la sorte :   Note : Parfois les commandes ne…]]></description><link>https://www.maxpou.fr/commandes-sf2</link><guid isPermaLink="false">https://www.maxpou.fr/commandes-sf2</guid><pubDate>Fri, 12 Jun 2015 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Prérequis&lt;/h2&gt;
+La commande php app/console –s permet de ne plus écrire « php app/console ». Il est donc possible de créer un fichier .bat composé de la sorte : Note : Parfois les commandes ne…]]></description><link>https://www.maxpou.fr/commandes-sf2</link><guid isPermaLink="false">https://www.maxpou.fr/commandes-sf2</guid><pubDate>Fri, 12 Jun 2015 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Prérequis&lt;/h2&gt;
 &lt;p&gt;Il faut que la console point sur le répertoire du projet.
-La commande php app/console –s permet de ne plus écrire « php app/console ». Il est donc possible de créer un fichier .bat composé de la sorte :  &lt;/p&gt;
+La commande php app/console –s permet de ne plus écrire « php app/console ». Il est donc possible de créer un fichier .bat composé de la sorte :&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;cd c:\wamp\www\projet
 php app/console –s
 &lt;/code&gt;&lt;/pre&gt;
@@ -3069,19 +3103,17 @@ php app/console doctrine:schema:update –-force
 &lt;li&gt;Pour sélectionner l’entity  : NamespacenomBundle : nomEntity&lt;/li&gt;
 &lt;li&gt;Générer le write action : yes&lt;/li&gt;
 &lt;li&gt;Format : yml&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Si l’entity a été modifiée, supprimer les répertoires/fichiers suivants :&lt;/p&gt;
+&lt;li&gt;Si l’entity a été modifiée, supprimer les répertoires/fichiers suivants :
 &lt;ul&gt;
 &lt;li&gt;Répertoire de vues : views/nomEntity&lt;/li&gt;
 &lt;li&gt;Form/nomEntityType.php&lt;/li&gt;
-&lt;li&gt;Controller : nomEntityController.php
-ou utiliser l’extension &lt;code&gt;--overwrite&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Controller : nomEntityController.php&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
+ou utiliser l’extension &lt;code&gt;--overwrite&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://symfony.com/doc/2.0/bundles/SensioGeneratorBundle/commands/generate_doctrine_crud.html&quot;&gt;Information supplémentaires&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Penser à rajouter la route principale de l’entity dans le routing.yml du bundle (les 3 lignes de routage sont écrites dans la console)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Générer des entités à partir d&apos;une base de données :  &lt;/p&gt;
+&lt;p&gt;Générer des entités à partir d&apos;une base de données :&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;php app/console doctrine:mapping:convert --from-database yml src/MyApplication/MyBundle/Resources/config/doctrine/metadata/orm  
 php app/console doctrine:mapping:import &quot;MyApplicationMyBundle&quot; yml  
 php app/console doctrine:generate:entities &quot;MyApplicationMyBundle&quot;

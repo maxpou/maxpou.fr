@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Maxence Poutord • Maxpou Blog (EN)]]></title><description><![CDATA[Software engineer • Public speaker • Nomadic worker]]></description><link>https://www.maxpou.fr</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 14 Apr 2021 20:01:53 GMT</lastBuildDate><item><title><![CDATA[Bash for developers]]></title><description><![CDATA[Like many developers, I use the terminal on a daily basis.  I actually use 2 different terminals: the one embedded in VScode and iTerm2 (I'm on macOS).
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Maxence Poutord • Maxpou Blog (EN)]]></title><description><![CDATA[Software engineer • Public speaker • Nomadic worker]]></description><link>https://www.maxpou.fr</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 14 Apr 2021 21:20:17 GMT</lastBuildDate><item><title><![CDATA[Bash for developers]]></title><description><![CDATA[Like many developers, I use the terminal on a daily basis.  I actually use 2 different terminals: the one embedded in VScode and iTerm2 (I'm on macOS).
 Although this post contains the word bash, I don't use it directly. I use zsh with ohmyzsh. If you…]]></description><link>https://www.maxpou.fr/bash-for-dev</link><guid isPermaLink="false">https://www.maxpou.fr/bash-for-dev</guid><pubDate>Wed, 17 Mar 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Like many developers, I use the terminal on a daily basis.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -13,7 +13,7 @@ Although this post contains the word bash, I don't use it directly. I use zsh wi
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 52.760736196319016%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAACx0lEQVQoz1XRyU8TURwH8PcvGKBAN9oOnS6UTlvqTFuxC0xbFpXFJYAbxAWjyFYTHLFFYzVxOahHj549WePBizcTIqFRiYIEkZa+mU4lMCUCUXF8Q6vBwyff3/yS982bGfBjcRJfhdPuDW6RXIfzFJybpjKzU9TXD2+p1McklZpLUkuzSWr+/SS19ClJLX9+R32ZmdrJ1cyChPyWmvOwCzNycWsFgMjA6MshZmL7yrX7a5GxO/kLl6P5/oGYcGnken5geFwYGY4hUWFoaFwYHBwXhtEcGZ3II0Isek+4eePBCsPcFvv7I/FHD58CoDE2vrCRnesE2c7ZXR281dmWJciOrNl+gNMaaLZU7oaSMoUHllS6EVdxdsGSCpeUKWRjj8wRV+HdAFSbGhJGa7NgqG2GBksTZ6gtwEw0hxkbWZ2hgS0kDTGJkWalrDYF0Z6GaJ/GjMFNNVYf31t/EQClPpAw1HXkHd4ezunt5p2+HuQ476J7eNJ3lPd4u3jSczgrFUjwmjBrsIRZM9HCSbPeHEqj3FLrioVV2P6Eg2zP0+FTXKilNxdsOs2jmQ+19OWCzb18A5qd7s6sdDONPsCqdD6o0vnh31Rj/jSyqdC44wR1DgA15k0QzjYhEDrJhVr7clKRVOIPnuDrA91ZH11IB9XO6dEN0WFYVR3YLY1sKjWeuM11Hv0Uve+523tMKoTkviMs4TwErXUHocXWCvGaUMaEvq0Ob8wotd5lVLaMDu/kLkto9x0V3topVOkDr7SW1p/IqhIPCgo9gocEtZkWMEtQwM1hAb3eGjr0H43eLxStoE8hqrSeu3bXWQDK5NauUrktWiInrsoUdqZcaWdkSgdTrrYzFSobU6m0MbJKKyOTWwv5l/yfsXIFESutMPtt1BkAmCcieC2KIIXkkLVi/kbEoq3i8/Yu0v5XMZ+9EUHssQgIqg/8ARPId9CXiPLrAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 52.760736196319016%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAAC40lEQVQoz1XOyU8TUQDH8fcvmEKh23SZznShdNpSZ9qKbQdmWhYXwCWCihIXjCIUaoIjtmisJi4H9ejRsycxHrx4MyESiEpUJC4UeDMdJPBqBKLimIFq8PDJ9713+OWBH59HySU4Hl6RPtPf4DQDp8aZ+fdjzJc3L5n82wkmPzXBzLyfYKZfjzIz7yaYuQ+vmE+TYxtdmv+oor/mpyLix0m9srYIQLpn4GmfMLx+4dLt5fTgjeKZ85lid08Wneu/XOxJDaH+VBb1pzKor28I9fYOoVQqg9IDw8X0wDDKZm6hq1fuLArCdaW7O527d/chABZn/RMf3faNolskf6hV9gb3Fii6teD275KsDk4s04ehqtwQgRpdGGp0odI5BDWVIbV5jS60sk0byJnIdgDsrroRp7cROaobocPTIDmqN+EuTsKd9aLNUSduloO4ysmJau0uXsSdHLQ5uFncya9ieG1ue+1ZAIwEO+KoaS0Goh1SMNouB2MdcjB2WA5xHTIdOyBHoodkOrKvoA6oyKqk6PAkRTfVJKlnwp2YJauSa5itNGjGd44E6JYil+yUEk3HF/iGYzKX7JQTTV0LfONxuS7ZKQfDbQX1ZxaCFU22GDTZ4vBvMTw+i+HxVYMlnKOYUwBgeHSECu5FbOKolGjuWlCH1JE4f0SuZdsLMW6zAaZFIly8iOFxaLazW82a7eyq0RLJ+UKnAbAQscfh6EF1ENI79otUcA/01uyGHl8zJKsS867qRmgj6+eN1ugchsfnzHZ2o1vMmO3sd6Mlcm1j0ESwz6ye5p9WT/OSkeSRgeCRgUwgzM0h3MMj0p1EJlts2Wxn/2Mh4qhk0UKwiskauekPnQSgXO89VKb3ZTR66qLW4BcqjH5BawwIFZhfqDT5BJ3RJ2h1XkGr9272L/0/gxUGKltW6Y77mBMACA8U8FxRQF5RwIKigOVSfysKUErWSvf1LdT3X6U+eqGA7H0FUEwX+AMTyHfQJMv6mQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -72,7 +72,7 @@ du -sh -I .git .
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 81.59509202453987%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAADPUlEQVQ4y6WTW2/URhTHDQhUKKBgniC33bXX47E947HXDuFalVQq6iNbIa6CZDcIWMiFpkWifav4CH3iG/AAkWAf6EPfGiiqqBqlG5IoBb4DAmLv0XDGWYfbAw+s9NMZnTn7n//MOdZuXru1fnHm/tDs7INjy63Fo8utJ1XF09ZCdfHfuerjmUfVv/+cqf7z8C/kUfV/3Hv2ZHGN5wtLRxdm544/fvAwhhevNU2Qw13Xr44t//zLNfnDxFU5cWVcTo6Ny/GxCTkxOSlH63V57uyIHD5XkyPDdXnxQkNeunh5FVw3MP449ZNsXBq793RpSdM2apt1y3H/80IuC8XiSm9vf9JfKKb9JSP1fJYSx8J1f1oyetKevr5kV3fv++zuedXd0yd3dRfuVL//Tgnu0HkgWmKgIontpGXLbtvUbTsugyCKYGBPDGHFA5vSNrFznLcQukKIIw3TmT5//oyGP11nvt+qDEayTGhqlkkbRcHzBcSH9oJFXTAwZ5h22yyvovbVwQqsX8EoS4Y9XaufUoJf6nEUzcdRiKdYyiFgEQjmQ+xziJkBwrVA8DIwhNhE7SuhPGaCRSVYO6kEN+sDcTx/+NA+yRnLHJooKvDKQ5EDe9V1bRuoQzJsSnJ3eew4pNOjo6eV4Bf6/sHB+W+/PiCFz1PDJG2LEEDHcOQAh8HQAdfjKMbaOep9kXaHFURaxJuemrqsZY/4zVcH548MHcwEOyejExc814aKMIFS9QzKTXbNT115hy64aIWBkLiR5sVcCPCCAIoGNmQ19+41IV9/1JTtXQW9UCItbIhEF2tdxs5DGHrgu+iUMsDxgHzvrcMPBGsouGVbr26WacvCZO4QxwcCwaAScQhxfKjtZoL5qHzAmmC93hEslKw55RB5jYIJnpwwzhI/4AlnJOEeTQJPJC51k5JRTrDuXV6q/xZL5PbwyAlN29ZV2Mn8ynPGhVTdwunPYhgNSBFWpMeEdD1fUsfDtS9VHeNBB5HlcArwo/DuNxo1Tdu6fffWINzzGxb8Tmz3Lo5NE2NTBFEThZqYz6LKoXiT+2GTi0rTR9Qac3cdl/9hmPT6rzduZGOzDtmAbPoMNiLrXc9Z9wYp0cKgFoFrSgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 81.59509202453987%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAADVUlEQVQ4y6WSXW8VRRjHBwxGFEhZr6Av52V3dmZ2XnZ2z24pChipicRLDjEqGmjPKaGc2heskqB3ho/gld/AC22C5wIvvLNUYiA29fQtFfkORunueTJktj0F8cILL355Js8z85//88ygr298s39j8c7o8vLdd7c6G+e3Omt1y8POen3j15X6/cV79V9+Wqw/WPq5/mDpXv33zlr9j7WNPR6tb55fX1557/7dpRT+fIyQJmf7bl6f3vr8ixvmk9nrZvbjGTM3PWNmpmfN7NycmWg2zeVL42bscsOMjzXN5NWWuTY5tcPVlmlNTplP5z8zrWvT3z/c3EToADro+AH/TcTKlCuV7cHBUlYqV/JS1c1FKHMS+HmpWsqr7kA+MDSUHesf/CfHB/7uHxgyx/rL39UvvGMFjzoq0h09XDOEBjn2aZcy3g24hChJYPhECnFNAGWsS2iP4CmEbRMSGNcLFq5c+QghhBxHhmGnNpIYTFjuYdLFPgURakjPnASfcXAx6boe7Xp4B1u3F1s8TLaxT03VpQuN5kUr+IqTJslqmsTG9XzrEDxMQMsQ0lBBKl3Q3AetMEiFgVBi61aoFwvBihVsfGAFDzrDabp69sxrRklZOPR8CppLGE0COGnbpRRYQAooIz13vbjrkC1MTHxoBV9yXh8ZWX37zVNGhyp3PdL1CYE0ieHcKQUjcQBcKGCB7Paw8w14ES3bAZfGJ2Jhfn4KFUN8643Tq+dGTxeCuzcDZRwEp1DTHjBmx2DdFG3+V8tHHa10J460wT7Ne5uV1iCiCCou6bo7uWfbhN76X49ypK/slKuk43q+8TDde2UZhhDHAkLOQTAJhDDo1Z46fE6wcRGhlw8POh5mHd+new4xYRBpCbVEQRxqYJQXgr2v8hx7gs3mrmC56q9Yh67nP/YwyTxMM6lkFkYqU5JkSrAsEjrjjGdVF2eu5z/LX/ZspUq+HRt/H6HDfeVXZVh7JJU29rUIDYoYJ8NGxzUjpDZchIYFwggZGrtPqmgXXeS4UAYTcafVaiB06MjxQ1F84iupoh8I5bddj7QJ5W0dJW0uwrZUURFtTkjdVmHcVrrWDnWtWAupbwdc/eh67OaXt24V32YfQugFhNCL/4MDCKH9XAT7ngAp0cKgJGRy4wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -150,7 +150,7 @@ $ ram
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 69.93865030674846%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAADIklEQVQ4y52SW2/TSBTHDdI+LaJA40Kq2M6MHV9iu3XTpkuT5p44SaNCi7iIl11uqVpAK7QIRPkQfAIEfAB4QrRISDzwAoigooYiIbUpEorttLk0Eh+AM05hKx6x9NN/Zs6ZM/8zHurzvYd/bLx5Gl5dex3drK5OrH/8ENnYZb36IVJbW41U372OfHr/1h2vV1ciGwQ37irZM/nu1UvjyaP7+6lSbIa9eu2/r/P/Lnbn5hdb5YXF9l7mgIvlW+1Lc7fdcW/9brs839O5hbvN8vydb/9cvrkSS5eOUIe9OvaqmU2ajTr9vok6YO3Fw0QsiFk0B/hjPeUmLQ/bUy+fsvzBYtsrJN8fHJRoysuNImzka34p1QAs9AtYTls4mLWxkvkJgjVezdkkHtBNSxs/2RZ0s9LP6B7qGAphrJk1rJoNXjNtRBKD/+MnKFlXOaIA5P5cA7U4OdP0B7OVo2iYpgaYEayMT29KRnFLNoo2r+V7iS5wwB6wVnAEo+Qoo9MOiQeGS44wNGX5VbOFNLMywOk0ddRnYBTKbzKBZMMnJCxQF1ZM2ZyYBlIuZC7qUw4PRREcCq52HeYscNmEeaXfS+4Qj2G/mquxcqYBLZGgm/wrELcZKIr1gi2Fph1Oztq8XnCwloefkmtBDXCo0RTNDGG4qxq06hZkpcyell0HrvJq1kYKOJbALXTAyeBcTtqsEK+zQqLJBuIVjy9IU4NCGIcT574Yx2e3jYlTjv7XrEPcuJcOxYgT4io8e705du5mSy1e3Q7mF7ZDp2+0Rs7caAULC1va1PWukrm4cuSwz0MNsAbSxk9sqOGTjjJ2oi6OlCxoo45+oJp1KFgfmilvDZ+9thUslRuKebmhgarFKw0x/rctJS+0A9HzFfoYT57NKA9PxUJKtsuI6TYrpjvwLHbg3joEVkp3kFboBKLTXT461eWPF3c4JdlBRraDQrkdBsWaDB/7xoqJ6qA0TlP9XnnQF4g9Bp4zgdgSwSdMLvmI7sKI8SVWSS67qKllRkosAcuMDIjxZ4yYeMGIsQeHPP4+Cr79wAHgEND3m5C9fwL7vgMFD4piWaWZCwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 69.93865030674846%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAADRElEQVQ4y52S224bRRjHh0pcgejB3rSO9jSz3vNusnHi0NhZ2+s92I6VtkGFihugFEdxW6GKCkT6EDwBAh4ArhAJEhIX3BRUV6liWgkpcZCQZ9aJD7HUB6h2HUrUSy5++s3M983oP6MBf3317ev7v/+Y3X36MH/Q3l3a+/NJbv+EvfaTXOfpbq796GHu2eM/4vFeeye3HxHXY0d7lh/99qv1w3dfnwF1+xp7+85n/2x8ujle39gcNJqbw9OsNzeHNxufDz9e/yIeT9YfDBsbE683H/QbG18+//DW/R27XL8AzqdMlNLdA4rNhwl6qZugl/BpkkwOU2weU1weU7w9MbeMk+zEKcHBvFYbptKlx29NyxRIcfMQWZUOLzs9XnYwfAWklDHSPIJU9yVQKWNB90lUF80AG4tXh2kzaCUYMwkuwQxCRtBBetATjIDAqFH7Dz5C9WJzkVWPID14ucarHuYUt89rXusinKXAFDOH1MXVA9mqHSpWjQhGZdIYExB4CmRUw7RVD9X51TCqi7P1MD2zgnk9GEAjaE1xJgUu0haCmcoBI5Z6dLqIGbEUw0oO4aQy4WI7JJpL5kooGNUQGhXCKe5JQh/zqtfnFLeVSEVviBYQr/sdVnF7nOpFxbj5VVjFJYzkEGRWiZxZDTnFI4JZDZFRwbzmD3jdb01xBgUoZgZBze8IRiU+kJXdU1eOE8QWdI9AtUw42SGsWMKc4hBOKRE2Xeiy6WKfFQutJK1RYDqdRdnijb+ty2tH1tI7ofn2WhiliR9d9UmUJEqVXbvbX7hxf6DXbh9pleZR5vq9wdy79wZatXlorNwdq+7NnQvn6SSYYi1oLF7Z17NXQ3XhSleaq2NkVLrwX/Sgi8xqd+Za43D2vTuHWr3RU4NbPaPe6Om1T3pS4QMilz4aivn3W9QlIfo28wLUfQxVb8xI5SErlUdID445xR1FsHJ5BI3qSMyvjoX8yli4XDvm1NIIWt4IZvxjBtp9RrCfs1KxPS0vUiCRUqZp0f6eFu2fGdHeiqDTy1t05BMYqbDFqqXtGN3ZZuTiFiMXtxmluM1IhZ8YqfgLI9nfnEvyZwEA4AwA4E0AwDkAwNn/SbT3DQDAay8ABQ+KYr/zH4sAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -212,8 +212,9 @@ $ ram
 &lt;ul&gt;
 &lt;li&gt;Last year I published 11 posts (+2 translated in French);&lt;/li&gt;
 &lt;li&gt;I added some cool features on my blog: dark mode, RSS, ability to publish an article in a different language and some SEO/A11y improvements.&lt;/li&gt;
-&lt;li&gt;maxpou.fr cumulated 49k pages views and 21k users. If we compare the numbers with last year, it&apos;s a significant drop. But, before June, my data was biased since I included statistics from my side project. 🤦‍♂️&lt;br&gt;
-This year, I&apos;ll change the way I write my posts and see the impact on SEO/frequentation. This website is also a place where I like to experiment with things. Most of the time it doesn&apos;t work!
+&lt;li&gt;maxpou.fr cumulated 49k pages views and 21k users. If we compare the numbers with last year, it&apos;s a significant drop. But, before June, my data was biased since I included statistics from my side project. 🤦‍♂️&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This year, I&apos;ll change the way I write my posts and see the impact on SEO/frequentation. This website is also a place where I like to experiment with things. Most of the time it doesn&apos;t work!
 &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; &quot;
@@ -227,7 +228,7 @@ This year, I&apos;ll change the way I write my posts and see the impact on SEO/f
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 17.791411042944784%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAwklEQVQY00WLC26EMAwFuf+ZeoEeoYiuVCCQhBAgfEqAMA3Lrvqk0TzLdgInV7YjPPEv9siVaxuWmaDVTaNvK3n3uopuCMdBOE+SevQUw0pmF77tL6lZyNqFL+uxjYHPD6h/oJFgdLS6rWqwcS8FTI53krxfybsV5Tak86hxi90jx5206sjSB+V8UETeFstFQDzn6GmnjD/CrSTadNhhRLU91s1o++9hXhH9hGg6Sm1R3UihWup4m0tDZfrXPJBfto4/cL4xZSxVi1EAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 17.791411042944784%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAwklEQVQY00WJCW6EMBAE+f+b8oE8IYisFMCLLwyYIxhsKgI2SUul6p7J4ODMFtNFeLHHdN3Pb1pmklY3Rt9W8u7Nk2QMKUbScZA1Y6AaVgq38Om+ye1C0S58uIAzFt7foPkCI8FqMOq2asBZkAImz2+ysl8puxXlN6QPqHFD+YAcd/JnR5E/qOdINcc/i+UkIa6dENNO7QPCr2TadrhhRLU9zs9o9+9hXhH9hDAdtXaobqRSLU3bU0rL0/avPVCedp4fcL4xZV2d/0AAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -240,7 +241,8 @@ This year, I&apos;ll change the way I write my posts and see the impact on SEO/f
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
-    &lt;/span&gt;&lt;/li&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;I still cross-post most of my articles on &lt;a href=&quot;https://dev.to/maxpou&quot;&gt;dev.to&lt;/a&gt;. I cumulated a total of 134k views / 3.6k reactions / 3.4k followers.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;✈️ Travels&lt;/h2&gt;
@@ -257,7 +259,7 @@ This year, I&apos;ll change the way I write my posts and see the impact on SEO/f
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 59.50920245398773%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAACPElEQVQoz22TS2/TUBCF8x/6cBK/ktiO4/gR27GTNAUXGiikQFGqCvGoyiYtQgIJwipdICSQWLFhwwIpi0qs+JGHmWscEmAxmutr+5uZc88tVasyiqhUqst1uVxZ7imKijRJMOj3kHS7iKMI9XoDpmmKte95FD7CTgelv2EFqO04UFVNrBnIP9cbJlpOG904htEwIMsKfN8X0H4vL1ZahXHWNB1Nq4lOEMAhaPX3u23Ko2sxhrEnYBoVs5u26JxBXGQJXO3Sc10BchwXadqHrNVoX8fZeIDv8wdYzO/h5P4QXiemrtIlqJfm69L/9KvKMty2jes7Ed6cZpidZPj6+hA/P02wuDzC89tDZFGMiCJNugSM/+1wqSFlVVHweNzFt/kYPz4c4Yri7Ys7mJ6OMH22jyF19mS8i/evDjB9uk8a5mAef01DqUwnStllsTUVX2Z3sfg4wdXnCV6e3YLV9BEEIUzSeLiT4tHDG8h2+TASMTIfTukPrAKz0cBhEmJAFohDHxfU0eziAIejCNnAhecY8DxX6Fyr1amAI8bmcfmUwzDMO5QpNrbKeHfcx/lkD0GUi+y6Pgyjic2tCjY2JbiOLYqzC9h7OjmC4TyqbdukezsHsm66quDy/Cb2sj6iMK+qaRqkbQkKScDfFb7kbFmWsBg/M5wtxN+vaWhZNbTsluiARzIMk/zYQUDm9VxPeJMNzobm7vi/4ibpek3sl1avl02wiHTgK8SZR+HRC/PmMriQpPKazQowd/4LtaNtOe7qCBMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 59.50920245398773%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAACPElEQVQoz22TS2/TQBSF/R/6SPxO4lec8fuRpCm40EAhAYJSVYhHVDZpERJIEFbpAlUCiRUbNiyQsqjEih950B03IQEW1lyPPd/cc+aMIEkylo8oSqu6WhVXc4qiIs8ydDttZGmKJI5Rrzdgmiavfc+D7/mIwhDC37AlqOW6UFWN1wSkxfWGiabbQpokMBoGZFmB7/sc2mmXmwnrMBo1TYdt2QiDAK7rQrr+titK6N9I0Es8DtNUDY7t8M4JRJusgOtdeoxxkOsy5HkHslaDKOo4HXTxY/4Ii/kDnDzswQsTdNr5CtTOy1r4n3+SLIO1HNzci/FuUmB2UuDb2yF+fR5jcTHCy7s9FHGCOE6QZymyNPm3w5WHogRVUfB0kOL7fICflyNcXY7w/tU9TCd9TF8cotfO8Wywj49vjjB9fojkGkzyNzysVCUokgxGZmsqvs7uY/FpjKsvY7w+vQPL9hEEEUzLRm8vx5PHt1Ds02FkXDIdjvAHJsJsNDDMInQ9H0nk43zSx+z8CMN+jKLL4LkGPI9xn2u1Oizb5bJJLp1yFEVlh7IkY2unig/HHZyNDxDEpcmM+TAMG9s7Ira2K2CuwzenFFD2dE3ncJLqOA5Yq1UCyTddVXBxdhsHRQdxVO6qaRoquxUossJBy1zSaFkWjxi9E5wiRP9veGhZNTSdJu+AJBmGiTAIEfg+PObxbFLAKdDUHa1b3iRdr/F5Yf16OU4TcRTxK0QjSSHpy/CWNjBUKtWNmC3B1PlvtaNtOYKvroEAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -337,7 +339,7 @@ This year, I&apos;ll change the way I write my posts and see the impact on SEO/f
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 49.69325153374233%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAACxUlEQVQozy1Ta0gUYRQ9M/se1818rSWVqKRsUkFJVkSURUFJJJJ/+lEQBNYuEVoQIvkjssTKUjGCIlEkXNqifKw7q6vsWlEQFbWagSZZZlZalrO7urc70sD5zndm5h7mnrkfCGcBPBaIAHu1EYtaqhfAO/UeFScIr3OtqFhl2dKWmbQXMOiBZbGA0cyFyawtrHmfEAMIVgw6jL7x23gTbIKMrZBeOYyXxy4KwdE2vHVX4eDYY9W6ApXmhGxyJO2N9qE22o0W8uICG4J6YF9QtQ+3nzVgG342pxIFMmimyxJOXIHkiTtLPVF3Ji0EUuh5o6GU/DGgB2b+Kuh+v4BN6bVSqD+NFDl2aqgCBsW7ZEDpS6NIXzIFm/Ql+PzQMB3qMdNXl26Sq+JH2rT3Zz0xNNtlooE6sSQiaxD2iTpAGxNqx/qQbJwPeWMp5NGNzrVAy+xRZDNFeowUvCscw7XTyLtVil3XTyJPzazKgdWNZchvPIWd5YeRWOcAPNXgTBE/7xVNShfyGQWKG1uVRwDzur8dKOCW91wpQRo+2CX/ZAveDTfDh90wv3VINV8uaYbHXRiSL6PomwuYfgQNG1rCHjGVze4wnIyayMcG1bBsrhP3FzxoDdzADvy4t5zoaSbNuOMjSSmcYXOcvODlDP1qhvpSCphA/UZu2WT6244NSm8KZ5hOSs/S7yPnoVe8cU8U1mqGg03aE/jk0k396ZZo3KmbUNsabhWd050mmukwkP+GcFxxi/jVrmYoShSALeI1zIa9EoVl3XsKQhOWtR2qjvoMNHhXOIqqI8hyliPLVYmV69N4IiuR4DyHrHo7csqKYVEzBM8TX4n7Nwsremtw4OVNFD6pQz7PoNR3FXn+WhQzH3IUIhtnitV3hXRecgQBNuY1rFcDVmHfJmBPLoSi7cDadIj8TFR/HFMGL2rNRoZt8QD8xz8LzERw8ayufAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 49.69325153374233%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAACyUlEQVQozy2TbWhTdxSHn3ubm5ukaaZ9d+JWarFSxQkqVovI1omCkzGR9cs+TBCEbg0irYMhZf0gVqXzrUpFUCwtIg1mYlsTc9MmJdENB0NFU9eBL1itzs3WVf0nMT1yyz6cA7/DOT84z+Eg/AD0ayLQdMjFrPac0ECwa9JQpN1aVUbrx761fVUlm8B0wrwCcHmBUjB9MM8LRfmglTHqd8XGz3A71Y1FHZ6bftfBR/u11IM+7oTb+epRv23dSpu3aLH4SzbNxDk6c5VeibIPQIZoytk6xpnfTrKOlz3zRZILZSrkyxQvoHTi7NzITLhKcslyudFlNksiH/nF6wSM/36nRg2XSXqkQpRV8OJeK6aKfnBNxSskGy+VVLezkSeXzMn0kFeeBY3nTii83+e4OB3Jl+mQW6516o1ZK49MTDfAkZ8eYHnacr1LRwskHTEevO3FkY4YEWV5JTvkktQ5bQdHdlN7upnPj31Prc2s3c+irhbqu3bx2d5vKO70Q+QQGlD4Lqq7VYh6FWKLClOnLoMK88mbQbZIjI0/N1LBX02exPNe7o71EGMD3jt+T8fTA3lj40HuWQfZ9ncQJi+TB/gyEX2+CnFWhQioEB3Zhydtw5a3V7iYi3A+eZxP+ffChyK/VslUuDBbUk7pRM8cKxetklzCZuhslqQbGXEZ4Ha/GWCFGi6X9EilqKG5/9z/CaeKzrmuRipnGY52O77jcdB48fqqR8YDxoS91th5PTB5xS1Tg6Ykjms7VVjn1YDNUPdIkpps1JzORD2SsYw/JUVexnIM2nomZsroOW077d9SHdhLdbCNj5ZXQH8bRYEfqT7RxNKWBnw2Q6izU/EXa7QFwx18+ccptl7vpB5MT/wwtYmjNMQP87V/K4vZ02D3apXAUk2jBlgC2iIo0zavho2r0Lath2WV6IBuHw70hYA9sxKomX2A/+M9C8xEcD2QJXcAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -383,7 +385,7 @@ If you&apos;re familiar with the JavaScript ecosystem, you&apos;re probably awar
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 64.41717791411043%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAADy0lEQVQ4y02Sf1DTdRjH3xsbgWiR/B6QQIBoBsGVKVw0OoEOuUo4Q+8Qgn4YJdE8EMnUnYRdkjjA+KkhQwYMSQbM3CbjC4sfAV1ZIhVngqgpnQxigGvY02fwT5+71+dzz32e533PL9xNywAtLYGIMH9jAo39d8AMlMhuwhibJ5pNVUzOSFQmxuxMWuP0TGLp8/qTi8AMIVLGIbiD4FT6B/bsScHysQr9deyLTx4UnW6/l3P4tdEcGY42qBxilWOeCeU9AVxuu7/lU5WX6bjO+5ZE4fNu1bBP1Nnv/aI7/1yNFMIv6nD+IvcU36x/nG+qYYKmA0dwT5K3aepwQdRIVq5Ieq4CKCN/vxbSujaTBrX0XFb1MHpLOdB1wPkCKXxbaAA1lJTbVQ/SA5beDbBwLiDtSpIYO3gE48cqcVcWAermez7QeqdyypCw6x1hCUad9y76RrSaKlIEC1rRzp9aQrcPqzZvvf3t+owJpUPw/Ut+0RaDb5KFc9xG0+BZ9fg7/NcLinY9Y0skxJTqsWdN3Mb8hTa8+JALTF/oDjx4aRJ2VEUw9Tl9uDjIjzN32UQuGkILjCpEGDs3ps4PRB+d0/vtPb4dQqug3Qo8u3XOsAeSbVhbrd1dfq0Mvl4ROfSePE7z6g+be8QdEW+g3pEo5H8+EkY0sx2Yzlq35bK9iHjL0fmMcsZvjCuE37MznExvKa5QppIjSaPekn5++NbbNa+IT7D/+4xiYmHpfCIxH/AABJlFPFQNYlWZDoIGgm0dbXBV/HPAvc6cDQUlYx/ZiMsmXQLPmT72PWOU+p1dfMFRQ3BvpsSnG+alrgrzbgRoYC1KGJ/N7mI2piKdq7CkKza8nzk2PQoNaqXPYtpvyz5Sqy/LW98MYJN+IlT9rzRMTUX2SgpHC8GtmVK2qB4WujVROqxy0Yw6hqiyG2vKe0q8zvSSXZkhBhVTkHSzFZEjgAZ4CrYW6ZXaPNi1EXitBPuGm9A1RNlTHzKp36OYDMihWgjoPJPtZAmuqf0R/l9p4gMr9cqQUy2+yBizNpunqE8Iv2bYKR/S75Cuq+YcpAYSHtKMrgpWEf9qx37B+HdxojtX9/tMGGI8fy0A74YMGL/sBXwg/VxQvzfxyabdYpdTkvedoSM++ghrq4zb3C+QykVJbUI5bcWXhC3NszZD7fvQaRgRzPVFgUaSYOnbhOlCYO40YNayubyTfxJc8ksYetkJ1VlpAEc8vpbg8fVUfNDFR9eCLi79bC9fEqOQcEg9atvFcbZcV6fAuhB/DyXzzIZAzLPsFipWBP8DlYvfIQ53kwMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 64.41717791411043%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAADxElEQVQ4y02SfVDTBRjHv/ux0RAtkvcBCQSIZhBcmcJFoxPokKuEM/QOIejFKInmgUim7iTsksQBxquGDBkwJPkBM7fJ+MHiJUZXlkjFmSBqSicbMZhr2NMN/um5+97zz/N87vl+78HdzGzQ0hKICAs3ptAydAcgQrnsJowJhaK5DMW0ScKaTRJ2zpTZMmtKqXhed9ICmAgxMg5h3QTXij+wZ086lssO+uvYF588KD3ddS//8Gvj+TIcbWadE5QTPslV/cFcQVeQ7VPW13xc63dLovB/t3bUP/bs94FxPX+uRjrhF1UUY+GeYqy6xxlzPQDzgSO4JyncNHO4OHYst0AkPVcNVFJQYDtpPNpIjQZ6LrduFAMVHOg64HaBFAHtNIx6Si3obQLpANvABtg4d5Bm5UhMHDyCyWM1uCuLBvUxPg80fhmcMjzyendkslHrt4u+Ea2m6nT+oka086f2iO2j7Oatt79dnz2ldA67fykwzqYPSLVxLttoFjw7j9kRtJ5fuusZRyIBZtjHnjVzG4sWO/HiQy4ka7Ev5OClaQiplmAedP3QMsIkWnsdYiz6iGIji2hjz8aMheG4o/O6wL3Ht0NgBwpXxBOuc4MTkOZAtJzucrdr5PXqGMN78kT1qz9s7hd3R7+BJhei8P/NSEAUB8BZCKz1XLbtS8Rb3i4ioIqA3wi4Qvg9L9vV/JbiCuUoOZK06GxZ50dvvV3/ivgEAfcJKCMQZTFEYgbwBvg5pTzUjmBVpRb8ZoJjI23wUPxzwKvRmgcFpWEfOYgrp91Dzpk/DjhjlAaetbzgoiZ4tVHK080LUg+FdTeC1bCbEiTlASjTAaVaD0F5b0LUEMGr9VFEaAd9Ft91W/aRSnVZ3vFmMBroiQjVv9JIFZU6KSkK7QTPNkrfwj4s8WylLNhxcQQ0EiCq6cOaqv5y3zMDJKzUx6N6BpI+DiRHMA3zFKRDVo2mEMJOAq+D4NR8E9rmWCcaRA4NeZeRHvnUAD6dB6gHwJqGHxH0lToppEanDD/VHoDsCXvYPEVTctQ1/U65QbdDuq6Oc5bqSXBIPb4qjCXmavd+/uR3iaI7V/f7T+njfX4tBu+GDJi87At8IP2c37Q35cnW3WL3U5L33aAlBoOEtbXGbV4XiHVXUqdATlvxJWFL25yDoWsfevRj/PnBWNBYKmyDmzBbAsyfBqwaBnin6CS4tJdgeNkVdbmZAEc8RkPw/nomKfTio2uhF5d+dpIviVFCOKQad+zlOEeut4dvf4i/DWk8qz4ECzJgsXoF+B+Vi98hVVLA5QAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -405,7 +407,7 @@ For us, all our packages are under a &lt;code&gt;packages&lt;/code&gt; folder. A
 &lt;h2&gt;Cons&lt;/h2&gt;
 &lt;h3&gt;🛠 Git &amp;#x26; code hosting platforms (GitLab/GitHub...)&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Authorization&lt;/strong&gt;:&lt;br&gt;
-When you set read/write permissions on GitLab/GitHub/etc., it&apos;s usually for the whole repo. &lt;/p&gt;
+When you set read/write permissions on GitLab/GitHub/etc., it&apos;s usually for the whole repo.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;💡 Tip:&lt;/strong&gt; You can also create a &lt;a href=&quot;https://docs.gitlab.com/ee/user/project/code_owners.html&quot;&gt;CODEOWNERS file&lt;/a&gt; to define specific ownership rule.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-md&quot;&gt;# .gitlab/CODEOWNERS
 packages/app-1 @user1
@@ -440,7 +442,7 @@ git clone \
   &amp;#x3C;repo-url&gt;
 git checkout main -- packages/package-a
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;em&gt;Note: learn more about [partial cloning](&lt;a href=&quot;https://docs.gitlab.com/ee/topics/git/partial&quot;&gt;https://docs.gitlab.com/ee/topics/git/partial&lt;/a&gt;&lt;/em&gt;clone.html)._&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: learn more about &lt;a href=&quot;https://docs.gitlab.com/ee/topics/git/partial_clone.html&quot;&gt;partial cloning&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;h3&gt;🤖 Continuous Integration (CI)&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;When it&apos;s broken, everybody is!&lt;/strong&gt;&lt;br&gt;
 If the &lt;code&gt;main&lt;/code&gt; branch is marked red by your continuous integration, everybody is impacted. You cannot put this problem under the carpet. It needs to be addressed directly.&lt;/p&gt;
@@ -505,7 +507,7 @@ The first time I &quot;git pulled&quot; the source code of Gatsby.js, I pulled t
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 53.37423312883436%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAADS0lEQVQozzWRe0yTVxjGX+USQrwk7g91arxlkuENJODUiSYyEoVNvFGhl09qKwUUEEQppe10KHYgXilRtroB5dLVUhmaKcULFZ2X4USnnZmighcsVIquw6k8O5+rJ/nlnDznvM+b9zn04yeBi4nInzHcyxjGCMYwRiBjHMPn0NRRy3dPoDns7Oe9G8kY66358HYqIU4Y0yW37LqXVKF3yUw5TKSBJLO0Y2OD3pXSsLc5On8JADoT7Dsfq1QCT55+D3QFZa9lZhGFEf2tqFSiSFuKbUcLtwQJIwjiq3NbUsqhyNuJJ1LjU4SUB/RKqi8YdtvRknsKd5fqcvkmvOmrlZcVvVWL0F4/Ak5JRVPmmB8m9eft6LvbSnigToYp5KCABsWmSKesFo6sWvSLazpvyAz+LyTV5xw5jehKs+L32KIc3owf9TV3Mq27MA+/aaR4nFRxdt2sDTP7tx7uaS9OQMemEpgWaNcQuHPD3RnWeChtoh6xMfpmqoFcXPX8t5oT4sH04/H7wmUzmVkAnxWy6se7N94XIudNgp07sGzR5xGfPku1xb7LHBRB5YiLHT9jOiGt+eMeceVO57rKYhdXk3H1q11D+rgaiYcz7xmQWgotXyg/fFrgv4lNoW5NbvHb0vUlA0mm1UsXxs3+U1pUMFieqHujLP46fYoonBBbtbh1mxXZDVfQKavrRlhpQC9XfTE/JB4N0fl4lGhQekf28aw8n9FjjMR1yzB0ir+/pJi4L+gf9TeuP+yE+6pkmEMPCQgrzPPacn/Gdst1OOV1D/Ftq38fV2v7LioTLXE6dAjKs+n/NRTrTyc7txfgljILz+VVZ1SfZU32bDn6+E5BCsu7FHUL1asof/qaoGuJ+7feVpRpmiNLhHz4tpgdCfdSqzR3xEeU2tmCSKb5MkYblmya2yY/pnJs/kVbv0Afxet2kT7tdnqz+qbCmP3luNDw962hBcFmos4bESu67cvUaLUSDjPtoIdwiu0b7DRn9BRffnToGJe6yNketfmpPUaIs8cIZUyrBHmjYYbmI34Pzw+hl41h8v7GYOVf18YyrcYPJQ988Jw9lDTSjI8mvS/AyRO+bb8Sua3BWvfxaWsdTaz+tNEPP70bynv9B2n0rGB5CsMuAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 53.37423312883436%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAADRklEQVQozzVRbVATBBh+lI/jOLW7+uFnl+kVF2qCHFia6J3EnUKFmizYl8xNBlNAEGWMbWkoLhAtZZxSs4DxMeeYiJ7K8INFVhomli4vRQMzHCxGtTCVp5vN9+79877v8zz3PC++fCV8GYBQABMDPQXAJAATAIQDmA4g6MDs59/b/SIWAAgJ7J4DMDWAeXY7G0wRJvUrbLtuZdQaPXJLIQCMZlhlvRtbjZ6s1r0diSXLSeJsZPAirtEIfMXGPTSUVj+UW0WIAf5W1qlZrq/itsNlWyKEcaD40sLOrBoqi3fyN5n5PqNqwoYkDV+ZdjvZWXSaN1cYivwiftK/Vn+rHKpfyp6WSXRLatvzpnwxc6R4x/DNLvCONpOWqP0CjIkt8W55E135TRwRN/ZdlZtC/5A0nHcVtrFfZecPyeWFfjK/1YfSk6qBsmJ+r5PxXkbtuXWvb5g3svXgYE9FGns3VdKyWL8WlJ6f6M21p1LtEA2KzYnXsk3wSBsWPdadEI/lHEvdFyufByDMnxXzW2Z4N94WsvBRmlP66cqlb8W99nu2I/lJ3piIGldK8oy5c0BVx7RBcd1O97q6Co+0MffSu7vGDUsbJT6pdc+ozFZme1v97Gnh/6a3R3t1RRWPq9ZXjmZY3l+xJGX+z7Ly0rGadMMjdcWHObNEsWBy/bKubXYWtH7HPnnzAGOqwoakDV+XRKWyNbGEv6ab1AHLQb7VF3IHzfG8YpvAPvHnF5Uv7Yv4R/uR5ycneFuTSWv0AQG4yvpmd9FxbrddoVvRfJcfd4UOS5scnyXksTPFwF5BTQH+r/FcfybTvb2UP6rz+UBRf1bzRv7Lvi2H790ozWK/qorNS7RrUDJnbcTl9E+2XldW6zriK4X+8B1JO9JuZdfrbogPqfXzBfEAggFMNi3ftLBbcVTj2nxK37LYmOCfO0VG1fWcDu01pbngnenRsU+lqSfosKDvatyqAedKLbvs4EGC+33gaYIbnFgweVaw3zoNBC/2w92TsPm+M0nIc0fBaoJ1RCAagNZDIXcvjMOfbTGKkbZI9S+Xp4LWxhBW3gniA4KSNsx9YeZTAE+eCO7+BvDaI/XeY69+4GoHeMYcwiNPxvvJ/gNp9KxgUMsYlgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -520,7 +522,7 @@ The first time I &quot;git pulled&quot; the source code of Gatsby.js, I pulled t
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Overall, I think a monorepo can be a good thing.&lt;/p&gt;
-&lt;p&gt;In our case, it makes our life easier. All our packages are a part of the same big application and are written in the same language. Because they&apos;re a part of the same application, they &lt;em&gt;&quot;communicate between each other&quot;&lt;/em&gt;. Also, we&apos;re a human-sized team working on it. &lt;/p&gt;
+&lt;p&gt;In our case, it makes our life easier. All our packages are a part of the same big application and are written in the same language. Because they&apos;re a part of the same application, they &lt;em&gt;&quot;communicate between each other&quot;&lt;/em&gt;. Also, we&apos;re a human-sized team working on it.&lt;/p&gt;
           &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(This is an article posted to my blog at maxpou.fr. You can read it online by &lt;a href=&quot;https://www.maxpou.frmonorepo-pros-and-cons&quot;&gt;clicking here&lt;/a&gt;.)&lt;/div&gt;
         </content:encoded></item><item><title><![CDATA[Tips for your GitHub Portfolio]]></title><description><![CDATA[A few weeks ago 2 people asked me the same question on Twitter: "how do I make a better portfolio?"
 Since it's not the first time I have this question, I decided to answer in public™️. Before I start, just want to highlight something. Having a GitHub…]]></description><link>https://www.maxpou.fr/tips-for-your-github-portfolio</link><guid isPermaLink="false">https://www.maxpou.fr/tips-for-your-github-portfolio</guid><pubDate>Wed, 14 Oct 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;A few weeks ago 2 people asked me the same question on Twitter: &lt;em&gt;&quot;how do I make a better portfolio?&quot;&lt;/em&gt;
@@ -541,7 +543,7 @@ Since it&apos;s not the first time I have this question, I decided to &lt;em&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 45.39877300613497%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA8UlEQVQoz3VS0Y6DMAzj/3/ydE9jOh0jbYG2SepLO5i0WxvJAiIrsU0mIgKtDyzLAiKHUkoXwAl71wGnYgoHY14TaGMU1f4ww5YUt5Vx2LMO7vFUbaDIAfIBYY9gZtT6IFsvOQdywdShy6lVlU8sjD2mNkxEbIt2wZkRk4EVMY95U7XwG2S4+cpvDQlfs8f33Rv/00lTWC3j/LiqG7b1ORDS5s+fM7CszbJiT9KQWIdWcq7RCFgKRMe8yRtppowfxwhRX9tfip8NbDHjvsaW33/OVU2hs6AT58tva5bz1p73pq2nsuHYfVN6nYi+8UpT+AcIEsaOiOmGMgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 45.39877300613497%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA7klEQVQoz3VSXW/EIAzj///JaU+703RdA7Ql5MMTXHvSdhDJD0RWYpsEIgKtP1iWBUQR7j4EcMIdNuE0hHwIbiuDNoGbjYe5Y2PD1yo42PrgEc/MEVQPUMrIe4GIoNUbGQDHCIoZ5hhyWjXlQVSwF+7DVBVmNoRUQWFBEUOpc15oFh5Zp5uv/NbM+LglfN4THvndSVfYLON8XDUMG4BkAm/p/JyJZeuWDTtrB4tNrdTaolGIOtTmvJCK4kYV31GQi722vxQ/G9hKxX0tPb//nKu6wsgClnr57U0/b+15b9Z7phuOPXWl14nYH553hb8IEsaOT11h4AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -613,7 +615,7 @@ I think every code repository should have one. If you don&apos;t want people to 
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 35.58282208588957%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABdUlEQVQoz0WQ63LaMBBG/f6v1P5oUgOlgBOGazCxKZhLhK+SbGOTcKoYN9XMzre3Odpdi/bdbrdGy/LSWBPfU9T1Fa0L3t8//rU3vtY5RVH+7zVm5SZRVfUXNJWSRKZkSiK1RuYaXeRtrJBKmZ6syan8XpdKk5r6Z48VJCVpUbdjwiSa8m3/nY36g6d8BuGg0e65xzxbIEph/C5uuuYpeWYUO0RlZHTEOBxjHbKKOL9+jf2iV9hxl+Cyx8t9+skA32gv+sVCLThXZ7phDzdbM1JjBtIA65jfmYOTGOBRVgTphWt7n1W8oHt4YK93bLJXRqc+nvSwRYdZOmsm/ClsvNjF3zmst0Nzisio+Xj7hHUywE9odb0Dg7clM++RMN1xCj3Wmz6+AT5EHSZyzttF8CO0WaUu09BhfB6SmJXHYsBUGODRrCxUzUe78lYsmfiPnLMdx8hjue03uvA7bE9zc3zB3LfZCxf34LDaD8nyiJdgyDp45i8iTApkzzXfAQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 35.58282208588957%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABdUlEQVQoz0WQ6ZKaUBCFef9XSn5kJooxKA7lOkLAIC7Dern3AoIzfqmgmXRV1+nl1KnTbfCI2+3WY9Nc+uz7+4iuu6J1zfv7xz96X2tdUdfNf+4NjKpuaNvuU1RISSEFpZJIrZGVRtfVo1dIpRCy7Gequu+l0ggle44RFQ2i7h42YZ4t+HL4yk79xlcBVmr1aCYjVuWauIkxExNXeMyKF6a5TdZkTPMpTupgHMuWvLp+2n7VWwa5SXQ54FcB48IiqAJG2Q/Wak3SJpjpCLf0mCoHS9pkXc7P0sYuHIyTbInEhevjP9t8jXl84qD37MpfTM9jfOkziIcsxbJ3+D0e4Ocuwd7GCydIneGFFkE4wzjLlr+i7fUuGL1tWPrPpGLPOfXxdmMC6fOUDZnLFW+XmG/pgK1wWaQ2TjKhaDKc2GIRzzBOZUusOj4eJ4fxhnnwTFLuOWU+m3Dc4zoYEp5XCBWzCgYcYhf3aLM9TCirjNdoghe98AciTApkH59zrAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -627,7 +629,7 @@ I think every code repository should have one. If you don&apos;t want people to 
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;To make it short: &lt;/p&gt;
+&lt;p&gt;To make it short:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;1 line = 1 week of events for one person;&lt;/li&gt;
 &lt;li&gt;events may overlap (Bob has one on Monday morning).&lt;/li&gt;
@@ -648,6 +650,7 @@ Unfortunately, they&apos;re not working with parameters. In other words, you can
     }
   }
 }
+
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;I had to find something else.&lt;/p&gt;
 &lt;h2&gt;Memoization to the rescue!&lt;/h2&gt;
@@ -715,7 +718,7 @@ export default {
   }
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;💡 Tips&lt;/strong&gt;: &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;💡 Tips&lt;/strong&gt;:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;don&apos;t forget to add &lt;code&gt;this&lt;/code&gt; before your method&apos;s name.&lt;/li&gt;
 &lt;li&gt;feel free to adapt the cache key with your needs!&lt;/li&gt;
@@ -793,7 +796,7 @@ export default {
 &lt;h2&gt;Let&apos;s get it started!&lt;/h2&gt;
 &lt;p&gt;For this article, I&apos;ll take a small app I created.&lt;/p&gt;
 &lt;p&gt;👉 A demo is available here: &lt;a href=&quot;https://vue-testing-library.netlify.app/#/&quot;&gt;vue-testing-library.netlify.app&lt;/a&gt;&lt;br&gt;
-👉 Code is here: &lt;a href=&quot;https://github.com/maxpou/vue-testing-library-sample&quot;&gt;github.com/maxpou/vue-testing-library-sample&lt;/a&gt;  &lt;/p&gt;
+👉 Code is here: &lt;a href=&quot;https://github.com/maxpou/vue-testing-library-sample&quot;&gt;github.com/maxpou/vue-testing-library-sample&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; &quot;
@@ -807,7 +810,7 @@ export default {
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 42.331288343558285%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAABc0lEQVQoz02Q626cMBSEef8naBJV6ks0qdS36K+kbbKEhQWW+9VgY389GDWbI43sGY99xid4fDD8+Lrx8xs8PTi+f7EH7uzB7z5zPB7vb759/5kHYLFuZdWzX8FxlMVsC7favEcbJQ79oe77G3f7g6DUTHiKqMray8uyEEURf36/kiQJxmjxKOL4wjlKaJoW5xzbZsiy3GOzRjQIps5RxBtJOJBFivYKzdVyfh14eymJ/va0hfX6NV65hCPVxdKVjiZ3/k76PlOnknORhKtyjK0lizvqQqFGSThBlUuisKYpVs/VAGU2k55b79+1sZUg743Hrkng48sOiZ6njFP/MZt+6CmKknmePN9nVzcleZ6Jr/Mztnajqio/gp3vFYwNpCfD86+c8KWnzqTzMNF1ncwmo+974TNVAqfnzvsub5q+NvLwIE0LyrJkGAaZtSHQq5P48n8F6+w8jDboVXusgr1B3yg5w/uWfV0sWh/n/73bZvkHvqFdp6tPHZQAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 42.331288343558285%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAABbUlEQVQoz02Q626cMBSEef8naBJV6ks0qdS36K+kbbKEhcUsdwwYX78Ko2ZzpNE5M55jy5M8Plh+fHX8/AZPD4HvX/yBO3/wu8+ciMf7m2+fP/MEPD5otFljh8BRHus2buWix1hFwHyo+3zjYb8QlFpJTxlt00V52zayLOPP71eKosBag1KKPL9wzgr6fiCEgHMWIaoI5y0hQLKMgTp3FKlEZIrhCv3Vc36VvL00ZH8nhtpH/ZprLulMe/GMTaCvQtwp31e6MmC2QKJVYB48Ih/paoWaYVugrRR52tHXOnIloREr5XmI/l2bB0fx3kfsmrMcXw5YRFUyL9NHNpOcqOuGdV0i37Pr+oaqEszLGDP23tG2bYxg53slcw/lyfL8qyJ9megEzHJhHEeEEEzTxCxX2gJOz2P0Xd4MU2eZF0ld1zRNg5QSay2J0YFtCRgFeg0R1liMNhFam/jA1Cv0SvRte988xhzn/73Oef4BvqFdp8xGR/cAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -869,7 +872,7 @@ Let&apos;s test the following scenario: if the user types &lt;em&gt;&quot;wing&q
 &lt;p&gt;To write text in an input text, we use &lt;code&gt;fireEvent.change(selector, options)&lt;/code&gt;. If we wanted to &quot;click&quot; on something, we would use instead &lt;code&gt;fireEvent.click()&lt;/code&gt;. Keep in mind, &lt;code&gt;fireEvent&lt;/code&gt; returns a promise, don&apos;t forget the await statement before.&lt;/p&gt;
 &lt;h3&gt;queryByText() vs. getByText()&lt;/h3&gt;
 &lt;p&gt;When you want to test a missing text, &lt;code&gt;queryByText&lt;/code&gt; is the prefered way.
-Remember, &lt;code&gt;getByText&lt;/code&gt; throws an error when the text is not present! &lt;/p&gt;
+Remember, &lt;code&gt;getByText&lt;/code&gt; throws an error when the text is not present!&lt;/p&gt;
 &lt;p&gt;I mentioned before, I use Jest-dom. To extend Jest&apos;s &lt;code&gt;expect()&lt;/code&gt; function, you need to register it on the config files (&lt;a href=&quot;https://github.com/maxpou/vue-testing-library-sample/blob/master/jest.config.js#L6-L8&quot;&gt;like this&lt;/a&gt;).&lt;/p&gt;
 &lt;h2&gt;Testing the router (with vue-router)&lt;/h2&gt;
 &lt;p&gt;Usually, Vue.js components are not aware of the router. We have to provide the routes to the render function.&lt;/p&gt;
@@ -973,7 +976,7 @@ If you&apos;re lost, don&apos;t worry. &lt;strong&gt;&lt;code&gt;getByText()&lt;
 &lt;li&gt;&lt;a href=&quot;https://testing-playground.com/&quot;&gt;testing-playground.com&lt;/a&gt;: you can copy/paste your HTML and they will tell you which query is the most appropriate.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Also, when you hesitate, &lt;strong&gt;think about your users&lt;/strong&gt;. How do they interact with your app?
-For a login feature, do you want them to: &lt;/p&gt;
+For a login feature, do you want them to:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;fill their credentials in a textbox with a &lt;code&gt;class=&quot;form form-password&quot;&lt;/code&gt;?&lt;/li&gt;
 &lt;li&gt;fill their credentials in a textbox labeled &quot;password&quot;?&lt;/li&gt;
@@ -987,17 +990,15 @@ The idea behind this decision is to prevent developers from &lt;a href=&quot;htt
 &lt;p&gt;Here&apos;s what you can do:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;add some &lt;code&gt;console.log()&lt;/code&gt; in the lifecycle component (&lt;code&gt;mounted&lt;/code&gt;, &lt;code&gt;updated&lt;/code&gt;...);&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;use the &lt;code&gt;debug()&lt;/code&gt; function provided by the library.&lt;/p&gt;
+&lt;li&gt;use the &lt;code&gt;debug()&lt;/code&gt; function provided by the library.
 &lt;pre&gt;&lt;code class=&quot;language-js{4}&quot;&gt;it(&apos;should test something but it\&apos;s not working&apos;, async () =&gt; {
-await render(App)
+  await render(App)
 
-screen.debug()
-// screen.getByText(&apos;broken assertion&apos;)
+  screen.debug()
+  // screen.getByText(&apos;broken assertion&apos;)
 })
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Then, when you &lt;code&gt;npm test&lt;/code&gt;, component DOM will be printed in the console (with a nice syntax color).&lt;/p&gt;
-&lt;/li&gt;
+Then, when you &lt;code&gt;npm test&lt;/code&gt;, component DOM will be printed in the console (with a nice syntax color).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;🙋🏽‍♀️ Help, &lt;code&gt;debug()&lt;/code&gt; give me a truncated output!&lt;/p&gt;
@@ -1083,7 +1084,7 @@ Let&apos;s see how we can remove this block!&lt;/p&gt;
     .catch(err =&gt; [err, null]);
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;As you can see, this function can return 2 different values: the error &lt;strong&gt;or&lt;/strong&gt; the fulfilled value of the promise. &lt;/p&gt;
+&lt;p&gt;As you can see, this function can return 2 different values: the error &lt;strong&gt;or&lt;/strong&gt; the fulfilled value of the promise.&lt;/p&gt;
 &lt;p&gt;Now in your code, you can remove those &lt;code&gt;try..catch&lt;/code&gt; and replace them with the following:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;import { to } from &apos;utils/async-utils&apos;;
 
@@ -1149,8 +1150,8 @@ describe(&apos;Foo.js&apos;, () =&gt; {
   });
 });
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now, if you run &lt;code&gt;npm run test -- --coverage&lt;/code&gt;, you will get... 100% code coverage. In other words: &lt;strong&gt;You don&apos;t need any assertion to cover code&lt;/strong&gt;. &lt;/p&gt;
-&lt;p&gt;The example itself might sound ridiculous because dev usually don&apos;t write empty functions or tests like that. Ok. &lt;/p&gt;
+&lt;p&gt;Now, if you run &lt;code&gt;npm run test -- --coverage&lt;/code&gt;, you will get... 100% code coverage. In other words: &lt;strong&gt;You don&apos;t need any assertion to cover code&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The example itself might sound ridiculous because dev usually don&apos;t write empty functions or tests like that. Ok.&lt;/p&gt;
 &lt;p&gt;Let&apos;s take a more realistic example.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;// shop.spec.js
 describe(&apos;Shop&apos;, () =&gt; {
@@ -1188,22 +1189,20 @@ When I get the code coverage report, it says that one scenario is not tested: wh
 &lt;p&gt;Some dev didn&apos;t write code for confidence but to make the CI build green. As we saw before, if you understand how code coverage works, it&apos;s super easy to trump this metric.&lt;/p&gt;
 &lt;p&gt;Here are a few example of low quality tests:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;a dev couldn&apos;t test an &lt;code&gt;if&lt;/code&gt; statement. So he updated the code to trump the coverage and get the 100%.&lt;/p&gt;
+&lt;li&gt;a dev couldn&apos;t test an &lt;code&gt;if&lt;/code&gt; statement. So he updated the code to trump the coverage and get the 100%.
 &lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;function myFunction(something, unitTest = false) {
-// code
-
-if (weirdAndHardToTestCondition || unitTest) {
   // code
-}
 
-return whatever;
+  if (weirdAndHardToTestCondition || unitTest) {
+    // code
+  }
+
+  return whatever;
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.maxpou.fr/10-tips-write-better-tests#8---avoid-implementation-detail&quot;&gt;implementation detail&lt;/a&gt; a.k.a. tests that result with false positives and false negatives. You have a lot of them when you search for react/vue components on GitHub;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;reducing code readability when code cannot be tested. Less lines of code === less uncovered percentage. You can also write more verbose code on the covered part to gain even more percent.&lt;/p&gt;
+&lt;li&gt;reducing code readability when code cannot be tested. Less lines of code === less uncovered percentage. You can also write more verbose code on the covered part to gain even more percent.
 &lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;// given generatePdf() is hard to test...
 const filename = `${user.name}-${user.lastname}.pdf`
 const data = formatData(user.data)
@@ -1229,7 +1228,7 @@ const PDF = generatePdf(`${user.name}-${user.lastname}.pdf`, formatData(user.dat
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 69.93865030674846%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAABYklEQVQ4y42T4a6DIAyFff9XdFm8Jro55zRMkAJJRwuict3N/XHSSOGzPZTCGIPWWqQIAByNgT8U85AprhcEeb1eCRbiGdjwQUgAu5NJ0IKqa5oGl2XJgCcg/knsZpmj3j63pH0M7Pv+BGgyGxyCVgjzgPB+hLjKryegc+4EaDZvLIEWD+kDSAm/R4dKfY5+dGhZSol1XW8e7pJ0CKT3V3TcXu4ZHDyNlzKOI14ul6xFy1UwSI4JtB3OL26LhRACq6raeecPaulht1AVtZVV8XWUCDhNE16v1wAkv+jWxD35tF2K+VJVBlRK8dhooFEQqAkWvYSdT/8RA53zY/McUEuBZn7wq2HFF7S+IrP7PtPqf2H92NyaGkX/g1StlCR5kNY65uQvKSVxnmfeE1+Kw6G/Y9fdfaVPnsm9uq7DsiyxbVt8nuRpjSwjKFXKb5mqdCwb4ybaRBdHg79+H/eE77XlD+tdQb6E4fCXAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 69.93865030674846%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAABYElEQVQ4y42T627DIAyF8/6v2KrqIqVtRppUNBAMSGeyITeWTvtxZBHgi32MK+89QgjgSEQSvac/lPepUP5eMaTv+wWW4hHYy0VaAGEjv0Arzq5pGkzTVAAPQPKTXM00Zr1BNC3nBKiUOgD6woYIchY0PkHv7xRnObsCY4wHQL96Exg0gd4qgawGkUuZhig/2pVsjEFd16uHm02+RKYH6VbKKz2jnae5KcMw4Hw+FyUGyUJAZlhA6+WycWustNa4Xq8b7wLIGZC+p6y4rCKLj0+Jga/XC5fLJQHZL+6afiw+rU3xH7IqgNZaeTaO+CloOIZlL2nj038kwBgDVPeEMxp+/JapEeUJmqfIb9ZHmv2vQoy4NzW0+gJnawzL7OScy3vml6w1GMdRzuRJiXiqB9r2AdV18ia3atsWp9MJt9sN3cE+f2PLGMqZyixzllEUclzFh7hx/PDn9f5MWs8l/wDrXUG+9YANQwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -1342,7 +1341,7 @@ it(&apos;should paginate when &gt; 10 products&apos;, () =&gt; { /* ... */ })
 &lt;p&gt;Sharing a state between tests is a bad idea. They&apos;re hard to debug and soon or later, you will face weird issues caused by side effects.
 &lt;strong&gt;Always keep your tests isolated&lt;/strong&gt;. Tests should not depend on each other.&lt;/p&gt;
 &lt;h2&gt;#3 - Keep it flat&lt;/h2&gt;
-&lt;p&gt;I tend not to write any condition (if/else/...) in my tests. If your test has an if condition, maybe you are testing 2 different things. Which means, your test may have too many responsibilities. &lt;/p&gt;
+&lt;p&gt;I tend not to write any condition (if/else/...) in my tests. If your test has an if condition, maybe you are testing 2 different things. Which means, your test may have too many responsibilities.&lt;/p&gt;
 &lt;p&gt;Remember the S of SOLID (S = Single-responsibility Principle). If it makes the coffee, toast your bread and fetch the forecast... there might be something wrong.&lt;/p&gt;
 &lt;h2&gt;#4 - Only mock what you can&apos;t control&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -1397,13 +1396,15 @@ expect(wrapper.state().liked).toBe(true)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;What&apos;s wrong here?&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;False positives:&lt;/strong&gt; (aka &lt;em&gt;false alarm&lt;/em&gt;) It looks like an error but it&apos;s not.&lt;br&gt;
-Let say, you want to refactor the component. By refactoring, I mean changing the implementation, not in the behaviour or the contract (props, events...). Otherwise, it&apos;s not a refactor.&lt;br&gt;
-If you rename &lt;code&gt;liked&lt;/code&gt; to &lt;code&gt;isLiked&lt;/code&gt;, the test will fail. And it should not. We write tests to fail when something goes wrong. Nobody cares about a variable name! But, it&apos;s a different story when it comes to behaviour. Only test what matters!&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;False negatives:&lt;/strong&gt; (test pass but it shouldn&apos;t)&lt;br&gt;
-Instead of verifying the output, we check the internals. We can&apos;t be sure the output still works as expected.
-This scenario can happen because we did not test the app in the same way as your final user will. In other words, our users and other devs who are going to use this component don&apos;t really care about the magic inside the component.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;False positives:&lt;/strong&gt; (aka &lt;em&gt;false alarm&lt;/em&gt;) It looks like an error but it&apos;s not.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Let say, you want to refactor the component. By refactoring, I mean changing the implementation, not in the behaviour or the contract (props, events...). Otherwise, it&apos;s not a refactor.&lt;br&gt;
+If you rename &lt;code&gt;liked&lt;/code&gt; to &lt;code&gt;isLiked&lt;/code&gt;, the test will fail. And it should not. We write tests to fail when something goes wrong. Nobody cares about a variable name! But, it&apos;s a different story when it comes to behaviour. Only test what matters!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;False negatives:&lt;/strong&gt; (test pass but it shouldn&apos;t)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Instead of verifying the output, we check the internals. We can&apos;t be sure the output still works as expected.
+This scenario can happen because we did not test the app in the same way as your final user will. In other words, our users and other devs who are going to use this component don&apos;t really care about the magic inside the component.&lt;/p&gt;
 &lt;p&gt;To avoid implementation detail, &lt;strong&gt;treat your component as a black box:&lt;/strong&gt; only test the inputs and the outputs.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -1418,7 +1419,7 @@ This scenario can happen because we did not test the app in the same way as your
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 40.49079754601227%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAACdElEQVQozxWRTUjTcRzGH8c2083NOV+oSJsSlhU13UE8pL1YiB1ED1EGBXUxu2lzbc6tvemcKRlSQZ2KRKJMar7szWw2YZ06dOjiaIovoJRz6X7/uX37+8BzeQ4fePigzraFejsHmMJAJoF+AbtTKGAeQZQLqYlb0CRY6AzjFqr4nk6w+QpiAUU0PoFCCgL+EbWg3kEoNX0FOu1AnS2WednGDlT2jIk0vQ7p26FqxNwoSngEa8wrJubLSjO/hBJeKe26JWnmFRLzZKxRAPm+kRK0Nt1Go21bojIFpTxQjFrrpqzBQYeh44er12QtjQMyCiOX+aUrLHSW2Fxxivt2NB2fKElvvlCmOD8oMYPV1Q/CIvBp79BX1Lmo8GD3x3I8MObiutEN6xUIDAb9aH9f7w+jybLV/+jucNqPxUSokliwPMV82ZSYzqDdGUE66QVtfsrac9k7on3OwYjVYqEubeedNm0PXnbrBCACbtx/ItQbDF2uAdczk9k+NWy72bbnw28WPE5sQZNi8yeJzYC/inQyAIpNiraH++5ZnP2DWpvF+Ebf2X6q1TAG6J4Dzlfvys5bSQXzcjGau+WffQ2gHUj4WytsNp/YbOEe3xSblaV23NnJ2FgmcT4sURRK1JBIqSW5aohyai2rR0S6pyqcs/4rvmDbLqi3rJc29S4dy35Issh7+SHml2+wfcuhKto3mwxrKD6ppr+jZcQFMjZWxktUJ3pI2uyM5DVY13NrrGt5Yu3jPFSbOVx0xFFr/gO0EH5OqMFNQ8lLCbOAfJkHLzJ/ToT5FRHui2KRm5MuJzzC78lpKMZf3wLaCJfs/8ADIdYN4T8JmkySTKb5TAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 40.49079754601227%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAACdUlEQVQozxXRzUuTARwH8K9jm6lzc75MKtKmhGVF+XIQD2kvFmKH0EOUQUFdzG7aXM4524tvMyVDKqhTkUiUSfmyl2dmswnr1KFDF0dTfAGl1KnP75nbL/z8Cx9U2jdQ5ZAASxBIZPBvYHcSWeSWhaVAEUtzpSIFzpA0V0LS3GmRZguZfNpwZAw69gPCUJGsqpORZ/kGNDuASvtm4mU7HShuH1GUdnWq3g2UYXMc2aJbtkIeJZM3KU5CCoseFe+Op8TJI2dyJ6ywD5neoVzUX7uDGvtWit7iV6HZoUSFbV1d3cmHYfSrcPW6uq6mT81BpJGgWqLAWaaZnJj0/Wg8MpYbX3+ZEZMEsOjC8vJHeTYANDa1FlY6WXew7VMBHprTcMM8DtsVyEym1uHe7q6fZot1o/fxvcG4gHkxUMzkL4iRN5nFqQTedcniUQ94/XPSntPRFO7u6Q/ZrFZuMTTfbTC041WbUQZm4OaDp/JWk6nF2ed8bulwTA7abzXsefGH/MeZ5kpjNHuSyQUmN+JRH3hzQrE12H3f2tPbb7BbzW9bmxtP1ZtGAOMLoOf1+/zzNtajYzEHtW2aL95q8A5SRBeWaDqTaVq3R9O6GE2rYzvjydHNkUSWvFjgMDJQzooMA2v0A5xaYV0+ojA+0+OcbTvngn0rq8q6mneta+FY8iNWhz5oDpGgWaP95UAJ789Gg6UcmSjif8P5LPkS1pZGc/Un2llV2xNKr7atppXbVtKVhifpKOuQcLEzgoqOv0Ad49dYEaQpZJCgCpJPs0iCZp6E1BAJ2pD0VTsvzagWRbf8R3QK2tE3t4EGxiXHNsptK1AaB/AfCZpMkqxdfoUAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -1491,12 +1492,12 @@ We should all write tests for &lt;strong&gt;confidence&lt;/strong&gt;. Confidenc
 &lt;p&gt;You can leave a message on the section below if you think I forgot an important point... or if you just want to insult me :)&lt;/p&gt;
 &lt;p&gt;This post was the first one of my &quot;testing series&quot;. In the next weeks/months, I plan to talk about code coverage, good practices in Vue.js testing and also how to test JAMstack/Gatsby applications.&lt;/p&gt;
           &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(This is an article posted to my blog at maxpou.fr. You can read it online by &lt;a href=&quot;https://www.maxpou.fr10-tips-write-better-tests&quot;&gt;clicking here&lt;/a&gt;.)&lt;/div&gt;
-        </content:encoded></item><item><title><![CDATA[How to generate social share images with Gatsby]]></title><description><![CDATA[TL;DR: Generating share images can be done in 3 steps:   create a preview page;   screenshot it (with Puppeteer);   add the image in the page's metatags.    When you spend hours writing a blog post, you want it to stand out, not to be lost in a feed…]]></description><link>https://www.maxpou.fr/generate-social-image-share-with-gatsby</link><guid isPermaLink="false">https://www.maxpou.fr/generate-social-image-share-with-gatsby</guid><pubDate>Mon, 20 Jan 2020 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-&lt;p&gt;TL;DR: Generating share images can be done in 3 steps:  &lt;/p&gt;
+        </content:encoded></item><item><title><![CDATA[How to generate social share images with Gatsby]]></title><description><![CDATA[TL;DR: Generating share images can be done in 3 steps: create a preview page; screenshot it (with Puppeteer); add the image in the page's metatags.  When you spend hours writing a blog post, you want it to stand out, not to be lost in a feed. That's…]]></description><link>https://www.maxpou.fr/generate-social-image-share-with-gatsby</link><guid isPermaLink="false">https://www.maxpou.fr/generate-social-image-share-with-gatsby</guid><pubDate>Mon, 20 Jan 2020 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;TL;DR: Generating share images can be done in 3 steps:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;create a preview page;  &lt;/li&gt;
-&lt;li&gt;screenshot it (with Puppeteer);  &lt;/li&gt;
-&lt;li&gt;add the image in the page&apos;s metatags.  &lt;/li&gt;
+&lt;li&gt;create a preview page;&lt;/li&gt;
+&lt;li&gt;screenshot it (with Puppeteer);&lt;/li&gt;
+&lt;li&gt;add the image in the page&apos;s metatags.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;span
@@ -1527,7 +1528,7 @@ We should all write tests for &lt;strong&gt;confidence&lt;/strong&gt;. Confidenc
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;When you spend hours writing a blog post, you want it to stand out, not to be lost in a feed. That&apos;s why having a social share image attached to your blog post is crucial. People are drawn to visual content. Our brains respond very quick to images in comparison to plain text. &lt;/p&gt;
+&lt;p&gt;When you spend hours writing a blog post, you want it to stand out, not to be lost in a feed. That&apos;s why having a social share image attached to your blog post is crucial. People are drawn to visual content. Our brains respond very quick to images in comparison to plain text.&lt;/p&gt;
 &lt;p&gt;The idea behind this post is to show you how to generate preview images like this for your Gatsby.js website.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -1542,7 +1543,7 @@ We should all write tests for &lt;strong&gt;confidence&lt;/strong&gt;. Confidenc
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 74.23312883435584%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAADyElEQVQ4yz2S+1OUdRTG959pmqYsM8kUU0KZ0RrHmGSRBeWmZirhjYW9aCp7Ze8C7i6oLOuNRGtyV21Gwoy8FC27sMstzMymGi1R5LrozKezi/rD857nfc45zzzf7/sqLnXF0brOYWsO4ToawtsS4uSpEO1tYS6cDXOto4sfv+vih8uddFzs4Jtzl2j/8iLHT4TxBsK4ZcfiD1HjOs+J8C0UzuAVcjY5+GS7m5JKFzuq3Gh0HjQaJ26rj45vO7gcuiS4zNUrV3Hbj6GucaHW1bOtykNhhYv1FW5Wb3Ggdn+Fwt9+jaUbrWRvNLFll5PdGg97ZWFPtRO9zoWzzs9hmw93nQ+HrRmt3kNllZOK6sMUVTjI+8zOh+VWlhSaOOC/iKKh7XsxrCNTZaDKHMTha8flPYvN3Uqt2Y/Pf4Zg63kCgXN46oPYPCc4YG3BXN+GwXOanYeOsVoMl2+0YGoWQ8+ZqywqsvD+BjNZAuVWK7v2+9DV+tmjcfOFsQmLM8B+g49DVjnuQT/7rAH21h5lzWYrq8qs5JRaeXu9EUNTGIVbDBeoLLyrMrNYYn+02YbacIwa03F26v0cdJ6kUtdIpd6LVrStNQ2oTS2UqhtZKvOLC828lW/itTwDmiMhFI7TnbxZYGb+ehOLpJlZZGZZoYGcEitvZKxibf6nFO1qQFXhJG+bg4JKT/q+l6iMZG6wsED25uUbeWWdAXXjBRR2MXxVaeT1vFrmKQ0skOZilZhL4o9XZuM16lHubUIphuvka6p215NVbGGhHDH1IbJL61go5u8IdF5JaD3ZwfxiGxkldt4TZJba+aDcQfYmJ7k73KyVO80ut7NSsKLMznLpLy9zsEJ+tSzBss0uMkptLCyuozqd8FQnOTv95GoC5Na0oNS1kq8NoJKq0rZSINigf459QdEDFOiDKLWpGmBN9XFyhed8foTdnq9RPBgdo/N6N7ei/WlcuxmhOzbAjV/6+FlqpG+I7t7BNL/e3ZvmqZkbkTg3exJpdP0UZfDOX9wffYJicmqaSKSHSE+UaKyXeDxBnyDRP0D/wACx3j7h/cQTCXqiMUZu36YnPRtjaGiYqGi/3/2DmeQsydmnKCYmp2VhkLgYjNy+I3WQ/sFhBoZ+fVlTvWhvnMTAEIPDIwyP/EasL5HWU/N37t7j39HHTE4nJaE87v19nz//eUDq+P9J49GTCUYfP+HR2Dhj41M8fDTGQ3l/LHqKp/pzfE4bfd5LG85KzImpGcYl6aTU5NNn6ejJ2bk6k+Jp7dlLPvNCf6GlavJpGv8DHb1bnp9FL4AAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 74.23312883435584%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAAD3ElEQVQ4yz2R+1OUZRzF33+maZqyjDRTSAllRmscY5IF3gVkAc3UDW8s7EVT2dvL3t4VdXdRYMFrgjW5IM1IkJGXItiFvQBhZjbVaMn9jjOfZl/UH85zzpxz5jvf53mEG91RDJ4WHGdDeM6F8DWEuHAxRPOVVq5fbeVWRzc/ftfND+2ddLR18E3LDZq/bKP+fCu+YCvyuRD2QIhKzzXOt95DcDfdJLPUxSd7ZYrKPOwrl9Ebvej1bmTJT8e3HbSHbtAeaqfrZheysw5dpQedsYY95V7UWg+5Wpktu1zo5K8QAs23SCuUyCi0suuAm4N6L4crPRyqcGMyenBXBzjp8CNX+3E5zmIweSkrd6OtOEm+1kX2Z04+LJFYp7ZyLNCGcOrK96QVVpMqmim3NeHyN+PxXcUhN1JlC+APXKap8RrBYAvemiYc3vMckxqw1VzB7L3E/hN1bCmR2FBox3q2DcF7uYs1+XbeL7CRXmBDtVviwFE/xqoAh/QyX1hqsbuDHDX7OSHVoTse4IgU5HDVObbulNhcLJGpkXg714K5thVBvtxFimjnXdHGWrWVj3Y60JnrqLTWs98U4Lj7AmXG05SZfBis9eyuPIXO2oBGd5o0tZW1ahtv5Vh5LduM/kwIwXWpkzfzbKzMtbJGbSM138Z6tZnMIok3Vm9mW86n5B84hah1k73HRV6ZV3nvdaKF1AI7KblWVuRYeGW7Gd3p6wjOS528qrLwenYVK1RmUnIsrBWtrBFtfLwpA5/FhOpwLSqtm+1aGfFgDek77KzKtSgfkaGpZpVo4R3RgtEXQpAudLByh4PVRU7eK3KSqnHyQYmLjFI3Wftktu2WyChxsqnEycZiJxs0TjYUu9hY6iK91MX6nR5Waxys2lFNhbLhxU4y9wfI0gfJqmxAZWwkxxBENDYiGhrJMzRSYHqOI02IxiB5piZUhiQH2VpRT5YhSObnZzjo/RrhyegEnbd7uBeOK7h1t5eeSII7vwzwcyRB78AQPf2Dir7d06/oZOdOb5S7fTEF3T+FGXzwF49HJxFmZufo7e2jty9MONJPNBpjIBojFk8QTySI9A8Qi8eJxmL0hSOM3L9Pn9KNMDQ0TDgc4feHfzC/sMjC4hLC9Mwcsfgg0XiCkfsPiMYHiQ8Okxj69SUns3B/lFhiiMHhEYZHfiMyEFP8ZP/Bw0f8OzrOzNwCQvJ49Pdj/vznCcnr/zc6ztjkNKPjk4xNTDExNcvTsQmejk8yPjmt6GS+rJe90eeZMnBxcYnp2XmmZuaYmZ1nYemZsvrC4jLPJ7XiPXup51/4L7wkLywp+B8dvVueGWj85AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -1557,10 +1558,10 @@ We should all write tests for &lt;strong&gt;confidence&lt;/strong&gt;. Confidenc
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Social share images are used by social media (Twitter/Facebook/LinkedIn...) and also some conversational applications (Slack/Telegram/WhatsApp/...).&lt;/p&gt;
-&lt;p&gt;Before we start, keep in mind that Gatsby is static website generator. We can&apos;t generate images &lt;em&gt;&quot;on the fly&quot;&lt;/em&gt; as we do with other dynamic languages (i.e. PHP...). &lt;/p&gt;
+&lt;p&gt;Before we start, keep in mind that Gatsby is static website generator. We can&apos;t generate images &lt;em&gt;&quot;on the fly&quot;&lt;/em&gt; as we do with other dynamic languages (i.e. PHP...).&lt;/p&gt;
 &lt;h2&gt;Step 1: create the preview page&lt;/h2&gt;
 &lt;p&gt;The preview page is meant to be screenshotted and only screenshotted!&lt;/p&gt;
-&lt;p&gt;Your blog post page should be generated with something like &lt;code&gt;createPage()&lt;/code&gt;. So, we are going to duplicate this statement to create the preview page. &lt;/p&gt;
+&lt;p&gt;Your blog post page should be generated with something like &lt;code&gt;createPage()&lt;/code&gt;. So, we are going to duplicate this statement to create the preview page.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-js{13-18}&quot;&gt;// gatsby-node.js
 posts.forEach((post, index, posts) =&gt; {
   // create the blog post page
@@ -1594,8 +1595,8 @@ If you wrap the &lt;code&gt;createPage&lt;/code&gt; in the following &quot;if co
 &lt;/code&gt;&lt;/pre&gt;
 &lt;hr&gt;
 &lt;p&gt;Then, we need to create the &lt;code&gt;blog-post-share-image.js&lt;/code&gt;. In the GraphQL query, fetch fields you want to use (post title, time to read...). And render everything in a rectangle (i.e. 440 x 220 pixels).&lt;/p&gt;
-&lt;p&gt;If you want, &lt;a href=&quot;https://github.com/maxpou/gatsby-starter-morning-dew/blob/master/src/templates/blog-post-share-image.js&quot;&gt;here&apos;s the template I use for maxpou.fr&lt;/a&gt;. Now, use your HTML/CSS skill to make the nicest preview 💪. &lt;/p&gt;
-&lt;p&gt;After that, the preview should be accessible at &lt;code&gt;http://localhost:8000/your-article-slug/image_share&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;If you want, &lt;a href=&quot;https://github.com/maxpou/gatsby-starter-morning-dew/blob/master/src/templates/blog-post-share-image.js&quot;&gt;here&apos;s the template I use for maxpou.fr&lt;/a&gt;. Now, use your HTML/CSS skill to make the nicest preview 💪.&lt;/p&gt;
+&lt;p&gt;After that, the preview should be accessible at &lt;code&gt;http://localhost:8000/your-article-slug/image_share&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; &quot;
@@ -1609,7 +1610,7 @@ If you wrap the &lt;code&gt;createPage&lt;/code&gt; in the following &quot;if co
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 59.50920245398773%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAACUElEQVQoz5WS20sUARjF9w/pKYgiKl8igwhCIgpCgoIiU4KMknVN2S5EecEUStI23d1q7aXypUiCQnqLsqfytXuZrrq77czuzOzObW+zvz4lox5K/OBwvoeZc843c3w7mkMcbhvmzNkbXO+NMP7gEY/vPaSvO8zp4E3qW0Ls64ixkFKYSeb4nHJRMgaqqqLrBoqiYhg50mlFdgVf7YkQDcEonf136e27w+3wfW5FxujqH6W9Z5SDYrY/GCNjWKTVLFpG5V/jeR6+jceH2No4QNO5KIGLYTo6owR7YgS6RznQNsLmo9fYHoiSzduksiZZSWXbFo5j47ou5aqHJyhXKlS8Kr41TYOsO3KVmmND7Dnkp7H1CvWBMHXNg9SI2IaGAbb4ozgFeblQwEgbcr5OVstjGibkHGwxK4kBlPCtPTnMppYw21oi7G4Ns7ctSl1rlJ0iUuuPsP7UCLvOxxh7a+Ifd+iasLj0zOTyhEmvcOipztDzDBeeWLQLfLrlopkuhvDirv+xa4JM3sF0XOJahTfxEpPv0rz+qPLyfZoXglefFKa+ZZn8kmdqThKyqqmiJ3JYcwaJlHzPpImWkJ+VsUkkVTTdxFetVlkJ3i8uFsskZzVmv6vMCafnDabjGgklTzZXkOuK/0+4KPKbBaWKx8yCifJV5cOsLt2zmZbEsz8saUABy6msQlDOLZVFMOngztvMJy30OVsM8sQVGy1foljyViOInFRAzblUPelcuYwUT3ZvyWx5VhRcFqtIceOqlLlQXCq07TiSqCipy389+xNANU4tHseUMwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 59.50920245398773%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAACVElEQVQoz5WSy0tUARTG5w9pFUQRlZvIIIKQiIKQoKDQlCCjZJxJmR5E+cAUUtImnZlqbFO5KRIhkXZRtiq32dvmoTPTvXfuY+a+Zu7ce3+hVLgp8YPD9y0Ov/MtTmBfW5ST4TEuXrrD7f44U0+e8fzRUwZ6Y1yI3KWxPcqRriTLBZFUvsSXgo1Y1JAkCVXVEEUJTSshCCKiKBKoPxulOZKge/Ah/QMPuB97zL34JD2DE3T2TXA8PMbRSJKiZiBIMkpR4l/yPI/A9jOj7G4ZpvVygtC1GF3dCSJ9SUK9ExwLj7OzaYi9oQRy2aQg68iqhmkaWJaJbdvUfA/P96i5Lq7nE9jUOsKWU7eoOz3KoRNBWjpu0hiK0dA2Ql3TENuah9kVTGBVbGqVCpqgsVxQkZUyuqZDycIsmziWCTgENp8bY0d7jD3tcQ52xDgcTtDQkWB/MEF9MM7W8+McuJJk8r1OcMqiZ9bg+ozOjVmd/hmd6AuV0ZdFrk4bdE4bBFTDRtFtNMNmJatrsmLYFMsWumWTUVzeZRzmPgi8/STxekHg1YLAm88i899l5r6Wmc86BNiQfNRcCSOrkSvoyHkdJWcgFE1yeQlF1Qn4vs964/32arVGPq2Q/iGRTSsISxqLGYWcWEYuVVD16v8brkD+uu/juB6pZR3xm8THtIogmCzmSqR/GhTkCoblbgCIj1PzSOUt7CWTpbyBmjVJLZfJiCZK2aHqeBsBgqpXkEo2vufi1mrgeviet3rsj9YF/oG5rktGMrEr1dWHNi2LqlPFWQGv2f0FQDVOLTeKQLQAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -1751,7 +1752,7 @@ If you don&apos;t have this component, you can get some inspiration from the &lt
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 57.668711656441715%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAACGklEQVQoz42Tz08TURCA94/x4s3Eg3rhiBdFjAZp4sWQiBgTJSWiGBMWGgmNoKK0tU04eAMuvZBwsAdjDGjbaIzttmAN0FahhbbbauyyPz7fblvTi5VJJvPm5c03M+/NkzKZDIqiEI/Hyefz2GKaJpZlOdqSlv8/lX7X6ximhelsiEAbaNl+A6xpGrquYxjGkeCSur8nIg/FMRFg6Q1LszLLpFAskvm2haqqIoHhwNsrb8vSAK7t1Hi3pfJ+WyW6I6zwPxV0YruH/PgFulZnPRYnl8uTzWbJC7svkpRKJarVKrVazVG7Awc4EdXwxDTmPh8SSup4P9p+nbG1OpGs7iQvln8iz4eZer5M4OUS4eUV3kbesBJexR9YZGpuidHHi8ST20h0lEZr+UKFs9dnGXA/46Hswzsd5NXCIrOzC4zJAYbu+zjTP8HrdQXJEGUaltV8iIa29uzHcoDFCt1Dc3QPeHGPBxmV/TzwBLk3GWJYDnFh6Akn+jxEPqSQOr2Y2bz8nKjw1LUZjl+UOd0/ySXXIH03p+m5MUPX1UecvOLhWO84q3aF/2y2DWhXeG4kSPetF/Tc9uEamcd1N8hld4DeO37OD/vpGnxKJJruDGypYZhsbH7lSyJJKr1BMr1JQkmhpNIkkoqj33f30MW5jsC/YGFLpTIHBwfOqFTFTJbLZbFWnfmsiLUmPogzNkcB2j/GbII7XpE49wfRsF9T/bwkAgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 57.668711656441715%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAACE0lEQVQoz42Tv08TYRjH+8e4uJk4qAsjLooYDULiYkhEDIkSiCjGhEIjoZGqVdpaEga3wtKFhMEOxhhAaDRGei1YA21PoaW9Xqvxjrv3PubuWtPFypN8877PO3yen68nm80iSRLJZBJZlrFNCIFlWY6a1vT/J89vTcMUFsJ5ABth34XlgnVdxzAMTNM8FtyjHh6AOAJMsAz3pJGZJSiWSmS/7aKqKkKYDrw185YoLnA1V+f9rsr6nspGTmU9V+dT0WBz/4gfv8DQNdY2kxQKMvl8Hrkgc1gqUalUqNVq1Ot1R3YFDnByQ8e3qRP8fMR8ysD/0fY1xlc1EnnDCV5SfuKdizP9YonIq0XiS8u8S7xlOb5COBJjOrjI2JMYydQeHtqaW5pcrHL+ZoD+kec88obwz0R5vRAjEFhg3Bth8EGIc72TvFmT8JiWhWlZjUG4ar7Zw3KApSqdg0E6+/2MTEQZ84Z56Ityf2qeYe88lwafcqrHR+JDGk+7iYlG8wvFKmduzHLyspezvVNc6Rug5/YMXbdm6bj+mNPXfJzonmDFzvCfxbYA7QwvjEbpHHpJ150QfaNz9N2LcnUkQvfdMBeHw3QMPCOxkWkPbMo0Bds7X/mylSKd2SaV2WFLSiOlM2ylJEff9w8wTNEe+BcMVCoK5XLZWZWaqqIoCrWa6uxnVVHQNc1dm+MA7R8jGuC2LRKCP9GwX1MVSXH/AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -1798,9 +1799,8 @@ If you don&apos;t have this component, you can get some inspiration from the &lt
     &lt;/span&gt;&lt;/p&gt;
 &lt;h2&gt;👨‍💻 Work&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;I am still working as a Sr Frontend Engineer at VSware where I&apos;m building software for education. &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;On a day to day, I work with:&lt;/p&gt;
+&lt;li&gt;I am still working as a Sr Frontend Engineer at VSware where I&apos;m building software for education.&lt;/li&gt;
+&lt;li&gt;On a day to day, I work with:
 &lt;ul&gt;
 &lt;li&gt;A (too?) &lt;a href=&quot;https://www.maxpou.fr/3-tips-scaling-vue-application&quot;&gt;big Vue.js application&lt;/a&gt;. I don&apos;t touch the backend (in Java).&lt;/li&gt;
 &lt;li&gt;Frontend Infrastructure: with interesting problems like scaling monorepo, continuous deployment/integration...&lt;/li&gt;
@@ -1808,8 +1808,7 @@ If you don&apos;t have this component, you can get some inspiration from the &lt
 &lt;li&gt;Interesting features to develop. For example, I created a sort of Google Calendar from scratch.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;I&apos;m still 100% remote and the most of my colleagues are in the same office in Ireland. In 2019, I spent a lot of time in Asia.&lt;/p&gt;
+&lt;li&gt;I&apos;m still 100% remote and the most of my colleagues are in the same office in Ireland. In 2019, I spent a lot of time in Asia.
 &lt;ul&gt;
 &lt;li&gt;timezone diff is great in the morning because I can work without being polluted by Slack;&lt;/li&gt;
 &lt;li&gt;timezone diff can be tough... when I was in Bali (+8h), I had to end meetings at 1 AM 😬&lt;/li&gt;
@@ -1826,8 +1825,9 @@ If you don&apos;t have this component, you can get some inspiration from the &lt
 &lt;h3&gt;✍️ Blog&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Last year, I published 7 posts, &lt;a href=&quot;https://www.maxpou.fr/tags/Git&quot;&gt;3 posts about git&lt;/a&gt;! Promise, I will be more diverse in 2020!&lt;/li&gt;
-&lt;li&gt;34k users and 62.5k page views on maxpou.fr. This is more or less the same numbers as last year.
-&lt;span
+&lt;li&gt;34k users and 62.5k page views on maxpou.fr. This is more or less the same numbers as last year.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; &quot;
     &gt;
@@ -1840,7 +1840,7 @@ If you don&apos;t have this component, you can get some inspiration from the &lt
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 17.177914110429448%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAe0lEQVQI14XK4Q7CIAwEYN7/IcemsjnngBWQwaZnFUn8YWKTL+2lJwa9QPsISjvyfgfw+KPO779QNqK1CR1rzArJWlsclgRFCScmP3kKG+bbht5ldJxr73WPIUMYv+JsPEY2aGYC+rpN2d+aC0FOhOOV3r3CQc0e2kU8AY485sC6JEpPAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 17.177914110429448%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAfUlEQVQI14WK2Q6CQBRD+f+PZFEBEZk7zCJcFo9RxPhgYpOTtmmT2vSYMOB0YVpW4P6HXb/3pLQDuVUKq6QykslIbjcOvVI65eSU7N3bONPdZio/UfT6+T1zEycSCSNnCTQSqE2glki1u2z+TXpxZK3jeHWv34an7ALGDzwAjjzmwGxcjV4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -1853,7 +1853,8 @@ If you don&apos;t have this component, you can get some inspiration from the &lt
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
-    &lt;/span&gt;&lt;/li&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;Cross-posted a few on &lt;a href=&quot;https://dev.to/maxpou&quot;&gt;dev.to&lt;/a&gt; (2,465 reactions - 85,568 Total Post Views).&lt;/li&gt;
 &lt;li&gt;My post &lt;a href=&quot;https://dev.to/maxpou/git-cheat-sheet-advanced-3a17&quot;&gt;Git: Cheat Sheet&lt;/a&gt; is the 25th most viewed post on Dev.to for 2019. And 30th all time 🤩&lt;/li&gt;
 &lt;/ul&gt;
@@ -1905,7 +1906,7 @@ The good thing is, we managed to take our camping at the end of the canyon. So, 
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 34.355828220858896%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABjUlEQVQozz2Q207bQBRF8//f0kIhqaCoKQ8VtNCGVCGJHRIwpa5jJ7bHc/MtSKvjROVhNDoazTp77d6PP5aPC83ZQnKxEFytNixfIqIoQmUbTBpjipy6aTDWorTGliVlad1cstxYgtQyCg19T9I7niuO55rhbMvUD3gMHSzZEuUGaWoK5e44Qq5DagepmhbrwFVd78E3v7ULpDjxNKeeOgC/BZJkvWW1Vvx80UxCSSwM60yS6QqjJFZKmiyhMQVl3bDbtcwiyfCh4NzZnTpg33fASJS8vu7eTtO2FGVLLCu0S7JIDDeBwFQ1qdA8rAJkErJJC66fO4h+g/W7hJ2G0sZ1UlJVFU2nYgxJLplEdq/xbqYZh5qrJ8mRq+duNOV28sQH33C5FAz8g/KJg/c+L93HvwqRpSRJgpCaQip8p9+fF/vtA//Qz8Ar9pAv05jbXytGd4+M75859yVn7u2TJ+h12yeRobaabZqTC+E6VLyfHXQ6lQ62V/s/d8n8nO/3IdfjgKGXceEXfJ0n/AMnPP+ce8TYzgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 34.355828220858896%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABiUlEQVQozz2Q3VLaUBhFef9naWsVHK1T2ouOttoiTgSSCBpr0wOB/Jz/JODM6gSmXnwX+2btvb7ezz+O09hwFisu4orLxZr5i0AIgS7W2HyFlSVN22KdQxuD8x7vHdZ55mtHkjtGqaUfKnpHM83RzDCcbphECY+pQGQbRGlRtkFqi1oJ1DKl8Y663eKco26aPfj6t+E01hyHhpNQH4DfE0W23LBYan69GIJUsaosy0JRmBqrFU4p2iKjtRLftOx2W6ZCMXyQnMeKk9DQjzQ9UXleX3dv1263SL9lpWqMc8SZ5TqpsHVDXhkeFgkqS1nnkqvnDmLeYP1uYaehjcV7T13XtJ2KtWSlIhBur/FuahinhssnxYeZ4XY04SZ44mNk+TqvGEQH5ePI0Ps8VwR/NVWRk2UZlTJIpYmWmv5M7tsH0eE/g1DuIV8mK27uFoxuHxnfP3MeKc5Cyaewote1B8LSOMMmLymriiDVvJ8edDqVDrZX+5+7ZVHJj/uUq3HCMCy4iCTfZhn/ACc8/5zRda/kAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -1941,7 +1942,7 @@ The good thing is, we managed to take our camping at the end of the canyon. So, 
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 22.699386503067483%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAABA0lEQVQY001Qy0rFMBTsl7kSwa9wJQh+meAXiH+hcLvQTbvpre1Nk7R5J+MkcMXAYTjnDDNn0vndQAuB4BykVEjWwmgNT1RSIh4H1M+CGBzUOiGFCLNJ6H3HOI7Q5NZXSmnVWTYiJjgStybsG8YQIIjJe0hizonzFTllaKWgWH3fN87/18X3N8TXF8TLBS4lXuDgnEWMoV2ZcoanSeYuXDF4zhzEusIaQ1NyaVxNuvj4gHx7A/vxiYXxvb5ALDPMoSHmicSA9TwjUWCbzu1yuS7IRE3BlmiaIbYN/alHh+cn4P4O4fsLNX6q8elW/8NSpJTcMP/1BZ5iFa+8yKsdd8Mw4Bf1XH06aL5A6QAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 22.699386503067483%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAABAklEQVQY002QwUoEMRBE58s8ieBXeBIEv0zwC8S/UHAOetm9jONmM5PMTrqTzjzZiGJBUzQUXVXd6bISvSeLMM8BS4k1RjQlwjxTTifC14GSheAGLBfWaSYuC/v9nhgjZ2zb1qZLgC+G5MLUDmvjkjPee0yV2XtqNSbvqFaJIRBCoO/7pvmPrjw/UR4fKMcjYoZlQSRRSm4prVZUlGrWzBpnRUXwzpHWFdOMqjaTrtzeUC8vSC+vHJYVjUf8YWQ9Rfw4oJpxnyMmwjR8tuSzO1BzJjr302gY8dNE/9bTcX8H11fkj3fO9e1cX7X9I4mwbbVx/ds3NOfGv7pihoiw2+34BvVcfTrAKNh9AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -2047,7 +2048,7 @@ The good thing is, we managed to take our camping at the end of the canyon. So, 
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 73.00613496932516%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD/UlEQVQ4yz2T309TZxjHj8m82RKTzSwxZPHCzJtlF7vZf7BbpwMEN2ELmWTLImEiEyaQaDYCSCejAhEnjsypuLZsZAJtqe05PT2FlgKlAuWHSPlVoNDfpfT0vOf97hzAXXzyvfvk+zzP+zK0zZ1G13gWnWMi2t0KSmpsYvaf06LIvyuKpjdEyX9GpKHGtLhSDQSKrwBlzFmrvPWpFSgRkLnsgljEQ8xnqchA4yRykwPxuwJihgnE9V7EDWOI2K8i7CpGZOQrrHkbsPSig0YDDxBa6uubXAiVtnoiac1oHNrxOL5jE/jMBhRwgCqU5EYe4S4njVlmaMykYH5BIx4tDU9U09hEFV2faqcvfd1yfE2HrYDZPL+88+PDmVT63mQC3b4oLWdj9JyN0kIOlKHNgqRIgUaBop4H6gWggUNWfwzblvex6qyFf0RLNxd+k1d99QgHXdz0/ErDr2ZfptMVhM4fp1fYKM5ZKQrVhlSjCJudIBqB7rbYkbrNI9liRbT3I2wOfYjl50XwCzdpcPYOCc/dwParnsfs2EpulXExVWvfQYM7QUttSeTuj0xVoVOCssNwJ0+37X5M6Vi86ndhakiL4LgGUV8TpJ1BmtzolTJL5cBKSSXIRSafR+QsC5yxQs5jD/Z3nn0tvCUg2WqnYZ0HG4+GEei2Ym2oHJtCEaLDX2A3cIcmV+9Je0tXQVcrapTBmM85KVrIqWNSWW2myv4/itow2sHT8MAkXj6xw6F9ioD1JrZGqxB0lCG5/AdNBA1SeqkSWKu4rgovcCSqChTkwzwQvm4Y1/I00T+NPeM8Ng1uzA1UIWD/FjFvLUKjZXSXy5FE4RSI470ajB80VJsVHDYsYNWWasNmRdiovMHbNrraw2Jd74C34y9MG4qxzuYhMV6GMPcJzTxjJNHIAAPMNfAMk8+SaK4iUJDVPM8dHiX7i0MiHW7Ems3039IK9FfUwfh9NUK6k0hb3kSsj0Fy8ChNWU+SlCUHKdsHTa1rOPENn45fsou4xIuymhds0kHDaJdTmhkYhrePpULXQ/xd9zNYnR6Wnp+wONqNIFeEZe4y3Z7VyzvTXVifNfoMfYO9OvdidmA+hmf+MB2c3UE1G9r/LQy5xYuSRpATDUYilF0njh9uEMe1OrLx9BRJDh0ju8ajJGl8iyRMx8WE6W3EjDn1Hz/C8RJbMvKlLQMFqdi2RwpZQpSxCbOrdWDjPo+Ftn6MtNyFV3sf3soaJPXvQHrOQDQxyJoPEBVgYmrxhGEKOJLJU/amks8d7lB9h9vtnGu61zHm/nPQY33w2DPS9rvHXV7lSRhOeEQL48mYjijspztjPjJHTMzX6FauzGZZReBVGFXwqChSz3/e4pGQdthkIAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 73.00613496932516%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAAECUlEQVQ4yz2T309TZxjHX5N5syUmm1liyOKF2W6WXexm/8FunQ6h6AYuZJIti4SJTJhAotkIIJ2MCkScODKn4tqykQm0BdtzenoKLQcoFSg/RMqvAoW2pz8oPT3nvN/lAO7im+/dJ5/ned6X0FZvGp3jWXSMSWjzSmgbk6B3SNl/PpAk7l1Jsr4hyYHTEg03pKWVKiBYdAUoJWfs6tZndqCYR+ayB1IhBymPoRKB3q2ojS7E7/IQzROIm3yIm8cQdV5FxFOE6MhXWPPVY+lFO40FHyC81Ns7uRAuaRGiaf1oHIbxOL5jEvjcAehYQAPKagOHSKebikMzVLTOUNH2gkYFA41MVFFxopKuT7XRl/4uNb5mxFbQZptf3vnx4UwqfW8ygS5/jJYxIj3roLSABSW0iZehdwMNPEUdB9TxQD2LrOkYtofex6q7BoERA91c+E1d9dchEvKw0/Mr9b/a/JkOTwjGQJxeYWI4a6co0AypnpfR5Iai5+lusxOp2xySzXbEej7G5uBHWH5eiAB/k4Zm7yiRuRvYftX9mBlbya20LKZqnDuo9yZoiSOJ3P2RqQZ0y2h0IdLB0W1nAFNGBq/6PJgaNCA0rkfM3wh5Z4AmN3rkzFIZsFJcAeVLkscheoYBTtuhnmMO9pfPvAbe4pFscdKIUcDGo2EEu+xYGyzDJl+I2PAX2A3eocnVe/Le0lXQ1fJqgJALrBwrYLUxqaqZabD/j6IZxto5GumfxMsnTrgMTxG038TWaCVCrlIkl/+giZBZTi9VAGvl1zXgeVaJaQAdC/WwD4CvDeMGjib6prFnmcem2Yu5/koEnd9C9NUgPFpKd9kcWeJPQXG9V43xA0PNTHdoqGM0S82wyS2jgYd420FXuxmsm1zwtf+FaXMR1plzSIyXIsJ+SjPPiCxZCNBProEjJI9RYrkMkMtA1TqfPTxK9heXrLR7ITbZ6L8l5egrr4Xl+yqEjSeRHnoTYi9BcuAoTdlPKqmhHKQcHza2rOHEN1w6fskp4RInqVqfd8gHhrFOtzzTPwxfL0P5zof4u/ZnMEYThrp/wuJoF0JsIZbZy3R71qTuTHdifdbiN/cO9Bi9i9n+eRHPAhE6MLuDKia8/1uIcouTZD2vJuotCl96XXH9cENxXatVNp6eUpKDx5Rdy1ElaXlLSViPSwnr2xAtOXWfPMLxYkcyetGRwUVHRi5y7CkFjKLks1DIrsGFjfscFlr7MNJ8Fz7DffgqqpE0vQP5OYFkJcjaDiLZCGAlNXhCiI5VMudYQEsee7hD7R1ut7Ge6R7XmPfPAcH+4LEw0vq74C2rFBLmE4I0RISM9YiQse63N2M7MqdYydfoIuQCk2V0DPXpGDqqY6igJZ+F8B/e4pGQNVA3dQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -2128,7 +2129,7 @@ git commit --allow-empty -m &quot;chore: re-trigger build&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 46.62576687116564%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAACeklEQVQoz41Rb0hTURT/3TeHulzp/FdYlkmKEhiWpEj5IaEynfXB6XLvzb3Z26Z7c0s3XYRpmZZ9EkssrZRiHxIbZuRWqFQEklFQRAQRUfShQEIpzaRu99WnvnXhxznnd879nXPvgSAIUDBwMh/NcjmQdhmUAuUVNjBDGPCLIJshU/GXI1REshpRWNKE7pY96PQWM5aiqKgIf44iNnslBc+G1+F8625y41xOxKtAIld2yICZ1AxOEaFRyGLY8oP5c9E6ItUK3IUTu9RK47P+MlIl+OCss8PhqP8rCCwBqmkYjNaswv2NeTv3erOrTXyiYLKhqsKcmnbwVFa6vj2z2sCvNfMSKo1CXG6xP5PV5hqMls0mwQ7vUTfqHDIgSXbQKTbFI+DdiFa9fBc3v06ouhmjavXWxlSKbZrFCRL4NsFdQiRVn/YLWiW3GCL9S2FyrUaUdTUW6zaraMkTLWI26EbgeWATeRnYgE9jWs1iiHv7PYwRdon4PA5tW7MYw+InDJNInle3N9esVgSXwphm3OMO1oAXW7Ret0MrOxtWIXpwgcNTSpT/KD3cHRfq2x7LfHKrtwDImcWDga1Yucdmm4I61LcDsQWTGO/NV14VofD3WT6v9CKO+ZrgcXsB7uoKEKCQ6xsS/E1SVLCnEPQh8OV2JOhrYOGOGh+Da/BhNA5z49Ggb4DPYzF4P6pjXCxeXE8mPqcePNsFz/NsH8O0SzM4f5wmQKVstKfToOrv0HNWm594XC6i2KEz+7jBzgP/cAMs7u8o4bqCFKLFEmU2m9MZkhTBOTL0cyaoX69xuHwJTrkxXna6df+JeJfs0dXXyUnSEVuGTbKn/AaLyf3vp+mplQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 46.62576687116564%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAACf0lEQVQoz42RX0hTcRTHv787h3O50vmvsCyTFEUwLEkZ5UNC+b8enC6997o7u9t0d27pposwLZtlT2KJNSul2ENiw4zcCpWKQDIKioggIpIeCiSU0pnkL2499daBL+fwPfA5nHPAcRxk+c7ko02qBFKvgVKgssoMChAKYJ0ga50gQ65XIxRENBmgK2lFb/tBeF1FACgKCwvxJ2TY3PVkvBzZgksdB8jtizkRb/0JTPlRPWZT0hkZQlXIpCrs+glgIUpLxAaOuXx6v1IefMFTTmo4N2yNFlitTX+BwAqgmIHeYMrUFbfk7TvkyqqtYxO4OjNqqviU1CNnM9MqujJq9exmnhVRbeBic4s8Gbrilly9wbizjrPAdcKBRqsEiKIFdBqgT4GPoxrl6gPc+T6p6AWoosPVEF0tdKqXJ4n/xyRzFZFUec7DaeTecpAMroTIzXpB0tYbTbtNgjFPMApZoNuBV/4d5I1/G76Ma9TLQeZDOIRRgBK306rpbBOiwyE8D4cwhaRFZVdb/UYZuBLCTDiEZ90eTsMK7RqXw6qRbM0bEDW0xOAFJfI9yo71xgYH9sRQCnK3vwDImcNjXzbWHiKSTkMZHNiLmIIpTPTny1tFyP4jXzbyyq7gpLsVTocLYG6sAX4Kqak53tMqqgJ9OtAnwLd7kaDvgKX7SnwObML8WCwWJqJA3wNfx6PxaUyL+bEYvL6VRNy2CrAcB5ZlAYzQHvXQ4ikaD4X80T6vXjHYXcGYzB7itNuJnIfPH2aGvKX/eD5vKTPYXcL0BCgEo1HF83waz/OJMnCBDP+aDVRsVVvt7nib1BIn2Rza/1ScXXJqmxqlRPG4Od0sWpJ/A4vJ/e+O2h/FAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -2168,7 +2169,7 @@ git rebase HEAD~3 --exec &quot;npm run test&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 53.37423312883436%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACyUlEQVQoz2NgAIK4uDjGhNhYBiCWjUpMNA5NTtYBsuUTY2JAYlJRCQkmQDFNIFsJJBYfGysaEx+vH5CWpgxkK5b5+jJkpKWBzAEbBmEsW8bAsGABy0ZdXckL0tKKDP//MwIxA+ukSSzr9PUlLklJKTAcOMDMsG0bg1tODnudt7f4aTk5Lf2qKq7/QEfFJCcjDNw5RYXhGwsL4y4NDQagpC4Qm9yUEGW4LyrEckRFCSSmBsRWp+XlGK5KSzDv11QFiXEDse86PX0QmzEnKgxhYEZKBEODgydjRGqSTIx2gmKRabCSX0Uml0NrOkNkVpJQklGMXI5quHxoToqgf1kCQ3xhPHuUV6JCkVSwUmhKivT0AC/G2JhIhsioSIiBytYNDPMnmjIGhqQrrZ2kFzyj3cpGQb+Wy8K1icHArkxgaa+R44oJBt6WzoVClu4tQA/+Z5jWZG2wbqpuRFRkvGJYVCR7THQYe2RUBAfQ1AiGX7sYGP/vByp7xsD3dw/DfyB/F5DHXF+WKCrnso/j926Ga392M3yY3hYmWJyfLQyS+7GTcTZI7eP1IqaO/rXqmWkJ5snJKeYMDEv+M7RNyWCc3e7DMLXJj//9FvZJ33cyRAHjg2Fehyc7iP62gzHn+w7GGgaJR0yTGoPZQGKftzN7AdVNvrZMSvj/dqAV/5MZIGDtf4acwiKGgsI8rviUapH/hxkYfuxiAHsrN6eQoa8ujAHoEoZ/exkYDszSZYhIbALLAV3N8B8o9noTN8ORaZxAA+2gBq75z9qcFMxenJEmmJxYBlYMwkX5uWADc7KL4GKpGeUMebkFDCUF2WA+yKUuYZPA/Lq6Hob+nplA8YX/H3LO+TQDpCWyrFsgL7eQD6iJD2gYCo1LDKQ+N6eALykp2SgpMckKZOBlxgV/G0DWhVZM5MnNLeIEKuAEKiQKw9QW5BdzFOSXcAAAufkrt/+r2woAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 53.37423312883436%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC00lEQVQoz42PXUhTYRjH/ydnUwvza2Szpk4trebEkkpDjL5QM421tXPacWc7c848Z25TVliaWWmQfbj86oMyKOkijSL8mJpC3nkTRUJXUUE3XRQFKpq9cWYlXQS98PA8z//5P7/3fQEApaWlFMey4Fh2HWOxbNHz/GaOZeMtJpOkKRmO26rn+TSOZdWSZmZZhcls1pbY7Ulmlk30FhXBYbdLnABssejpAbq7ZY81mjUv4uISQQgFQhDs88n6tNrYl0plAsbHg9Dfj32CIK8vLFw9qVJt1NbWhhEAJp5fAg61JWNaJqP8qakggIYAW9/EKvBWESWbSFZL2noCZE/Gq/A6LjZoLC1F0lYQoKgvXSvVlMAYloAOmxENefmUscy61rSJS/Rk6dQHT1SE5Z0vB33MGmXNNKmElCPxesEWWezlYHab5UyBJcGj1Kn1NltcZ0kBxZpo0Ay9CEzKacCd1izq0OFyda8vXdfVnL0zQVsXtn1vIzJyvRH3L2XuenA1o3DHbnfUjv3nABB0NOZk9LVrjAxtTjQwtNx01CCnGWMIaMaIOT8oMgaQjwhfGAGZ88MPkKDTXotCtedZyPwwpr4P40tnkyGyuqoyWprNDlE3Je+HRzFZu4rrNlTYuW08b9sG3CNoanNQN5sPoL3x4KrPT+W+mSEwhAC3L+TLpTw9SAkzg9QpxL5f5jujWy5p3waCCmaGcG2qRxlNBgBCeCyeXgLB7YHL7Qwz207GkOfArB+Bb4mCG5frDVgYAX6MAuM3NDBaGgOz+WGAjAKfnqzAREcoCMn9BXxIgs9adfJqhz2St3gDZik8VWIAKFR6/mhljuNwii7UuCoDvfTSPQZfoK+vb8GVlusA7pJ3obe+dkkrtPdihFN0hztFV7go/J3/pUl+UXCFW618ptVizZaAr6juhQbpOv2J1pWi6AkVBVeoU3T/V/z2uqqqQ1xVNSE/Abn5K7fyFA92AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -2250,7 +2251,7 @@ module.exports = {
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;See also: &lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&quot;&gt;the full list of timezones (column &lt;em&gt;TZ database name&lt;/em&gt;)&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Mock Date.now&lt;/h2&gt;
-&lt;p&gt;Let&apos;s say I want to test a dashboard component which tells me &quot;hello&quot; with the date of the day. The lazy way is to only test the Hello part (without the date). Because it changes every day. But you won&apos;t test the date formatting part. &lt;/p&gt;
+&lt;p&gt;Let&apos;s say I want to test a dashboard component which tells me &quot;hello&quot; with the date of the day. The lazy way is to only test the Hello part (without the date). Because it changes every day. But you won&apos;t test the date formatting part.&lt;/p&gt;
 &lt;p&gt;If you want to, you gonna have to mock &lt;code&gt;Date.now()&lt;/code&gt; and put a default one.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;// your-test.spec.js
 
@@ -2305,7 +2306,7 @@ I tried once... and I closed it within a minute!&lt;/p&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 144.78527607361963%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAdCAIAAAAl5NuSAAAACXBIWXMAAAsTAAALEwEAmpwYAAADO0lEQVQ4y23UhU4kQRAG4H1seCACJEhwsoc77OLu3OLuesh9TA2DhEqm09Nd/1/euZGRkVKp9DeR9fX1jY2NtbW1lZWVzc1NJ1tbW7E6d+uw9CG7u7s53+LiYkNDw/z8/PDwMCTVP4ngHRoaKhQK+Xy+pqamvb19YGBgamqqqqoK5O3tLUd1cnKyra2ttbW1u7ub9sTEBJbq6urAk8rKSsimpqa+vr6Hh4fHx8e7u7sUjM9FS0sLShvatbW1TDmvq6vLJ1JRUdHZ2Ymiq6vr4OAA8vX1NRdhjI+PF4vFmZmZtUT8Oj87O7NZXl6+urpaWlo6OjoS4+Dg4Orq6lsi7+CgITaXl5enp6c2YmPw/PyctiiwcAS7WNDx7vn5OQW/vLwE+OLi4ubmxub4+Jh7t7e3DJ6cnGDc2dmxMn54eEjt3bIa4MPd29tLr6enhylp6+/vZ1mGRCERci46eUWBK00Yy4oUCQPAAk/V2tHRYXXIYedSZcULf39/n1oGZsRpc3MzL+rr68EApqenMcqw+LEAszE3N8ft1DKvgLnKGj01lxJ4e/lXKqmyx6tUjY2NEiE61X4HazpkEZ4VUiAA7ES3zM7OMgsvKZL/9PTE7bTOWje6T3tpUn1mRcRzG37C2LPxL5H9/f0oR9okyPzz5Pr6WjE4Zi8lcXKXiKoC6JbM7C9N4lo+suuvgotysHzrMEc/wHESzRNX6hxJzng/LWd8HPtKH1fCkeT4fUnkJzhW8St+xJbhM0YU0SE/Yw6w7uWetJmqaHv9qCj2CwsL5eXlZWVl2H9324RbldRs2FDwbgRe2E78qug3cDZYwoOnF37aONGFo6OjATZSwZuCiRGPYJRdz0QDElOpQ5ja3t7WJNrOPH82SSh5K24SoaSrgiiC56exCTUjYGBScITOE2Pk0fPWGRLtGY451+QaOwDErbR9A7OmNzQjJ4VnBiUMUvBmwzOegcfGxvx+A0Nm1TOkojIAHirB7+3tqW0WnZyxlIIlw46GqkqVI+8BRrUxz+xELgFcyaI95WiyXNDIk4RpbB3CsmcdeCoRSpyS5wC48htVzHkcvB4sKKMyFBORUqsnoZBI8UN+nP8HsC/34lOFIUkAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 144.78527607361963%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAdCAIAAAAl5NuSAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEQklEQVQ4y22Ta3OiMBiF+7O7P6hjO2PbUazNoFJUbhVQSkW8cJOLBQpKLSpes1PjutvOng+ZIclz3rzJ4YLjONu2x0fpum4YhqZpw+HQNM3xeGxZFhoNw9B13TRN+488z7vwPE9V1UKhoCgKy7KaplmWVTmK4ziGYXiex3E8n88DACiKkiTp+vpaVVUI4YVlWZ1O5/HxsVwuPz09MQzTbrdZlr25uUE8x3G5XA4AgGFYo9HIsmy9Xi+XyxNMURSGYQ8PD9fX1xiGcRx3e3ubz+cpirq7u8OPurq6qtVqAACCIHzfhxAeDocL1IYoioIgyLKsHSWKomma0+lUFMXBYDCfz/v9fhiGnufRND0ajeBRXzCyORwOEMKPj484jiGEkiThOD6bzWiaZllWFEWKomRZrlQqg8GA47jdbneC9/s9gpMkSdMUQvj+/u77/mKxCMMwiqI4jl3XjePY87wgCJIk+apsGIYsyyzL1uv1MAxJkqRpmmGYZrOJ43ij0dA0DcMwnudt2358fHRdN4qi04WZpqkoCrqwZrPJsixJkjzPkyRZrVZJkmw2mxRFsSxLEATLsgzDuK67Wq1OlRVFwXGcYZhSqSTL8v39fbVapSjq5eXl4eEBACBJEkmSBEFgGNbtdoMgOFXWNE1RFJqmeZ4HAHQ6nUqlcn9/DwAQBOHu7k4URQBAqVSq1WrFYtH3/TAMsyz7gnVd73a7qD0cxyuVimmaoigSBIHS8vr6SpIkAKBer89ms81m47ru6Z3H4zFK39PTU6FQKJfLhUKh0WhUq9VCoYBhWL1er1aruq5vj3p7e0PPcQrJZrNJ0zTLss/PzziOfd/Psmy1WqGZ5VG73Q5COJ/Pz2X/E5L5fB4EwXn5X2VZZpomcvmWsN1u9wNGMyg8aMm2bXTJZ9+/lc9+ruv+a4+W4jgOwxB97o/6CaMxTVPDMFBvZ/7sGIYhSsjPnhHsed5yufR9fzqdothHUTQejyGEvV7v169fl5eXhmH8/9iWZUEIZ7PZ+/s7hNA0TVVVEW/bNoRQVdVyufwNPv9YcRxblmXbNjqnbdtxHCuK8vz8jOAkSZDvCYYQjkYj1Mxms8nn8yiAEMLFYqHrerlcdhxnu9222+3BYPA3JGhTv99Pj3Icp16vIyPUvKqqDMOgbTzPv7y8nGDUepIkFEXd3NzkcjmaphuNBjpYkiQEQQAAEAAhpGm61+t9gx3HCYLg8/NzsVgoiiJJ0mw2S5LEsiyWZYfD4RlutVrD4fAbHATB+fU0TRsMBm9vbxzH5fP5yWQShuG5O9u2Hcc5wbquQwgnk8l0Ot1sNofDQZZlwzCiKBIEodVqobt0HOdwOGRZNhqNJpMJCtkFsknTtN/vz+dzz/M0TVuv11EUSUft9/vVarXdbhGwXq9XqxV6xYtisdjpdFqt1vPzc7vdFo7ieV4QBFEU+aOEP/ox/xuwL/fighSi9QAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -2368,7 +2369,7 @@ I tried once... and I closed it within a minute!&lt;/p&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 42.94478527607362%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAACqElEQVQoz1WSW0iTARTH/5tKBUkvPlViSIUQFRV4KZDuPpjXbTo39+lympakhnnJ6sGioAINSbN0zsSZmqauaRm6i6kzfUi6QBAu0i7UPt1Scze/06dF0IEfh/Py4885B0TAX4QLvRDOPASWNXthT2+GLa0ZFcoSwTVloaBWeUlAjB7WzDbk5JxH6tkSiCp6NskvVx3OLK+KTL1SGy7Vfw/AP6ET4IX41PJnnq75AHpCSFUoII9KgFSUhIbim6gdJ2Tc7RfI1CNIMXEdjNlLpRPeeYXJ4xEbuI+wNO5sszSFtlo7g6o8/YimL8Cd8lCBTaYDSTsgOZkamBwvColLEQe0Z1wHpUzhVPgeHAKEquHlvqxRotwx8jAviMRG+gFudDvRxAHyGDaQ8yn0wxXBIOtPwRyjVbOKZtMUo560FrW9m1Y1jfPzoCO9tUuXfitIkhR7VDzgHhWZiUQmXsaTZCI3nOZt3qV+vyXnM5CrH80hRwoC85Wqg47CnmkeWijro4ViPc2X9pKjSEdzZzqomrlwDHwpBl2RMt3XbHHX5wyp3qZMMnKxcJmDyDWwfkW2Qie/QZ9yVfYWR0H3W3t+14rEzUu89oJujz23k5tNa3HcZkqOwwcCkY6Nk2pe3svTjtTItK9vSAzLcriMG9+4hra+cj1fY+VT3rLUbAZ2nAabqN7NJjZEsDH1YaykMYxNaAiziTXhi0z7vjrVVf8USUJUxpB7LHuc6OIkUaZldYccFivgO18G36VH8HUb/IWRu4oQnBUBW5wabHwDbNF1vFwDNrYeNpGGP4oWD/bHQLEOfnKTt1du5khmWnbL+C4xct/wqxpYrASc3YBrYO3qy9hOjGGWaRHOpf3PLKMVvs/rE56rHBQk3x8Cn+ix2MitJFvg8fBHmfkNsruFj3IZfnMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 42.94478527607362%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAACrUlEQVQoz1WSW0hTARzGvy2jgqSXnioxpCKIigq8FEj3HixNdzZ3Pbo2TStSw7x0e7AoKMFC0uwyZ7KZmqauaRrqzsyc6UPSBYJokd2oHbflzN08/1hF0MPv4Xv58fHxgQj4i9jXDfHHe8CccTM82Sa4skyo0paJLmqLRXXasyJirXDmtCA//yTUx8sgqeparjpXvTOnojpZfb4uUW79thT/hH7A1w18aPqTJ2vfgh4S1BoNVPvSIZfIUF96BXVjBN2NPpHS8BQKTmhj7WEqHw9Pa7hQiBkU3sPRsL7F0Rjf7GyPrQ71IYU+A9cr4kUupQUkb4P0kDom86BkbZqCWdqquwRSvMPhxE3YAYj1w3M9uSNEx0YpxD4hYmz0HcLIGqLxbRQaXEL+R7AOV8WBnD9EbtZs4DUm7h1rmHCWtLye1DeO8RrTgDe7ucOSXRkrlaXuZvqDIxI7kYQjYjgiGUdB+O2rw7N982f9vaBAH0xrdxXFFGr1273FXZPe4i7yne4hX6mVpsu7yVtiIffRNqphT+0BAM1AIFlp+ZLHdHzSya0urcwmpCJgj6VA/+KILEI7QPMq9HkrvUWdrzyFHRFJ0H20Lewp6gx5jrULU1lN3mts2V7Mg0hi4dPkxmc3C8xPa5XmF5elg3MqBGzLXgaGVj0PPF7g9Pei0lG7Alh3BHyGYSOfUZ/EH7iTwEsbEvj0+gQXY0ycYVu33NZfiFZI0/fphoKjeWNEZyaIchy/NxQwU4Wo6dOImr2PqOBgtDh5QwnicpPgSjOAP1gPV8pt8BlG8Kl34JIYQQoz7m49AM0izFdx4W6VXSAlNxdU2gWS2oSv+FkDzFwF/J1AoH/h78u49o9iim0Su7P+Z4o1i98U9IhPXB0QZd4aAmOjB4xNiDTzMTYKyTj6+Auyu4WP6ODomgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -2382,11 +2383,11 @@ I tried once... and I closed it within a minute!&lt;/p&gt;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;💡 Git object model has 4 different types: &lt;/p&gt;
+&lt;p&gt;💡 Git object model has 4 different types:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;commit&lt;/strong&gt;: contain the committer, date, message and also the directory tree;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;tree&lt;/strong&gt;: reference other trees and/or blobs;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;blob&lt;/strong&gt;: store file data; &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;blob&lt;/strong&gt;: store file data;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;tag&lt;/strong&gt;: store a commit reference (not addressed in this blog post).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Please note that blobs don&apos;t store their filename (and location). That&apos;s one of the reasons why sometimes git lost history when you change file location ;)&lt;/p&gt;
@@ -2434,7 +2435,7 @@ I tried once... and I closed it within a minute!&lt;/p&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 77.91411042944786%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEgklEQVQ4y02Te0yTVxjGn1JQFKZhCMHpRN0c0y0zmk2nxLk5jHMDHdoWWvrxtVAurQORixtO4x/bnIlZ5oKJslCEchMdCsFxL22ppYPIHDKni5ssbk4nl3IR2q9C353SLNlJfnlPTnKenPd5nwNL8aq4+qJt/JUzO1V3LqzYQVYsBgi024oHiedB7/UD4RARsbO4DvyjMOAJdxFn0k6KU0+34PCONYvlsTGRsne3hMcYCXC2LyBXVxS5rOvI2eZP7mbIb3yxEwJfut6hqDr3R0JJ+UCmvuWmVt9+P0Gvdyir9UOq2pii441Q2GnD3ubJHl3HcG9m51h3vHGmGe7ebU/d9jfI3bt9RjCF0tTVAA6QBt3MLcmdzG+kiYJGmvqkiaaOttJEYRONH6ynvzIvnIAfQjIr+/Jz+ojyGQUM/hprQ7C95hLMETOuVriFNpCjIVjFBINvHSz5aCK7nsYO1ZPjQB05dN/N7cfVtdSnLi4B4J92eVCT+QNRRreHMu0eSrV5mKB5KQnm50gwLiJXRyC5W6G0n9oESjkXMZJoiB+VGeJG5RVzDCcY4lzKi3uuqE69tXEDFkvu0qoPjTPF8SY6zfhmH8Mr2OU0Rdhd5uU2oTPkuqsFMXRrbiwYkVdgNJEhr5zjibwG/clngaSoBWpevVb5WSl29RDet/iINbGhdF1IBUKT2GRjg+w1e0A3Ac8jYETSLnLwNeL/M8RXiR8lV4hJbRcpOeW65AMF/odZ70wBKYzNzEK2/kR+VuKagmzFau+7uovDxc6rwP3KFYAWyFXrkJ6iEXnJS9EhlVOJOE4JjuOiEjNyAtTa7EguTfcKl34gSp13LBgDZcHA0tPhC6MKl/dXRoJ6gGkLk15OGFSV+VE8YVlSNMJ2rwclEW7wZ8XeTGqAefKqfqm08+m9LOv0bzqGxOi+jQHDIo3x29dPdpRsPzFYF5E+247VNOvzcJArBe0ghCnfDHtm17oltJ8wpKrCnc08WLYCeL3laHoPUVYvkZZVicUbm86QGbdtLT21byShfT65W1D481dbQemlLzm46oqHivK62xnn7b8erLT9zZVfGk2uvjKdUi+L3rRwlULf/amUZU9q8SGzsNi4e7Y9Eqwvz7o6gqa9OZxqmpePoJxQU/bX6ZN5jTTuDXZhM00daWbB/p4mchro9zRDLbYgVNNJK+WtEwXSxscfS5vH8mTmWS0E05IpwRRGrjYxeQWnmwKOsIZFP2adkXovj+U1+MKtq6Ox3AbPuOYS3eVLK7FL/KzmMYXEl/Ud1xqsX6YZbJ9Lrg7xECzP24Sulb8IXS/85Grzuye0Ivl60asgXVHwsLQ8enR/2dYRSflWFuxobx1KqnibtNeW7d287EW+zH4slfl36LqPBK+HzouY76xFoLMKgUILAqc7RGJZ1GXQB90YlpRhZJ8P9mPm6riiGhQpRxy7q2gakiYzD5VdHg9n9TBB5iETg7PGB/slEIysYZbPUXk92AD8fNT4/bef5Gv9Tpwd8Jc1PobkGr2z3+xxSMz0gPFQyvgX5Amq/SLy6m0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 77.91411042944786%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEgklEQVQ4y02SfVDTBRjHv2OgKCRHCIdpIpaR1uXplaacWYZnFmjoNtjYb78NBrIZiLxYmJ5/VOad16WHd0rHEDZeNRQO431sY4wFJxmSaadJZ5kmsPEi234T9nQ/dt31x+ee55/nuee+zweW0tikxpJt7NVzO5V36lbuICvCAALttuJh6kXQB0NAFAREBErqwj8yPZ4yl3Au85Qw40wbjuxYEyZNTIiRvL8lKsFIgLtzEXl64shjXUfujkDytkJ646ud4Njy9U5Z9YU/Usoqh7N1bTc1us4HKTqdU16jG1XWJ5ScaIbMThv2tk73a7vGBrK7J/qSjbOt8A5se+a1v0Xege2znCmCZq4FMYA45GZ+Wf50YTNNFTXTzGctNHOsnaaKW2jyUCP9lV13EgEIz64aLMwbJCocJCoaJGJ7icDZ3vBw5uhZTzu8XAfI2RSqBMShtw6VfTKV20gThxvJebCBnNrv5/tJVT0NqkrLAARmXhlRZ/9IdKDPR9l2H2XYfATOvIw48wvEGZeQpyuYvO2Q209vAqVfiB5P1Sc7JPokh9Qwz1iKPskjv7TnqvL0Oxs3IEx0l2I/Ns6WJpvoTLKJzu4z0Vl+YY/bFG33mFfYuO7w6542JNCt+bdgXGqAI9UAh7RqnqfSWgwpzgNpcYtUrGqt/Ity7OonfGjxk2gioKcuA4hICwMSQ+y1e0A3Ad9jYFzUKXCytcL/M8pWCx8rDEJS2QVyRr5OcbAo8AiADADpADYTAcCfKMxJXVOUK1vN39VXGiV0XwMeVK0ENEC+SousdLWApyBdiwxGKWAYORiGiUs9kBek0uTGMJna15isg3GqguOhGK4IBZadiVocV7xiqCoG1A+4LACtIIwoKwIombA8LR6Ru9eD0gg32PNC3kk1sEBaPSQWdz+7n2N13dNaXfdERu9tDOuXqI3fvXmqq2z7yZGG6Ky5TqymOX+GI0w5aAchUv525HO71i2l/YRRZTXubGbBAEGsznIsq58oZ4BI008ksvDadIfPem1r6Zl9I3GdC8nbhuJfvtkKyip/xcnUGB7JKhtuH7ho/+1Qle1vpvKyQ1Fz1ZXeKInftDhWpuv7XNxLJLb4kVh8BG//tsec9dU5T1eIi/dwpmVBIULyIky532ZNFzTTJC92cSvNHG2lqeIfaCqviX7P1NdjCyLU3bRK2j5VJG5+8qm4daJAYp7TgDMtneFMkeTpEBK/0NUSdBQgwU8558T88ERBk19ubQNN5Df5JtWX6S5bXoVdwufVTyg8uWLwhEZv/TpTb/tSdG2UBWd50cb1rPqV63npZ09HwH2uHYrrJa+DtCWhY+LKeMf+iq3josqtDqkhnq+jaYZ3SdO7fO/m5S+zFfbjGQNEh6/7SeEzdF/CQnc9gt3VCObaEOzqEgglcVdAH/VhTFSB8X1+HBL9fJ2U1YBipEgigqxlVKzoJZL3+HyM1UcpfIbuesBd68fTBnBGgPfTIW2EQ1ET4Kc24L9+mq0POHl+OFDS/ASiXnpvv9nnFJnpochMj8RmevQv5Amq/WL1FtgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -2481,7 +2482,7 @@ I tried once... and I closed it within a minute!&lt;/p&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 30.061349693251532%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsTAAALEwEAmpwYAAABu0lEQVQY02NISkpiQMaJiYkM6GJAzJ6cnKwNxMpAeVMg3x2IrVNSUniBYvJAtgZQnAmkl+H/fwZGIMkAwkA2089dDEzvNwF5d/QZrqw2YgTJ/z/Ny1yWGyidnRZmkpQQYxEXF28eFxdnmZwYbZaXEa7VX+fFC9Z/hIEZZAgQbORhYHjIDWJ/28nMMKfRhLGvPpjp/0UFhv9fmBm0bQtNRYy6VUDyK7sNGALCsxkcvdOA+qZzCujUqEoZV6kDDWT9fxYodH+DRtPpJQYLTi1QnX97Oe+k7zuZHdd0azLM7fBj+H9JRuLaaq1ppxbpLzw1X37+w1XsXd+2MyjvmijOsLA3iOHNLjWbyyt15p9apDv/3AKJ2W83sVYw/D6m8//fKZP//44q/v+9l+3/790MM/kMZgg7eafY3tuoE/LvpD5Q3uj/v8Ni/3/v5///bTd3mJ5TlbK5U7LJr8MqLX9Pmf7/d0L7/99Dwv9/7mb+z/BjD9fXH3v4/v3YJ/Lzx27O/z93MkwAeU3GrFn89SYut5/7+P//2MP/+8c+USAWBGnyA3qPmUF5ijCQXQ3U+//HXoGfQP1/f+xi+g0APxrWvZOlh7wAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 30.061349693251532%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB0klEQVQY012PS2gTYRzEJ7vU0tYklURbtFAlrdYmmhCTVtEemoOChaJW2kNl9fu+UISi4EWkiuLjIAafiA9UNi2C1HqwuUiy6QpWxW5R8IEXRelZxYvGb12yf1lP4mFgmOE3MOCc418xxvB/xjmvFUJEhRARxliac76Nc745m836hRCtnPMOxpjisSCCDyB4IoJil6B8LwD0MY53U0mf19O8Xz18YOeK0ZHBFN+3Z6Om7e3WNG2TYMNdB/cPdV48vt3/l38K1RsBML0YWGjwfKWo4vbJlO/CiQGFXq8E/VAR7TmUDidzbV4/mUtgx9AoevtGAFyva4wda1++YWwNQDX0EsDnhx2n5u8m8la+Xf9wz3/lV1HtfZBbiztn+0FvWprfT3Vesybi45beqi/crz1XeYRI6XITxs/vwtfS6i1vJ2O6NbFOf5VvvvWtUHMEzvMYuVaK3GeryJlZRI6Bm4HEjVCmL9vzaTq2252Lk2slyZ1dRs7jIFWMhsH1mbFId0akfs+2nalaaXJfRKn6JES2oRJkuf6nLAdcaYZtadSRXcQl71pL1+mmL4X6rbYZJFkOOtJc6khziQf1A6QicjVkG+pRWQ6QnGm0pRmuypLi/AE/Gta9zeSr+QAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -2512,7 +2513,7 @@ Maybe. Let&apos;s count how many git objects we have...&lt;/p&gt;
 &lt;p&gt;More seriously, I use &lt;code&gt;git push --force&lt;/code&gt;, &lt;code&gt;git rebase&lt;/code&gt; and &lt;code&gt;git reset --hard&lt;/code&gt; daily and I never lost anything. But, we are human and humans are fallible.&lt;/p&gt;
 &lt;p&gt;Don&apos;t worry, if you want to rollback, you don&apos;t have to go threw all those files. There&apos;s a magic trick!&lt;/p&gt;
 &lt;h2&gt;reflog: the magic wand ✨&lt;/h2&gt;
-&lt;p&gt;If you try to retrieve the history with &lt;code&gt;git log&lt;/code&gt;, you will not see the &quot;Third commit&quot;. But, if you add the additional option &lt;code&gt;-g&lt;/code&gt; (for &lt;code&gt;--walk-reflogs&lt;/code&gt;), then you&apos;ll see the third commit. &lt;/p&gt;
+&lt;p&gt;If you try to retrieve the history with &lt;code&gt;git log&lt;/code&gt;, you will not see the &quot;Third commit&quot;. But, if you add the additional option &lt;code&gt;-g&lt;/code&gt; (for &lt;code&gt;--walk-reflogs&lt;/code&gt;), then you&apos;ll see the third commit.&lt;/p&gt;
 &lt;p&gt;To make it nicer, you can do &lt;code&gt;git log -g --abbrev-commit --pretty=oneline&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;This super-useful command has an alias: &lt;code&gt;git reflog&lt;/code&gt; ❤️&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;$ git reflog
@@ -2609,7 +2610,7 @@ Another thing: the brightness. If in the middle of the summer you can&apos;t see
 &lt;h2&gt;Myth #2: You must be rich&lt;/h2&gt;
 &lt;p&gt;Let&apos;s talk a minute about money, even if it&apos;s a controversial topic. Because, it&apos;s something I heard a lot, and I think there are a few misconceptions.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;You don&apos;t need to be rich to live where most people spend their dreamed holidays.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;The most common destinations for nomad are actually quite cheap to live. For example, in Bali (Indonesia) you can easily live with $1.300/month. In Chiang Mai (in Thailand), you can live with $900/month... &lt;/p&gt;
+&lt;p&gt;The most common destinations for nomad are actually quite cheap to live. For example, in Bali (Indonesia) you can easily live with $1.300/month. In Chiang Mai (in Thailand), you can live with $900/month...&lt;/p&gt;
 &lt;p&gt;How much does it cost to live in NYC, Paris or London?&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Choose your destination according to your wallet. I&apos;ve met on the road persons who make between less than 15k to a 6 digits yearly income salary.&lt;/em&gt;&lt;/p&gt;
 &lt;h2&gt;Myth #3: You can work from wherever you want&lt;/h2&gt;
@@ -2664,7 +2665,7 @@ The vast majority of nomadster countries on tourist visas. Which means, you are 
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 53.987730061349694%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAC4jAAAuIwF4pT92AAADbUlEQVQozxWR+09bdQDFb4w/qT+aJf4FZpujA122KNNFZnTOJRI3NwH9AQKoUZcMyGAzw6EDNreBlMcYfYy2lFcp5dEO2qYv29rS9tL1XdrSjVI2WJkO2w7Kvd9jPb+e5HzOyaEW7hx/xS8/edEzXdkbMjQPLTt5sriTJ42YbvQt6Zp/Sdhaqh6ZGk/E9Jc4cWvvng1z48vUa6DeP1hB/S/ZT5yXdNyK1wFQNkUHRdHiwpEV3efIRpvwYm0A2/9okUmpsRmXIEHfgn28FhZJBUz80m0r/0TKJT2z4p2s8gdVP9JL2npPzHApFja0ZkNW3lXgNkV5hw++wHI5wUZLDltiBsTOMFkzk3ki300FuTl6sian6jzOyq8WwNJdBJf4Y/jkZxFR12LF0oCU/zoySQmWbHyopPx3qdBE0UZ68QvEjNXs1sMesh4VI/TXH+SRq4OsurrwhL5NQrOVxHr3GDF3v83SohLWJz/NxjTVzJq9kXkWuMGkk2Im6hyEQtBdTLmHCv6OKo9h01vH+jQ/YMl4ATtbBrgVX2PZ1IrN8Bi8E19B1X4Ac9cLoOs6DEPfUSwMn4VVdAoR/XkS0Dcj4hASOa/rMOUQ7v93WXUUW6F6lp46h5C+Ac8fz8I9VYmw5nskrJfhkZfBOXgExs59MPQUwS4thXemGg8UZfDrmkjU1oKY697uaG9HERWeKMquGU/CqywjTwPXkH6qzJv9SHj6QCuqYRv+BmpuCQzcQqh/P5BveAgLkk9gk3wJx1gF4paLxHv/O8Ro8fbo3R4OFZYXZhAtB7Nyhd1ZF7AP3Vw24eOTmK2NeOcuEKeskjjy8/TcYmLoLIT5TjFM/SWwS0rhV9aQlK+dfRblIeoQpkeFon35lzlA9BwhyZ+RW+chGRhAMngPQeMVuGe/Zc2iMzlN90e7Gu4HzMxve1lF2yHyJ//TPKicJKwN5Hmkg02vDOYDBTsykfgtakFUPBRSnUbcWrcdd9zMJAKj6WRoPLvqFTBRSzuC2iZ4pmpg7v8Qmpsc6HveAz1SipCqCqvWOmz627BKd8JtEIZlY8o3KHq+59X7osunxgUD72i1c3tNZuOb2tmR/abJ7iOL2r7PfPquWre6/ZZT+eu0Xd7gdinqHy/ONGYezDXnPOprWfd865pznkvPyMY42mkp9R8vgG3IY08srAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 53.987730061349694%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAC4jAAAuIwF4pT92AAADaklEQVQozxXB/VPTdQAH8O91/VT92HXXX9CpyYTy9ArLC7sy8y4uDQPqBziguh7uBE7QTpIS0FSIMRDZg2xj42GM8bAJ225PbWtj25e5B7ax75gyhoJgSduE8f1+3l2vFzV/+8RLYfWpC4Gpqt6opWVo2StUJb1CRdx2vW/J1PJLytVa/dDWdDJhvshLOntf27A3vUi9Auq9Q5XU/1Q/8l4w8StfBUC5NJ0URcsKh1dMnyHHNOP52gB2/jEiu6nHVlKOFH0T7rE6OOSVsIlKd5yik5s+xdmV4ER1OKL7gV4yNgQSlouJmKUtF3UKrwC3KCqoPPQcyxUEG615bMtYEDfL5uxs9rF6bzPCz9MTtXld1wlOfaUAjp4i+GQfIaQuQ1xfhxVHIzbD15BNy7HkEkGnEL1DRceLNjILnyNhreG2HwjIOiND9K8/yENfJ1n1deMxfYtEZ6qI885xYu95i6OlJVxIfYZLGGrYNXcT+3TxOptJy1jGOwiNuKeY8g8V/M1oj2MrWM+FDN9jyXoeu9sW+DVfYdnWhq3YKILjX0LXcRCz1wpg6j4CS98xzCvL4JSeRtz8E1k0tyDukRC1sPsI5ZEc+HdZdwzb0QaOnjyHqLkRzx7NwD9ZhZjhO6SclxBQl8M7eBTWrv2wCIrgVpQiOF2D+5pyhE3NhHG1IuG7uzfS21lExcaLcmvWUwhqy8mTxavIPNEi4etHKtAHWlMDl/Jr6PklsPALof/9IEzdhzEv/xgu+RfwjFYi6bhAgve+RYKW7YzcEfComLowC6YC7MplbnddzD3w87lUSEQSrnYSnD1PvKoq4lGWwcwvJpauQthvF8PWXwK3vBRhbS3ZDHVwTxkhGI8kMyKR7qeCSh7AnCMk/TPy60KkFweQjtxFxHoZ/plvOLv0bN7Q8+Gegf8+O/3bPk7Tfpj8KfqEeFUVJOVsJM/inVxmZRCMR7yrksrepOalxUNR3RkknfU7Sc+NbGpxJJOOjuVWg2KWcXQgYmxGYLIW9v4PYLjBg1nwLujhUkR11Vh11mMr3I5Vugt+iySmGtW+TtFzgpfvSS+dHhMPvG00zu6z2a1vGGeGD9gmeo4uGPs+DZm76/z6jpte7a9TbnWj36dpeLQw3ZS9P9uSD+iv5vxzbWveOT49rRrlGacU1H8vgG3IME8GFgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -2678,25 +2679,30 @@ The vast majority of nomadster countries on tourist visas. Which means, you are 
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;... I also heard &quot;you are living the perfect life!&quot;. &lt;/p&gt;
+&lt;p&gt;... I also heard &quot;you are living the perfect life!&quot;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Don&apos;t get me wrong&lt;/strong&gt;. I am not here to complain. I&apos;m not saying I am not enjoying my life. No. I love it.&lt;/p&gt;
 &lt;p&gt;But, please: don&apos;t be naive! Every situation comes with its upsides and downsides. In this post, I mostly focus on some cliches related to this lifestyle. There are also a few others downsides I didn&apos;t mention like:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Mental health issues&lt;/strong&gt;: another underrepresented but important topic. Mostly because it&apos;s always better for our ego to post a picture on the beach rather than talking about our problems. When you live on a paradisiac island, people think you can&apos;t complain and you become more isolated.&lt;br&gt;
-If you want to read more, &lt;a href=&quot;https://medium.com/@timgrassin/why-digital-nomad-life-can-be-hard-on-your-mental-health-994af0ce32f3&quot;&gt;Tim Grassin wrote this awesome post&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Loneliness&lt;/strong&gt;: Let&apos;s be honest: &lt;strong&gt;dealing with loneliness is one of the hardest parts of being a digital nomad&lt;/strong&gt;. It&apos;s a constant fight. You meet new people on Meetup/Facebook/Tinder/... and a month after, you go separate ways.&lt;br&gt;
-Building connections becomes harder when you grow up. It&apos;s even more when you&apos;re moving every few months. By the way, it&apos;s also the reason why I&apos;m always moving to cities with an existent digital nomad scene.&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Remote working&lt;/strong&gt;. Being a part-time remote is challenging. But, 100% remote is another level. It requires a lot of discipline. When I switched to 100% remote, I realised how I underestimate this aspect. You can&apos;t postpone a meeting because you&apos;re not in the office today (and you will be next week), you don&apos;t know if your colleague is joking or not, overworking, managing interruptions, communication issues, etc.&lt;br&gt;
-&lt;strong&gt;Remote working requires hustle and grit.&lt;/strong&gt;  &lt;/p&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Mh4f9AYRCZY&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mental health issues&lt;/strong&gt;: another underrepresented but important topic. Mostly because it&apos;s always better for our ego to post a picture on the beach rather than talking about our problems. When you live on a paradisiac island, people think you can&apos;t complain and you become more isolated.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;If you want to read more, &lt;a href=&quot;https://medium.com/@timgrassin/why-digital-nomad-life-can-be-hard-on-your-mental-health-994af0ce32f3&quot;&gt;Tim Grassin wrote this awesome post&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Loneliness&lt;/strong&gt;: Let&apos;s be honest: &lt;strong&gt;dealing with loneliness is one of the hardest parts of being a digital nomad&lt;/strong&gt;. It&apos;s a constant fight. You meet new people on Meetup/Facebook/Tinder/... and a month after, you go separate ways.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Building connections becomes harder when you grow up. It&apos;s even more when you&apos;re moving every few months. By the way, it&apos;s also the reason why I&apos;m always moving to cities with an existent digital nomad scene.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Remote working&lt;/strong&gt;. Being a part-time remote is challenging. But, 100% remote is another level. It requires a lot of discipline. When I switched to 100% remote, I realised how I underestimate this aspect. You can&apos;t postpone a meeting because you&apos;re not in the office today (and you will be next week), you don&apos;t know if your colleague is joking or not, overworking, managing interruptions, communication issues, etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Remote working requires hustle and grit.&lt;/strong&gt;&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Mh4f9AYRCZY&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;em&gt;Tips: Always double-check your environment before turning on your webcam&lt;/em&gt; 😉&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Administrative nightmares&lt;/strong&gt;: I&apos;m French working for an Irish company, I own an Irish Phone number and I spend most of my time in South-East Asia living in short term accommodations (changing once or twice a month).&lt;br&gt;
-You can&apos;t imagine how many problems I faced with web forms 😄. Also, forgetting a wallet in a taxi or losing my phone (linked to my bank) because I got drunk last night can lead to serious problems.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Timezone hell&lt;/strong&gt;: The vast majority of my colleagues work in Ireland. Right now, I&apos;m in Thailand, ahead of 6 hours (7 in winter). When my colleagues start their workday, mine is about to end. But it could be worse. I&apos;ve met people working with 12h diff!
+&lt;li&gt;&lt;strong&gt;Administrative nightmares&lt;/strong&gt;: I&apos;m French working for an Irish company, I own an Irish Phone number and I spend most of my time in South-East Asia living in short term accommodations (changing once or twice a month).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can&apos;t imagine how many problems I faced with web forms 😄. Also, forgetting a wallet in a taxi or losing my phone (linked to my bank) because I got drunk last night can lead to serious problems.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Timezone hell&lt;/strong&gt;: The vast majority of my colleagues work in Ireland. Right now, I&apos;m in Thailand, ahead of 6 hours (7 in winter). When my colleagues start their workday, mine is about to end. But it could be worse. I&apos;ve met people working with 12h diff!
 &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; &quot;
@@ -2710,7 +2716,7 @@ You can&apos;t imagine how many problems I faced with web forms 😄. Also, forg
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 36.809815950920246%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABoUlEQVQoz0WRQWvUQBTH80U8ixfvgljQDyB49KYiFXrtSVAQT0LRIlU8tNJlPSlYZIuKImIXJV2ULpUlpkuLViXb7Hbt7k6SmcwkPydJqw/+8Gbem9/M+4+T5zlFaK0ZjScUq0JRIomloqrCRAhS21OF3ZVRldm06JtEcbl2kiTBGENulSoFWWa3rTJ7ONdlbo5qRtMTmi+h5OPviHZf/r8AUwEtCTeIeewJFq3qvmDBj5jdEFxtjVnsRjzfSah3Y5a2JLV2j2tP1ri00uFWO+FOw2Xm6TozDY+m9x2nGFVpQ6IzUpMxVhkXa7ucuP2NYzc87r0PiWNB8EcwGAlbNxxIw1BIbCsnl32cuS7O/DabwbgCFiOVZlgpC23e/cqr6SbvLq/xsu4zNfeMMzeXOb7QYmt4NGYV3iijFaa09yt/S6AuPLSwrFDpIf8+49Mgxbn/C+fBLs7DgNm3O1youZxa2ePKh2Hp4+dQ4fYk/lAdAnUFzA+Bxr5S66zEdvYVp1+EnFvtc7bR583PhGagWP2R4O5Jrq8fcP71oKw96kz4Cz6s9eDtPYYsAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 36.809815950920246%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABm0lEQVQoz0WRTWsTURSG54+4FjfuBVHQHyC4dKciCt12JSiIK6FokSouqjTElYJFUlQUERuUaVAMShinwaJVmXSSxmZyZ+beuR+PzEyqBw6cw3t5Du97PeccZWmtmSRTyq3sNJdkUlGrMBWCQuvZ5kCm9eSo3k3TrNq9PM8xxuCMoVAKrAUsWA1OV7PZ14xmIDQfY8m73yndofx/AFMDcQY/yngQCJYDQTMULIUp858EFzoJy/2UJ1s5zX7G/U1Jozvg0sN1zq72uNbNudHymXu0wVwroB18xyutKm3ItaUwlkRZzjS2OXT9KweuBNx6E5NlguiPYDQRJMqwJw1jIVEWDq+EeAt9vMVvfI6SGlhaqsJwDmUs7ZtfeH6xzetz6zxrhhxfeMyxqyscXOqwOd63WVcwsXTigu5unW8F1GWGzmHLrjLk32e8HxV4t3/h3dnGuxsx/2qL0w2fI6s7nH87rnL8ECv8gSQcqxlQ10A3Axpj0dpW2N6u4ujTmJNrQ060hrz8mdOOFGs/cvwdyeWNPU69GFXavd6Uvz6s9eAO1BnuAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -2723,12 +2729,15 @@ You can&apos;t imagine how many problems I faced with web forms 😄. Also, forg
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
-    &lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;And also: unreliable WiFi, power outage, taxes, health insurance, etc.&lt;/li&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;And also: unreliable WiFi, power outage, taxes, health insurance, etc.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Sum up&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;I didn&apos;t win THE golden ticket, I won MY golden ticket&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Despite all these downsides, I really like this lifestyle. It completely fits me and I think it worth the trouble. Having the freedom to work and travel is an incredible privilege.  &lt;/p&gt;
+&lt;p&gt;Despite all these downsides, I really like this lifestyle. It completely fits me and I think it worth the trouble. Having the freedom to work and travel is an incredible privilege.&lt;/p&gt;
 &lt;p&gt;I wouldn&apos;t go back to a normal sedentary life... for now 😉&lt;/p&gt;
           &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(This is an article posted to my blog at maxpou.fr. You can read it online by &lt;a href=&quot;https://www.maxpou.frbusting-nomad-myths&quot;&gt;clicking here&lt;/a&gt;.)&lt;/div&gt;
         </content:encoded></item><item><title><![CDATA[Two months in Canggu as a Digital Nomad]]></title><description><![CDATA[After spending a month in Lisbon and another one in Spain, I decided to start 2019 with a continent I never explored before: Asia. And more precisely: in Bali, a small island in Indonesia. If you check on Nomad List, Canggu is the first destination…]]></description><link>https://www.maxpou.fr/nomad-in-canggu</link><guid isPermaLink="false">https://www.maxpou.fr/nomad-in-canggu</guid><pubDate>Thu, 14 Mar 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;After spending a month in Lisbon and another one in Spain, I decided to start 2019 with a continent I never explored before: Asia. And more precisely: in Bali, a small island in Indonesia.&lt;br&gt;
@@ -2747,7 +2756,7 @@ I also wrote this blog post after more than 2 months in Bali. In the beginning, 
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;When I arrived, I took a VOA and I extended it. The thing is, I wanted to stay for 3 months in Bali. So, I&apos;ve to leave the country (&quot;Visa Run&quot;). Thanks to AirAsia, you can get a return ticket from Singapore or Kuala Lumpur for nearly 50€. I picked Kuala Lumpur! I&apos;m now in my 3rd month in Bali. Because I&apos;m gonna stay 27 days in Bali, I didn&apos;t need to pay for a VOA visa. &lt;/p&gt;
+&lt;p&gt;When I arrived, I took a VOA and I extended it. The thing is, I wanted to stay for 3 months in Bali. So, I&apos;ve to leave the country (&quot;Visa Run&quot;). Thanks to AirAsia, you can get a return ticket from Singapore or Kuala Lumpur for nearly 50€. I picked Kuala Lumpur! I&apos;m now in my 3rd month in Bali. Because I&apos;m gonna stay 27 days in Bali, I didn&apos;t need to pay for a VOA visa.&lt;/p&gt;
 &lt;h2&gt;Accommodation&lt;/h2&gt;
 &lt;p&gt;Because I don&apos;t have (and I don&apos;t want to have) scooter, I had to find something in the middle of Canggu. Thanks to Booking.com, I&apos;ve found a homestay for ~21€/night. With this price, I had a big room (maybe too big) with a private bathroom, a simple breakfast and a swimming pool. Also, my room was cleaned -almost- every day.
 Good point, I was in a walking distance (10mins) from the Dojo (coworking space) and the beach.&lt;/p&gt;
@@ -2887,7 +2896,7 @@ If you want to relax, you can also go for a &lt;strong&gt;massage&lt;/strong&gt;
     &lt;/span&gt;
 &lt;em&gt;Tanah Lot ~ a nice temple very close to Canggu&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;You can also party. By night there&apos;s a lot of drunk people in the streets. Mostly Australians.
-Few things you have to know: &lt;/p&gt;
+Few things you have to know:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;fake alcohol&lt;/strong&gt; &lt;a href=&quot;https://www.news.com.au/travel/travel-advice/health-safety/the-danger-that-could-be-lurking-in-your-drink-in-bali/news-story/ec7489429539048fd96b79f0fae69b10&quot;&gt;is a thing here&lt;/a&gt;. They put methanol in a bottle and sell it for alcohol. In the best scenario, you will end up with a big headache. Worse scenario, you will die. Usually, Bintang (local beer) is a safe bet.&lt;/li&gt;
 &lt;li&gt;consuming &lt;strong&gt;drugs&lt;/strong&gt; &lt;em&gt;(including marijuana)&lt;/em&gt; is not allowed. In some country, you can do it because it&apos;s not very risky. But here, it&apos;s &lt;strong&gt;punishable by death&lt;/strong&gt;. Now you know!&lt;/li&gt;
@@ -3003,7 +3012,7 @@ Local taxis are literally scamming you with European prices. For this reason, I 
 &lt;p&gt;Driving without a helmet is tolerated in Canggu. But you know, accidents happen, no matter how careful we are. Since I&apos;m in Bali I heard many sad stories about driving accident, the last time was last week 😢 Sorry to talk about sad things but it had to be said. If I want to rent a scooter (or take a taxi) and there&apos;s no helmet, I consider it as a no go.&lt;/p&gt;
 &lt;h2&gt;Money and Expenses&lt;/h2&gt;
 &lt;p&gt;In Bali, most of the transactions are done by cash. When they accept a credit card, there is an additional 3% fee. Also, when you withdraw money, make sure to choose a reliable ATM. &lt;strong&gt;Card skimming is a thing here!&lt;/strong&gt; Fortunately, I haven&apos;t been skimmed (yet). 🤞&lt;/p&gt;
-&lt;p&gt;It the beginning, I thought Bali will be cheap. I don&apos;t know how but, it turns out I spent more money in Canggu than in other European cities. Well, the fact that I didn&apos;t have a kitchen helps a lot! If you want, here&apos;s a detailed version of my expenses:  &lt;/p&gt;
+&lt;p&gt;It the beginning, I thought Bali will be cheap. I don&apos;t know how but, it turns out I spent more money in Canggu than in other European cities. Well, the fact that I didn&apos;t have a kitchen helps a lot! If you want, here&apos;s a detailed version of my expenses:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -3074,7 +3083,7 @@ But, I have the feeling that Bali is becoming a victim of its own success.&lt;/p
 &lt;li&gt;🗣 &lt;strong&gt;Language&lt;/strong&gt;. Because it&apos;s a touristic place, (almost) everybody speaks English.&lt;/li&gt;
 &lt;li&gt;🍴 &lt;strong&gt;Food&lt;/strong&gt;. Awesome! (cf. Food section above) and the Bali Coffee is great too! (I&apos;m not a big fan of Kopi Luwak...)&lt;/li&gt;
 &lt;li&gt;🌉 &lt;strong&gt;Size of the city&lt;/strong&gt;. Canggu is very spread out city.&lt;/li&gt;
-&lt;li&gt;🚶‍♀️ &lt;strong&gt;Walkability&lt;/strong&gt;. Very bad. I felt lucky when I found a sidewalk. And when you have one, you can&apos;t &lt;/li&gt;
+&lt;li&gt;🚶‍♀️ &lt;strong&gt;Walkability&lt;/strong&gt;. Very bad. I felt lucky when I found a sidewalk. And when you have one, you can&apos;t&lt;/li&gt;
 &lt;li&gt;📡 &lt;strong&gt;Wi-Fi&lt;/strong&gt;. Wifi is between OK and Bad. You can get a decent connection at Dojo (if it&apos;s not crowded). The 4G works well, I had around 23MBPS (Telkomsel).&lt;/li&gt;
 &lt;li&gt;👮‍♂️ &lt;strong&gt;Safety&lt;/strong&gt;. Bali is a very safe place. I felt quite safe. 🐕 Wild dogs are legion here&lt;/li&gt;
 &lt;li&gt;💵 &lt;strong&gt;Prices&lt;/strong&gt;. The biggest challenge for me was to avoid tourist traps. Otherwise it globally cheap. I spent ~1,300€ a month, but if you&apos;re on a budget, you can live with less.&lt;/li&gt;
@@ -3090,7 +3099,7 @@ But, I have the feeling that Bali is becoming a victim of its own success.&lt;/p
 &lt;p&gt;If you have questions or if I forget something, don&apos;t be shy and post a comment in the comment section 😀&lt;/p&gt;
           &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(This is an article posted to my blog at maxpou.fr. You can read it online by &lt;a href=&quot;https://www.maxpou.frnomad-in-canggu&quot;&gt;clicking here&lt;/a&gt;.)&lt;/div&gt;
         </content:encoded></item><item><title><![CDATA[Enhance your git log with conventional commits]]></title><description><![CDATA[Git is a very powerful tool installed on most of our machines. As developer, we use it every day. But, unfortunately, at first glance, this tool is not very developer friendly. That's why a lot of people bypass the command line interface (CLI) with a…]]></description><link>https://www.maxpou.fr/git-conventional-commits</link><guid isPermaLink="false">https://www.maxpou.fr/git-conventional-commits</guid><pubDate>Fri, 01 Mar 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Git is a very powerful tool installed on most of our machines. As developer, we use it every day. But, unfortunately, at first glance, this tool is not very developer friendly. That&apos;s why a lot of people bypass the command line interface (CLI) with a graphical user interface (GUI).&lt;br&gt;
-It&apos;s like using a framework without knowing the language itself. It can be OK at the beginning but, sooner or later you, you will have problems. &lt;/p&gt;
+It&apos;s like using a framework without knowing the language itself. It can be OK at the beginning but, sooner or later you, you will have problems.&lt;/p&gt;
 &lt;p&gt;Let&apos;s take an example:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;$ git log --oneline ./src/components/button/
 
@@ -3161,7 +3170,7 @@ It&apos;s always important to know what&apos;s going on under the hood!&lt;/p&gt
         </content:encoded></item><item><title><![CDATA[2018 - A Year In Review]]></title><description><![CDATA[Disclaimer: I mostly wrote this blog post for myself. Writing my Year in review helps me to celebrate my biggest wins, see what was wrong and define goals for the upcoming year. 2018 was a whirlwind year full of a lot of great opportunities and…]]></description><link>https://www.maxpou.fr/2018-a-year-in-review</link><guid isPermaLink="false">https://www.maxpou.fr/2018-a-year-in-review</guid><pubDate>Tue, 22 Jan 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;Disclaimer: I mostly wrote this blog post for myself. Writing my Year in review helps me to celebrate my biggest wins, see what was wrong and define goals for the upcoming year.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;2018 was a whirlwind year full of a lot of great opportunities and travel.&lt;/p&gt;
 &lt;h2&gt;👨🏼‍💻 Work&lt;/h2&gt;
-&lt;p&gt;In April, I left HostelWorld. I stayed 18 months there, which is longer than most of my friends though! I loved to work with people from everywhere in the world. But, I felt overwhelmed by &lt;em&gt;politics decisions&lt;/em&gt;. Plus, my team and I weren&apos;t really challenged.  &lt;/p&gt;
+&lt;p&gt;In April, I left HostelWorld. I stayed 18 months there, which is longer than most of my friends though! I loved to work with people from everywhere in the world. But, I felt overwhelmed by &lt;em&gt;politics decisions&lt;/em&gt;. Plus, my team and I weren&apos;t really challenged.&lt;/p&gt;
 &lt;p&gt;In May, joined &lt;a href=&quot;http://vsware.ie&quot;&gt;VSware&lt;/a&gt; in Dublin as a Senior Frontend Engineer. In a nutshell, the company is doing a cloud-based solution for schools (currently focusing on the Norwegian market). Here are few insights from what changed for me:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;I switched from a PHP/JavaScript position to a 100% JavaScript position. This is exactly what I wanted!&lt;/li&gt;
@@ -3185,7 +3194,7 @@ Hey, since you&apos;re here: forget about the long chair on the beach, except if
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFrUlEQVQ4y02Ta1CUhxWGP+sliWZstAoxiDJIoEQWXATcdS/sFVhY2IXFhWVhIQsr1yXcbyIXBRMNEomImEXDTRKUMBJMjJckYjDTTJlYM21m2plkMu30d51Jm7Zf0u/ppr96Zt6/Z55z5nmF0ZErPzRUNfxYXfqy6HHkigUWk1hZmC1WuXLEPKNWzDSrxYwstWhOVYnGYDQqpWgxporWNKOo1ahFtVolqpVKMT5OJtptdlHo77v4o9mQj1mlJEuRgD7lALlZJhwWA3ExLxIXF01K0n5U8v0ciI0iNioCRVwUz4fuYV+0HK8rG608gvAdz2DQKhDsVocoCAIbNz0jrRcEaV+SXkopaJNkNr8UZamUonTFkqxpRtItfy8Z5/8ipc5+K+kWn0ghaRVSoUUv+cqKpc1Pr5e8BUZpqL9OEgZ6usQjtgzybJlSTrqGRI2JSEMp4foyQtTFvJBkZ0vtdYTLsG3qCc9efoIw/hM78zvw56sx65X8DKRTxtNUVYjQ6HOL+bok8vUpkla+j0i5GrmzA/fwBbwT4ySV1vFU002EeRCm/8O66Z8QrsL2nHpSZeEoEl9iw8ZN/1t68EACQm5mmpi6PxJFdIQUuSsEWWIiLn87ZW29uJq7yfc3E9U8RfjFbwg9/Rt++doXbHjtK3aZi+gbeJ21R79naekmI+fHKXaXIphVCjFk8yae3xEqbdkaxYHovcREhPDs0xvYsnEdYaG/4nBCJGEh2wnZtpVdO58jNjIUuSyG5dWv+P9xe3wIIy354mBZAv3lGmlfhAxnmoyThfH0uBIotyVxMCYUjTwcedR2PLrdVKZH0FqsIc+iweqoY3TsOh/dWeXB6m851dOMsDLXJd695GV+yCMN1mcwXBvPh80xBBoOM3osnzN+Pf2VegZqzbx31sN4RyavN2XTWWWlJM+OxVyKSlNDod3Lx5MtCPeW3xWX5wPcu/aGNHfqCAunndwe8/DBlTbuzg+xuniW+9dPs/LeMCtLF/hscYiHs6+werWVT662c2uqi8lzHQQGq7h7uR7BXewR3fZMmktypZOVhTR5XfQWOFk8f4YWXxFHC/NIPHSYZOVhEpKSsGRlkZNt5exgHyeOd5OQosBfU4XBoMOa60BINZjEnxvhzdJKbQ49RZnpOC1plORm4UzX4svUsHFbKL/YGsK6rTvZvCMM4alteBzZuLLNQV3Wk202cig+Fp87D6Egzy7q4qNxW3RSidWESatFq1RgM+txO+x0lNrZGbaHHbv3ELInEl2KnLKMFNqr9Yw05/F2ayFzvR4WXz3K2tyrCD6nTbQmx1FhUUk1lkNkK2Uog16W2swcqypmtr+SV8pc5GaYSD6YTK0jg0tdaWRkhdNTmcyl5gzaPSq+W7nE37+7j3CiIk/scxtY6D4irZ7z8niihq8na/nDpJ8/vdPBn6+18cGFfo63dNJR56exvJxqt5JDilCq7PtpccRiU+8mUGNgbfoYwlhTiTjVaufxaLH07UwN/3wwxL8eT/Pvbxb54esZ/vH5MI9mepk51c6ZugL6S4yMliXSkRnOqCueUV9Qr6MaZmr03BgoRwi0ecTFY9nMduZK450e3hnw8f2jSf76uzn+eH+Mh9f6WDmXzwnHS1Sbfk19robl09WsvT/HndFuJo+qeDtId7FczY3BYFOmOz1imV7G3ogXpbAX9lJklPG3W53MHi+kMcfAmCmVe+XpLE2P8eD2bb749GPuTo1w63w38z1eApWpvBXMRIWa5cGK4MmNRWKjKQqPOlLyp8Uw36Lj3oCVhyMuAk4dbyXGs1Cg4cuFYR5c6WOhy8bVBhNTvoNMeBIIlCYTKFPQY5XR5LIiXOhtEN+szeFGX5G02FcU/EMpn7xZxZdTLaxNtvLpxXoeTvhZecPDnVNObp50B0nKg3mZpX4PgaYjwc4HdTMY8fqq+S/xAWBgLdN5jgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFqUlEQVQ4y02T6VPUhwFAf9YjiWZstAoxiDJIoAQWXATcZe8LWFjYhcWFZWEhCyvnEu5L5FAw0SCRiIhZNFySoISRYGI8kojBTDNlYs20mWlnksm00891Jm3a/pL+Xif91PcHvHlfnjA2euWHxurGH2vKXha9zjyx0GoWq4pyxGp3rphv0opZFrWYma0WLTqVaNKpRI1KKVpNOtGWbhK1GrWoVqtEtVIpJsTLRIfdIQoD/Rd/tBgLsKiUZCsSMaQeJC/bjNNqJD7mReLjo0lNjkMlj+NgbBSxUREo4qN4PnQfB6Ll+Nw5aOURhO96BqNWgeCwOUVBENi85RlpoyBIB5INUmphuySzB6Qoa5UUpS+RZM2zkn7le8m08BdJN/etpF96IoWkV0pFVoPkLy+Rtj69UfIVmqThgXpJGOztFo/YM8m3Z0m5GRqSNGYijWWEG8oJUZfwQrKDbXXXES7DjuknPHv5CcLET+wu6CRQoMZiUPJzkF6ZQHN1EUKT3yMW6JMpMKRKWvkBIuVq5K5OPCMX8E1OkFxWz1PNNxEWQJj5DxtmfkK4CjtzG9DJwlEkvcSmzVv+Jz10MBEhLytd1MVFooiOkCL3hCBLSsId6KC8vQ93Sw8FgRaiWqYJv/gNoad/wy9f+4JNr33FHksx/YOvs/7o9ywv32T0/AQlnjIEi0ohhmzdwvO7QqVt26M4GL2fmIgQnn16E9s2byAs9FekJUYSFrKTkB3b2bP7OWIjQ5HLYlhZ+4r/x+P1I4y2FohD5YkMVGikAxEyXOkyThYl0OtOpMKezKGYUDTycORRO/Hq91KVEUFbiYZ8qwabs56x8et8dGeNB2u/5VRvC8LqfLd495KPhWGvNNSQyUhdAh+2xBBsTGPsWAFnAgYGqgwM1ll476yXic4sXm/OoavaRmm+A6ulDJWmliKHj4+nWhHurbwrriwEuXftDWn+1BEWT7u4Pe7lgyvt3F0YZm3pLPevn2b1vRFWly/w2dIwD+deYe1qG59c7eDWdDdT5zoJDlVz93IDgqfEK3ocWbSU5kknq4po9rnpK3SxdP4Mrf5ijhblk3Q4jRRlGonJyVizs8nNsXF2qJ8Tx3tITFUQqK3GaNRjy3Mi6Ixm8ecjfNlaqd1poDgrA5c1ndK8bFwZWvxZGjbvCOUX20PYsH03W3eFITy1A68zB3eOBUHYSI7FxOGEWPyefITCfIeoT4jGY9VLpTYzZq0WrVKB3WLA43TQWeZgd9g+du3dR8i+SPSpcsozU+moMTDaks/bbUXM93lZevUo6/OvIvhddtGWEk+lVSXVWg+To5ShjIukzG7hWHUJcwNVvFLuJi/TTMqhFOqcmVzqTiczO5zeqhQutWTS4VXx3eol/v7dfYQTlfliv8fIYs8Rae2cj8eTtXw9VccfpgL86Z1O/nytnQ8uDHC8tYvO+gBNFRXUeJQcVoRS7Yij1RmLXb2XYK2R9ZljCOPNpeJ0m4PHYyXSt7O1/PPBMP96PMO/v1nih69n+cfnIzya7WP2VAdn6gsZKDUxVp5EZ1Y4Y+4ExvxpjB3VMFtr4MZgBUKw3SsuHcthritPmujy8s6gn+8fTfHX383zx/vjPLzWz+q5Ak44X6LG/Gsa8jSsnK5h/f157oz1MHVUxdu1Ri5WqLkx5EeY6fKK5QYZ+yNelMJe2E+xScbfbnUxd7yIplwj42Yd9yoyWJ4Z58Ht23zx6cfcnR7l1vkeFnp9BKt0vFWlY7JSzcpQJcJ4U7HYZI7Cq46UAukxLLTquTdo4+Gom6BLz1tJCSwWavhycYQHV/pZ7LZztdHMtP8Qk95EgmUpBMsV9NpkNLttCBf6GsU363K50V8sLfUXc2OwjE/erObL6VbWp9r49GIDDycDrL7h5c4pFzdPelgZqmBl6GWWB7wEm49QYTdjNprw+Wv4L/EBYGBvld95AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -3200,7 +3209,7 @@ Hey, since you&apos;re here: forget about the long chair on the beach, except if
   &lt;/a&gt;
     &lt;/span&gt;
 &lt;em&gt;Before/after ~ no more 24&apos; curved screen! But, I&apos;m now more focus with only one screen!&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;To make this shift successful, I set up some rules to avoid procrastination and get a healthy work-life balance: &lt;/p&gt;
+&lt;p&gt;To make this shift successful, I set up some rules to avoid procrastination and get a healthy work-life balance:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Don’t fall into the temptation of working from bed;&lt;/li&gt;
 &lt;li&gt;If I can&apos;t work, stop pretending to work. Do it later;&lt;/li&gt;
@@ -3227,7 +3236,7 @@ Another important thing for me: I decided to release the template to the communi
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 28.834355828220858%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA9klEQVQY042OiU7DMBBE8/+/VqRCoeFIi9oSSFNfCYmPHPawNgIFCSRWelrveHbsTHAGqRS894gVQvg3fsHXbtZS2DyNcfo2hWT4xIdf8CH5l1X1IwrlkDm6dHPAuDDFQDN5jLPHXxWDH6TFPXF90VjVGtLNyK5eG6yZxQ0z2HCT+i319eXnvKEeA3Jh8agsVmed7qP2RD976Ua0AwXupcaxddg3ZJSGXnQoGocDac+k5bS0pZCc9C2d77hOFBRa9hNO3ZC8cZZ2QsY6C95bCEISp5qhZCJpvDNojEMlFA5vZ7C2h9Iuwd577MoKx5qnXUZePUz4AAxlzat1e3LWAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 28.834355828220858%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA+ElEQVQY042Mi07CQBBF+/+/hgmKAiJgAFEeu91t7b5ou3tM12gw0cSbnEzuzJ1blFKgtCbGyKCU0r+JV3z9FrXW9F07uO9QyoFPYvqFmHL+WgfTstSBIsRE6BPtVWgodF2k7SN/aSh+VJ658tyeLaOTRYWe4ua1Yiw8d8IxkS7Pe+kYn3/6iXC5YFZ6FtozOtp8H3ZPOvDStNSXnmKtLNs6sK48C+WYq8CyCmzqwHPlmUnHtPTMVGAqHQ/SZpbaszcdu+aSs4NXvqMQjUcaT2k8ynh2J8FelHknG0flAodSs3k7ImqDtiEj3g2r/YHtSeZf0TjspeMDDGXNq2igwq8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -3245,7 +3254,7 @@ Another important thing for me: I decided to release the template to the communi
 &lt;ul&gt;
 &lt;li&gt;Gatsby made my website more SEO friendly;&lt;/li&gt;
 &lt;li&gt;I also posted my posts on Reddit. The community here is great, I had really good feedback!&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://dev.to/maxpou/3-tips-for-scaling-large-vuejs-application-2edi&quot;&gt;I cross-posted blog the Vue.js article on Dev.to platform&lt;/a&gt;. With only 2 posts, I have more followers on Dev.to (~400) than Twitter (~280) 🤷‍♂️ &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://dev.to/maxpou/3-tips-for-scaling-large-vuejs-application-2edi&quot;&gt;I cross-posted blog the Vue.js article on Dev.to platform&lt;/a&gt;. With only 2 posts, I have more followers on Dev.to (~400) than Twitter (~280) 🤷‍♂️&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Also, &lt;a href=&quot;https://github.com/maxpou/docker-symfony&quot;&gt;docker-symfony&lt;/a&gt; reached 1 000 ⭐️ on GitHub! Yay! Unfortunately, I can&apos;t maintain it since I stopped using PHP.&lt;/p&gt;
 &lt;h2&gt;🗣 Conference&lt;/h2&gt;
@@ -3277,7 +3286,7 @@ Another important thing for me: I decided to release the template to the communi
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;I spoke 6 times about 2 different topics: Progressive Web Apps (PWA) and Frontend Testing.
-For the first time, I delivered talks outside France or Ireland! I had the opportunity to speak in 4 different countries: Ireland, Austria, Poland and Spain. Yes, no conference in France for 2018! &lt;/p&gt;
+For the first time, I delivered talks outside France or Ireland! I had the opportunity to speak in 4 different countries: Ireland, Austria, Poland and Spain. Yes, no conference in France for 2018!&lt;/p&gt;
 &lt;p&gt;Also, I gave my very first workshop! It was an introduction to Vue.js at &lt;a href=&quot;https://www.meetup.com/DublinJS/events/fbllfpyxdbjb/&quot;&gt;@DublinJS&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;A funny anecdote: during my talk at Voxxed Vienna, &lt;a href=&quot;https://twitter.com/_maxpou/status/978919918124109824&quot;&gt;I showed -by mistake- all my GitHub Recovery Codes + Personal access token&lt;/a&gt; 🤦‍♂️&lt;/p&gt;
 &lt;h2&gt;✈️ Travel&lt;/h2&gt;
@@ -3294,7 +3303,7 @@ For the first time, I delivered talks outside France or Ireland! I had the oppor
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 41.717791411042946%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB8ElEQVQoz0WR3W/SUBiH+996o+I+RGf8SDQxMcuiN5rojRdGZ+bVzGKWZWEbhQGjLbQDWqCj5RT6QdnoMPHSx8Pc9OLN+cjJ8z7v7yjVoMG+b7M/bHPs9+j4HY5cl5rnsdMLqPV9np8klOX6ezrCHMW8bk94ZKTkGzPuGpdstGJ0UWdvaKFM0iLTcxWRqPRFhTip0h63eGenvG1FFByfB9qMr3ZItSfIH6eyQcR6MyTXnLOkz6n261RFDWNYQtnqeUTpEWJ0QD8sMoiKaGOdp1bCbteW5xrvHUFOmuSbM1b1GWsnUx5K8MZJwMeDNpsVi22rzQ/bRFk8OvUrRJFKlOh4UR13otIJVHy3wEDud70WT8wpS0bGqhxzpZGxLOuFFvOp1KHcMnDbBc6cAsozM8X2S4wnRURcIRxrmONTNFeje6bywfFYa17IOpewTK4Z9yV0Ac415myrFpZZZrPrsNeVhuv1EcI/IpgWCcIygShyMS0xSI5Z70Tc1n+yIs2WjQXoBvjX9J5+yeemLaPpsCXzfXMaoiwuv3RdwvQQP6mw4zl8cx2Z25A7MvD8tc3VqMb/Wljm9IzvXY95ZHMubHwxQFl0f2hmHParFFydW9ovHsvxXlnxv8xuYKtXZtd28pNeNhJi0eciHjIJPbLY5w/wMhmIIxRLHAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 41.717791411042946%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB70lEQVQoz0WR22vTABSH89/6otZtdVrxAhMEGUNfFOaLD6KT+TQZMsbotqb3Nte1TdJkTZq0uTTtmlbw0U86N334vRwO3/k4P6EeKJx4BifDLlWvT8/rce44NFyXw35Aw/bYaiZUbI/f0xHaKOZNd8ITOWVTmXNfXrDTiZH8FsdDHWGSlpjORPxExPZrxEmd7rjDeyPlXSeiaHo8as/5aoTU+z6b1ZStZsS2GpJTl6xJS+p2i7rfQB6WEfb7LlF6jj86xQ5LDKIS7bHEcz3hyDIYRA12TZ+cvGBTnZOX5hSaUx5XU3aaAR9Pu+zVdA70Lj8MDWG1dOHViCKRKJFwoxbORKQXiHhOkcFE5Mjt8EybsiZn5JU5G0rGupLxsh3zqdyj0pFxukUuzSLCCy3F8MqMJyX8uEY4bqONL2g7baxLkQ+mS0G9oqDOyCsZBTXjoTK/BueUJQeijq5V2LNMji0NYbs1wvfOCaYlgrBC4Je4mpYZJFW2exF3pZ9syBnr8gp0C/xr+kBa8Fk1OLJ67Pd93l6ECKvhF8shTM/wkhqHrsk3x2TXHHJPWl43mb/Jhvw/K8uclPHdcllGBjPfwPMHCKvrj7WMM7tO0ZG40/7FU3XGaz3+97NbWP7a7MZOXvBKSYh9m6t4yCR0yWKPP/AyGYh+BOuEAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -3324,7 +3333,7 @@ For the first time, I delivered talks outside France or Ireland! I had the oppor
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 12.883435582822086%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAuElEQVQI103OzU3EMBCG4VRHCZxXogdunKkAaekA0UtogL0QJ94Ey4n/HefyMqyExOnRjPTNfN2TeedhPnPxmrJFcljxbhUdzhhKqbjN0WIkriu1VmII7Dnf5iIGY3HeM00T3Wl+5e76zIf5xIwzYTOMasBvllkpai6oYaDKkeug5FFgkWBNiWUcKSmzfCmstfR9T/do37j/fuGSNEfeqa1Jq0IT85/Soh0HSTzE3/1/677fMlprfgC5Ed7kNW5QBgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 12.883435582822086%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAtElEQVQI102LTUrFMBgAezqP4FrwDu5cewJBbyDepV7gvY1Nk9ca0ubvS5psRigIroYZmOHZfvK4vHENhrInJG4EvyHR462llIrfPS0l0rZRayXFyCFyehEhWocPAa01w8Pyzt3thS97wc4LcbfMaiLsjkUpqhTUNFFj5DYpJEZWrak5s84zJQvrt8I5xziODE/ug/ufV67Z0OWgtkYphdYa8kcRWu9kEXrvZ//PehznY4zhF7kR3uR+trsGAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -3384,7 +3393,7 @@ For the first time, I delivered talks outside France or Ireland! I had the oppor
 &lt;p&gt;The file architecture given by &lt;code&gt;vue-cli&lt;/code&gt; is great. But after 3-4 pages, your files will start to become overweight.
 You might be tempted to put separate your components into multiple folders. But, again, after 10 pages, you will face the same issue again.&lt;/p&gt;
 &lt;p&gt;The idea is to split your application by notions. Stick to one unique word.
-For example, in a shop application, we could get &lt;em&gt;Catalog&lt;/em&gt;, &lt;em&gt;Basket&lt;/em&gt; and &lt;em&gt;Payment&lt;/em&gt;. &lt;/p&gt;
+For example, in a shop application, we could get &lt;em&gt;Catalog&lt;/em&gt;, &lt;em&gt;Basket&lt;/em&gt; and &lt;em&gt;Payment&lt;/em&gt;.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;├─ src/
 │  ├─ core/
 │  ├─ modules/
@@ -3430,14 +3439,13 @@ For example, in a shop application, we could get &lt;em&gt;Catalog&lt;/em&gt;, &
 &lt;p&gt;Remember: &lt;strong&gt;Global CSS are evil&lt;/strong&gt;. Avoid them as much as you can!&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;.vue&lt;/code&gt; files: the easier quick win for that is to use the scoped attribute in the style tag: &lt;code&gt;&amp;#x3C;styles scoped&gt;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Not a big fan of &lt;code&gt;.vue&lt;/code&gt; files? (if you want to create multiple small components without creating dozen of files). Consider libraries such as &lt;a href=&quot;https://github.com/styled-components/vue-styled-components&quot;&gt;💅 vue-styled-components&lt;/a&gt;. The style encapsulation works like a charm!&lt;/p&gt;
+&lt;li&gt;Not a big fan of &lt;code&gt;.vue&lt;/code&gt; files? (if you want to create multiple small components without creating dozen of files). Consider libraries such as &lt;a href=&quot;https://github.com/styled-components/vue-styled-components&quot;&gt;💅 vue-styled-components&lt;/a&gt;. The style encapsulation works like a charm!
 &lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;import styled from &apos;vue-styled-components&apos;;
 
 const StyledTitle = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
+    font-size: 1.5em;
+    text-align: center;
+    color: palevioletred;
 `;
 
 &amp;#x3C;StyledTitle&gt;Cool title&amp;#x3C;/StyledTitle&gt;
@@ -3450,8 +3458,7 @@ const StyledTitle = styled.h1`
 &lt;li&gt;Components: Low priority, easy to do. write unit tests for each component. It should be easy to do.&lt;/li&gt;
 &lt;li&gt;Pages: High priority, hard to do. You probably gonna have to mock api/browser parts.&lt;/li&gt;
 &lt;li&gt;Routes: Usually bugs aren&apos;t here. Leave it for E2E tests.&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Services:&lt;/p&gt;
+&lt;li&gt;Services:
 &lt;ul&gt;
 &lt;li&gt;api interface: I personnally don&apos;t test this part (90% of the code is mocked).&lt;/li&gt;
 &lt;li&gt;helpers/dataFormaters: High priority, easy to do. Usually, the easiest tests to do in your app!&lt;/li&gt;
@@ -3460,7 +3467,7 @@ const StyledTitle = styled.h1`
 &lt;li&gt;Store: The hardest part to test. You can test it via integration tests. Testing action, getter and initial state separately is useless.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;💡 Lazy load your modules!&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;To reduce the JavaScript bundle, consider &lt;a href=&quot;https://router.vuejs.org/guide/advanced/lazy-loading.html#grouping-components-in-the-same-chunk&quot;&gt;lazy load your modules&lt;/a&gt;!  &lt;/p&gt;
+&lt;p&gt;To reduce the JavaScript bundle, consider &lt;a href=&quot;https://router.vuejs.org/guide/advanced/lazy-loading.html#grouping-components-in-the-same-chunk&quot;&gt;lazy load your modules&lt;/a&gt;!&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-js{6}&quot;&gt;export default new Router({
   routes: [
     {
@@ -3488,7 +3495,7 @@ const StyledTitle = styled.h1`
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 63.80368098159509%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAADEklEQVQ4y3WPa0hTYRjHX7uQX6KiPvTNpC9BVtCH7kShQfRFMWfuci4r72ZlEJaTCiUrSrtYNBe5i7U1Z56Zipubl0LXhehTEEVpUNBqnbOjy+ZRt6fnXYMo6sOP//P83/f/P+8ht1hDymbtvlSJszeGOcdjxIe4JNa+HVUI845+1FGkDr1M1ADSSz3cc1FPJM/7EC9JP5hFctiC1SJrfxbW3QOJwtojWJQnMXYlsTN26tFiTmKSd9CjZeg7pN85IDzLp+9XH1gfPuQckisFkCs74+FCZ1AqaMsJF7dL8lF3TC5/AGH9/S4MaeWKByAfEX7IpR209FiYv2/GDOYEBXNzhOP4zDxV/ia5rGMo0uCHyMVBkKu6vorZrTkTp3rlyPkBmKzvpyXdYq5FN3naA5HG4emJml4Q86xVcpXbEjmHuQb/7MTJ3jjhGC5LpdNsEfXOYRG/KuJrxGJX6DPjyEWdEMtwL+mAb4XtPUHGwaJH7yhiUTt8YRzHQ0UuWyJX0jFHz2jhLhWr2TyjtQ0qaitQZjTWIKha9qJKuMemNTaIqS0C5N/OozN6UapQcKccCsy3k96MorHFyCGGW6RhmY1NhtHqa4aA5bph1HS59knz/sY3uqbawE30TDcNI+azdS/OqC+95ptrRixXagPGGzUj5sILr0qr61+ewtly1RBouYZZsrPOR7R80QrSBgISRN4hH4gFvqCOExuMESeMreqDj2ndeO6G9+iNk7voW+Ezzp8SM71LYRh2nZbl17R1MiddPWqr66HaaO5kTXfcrNEscKbWTs5kFXiTs1vf0t7DGx0P9QnPjLQKrBFpMSd3CtEw/O7DbP7WiJ8E3rtSYcydOgd+AtCP+JLQ2Yt4kur7P0TN8DuKtertk0MLRvfc0kKFbe8sDJL4d8/8+A8v4iHx6MCyeHRkLZIRjz5KQ58g8/4J/eWMA5x+G3756XP/SnjrWxKnr4jiqxRkGmfFtxCUwaXIclAGFv/y+v8NyVaVzDvI6TZMeVO8WDQV85IgloUULwlhMISXEprA86dH9W9+AtzRjcJovY5dAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 63.80368098159509%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAADUUlEQVQ4y3WPX2xTdRTHD6BxL0aNPviGxBcTURMfRIUYDZgQX1jGOnbb3t/vFrZuDKeOxADromZE1OjQCYSuhPWf3EvXrrewLfS2XYemrUKITyZGI8NEE4r13t/dKu3uWO8xv9LEaPDhk+8533PON78fnCa+dVtcb7QZVB5jVPmGUSXLqBI3iLyVUUVlkpJhVCkyqowaRN7OqFJiVJnjnkHkDkaVd1vzS4wqGmzauwPaSfeTOpGvMPc5NDhErjJJ6TRE2Wr2osw9HkwNsbUjysjDDCIrxj93CBKRNu0W9jzL9sUWzEEVzcGkzXpiZaM72s68U4b5dqphDkwj85y/YLjPucwD02i+pdbM/gQPfYdJ54PmYBLNQdViPbE1oFTa3unoesHcn1ioHsth9ZM8mkMX/tB3TbYvHZkzqx/N4/LRDA+Z0TtC7uX30lgdu7yyNDyHemd4yBxKhaof5rB6LHdn6fCcDVSkOxxu54u6J3ZZ70+gPjCNujdeuSkqHbo3vqTvn0a9L4F/9kzNlkWF6N4437H03im8JSoHK73xSPOuL7HGZzzwVQdxbll1RfKWEEbOqjNcRsfEzlVn2LCEcGPFGcGGEFKx60wnry0hXOeK3WcHsDt4puWtWs5IA/aJ9AEnEZ8/7iseGveVQl/6ioHPRr49sXvsJ/fxkdKpcV8pcMpXCH4weu194dMfpRPDhdDnIyX/yeFCsOfjH/oPHf3+yMnhQugLX2li3FcMwCujWXBJvY9BFFWIYhmi+AtE8VcI4S2I4g2I4CLEcPGJS/jbxhksQwqvQwRvwFe4CGG8CRH8vVnzXY4okmdcRHoqmhQPx2eFcPyi4A8mSeBsiviDKg1MJmkgrEqB2IxnYmpW8isXPU0vmKSBSZX4J1UyEWz1HHCK0mtvkq6XqjkoXY+34WKqbQ1zgJgBxGwLXmuAmG5p9v8BQZS2eV3C1uWF+4qvn3bhgcjOO5gH+6/0BrumbbBrabDr84/Y9cLTdr2w2a5/vdGuaWDXtPX3hH958x7qeRk1+O5q7nH8OfuQzV9RzwBaGcAVDdDK3o9W/mG08o+iNf/gXS9zb2CXo2/9Xup+7ra2TkMNbjc0KNczULE0qKxoULEyd7VJ+t8e1//yN9zRjcKglT4+AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -3517,7 +3524,7 @@ const StyledTitle = styled.h1`
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 55.21472392638037%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACzElEQVQoz03SW0iTYRgH8FdJMDrclAVhhEp1kwSWmlaGOtNK7WAwzMOGpBmobSUFXZR00UVKoAaRUTZxU5xLcZ+pm6eU7C5DBFfo5gG6Cfdt5nw3X/3+vfP7sC4enrsf/+dAiEH6TQxY491LDJsgb5FXPnfUUuxIgsaRuFziSEC6M7UCAqlYsxEEbGTZ3x+KwBjpXM4bTBM1Rogak1csNq0Gi8gYwMENBVRzsFcB/Qqo56BeAf0KKHAwQwE3RE0bgkXIB2mVYwgxSOv/gYKGg9ofiVQBdRzUrdlCOBhCFdDKQZUMtq3zktzFJimY0EeaecJmif0DjwlFM4kodMRxMB6qbZDA3084SGTwpgy6C4zMXWTaTujba5Kwr01ioUGwCerSuSih7Gc6qmaz6G1HIlKdKTpYOWgPQ2DkAA3YdsrgVbtK1JrgqfjIxLIOuAuNIGEtki+5dxPZ9k0W0c7B11Dr508KT1xa1C5U0kdz15DhUunQQ3R0PBrr327QwPgJBD4Tq1s9qvJUWfDnxTBbqRmAWN4JsqsVvigLEGMBizTz0d9Afd8VJzxw3kTVYg6tns3GpfmsLdA/dhj+L7F0ffSIDN7ioL4L3uoexgueyq7gyJu+/cZfONQ2z8JbVrbAUle0oJ06A/1wEtXOxCPNeWFrhyt8d+A7XPvEdxkc+bpd5SlshVhoZJ6CrQ6yp9Xrm/weiw0HYUV9BpCXUN9dOi6MlCfDlammjTXxOMVydegmOqEvBueeamhjRwLwlVjFK0OqRb67V/UTrPvZELz8MOSgWfTZzbthe05YrqEB5D3UJYuRwtjDy1g+nU/r684jzs8TWohOtO9AZmc+neqLAMaJ1ZszqHKWm/G4eZK9qx3nIE8Y3hrwZba342JTI4s0zMhXXooR7k2koKEunt6ZPovUBfnKfv42dDCEsgH5bdzKH05XdrH5MjNWOPgXavornJaXKNIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 55.21472392638037%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC2klEQVQoz03SW0hTcRwH8J+RUHR56QZhREn1UgSWLbtinbL7zWBYzg0pW6B2VlLQQ0UPPVQEZRAZZSfcJs5luGPObZU5qreKCFyRmxn0EtvZrO1/5t+db81zqB5+/N4+fH8XIkn7QRIyJGkpknKge6i0Dy3x1kTKYI2Y4rWRNdgaLa+HTPWZACEboLjqn4TsAHXGK0NbFKsTitWVUmpcv/JFOgaQpI0boNk+tKTHAFUDdEAmhwGqBijHK0PbDHBcsbqRL6KH2i+SNBRI2th/oGyNlMH2ycQMUIRMYiZQgGyggBmgL14ZEnTQPaZY3VqixqXlE6apFaBWjf8Dl8qWQROqIyWsNlIK4S9IUP3EVD/p4GEdTBx18oTF9TdheqZLwyy3xiflwRaYjw8tkus+b0Xjlx3sWMSE8ugmET4SM8FCZF/MZdnAVB3cHxQUmwvJ+sdcqetAotoJKnykpdf15LAnmONz2nOgOzA7hlfKF2I2XPvawM4NHcC2mCCim0QWXoyxt4dYNrwc2ZfkS5j7hWSjFz+vPuejl/qg2DtB09qQXuQFir3gRR6A7sJ8OlYin4keRuPIXtb0ZQ92Du+YANWBBVBfrWBj/Qt18Ei/kHR0IdXUzVNN3Ug2dOVHzqVnO79jvnuYT3k0OgEejy2WbR/WwvG8jNkGS7Elunlih6N+AvzEMk8Jan7kg0EhWd0GpdrJk0cnOmhGWyr97v0KjEeIW3ol0A2YT35bJr+wr0OswsyaL5ViFd8n4gmJcm8xNly0suaONcAb8im7nwkjdR24ffM1f3L5GVIWF2ieR0kHPdMRuEJ8n3QL9ADm2pEieeDsLsRXV7Gb1zeiRN0swkuiEpyMis4q9qF3DhAmX2pvSIjaPTjf+o7fvxZGyuIETWnLpiva27G9pZkXSYP6lb8Vy6deb8Kt66XsxMf1KP+qX1kNEFiogPE+/W0Sxh9+bOjiw3UejP4BfwNq+iucDO62LwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -3556,7 +3563,7 @@ Also, if the backend is not already in a micro-service architecture, you can&apo
 &lt;p&gt;&lt;em&gt;⚠️ Avoid Hype Driven Development™️. You probably don&apos;t need this architecture yet. Only consider Micro-frontend architecture if you think that you reached the limit of modularisation!&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2&gt;Tip #3: Be kind with your store (Vuex)&lt;/h2&gt;
-&lt;p&gt;One of the biggest problems with a component-based application is the store. At first glance, it looks amazing. The first time I saw the vue tools, it completely blew my mind. I started using it everywhere! Then, problems start arriving. &lt;/p&gt;
+&lt;p&gt;One of the biggest problems with a component-based application is the store. At first glance, it looks amazing. The first time I saw the vue tools, it completely blew my mind. I started using it everywhere! Then, problems start arriving.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;20 mutations when a page load (makes time travel impossible);&lt;/li&gt;
 &lt;li&gt;open a page, do something, go to another page and come back. The state isn&apos;t reinitialized;&lt;/li&gt;
@@ -3568,7 +3575,7 @@ Also, if the backend is not already in a micro-service architecture, you can&apo
 &lt;p&gt;Usually, when we have existential questions like this, we turn to the creators.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;It&apos;s not mandatory, nor recommended putting all your state inside a Vuex store.&lt;br&gt;
-— &lt;a href=&quot;https://github.com/vuejs/vuex/issues/236#issuecomment-231754241&quot;&gt;Evan You (creator of Vue.js)&lt;/a&gt; &lt;/p&gt;
+— &lt;a href=&quot;https://github.com/vuejs/vuex/issues/236#issuecomment-231754241&quot;&gt;Evan You (creator of Vue.js)&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;I also put another quote from Dan Abramov, mostly because Vuex is partialy inspired by Redux. Also, component oriented application have a lot of point of interest.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -3589,7 +3596,7 @@ Also, if the backend is not already in a micro-service architecture, you can&apo
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 156.44171779141104%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAfCAIAAABoLHqZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEAElEQVQ4y6VVy4/bZBDPnf8AqXCqRA8UIZA4cOnS9swFKiGk3kAICYRALXCqEBJCHMqpvXYFlSiqKnXpsjTZzbIJeTjvONlsHk6cZG3Hcfx27PgZh7EdsklIxYHR6PN89vy+eX7jUOiX6HOP4q8eFC7u51/ZL5zby7weLcD2hT3k5Uj+fDgL6xuHpZfCuXO/I+efZl+LFl/cy4QeHHp8KYYCX4mjV+OVK/HKVgx9K4ZejqNbR+VLR+XLMWDYlr03nlC5+ldlK44GqNDsf1DIdt01HnB8hxp06SE+oHFq0KOHGEFSHOfMZmuaK5Zd14WVoIeHmexBOhNOpECIpJBIKt0lKU9h5q5YPkP6qyDL1GgEgqgotuORpCiwnRiGYZrrbi+QoArCnQe/vv/l14IkD1jWg06nNMuNBCFTrWL9/mbwwmdyyBRr9cUWaOq609mM5nhFm7gbwaKsVFtYudGsYu063kUbrXytPuT4xSmSJFu2vW45OAySlCyhe/HE00TqII3sxuKJYglSDZ+wsf7TKbONEfd79EOStabuumXTsjhR4iSJFUVWEEGuNDGaF+DT/T7z/G76zaPyxf3ChUgO0rjI7hwMLvGSvBzqu5/f2N75DQRON0qSGu1T6ZFQH6+EfQaGInnpmU4dP+35Wg0SHryBVdO04P2GmKGqx1hb03XYyqpWx3EErQD3B7Ssqpph3Nt5cpgrBMlfB0vjcbXV1g0DthBzuoxCV/2RSMKJkjK2LPvm7R+3H++ApuM7su626HcSxAzJUyeTU5pmeF43TQP2lg0Klu3A6faS85sTBivabDbwLpgtnjTCyVQ0k4UqgtD16xc0+RxsWNYc/M+p4Iiial4LDJlau9MhSJwkcYKUx+qKZQBoutHo9vwOyeynEIi20myBWfAf+gfrn4IahPDp9z8U6g2QbT/yuWUwwvBC7rgWSabhiGSpDI6oE32saV2K6hKEB7Cs7+7cbXY6i+jOOgzsLDcJhNfs9QI5L46vZxsflbCP0c5nFfwaUtvuDVfAA3a0DH7v5lc/P9mdHzTkL4Rz76Rrbyer17N1GIbfnPT8OvvanCjCrVJULxnBpScZBhIRNBzcBcVy5DnbsFrLbiuTCUYQluPYtg25TXpNgvyZzSGV415QG9fdMACDB2BkSQpkaFLIMFgejFi4XlDFoCLLfAY2p+6tY/zD7MntFgFlhHp2/PRCCq99caNwUl9cjw2WYYhmeCXJKwVBUTQNbFIMA7ryRL/78BHM4P9we5mCe3OvS39QbN1qEJ+UO9/W+5uHfvBwXI+DCRMYEWynrRm4pmOqPtDNZ/wxnkGiKPIcx7GsCkPCr8K/KWRuIuhEhuPbBNGjKJhqhrmZ/gbe25qoXSdUSgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 156.44171779141104%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAfCAIAAABoLHqZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEKElEQVQ4y6VVy4/bRBjfO/8BUuFUqT20qAKJA5eWtmcuUAkh9QZCSCAEaoFThZAQ4lBO7bUrqERRValLl+0m+6Ab8s5mN042m4cTJ6mdOF7bsT22Y3vGmQ85DtlsSMWBT588D83ve/5mvLT069ZLj2IXNvPnN3Zf28ifWsu8sZW/sJl/ZS19Lrp7OpI9F919c3v/TCR36o/06fXs61t7r65llh5sB3pxh7m4w1yJMVdjxSux4qUd5u0d5nKMufSscPFZ4fJO4XKwLAQ7waR49a/ipRgTopbgf8gSoXROe4ra7PZaYp/riVy31xb7LC90FcUHmDt5wjOlFAB4sb+dyW6mMpF4cjuTjSbT0WSqJXSDA0BPeD5Gjr8Dw+geHQGAhhDxA9ERAoCh67qeNx/2FEl8HwDuPPjtg6++GehGT5YD6GgkysrRYJApldhOZzF4GrPQl/bKlekSAEaUjgBERUX2kC4EawYq1dlCtVZiGxWuxVTru+VKX1GnVnTdwITMew6N8WI/sc+sxeLr8eRmKr26E4vv7XPdHgCwpvPzc2mZ5e+3xYeCjEd03rOHsaLpiq7LmiYPNEXTizVWVAcAcL8jvbyaeutZ4fxG/mw0h4g/re4EjAlRdWM21fe+uLG88jsAKI67r1tbnW7qaFAxT6R9DB4YAXg0Gvnjsu+Wyz1ZDncAwLbtcH9BzhpCB2zDdhwKYFh2hePSTDHNFDs90bAs23XvrTzZzuXD4s+DddMs1RuO61IAeaClCkw0mXoaTxywDR2ZGJObt39afrwCAP44kPmwtTGTKKUextZw+FwUJVV1PM/1MMYEE4KJ77gumQl+ccEopUytVuVaOjL3DquRRHIrk12PJyOJZGvcv5DkE7CL8QT8j1UNIWTZAQX6UrnRbPICJwgcLximdcIzBbAdt9pqjxmS2Uimn8YTxVpdR6Y1HPJin+08BwDH8z774cd8pQoAZJz5xDOybEkd5A7K0URqPZ5M7BdU3bCGjmnbrW63xfMBAOPv79ytNZvT7I4ZpiNzliSRRLLWbofzXc28nq1+vM9+wjQ/L3LX0uXldv8EuCcfzYLfv/n1L09WJ4b66tlI7t1U+Z1E6Xq2ciaS+/awPe7z+LSiaaU6i6ygGOGlFyTJdtyQcCMKCPvGRImBfTwbNhoOWZ7Hvk8IKTeaiYAk6T+zuXTxoB32htIFD2A4EEIMXQ/ntuPwYl+QpN6RrGi6i3HYkVk9BnsjeuuA+yh7eLvOG6bFCUJzXF4dmde+vJE/rEyvxwLPhNKMihIqyg8Qsm1BkrqSNAIwhs7dh49aYv8/wp6V8N7ca4kf7tVvVflPC83vKp3Fj344+DTQ8IUJnQyI37BdznZYy+k53gv+GC8QTdNURVFk2TIMGHfh37LkLRKCsaSoDZ5vd7uyprneYvkb3tuaqCeaA3UAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -3678,7 +3685,7 @@ Also, I&apos;ve found this &lt;a href=&quot;https://www.facebook.com/groups/5326
 I usually stay 3-4h / place. If you plan to get there, I recommend you this places!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Linha D&apos;Agua&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;🤗 Amazing view! &lt;/li&gt;
+&lt;li&gt;🤗 Amazing view!&lt;/li&gt;
 &lt;li&gt;👎 Unsympathetic staff&lt;/li&gt;
 &lt;li&gt;🔌 Power outlet: few&lt;/li&gt;
 &lt;li&gt;🌐 Network: ok&lt;/li&gt;
@@ -3725,7 +3732,7 @@ I usually stay 3-4h / place. If you plan to get there, I recommend you this plac
 &lt;p&gt;&lt;strong&gt;Wish Coffee&lt;/strong&gt; - Located in Lx Factory, an old industrial complex.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;👍 Well placed.&lt;/li&gt;
-&lt;li&gt;⚠️ No laptop sticker on tables. I came in the morning and it was ok for me to work there for a few hours. A bit more expensive than other (2€ for a coffee when the average is 0.7-1€). &lt;/li&gt;
+&lt;li&gt;⚠️ No laptop sticker on tables. I came in the morning and it was ok for me to work there for a few hours. A bit more expensive than other (2€ for a coffee when the average is 0.7-1€).&lt;/li&gt;
 &lt;li&gt;🔌 Power outlet: few&lt;/li&gt;
 &lt;li&gt;🌐 Network: ok&lt;/li&gt;
 &lt;/ul&gt;
@@ -3774,9 +3781,9 @@ I usually stay 3-4h / place. If you plan to get there, I recommend you this plac
 &lt;ul&gt;
 &lt;li&gt;Foursquare. Say where you are and what you&apos;re looking for (coffee, things to do in the city), and the app will find it for you! I&apos;ve found user review more accurate than other applications.&lt;/li&gt;
 &lt;li&gt;Meetup.com.&lt;/li&gt;
-&lt;li&gt;WifiMap. Show a map of the city with all Wi-Fi access and passwords. It was very helpful. For example, one day I&apos;ve found a very nice coffee but the internet connection was very slow. Thank to this app, I&apos;ve found a better network.
-Only cons, it contains few adds.&lt;/li&gt;
+&lt;li&gt;WifiMap. Show a map of the city with all Wi-Fi access and passwords. It was very helpful. For example, one day I&apos;ve found a very nice coffee but the internet connection was very slow. Thank to this app, I&apos;ve found a better network.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Only cons, it contains few adds.&lt;/p&gt;
 &lt;h2&gt;My feedback about Lisbon&lt;/h2&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -3848,7 +3855,7 @@ Only cons, it contains few adds.&lt;/li&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 28.22085889570552%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAABJUlEQVQY04VQ2W7CMBDM//9WJSpxqIU2BQS5HI6YBBxMgu3YztQxojx2pZVn9pj1biA6CS4bDNb3vXerWv8+rZEtjDV/vBYcSqtX3tW36u5xMCELTMgc7H71AaUURPIOzXLPs/MOH7sQS7r1/HSrMEpmmLq+YajSHcbZHG/xBEJLBCHdYFGsPXko3tCTESAuntKmwmz/DVIfPL+pBtP8C6sy8ly7nw8Dx9kntNEIojjCJt6CXzkYY1gvQ2xWP0jSFG3b4kRPCB3f5Tm01sgJQZTGiF3fta696P54wJEWj5WlkBi86zpYa3FxokmSutUljDFeRLvcgAfrXI1xMaE07PPMr3MjwD/GOUdZlqDOpcNNtEXdCNiagBUpGocztsexorhUZ/wCumvKbJJlQAsAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 28.22085889570552%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAABJElEQVQY04WQ2W7CQAxF8/+/VYlKLGqhDYsgCwlbSGDCkDCZTIZTMRXlsVey7GNL17I91TbIpuKh+/3uwura5aeqpqaz3R+XSqKNfs11Ta1vrvYGyYRBMkbcLq6htUZF7xiROl6fNnxsfGbZyvHxWtCLRgyTiVuqTUt/PeYtHKBMg+dnSyaHhYNfxyv3pAfq7DCrCkbbb5Jy5/iqK4bpF/M8cGxs5xb215+YzuAFYcAyXCEvEiEEi5nPcj4limPquuaYHfHnUzZpijGGNEkI4pAwDLiUpTPd7nfss8PvyY1qeETbtlhrOQtBFMVo3dB1nTMxbevqh1pr6YxBaYN9vvn1bjz+kZSSPM/J8pxGSqpgRVkpbJkgDjFVpViLLfsi41yc+AG6a8psk1ShrgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -3896,7 +3903,7 @@ Only cons, it contains few adds.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Cons:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;There is some magic... and I don&apos;t like magic. I&apos;m missing a plain old router to match routes with pages. Also, the &lt;a href=&quot;https://github.com/maxpou/maxpou.fr/blob/master/gatsby-node.js&quot;&gt;&lt;code&gt;gatsby-node.js&lt;/code&gt; file&lt;/a&gt; is not immediately obvious. &lt;/li&gt;
+&lt;li&gt;There is some magic... and I don&apos;t like magic. I&apos;m missing a plain old router to match routes with pages. Also, the &lt;a href=&quot;https://github.com/maxpou/maxpou.fr/blob/master/gatsby-node.js&quot;&gt;&lt;code&gt;gatsby-node.js&lt;/code&gt; file&lt;/a&gt; is not immediately obvious.&lt;/li&gt;
 &lt;li&gt;The &lt;a href=&quot;http://gatsbyjs.org/starters&quot;&gt;starter library&lt;/a&gt; is not very consistent. And most of the starters look like &quot;hello world&quot; project.&lt;/li&gt;
 &lt;li&gt;Some small issues with cache invalidation&lt;/li&gt;
 &lt;li&gt;... and that&apos;s it!!!&lt;/li&gt;
@@ -3925,7 +3932,7 @@ Why? Well, check out the list of available starters:&lt;/p&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 43.558282208588956%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB/UlEQVQoz12Rz2sTQRTH81d58ObBgwePnrSeLFXUUw2RlqAitAe9FNEKarEaNIUiRbEippXeFCFYiaBJzTao7WY3P/dXdnd29+PMNIXig2F33vvOdz7vTc7pBQRuyGH4TojXjwiGAhFm/B9ZlpGmKdEo1nvje5snxQ0ezVRYX6qSUwbRSIzVIGKB8avFTt2g2WzR3N3D+G1S32nR6w/GplIXpVKbEQYJbl9CDEMNk0vTTN+qlgrP8ynM3qCQv8ZMfprX985QunWSqYkTrL5Y1hrX9ei2R1h/fdp/PG2maWTkjraiYjB0OHfxOvniXd48n+Pr1ile3jnGzenjrJWfao25v0evYxL4QyzLpFb7gdXuHBiqdo8SOo7DhanLXM3fZuXZPNvfCpTXJrgyeZ7NjXc0jV0WFh9T+dyg9OoD1e2fmGYPu9M7MPQG4Zg2kzNJEELQsS26HQvbsvGHLrEYSfI+aZLw9v1Hzl4qcn/lE6cn5yitrmsjIWsKKjfoD0nkRieVoXwURRlFsVyRflF1oSfnJkTMl2qNhQfLPFwqMzu/SGVzS59Vem3Y7w4Y9BwSkeqEIjQMg3ZbUna72LatTVVeTcWyLBqNuqyb7MtZOo6rDeN4bOjIlhSBOpQkqfwmjAJXvranSZUwDENNq+pxFMh6oI083yeQ/6p2aPgPxySOX18Z4+sAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 43.558282208588956%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB+ElEQVQoz12RzWsUMRiH96/y4M2DBw8ePWk9Waqop7qstBQVoT3opYhWUIvVRVsoUhQrYlvpTREWKytoW3da1HY+9mM+MrMzk8w8knQLxRdyyJtfnjxJKmE3IYlSDisOU0QvIwkkMi35v8qypCgKsn5u5tZ3hycTqzwaW2F5tkFFA7K+HKRB5hLr1y7bmxat1i6tnT2s3zab27t0e/4ACjIrkHlJmiiiXooIUiNTKYrSnKqHLiFiauM3qFWvMVYd5fW9M9RvnWRk6ASLL+ZMJooEHaeP+zfG+SMMzNgAlaNX0eUHIecuXqc6cZc3zyf5un6Kl3eOcXP0OEvzT03G3t+j27ZJ4gDXtWk2f+A67QOgvu5RwzAMuTBymavV2yw8m2LjW435pSGuDJ9nbfUdLWuH6ZnHrHzeov7qA42Nn9h2F6/dPQAKPx3YlshcIaWk7bl02i6e6xEHEbns4wc9CqV4+/4jZy9NcH/hE6eHJ6kvLhuQVMpIVfxegFLqoKmBuTSWWZaTZZn5UX2giARS5nxpNJl+MMfD2XnGp2ZYWVs3e3XeAHsdH78bomRhGtrQsiwcx6XT6eB5noHqvn4V13XZ2trEcWz29/cIw8gA83wADIPIGOhNShUUhaKfRAghjKkOpmlqbPV6niX0k8SARByTJIlZOwT+A8ckjl9fcQOVAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -3954,7 +3961,7 @@ Why? Well, check out the list of available starters:&lt;/p&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 21.47239263803681%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAlElEQVQY063PvQqCYACFYW89qNmlpTuooTGpKYsyi8qyiIZICES0H+LrsyzUN/UCnDxw4EwPHCVNU6pKbin5kD/J0Jtj3Y/0XYP2ucfANUneH16aTjizkLqJ6GhctzvUoIvTUBH1Fo9aE99YI+O4QAtQfAXTwGLkLTF9O+uGw9MhkSHheIGcrIhOF6IMvtn7crDqy3+/ASu16F3ZSAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 21.47239263803681%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAlElEQVQY063PvQqCUACGYW89qNmlpTuooTGpKYtSi+qURTREQiCi/RCnY1mob+gFNPlN7/TAp+V5TlUrLK0I9VUMgxnidqDvW7RPPQa+Q/Z68zRMYlugTAfZMbhstuhRF6+hI+st7rUmobVCpWmJlqD8SKaRYBQscEIXJ1yzf3hkKiYez1GTJcnxTGILru7uP1j15R+/ASu1uLHSLQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -3971,7 +3978,7 @@ Why? Well, check out the list of available starters:&lt;/p&gt;
 &lt;center&gt;&lt;i&gt;I removed 9 000 line of code for this new blog!&lt;/i&gt;&lt;/center&gt;
 &lt;p&gt;The full list of features is available on the &lt;a href=&quot;https://github.com/maxpou/gatsby-starter-morning-dew&quot;&gt;starter&apos;s README&lt;/a&gt;. In a nutshell:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Markdown:&lt;/strong&gt; I still write my post and pages in markdown. There is syntax highlighting syntax colour and easily configurable. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Markdown:&lt;/strong&gt; I still write my post and pages in markdown. There is syntax highlighting syntax colour and easily configurable.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Configuration:&lt;/strong&gt; I don&apos;t want people to worry about the internals. That&apos;s why almost everything is configurable through a JS config file!&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;CSS:&lt;/strong&gt; Because I don&apos;t want to rely on a framework, I wrote 100% of the CSS! (...I also stole fragments 😇)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Mobile friendly&amp;#x26;PWA&lt;/strong&gt;. I felt guilty. I deliver a few talks about Progressive Web Apps and my own website wasn&apos;t PWA compliant... shame! solved!&lt;/li&gt;
@@ -3991,7 +3998,7 @@ Why? Well, check out the list of available starters:&lt;/p&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 25.766871165644172%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA8ElEQVQY042O3U6EMBBGef+3MjExxk3MuiarZlfkHwq7tAUKLS2fQ4lcO8lcnM58ZxqAqunvyEWFZVnwx4VgO3MlwWQD65xn1t2Q8nKf18QZ8VqBWxzeqy8cshMFrH98Kz/wFL/CYQscizNe0hOUGXd+/DnAuBmOpMf8jIfvZxhrENjZIsoTXNMQxhiMasQ1CXEhFkJgoV9FRYLP6IJ1V2uNMIv8/jAM/kB5Y4irdPuhtRadlBBceOHaSRxTJz6wziWJecsxz7MXStqVQtK89xKjKTfpTYh/llIKbdtipCOmZphI4PoaHb+jmwYw0fgjvzqEf51lG3rfAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 25.766871165644172%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA80lEQVQY042ObUvDQBCE+///lSCIWJBaoSqtMa9Nk7a5u+Tycrm7R3LFfnZhYWdnZ2ZXAOfuSiFPeO/5w0dZ3bHoFZU6Y50LuGovZKK883V7IRdlmFfOO95PX6zzLdbZsHwrP3hKXnHcBJvjjpdsS2+GO378WWPcjPOeTbHj4fsZYw0rO1viIuWQRRhjGPqBQxqxzyKklHjniI8pn/Ge5XaaJqI8Dvda6xBQXiqSU3b70FpLqxRSyGC4dJokpEkaBAuvpEQ0gnmeg6ESEiUVWnfBxEwGM043Q/5Zfd/TNA2D1pi6YhwnXFfTiivtqKnkOYT8AjqEf522aEGxAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -4035,9 +4042,9 @@ today === nextYear // true
 &lt;p&gt;By mistake -and because I didn&apos;t read the full documentation :) - I changed the value of today (see last line).&lt;/p&gt;
 &lt;h3&gt;Mutables variables give you headache&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Mutable state is the new spaghetti code&lt;br&gt;
-— &lt;strong&gt;Rich Hickey, author of Clojure&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Mutable state is the new spaghetti code&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;— &lt;strong&gt;Rich Hickey, author of Clojure&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Given a function &lt;code&gt;hulkify()&lt;/code&gt; in a Hero class like the following one.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;class Hero {
   constructor () {
@@ -4109,9 +4116,9 @@ hero.play(heroPet[heroPet.length - 1])
 &lt;h3&gt;&lt;code&gt;const&lt;/code&gt; is not about immutability&lt;/h3&gt;
 &lt;p&gt;ES2015 came with a new nice keyword: &lt;code&gt;const&lt;/code&gt;.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Constants are block-scoped, much like variables defined using the let statement. The value of a constant cannot change through re-assignment, and it can&apos;t be redeclared.&lt;br&gt;
-— &lt;strong&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const&quot;&gt;MDN&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Constants are block-scoped, much like variables defined using the let statement. The value of a constant cannot change through re-assignment, and it can&apos;t be redeclared.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;— &lt;strong&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const&quot;&gt;MDN&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;It means, once a constant is declared, you cannot change it.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;const meaningOfLife = 42
 meaningOfLife = &apos;boom&apos; // Uncaught TypeError: Assignment to constant variable
@@ -4220,9 +4227,9 @@ console.log(hero.location.city === &apos;Dublin&apos;) // true (hero.location in
 &lt;p&gt;🎉 Tadaaa!&lt;/p&gt;
 &lt;p&gt;Well... I have a bad news: JSON for &lt;strong&gt;JavaScript&lt;/strong&gt; Standard Object Notation* is a &lt;strong&gt;language agnostic format&lt;/strong&gt;. Yes. Really!&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;It does not attempt to impose ECMAScript’s internal data representations on other programming languages.&lt;br&gt;
-— &lt;strong&gt;&lt;a href=&quot;http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf&quot;&gt;Final draft of the TC39 “The JSON Data Interchange Format” standard&lt;/a&gt;&lt;/strong&gt; &lt;em&gt;(look at the introduction)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;It does not attempt to impose ECMAScript’s internal data representations on other programming languages.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;— &lt;strong&gt;&lt;a href=&quot;http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf&quot;&gt;Final draft of the TC39 “The JSON Data Interchange Format” standard&lt;/a&gt;&lt;/strong&gt; &lt;em&gt;(look at the introduction)&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;After, it&apos;s makes sence. Ruby/Scala/Python/PHP/... should not implement some Javascript specificities such as Symbols, undefined... or even the functions!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;How are handle non-stringifiable types?&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;They are simply removed.&lt;/p&gt;
@@ -4307,17 +4314,17 @@ greet({ name: &apos;amy&apos; }) // &quot;hey amy&quot;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;Problem&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;I like this one because it&apos;s a bit trickier and it deals with scope and the JavaScript Event Loop. &lt;/p&gt;
+&lt;p&gt;I like this one because it&apos;s a bit trickier and it deals with scope and the JavaScript Event Loop.&lt;/p&gt;
 &lt;p&gt;The classic pitfall here is the &lt;strong&gt;Zero delays&lt;/strong&gt;. &lt;code&gt;setTimeout(callback, 0)&lt;/code&gt; doesn&apos;t mean that the callback will be fire after zero milliseconds.&lt;/p&gt;
 &lt;p&gt;Here&apos;s what happens on the event loop side:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Current Call Stack is set to the first setTimeout(). &lt;/li&gt;
-&lt;li&gt;windows.setTimeout() is considered as a Web APIs (for better &lt;strong&gt;Non-Blocking I/O&lt;/strong&gt;). So the call stack sends this part of the code to correct Web APIs.
-After 0 milliseconds, the callback (here an anonymous function) would be sent to the Queue (not to the call stack).&lt;/li&gt;
-&lt;li&gt;As the call stack is free, for-loop can continue to the second setTimeout
-...(repeat after we meet this condition i &amp;#x3C; 4)...&lt;/li&gt;
-&lt;li&gt;Now the loop is over and &lt;code&gt;i === 4&lt;/code&gt;. JS can now execute the callback queue one by one. Each console.log(i) will print the 4.&lt;/li&gt;
+&lt;li&gt;Current Call Stack is set to the first setTimeout().&lt;/li&gt;
+&lt;li&gt;windows.setTimeout() is considered as a Web APIs (for better &lt;strong&gt;Non-Blocking I/O&lt;/strong&gt;). So the call stack sends this part of the code to correct Web APIs.&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;After 0 milliseconds, the callback (here an anonymous function) would be sent to the Queue (not to the call stack).
+3. As the call stack is free, for-loop can continue to the second setTimeout
+...(repeat after we meet this condition i &amp;#x3C; 4)...
+4. Now the loop is over and &lt;code&gt;i === 4&lt;/code&gt;. JS can now execute the callback queue one by one. Each console.log(i) will print the 4.&lt;/p&gt;
 &lt;p&gt;Do you feel lost? I hope this animation will better help you!&lt;/p&gt;
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/CzXPF3zwWGs&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;em&gt;Animation made with &lt;a href=&quot;http://latentflip.com/loupe/?code=Y29uc29sZS5sb2coIlN0YXJ0ISIpOwoKZm9yIChsZXQgaSA9IDA7IGkgPCA0OyBpKyspIHsKICBzZXRUaW1lb3V0KGZ1bmN0aW9uICgpIHsKICAgICAgY29uc29sZS5sb2coaSk7CiAgfSwgMCk7Cn0KCmNvbnNvbGUubG9nKCJFbmQhIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D&quot;&gt;Loupe (try it it&apos;s fun!)&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
@@ -4511,7 +4518,7 @@ const newHeroes = heroes.map(h =&gt; {
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 9.202453987730062%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAkUlEQVQI1y3MTQqCQACAUa8rCCaI1rKiG9QtvEhCURRFqePfjP0YmYO4/ZJo+xbP6LqOvu/5tC1plpGKFCEVjzCkchyU66I8D2maPIOAvH6RxDFFWrJXZ6zNnOlhSXGTJInA0K1Ga827aX6hGDApJff1EI5slO9TjSdIy6L+h3EUDWHBTp6wtwtmxxW5KrleIr4u5IckkKmvCgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 9.202453987730062%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAkklEQVQI1y3MbQqCMACA4a4rCCaE1s+KblC36CIJRVEUpdtsbvZhZA7x7xtEzwGeXtu2dF3Hp2lQeY6SCmksjyShDEPsYICNIozn8VwuuVYvRJahVcHOnvDXU8b7OfpmEELSc43DOce7rn+hFBJRGO6rhLIfYOOYcjjC+D7VP8zSFK00W3Mk2MyYHBZcbcHlnPIFLuSHJC8w1J8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -4833,8 +4840,7 @@ const difference = new Set([...tolkienHeroesSet].filter(h =&gt; !evilHeroesSet.h
 &lt;p&gt;&lt;strong&gt;Notes:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;if the 2 arrays are built from different API, your object will probably not share the same reference. I mean &lt;code&gt;tolkienHeroes[y] === evilHeroes[y]&lt;/code&gt;. In this case, your Set should only contain the object&apos;s id (to ensure unicity).&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;the &lt;strong&gt;Set Object keep the objects references&lt;/strong&gt; (no copy will be created on instantiation).&lt;/p&gt;
+&lt;li&gt;the &lt;strong&gt;Set Object keep the objects references&lt;/strong&gt; (no copy will be created on instantiation).
 &lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;// I update an object property
 heroes[7].name = &quot;Gandalf the white&quot;
 [...tolkienHeroesSet].find(h =&gt; h.name === &apos;Gandalf&apos;) // undefined
@@ -4857,7 +4863,7 @@ heroes[7].name = &quot;Gandalf the white&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 39.263803680981596%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABhklEQVQozzVSi26cMBDk//8tahVFyuWS9HQHwQfGxi/AYGA6hhY0wjPeHXbXLox1MNZCKY2O8D4gP9u+Y9syNuxcH9o/fmj53U8ehgETsU0BRdM0yBiGcMD0Gj9VBWt6OMJ7B9m2KB+PQ/POwTkLUdd4iieC96iqEuKnwhoMCiF7mBDhxgV+StC9h/j1Cvn2Dst1SEBXtxAvv2FajRA3uGlBfZHoSku+YqA28MsGUCg7wsedhiscN3o7QV1vUDdW2Qc4P0NLA/XxTT7AzzssfywfHJWKzN1gmevHxPZXFJ1h0LSehhMNHQ2/7tClgGkUDSO04oxvJbUnXFhouELeLXQzHoY5N3eX51m02p+GRN40rFi+XdBdvmDZYtY0x5I19XmDHxI7WdFcNbTIFW9n7n/D3PIw46yQ0OTd9Q+67/sRmMegOgv5/gldS/IdhvNub+aoMJtbtpvP4KxQdhCi4dGPSOuGOC+YnD8wLwlLWhHjjInXKzIm8zklTDzIOS4nP+LScY3+AoUtZUtRvAs/AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 39.263803680981596%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABhElEQVQozzWS627cIBSE9/3frWpVRcpmk3S16806voC5g23wVxm3oPkxA2c058BJaYPSGiEko5BY69hX2TZK2VHYtu3Q/vGq7Xs7uPOe6D0lOk5d17HDe1ehJsnX44FWE0ZNWGsY+p7mfq+aNQZjNO3zyXf7jbOWx6Oh/XqQneLUDhPKJUxYsHFFTpb252+Gl1f0ZHErjM+e9scvVC9xqWDiwvM8MDYalzI+FXzKlA1OQgds2jAhY1Jh0hFxuSKuD/TkMHZGDgrx9omePHbe0HFluBuUSNhU0CFjw0opmdOoPDbmwzAWJhMRHzdk06I6gbEJKTTi2iCbb4xb0DEz3DSyC9Vwr9272+d56qU9DGOuh0oHhpcz4/kD3cuqyWGqmni/Yv2KSZnuIpHtnrgctf8N95b9zJEwZKQOjJc/jJ+3enEfgxg1w+s78jlg0oYKC/1V1YS7uQ5rfYMj4TDSth3OB9ZcSPNCNLZiXlaWNZPSTNSG5EPl87oSXWJOy8HrvbV+o7+FLWVLr8pyXQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -4881,8 +4887,7 @@ heroes[7].name = &quot;Gandalf the white&quot;
 &lt;li&gt;&lt;a href=&quot;#issuepull-request-templates&quot;&gt;Issue/Pull request Templates&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#github-pages-%E2%9D%A4%EF%B8%8F%EF%B8%8F&quot;&gt;Github Pages ❤️️&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#sign-your-commits&quot;&gt;Sign your commits&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;#playing-with-url&quot;&gt;Playing with URL&lt;/a&gt;&lt;/p&gt;
+&lt;li&gt;&lt;a href=&quot;#playing-with-url&quot;&gt;Playing with URL&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#url-everywhere&quot;&gt;URL everywhere&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#disable-whitespace-on-code-review&quot;&gt;Disable whitespace on code review&lt;/a&gt;&lt;/li&gt;
@@ -4950,7 +4955,9 @@ svn co --depth empty https://github.com/user/repo
     ```
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/li&gt;
-&lt;li&gt;reference commits/issues/PR ...&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;reference commits/issues/PR ...&lt;/p&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Other interesting HTML tags such as details/summary tags (kind of spoiler tag)&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-HTML&quot;&gt;&amp;#x3C;details&gt;
@@ -4965,14 +4972,14 @@ svn co --depth empty https://github.com/user/repo
 &amp;#x3C;/details&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The output will be like this: &lt;em&gt;(click on License)&lt;/em&gt;&lt;/p&gt;
-&lt;details&gt;
-  &lt;summary&gt;License (MIT)&lt;/summary&gt;
-  The MIT License (MIT) &lt;br/&gt;
-  Copyright (c) 2017 Maxence POUTORD&lt;br/&gt;
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the &quot;Software&quot;)
-  [...]
-&lt;/details&gt;
+  &lt;details&gt;
+    &lt;summary&gt;License (MIT)&lt;/summary&gt;
+    The MIT License (MIT) &lt;br/&gt;
+    Copyright (c) 2017 Maxence POUTORD&lt;br/&gt;
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the &quot;Software&quot;)
+    [...]
+  &lt;/details&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Gist, another kind of repository&lt;/h2&gt;
@@ -5016,7 +5023,7 @@ You: Can you provide the version? And the steps to reproduce?&lt;/p&gt;
 **Additional details:**
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now you can ensure that each contributors will provide the corrects informations!
-You can do exactly the same with Pull-request content (&lt;em&gt;&quot;what does it fix? Tests status?&quot;&lt;/em&gt;). In this case, call this file: PULL&lt;em&gt;REQUEST&lt;/em&gt;TEMPLATE.md.&lt;/p&gt;
+You can do exactly the same with Pull-request content (&lt;em&gt;&quot;what does it fix? Tests status?&quot;&lt;/em&gt;). In this case, call this file: PULL_REQUEST_TEMPLATE.md.&lt;/p&gt;
 &lt;h2&gt;Github Pages ❤️️&lt;/h2&gt;
 &lt;p&gt;Github can host severals type of websites:&lt;/p&gt;
 &lt;ul&gt;
@@ -5046,7 +5053,7 @@ git config --global user.email linus@fake.com
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 82.20858895705521%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAACxUlEQVQ4y41U3XKTYBDlgfTGx3DGB/BBvPTGN7AXTh296HjlgzittU7bpCQkJJCU8BPIH/DxD+G4+yV02uqFzJzsssDh7NklSl43yKr6CbpaWpbYpjFW8QZBvMUuFcjKGmVdw9/lSPMKddPA2yRYhRnWBIUflgT1gegxsrKCsTIx9jT0bRXz7YLIWklyPd0hCAsALUw3Qm+6xpUWQGElIi+QFaSoqJAUBcVS1uIsQ5IXsp7mVMu4llMtR1mVyPleul7VlTyvmxqKSFPkWYm1CBCmOyQiRRiFyOihLM+QMmmaIKPYnef8EllPIUTykEdCQClzJvNxor7Dd+Mj/NUSQ1XDdDLBWBtBG2qECfTxFP1en+IEF+cXGAxUaJqGm9s+RiMdSXJ4KRFW8GMHp8P3+Dr6AHd7j978N64mF/g1+QHV6uGnfo7b2SWujUvoCw1RFCMlRVI1gfOcOuKo8M+B1MaG2uYbtjTVUITYxCuZL3cexTWdrxElEUoaVkkbUJCHDM6ZkNtXmKAmU7ujbVv8dVCp3R/ifr9HQ+Y3zV7mHRqafJ6RQmbmwrh3g8+fTmC7Lvr9HlRVxW3vFsF6jf897qY+lJZezaa+ff0Gr168hDoY4q5/R6YPZG5ZC9i2Ddfz4PtLmIaJ+WxOK3KQzB21x86CTQSlqiq4rofT0y84O/uGVRBgZs6wWFhUd49EPmzHwXa7kWSM/TOLOBa0VtJD9qQoclRkdnacVlkWMgrarSgM5VqktI88BH4mjmMZj2yS8LA2NCERR9B1HQa1Y1kWTFLokTJWNSM1pjGFQ2odan1BsG2HOliQ4t2DOp4Dz0NhZQmtjeklBIH5UkCd7eCsUgzmO+hWSLUEhhfDcGIM7+lPIqn+ORRJyDK7XeoioyKk9N3K75Xi42vd/j0Gk7EtCu8P+8SePIcQT2OHkDyNokjGLmcw8R+Qhrpu0L9eNwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 82.20858895705521%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAACyUlEQVQ4y42TzZKbRhDHeaDkksdIVR4gD+JjLn6D+JDaVHJw5ZQHcXnjOGWvtEisvpAsIdAnAoaZYQDxc81oteV1cshU/emmGX70dDeeblpU3TzTNSaNIZUF++LIrkg5SYEyDaZp2J40Utc0bUtyLNlnikOm8OzLDtBcQF9KmZrZPmSUBPQjn0W6wjSdg3yYnthlFdARxjm96YH3wQ7PZiJ0haoaZFVTVhWyMi5WKEWpKxeX2iCUjWlKrTG1Qdu9uqJuanfftA2ekBKtDAexI5MnSiHJ8gylNUorpIXKEqXU0722H3FxiRDlk58LgWe0hW155b/gz9nPbPcbhn7AdDJhFDwQDAOC4YTxaEq/12c8mnD79pbBwCcIAj7e9Xl4GFOWl496RtdsizU3w5/4/eElcfqJ3uIf3k9u+XvyBn/Z46/xW+7m7/gwe8d4FZDnBVLKS9ZKOV9r7axnLxdoxFHs3Ia0OJKJjGOxd/7mlJAWB47FgbzMMabGGENVVU7Wt0B7fM8Cmqbmurqu41+rg+58sefzmbZtaNuz869q2xatJJ4l28Co95Fff3lFFMf0+z183+eud8fucOD/rvvpFq/rzq6oP37/A9998y3+YMh9/57BYOD85XJFFEXEScJ2uyGchSzmC5r2krI9Ufd4st0xx6vrmjhOuLn5jdev/2C/2zEP56xWS+I4fgRtidZr0vToYFbnr0pkbaXVpYa2JlWlqU3t5s81ylTOCiHIs8yNhZSla4J9pygKZx9pDngZG2MQRc54PGY2C1kul4ThnCRJXFbz+YJwNmUdx6yjiFUUEUVrVqsVaXp6ys72wfbDs5mVuiZMSsJEsNgI/PmJ9V4yWJwYLzMWm5JZUjBbFww/pZzK+j+b4oA2zessXa1VbQxS6cv/qvSzZ9f5+1IWZsvi2fmxdbI1+VpCPLdXZVlGnufOXn0rC/4MkIa6bt+Xco0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -5073,7 +5080,7 @@ git config --global user.email linus@fake.com
 &lt;p&gt;&lt;img src=&quot;./whitespace.gif&quot; alt=&quot;toggle whitespace animation&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Example: &lt;a href=&quot;https://github.com/maxpou-slides/github-tips-tricks/commit/2616cbecc713389f8455b066711bc74891a593a6&quot;&gt;with&lt;/a&gt; and &lt;a href=&quot;https://github.com/maxpou-slides/github-tips-tricks/commit/2616cbecc713389f8455b066711bc74891a593a6?w=1&quot;&gt;without&lt;/a&gt; whitespace pollution.&lt;/p&gt;
 &lt;h3&gt;.diff and .patch&lt;/h3&gt;
-&lt;p&gt;You can generate a diff/patch file by adding &lt;strong&gt;.diff&lt;/strong&gt; or &lt;strong&gt;.patch&lt;/strong&gt; at the end of the Pull-request/commit.  &lt;/p&gt;
+&lt;p&gt;You can generate a diff/patch file by adding &lt;strong&gt;.diff&lt;/strong&gt; or &lt;strong&gt;.patch&lt;/strong&gt; at the end of the Pull-request/commit.&lt;/p&gt;
 &lt;p&gt;Example:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Original commit: &lt;a href=&quot;https://github.com/maxpou/maxpou.github.io/commit/470da95b366bbb3efd8fa481308c906c955304db&quot;&gt;github.com/user/repo/commit/example&lt;/a&gt;&lt;/li&gt;
@@ -5095,7 +5102,7 @@ To see them, just press &quot; ? &quot; &lt;em&gt;(doesn&apos;t matter where you
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 51.533742331288344%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABf0lEQVQoz52SzU7CQBSF+3y+gXs3aggtbTG8B255AExUlAqFDgKhQRJYyYINISIQgRaBguGvPd62KW5IIJ7ktM3tzTdn5g4nSyLi8Vs8p19w/5DC41MaKSUHJZ1BIZ8DK5XACgUwxvZWVdWzpmnIZrMoFotIJBKIxWLgInwYBabB1WJhYT6bwfpZw15tgPEYWK1wihqNBmRZBifS45VWcDUmwGevh8nEhO04sG0b9nQKe7v1vw94S/9cvdVqkKJRcFLoGkUtvweORmNYlgWHgA7VAlPhYLLdbue9a3oFN+EQOP7qEiynekXTMGCQp5QqaHTBe9gBaNDHShmcX5yBC/ER5DTmA02TUhpYr9d/sCMKgHq1irAogRMEAub9objJJpPv/bl42z4CDYBVAkoSDYXnBQL6CYdfQ/T7fWwI6ARDOeJgcV3XIYqin7BcrnjF+XyO5XKJ/6her1NC2jIvCEgm79DtfqD53kSr1UK73Uan0znJbu9gMICiKIjStfkFk97TcXqU3mAAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 51.533742331288344%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABhklEQVQoz52SwW7aQBRF/X35g+67SSuEjcdU/Ee65QNSqW1a3IDxUBPFcpFg1SzYINQ0oCY21MGhghj7NNjC2VAl6pWuZvT05ujOvFEMoXN09JbPjS+8/3DCx08NTkwLs3FKp20hu11kp4OUsnCr1cps2zbNZhPHcajX69RqNZSKWqYjbba6u4tY3N4S/VmTrO7B92G14jkaDAYYhoGiGwZfHScr+r7Pz6sr5vMZSZqSJAlJGJLEcb7f4ziOs7Pfej1EtYoiSq9x7HYBvLnxiaKINE1JoTBpujfZZrPJ1p57zptyCUV9dYi0WllxFgQEQUAYhkXjFlzA9kB3fbJ7youXBygltYJlyxw4m+H7Aev1+hH2hHZA1/Mo6wJF0ypY7Xwo22Tz+e/iXbJrPwHdAT3PQwgDRVU1rHae8PrXNZPJhPs4zkD/GsS+obiui67recKzs/OsuFgsWC6X/I/6/T5CCBRV0zg+fsfl5Q8uvl8wHA4ZjUaMx+Nneds7nU4xTZPqw7f5C5Pe03GM5SYTAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -5118,7 +5125,7 @@ But they aren&apos;t only present to decorate your text. For example, I prefix e
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 82.20858895705521%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAACaUlEQVQ4y3VU2W7bMBDM/39JgX5EHgr0QJsCfSmK1DEpiSJ1UYdl67S9nV1Fjg2nAmiZIjk7OzvLB8LTd3sqgp9UFDmGJ2ctWYwgCCgy0fKOIjJxTEopCsOQYhNTjDnv47WqrhmKHvhnGAYsKvJFQRE28wbvC0rTFAcNvkXyLQoNGQSIYyPzvu8F5Hw+X8YCuN+T/vKJqtJTkiQ4ZCR6lqWUALRt2wsTtVXytsIOwzlyLhGwN4aIVIbPlAMgigzSLpBWANAl7RhgVVXJgXEcaZomOh6P8uY5j1vAcaCtUZSCndZKUmV2QRCKXgzuwCTB4GA19PLeC+D63ADOQ0/u6RsVeS6M+FCWZeQQwDkrMrCWDM4ScECDtMfxDXAFXRgeOgo+fxVApbQAcqUZMM8z+c+AWgfyLQAwA7IMviyF7aHr3hgeDiiKC3E4l4KIbmIRTanoutiirmpJlwOyCyoGQyHTNKHdrr1KGRo22d+lqkkqEVkz9pqBRax1Uun5OF+s8t5zSXmaemqqJzCoEC2jEpEZsFyBX0F5sNF5/XQ63fjvpii7vqXH4lHEDpGueS1A3TSSvoPfNCrO/3N002bzQg3Wrk29PgJYdJ4+2I+ooANYLMKHEXdMKMblDuK2Y1232xdh3TS7/wNO00DG/hGReTNXjyvLvuOCsFUySLH40N/pdg28pNwe6Nfz4r9YmFjRL0QPJ4lDihtYRosMWilhrpH+apU7hvVuT99/a+hTSH/KbQJgDsCHWQa20HrTMLgOljkX8Y5h1w/0Y5NfGHpfyq2SwdRWqmzlxpFrDZ3D7bnHhcKVnuf5BvAfv225fcYmUbEAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 82.20858895705521%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAACYklEQVQ4y3WU6W7bMBCE8/5PUqAPkR8FeqBNgf4pitSxeB8iqcOWLVl2MsWuYidGGgG6pY+zs0PeAMC4H5DlT+SckHOBdw7OOUgpoY1ezlrDWIuqqqCUgjUW1lr+jt61XUco3NBhmiZYW6HkDK0Uf1BKRowR1hhopfmZVgbGaFhr+H4cR4Y8PT1d9gU4DBBfPqFtCkIIMMbw6HUdEWLEdru9KKnWFZ8dq7Nw3sP7wLAXheOIRt0j1RFaG+ScoZSEtUvZ1jm0bcs/HA4HzPOM0+nEZ7qn/Rp4mLA2FWIIEKLiUkmdlIr9Irj3HsF7HqzrOpRSGHjeroDHaYS/+4acEiuin+q6hg8B3ju2gbwkOFlAAxqtcTi8AM/QReFuD/n5KwOrSjCQOk3AlGq+JqAQkp9JpRhINpSmYbW7/f5F4W43QHiFlBI3hH3jiAhE9nWJRdd2XC4NSCloCdYUxBiw2WxflXyY0Nd/l66GyCOSZ5Q1Yw2c89zp4+l4icr/tkvJ8zyib+/QtS1irNE0DQObM/gZSjsFnd4/Pj5e5e+qKZtxi9t8y2YrKblsakDX91y+dxZCKr5OOWG1ekDf91ehPm8MzPuCD+4jQvQwxrLxStOMURxcmkE07cjX9fqBVff95n3gPE8w7g+bTB9T96izlDtqCEWljvVzDssb316Dl5K3O/y6X/JnWYlj/5TSCMFjtVpBCME2iKpi5ULKS1TeKOw2A77/Fkg58/zk1cRaHoB+JhsoQueVhuBCLvfUxDcK9+OEH6t0UVhKw6tKnWr2kBTTisPLmnc8PYdh4E4fj8cr4D+/bbl94rqyYwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -5185,7 +5192,7 @@ I was pretty proud of my job, so I put everything &lt;a href=&quot;https://githu
 &lt;p&gt;Every day, I wrote code in English. I read in English... but my &lt;strong&gt;English was weak&lt;/strong&gt; &lt;em&gt;(in fact, it&apos;s still!)&lt;/em&gt;. On the other hand, a little voice in my head shows me the way to the expatriation. But you know, there is a real pit between thinking about living in another country. A lot of developers dream about the Silicon Valley/[pick whatever country]... but (almost) nobody tries to move there.&lt;/p&gt;
 &lt;p&gt;And one day, I see this talk:&lt;/p&gt;
 &lt;iframe src=&quot;https://embed.ted.com/talks/larry_smith_why_you_will_fail_to_have_a_great_career&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
-&lt;p&gt;Then, a lot of things happen in my head...  &lt;/p&gt;
+&lt;p&gt;Then, a lot of things happen in my head...&lt;/p&gt;
 &lt;p&gt;After much soul-searching, I take my decision: let&apos;s be the CEO of my own life! So, I left my company, buy a single ticket to Dublin. &lt;em&gt;&quot;See you Nantes! 🐘&quot;&lt;/em&gt;. To be honest, the beginning wasn&apos;t easy... but now, it&apos;s (almost) ok! I found an accommodation and start a new job at &lt;a href=&quot;http://www.hostelworld.com/&quot;&gt;Hostelworld.com&lt;/a&gt; in a multicultural team. For now, I did not regret my choice to come here. At all! My English level improves considerably... but I&apos;m still not fluent!&lt;/p&gt;
 &lt;h2&gt;git checkout -b 2017&lt;/h2&gt;
 &lt;p&gt;For 2017 my new goals are pretty much the same:&lt;/p&gt;
@@ -5195,15 +5202,15 @@ I was pretty proud of my job, so I put everything &lt;a href=&quot;https://githu
 &lt;li&gt;Meet the world again and again by travelling more and more (and further!), perfect my English...&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I also start thinking about gradually leave the PHP world. It&apos;s not about the technology itself. Today, PHP fast as hell and the last version (7 and 7.1) bring amazing features (such as type hinting). I just want to put another string to my bow.&lt;/p&gt;
-&lt;p&gt;I also have some more personal goals, but this isn&apos;t the right place ;-)  &lt;/p&gt;
+&lt;p&gt;I also have some more personal goals, but this isn&apos;t the right place ;-)&lt;/p&gt;
 &lt;p&gt;Thanks for reading and Happy New Year everybody!&lt;/p&gt;
           &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(This is an article posted to my blog at maxpou.fr. You can read it online by &lt;a href=&quot;https://www.maxpou.fr2016-a-year-in-review&quot;&gt;clicking here&lt;/a&gt;.)&lt;/div&gt;
-        </content:encoded></item><item><title><![CDATA["Else": the unnecessary expression]]></title><description><![CDATA[First time I was using PHP Mess Detector (a PHP Quality Tool), I was very surprise. Because, when I type an Else expression, it raises an error which it said: "An if expression with an else branch is never necessary". What the f***, I have never seen…]]></description><link>https://www.maxpou.fr/else-unnecessary-expression</link><guid isPermaLink="false">https://www.maxpou.fr/else-unnecessary-expression</guid><pubDate>Fri, 19 Aug 2016 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;First time I was using PHP Mess Detector (a PHP Quality Tool), I was very surprise. Because, when I type an &lt;strong&gt;Else expression, it raises an error&lt;/strong&gt; which it said: &lt;em&gt;&quot;An if expression with an else branch is never necessary&quot;&lt;/em&gt;. What the f***, I have never seen something like this before.  &lt;/p&gt;
+        </content:encoded></item><item><title><![CDATA["Else": the unnecessary expression]]></title><description><![CDATA[First time I was using PHP Mess Detector (a PHP Quality Tool), I was very surprise. Because, when I type an Else expression, it raises an error which it said: "An if expression with an else branch is never necessary". What the f***, I have never seen…]]></description><link>https://www.maxpou.fr/else-unnecessary-expression</link><guid isPermaLink="false">https://www.maxpou.fr/else-unnecessary-expression</guid><pubDate>Fri, 19 Aug 2016 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;First time I was using PHP Mess Detector (a PHP Quality Tool), I was very surprise. Because, when I type an &lt;strong&gt;Else expression, it raises an error&lt;/strong&gt; which it said: &lt;em&gt;&quot;An if expression with an else branch is never necessary&quot;&lt;/em&gt;. What the f***, I have never seen something like this before.&lt;/p&gt;
 &lt;p&gt;Indeed, this principle came from Jeff BAY in &lt;strong&gt;Object Calisthenics&lt;/strong&gt;, an exercise-chapter from the &lt;strong&gt;The ThoughWorks Anthology&lt;/strong&gt; (written by many well-known programmers like Martin FOWLER). In this chapter, Jeff BAY define 9 rules to write better software. &lt;em&gt;Avoid else expression&lt;/em&gt; is one of them.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Whaaaaaaaaaaaaaaaaaaaaaaaaaaaaaat?!&lt;br&gt;
-— &lt;strong&gt;one of my colleague&lt;/strong&gt; when I say &apos;Else is unnecessary&apos;&lt;/p&gt;
+&lt;p&gt;Whaaaaaaaaaaaaaaaaaaaaaaaaaaaaaat?!&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;— &lt;strong&gt;one of my colleague&lt;/strong&gt; when I say &apos;Else is unnecessary&apos;&lt;/p&gt;
 &lt;h2&gt;Solution 1: reorder your code&lt;/h2&gt;
 &lt;p&gt;Ok, given you have a function like this:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-php&quot;&gt;&amp;#x3C;?php
@@ -5242,9 +5249,9 @@ function getUserDenomination(User $aUser)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;And tadaaaa! &lt;code&gt;else&lt;/code&gt; condition disappears!&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Ok, you&apos;re kind but this example is very easy. Trust me, I write specific code and I can&apos;t drop else!
-— &lt;strong&gt;one of my colleague&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ok, you&apos;re kind but this example is very easy. Trust me, I write specific code and I can&apos;t drop else!&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;— &lt;strong&gt;one of my colleague&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;That was my colleague response when I talk about this. But you know, every developer write specific code (in 2016, CRUD are generated). If you don&apos;t, I&apos;m sorry for you!&lt;br&gt;
 So, sometimes it&apos;s difficult to avoid this expression. Most of times, it came from another problem: &lt;strong&gt;you don&apos;t know design patterns&lt;/strong&gt;.&lt;/p&gt;
 &lt;h2&gt;Solution 2: State Pattern&lt;/h2&gt;
@@ -5505,7 +5512,7 @@ $service-&gt;doSomething(); //Oh, I&apos;m doing something!
           &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(This is an article posted to my blog at maxpou.fr. You can read it online by &lt;a href=&quot;https://www.maxpou.frelse-unnecessary-expression&quot;&gt;clicking here&lt;/a&gt;.)&lt;/div&gt;
         </content:encoded></item><item><title><![CDATA[Dealing with Enum in a Symfony App with Doctrine2 as ORM]]></title><description><![CDATA[Using Enum in a Symfony App isn't obvious. If your Enum is short, you can directly put it on your entity. But if it grows, it will be quickly unmanageable. The problem Ok given, you want to create a message object which contains an attribute called…]]></description><link>https://www.maxpou.fr/dealing-with-enum-symfony-doctrine</link><guid isPermaLink="false">https://www.maxpou.fr/dealing-with-enum-symfony-doctrine</guid><pubDate>Thu, 04 Aug 2016 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Using Enum in a Symfony App isn&apos;t obvious. If your Enum is short, you can directly put it on your entity. But if it grows, it will be quickly unmanageable.&lt;/p&gt;
 &lt;h2&gt;The problem&lt;/h2&gt;
-&lt;p&gt;Ok given, you want to create a message object which contains an attribute called &lt;code&gt;type&lt;/code&gt;. Like &lt;a href=&quot;http://getbootstrap.com/components/#alerts&quot;&gt;Twitter Bootstrap&apos;s Alert&lt;/a&gt;, your Message type&apos;s attribute must contain some specific strings (e.g. info, success...).  &lt;/p&gt;
+&lt;p&gt;Ok given, you want to create a message object which contains an attribute called &lt;code&gt;type&lt;/code&gt;. Like &lt;a href=&quot;http://getbootstrap.com/components/#alerts&quot;&gt;Twitter Bootstrap&apos;s Alert&lt;/a&gt;, your Message type&apos;s attribute must contain some specific strings (e.g. info, success...).&lt;/p&gt;
 &lt;p&gt;In the &lt;a href=&quot;http://doctrine2.readthedocs.io/en/latest/cookbook/mysql-enums.html&quot;&gt;official documentation&lt;/a&gt;, Doctrine provides 2 solutions for MySQL Database. What happens if we want to use another Database like PostgreSQL? By the way, you can also take a look at these solutions. As far as I am concerned, I don&apos;t like them because it didn&apos;t solve the problem on the &lt;em&gt;PHP side&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Obviously, we can also create a Table called MessageType. But according to me, a database table must be used to store data. In this case, a type isn&apos;t managed by a human.&lt;/p&gt;
 &lt;p&gt;So we need custom &lt;strong&gt;reusable&lt;/strong&gt; PHP Enum.&lt;br&gt;
@@ -5557,6 +5564,7 @@ abstract class MessageTypeEnum
             self::TYPE_DANGER
         ];
     }
+
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Here is an example of use:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-php&quot;&gt;&amp;#x3C;?php
@@ -5673,7 +5681,7 @@ With this config I switch &lt;strong&gt;from ~16s to ~4s for a page to load&lt;/
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 4.9079754601226995%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAYAAADeko4lAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAVElEQVQI12OIqkv9HxoeCsRR/6fmWf+fkmn038TY6L+Zmfl/Cwvz/+bm5v/t7e3/6+rq/tfS0vqvra0NxBBaTV39f1+m1f9tLc7/11eZ/a9Ncf4PAMtCJQ++skCxAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 4.9079754601226995%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAYAAADeko4lAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAV0lEQVQI12OIqkv9Hxoe+j80POr/1Dzr/1Myjf6bGBv9NzMz/29hYf7f3Nz8v729/X9dXd3/Wlpa/7W1tf9ra0NoNXX1/32ZVv+3tTj/X19l9r82xfk/AMtCJQ/OLUhhAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -5727,7 +5735,7 @@ sudo service apache2 restart
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 4.294478527607362%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAYAAADeko4lAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAWUlEQVQI12Pwjwn+HxUZ9d/T0+O/oaHhfz09vf86Ojr/TUxM/hubGP83MND/b2xs8l9ZWfm/oqLifyUlJSBWBPKV/kvJyP8vCdH6v6vV8f+qEt3/c3IN/wMAL6EiHSULXn0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 4.294478527607362%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAYAAADeko4lAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAV0lEQVQI1wXBwQ1AMBSAYXOIRPreTara9C3gxsmBC7GCW1ewhQmMYLnf91XLuXLsB/M8kVIihID3HjMjWybGgZwNVcU5h4gg4lAV6qalbB3fPfKWnudK/C+hIh1hApdXAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -5784,7 +5792,7 @@ alias cplogs=&apos;cp -R /dev/shm/application-name/logs /var/www/application-nam
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 4.9079754601226995%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAYAAADeko4lAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAATUlEQVQI12Owsrf+b21t/d/IyAiOTU1M/ltBxWxtbf/r6+v/t7Gx+a+rq/tfVVX1v4a6+n8FZbX/fjZq/3e0u/9fVW4CxGb/40I9/wMAHZEioj+PZmAAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 4.9079754601226995%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAYAAADeko4lAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAATklEQVQI12Owsrf+b21t/d/IyAiOTU1M/ltBxWxtbf/r6+v/t7Gx+a+rq/tfVVX1v4a6+n8FZbX/fjZq/3e0u/9fVW7yf1W52f+4UM//AB2RIqIvg5WaAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
