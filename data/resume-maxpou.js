@@ -61,7 +61,7 @@ module.exports = {
       url: "https://www.maxpou.fr/speaking",
     },
     {
-      description: "Open sources lover and contributor",
+      description: "Open sources lover and occasional contributor",
       url: "https://github.com/maxpou",
     },
   ],
