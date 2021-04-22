@@ -10,21 +10,21 @@ import { ReadingTime, Bull } from './Commons'
 const PreviewContainer = styled.aside`
   display: flex;
   flex-wrap: wrap;
-  max-width: 770px;
-  width: 80%;
-  margin: 0px auto 30px auto;
-  top: 20px;
-  position: relative;
+  align-items: center;
+  justify-content: center;
+  max-width: 810px;
+  margin: 0 auto;
+`
 
-  @media (max-width: 780px) {
-    width: 100%;
-    padding: 25px;
-  }
+const PreviewLink = styled(Link)`
+  height: 100%;
+  display: block;
 `
 
 const Preview = styled.article`
   cursor: pointer;
   flex: 1 1 300px;
+  align-self: stretch;
   background-color: var(--color-secondaryContentBackground);
   box-shadow: 0 0 0 0, 0 6px 12px rgba(0, 0, 0, 0.1);
   margin: 20px 20px;
@@ -35,29 +35,22 @@ const Preview = styled.article`
     transition: all 0.3s ease;
     transform: translate3D(0, -1px, 0);
   }
-
-  @media (min-width: 780px) {
-    &:first-child {
-      margin-left: 0;
-    }
-    &:last-child {
-      margin-right: 0;
-    }
-  }
 `
 
 const PreviewCover = styled.div`
   & > * {
-    width: auto;
     height: 200px;
-    background: #c5d2d9 no-repeat 50%;
-    background-size: cover;
     border-radius: 5px 5px 0 0;
   }
 `
 
 const PreviewContent = styled.div`
   padding: 20px;
+  height: calc(100% - 200px);
+  flex-direction: column;
+  flex-grow: inherit;
+  justify-content: space-between;
+  display: flex;
 
   header {
     padding: 0 0 10px 0;
@@ -66,6 +59,7 @@ const PreviewContent = styled.div`
     padding-bottom: 10px;
   }
   footer {
+    align-items: flex-end;
     font-size: 0.8em;
   }
 `
@@ -91,7 +85,7 @@ const PrevNextPost = props => {
 
           return (
             <Preview key={`prev-next-${i}`}>
-              <Link to={`/${slug}`} aria-label={`View ${title} article`}>
+              <PreviewLink to={`/${slug}`} aria-label={`View ${title} article`}>
                 <PreviewCover>
                   <GatsbyImage image={image} alt={`View ${title} article`} />
                 </PreviewCover>
@@ -115,7 +109,7 @@ const PrevNextPost = props => {
                     )}
                   </footer>
                 </PreviewContent>
-              </Link>
+              </PreviewLink>
             </Preview>
           )
         })}

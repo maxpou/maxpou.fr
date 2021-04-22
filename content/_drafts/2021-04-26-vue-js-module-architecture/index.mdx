@@ -9,6 +9,9 @@ If you're curious about the project, here are some numbers:
 
 I don't want to play who got the bigger, as there's nothing shinny here. Our application is not big. It's too big.
 
+## Why Vue.js
+
+## 
 
 ## Modularize your monolith
 
@@ -33,11 +36,11 @@ const ProductList = () => import('./path/to/product-list')
 
 
 const router = new VueRouter({
-  routes: [{ path: '/product-list', component: ProductList }]
+  routes: [{ path: '/product-list', component: ProductList }],
 })
 ```
 
-## Modules or Micro-frontends?
+## Micro-frontends?
 
 Our module architecture show some limits. Because we only export one app, big changes are nearly impossible. 
 Let say we want to experiment Vue.js 3, we will have to ensure that our few thousand of vue file are compatibles.
@@ -47,6 +50,8 @@ And this scenario happens for every major changes we want to do. I tried once to
 The biggest downside I see is the potential inconsistencies in the app. If the payment part of the app is using a component in version 1 and another page is using the same component in version 2, it can hurt the user experience. 
 And the performances too because the same librarie could potentially be loaded multiple time.
 At the moment, the granularity of our modules make the microfrontends transition a too hard as we probably have too many modules (~30).
+
+
 
 ## What about TypeScript?
 
@@ -83,3 +88,8 @@ In one place we put all our components, including very specific components to ou
 I tend to consider this package as an "open source package", something that anybody could reuse.
 
 When we have to build a new screen it's pretty much like doing a lego construction. There's a kind of component box and developers pick what they need. Most of the time, writing CSS is not needed.
+
+## Vue 3?
+
+
+## Testing

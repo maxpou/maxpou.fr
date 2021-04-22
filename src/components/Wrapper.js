@@ -6,7 +6,6 @@ const Wrapper = styled.main.attrs(props => ({
 }))`
   position: relative;
   border-radius: 5px;
-  width: 80%;
   max-width: 770px;
   word-wrap: break-word;
   background-color: var(--color-wrapperBackground);
@@ -17,6 +16,7 @@ const Wrapper = styled.main.attrs(props => ({
 
   @media (max-width: 780px) {
     width: 100%;
+    border-radius: unset;
     padding: 25px;
   }
 `
