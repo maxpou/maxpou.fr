@@ -15,6 +15,7 @@ tags: ['fake']
 translations:
   - link: 'https://www.maxpou.fr/about'
     language: 'french'
+redditPostId: abc
 ---
 
 This exists to populate GraphQL fields and avoid null errors. It should contain

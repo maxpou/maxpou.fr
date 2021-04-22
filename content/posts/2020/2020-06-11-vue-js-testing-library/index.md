@@ -6,6 +6,7 @@ date: 2020-06-11
 cover: ./cover.jpeg
 tags: ["Testing", "JavaScript", "Vue.js"]
 featured: true
+redditPostId: hfmj0f
 ---
 
 Today, I want to talk about testing in the Vue.js ecosystem. Between my previous job and my current one, I've been searching for too long a way to test Vue.js applications. I always ended up with something too verbose or overcomplicated.
