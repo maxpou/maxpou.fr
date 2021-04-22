@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
+import RedditScoreWrapper from './RedditScore'
 import useSiteMetadata from '../hooks/use-site-config'
 import BirdHeartIcon from './icons/bird-heart.png'
 import LikeIcon from './icons/like'
@@ -53,6 +54,7 @@ const UserLikeListItem = styled.li`
 const UserImg = styled.img`
   border-radius: 40px;
   height: 48px;
+  background-color: var(--color-wrapperBackground);
 `
 
 const WebmentionsWrapper = props => {
@@ -62,6 +64,7 @@ const WebmentionsWrapper = props => {
   const [likesUsers, setLikesUsers] = useState([])
   const [retweets, setRetweets] = useState(0)
   const [likes, setLikes] = useState(0)
+
   useEffect(() => {
     fetch(`https://webmention.io/api/count.json?target=${currentUrl}/`)
       .then(response => response.json())
@@ -91,6 +94,9 @@ const WebmentionsWrapper = props => {
       <RetweetContainer>
         {retweets} <RetweetIcon height="24px" width="24px" />
       </RetweetContainer>
+      {props.redditPostId && (
+        <RedditScoreWrapper redditPostId={props.redditPostId} />
+      )}
 
       {likesUsers.length > 0 && (
         <LikeListContainer>

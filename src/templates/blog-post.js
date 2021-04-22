@@ -41,6 +41,7 @@ class BlogPostTemplate extends React.Component {
           <Webmentions
             slug={post.frontmatter.slug}
             title={post.frontmatter.title}
+            redditPostId={post.frontmatter.redditPostId}
           />
         </Wrapper>
 
@@ -74,6 +75,7 @@ export const pageQuery = graphql`
           link
           hreflang
         }
+        redditPostId
       }
     }
   }

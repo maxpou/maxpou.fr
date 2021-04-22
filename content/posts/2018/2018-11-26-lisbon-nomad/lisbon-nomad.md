@@ -7,6 +7,7 @@ imageShare: ./nomad-in-lisbon-share.png
 date: 2018-11-26
 tags: 
     - Life
+redditPostId: a5saiu
 ---
 
 After 2 years, I decided to leave Dublin. I'm still working for the same company but 100% remote.
