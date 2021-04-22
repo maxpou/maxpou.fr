@@ -32,7 +32,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               cover {
                 publicURL
                 childImageSharp {
-                  gatsbyImageData(width: 365)
+                  gatsbyImageData(width: 640)
                 }
               }
               unlisted

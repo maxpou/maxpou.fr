@@ -14,7 +14,7 @@ tags:
 * Spot potentials bugs;
 * Discuss about the architecture.
 
-And also be a better developper. **Reading code is probably the best way to improve your coding skills**!
+And also be a better developer. **Reading code is probably the best way to improve your coding skills**!
 
 ## Definition of Done
 
