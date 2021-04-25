@@ -47,7 +47,7 @@ Overall, I 💙 working remotely.
 
 ### 😥Failures: online courses
 
-At the beginning of 2019, I get contacted by a famous platform to do some online courses about Vue.js Testing. I already gave a few [training in the past](http://localhost:8000/speaking#trainings--workshop) and I setup twice a testing strategies for Vue.js application. At first glance, it looked like an easy way to get money and improve my personal branding. But, recording courses is not like giving a talk. Every time you make a mistake or a car start horning on the street, you have to start over. Additionally, I also underestimated the required equipment to record my voice and my screen. I'm travelling with only one backpack, there's no room in my bag for a decent microphone/2nd screen. 
+At the beginning of 2019, I get contacted by a famous platform to do some online courses about Vue.js Testing. I already gave a few [training in the past](/speaking#trainings--workshop) and I setup twice a testing strategies for Vue.js application. At first glance, it looked like an easy way to get money and improve my personal branding. But, recording courses is not like giving a talk. Every time you make a mistake or a car start horning on the street, you have to start over. Additionally, I also underestimated the required equipment to record my voice and my screen. I'm travelling with only one backpack, there's no room in my bag for a decent microphone/2nd screen. 
 Sadly, I had to admit that the job wasn't for me and I resigned.
 
 
