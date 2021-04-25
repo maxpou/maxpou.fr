@@ -28,10 +28,7 @@ class BlogPostTemplate extends React.Component {
           isBlogPost
         />
 
-        <Hero
-          heroImg={post.frontmatter.cover && post.frontmatter.cover.publicURL}
-          title={post.frontmatter.title}
-        />
+        <Hero heroImg={post.frontmatter.cover} title={post.frontmatter.title} />
 
         <Wrapper>
           <Article post={post} />
@@ -66,6 +63,9 @@ export const pageQuery = graphql`
         tags
         cover {
           publicURL
+          childImageSharp {
+            gatsbyImageData
+          }
         }
         imageShare {
           publicURL

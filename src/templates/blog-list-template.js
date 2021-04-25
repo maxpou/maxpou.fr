@@ -16,7 +16,11 @@ class BlogList extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <SEO />
+        <SEO
+          imageShare={
+            this.props.data.imageShare.childImageSharp.fluid.originalImg
+          }
+        />
         <Hero title={title} subTitle={description} />
 
         <Wrapper>
@@ -40,6 +44,13 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         description
+      }
+    }
+    imageShare: file(relativePath: { eq: "cover.jpg" }) {
+      childImageSharp {
+        fluid {
+          originalImg
+        }
       }
     }
     posts: allMdx(
