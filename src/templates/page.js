@@ -20,10 +20,7 @@ const Page = props => {
         cover={page.frontmatter.cover && page.frontmatter.cover.publicURL}
       />
 
-      <Hero
-        heroImg={page.frontmatter.cover && page.frontmatter.cover.publicURL}
-        title={page.frontmatter.title}
-      />
+      <Hero heroImg={page.frontmatter.cover} title={page.frontmatter.title} />
 
       <Wrapper>
         <article>
@@ -57,6 +54,9 @@ export const pageQuery = graphql`
         webmentions
         cover {
           publicURL
+          childImageSharp {
+            gatsbyImageData
+          }
         }
       }
     }

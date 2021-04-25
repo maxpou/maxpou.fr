@@ -11,7 +11,6 @@ const useReddit = postId => {
     const data = await response.json()
     setScore(data[0].data.children[0].data.score)
     setLoading(false)
-    console.log('score', data)
   }, [])
   return [score, loading]
 }

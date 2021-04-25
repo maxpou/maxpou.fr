@@ -155,8 +155,8 @@ module.exports = {
   ],
 
   hobbies: `
-    Canyoning (I guide group), hiking, cinema (especially Danish),
-    cooking, travelling, video games (Age of Empire II) and personal development.
+    Canyoning (I guide group), hiking, cooking, travelling, 
+    video games (Age of Empire II) and personal development.
   `,
 
   values: ['knowledge sharing', 'user privacy', 'diversity']

@@ -10,6 +10,8 @@ module.exports = {
   In my day-to-day job, I'm working as a senior front-end engineer at VSware.
   As a digital nomad, I'm living where the WiFi and sun are!
   `,
+  seoDescription:
+    'Personal site for Maxence Poutord, a software engineer who is specialised in Frontend development.',
   siteUrl: 'https://www.maxpou.fr/',
   // Prefixes all links. For cases when deployed to maxpou.fr/gatsby-starter-morning-dew/
   pathPrefix: '/', // Note: it must *not* have a trailing slash.

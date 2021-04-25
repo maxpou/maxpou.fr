@@ -11,6 +11,7 @@ const SEO = props => {
     siteUrl,
     siteCover,
     siteDescription,
+    seoDescription,
     twitterUsername,
     authorName,
   } = useSiteMetadata()
@@ -21,9 +22,10 @@ const SEO = props => {
   const formatedSiteUrl = siteUrl.endsWith('/')
     ? siteUrl.substring(0, siteUrl.length - 1)
     : siteUrl
+
   const imagePath = props.imageShare || props.cover || withPrefix(siteCover)
   const image = `${formatedSiteUrl}${imagePath}`
-  const description = props.description || siteDescription
+  const description = props.description || seoDescription
   const internalTranslations = (props.translations || []).filter(
     t => !t.link.startsWith('http')
   )

@@ -12,6 +12,7 @@ const useSiteMetadata = () => {
           authorAvatar
           authorDescription
           siteDescription
+          seoDescription
           twitterUsername
           defaultLang
           headerTitle
