@@ -162,7 +162,7 @@ function getBlogFeed(filter, overrides) {
     },
     query: `
       {
-        allMarkdownRemark(
+        allMarkdownRemark: allMdx(
           sort: { order: DESC, fields: [frontmatter___date] },
           filter: {
             fileAbsolutePath: {regex: "/content/posts/"}
