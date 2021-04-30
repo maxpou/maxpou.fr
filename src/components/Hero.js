@@ -1,8 +1,5 @@
 import React from 'react'
-import { withPrefix } from 'gatsby'
 import styled from 'styled-components'
-import useSiteMetadata from '../hooks/use-site-config'
-import useSiteImages from '../hooks/use-site-images'
 import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image'
 
 const HeroContainer = styled.div`
