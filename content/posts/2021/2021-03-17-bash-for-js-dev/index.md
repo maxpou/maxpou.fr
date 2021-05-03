@@ -5,18 +5,22 @@ slug: bash-for-dev
 date: 2021-03-17
 cover: ./cover.png
 language: en
-tags: ["Tips"]
+tags: ['Tips']
 ---
 
 Like many developers, I use the terminal on a daily basis.
 
 ![How my terminal looks like](./shell.png)
 
-I actually use 2 different terminals: the one embedded in VScode and iTerm2 (I'm on macOS).
-Although this post contains the word bash, I don't use it directly. I use zsh with [ohmyzsh](https://ohmyz.sh). If you never heard about it before, it supercharges bash and adds more interactivity. It also gives me interesting feedbacks like the branch and working directory I am currently in.
+I actually use 2 different terminals: the one embedded in VScode and iTerm2 (I'm on macOS). Although
+this post contains the word bash, I don't use it directly. I use zsh with
+[ohmyzsh](https://ohmyz.sh). If you never heard about it before, it supercharges bash and adds more
+interactivity. It also gives me interesting feedbacks like the branch and working directory I am
+currently in.
 
-By the way, if you like the theme I'm using, feel free to steal [my dotfiles](https://github.com/maxpou/dotfiles).
-Also, I won't be covering the Git part as I already did in [this blog post](/git-cheat-sheet).
+By the way, if you like the theme I'm using, feel free to steal
+[my dotfiles](https://github.com/maxpou/dotfiles). Also, I won't be covering the Git part as I
+already did in [this blog post](/git-cheat-sheet).
 
 ## Cheatsheet
 
@@ -64,9 +68,9 @@ du -sh -I .git .
 
 ![SpaceVim a game changer for vim](./spacevim.png)
 
-I mostly use Vim for Git commits. It can also be handy when your IDE struggle to open 10 0000 lines long files.
-To *pimp my vim™*, I installed something called [SpaceVim](https://spacevim.org). It adds fancy things like a file explorer and the syntax color.
-
+I mostly use Vim for Git commits. It can also be handy when your IDE struggle to open 10 0000 lines
+long files. To _pimp my vim™_, I installed something called [SpaceVim](https://spacevim.org). It
+adds fancy things like a file explorer and the syntax color.
 
 ## Aliases
 
@@ -80,7 +84,6 @@ alias mv='mv -v'
 alias rm='rm -v'
 alias cp='cp -v'
 ```
-
 
 ### RAM consumption
 
@@ -96,10 +99,10 @@ $ ram
 ...
 ```
 
-
 ### 🏴‍☠️ Change your mac address
 
-This one is not really tech-related. I mostly use this one in airports/coffee shops to renew mac address (and get illimited access).
+This one is not really tech-related. I mostly use this one in airports/coffee shops to renew mac
+address (and get illimited access).
 
 ```bash
 function airport() {
@@ -117,11 +120,14 @@ function airport() {
 alias russian-roulette='
   [ $(( $RANDOM % 6 )) == 0 ] && rm -rf / || echo "You live"'
 ```
-*If you like to live on the edge... but please, be smart! And don't run commands you don't know the effects of!*
+
+_If you like to live on the edge... but please, be smart! And don't run commands you don't know the
+effects of!_
 
 ## Bonus #1: Tree
 
-I use [tree](https://formulae.brew.sh/formula/tree) to display directories as trees. It very cool to write documentation.
+I use [tree](https://formulae.brew.sh/formula/tree) to display directories as trees. It very cool to
+write documentation.
 
 ```bash
 $ tree content/pages
@@ -136,9 +142,10 @@ $ tree content/pages
 └── README.md
 ```
 
-
 ## Bonus #2: Gtop
 
-[Gtop](https://github.com/aksakalli/gtop) is a system monitoring dashboard. Typing Gtop on my keyboard is usually quicker than opening the activity monitor (for some unknown reasons I always struggle to find it).
+[Gtop](https://github.com/aksakalli/gtop) is a system monitoring dashboard. Typing Gtop on my
+keyboard is usually quicker than opening the activity monitor (for some unknown reasons I always
+struggle to find it).
 
 ![how gtop looks like](./gtop.png)

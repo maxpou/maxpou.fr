@@ -1,20 +1,24 @@
 ---
 layout: post
-title: "\"Else\": the unnecessary expression"
+title: '"Else": the unnecessary expression'
 slug: else-unnecessary-expression
 date: 2016-08-19
 language: en
 generate-card: false
 cover: ./header.jpg
-tags: ["architecture"]
+tags: ['architecture']
 ---
 
-First time I was using PHP Mess Detector (a PHP Quality Tool), I was very surprise. Because, when I type an **Else expression, it raises an error** which it said: *"An if expression with an else branch is never necessary"*. What the f***, I have never seen something like this before.  
+First time I was using PHP Mess Detector (a PHP Quality Tool), I was very surprise. Because, when I
+type an **Else expression, it raises an error** which it said: _"An if expression with an else
+branch is never necessary"_. What the f\*\*\*, I have never seen something like this before.
 
-Indeed, this principle came from Jeff BAY in **Object Calisthenics**, an exercise-chapter from the **The ThoughWorks Anthology** (written by many well-known programmers like Martin FOWLER). In this chapter, Jeff BAY define 9 rules to write better software. *Avoid else expression* is one of them.
+Indeed, this principle came from Jeff BAY in **Object Calisthenics**, an exercise-chapter from the
+**The ThoughWorks Anthology** (written by many well-known programmers like Martin FOWLER). In this
+chapter, Jeff BAY define 9 rules to write better software. _Avoid else expression_ is one of them.
 
 > Whaaaaaaaaaaaaaaaaaaaaaaaaaaaaaat?!  
-— **one of my colleague** when I say 'Else is unnecessary'
+> — **one of my colleague** when I say 'Else is unnecessary'
 
 ## Solution 1: reorder your code
 
@@ -48,7 +52,8 @@ function getUserDenomination(User $aUser)
 }
 ```
 
-And because, we're not beasts, we should inverse condition (avoid finish your function with pseudo-exceptions).
+And because, we're not beasts, we should inverse condition (avoid finish your function with
+pseudo-exceptions).
 
 ```php
 <?php
@@ -64,12 +69,13 @@ function getUserDenomination(User $aUser)
 
 And tadaaaa! `else` condition disappears!
 
+> Ok, you're kind but this example is very easy. Trust me, I write specific code and I can't drop
+> else! — **one of my colleague**
 
-> Ok, you're kind but this example is very easy. Trust me, I write specific code and I can't drop else!
-— **one of my colleague**
-
-That was my colleague response when I talk about this. But you know, every developer write specific code (in 2016, CRUD are generated). If you don't, I'm sorry for you!  
-So, sometimes it's difficult to avoid this expression. Most of times, it came from another problem: **you don't know design patterns**.
+That was my colleague response when I talk about this. But you know, every developer write specific
+code (in 2016, CRUD are generated). If you don't, I'm sorry for you!  
+So, sometimes it's difficult to avoid this expression. Most of times, it came from another problem:
+**you don't know design patterns**.
 
 ## Solution 2: State Pattern
 
@@ -87,7 +93,8 @@ if ($car->isStarted()) {
 }
 ```
 
-First of all, replace this conditions by a `switch` statement. It's pretty much the same, but a little bit more readable.  
+First of all, replace this conditions by a `switch` statement. It's pretty much the same, but a
+little bit more readable.  
 And then, you should use the **State Pattern**.
 
 ```php
@@ -183,8 +190,8 @@ $myTestcar = new Car(new >WhateverCarState());
 $myTestcar->move();
 ```
 
-**Nb:** Instead of creating an AbstractCarState, you can simply implement the CarStateInterface for all of your XXXCarState.
-
+**Nb:** Instead of creating an AbstractCarState, you can simply implement the CarStateInterface for
+all of your XXXCarState.
 
 ## Solution 3: Strategy Pattern
 
@@ -265,7 +272,8 @@ echo $kwak->applyDrink(); //Damn, I can't drive!
 
 ## Solution 4: NullObject Pattern
 
-*In this solution, examples come from [Dominik Liebler Github repository](https://github.com/domnikl/DesignPatternsPHP/blob/master/Behavioral/NullObject/Service.php)*  
+_In this solution, examples come from
+[Dominik Liebler Github repository](https://github.com/domnikl/DesignPatternsPHP/blob/master/Behavioral/NullObject/Service.php)_  
 Sometimes need to check if an object isn't null before doing something. Like that:
 
 ```php
@@ -326,13 +334,18 @@ $service = new Service(new PrintLogger());
 $service->doSomething(); //Oh, I'm doing something!
 ```
 
-As far as I'm concerned, I prefer this pattern when he's combined with patterns like [Factory](https://github.com/maxpou/design-pattern-php/blob/master/DP/NullObject/nullObject.md).
-
+As far as I'm concerned, I prefer this pattern when he's combined with patterns like
+[Factory](https://github.com/maxpou/design-pattern-php/blob/master/DP/NullObject/nullObject.md).
 
 ## Conclusion
 
-I apply this principle every day. And now 90% of my if blocks, does not contain any else expression! (yeah, I am lazy sometime ;-)). Most of time, the first solution is the solution. Take care, sometimes too much design patterns lead your application to **overengineering**. First, make sure it's relevant and remember: **pragmatism over theory**.
+I apply this principle every day. And now 90% of my if blocks, does not contain any else expression!
+(yeah, I am lazy sometime ;-)). Most of time, the first solution is the solution. Take care,
+sometimes too much design patterns lead your application to **overengineering**. First, make sure
+it's relevant and remember: **pragmatism over theory**.
 
 ![overengineering](./overengineering.jpg)
 
-Oh, by the way, I implement this patterns [in a Github repository](https://github.com/maxpou/design-pattern-php). You can take a look, it's fully tested!
+Oh, by the way, I implement this patterns
+[in a Github repository](https://github.com/maxpou/design-pattern-php). You can take a look, it's
+fully tested!

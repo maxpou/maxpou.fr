@@ -4,26 +4,33 @@ title: Dealing with Enum in a Symfony App with Doctrine2 as ORM
 slug: dealing-with-enum-symfony-doctrine
 date: 2016-08-04
 language: en
-tags: ["Symfony2", "PHP", "Doctrine"]
+tags: ['Symfony2', 'PHP', 'Doctrine']
 generate-card: false
 cover: ./abstract-1.jpg
 ---
 
-Using Enum in a Symfony App isn't obvious. If your Enum is short, you can directly put it on your entity. But if it grows, it will be quickly unmanageable.
+Using Enum in a Symfony App isn't obvious. If your Enum is short, you can directly put it on your
+entity. But if it grows, it will be quickly unmanageable.
 
 ## The problem
 
-Ok given, you want to create a message object which contains an attribute called `type`. Like [Twitter Bootstrap's Alert](http://getbootstrap.com/components/#alerts), your Message type's attribute must contain some specific strings (e.g. info, success...).  
+Ok given, you want to create a message object which contains an attribute called `type`. Like
+[Twitter Bootstrap's Alert](http://getbootstrap.com/components/#alerts), your Message type's
+attribute must contain some specific strings (e.g. info, success...).
 
-In the [official documentation](http://doctrine2.readthedocs.io/en/latest/cookbook/mysql-enums.html), Doctrine provides 2 solutions for MySQL Database. What happens if we want to use another Database like PostgreSQL? By the way, you can also take a look at these solutions. As far as I am concerned, I don't like them because it didn't solve the problem on the *PHP side*.
+In the
+[official documentation](http://doctrine2.readthedocs.io/en/latest/cookbook/mysql-enums.html),
+Doctrine provides 2 solutions for MySQL Database. What happens if we want to use another Database
+like PostgreSQL? By the way, you can also take a look at these solutions. As far as I am concerned,
+I don't like them because it didn't solve the problem on the _PHP side_.
 
-Obviously, we can also create a Table called MessageType. But according to me, a database table must be used to store data. In this case, a type isn't managed by a human.
+Obviously, we can also create a Table called MessageType. But according to me, a database table must
+be used to store data. In this case, a type isn't managed by a human.
 
 So we need custom **reusable** PHP Enum.  
 Let's do this!
 
 ![a kid on a ship](./ship-kid.gif)
-
 
 ## A solution
 
@@ -86,7 +93,6 @@ echo MessageTypeEnum::TYPE_INFO;
 echo MessageTypeEnum::getTypeName(MessageTypeEnum::TYPE_INFO);
 //Information
 ```
-
 
 Now, you need to adapt your Entity:
 

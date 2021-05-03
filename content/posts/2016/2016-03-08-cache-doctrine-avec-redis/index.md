@@ -1,36 +1,50 @@
 ---
 layout: post
 title: Utiliser Redis pour stocker le cache de Doctrine
-description: "Améliorer les performances de doctrine en utilisant son cache et en stockant les informations sur Redis"
+description:
+  'Améliorer les performances de doctrine en utilisant son cache et en stockant les informations sur
+  Redis'
 date: 2016-03-08
 language: fr
 slug: cache-doctrine-avec-redis
-tags: ["Symfony2", "Doctrine", "Redis"]
+tags: ['Symfony2', 'Doctrine', 'Redis']
 cover: ./header.png
 generate-card: false
 ---
 
-> La meilleur requête est celle que l'on a pas à faire
-— **un inconnu**
+> La meilleur requête est celle que l'on a pas à faire — **un inconnu**
 
 Dans mon actuelle mission, nous développons une application sous Symfony2 avec Doctrine comme ORM.
 Voici grossièrement à quoi ressemble l'architecture globale :
 
 ![architecture globale](./architecture.png)
 
-Comme vous le voyez, l'application est dédoublée sur deux serveurs distincts qui ont interdiction de se parler, en dehors de la base de données. Nous avons été confrontés à des problématiques de performances qui nous a contraint d'utiliser le **cache de Doctrine**.
+Comme vous le voyez, l'application est dédoublée sur deux serveurs distincts qui ont interdiction de
+se parler, en dehors de la base de données. Nous avons été confrontés à des problématiques de
+performances qui nous a contraint d'utiliser le **cache de Doctrine**.
 
-Il faut savoir qu'il y a [3 types de cache pour Doctrine](http://doctrine-orm.readthedocs.org/en/latest/reference/caching.html) :
+Il faut savoir qu'il y a
+[3 types de cache pour Doctrine](http://doctrine-orm.readthedocs.org/en/latest/reference/caching.html)
+:
 
-* Query Cache : transformation DQL -> SQL;
-* Result Cache : résultat de la requête;
-* Metadata Cache : annotation des entities.
+- Query Cache : transformation DQL -> SQL;
+- Result Cache : résultat de la requête;
+- Metadata Cache : annotation des entities.
 
-Si on regarde [la liste des drivers](http://doctrine-orm.readthedocs.org/en/latest/reference/caching.html#cache-drivers), on s'aperçoit qu'il n'est pas évident de mutualiser du cache entre plusieurs serveur (qui ne peuvent pas communiquer directement ensemble).
+Si on regarde
+[la liste des drivers](http://doctrine-orm.readthedocs.org/en/latest/reference/caching.html#cache-drivers),
+on s'aperçoit qu'il n'est pas évident de mutualiser du cache entre plusieurs serveur (qui ne peuvent
+pas communiquer directement ensemble).
 
 C'est là que Redis arrive ♥
 
-En quelques mots, Redis (pour *REmote DIctionary Server*) est un SGBD **clé-valeur** qui s'inscrit dans la mouvance NoSQL. En plus d'être simple d'utilisation, sa performance qui ferait pâlir Usain Bolt. Cela est principalement dû au fait que tout est persisté dans le cache du serveur. Si vous doutez encore de cette dernière phrase, sachez que [YouPorn](http://highscalability.com/blog/2012/4/2/youporn-targeting-200-million-views-a-day-and-beyond.html), [Stack Overflow](http://nickcraver.com/blog/2016/02/17/stack-overflow-the-architecture-2016-edition/), [Github](https://github.com/blog/530-how-we-made-github-fast)... l'utilisent ;-)
+En quelques mots, Redis (pour _REmote DIctionary Server_) est un SGBD **clé-valeur** qui s'inscrit
+dans la mouvance NoSQL. En plus d'être simple d'utilisation, sa performance qui ferait pâlir Usain
+Bolt. Cela est principalement dû au fait que tout est persisté dans le cache du serveur. Si vous
+doutez encore de cette dernière phrase, sachez que
+[YouPorn](http://highscalability.com/blog/2012/4/2/youporn-targeting-200-million-views-a-day-and-beyond.html),
+[Stack Overflow](http://nickcraver.com/blog/2016/02/17/stack-overflow-the-architecture-2016-edition/),
+[Github](https://github.com/blog/530-how-we-made-github-fast)... l'utilisent ;-)
 
 Voici un exemple de fonctionnement :
 
@@ -91,50 +105,52 @@ Dans le config.yml :
 
 ```yaml
 imports:
-    - { resource: redis.yml }
+  - { resource: redis.yml }
 
 # Doctrine Configuration
 doctrine:
-    dbal:
-        #...
-    orm:
-        auto_generate_proxy_classes: "%kernel.debug%"
-        naming_strategy: doctrine.orm.naming_strategy.underscore
-        # IMPORTANT!
-        auto_mapping: true
-        metadata_cache_driver: redis
-        query_cache_driver: redis
+  dbal:
+    #...
+  orm:
+    auto_generate_proxy_classes: '%kernel.debug%'
+    naming_strategy: doctrine.orm.naming_strategy.underscore
+    # IMPORTANT!
+    auto_mapping: true
+    metadata_cache_driver: redis
+    query_cache_driver: redis
 
 # redis.yml
 snc_redis:
-    clients:
-        default:
-            type: predis
-            alias: default
-            dsn: redis://1.2.3.4
-        doctrine:
-            type: predis
-            alias: doctrine
-            dsn: redis://1.2.3.4
+  clients:
+    default:
+      type: predis
+      alias: default
+      dsn: redis://1.2.3.4
     doctrine:
-        metadata_cache:
-            client: doctrine
-            entity_manager: default
-            document_manager: default
-        result_cache:
-            client: doctrine
-            entity_manager: default
-        query_cache:
-            client: doctrine
-            entity_manager: default
+      type: predis
+      alias: doctrine
+      dsn: redis://1.2.3.4
+  doctrine:
+    metadata_cache:
+      client: doctrine
+      entity_manager: default
+      document_manager: default
+    result_cache:
+      client: doctrine
+      entity_manager: default
+    query_cache:
+      client: doctrine
+      entity_manager: default
 ```
 
 Et voilà pour l'installation.  
-A ce stade, seuls les caches de metadata et de query sont opérationnels. Pour la mise en cache du résultat, il faudra le faire **manuellement sur chaque requête**.
+A ce stade, seuls les caches de metadata et de query sont opérationnels. Pour la mise en cache du
+résultat, il faudra le faire **manuellement sur chaque requête**.
 
 ## Mettre en cache le résultat
 
-Terminé les requêtes *inlines* dans les controllers ! Vous allez désormais devoir utiliser le <abbr title="Doctrine Query Language">DQL</abbr> ou le QueryBuilder.
+Terminé les requêtes _inlines_ dans les controllers ! Vous allez désormais devoir utiliser le
+<abbr title="Doctrine Query Language">DQL</abbr> ou le QueryBuilder.
 
 ```php
 <?php
@@ -154,8 +170,8 @@ public function findBeers()
 ```
 
 Maintenant, si l'on recharge la page, cette requête ne se fera plus via MySQL mais bien via Redis.
-On peut vérifier tout cela en allant sur Redis et en rentrant la commande suivante : `KEYS *`.
-Voici ce que l'on va avoir :
+On peut vérifier tout cela en allant sur Redis et en rentrant la commande suivante : `KEYS *`. Voici
+ce que l'on va avoir :
 
 ```bash
 > KEYS *
@@ -163,8 +179,10 @@ Voici ce que l'on va avoir :
 2) "[809cd863587594a754a7ffda5c2c06ee4640ebe3][1]"
 ```
 
-La première ligne va contenir les métadonnées de la classe Beer. La seconde, contiendra la requête **et** son résultat.
-Si vous voulez avoir une clé un peu plus digeste, vous pouvez utiliser cette méthode `$query->setResultCacheId('my_wonderful_key');` ou même faire **1 pierre 3 coups** : `$query->useResultCache(true, 3600, 'my_wonderful_key');`.
+La première ligne va contenir les métadonnées de la classe Beer. La seconde, contiendra la requête
+**et** son résultat. Si vous voulez avoir une clé un peu plus digeste, vous pouvez utiliser cette
+méthode `$query->setResultCacheId('my_wonderful_key');` ou même faire **1 pierre 3 coups** :
+`$query->useResultCache(true, 3600, 'my_wonderful_key');`.
 
 Voici ce que nous aurons : (je n'ai pas réussi à supprimer le `[1]`)
 
@@ -189,9 +207,11 @@ php app/console redis:flushdb
 
 ## Invalider le cache des requêtes
 
-C'est bien de mettre en place un système de cache, mais vous n'allez pas demander à vos utilisateurs de lancer la commande après chaque opération. Il va donc falloir utiliser les événements de Doctrine, et plus particulièrement l'[entity listeners](http://doctrine-orm.readthedocs.org/projects/doctrine-orm/en/latest/reference/events.html#entity-listeners)
+C'est bien de mettre en place un système de cache, mais vous n'allez pas demander à vos utilisateurs
+de lancer la commande après chaque opération. Il va donc falloir utiliser les événements de
+Doctrine, et plus particulièrement
+l'[entity listeners](http://doctrine-orm.readthedocs.org/projects/doctrine-orm/en/latest/reference/events.html#entity-listeners)
 Si vous faites des tests, pensez à commenter le cache des métadonnées ;-)
-
 
 Définissez le service :
 
@@ -235,11 +255,11 @@ Le service.yml :
 
 ```yaml
 beer_listener:
-    class: Maxpou\BeerBundle\Service\BeerListener
-    arguments:
-        - "@snc_redis.doctrine"
-    tags:
-        - { name: doctrine.orm.entity_listener }
+  class: Maxpou\BeerBundle\Service\BeerListener
+  arguments:
+    - '@snc_redis.doctrine'
+  tags:
+    - { name: doctrine.orm.entity_listener }
 ```
 
 Et enfin l'annotation sur l'entity :
@@ -258,15 +278,18 @@ class Beer implements BeerInterface
 //...
 ```
 
-Les plus pointilleux d'entre vous auront remarqués que je redéfini le TTL de ma clef au lieu de la supprimer. En effet, si je supprime ma clef, la nouvelle clef créée sera `[beers_all][2]`. Et le compteur augmentera ainsi de suite...  
-Avec cette technique <s>de fainéant</s>, on garde la main sur le nom de la clef qui sera toujours `[beers_all][1]`.
+Les plus pointilleux d'entre vous auront remarqués que je redéfini le TTL de ma clef au lieu de la
+supprimer. En effet, si je supprime ma clef, la nouvelle clef créée sera `[beers_all][2]`. Et le
+compteur augmentera ainsi de suite...  
+Avec cette technique <s>de fainéant</s>, on garde la main sur le nom de la clef qui sera toujours
+`[beers_all][1]`.
 
 ## Pour aller plus loin
 
-* Tutoriel/Sandbox Redis : [http://try.redis.io](http://try.redis.io)
-* [2e niveau de cache de Doctrine (encore à l'état expérimental)](http://doctrine-orm.readthedocs.org/projects/doctrine-orm/en/latest/reference/second-level-cache.html)
+- Tutoriel/Sandbox Redis : [http://try.redis.io](http://try.redis.io)
+- [2e niveau de cache de Doctrine (encore à l'état expérimental)](http://doctrine-orm.readthedocs.org/projects/doctrine-orm/en/latest/reference/second-level-cache.html)
 
 ## Tips
 
-Utiliser les pipes unix avec le redis-cli : `echo  "KEYS *" | ./path/to/redis-cli | grep beer`  
+Utiliser les pipes unix avec le redis-cli : `echo "KEYS *" | ./path/to/redis-cli | grep beer`  
 Vérifier le <abbr title="Time To Live">TTL</abbr> d'une clef: `TTL [beer-id-42][1]`
