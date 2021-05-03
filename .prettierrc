@@ -1,8 +1,16 @@
 {
-  "trailingComma": "es5",
-  "semi": false,
-  "endOfLine": "lf",
-  "tabWidth": 2,
-  "singleQuote": true,
-  "arrowParens": "avoid"
+  arrowParens: 'avoid',
+  endOfLine: 'lf',
+  printWidth: 80,
+  proseWrap: 'always',
+  semi: false,
+  singleQuote: true,
+  tabWidth: 2,
+  trailingComma: 'es5',
+  overrides: [{
+    files: ['*.md', '*.mdx'],
+    options: {
+      printWidth: 100
+    }
+  }]
 }

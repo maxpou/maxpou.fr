@@ -41,7 +41,7 @@
     "terser": "^4.6.11"
   },
   "devDependencies": {
-    "prettier": "^2.0.5",
+    "prettier": "^2.2.1",
     "puppeteer": "^5.4.1",
     "yaml": "^1.0.0"
   },
@@ -59,7 +59,7 @@
     "start": "gatsby develop",
     "gatsby": "gatsby",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write 'src/**/*.{js,jsx,json,md}' 'data/siteConfig.js' 'gatsby-*.js'",
+    "format": "prettier --write 'src/**/*.{js,json}' 'data/siteConfig.js' 'gatsby-*.js' 'content/**/*.{md,mdx}'",
     "develop": "gatsby develop",
     "build": "gatsby build",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
