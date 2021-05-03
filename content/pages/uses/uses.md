@@ -17,7 +17,7 @@ This page is somewhat inspired by [Wes Bos' Uses](https://wesbos.com/uses/) page
 * [Roost Laptop Stand](https://www.therooststand.com/) *(note: [I don't use it when I work from a coffee shop!](https://twitter.com/NikkitaFTW/status/1139607268452777984))*. 
 * Magic keyboard 2 and the Magic trackpad 2
 * Notepad where [I write my daily MIT](https://about.gitlab.com/2018/05/17/eliminating-distractions-and-getting-things-done/#2-write-down-your-mits)
-* Xiaomi 9t Pro (and a old Huawei as a back up)
+* OnePlus Nord (and a old Huawei as a back up)
 * Sony MDR 1000X. A noise cancelling headphone with 2 modes: wired or wiredless (bluetooth). I also have some [Airpods](https://www.apple.com/fr/airpods-2nd-generation/).
 * Travel&daily bag is a [Minaal Carry-on 2.0](https://www.minaal.com/products/minaal-carry-on-bag/?variant=12494163140) (with packing cubes). I love it!
 
