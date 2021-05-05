@@ -11,10 +11,10 @@ featured: true
 ---
 
 Just like React, Vue.js is a great tool to build web applications. In this article, I will share a
-project I have been working on over the last 3 years. I will go trew different technical points such
-as the modular architecture we use, micro-frontends, component's state management, TypeScript, Vue 3
-and more. Keep it mind that there is not one but many way to scaffold a Vue app. This is one of
-them.
+project I have been working on over the last 3 years. I will go through different technical points
+such as the modular architecture we use, micro-frontends, component's state management, TypeScript,
+Vue 3 and more. Keep in mind that there is not one but many ways to scaffold a Vue app. This is one
+of them.
 
 ## How big?
 
@@ -34,8 +34,8 @@ Our application is not big. It's too big.
 ![architecture diagram](./diagram.jpg)
 
 We adopted a modularised approach for our app. In a nutshell, 1 module = 1 business part of the app.
-And it's also something that looks like a standalone vue application. We consider modules as
-self-contained which can potentially be exported. By the way, some are exported as a npm packages
+And it's also something that looks like a standalone Vue application. We consider modules as
+self-contained which can potentially be exported. By the way, some are exported as npm packages
 ([in a monorepo](/monorepo-pros-and-cons)).
 
 Modules are not allowed to talk to each other... in theory. If 2 modules have to communicate, we can
@@ -69,39 +69,41 @@ const router = new VueRouter({
 
 ![Comparison between classical SPA architecture and micro frontends](./micro-fe.png)
 
-Our module architecture show some limits. Because we only export one app, big changes are nearly
+Our module architecture shows some limits. Because we only export one app, big changes are nearly
 impossible. Let say we want to experiment Vue.js 3, we will have to ensure that our few thousand of
-vue file are compatibles. And this scenario happens for every major changes we want to do. I tried
+vue file are compatibles. And this scenario happens for every major change we want to do. I tried
 once to update our testing library. Out of our ~2200 tests, 700 were failing.
 
 [Microfrontends](/3-tips-scaling-vue-application#tip-2-consider-micro-frontends) appears to be a
-good alternatives for these problems. Because we could gradually update our dependencies. But
-nothing in life comes free. The biggest downside I see is the potential inconsistencies in the app.
-If the payment part of the app is using a component in version 1 and another page is using the same
+good alternative for these problems. Because we could gradually update our dependencies. But nothing
+in life comes free. The biggest downside I see is the potential inconsistencies in the app. If the
+payment part of the app is using a component in version 1 and another page is using the same
 component in version 2, it can hurt the user experience. And the performances too because the same
-librarie could potentially be loaded multiple time. At the moment, the granularity of our modules
-make the microfrontends transition a too hard as we probably have too many modules (~30).
+library could potentially be loaded multiple time. At the moment, the granularity of our modules
+makes the microfrontends transition too complicated as we have too many modules (~30).
 
 ## Managing state (Vuex)
 
-Vuex provides a handy way to manage the state between component. At the beginning I really liked it
+![Vuex](./vuex.png)
+
+Vuex provides a handy way to manage the state between components. At the beginning I really liked it
 but over time I started to dislike it. For a few reasons:
 
-- devs tends to put
+- devs tend to put
   [everything in the store](/3-tips-scaling-vue-application#tip-3-be-kind-with-your-store-vuex);
-- store makes your app
+- the store makes your app
   [harder to test (integration/unit)](/vue-js-testing-library#testing-the-store-with-vuex);
-- scoped stores are hard to unregister. Unnecessary datas can be kept in memory, sometimes causing
+- scoped stores are hard to unregister. Unnecessary data can be kept in memory, sometimes causing
   state-sync issues;
-- if you have +10 mutation when page load, time travel (via devtools) does not works well;
+- if you have +10 mutation when page load, time travel (via devtools) does not work well;
 - dead code in state/mutation/actions is hard to identify.
 
-I mentioned earlier, we splitted our app in small module. Since our modules are like a small
+I mentioned earlier, we splitted our app into small modules. Since our modules are like a small
 _vue-cli_ app with a few pages only, **controlling the pages with a Vuex store doesn't make a lot of
 sense at the end**.
 
 I stopped using Vuex in modules something like 2y ago. So far, so good. I found the code more
-readable and maintainable. It's only being used for high level stuff like i18n and user settings.
+readable and maintainable. It's only being used for high-level stuff like i18n and user settings.
 
 ## What about TypeScript?
 
@@ -109,7 +111,7 @@ A few years ago, a developer thought it could be a good idea to add RxJS to our 
 technical reason behind this choice was probably correct, but no one in the team wanted it. He ended
 up being the only person able to maintain this part of the app.
 
-Later, another person wanted to introduce TypeScript. After many debate, we ended up with this
+Later, another person wanted to introduce TypeScript. After many debates, we ended up with this
 decision: "TS is cool and static type checking can be beneficial for such a big codebase. However,
 **adding it would require too much effort**. The return of investment isn't worthy".
 
@@ -121,9 +123,9 @@ I see two main reasons to think about Vue.js 3: Performances improvements and Co
 
 - **Performances improvements**: it's (almost) always a good thing to thrive for performances. But
   in this case, I don't think it will solve our problems. It's like if you replace your car with a
-  Ferrari to get your coffe at the end of the road. But the thing is, we live in the 6th floor with
+  Ferrari to get your coffee at the end of the road. But the thing is, we live on the 6th floor with
   no elevator.  
-  Our bottleneck is not in the component rendering but in the amount of code the browser have to
+  Our bottleneck is not in the component rendering but in the amount of code the browser has to
   parse before rendering the page. Deleting code is not as fancy as bumping a framework version.
 
 - **Composition API** (Hooks made in Vue): The feature we were all looking for, when React added
@@ -137,9 +139,9 @@ I see two main reasons to think about Vue.js 3: Performances improvements and Co
 For these reasons, I don't think we will see Vue.js 3 in 2021. But the Composition API will probably
 arrive soon in the codebase.
 
-Edit: Vue team is working on
+_Edit: Vue team is working on
 [compatibility bridges](https://twitter.com/vuejs/status/1388144585600274433) between versions 2
-and 3. It might change!
+and 3. It might change!_
 
 ## Component library and Storybook
 
@@ -147,8 +149,8 @@ and 3. It might change!
 team. We heavily rely on this tool and so far, we're very happy to use it._
 
 Even if you start from an existing component library, you might have to build your reusable
-components. In one place we put all our components, including very specific components to our
-application. I tend to consider this package as an "open source package", something that anybody
+components. In one place we put all our components, including very specific components into our
+application. I tend to consider this package as an "open-source package", something that anybody
 could reuse.
 
 When we have to build a new screen it's pretty much like doing a lego construction. There's a kind
@@ -156,18 +158,18 @@ of component box and developers pick what they need. Most of the time, writing C
 
 ## Testing
 
-We have 3 different type of tests:
+We have 3 different types of tests:
 
-- **Static code analysis** (with eslint): We created a set of rules on the top of Airbnb's config.
+- **Static code analysis** (with ESLint): We created a set of rules on the top of Airbnb's config.
   This configuration is used everywhere in the app. It prevents us from pushing dead or misformatted
   code to the main branch. By the way, having a shareable config is a good way to
   [close the door on bikeshedding](/lesson-learned-maintaining-large-vue-js-codebase#close-the-door-on-bikeshedding)!
 - **Unit tests** (with Jest): Less than 10% of our `xxx.test.js` are unit tests. It's mostly used to
-  test business part of the app. If I have complex function that compute datas, I usually have tests
-  for this one. Because writting integration test would require too many scenarios and make my test
-  too verbose (integration tests are also slower than unit tests).
+  test business part of the app. If I have a complex function, I usually have tests for this one.
+  Because writting integration test would require too many scenarios and make my test too verbose
+  (integration tests are also slower than unit tests). Also, we don't unit test component or Vuex
+  stores.
 - **Integration tests** (with Vue Testing Library): where the magic happens. We really like this
-  library We love this library, because it provides a very easy and straightforward way to test our
-  app.
+  library, because it provides a very straightforward way to test our app.
 
 At the moment, we have a total of ~3100 unit&integration tests.
