@@ -42,7 +42,6 @@
   },
   "devDependencies": {
     "prettier": "^2.2.1",
-    "puppeteer": "^5.4.1",
     "yaml": "^1.0.0"
   },
   "homepage": "https://github.com/maxpou/maxpou.fr#readme",
@@ -60,7 +59,6 @@
     "gatsby": "gatsby",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write 'src/**/*.{js,json}' 'data/siteConfig.js' 'gatsby-*.js' 'content/**/*.{md,mdx}'",
-    "develop": "gatsby develop",
     "build": "gatsby build",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "generatePostPreviewImages": "node ./scripts/generatePostPreviewImages.js"

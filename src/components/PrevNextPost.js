@@ -74,13 +74,8 @@ const PrevNextPost = props => {
       <PreviewContainer>
         {articles.map((article, i) => {
           const { excerpt, timeToRead } = article.node
-          const {
-            tags,
-            cover,
-            title,
-            slug,
-            language,
-          } = article.node.frontmatter
+          const { tags, cover, title, slug, language } =
+            article.node.frontmatter
           const image = getImage(cover)
 
           return (

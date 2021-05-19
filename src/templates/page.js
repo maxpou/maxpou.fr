@@ -43,7 +43,7 @@ const Page = props => {
 export default Page
 
 export const pageQuery = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     page: mdx(frontmatter: { slug: { eq: $slug } }) {
       body
       excerpt

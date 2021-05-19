@@ -8,10 +8,10 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: '12'
-      - run: yarn install
-      - run: yarn build
-      - run: yarn format
+          node-version: '16'
+      - run: npm install
+      - run: npm run build
+      - run: npm run format
 
   # see: https://github.com/GoogleChrome/lighthouse-ci
   lighthouseci:
@@ -20,9 +20,9 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: '12'
-      - run: yarn install && npm install -g @lhci/cli@0.6.x
-      - run: yarn build
+          node-version: '16'
+      - run: npm install && npm install -g @lhci/cli@0.6.x
+      - run: npm run build
       - run: lhci autorun --upload.target=temporary-public-storage
 
   # see https://github.com/peaceiris/actions-gh-pages
@@ -32,9 +32,9 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: '12'
-      - run: yarn install
-      - run: yarn build
+          node-version: '16'
+      - run: npm install
+      - run: npm run build
       - name: Deploy
         if: github.ref == 'refs/heads/master'
         uses: peaceiris/actions-gh-pages@v3
