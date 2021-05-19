@@ -11,9 +11,9 @@ translations:
     language: 'Japanese'
 ---
 
-If you find git confusing, I created this little cheat sheet! Please, note that I voluntary skipped
-the basic commands like `git commit`, `git pull/push`... This cheat sheet is intended for advanced
-usage of git.
+If you find git confusing, I created this little cheat sheet! Please, note that I voluntarily
+skipped the basic commands like `git commit`, `git pull/push`... This cheat sheet is intended for
+advanced usage of git.
 
 ![Git Cheat Sheet](./git-flows.png)
 

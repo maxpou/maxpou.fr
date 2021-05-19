@@ -10,8 +10,8 @@ tags:
   - Git
 ---
 
-Nowadays, most of our project use Git as a version control system. It means most of our project have
-a `.git` folder. But, have you ever tried to open it? I tried once... and I closed it within a
+Nowadays, most of our projects use Git as a version control system. It means most of our projects
+have a `.git` folder. But, have you ever tried to open it? I tried once... and I closed it within a
 minute!
 
 I've been using Git as a "black box" for years.
@@ -19,8 +19,9 @@ I've been using Git as a "black box" for years.
 ![git explained](./git-explained.png)
 
 Until a year ago. I was tired of using it without knowing how it works under the hood. I finally
-grab the bull by the horns and started to learn it. I read [Pro Git](https://git-scm.com/book/en/v2)
-and make tons of experimentations. I've found out that it's not as complicated as it looks like!
+grabbed the bull by the horns and started to learn it. I read
+[Pro Git](https://git-scm.com/book/en/v2) and make tons of experiments. I've found out that it's not
+as complicated as it looks like!
 
 So, If you:
 
@@ -82,7 +83,7 @@ Here's how the files are linked together:
 Please note that blobs don't store their filename (and location). That's one of the reasons why
 sometimes git lost history when you change file location ;)
 
-🤔If you try it locally, expect to have different hash (different author&date)!
+🤔If you try it locally, expect to have a different hash (different author&date)!
 
 ## Step 2: Adding a second commit!
 
@@ -173,7 +174,7 @@ the third commit. 🎉
 More seriously, I use `git push --force`, `git rebase` and `git reset --hard` daily and I never lost
 anything. But, we are human and humans are fallible.
 
-Don't worry, if you want to rollback, you don't have to go threw all those files. There's a magic
+Don't worry, if you want to rollback, you don't have to go through all those files. There's a magic
 trick!
 
 ## reflog: the magic wand ✨
@@ -208,8 +209,8 @@ In some cases, `git reflog` **will not** help you:
 - if you're looking for a >90 days change (after that `git gc` clean it up). I don't know about you,
   but, I can't remember what I did ~1 month ago. So, 3 months should be more than enough 😉
 
-Also, if you use git commit like you `ctrl + s`, you might be easily lost. I'm sorry, but, can't do
-anything for you, except recommending you to read my post about the
+Also, if you use git commit like you `ctrl + s`, you might be easily lost. I'm sorry, but, I can't
+do anything for you, except recommending you to read my post about the
 [conventional commits](https://www.maxpou.fr/git-conventional-commits). In my opinion, it's the
 cleanest way to use git.
 
