@@ -2,24 +2,21 @@
 
 # maxpou.fr
 
-My own website built with GatsbyJS v2 and using [gatsby-starter-morning-dew](https://github.com/maxpou/gatsby-starter-morning-dew).
+My own website built with Gatsbyjs.
 
 If you find a typo, pull requests are welcome. Thank you ♥
 
 ## Commands
 
 ```sh
-# working locally
-npm run dev
+# run locally
+npm start
 
-# generate build
-npm run build
-
-# format code
+# format code+markdown (with prettier)
 npm run format
 
-# lint code
-npm run lint
+# generate+run production build (with serve package: npm i -g serve)
+npm run build && serve public
 ```
 
 ## Tools I use
@@ -29,3 +26,13 @@ npm run lint
 * [Grammarly](https://app.grammarly.com) - Helps me to remove typos
 * [Google docs](http://docs.new) - Helps me to remove typos
 * [Unsplash.com](https://unsplash.com/) - For images
+
+Previously: [gatsby-starter-morning-dew](https://github.com/maxpou/gatsby-starter-morning-dew)
+## Inspirations
+
+* [jekyll-theme-hpstr](https://mmistakes.github.io/jekyll-theme-hpstr/) ~ this blog started with a fork from this project.
+* https://www.lengstorf.com/blog ~ structure/code
+* https://loige.co ~ structure/code/design
+* https://ghost.org/blog ~ design
+* https://mxb.dev ~ code (webmentions)
+
