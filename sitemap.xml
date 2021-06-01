@@ -60,8 +60,8 @@
 <url> <loc>https://www.maxpou.fr/commandes-sf2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.maxpou.fr/about</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.maxpou.fr/portfolio</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.maxpou.fr/speaking</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.maxpou.fr/rss</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.maxpou.fr/speaking</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.maxpou.fr/uses</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.maxpou.fr/writing</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.maxpou.fr/tags/Vue.js</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
