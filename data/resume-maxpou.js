@@ -1,133 +1,154 @@
 module.exports = {
   basics: {
-    name: "Maxence Poutord",
-    title: "Software Engineer",
-    email: "hello@maxpou.fr",
-    nationality: "French",
-    age: "31",
-    website: "https://www.maxpou.fr",
-    cvUrl: "https://www.maxpou.fr/cv",
-    phone: "+353838667354",
-    location: "Berlin, Germany",
+    name: 'Maxence Poutord',
+    title: 'Software Engineer',
+    email: 'hello@maxpou.fr',
+    nationality: 'French',
+    age: '32',
+    website: 'https://www.maxpou.fr',
+    cvUrl: 'https://www.maxpou.fr/cv',
+    phone: '+353838667354',
+    location: 'Berlin, Germany',
     description: `
       I'm Maxence, a French Software Engineer with 10 years of experience developing web-based applications. 
       I am a dedicated, hardworking, ambitious person that gets things done, both on my own initiative and within a team. 
       I enjoy challenges and I am not afraid of getting my hands dirty.
       Because knowledge sharing matters to me, I spend a non-negligible part of my time sharing things through blog posts, mentoring sessions or conferences.
     `,
-    lastUpdate: "March 2021",
+    lastUpdate: 'March 2021',
     profiles: [
       {
-        network: "Twitter",
-        url: "https://twitter.com/_maxpou",
+        network: 'Twitter',
+        url: 'https://twitter.com/_maxpou',
       },
       {
-        network: "GitHub",
-        url: "https://github.com/maxpou",
+        network: 'GitHub',
+        url: 'https://github.com/maxpou',
       },
       {
-        network: "LinkedIn",
-        url: "https://www.linkedin.com/in/maxpou",
+        network: 'LinkedIn',
+        url: 'https://www.linkedin.com/in/maxpou',
       },
     ],
   },
 
   skills: [
     {
-      category: "Proficient",
-      content: ["JavaScript", "Vue.js", "Git", "Testing (Jest&Testing library)"],
+      category: 'Proficient',
+      content: [
+        'JavaScript',
+        'Vue.js',
+        'Git',
+        'Testing (Jest&Testing library)',
+      ],
     },
     {
-      category: "Comfortable",
-      content: ["React.js", "Gatsby.js", "CI/CD", "Web Accessibility (A11Y)", "Web Performances", "Node.js"],
+      category: 'Comfortable',
+      content: [
+        'React.js',
+        'Gatsby.js',
+        'CI/CD',
+        'Web Accessibility (A11Y)',
+        'Web Performances',
+        'Node.js',
+      ],
     },
     {
-      category: "Familiar",
-      content: ["Docker", "Firebase", "GraphQL", "Functional Programming"],
+      category: 'Familiar',
+      content: ['Docker', 'Firebase', 'GraphQL', 'Functional Programming'],
     },
   ],
 
   highlights: [
     {
-      description: "Write technical blog posts in French & English",
-      url: "https://www.maxpou.fr",
+      description: 'Write technical blog posts in French & English',
+      url: 'https://www.maxpou.fr',
     },
     {
-      description: "Mentor junior developers and people who want to retrain as a developer",
-      url: "",
+      description:
+        'Mentor junior developers and people who want to retrain as a developer',
+      url: '',
     },
     {
-      description: "Tech trainer and public speaker",
-      url: "https://www.maxpou.fr/speaking",
+      description: 'Tech trainer and public speaker',
+      url: 'https://www.maxpou.fr/speaking',
     },
     {
-      description: "Open sources lover and occasional contributor",
-      url: "https://github.com/maxpou",
+      description: 'Open sources lover and occasional contributor',
+      url: 'https://github.com/maxpou',
     },
   ],
 
   experiences: [
     {
-      company: "VSware",
-      position: "Senior Software Engineer",
-      period: "May 2018 - Present",
-      location: "Remote",
+      company: 'Orderfox',
+      position: 'Senior Software Engineer',
+      period: 'May 2021 - Present',
+      location: 'Remote (Europe)',
+      activities: [],
+    },
+    {
+      company: 'VSware',
+      position: 'Senior Software Engineer',
+      period: 'May 2018 - May 2021',
+      location: 'Remote (Europe/Asia)',
       activities: [
-        "Improving the frontend infrastructure of a massive Vue.js application (~5k vue&js files / ~650k lines of codes). Frontend rely on a big monorepo",
-        "Working on the application architecture",
-        "Introduced and maintaining a testing culture (from 0 to 3.1k unit & integration tests)",
-        "Working on accessibility (A11Y) to meet WCAG AA conformance",
-        "Maintaining decent performances optimisation",
-        "Mentoring developers",
+        'Improving the frontend infrastructure of a massive Vue.js application (~5k vue&js files / ~650k lines of codes). Frontend rely on a big monorepo',
+        'Working on the application architecture',
+        'Introduced and maintaining a testing culture (from 0 to 3.1k unit & integration tests)',
+        'Working on accessibility (A11Y) to meet WCAG AA conformance',
+        'Maintaining decent performances optimisation',
+        'Mentoring developers',
       ],
     },
     {
-      company: "Hostelworld",
-      position: "Software Engineer",
-      period: "November 2016 - April 2018",
-      location: "Dublin, Ireland",
+      company: 'Hostelworld',
+      position: 'Software Engineer',
+      period: 'November 2016 - April 2018',
+      location: 'Dublin, Ireland',
       activities: [
-        "Architecture definition, development and maintenance of the main website (back+front)",
-        "Co-refactor complete frontend architecture of the main website (from jQuery to Vue.js)",
-        "Train and mentor team to modern JavaScript and Vue.js",
+        'Architecture definition, development and maintenance of the main website (back+front)',
+        'Co-refactor complete frontend architecture of the main website (from jQuery to Vue.js)',
+        'Train and mentor team to modern JavaScript and Vue.js',
       ],
     },
     {
-      company: "Conserto",
-      position: "Consultant",
-      period: "May 2015 - April 2016",
-      location: "Nantes, France",
+      company: 'Conserto',
+      position: 'Consultant',
+      period: 'May 2015 - April 2016',
+      location: 'Nantes, France',
       activities: [
-        "Architecture definition, development and maintenance of various web applications",
-        "Build proof of concepts/research and development",
-        "Draft and give training in PHP, Symfony2",
+        'Architecture definition, development and maintenance of various web applications',
+        'Build proof of concepts/research and development',
+        'Draft and give training in PHP, Symfony2',
       ],
     },
     {
-      company: "Energy Formation (ENGIE Group)",
-      position: "Web Developer/Project Manager",
-      period: "October 2011 - January 2015",
-      location: "Nantes, France",
+      company: 'Energy Formation (ENGIE Group)',
+      position: 'Web Developer/Project Manager',
+      period: 'October 2011 - January 2015',
+      location: 'Nantes, France',
       activities: [
-        "Creation of a web application based on the Symfony2 Framework (expose/consume API)",
-        "Led a project which aims to reduce paper consumption by supplying dematerialized documentation to customers",
+        'Creation of a web application based on the Symfony2 Framework (expose/consume API)',
+        'Led a project which aims to reduce paper consumption by supplying dematerialized documentation to customers',
       ],
     },
   ],
 
   education: [
     {
-      school: "ENI Ecole Informatique",
-      degree: "Architecte Logiciel / Software Architect (master degree)",
-      period: "2013 - 2015",
-      location: "St Herblain, France",
+      school: 'ENI Ecole Informatique',
+      degree: 'Architecte Logiciel / Software Architect (master degree)',
+      period: '2013 - 2015',
+      location: 'St Herblain, France',
       detail: [],
     },
     {
-      school: "ENI Ecole Informatique",
-      degree: "Concepteur Développeur Informatique / IT developer designer (bachelor degree)",
-      period: "2011 - 2013",
-      location: "St Herblain, France",
+      school: 'ENI Ecole Informatique',
+      degree:
+        'Concepteur Développeur Informatique / IT developer designer (bachelor degree)',
+      period: '2011 - 2013',
+      location: 'St Herblain, France',
       detail: [],
     },
     // {
@@ -141,16 +162,16 @@ module.exports = {
 
   languages: [
     {
-      level: "Advanced",
-      language: ["English"],
+      level: 'Advanced',
+      language: ['English'],
     },
     {
-      level: "Native",
-      language: ["French"],
+      level: 'Native',
+      language: ['French'],
     },
     {
-      level: "Intermediate",
-      language: ["Spanish"],
+      level: 'Intermediate',
+      language: ['Spanish'],
     },
   ],
 
@@ -159,5 +180,5 @@ module.exports = {
     video games (Age of Empire II) and personal development.
   `,
 
-  values: ['knowledge sharing', 'user privacy', 'diversity']
+  values: ['knowledge sharing', 'user privacy', 'diversity'],
 }
