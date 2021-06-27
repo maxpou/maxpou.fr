@@ -41,7 +41,7 @@ est une précondition pour REST.
 
 ![overview](./overview.png)
 
-###Niveau 0 - Bon vieux XML
+### Niveau 0 - Bon vieux XML
 
 ![level 0](./level0.png)
 
@@ -118,7 +118,7 @@ HTTP/1.1 200 OK
 </reservationError>
 ```
 
-###Niveau 1 - Ressources
+### Niveau 1 - Ressources
 
 ![level 1](./level1.png)
 
@@ -181,7 +181,7 @@ utiliser des URI de la sorte : /pizzas/id.{format}
 Qui dit 3 URI différentes, dit 3 ressources différentes. A la place, utilisez la
 [spécification HTTP : négociation de contenu](https://fr.wikipedia.org/wiki/N%C3%A9gociation_de_contenu).
 
-###Niveau 2 - Verbes HTTP
+### Niveau 2 - Verbes HTTP
 
 ![level 2](./level2.png)
 
@@ -276,7 +276,7 @@ DELETE.
 Il en va de même pour ceux qui confondent PATCH et GET. PATCH sert à envoyer un différentiel (en bas
 de l'article se trouve un lien qui détaille un peu plus l'utilisation de PATCH).
 
-###Niveau 3 - Contrôle hypermedia (HATEOAS)
+### Niveau 3 - Contrôle hypermedia (HATEOAS)
 
 ![level 3](./level3.png)
 
