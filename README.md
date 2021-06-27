@@ -21,18 +21,19 @@ npm run build && serve public
 
 ## Tools I use
 
-* [Hemingway](http://www.hemingwayapp.com) - "Hemingway App makes your writing bold and clear."
-* [Squoosh](https://squoosh.app) - Image compression
-* [Grammarly](https://app.grammarly.com) - Helps me to remove typos
-* [Google docs](http://docs.new) - Helps me to remove typos
-* [Unsplash.com](https://unsplash.com/) - For images
+- [Hemingway](http://www.hemingwayapp.com) - "Hemingway App makes your writing bold and clear."
+- [Squoosh](https://squoosh.app) - Image compression
+- [Grammarly](https://app.grammarly.com) - Helps me to remove typos
+- [Google docs](http://docs.new) - Helps me to remove typos
+- [Unsplash.com](https://unsplash.com/) - For images
 
 Previously: [gatsby-starter-morning-dew](https://github.com/maxpou/gatsby-starter-morning-dew)
+
 ## Inspirations
 
-* [jekyll-theme-hpstr](https://mmistakes.github.io/jekyll-theme-hpstr/) ~ this blog started with a fork from this project.
-* https://www.lengstorf.com/blog ~ structure/code
-* https://loige.co ~ structure/code/design
-* https://ghost.org/blog ~ design
-* https://mxb.dev ~ code (webmentions)
-
+- [jekyll-theme-hpstr](https://mmistakes.github.io/jekyll-theme-hpstr/) ~ this blog started with a
+  fork from this project.
+- https://www.lengstorf.com/blog ~ structure/code
+- https://loige.co ~ structure/code/design
+- https://ghost.org/blog ~ design
+- https://mxb.dev ~ code (webmentions)
