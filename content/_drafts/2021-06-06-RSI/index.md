@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'My journey with RSI'
+title: 'My Journey with RSI (as a Software Engineer)'
 description: 'TODO'
 slug: rsi-as-developer
 date: 2021-06-27
@@ -10,12 +10,12 @@ tags: ['Life']
 ---
 
 Three months ago, I started feeling a pain in my hands. In the beginning, I ignored it. I thought it
-was not going to stay. Then the pain intensified. And I couldn't ignore it anymore. I couldn't use a
-keyboard/mouse for more than 10 minutes. After a few minutes, I started to feel a burning pain in my
-wrists.
+was not going to stay. Then the pain intensified, and I reached a point where I couldn't use a
+keyboard/mouse for more than 10 minutes in a row. I quickly realized it was RSI (Repetitive Strain
+Injury).
 
-I'm a developer. Working with a laptop is my job and, I love what I'm doing for a living. As you
-might guess, I completely freaked out. I don't want to be forced to change job.
+Working with a laptop is a part of my job and, I love what I'm doing for a living. As you might
+guess, I completely freaked out. I didn't want to be forced to change job.
 
 _Disclaimer: This post is NOT intended to be a substitute for professional medical advice and should
 not be relied on as health or personal advice._
@@ -30,24 +30,29 @@ not be relied on as health or personal advice._
 
 ## Step 1: Identifying the cause
 
-Used to work from cafes / co-working spaces. My posture always kept changing. Because of the
+I'm used to work from cafes / co-working spaces. My posture always kept changing. Because of the
 lockdown, I had to work from home.
 
-This is how my setup looks like:
+Here is what my configuration looked like:
 
-<!-- PHOTO HERE  -->
+![a bad desk and a cheap IKEA chair](./bad-desk.jpeg)
 
-As you can see, it didn't take me long to identify the root cause. Bad posture:
+It didn't took me long to identify the root cause. Ergonomic was pretty bad:
 
-- chair
-- shitty desk
-- Apple Magic trackpad
+- basic chair that can't be adjusted
+- a very small desk where my arm can't rest
+- Apple Magic trackpad. I only use one screen and I constantly use the trackpad to switch between
+  desktops. And doing long travel is bad.
+
+Also, because of the bad equipement, my wrist was "broken" instead of being straight.
+
+![hand positions](./hand-position.jpeg)
 
 ## Step 2: Fixing the pain
 
-To fix this pain, I tried several things:
+To fix this pain, I took several actions:
 
-### Tip #1 - Icing
+### #1 - Icing
 
 **Long term viable: 🙅‍♂️ - definitely not!**
 
@@ -57,7 +62,7 @@ disappear... for 20 minutes or so. It feels like magic!
 I've been using this technique when the pain was at its peak. I was working with an ice bucket next
 to me. But icing only reduces the pain and I don't like to sweep problems under the carpet.
 
-### Tip #2 - Stop video games (Age Of Empires 2)
+### #2 - Stopping video games (Age Of Empires 2)
 
 **Long term viable: 😕 - Not really**
 
@@ -68,7 +73,7 @@ minute (aka APM).
 In other words, it just incompatible with RSI. After playing for a few minutes, my hand was on fire.
 I had to stop it.
 
-### Tip #3 - 1 week laptop free
+### #3 - Taking a one week laptop free
 
 **Long term viable: 🙅‍♂️ - definitely not!**
 
@@ -81,7 +86,7 @@ following week. Health comes first!
 It wasn't the most exciting holidays since I couldn't do outdoor activities (rain+covid lockdown) or
 coding/playing video games.
 
-### Tip #4 - Voice Control (control computer with voice)
+### #4 - Using Voice Control (control computer with voice)
 
 **Long term viable: 🙅‍♂️ - definitely not!**
 
@@ -99,7 +104,7 @@ trained by a French guy speaking English.
 
 After spending 4h with this tool, I stopped.
 
-### Tip #5 - Doing wrist exercises
+### #5 - Doing wrist exercises
 
 **Long term viable: 😕**
 
@@ -111,7 +116,7 @@ many people (I guess), I ignored these recommendations.
 It's probably one of the first things I adopted when I started getting RSI symptoms. I did
 [these exercises](https://www.youtube.com/watch?v=BPBWIfKTZCI) 3 times a day (5mins / session).
 
-### Tip #6 - Improving my workstation
+### #6 - Improving my workstation
 
 **Long term viable: 👍**
 
@@ -132,7 +137,7 @@ Since RSI can be a career killer I had to improve my workstation.
 - use wrist rest. I don't find this thing very comfortable when I'm seated. So I only use it when
   I'm standing.
 
-### Tip #7 - Wearing a brace wrist
+### #7 - Wearing a brace wrist
 
 **Long term viable: 😟**
 
@@ -140,12 +145,12 @@ Since RSI can be a career killer I had to improve my workstation.
 
 Wearing a rigid brace wrist when you sleep/do offscreen activities.
 
-### Tip #8 - Taking more breaks
+### #8 - Taking more breaks
 
 **Long term viable: 🙂 - Yes!**
 
 It's [reccomended](https://www.rsiprevention.com/prevention) to take a 5 minutes break every 20-30
-minutes of continuous activity.
+minutes of continuous activity. I've found out that there are many occasion to take a break:
 
 - Go to a coffee shop
 - Do some hand stretch exercises
@@ -159,7 +164,7 @@ long slack messages, I tend to favour quick calls with screen sharing sessions.
 
 3 months after, most of the pain is now gone 🥳! But I still suffer when I spend too much time
 typing. I can also use the laptop for recreational use, but I know I've limited time until the pain
-comes back. I think I'll have to live with RSI since it's never cured completely.
+returns. I think I'll have to live with RSI since it's never cured completely.
 
 One of the best things I've learned is not to work harder or longer, but the complete opposite. I
 take breaks during my workday. I felt a bit guilty at the beginning but I now realised that it
