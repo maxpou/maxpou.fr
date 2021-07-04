@@ -15,8 +15,7 @@ and I travel. A lot.
 
 - MacBook Pro M1 (13-inch)
 - **No extra screen.** I've found myself more focus with only one screen
-- [Roost Laptop Stand](https://www.therooststand.com/) _(note:
-  [I don't use it when I work from a coffee shop!](https://twitter.com/NikkitaFTW/status/1139607268452777984))_.
+- [Roost Laptop Stand](https://www.therooststand.com/)
 - Magic keyboard 2 and the Magic trackpad 2
 - Notepad where
   [I write my daily MIT](https://about.gitlab.com/2018/05/17/eliminating-distractions-and-getting-things-done/#2-write-down-your-mits)
