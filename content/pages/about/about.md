@@ -12,19 +12,18 @@ webmentions: false
 Hey, I'm **Maxence Poutord**, passionate software engineer, speaker, blogger and
 [mentor](https://mentors.codingcoach.io/?name=Maxence+Poutord). I started coding
 [in my early age, at 11](https://twitter.com/_maxpou/status/771701472199340032) with the QBasic
-language. 19 years later, I'm still coding (I just hope my code is better 😃).
+language. And, 20 years later, I'm still coding!
 
 After 2 years as an expat in Dublin, I became a digital nomad. I now live where the WiFi and the sun
 are 😎
 
 ## What I do for a living
 
-I am currently a Senior Software Engineer at VSware where I am building software for education. I'm
-focusing on:
+I am currently a Senior Software Engineer at Orderfox where I am building software for the CNC
+industry. I'm focusing on:
 
-- **🏗 Architecture/Infrastructure** of a massive Vue.js application (~5k vue&js files / ~650k lines
-  of codes);
-- **🚦 Testing** (mostly with Vue Testing Library);
+- **🏗 Architecture/Infrastructure** of a React application;
+- **🚦 Testing** (mostly with Jest and Testing Library);
 - **👨‍🦯 Accessibility (a11y)**
 - **🏎 Performances**
 - **🗣 [Tech trainer](./speaking#trainings--workshop)** and **[public speaker](./speaking)**.
@@ -32,8 +31,9 @@ focusing on:
 ## What I do for fun
 
 - ✈️ **Travel**. Often. 9 countries and 14 cities for 2018.
-- 👨‍🍳 **Cook**. "I make the best pizza you ever tasted." -Me
+- 👨‍🍳 **Cook**. I love to cook food from all over the world. From Italian Pizza to Indian dal.
 - 🍺 Appreciate a Gin or a **pint of beer** (IPA or Belgian triples).
+- 🕹 **Play** video games. Mostly Age of Empires 2, a 20 y.o. game!
 - 📘 Learn new things. As a **lifelong learner**, I can't imagine one day without learning something
   new!
 - 👨🏼‍💻 **Play with code**. Sometimes, it ends up in an open source contribution or a blog post!

@@ -16,7 +16,11 @@ and I travel. A lot.
 - MacBook Pro M1 (13-inch)
 - **No extra screen.** I've found myself more focus with only one screen
 - [Roost Laptop Stand](https://www.therooststand.com/)
-- Magic keyboard 2 and the Magic trackpad 2
+- [Keychron K3 Mechanical keyboard](https://twitter.com/_maxpou/status/1436270414544654348)and a
+  Magic keyboard 2.
+- Magic Trackpad 2 and a
+  [G403 HERO Mouse](https://www.logitechg.com/en-us/products/gaming-mice/g403-hero-gaming-mouse.910-005630.html)
+  (mostly for gaming)
 - Notepad where
   [I write my daily MIT](https://about.gitlab.com/2018/05/17/eliminating-distractions-and-getting-things-done/#2-write-down-your-mits)
 - OnePlus Nord (and an old Huawei as a backup)
@@ -119,6 +123,4 @@ applications to help me write:
   [XCloud](https://www.xbox.com/en-IE/xbox-game-streaming/project-xcloud)
 - [Xbox Elite Controller Series 2](https://www.xbox.com/en-IE/accessories/controllers/elite-wireless-controller-series-2)
   is my controller. A bit pricey, but very comfortable.
-- [G403 HERO Mouse](https://www.logitechg.com/en-us/products/gaming-mice/g403-hero-gaming-mouse.910-005630.html)
-  is my gaming mouse (I use the Magic trackpad 2 for non-gaming stuffs)
 - [PowerA Moga](https://www.powera.com/moga/) for mobile gaming clip
