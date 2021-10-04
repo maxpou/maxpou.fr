@@ -21,16 +21,16 @@ not be relied on as health or personal advice._
 
 ## RSI - Repetitive Strain Injury
 
-> A repetitive strain injury (RSI) is an injury to part of the musculoskeletal or nervous system
-> caused by repetitive use, vibrations, compression or long periods in a fixed position. Other
-> common names include repetitive stress disorders, cumulative trauma disorders (CTDs), and overuse
-> syndrome  
-> — [Wikipedia](https://en.wikipedia.org/wiki/Repetitive_strain_injury)
+> A repetitive strain injury (RSI) is a painful medical condition that can cause damage to the
+> hands, wrists, upper arms, and backs, especially of people who use computers and other forms of
+> keyboard.  
+> —
+> [dictionary.cambridge.org](https://dictionary.cambridge.org/dictionary/english/repetitive-strain-injury)
 
 ## Step 1: Identifying the cause
 
 I'm used to working from cafes / co-working spaces. My posture always kept changing. Because of the
-lockdown, I had to work from home.
+lockdown, I had to work from home, at the same desk.
 
 Here is what my configuration looked like:
 
@@ -40,8 +40,8 @@ It didn't take me long to identify the root cause. Ergonomic was pretty bad:
 
 - a basic chair that can't be adjusted
 - a very small desk where my arm can't rest
-- Apple Magic trackpad. I only use one screen and I constantly use the trackpad to switch between
-  desktops. And doing long travel is bad.
+- the Apple Magic trackpad. As I only use one screen, I constantly use the trackpad to switch
+  between desktops. Doing long key travel is bad.
 
 Also, because of the bad equipment, my wrist was "broken" instead of being straight.
 
@@ -72,7 +72,7 @@ playing.
 ### #3 - Taking a one-week laptop free
 
 When I realized that something was wrong with my body, I came to my manager and told him I had to
-take a week break for the next week. I told him what's going on and he understood.
+take a week break for the next week. I explained the situation and he understood.
 
 To be honest, regardless of my manager's answer, it was clear in my head that I will not work the
 following week. Health comes first!
@@ -90,9 +90,9 @@ Since I didn't feel ready to invest in dedicated software, I started using
 [Voice Control](https://support.apple.com/en-gb/guide/mac-help/mh40719/mac), MacOS's default tool to
 interact with your laptop without using a keyboard/mouse. It turned into a complete disaster!
 
-For navigation it's okay but, when it comes to typing, it becomes unusable. When I say "Type: maxpou
-dot fr", it was converted into "Mexboroughblue don't ever ever" 🥲. I guess the algorithm wasn't
-trained by a French guy speaking English.
+For navigation it's okay but, when it comes to typing, it becomes unusable. When I said "Type:
+maxpou dot fr", it was converted into "Mexboroughblue don't ever ever" 🥲. I guess the algorithm
+wasn't trained by a French guy speaking English.
 
 After spending 4 hours with this tool, I gave up.
 
@@ -119,7 +119,7 @@ Since RSI can be a career killer I had to improve my workstation.
 ![my improved workstation](./workstation.jpeg)
 
 - switched from basic chair to an office chair;
-- alternate from a trackpad to a mouse from time to time. But I use the mouse, I've to put the
+- alternate from a trackpad to a mouse from time to time. But when I use the mouse, I've to put the
   trackpad away otherwise my hand goes naturally on the trackpad;
 - made a standing desk. I actually use an empty room in my apartment as my 2nd office. You can see
   the standing desk is very basic but it does the job!!! I usually spend my morning standing and the
@@ -134,14 +134,14 @@ It's not perfect but, I feel better at the end of the day!
 ![my brace wrist](./brace-wrist.jpeg)
 
 I bought this brace wrist based on advice. I read that wearing a rigid brace wrist when you sleep/do
-offscreen activities can be beneficial. It's very uncomfortable to wear one when you're
-eating/cooking or at the shop. So, I only used mine when I slept.
+offscreen activities can be beneficial. It's very uncomfortable to wear one when you are
+eating/cooking. So, I only used mine when I slept.
 
 It took me a few days to get used to it. But I think wearing it for a month was beneficial to me.
 
 ### #8 - Taking more breaks
 
-It's [recommended](https://www.rsiprevention.com/prevention) to take a 5 minutes break every 20-30
+[It's recommended](https://www.rsiprevention.com/prevention) to take a 5 minutes break every 20-30
 minutes of continuous activity. I've found out that there are many occasions to take a break:
 
 - Go to the coffee shop
@@ -155,12 +155,14 @@ long slack messages, I tend to favour quick calls with a screen sharing session.
 
 ## Epilogue
 
-5 months after, most of the pain is now gone 🥳! But I still suffer when I spend too much time
-typing. I can also use the laptop for recreational use, but I know I've limited time until the pain
-returns. I think I'll have to live with RSI since it's never cured completely.
+5 months after, most of the pain is almost gone 🥳!
+
+But I still suffer when I spend too much time typing. I can also use the laptop for recreational
+use, but I know I've limited time until the pain returns. I think I'll have to live with RSI since
+it's never cured completely.
 
 One of the things I've learned is to work smarter. I also take more breaks during my workday. I felt
 a bit guilty at the beginning but, I now realized that it didn't really affect my productivity.
 
-I couldn't finish this article without mentioning Swyx and his great post about
+Last but not least, I couldn't finish this article without mentioning Swyx and his great post about
 [RSI (swyx.io)](https://www.swyx.io/rsi-tips/). His blog post was like a gold mine to me.
