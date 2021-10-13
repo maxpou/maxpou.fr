@@ -9,6 +9,8 @@ tags: ['Git']
 translations:
   - link: 'https://qiita.com/rana_kualu/items/42f8b36974eb07e2abb1'
     language: 'Japanese'
+  - link: 'https://nextfe.com/git-cheatsheet-advanced/'
+    language: 'Chineese'
 ---
 
 If you find git confusing, I created this little cheat sheet! Please, note that I voluntarily
