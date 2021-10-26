@@ -149,3 +149,21 @@ keyboard is usually quicker than opening the activity monitor (for some unknown 
 struggle to find it).
 
 ![how gtop looks like](./gtop.png)
+
+## Bonus #3: cloc
+
+If you have npm and npx installed you can use cloc like this:
+
+```sh
+$  npx cloc src content gatsby-*
+
+------------------------------------------------------------
+Language          files        blank      comment       code
+------------------------------------------------------------
+Markdown             64         2695            0       8558
+JavaScript           77          475           78       3761
+SVG                   3           13            1       1841
+------------------------------------------------------------
+SUM:                144         3183           79      14160
+------------------------------------------------------------
+```
