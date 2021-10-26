@@ -1,1 +1,5 @@
-{"componentChunkName":"component---src-templates-tags-js","path":"/tags/career","result":{"data":{"posts":{"edges":[{"node":{"excerpt":"A few weeks ago 2 people asked me the same question on Twitter:  \"how do I make a better\nportfolio?\"  Since it's not the first time I have…","timeToRead":3,"frontmatter":{"title":"Tips for your GitHub Portfolio","tags":["career"],"language":"en","slug":"tips-for-your-github-portfolio"}}}]}},"pageContext":{"tag":"career"}},"staticQueryHashes":["1956263691","2709979211"]}
+{
+    "componentChunkName": "component---src-templates-tags-js",
+    "path": "/tags/career",
+    "result": {"data":{"posts":{"edges":[{"node":{"excerpt":"A few weeks ago 2 people asked me the same question on Twitter:  \"how do I make a better\nportfolio?\"  Since it's not the first time I have…","timeToRead":3,"frontmatter":{"title":"Tips for your GitHub Portfolio","tags":["career"],"language":"en","slug":"tips-for-your-github-portfolio"}}}]}},"pageContext":{"tag":"career"}},
+    "staticQueryHashes": ["1956263691","2709979211"]}
