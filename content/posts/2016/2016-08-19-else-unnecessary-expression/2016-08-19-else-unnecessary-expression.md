@@ -6,7 +6,7 @@ date: 2016-08-19
 language: en
 generate-card: false
 cover: ./header.jpg
-tags: ['architecture']
+tags: ['Architecture']
 ---
 
 First time I was using PHP Mess Detector (a PHP Quality Tool), I was very surprise. Because, when I
