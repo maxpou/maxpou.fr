@@ -79,7 +79,6 @@
 <url> <loc>https://www.maxpou.fr/tags/Tool</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.maxpou.fr/tags/GitHub</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.maxpou.fr/tags/PHP</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.maxpou.fr/tags/architecture</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.maxpou.fr/tags/Symfony2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.maxpou.fr/tags/Doctrine</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.maxpou.fr/tags/Qualité logicielle</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
