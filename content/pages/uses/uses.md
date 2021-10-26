@@ -25,7 +25,7 @@ and I travel. A lot.
   [I write my daily MIT](https://about.gitlab.com/2018/05/17/eliminating-distractions-and-getting-things-done/#2-write-down-your-mits)
 - OnePlus Nord (and an old Huawei as a backup)
 - Sony MDR 1000X. A noise-cancelling headphone with 2 modes: wired or wireless (bluetooth). I also
-  have some [Airpods](https://www.apple.com/fr/airpods-2nd-generation/).
+  have some Airpods.
 - Travel&daily bag is a
   [Minaal Carry-on 2.0](https://www.minaal.com/products/minaal-carry-on-bag/?variant=12494163140)
   (with packing cubes). I love it!
