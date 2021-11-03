@@ -24,7 +24,7 @@ export const COLORS = {
   ...colors,
   text: {
     light: colors.grey500,
-    dark: colors.white,
+    dark: colors.grey100,
   },
   textSecondary: {
     light: colors.blueGreyed,
