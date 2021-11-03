@@ -1,5 +1,5 @@
 ---
-title: 'A survival kit for healthy code reviews'
+title: 'Code Reviews made it Healthy'
 slug: code-review-guidelines
 language: en
 date: 2020-10-01
@@ -109,6 +109,7 @@ what you're working on!_
 - Remember that you are here to provide feedback, not to be a gatekeeper.
 - Remember that **behind each Pull Request, there's a human who spent time to write this code** (the
   size of the PR is not necessarily correlated to the time spent on it).
+- Done is better than perfect.
 
 ## List of valid reasons to 👎 a PR
 
