@@ -15,7 +15,7 @@ module.exports = {
       I enjoy challenges and I am not afraid of getting my hands dirty.
       Because knowledge sharing matters to me, I spend a non-negligible part of my time sharing things through blog posts, mentoring sessions or conferences.
     `,
-    lastUpdate: 'March 2021',
+    lastUpdate: 'November 2021',
     profiles: [
       {
         network: 'Twitter',
@@ -85,7 +85,7 @@ module.exports = {
       position: 'Senior Software Engineer',
       period: 'May 2021 - Present',
       location: 'Remote (Europe)',
-      activities: [],
+      activities: ['Rewriting a legacy application app in React'],
     },
     {
       company: 'VSware',
@@ -93,8 +93,8 @@ module.exports = {
       period: 'May 2018 - May 2021',
       location: 'Remote (Europe/Asia)',
       activities: [
-        'Improving the frontend infrastructure of a massive Vue.js application (~5k vue&js files / ~650k lines of codes). Frontend rely on a big monorepo',
-        'Working on the application architecture',
+        'Improved the frontend infrastructure of a massive Vue.js application (~5k vue&js files / ~650k lines of codes). Frontend rely on a big monorepo',
+        'Software designed and planned major architecture changes',
         'Introduced and maintaining a testing culture (from 0 to 3.1k unit & integration tests)',
         'Working on accessibility (A11Y) to meet WCAG AA conformance',
         'Maintaining decent performances optimisation',
@@ -107,8 +107,8 @@ module.exports = {
       period: 'November 2016 - April 2018',
       location: 'Dublin, Ireland',
       activities: [
+        'Co-led the frontend migration of hostelworld.com from jQuery to Vue.js.',
         'Architecture definition, development and maintenance of the main website (back+front)',
-        'Co-refactor complete frontend architecture of the main website (from jQuery to Vue.js)',
         'Train and mentor team to modern JavaScript and Vue.js',
       ],
     },
