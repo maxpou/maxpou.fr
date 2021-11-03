@@ -16,7 +16,7 @@ and I travel. A lot.
 - MacBook Pro M1 (13-inch)
 - **No extra screen.** I've found myself more focus with only one screen
 - [Roost Laptop Stand](https://www.therooststand.com/)
-- [Keychron K3 Mechanical keyboard](https://twitter.com/_maxpou/status/1436270414544654348)and a
+- [Keychron K3 Mechanical keyboard](https://twitter.com/_maxpou/status/1436270414544654348) and a
   Magic keyboard 2.
 - Magic Trackpad 2 and a
   [G403 HERO Mouse](https://www.logitechg.com/en-us/products/gaming-mice/g403-hero-gaming-mouse.910-005630.html)

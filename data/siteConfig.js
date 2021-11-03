@@ -7,7 +7,7 @@ module.exports = {
   defaultLang: 'en', // show flag if lang is not default. Leave empty to enable flags in post lists
   authorDescription: `
   Hey, I'm Maxence Poutord, a software engineer specialized in web technologies. 
-  In my day-to-day job, I'm working as a senior front-end engineer at VSware.
+  In my day-to-day job, I'm working as a senior front-end engineer at Orderfox.
   As a digital nomad, I'm living where the WiFi and sun are!
   `,
   seoDescription:
