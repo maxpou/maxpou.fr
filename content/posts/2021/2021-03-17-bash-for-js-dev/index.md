@@ -154,7 +154,7 @@ struggle to find it).
 
 If you have npm and npx installed you can use cloc like this:
 
-```sh
+```bash
 $  npx cloc src content gatsby-*
 
 ------------------------------------------------------------
@@ -166,4 +166,7 @@ SVG                   3           13            1       1841
 ------------------------------------------------------------
 SUM:                144         3183           79      14160
 ------------------------------------------------------------
+
+# You can also check a subset of files like this
+$ npx cloc src --match-f='.test.js'
 ```

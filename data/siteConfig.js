@@ -8,7 +8,7 @@ module.exports = {
   authorDescription: `
   Hey, I'm Maxence Poutord, a software engineer specialized in web technologies. 
   In my day-to-day job, I'm working as a senior front-end engineer at Orderfox.
-  As a digital nomad, I'm living where the WiFi and sun are!
+  When I'm not working, you can find me traveling the world or cooking.
   `,
   seoDescription:
     'Personal site for Maxence Poutord, a software engineer who is specialised in Frontend development.',
