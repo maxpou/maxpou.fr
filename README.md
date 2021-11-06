@@ -2,7 +2,7 @@
 
 # maxpou.fr
 
-My own website built with Gatsbyjs.
+My website built with Gatsby.
 
 If you find a typo, pull requests are welcome. Thank you ♥
 
@@ -19,13 +19,16 @@ npm run format
 npm run build && serve public
 ```
 
-## Tools I use
+## Tools & services I use
 
-- [Hemingway](http://www.hemingwayapp.com) - "Hemingway App makes your writing bold and clear."
+- [Grammarly](https://app.grammarly.com/) - Helps me to remove typos / proofread my posts
+- [Google Docs](http://docs.new/) - Helps me to remove typos / proofread my posts
+- [Hemingway](http://www.hemingwayapp.com) - "Hemingway App makes your writing bold and clear"
 - [Squoosh](https://squoosh.app) - Image compression
-- [Grammarly](https://app.grammarly.com) - Helps me to remove typos
-- [Google docs](http://docs.new) - Helps me to remove typos
-- [Unsplash.com](https://unsplash.com/) - For images
+- [Remove.bg](https://www.remove.bg) - Remove background on png
+- [Keynote (Apple)](https://www.apple.com/keynote/) - To draw schemas
+- [Plausible](https://plausible.io/maxpou.fr) - For ethical analytics
+- [GitHub](https://github.com/maxpou/maxpou.fr) -
 
 Previously: [gatsby-starter-morning-dew](https://github.com/maxpou/gatsby-starter-morning-dew)
 
