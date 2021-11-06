@@ -43,6 +43,7 @@ ol {
 
 *::selection {
   background-color: var(--color-secondary);
+  color: var(--color-grey500);
 }
 `
 export const Link = styled.a`

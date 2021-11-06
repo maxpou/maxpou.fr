@@ -29,6 +29,7 @@ const HeroSubTitle = styled.h2`
   margin: 10px 50px;
   color: var(--color-white);
   text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.85);
+  text-align: center;
 `
 
 const Hero = props => {
