@@ -11,16 +11,15 @@ and I travel. A lot.
 
 ## Hardware
 
-![laptop picture](./laptop.jpg)
+![laptop picture](./laptop.jpeg)
 
 - MacBook Pro M1 (13-inch)
 - **No extra screen.** I've found myself more focus with only one screen
 - [Roost Laptop Stand](https://www.therooststand.com/)
 - [Keychron K3 Mechanical keyboard](https://twitter.com/_maxpou/status/1436270414544654348) and a
-  Magic keyboard 2.
+  Magic keyboard 2 (when I travel)
 - Magic Trackpad 2 and a
   [G403 HERO Mouse](https://www.logitechg.com/en-us/products/gaming-mice/g403-hero-gaming-mouse.910-005630.html)
-  (mostly for gaming)
 - Notepad where
   [I write my daily MIT](https://about.gitlab.com/2018/05/17/eliminating-distractions-and-getting-things-done/#2-write-down-your-mits)
 - OnePlus Nord (and an old Huawei as a backup)
@@ -30,7 +29,7 @@ and I travel. A lot.
   [Minaal Carry-on 2.0](https://www.minaal.com/products/minaal-carry-on-bag/?variant=12494163140)
   (with packing cubes). I love it!
 
-As a digital nomad, I don't have space for a desk in my backpack! ;)
+I travel too much to have a proper desk! ;)
 
 ## IDE
 
@@ -49,16 +48,15 @@ My main browser is [Brave](https://brave.com/). I also use the following extensi
 
 - [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
   and [Privacy Badger](https://privacybadger.org/) to preserve my privacy on the internets
-- [Vue.js](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
+- [Grammarly](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen)
+- [React](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
   and
-  [React](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+  [Vue.js](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
   devtool extensions
 - [Accessibility Insights](https://accessibilityinsights.io) and [axe](https://www.deque.com/axe/)
   for Accessibility audits
 - [LastPass](https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd)
   for password management
-- [json-viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh)
-- [Grammarly](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen)
 - [Pocket (Save to Pocket)](https://chrome.google.com/webstore/detail/save-to-pocket/niloccemoadcdkdjlinkgdfekeahmflj)
 
 ## Terminal & Command Line Apps
@@ -95,8 +93,8 @@ a day, I remove it from the dock.
 
 I also use these applications:
 
-- [Giphy Capture](https://giphy.com/apps/giphycapture) is my go-to screen recording when I need to
-  share something with my colleagues. I found it simple to use.
+- [Giphy Capture](https://giphy.com/apps/giphycapture) is my go-to screen recording app when I need
+  to share something with my colleagues. I found it simple to use.
 - [CrossOver](https://www.codeweavers.com/crossover) - to run Windows App on Mac (it's a paid
   product).
 
@@ -104,23 +102,24 @@ Note: I now use Slack in my browser (so Grammarly can proofread my messages)
 
 ## Blogging
 
-This site made with Gatsby.js and
+This site is made with Gatsby.js and
 [gatsby-starter-morning-dew](https://github.com/maxpou/gatsby-starter-morning-dew). I use these
-applications to help me write:
+services:
 
 - [Grammarly](https://app.grammarly.com/) - Helps me to remove typos / proofread my posts
 - [Google Docs](http://docs.new/) - Helps me to remove typos / proofread my posts
 - [Hemingway](http://www.hemingwayapp.com) - "Hemingway App makes your writing bold and clear"
 - [Squoosh](https://squoosh.app) - Image compression
 - [Remove.bg](https://www.remove.bg) - Remove background on png
-- [Keynote (by Apple)](https://www.apple.com/keynote/) - To draw schemas
+- [Keynote (Apple)](https://www.apple.com/keynote/) - To draw schemas
+- [Plausible](https://plausible.io/maxpou.fr) - For ethical analytics
+- [GitHub](https://github.com/maxpou/maxpou.fr) - Where I host my code and run CI/CD pipelines
 
 ## Gaming
 
 - I play mostly Age Of Empire 2 DE on my MacBook (thanks CrossOver)
 - For other games, I rely on Cloud Gaming platforms such as
   [GeForce Now](https://www.nvidia.com/en-us/geforce-now/), Stadia and
-  [XCloud](https://www.xbox.com/en-IE/xbox-game-streaming/project-xcloud)
+  [XCloud](https://www.xbox.com/en-US/play)
 - [Xbox Elite Controller Series 2](https://www.xbox.com/en-IE/accessories/controllers/elite-wireless-controller-series-2)
   is my controller. A bit pricey, but very comfortable.
-- [PowerA Moga](https://www.powera.com/moga/) for mobile gaming clip
