@@ -24,13 +24,14 @@ const TwitterButton = styled.a`
   }
 `
 
-const FollowMe = () => {
+const FollowMe = ({ ...props }) => {
   const { twitterUsername } = useSiteMetadata()
   return (
     <TwitterButton
       rel="noopener"
       target="_blank"
       href={`https://twitter.com/intent/follow?screen_name=${twitterUsername}`}
+      {...props}
     >
       <TwitterIcon />
       Follow @{twitterUsername}
