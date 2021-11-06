@@ -5,7 +5,6 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import useSiteMetadata from '../hooks/use-site-config'
 import { media } from '../tokens'
-import useSiteImages from '../hooks/use-site-images'
 import DarkToggle from './DarkToggle'
 
 const HeaderWrapper = styled.header`
@@ -59,23 +58,14 @@ const HeaderLink = styled(Link)`
 
   min-width: 42px;
   z-index: 10;
+
+  &:hover {
+    color: var(--color-grey300);
+  }
+
   & + & {
     margin-left: 0.7rem;
   }
-`
-
-const HeaderLinkTitle = styled(HeaderLink)`
-  padding-left: 0;
-`
-
-const HeaderLinkTitleContent = styled.span`
-  display: block;
-  padding-left: 0;
-`
-
-const HeaderImage = styled.img`
-  padding: 4px;
-  height: 57px;
 `
 
 const MobilePanel = styled.div`
@@ -87,7 +77,8 @@ const MobilePanel = styled.div`
   height: 100vh;
   display: flex;
   align-items: center;
-  background-color: var(--color-primary);
+  background-color: var(--color-primaryAlpha);
+  backdrop-filter: blur(10px);
   @media ${media.medium} {
     display: none;
   }
@@ -148,7 +139,7 @@ const BurgerButton = styled.button`
   border: none;
   cursor: pointer;
   padding: 8px 12px;
-  outline: none;
+  /* outline: none; */
   -webkit-tap-highlight-color: transparent;
 
   @media ${media.medium} {
@@ -231,9 +222,12 @@ const Header = () => {
         <SkipMainContent href="#main-content">
           Skip to main content
         </SkipMainContent>
-        <HeaderLinkTitle to={`/`} aria-label={`View home page`}>
-          <HeaderLinkTitleContent>{headerTitle}</HeaderLinkTitleContent>
-        </HeaderLinkTitle>
+        <HeaderLinksContainer>
+          <HeaderLink to={`/`} aria-label={`View home page`}>
+            {headerTitle}
+          </HeaderLink>
+        </HeaderLinksContainer>
+
         <HeaderLinksContainer>
           <HeaderLinks headerLinks={headerLinks} />
           <DarkToggle />
