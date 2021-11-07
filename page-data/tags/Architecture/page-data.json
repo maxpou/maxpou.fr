@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-tags-js",
     "path": "/tags/Architecture",
     "result": {"data":{"posts":{"edges":[{"node":{"excerpt":"The trend today is to split things and make them thinner. We witnessed the emergence of\nmicroservices, micro-frontends... Against this trend…","timeToRead":4,"frontmatter":{"title":"Monorepo: is it worth jumping the bandwagon?","tags":["Architecture","Git"],"language":"en","slug":"monorepo-pros-and-cons"}}},{"node":{"excerpt":"First time I was using PHP Mess Detector (a PHP Quality Tool), I was very surprise. Because, when I\ntype an  Else expression, it raises an…","timeToRead":2,"frontmatter":{"title":"\"Else\": the unnecessary expression","tags":["Architecture"],"language":"en","slug":"else-unnecessary-expression"}}}]}},"pageContext":{"tag":"Architecture"}},
-    "staticQueryHashes": ["1956263691","2709979211"]}
+    "staticQueryHashes": ["2709979211"]}

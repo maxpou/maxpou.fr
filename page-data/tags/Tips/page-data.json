@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-tags-js",
     "path": "/tags/Tips",
     "result": {"data":{"posts":{"edges":[{"node":{"excerpt":"Like many developers, I use the terminal on a daily basis. I actually use 2 different terminals: the one embedded in VScode and iTerm2 (I'm…","timeToRead":1,"frontmatter":{"title":"Bash for developers","tags":["Tips"],"language":"en","slug":"bash-for-dev"}}}]}},"pageContext":{"tag":"Tips"}},
-    "staticQueryHashes": ["1956263691","2709979211"]}
+    "staticQueryHashes": ["2709979211"]}

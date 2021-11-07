@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-tags-js",
     "path": "/tags/Docker",
     "result": {"data":{"posts":{"edges":[{"node":{"excerpt":"05/07/2016  : màj du docker-compose (suppression conteneur code+alias) + màj schéma + ajout\nPHPMyAdmin + simplification toolbox. Un grand…","timeToRead":2,"frontmatter":{"title":"Une stack Docker pour votre application Symfony","tags":["Docker","Symfony2","PHP"],"language":"fr","slug":"docker-pour-symfony"}}}]}},"pageContext":{"tag":"Docker"}},
-    "staticQueryHashes": ["1956263691","2709979211"]}
+    "staticQueryHashes": ["2709979211"]}
