@@ -31,7 +31,9 @@ Il faut dire aussi que son principal concurrent : SOAP n'est pas aussi simple d'
 paraître contraignant (XML, WSDL, ...). Ceci étant, il ne faut pas voir REST comme un marteau doré
 qui résout tous les problèmes. SOAP a aussi ses avantages.
 
-##Différentes étapes du RMM (Richardson Maturity Model) _Les images de cette partie proviennent du
+## Différentes étapes du RMM (Richardson Maturity Model)
+
+_Les images de cette partie proviennent du
 [Blog de Martin Fowler](http://martinfowler.com/articles/richardsonMaturityModel.html)._
 
 En se basant sur le travail de Roy Fieldling, [Leonard Richardson](http://www.crummy.com/self/) a
@@ -312,7 +314,7 @@ HTTP/1.1 200 OK
 </carteRestaurant>
 ```
 
-##Conclusion
+## Conclusion
 
 On vient de voir au travers du RMM, les différents niveaux de maturité des services web REST.
 
@@ -334,13 +336,13 @@ simplement d'API ou d' _API HTTP_ !
 
 Bon alors, votre API est-elle toujours REST ? ;-)
 
-##Pour aller plus loin...
+## Pour aller plus loin...
 
 - [Thèse de Roy T. Fielding : Architectural Styles and the Design of Network-based Software Architectures](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm)
 - [Comment bien utiliser PATCH (par William Durand)](https://williamdurand.fr/2014/02/14/please-do-not-patch-like-an-idiot/)
 - [Pour terminer, ma section préférée de la thèse de Roy T. Fielding : Code-On-demand (COD)](http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm#sec_5_1_7)
 
-##Sources
+## Sources
 
 - [Blog de Leonard Richardson](http://www.crummy.com/writing/speaking/2008-QCon/act3.html)
 - [Blog de Martin Fowler sur le RMM](http://martinfowler.com/articles/richardsonMaturityModel.html)

@@ -15,7 +15,7 @@ Googlelé "contourner HADOPI" et vous voici arrivé ici._
 Pas de panique, il existe des solutions. Avant toutes choses, il est nécessaire de comprendre
 comment tout fonctionne.
 
-##1 - Différents méthodes de téléchargement
+## 1 - Différents méthodes de téléchargement
 
 ### Mode centralisé
 
@@ -27,12 +27,14 @@ des photos... C'est le mode de fonctionnement d'outils comme Megaupload, Rapid S
 Ceci pose le problème suivant : plus le fichier est populaire, plus le serveur peinera à répondre à
 toutes les demandes.
 
-###Mode décentralisé : P2P (peer-to-peer) ![P2P](./2.png) Comme son nom l'indique, tous les
+### Mode décentralisé : P2P (peer-to-peer) ![P2P](./2.png) Comme son nom l'indique, tous les
+
 ordinateurs sont égaux avec ce mode de fonctionnement. Un ordinateur peut aussi bien partager un
 fichier qu'en télécharger un autre. Nota: Pour des soucis de simplification, j'ai ôté le serveur du
 schéma. Mais il y a souvent un serveur
 
-##2 - Fonctionnement d'HADOPI Malheureusement, le P2P est, de par sa nature, assez bavard. Quand on
+## 2 - Fonctionnement d'HADOPI Malheureusement, le P2P est, de par sa nature, assez bavard. Quand on
+
 regarde les clients qui partagent un torrent, on voit beaucoup d'informations sur eux... notamment
 l'adresse IP.  
 En guise d'exemple, voici le contenu de l'onglet Client du logiciel µTorrent : ![uTorrent](./3.png)

@@ -14,7 +14,7 @@ const rotate = keyframes`
   }
 `
 
-const testoo = keyframes`
+const moonEffect = keyframes`
   from {
     transform: rotate(-30deg) translateY(-100%);
     opacity: 0.2;
@@ -35,7 +35,7 @@ const DarkModeButton = styled.button`
   margin: 10px 0;
 
   & .moon {
-    animation: ${testoo} 1s linear;
+    animation: ${moonEffect} 1s linear;
   }
   & .sun {
     animation: ${rotate} 1s linear;
