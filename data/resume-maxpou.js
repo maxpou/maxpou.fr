@@ -8,7 +8,7 @@ module.exports = {
     website: 'https://www.maxpou.fr',
     cvUrl: 'https://www.maxpou.fr/cv',
     phone: '+353838667354',
-    location: 'Berlin, Germany',
+    location: 'Remote, Europe (Berlin/Paris)',
     description: `
       I'm Maxence, a French Software Engineer with 10 years of experience developing web-based applications. 
       I am a dedicated, hardworking, ambitious person that gets things done, both on my own initiative and within a team. 
@@ -40,6 +40,7 @@ module.exports = {
         'Vue.js',
         'Git',
         'Testing (Jest&Testing library)',
+        'Web Accessibility (A11Y)',
       ],
     },
     {
@@ -48,14 +49,15 @@ module.exports = {
         'React.js',
         'Gatsby.js',
         'CI/CD',
-        'Web Accessibility (A11Y)',
         'Web Performances',
         'Node.js',
+        'TypeScript',
+        'GraphQL',
       ],
     },
     {
       category: 'Familiar',
-      content: ['Docker', 'Firebase', 'GraphQL', 'Functional Programming'],
+      content: ['Docker', 'Firebase', 'Functional Programming'],
     },
   ],
 
@@ -85,7 +87,7 @@ module.exports = {
       position: 'Senior Software Engineer',
       period: 'May 2021 - Present',
       location: 'Remote (Europe)',
-      activities: ['Rewriting a legacy application app in React'],
+      activities: ['Migrated a web application in Typescript React'],
     },
     {
       company: 'VSware',

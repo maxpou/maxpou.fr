@@ -38,7 +38,8 @@ expectations._
   activity.
 - **Words matter**. I believe words like _"simple"_, _"just"_, _"of course"_, _"everyone knows"_ and
   _"easy"_ should stay out of technical conversations. They can often be perceived as
-  [offensive](https://css-tricks.com/words-avoid-educational-writing/).
+  [offensive](https://css-tricks.com/words-avoid-educational-writing/). Also, I don't think they
+  provide much value.
 
 ## Oddities
 
@@ -52,4 +53,4 @@ expectations._
   long as it's not an endless list. If it's a trigger for you, please let me know.
 
 I forgot one point: **Feedback**. I love to receiving feedback so I can improve. If you have to give
-me feedback, please go straight to the point. I'm ok to be shaken.
+me feedback, please go straight to the point.
