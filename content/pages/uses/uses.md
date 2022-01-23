@@ -15,21 +15,19 @@ and I travel. A lot.
 
 - MacBook Pro M1 (13-inch)
 - **No extra screen.** I've found myself more focus with only one screen
-- [Roost Laptop Stand](https://www.therooststand.com/)
-- [Keychron K3 Mechanical keyboard](https://twitter.com/_maxpou/status/1436270414544654348) and a
-  Magic keyboard 2 (when I travel)
-- Magic Trackpad 2 and a
-  [G403 HERO Mouse](https://www.logitechg.com/en-us/products/gaming-mice/g403-hero-gaming-mouse.910-005630.html)
-- Notepad where
-  [I write my daily MIT](https://about.gitlab.com/2018/05/17/eliminating-distractions-and-getting-things-done/#2-write-down-your-mits)
+- [Keychron K3 Mechanical keyboard](https://twitter.com/_maxpou/status/1436270414544654348)
+- [G403 HERO Mouse](https://www.logitechg.com/en-us/products/gaming-mice/g403-hero-gaming-mouse.910-005630.html)
 - OnePlus Nord (and an old Huawei as a backup)
 - Sony MDR 1000X. A noise-cancelling headphone with 2 modes: wired or wireless (bluetooth). I also
   have some Airpods.
+
+### Nomadic setup
+
+- [Roost Laptop Stand](https://www.therooststand.com/)
+- Magic Trackpad 2 & Magic keyboard 2
 - Travel&daily bag is a
   [Minaal Carry-on 2.0](https://www.minaal.com/products/minaal-carry-on-bag/?variant=12494163140)
   (with packing cubes). I love it!
-
-I travel too much to have a proper desk! ;)
 
 ## IDE
 
@@ -120,6 +118,6 @@ services:
 - I play mostly Age Of Empire 2 DE on my MacBook (thanks CrossOver)
 - For other games, I rely on Cloud Gaming platforms such as
   [GeForce Now](https://www.nvidia.com/en-us/geforce-now/), Stadia and
-  [XCloud](https://www.xbox.com/en-US/play)
+  [xCloud](https://www.xbox.com/en-US/play)
 - [Xbox Elite Controller Series 2](https://www.xbox.com/en-IE/accessories/controllers/elite-wireless-controller-series-2)
   is my controller. A bit pricey, but very comfortable.

@@ -28,7 +28,7 @@ npm run build && serve public
 - [Remove.bg](https://www.remove.bg) - Remove background on png
 - [Keynote (Apple)](https://www.apple.com/keynote/) - To draw schemas
 - [Plausible](https://plausible.io/maxpou.fr) - For ethical analytics
-- [GitHub](https://github.com/maxpou/maxpou.fr) -
+- [GitHub](https://github.com/maxpou/maxpou.fr)
 
 Previously: [gatsby-starter-morning-dew](https://github.com/maxpou/gatsby-starter-morning-dew)
 
