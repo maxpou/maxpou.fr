@@ -6,6 +6,7 @@
 <url> <loc>https://www.maxpou.fr/pages/4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.maxpou.fr/pages/5</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.maxpou.fr/pages/6</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.maxpou.fr/git-worktrees</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.maxpou.fr/2021-a-year-in-review</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.maxpou.fr/rsi-as-developer</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.maxpou.fr/vue-js-module-architecture</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -67,12 +68,12 @@
 <url> <loc>https://www.maxpou.fr/rss</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.maxpou.fr/speaking</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.maxpou.fr/uses</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.maxpou.fr/tags/Git</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.maxpou.fr/tags/Life</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.maxpou.fr/tags/Year In Review</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.maxpou.fr/tags/Vue.js</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.maxpou.fr/tags/Tips</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.maxpou.fr/tags/Architecture</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.maxpou.fr/tags/Git</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.maxpou.fr/tags/career</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.maxpou.fr/tags/JavaScript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.maxpou.fr/tags/Testing</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
