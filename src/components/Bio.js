@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Text } from './Commons'
 import FollowMe from './FollowMe'
 import useSiteMetadata from '../hooks/use-site-config'
-import useSiteImages from '../hooks/use-site-images'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const BioWrapper = styled.div`
   & .author-image {
@@ -25,13 +25,7 @@ const BioWrapper = styled.div`
     background-color: var(--color-wrapperBackground);
   }
 
-  & .author-image .img {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center center;
+  & .author-image img {
     border-radius: 100%;
   }
 
@@ -62,17 +56,12 @@ const BioText = styled(Text)`
 `
 
 const Bio = () => {
-  const { authorAvatar, authorName, authorDescription } = useSiteMetadata()
-  const { fixed } = useSiteImages(authorAvatar)
+  const { authorName, authorDescription } = useSiteMetadata()
 
   return (
     <BioWrapper>
       <figure className="author-image">
-        <div
-          alt={authorName}
-          style={{ backgroundImage: `url("${fixed.src}")` }}
-          className="img"
-        />
+        <StaticImage src="../../content/images/avatar.jpeg" alt={authorName} />
       </figure>
       <section>
         <h2>About the author</h2>
