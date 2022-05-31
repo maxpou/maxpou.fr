@@ -14,12 +14,14 @@ and I travel. A lot.
 ![laptop picture](./laptop.jpeg)
 
 - MacBook Pro M1 (13-inch)
-- **No extra screen.** I've found myself more focus with only one screen
+- 27" screen. **No dual screen.** I've found myself more focus with only one screen
 - [Keychron K3 Mechanical keyboard](https://twitter.com/_maxpou/status/1436270414544654348)
 - [G403 HERO Mouse](https://www.logitechg.com/en-us/products/gaming-mice/g403-hero-gaming-mouse.910-005630.html)
 - OnePlus Nord (and an old Huawei as a backup)
 - Sony MDR 1000X. A noise-cancelling headphone with 2 modes: wired or wireless (bluetooth). I also
   have some Airpods.
+
+Also: a Xiaomi monitor light bar, a Logitech C920s webcam.
 
 ### Nomadic setup
 
@@ -116,8 +118,7 @@ services:
 ## Gaming
 
 - I play mostly Age Of Empire 2 DE on my MacBook (thanks CrossOver)
-- For other games, I rely on Cloud Gaming platforms such as
-  [GeForce Now](https://www.nvidia.com/en-us/geforce-now/), Stadia and
+- For other games, I rely on Cloud Gaming platforms such as Stadia and
   [xCloud](https://www.xbox.com/en-US/play)
 - [Xbox Elite Controller Series 2](https://www.xbox.com/en-IE/accessories/controllers/elite-wireless-controller-series-2)
   is my controller. A bit pricey, but very comfortable.
