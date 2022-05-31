@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { colors } from '../tokens'
-
 const TimelineContainer = styled.div``
 
 const TimelineItem = styled.div`
@@ -13,13 +11,6 @@ const TimelineItem = styled.div`
   padding-bottom: 15px;
   page-break-inside: avoid;
 `
-
-// const LeftPart = styled.div`
-//   width: 30%;
-//   display: table-cell;
-//   text-align: right;
-//   padding-right: 25px;
-// `
 
 const Section = styled.div`
   width: 100%;
@@ -44,8 +35,8 @@ const Separator = styled.div`
     height: 11px;
     margin-left: -7px;
     border-radius: 8px;
-    border: 2px solid ${colors.primary};
-    background-color: ${colors.background};
+    border: 2px solid var(--color-cv-primary);
+    background-color: var(--color-cv-background);
   }
 
   @media print {
@@ -59,13 +50,12 @@ const Title = styled.h3`
 `
 
 const SubTitle = styled.p`
-  /* margin-bottom: 5px; */
-  color: ${colors.textLight};
+  color: var(--color-cv-textLight);
+  margin-bottom: 15px;
 `
 
 const Period = styled.p`
-  /* margin-bottom: 5px; */
-  color: ${colors.textLight};
+  color: var(--color-cv-textLight);
 `
 
 const Content = styled.p`
@@ -81,7 +71,7 @@ const TimeLineItemContainer = props => (
       <Period>{props.period}</Period>
       <SubTitle>{props.subtitle}</SubTitle>
       {props.content.map((contentItem, i) => (
-        <Content key={i}>{contentItem}</Content>
+        <Content key={`timeline-container-item-${i}`}>{contentItem}</Content>
       ))}
     </Section>
   </TimelineItem>
@@ -91,7 +81,10 @@ const Timeline = props => {
   return (
     <TimelineContainer>
       {props.data.map((timelineItemData, i) => (
-        <TimeLineItemContainer key={i} {...timelineItemData} />
+        <TimeLineItemContainer
+          key={`timeline-container-${i}`}
+          {...timelineItemData}
+        />
       ))}
     </TimelineContainer>
   )

@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import QrImage from './qr-code.png'
-import { media, colors } from '../../tokens'
-import cleanupUrl from '../../lib/cleanupUrl'
+import { media } from '../tokens'
+import cleanupUrl from '../../../lib/cleanupUrl'
 
 const Img = styled.img`
   width: 100px;
@@ -15,6 +15,7 @@ const QrCodeContainer = styled.a`
   text-decoration: none;
   padding-left: 5px;
   padding-bottom: 11px;
+
   @media ${media.medium} {
     display: none;
   }
@@ -24,7 +25,7 @@ const Description = styled.span`
   display: block;
   font-size: 0.8em;
   margin-top: -10px;
-  color: ${colors.textLight};
+  color: var(--color-cv-textLight);
 `
 
 const QrCode = ({ url }) => {

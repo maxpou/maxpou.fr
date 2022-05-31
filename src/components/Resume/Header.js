@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { colors } from '../tokens'
 import QrCode from './qrcode'
 
 const HeaderContainer = styled.header`
@@ -9,7 +8,7 @@ const HeaderContainer = styled.header`
   width: 100%;
   margin-bottom: 15px;
   padding: 8px;
-  background-color: ${colors.primary};
+  background-color: var(--color-cv-primary);
 `
 
 const Name = styled.h1`

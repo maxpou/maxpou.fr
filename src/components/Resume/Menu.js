@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import PrinterIcon from './icons/printer'
-import PdfIcon from './icons/pdf'
-import { media } from '../tokens'
+import PrinterIcon from '../icons/printer'
+import PdfIcon from '../icons/pdf'
+import { media } from './tokens'
 
 const MenuContainer = styled.aside`
   position: fixed;
