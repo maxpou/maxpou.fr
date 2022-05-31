@@ -1,8 +1,15 @@
 import styled from 'styled-components'
 import { createGlobalStyle } from 'styled-components'
-import { colors } from '../tokens'
 
 export const GlobalStyle = createGlobalStyle`
+  :root {
+    --color-cv-primary: #ffdc4e;
+    --color-cv-link: #3359dc;
+    --color-cv-text: #3E4047;
+    --color-cv-textLight: #6a6f73;
+    --color-cv-background: #ffffff;
+  }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,8 +18,8 @@ export const GlobalStyle = createGlobalStyle`
 
 body {
   font-family: "Lato", sans-serif;
-  color: ${colors.text};
-  background-color: ${colors.background};
+  color: var(--color-cv-text);
+  background-color: var(--color-cv-background);
 }
 
 @media print {
@@ -35,7 +42,7 @@ body {
 
 export const SectionTitle = styled.h2`
   display: inline-block;
-  color: ${colors.text};
+  color: var(--color-cv-text);
   margin-bottom: 10px;
 
   &::after {
@@ -44,7 +51,7 @@ export const SectionTitle = styled.h2`
     width: 100%;
     height: 2px;
     margin-top: -1px;
-    background-color: ${colors.primary};
+    background-color: var(--color-cv-primary);
   }
 `
 
@@ -57,11 +64,11 @@ export const Link = styled.a.attrs(props => ({
   target: '_blank',
   rel: 'noopener noreferrer',
 }))`
-  color: ${colors.text};
+  color: var(--color-cv-text);
   text-decoration: none;
 
   &:hover {
-    border-bottom: 1px solid ${colors.link};
-    color: ${colors.textLight};
+    border-bottom: 1px solid var(--color-cv-link);
+    color: var(--color-cv-textLight);
   }
 `

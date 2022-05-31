@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import { SectionCategory, SectionTitle, Link } from './Common'
-import cleanupUrl from '../lib/cleanupUrl'
-import EmailIcon from './icons/email'
-import GithubIcon from './icons/github'
-import LinkedinIcon from './icons/linkedin'
-import TwitterIcon from './icons/twitter'
-import WebIcon from './icons/web'
+import cleanupUrl from '../../lib/cleanupUrl'
+import EmailIcon from '../icons/email'
+import GithubIcon from '../icons/github'
+import LinkedinIcon from '../icons/linkedin'
+import TwitterIcon from '../icons/twitter'
+import WebIcon from '../icons/web'
 
 const Content = styled.p`
   line-height: 1.4;

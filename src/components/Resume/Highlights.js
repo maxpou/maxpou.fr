@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { SectionCategory, SectionTitle, Link } from './Common'
-import cleanupUrl from '../lib/cleanupUrl'
-import { colors } from '../tokens'
+import cleanupUrl from '../../lib/cleanupUrl'
 
 const Highlights = styled.ul`
   padding-left: 18px;
@@ -14,12 +13,11 @@ const Highlight = styled.li`
 `
 
 const ProjectUrl = styled(Link)`
-  color: ${colors.link};
+  color: var(--color-cv-link);
   font-weight: normal;
 `
 
 const SeeUrl = styled.span`
-  color: ${colors.textLight};
   font-size: 0.8em;
 `
 

@@ -1,8 +1,8 @@
 import React from 'react'
-import Layout from '../gatsby-theme-resume/components/layout'
-import SEO from '../gatsby-theme-resume/components/seo'
-import Resume from '../gatsby-theme-resume/components/Resume'
-import useSiteResume from '../gatsby-theme-resume/hooks/use-site-resume'
+import Layout from '../components/Resume/Layout'
+import SEO from '../components/Resume/Seo'
+import Resume from '../components/Resume/Resume'
+import useSiteResume from '../hooks/use-site-resume'
 
 const IndexPage = () => {
   const resume = useSiteResume()

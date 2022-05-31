@@ -2,8 +2,8 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { GlobalStyle } from '../components/Common'
-import { media } from '../tokens'
+import { GlobalStyle } from './Common'
+import { media } from './tokens'
 
 const Page = styled.main`
   width: 80%;

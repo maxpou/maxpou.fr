@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import cleanupUrl from '../lib/cleanupUrl'
+import cleanupUrl from '../../lib/cleanupUrl'
 
 const FooterPrintWrapper = styled.div`
   @media screen {

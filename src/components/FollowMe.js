@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import useSiteMetadata from '../hooks/use-site-config'
-import TwitterIcon from '../gatsby-theme-resume/components/icons/twitter'
+import TwitterIcon from '../components/icons/twitter'
 
 const TwitterButton = styled.a`
   background-color: #1da1f2;
