@@ -1,5 +1,1 @@
-{
-    "componentChunkName": "component---src-templates-tags-js",
-    "path": "/tags/HTTP",
-    "result": {"data":{"posts":{"edges":[{"node":{"excerpt":"Bref rappel des méthodes HTTP Pour rappel, voici les principaux verbes HTTP que nous utilisons pour des architectures REST : GET : Accède à…","timeToRead":4,"frontmatter":{"title":"REST, CRUD et bonnes pratiques","tags":["REST","HTTP"],"language":null,"slug":"rest-crud"}}}]}},"pageContext":{"tag":"HTTP"}},
-    "staticQueryHashes": ["2709979211"]}
+{"componentChunkName":"component---src-templates-tags-js","path":"/tags/HTTP","result":{"data":{"posts":{"edges":[{"node":{"excerpt":"Bref rappel des méthodes HTTP Pour rappel, voici les principaux verbes HTTP que nous utilisons pour des architectures REST : GET : Accède à…","timeToRead":4,"frontmatter":{"title":"REST, CRUD et bonnes pratiques","tags":["REST","HTTP"],"language":null,"slug":"rest-crud"}}}]}},"pageContext":{"tag":"HTTP"}},"staticQueryHashes":["2709979211"]}
