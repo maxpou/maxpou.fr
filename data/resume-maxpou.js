@@ -15,7 +15,7 @@ module.exports = {
       I enjoy challenges and I am not afraid of getting my hands dirty.
       Because knowledge sharing matters to me, I spend a non-negligible part of my time sharing things through blog posts, mentoring sessions or conferences.
     `,
-    lastUpdate: 'November 2021',
+    lastUpdate: 'May 2022',
     profiles: [
       {
         network: 'Twitter',
@@ -87,7 +87,10 @@ module.exports = {
       position: 'Senior Software Engineer',
       period: 'May 2021 - Present',
       location: 'Remote (Europe)',
-      activities: ['Migrated a web application in Typescript React'],
+      activities: [
+        'Migrated a web application to Typescript/React',
+        'Led the migration of the main application from a REST-style to GraphQL',
+      ],
     },
     {
       company: 'VSware',
@@ -179,7 +182,7 @@ module.exports = {
 
   hobbies: `
     Canyoning (I guide group), hiking, cooking, travelling, 
-    video games (Age of Empire II) and personal development.
+    video games (Age of Empire II).
   `,
 
   values: ['knowledge sharing', 'user privacy', 'diversity'],
