@@ -49,8 +49,8 @@ expectations._
 - **Language**: English is not my mother tongue. I may say the exact opposite of what I think at the
   moment. I also love expressions which I learn outside work (films, blogs...). If I use something
   offensive or inappropriate, please let me know. It's probably unintentional.
-- **Bullet list**: I tend to overuse bullet lists. It's the perfect way to communicate with me, as
-  long as it's not an endless list. If it's a trigger for you, please let me know.
+- **Bullet list**: I tend to overuse bullet lists. It's the perfect way to communicate with me (as
+  long as it's not an endless list). If it's a trigger for you, please let me know.
 
 I forgot one point: **Feedback**. I love to receiving feedback so I can improve. If you have to give
 me feedback, please go straight to the point.
