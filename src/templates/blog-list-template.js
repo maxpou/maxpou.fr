@@ -18,7 +18,8 @@ class BlogList extends React.Component {
       <Layout location={this.props.location}>
         <SEO
           imageShare={
-            this.props.data.imageShare.childImageSharp.fluid.originalImg
+            this.props.data.imageShare.childImageSharp.gatsbyImageData.images
+              .fallback.src
           }
         />
         <Hero title={title} subTitle={description} />
@@ -48,9 +49,7 @@ export const pageQuery = graphql`
     }
     imageShare: file(relativePath: { eq: "cover.jpg" }) {
       childImageSharp {
-        fluid {
-          originalImg
-        }
+        gatsbyImageData
       }
     }
     posts: allMdx(
