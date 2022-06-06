@@ -8,7 +8,7 @@ module.exports = {
     website: 'https://www.maxpou.fr',
     cvUrl: 'https://www.maxpou.fr/cv',
     phone: '+353838667354',
-    location: 'Remote, Europe (Berlin/Paris)',
+    location: 'Remote (Europe - Paris)',
     description: `
       I'm Maxence, a French Software Engineer with 10 years of experience developing web-based applications. 
       I am a dedicated, hardworking, ambitious person that gets things done, both on my own initiative and within a team. 
@@ -98,12 +98,11 @@ module.exports = {
       period: 'May 2018 - May 2021',
       location: 'Remote (Europe/Asia)',
       activities: [
-        'Improved the frontend infrastructure of a massive Vue.js application (~5k vue&js files / ~650k lines of codes). Frontend rely on a big monorepo',
-        'Software designed and planned major architecture changes',
-        'Introduced and maintaining a testing culture (from 0 to 3.1k unit & integration tests)',
-        'Working on accessibility (A11Y) to meet WCAG AA conformance',
-        'Maintaining decent performances optimisation',
-        'Mentoring developers',
+        'Improved the frontend infrastructure of a massive Vue.js application (~5k vue&js files / ~650k lines of codes). Frontend relies on a big monorepo (~40 packages)',
+        'Software designed and planned major architecture changes towards micro-frontends',
+        'Introduced and maintained a testing culture (from 0 to 3.1k unit & integration tests)',
+        'Worked on accessibility (A11Y) to meet WCAG AA conformance',
+        'Mentored junior developers',
       ],
     },
     {
@@ -114,7 +113,7 @@ module.exports = {
       activities: [
         'Co-led the frontend migration of hostelworld.com from jQuery to Vue.js.',
         'Architecture definition, development and maintenance of the main website (back+front)',
-        'Train and mentor team to modern JavaScript and Vue.js',
+        'Trained and mentored team to modern JavaScript and Vue.js',
       ],
     },
     {
@@ -181,7 +180,7 @@ module.exports = {
   ],
 
   hobbies: `
-    Canyoning (I guide group), hiking, cooking, travelling, 
+    Canyoning (I guide group), hiking, cooking, travelling (mostly asia), 
     video games (Age of Empire II).
   `,
 
