@@ -7,16 +7,18 @@ cover: ./desktop.jpg
 
 This page is somewhat inspired by [Wes Bos' Uses](https://wesbos.com/uses/) page. Keep in mind that
 I'm mostly doing Frontend development and I'm also a nomadic worker. In other words, I'm 100% remote
-and I travel. A lot.
+and I travel often.
 
-## Hardware
+## Gear
 
 ![laptop picture](./laptop.jpeg)
 
 - MacBook Pro M1 (13-inch)
-- 27" screen. **No dual screen.** I've found myself more focus with only one screen
+- 27" screen (QHD). **No dual screen.** I've found myself more focus with only one screen.
 - [Keychron K3 Mechanical keyboard](https://twitter.com/_maxpou/status/1436270414544654348)
 - [G403 HERO Mouse](https://www.logitechg.com/en-us/products/gaming-mice/g403-hero-gaming-mouse.910-005630.html)
+- Herman Miller x Logitech Embody chair
+- Jarvis Bamboo Standing Desk
 - OnePlus Nord (and an old Huawei as a backup)
 - Sony MDR 1000X. A noise-cancelling headphone with 2 modes: wired or wireless (bluetooth). I also
   have some Airpods.
@@ -102,9 +104,7 @@ Note: I now use Slack in my browser (so Grammarly can proofread my messages)
 
 ## Blogging
 
-This site is made with Gatsby.js and
-[gatsby-starter-morning-dew](https://github.com/maxpou/gatsby-starter-morning-dew). I use these
-services:
+This site is made with Gatsby.js. I use these services:
 
 - [Grammarly](https://app.grammarly.com/) - Helps me to remove typos / proofread my posts
 - [Google Docs](http://docs.new/) - Helps me to remove typos / proofread my posts

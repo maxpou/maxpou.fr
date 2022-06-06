@@ -38,7 +38,7 @@ const Menu = () => {
       </MenuButton>
       <MenuButton
         as="a"
-        href="Maxence-Poutord-Resume.pdf"
+        href="../Maxence-Poutord-Resume.pdf"
         aria-label="Download PDF"
         title="Maxence Poutord Resume"
         download
