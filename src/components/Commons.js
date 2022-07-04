@@ -17,6 +17,20 @@ body {
   background-color: var(--color-siteBackground);
 }
 
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--color-lightYellow), var(--color-secondary)); 
+  border-radius: 8px;
+
+  &:hover {
+    background: linear-gradient(var(--color-secondary), var(--color-lightYellow)); 
+  }
+}
+
+
 img {
   max-width: 100%;
   height: auto;

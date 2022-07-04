@@ -34,6 +34,9 @@ const DarkModeButton = styled.button`
   font-weight: 700;
   margin: 10px 0;
 
+  &:hover {
+    filter: invert(0.7) sepia(1.3) saturate(1.6) brightness(2.4);
+  }
   & .moon {
     animation: ${moonEffect} 1s linear;
   }

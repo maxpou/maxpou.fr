@@ -17,7 +17,7 @@ class BlogPostTemplate extends React.Component {
       <Layout location={this.props.location}>
         <SEO
           title={post.frontmatter.title}
-          description={post.excerpt}
+          description={post.frontmatter.description || post.excerpt}
           cover={post.frontmatter.cover && post.frontmatter.cover.publicURL}
           imageShare={
             post.frontmatter.imageShare && post.frontmatter.imageShare.publicURL
@@ -61,6 +61,7 @@ export const pageQuery = graphql`
         slug
         language
         tags
+        description
         cover {
           publicURL
           childImageSharp {

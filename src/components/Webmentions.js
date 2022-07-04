@@ -124,7 +124,9 @@ const WebmentionsWrapper = props => {
       )}
 
       <Text>
-        <Link href={`https://twitter.com/search?q=${currentUrl}`}>
+        <Link
+          href={`https://twitter.com/search?q=${currentUrl}&src=typed_query&f=top`}
+        >
           You can like or tweet about this post
         </Link>{' '}
         and it will show up here!
