@@ -38,6 +38,7 @@ const ContentBody = styled.div`
 
   & a {
     fill: var(--color-text);
+    position: relative !important;
     box-shadow: 0 2px 0 0 var(--color-secondary);
 
     &:hover {

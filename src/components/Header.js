@@ -60,7 +60,7 @@ const HeaderLink = styled(Link)`
   z-index: 10;
 
   &:hover {
-    color: var(--color-grey300);
+    color: var(--color-secondary);
   }
 
   & + & {
