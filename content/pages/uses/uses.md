@@ -11,14 +11,14 @@ and I travel often.
 
 ## Gear
 
-![laptop picture](./laptop.jpeg)
+![laptop picture](./battlestation.jpeg)
 
 - MacBook Pro M1 (13-inch)
 - 27" screen (QHD). **No dual screen.** I've found myself more focus with only one screen.
 - [Keychron K3 Mechanical keyboard](https://twitter.com/_maxpou/status/1436270414544654348)
 - [G403 HERO Mouse](https://www.logitechg.com/en-us/products/gaming-mice/g403-hero-gaming-mouse.910-005630.html)
-- Herman Miller x Logitech Embody chair
-- Jarvis Bamboo Standing Desk
+- [Herman Miller x Logitech Embody chair](https://www.logitechg.com/en-us/logitech-g-and-herman-miller.html)
+- [Jarvis Bamboo Standing Desk](https://www.fully.com/en-eu/jarvis-adjustable-height-desk-bamboo.html)
 - OnePlus Nord (and an old Huawei as a backup)
 - Sony MDR 1000X. A noise-cancelling headphone with 2 modes: wired or wireless (bluetooth). I also
   have some Airpods.
@@ -108,17 +108,17 @@ This site is made with Gatsby.js. I use these services:
 
 - [Grammarly](https://app.grammarly.com/) - Helps me to remove typos / proofread my posts
 - [Google Docs](http://docs.new/) - Helps me to remove typos / proofread my posts
-- [Hemingway](http://www.hemingwayapp.com) - "Hemingway App makes your writing bold and clear"
 - [Squoosh](https://squoosh.app) - Image compression
 - [Remove.bg](https://www.remove.bg) - Remove background on png
 - [Keynote (Apple)](https://www.apple.com/keynote/) - To draw schemas
 - [Plausible](https://plausible.io/maxpou.fr) - For ethical analytics
+- [Netlify](https://www.netlify.com) - To preview my pull requests
 - [GitHub](https://github.com/maxpou/maxpou.fr) - Where I host my code and run CI/CD pipelines
 
 ## Gaming
 
 - I play mostly Age Of Empire 2 DE on my MacBook (thanks CrossOver)
-- For other games, I rely on Cloud Gaming platforms such as Stadia and
-  [xCloud](https://www.xbox.com/en-US/play)
+- For other games, I rely on [xCloud](https://www.xbox.com/en-US/play) (Xbox's cloud gaming
+  platform)
 - [Xbox Elite Controller Series 2](https://www.xbox.com/en-IE/accessories/controllers/elite-wireless-controller-series-2)
   is my controller. A bit pricey, but very comfortable.
