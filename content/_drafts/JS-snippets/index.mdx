@@ -1,0 +1,37 @@
+## Inspect dropdown
+
+```js
+setTimeout(function () {
+  debugger
+}, 2000)
+```
+
+## prevent page to reload
+
+```js
+window.addEventListener(
+  'beforeunload',
+  () => {
+    debugger
+  },
+  false
+)
+```
+
+## debug all colors
+
+https://github.com/bgrins/devtools-snippets/blob/master/snippets/allcolors/allcolors.js
+
+## [A11y] - the 44x44 cursor
+
+```js
+;(function () {
+  const style = document.createElement('style'),
+    styleContent = document.createTextNode(`* {
+      cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJBJREFUeNrs2dEKgDAIhWEN3/+VLYtBF12MppHwDxY0uvg4DJpORcSl0bB4uPcwq+oFHu8/956pbtJsAAYMGDBgwIABA044t3pMEgb8VU2XsWdn1o/aUUn4bchPBWNFYWvVidxbCFGmr7YULBs1YDPfsYcXEi9ryvDjAAwYMGDAgAED7nK8bHG7qNLs6nYXYAAheh5j8Qw5fwAAAABJRU5ErkJggg==) 22 22, auto !important
+    }`)
+  style.appendChild(styleContent)
+  const caput = document.getElementsByTagName('head')
+  caput[0].appendChild(style)
+})()
+```
