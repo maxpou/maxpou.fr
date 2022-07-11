@@ -1,12 +1,12 @@
 ---
-title: Personal User Manual
-slug: personal-user-manual
+title: Readme
+slug: readme
 cover: ./cover.jpeg
 webmentions: false
 ---
 
-Hey, I'm Maxence. You can call me Max if you want, both are completely fine. The following contains
-a user guide for me and how I like to work. This is also what people call "Personal README".
+Hey, I'm Maxence. You can also call me Max if you want. The following contains a user guide for me
+and how I like to work. This is also what people call "Personal README".
 
 ## North Star Principles
 

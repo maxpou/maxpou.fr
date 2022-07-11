@@ -9,14 +9,14 @@ const MessageWrapper = styled.aside`
   margin: 30px 0px;
   padding: 20px;
   border-radius: 0 8px 8px 0;
+
+  a {
+    color: var(--color-grey500); // for darkmode
+  }
 `
 
 const Info = ({ children }) => {
-  return (
-    <MessageWrapper>
-      <div>{children}</div>
-    </MessageWrapper>
-  )
+  return <MessageWrapper>{children}</MessageWrapper>
 }
 
 export default Info
