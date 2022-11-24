@@ -13,7 +13,7 @@ const PreviewContainer = styled.aside`
   align-items: center;
   justify-content: center;
   max-width: 810px;
-  margin: 0 auto;
+  margin: 40px auto 0px;
 `
 
 const PreviewLink = styled(Link)`

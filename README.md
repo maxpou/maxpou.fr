@@ -15,8 +15,8 @@ npm start
 # format code+markdown (with prettier)
 npm run format
 
-# generate+run production build (with serve package: npm i -g serve)
-npm run build && serve public
+# generate+run production build
+npm run build && npx serve public
 ```
 
 ## Tools & services I use
