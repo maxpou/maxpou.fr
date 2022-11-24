@@ -1,11 +1,29 @@
 {
   "name": "maxpou.fr",
   "private": true,
-  "description": "Maxence Poutord's Blog",
+  "description": "Maxence Poutord's Blog (www.maxpou.fr)",
   "version": "1.0.0",
   "author": "Maxence Poutord <maxence.poutord@gmail.com>",
+  "homepage": "https://www.maxpou.fr",
+  "keywords": [
+    "gatsby",
+    "blog"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxpou/maxpou.fr"
+  },
   "bugs": {
     "url": "https://github.com/maxpou/maxpou.fr/issues"
+  },
+  "scripts": {
+    "start": "gatsby develop",
+    "gatsby": "gatsby",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write 'src/**/*.{js,json}' 'data/siteConfig.js' 'gatsby-*.js' 'content/**/*.{md,mdx}'",
+    "build": "gatsby build",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^2.0.7",
@@ -18,7 +36,7 @@
     "gatsby-plugin-plausible": "^0.0.7",
     "gatsby-plugin-react-helmet": "^5.15.0",
     "gatsby-plugin-sharp": "^4.15.0",
-    "gatsby-plugin-sitemap": "^5.15.0",
+    "gatsby-plugin-sitemap": "^5.23.1",
     "gatsby-plugin-styled-components": "^5.15.0",
     "gatsby-remark-autolink-headers": "^5.15.0",
     "gatsby-remark-copy-linked-files": "^5.15.0",
@@ -38,24 +56,5 @@
   },
   "devDependencies": {
     "prettier": "^2.6.2"
-  },
-  "homepage": "https://github.com/maxpou/maxpou.fr#readme",
-  "keywords": [
-    "gatsby",
-    "blog"
-  ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/maxpou/maxpou.fr"
-  },
-  "scripts": {
-    "start": "gatsby develop",
-    "gatsby": "gatsby",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write 'src/**/*.{js,json}' 'data/siteConfig.js' 'gatsby-*.js' 'content/**/*.{md,mdx}'",
-    "build": "gatsby build",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "generatePostPreviewImages": "node ./scripts/generatePostPreviewImages.js"
   }
 }
