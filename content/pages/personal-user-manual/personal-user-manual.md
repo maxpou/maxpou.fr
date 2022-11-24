@@ -29,8 +29,8 @@ expectations._
 - **Direct vs. Indirect communication**: Some people do their best to avoid disagreements and prefer
   a more indirect form of communication. **I don't.** I like "healthy disagreements" and I think
   they are a normal part of relating to others.
-- **Emails**. I'm not good at checking my emails daily. If I'm too slow to respond, please reach me
-  on Slack.
+- **Emails**. I'm not good at checking my emails. If I'm too slow to respond, please reach me on
+  Slack.
 - **Meetings**. I like when they are timeboxed and organised beforehand. That means, I appreciate
   knowing before the meeting what it is about and if something is expected from me.
 - **Transparency**. I'm very transparent about my activities. There are days where I'm less

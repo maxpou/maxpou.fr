@@ -40,7 +40,7 @@ module.exports = {
   // Footer information (ex: Github, Netlify...)
   websiteHost: {
     name: 'GitHub',
-    url: 'https://github.com',
+    url: 'https://github.com/maxpou/maxpou.fr',
   },
   footerLinks: [
     {

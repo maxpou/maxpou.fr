@@ -180,7 +180,7 @@ module.exports = {
   ],
 
   hobbies: `
-    Canyoning (I guide group), hiking, cooking, travelling (mostly asia), 
+    Canyoning (I guide group), hiking, cooking, travelling (Asia, Europe), 
     video games (Age of Empire II).
   `,
 
