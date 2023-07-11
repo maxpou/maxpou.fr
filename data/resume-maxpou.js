@@ -89,6 +89,7 @@ module.exports = {
       location: 'Remote (Europe)',
       activities: [
         'Migrated a web application to Typescript/React',
+        'Improved performances index (50 to 90 lighthouse score)',
         'Led the migration of the main application from a REST-style to GraphQL',
       ],
     },
