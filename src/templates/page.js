@@ -1,18 +1,18 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import Content from '../components/Content'
 import Wrapper from '../components/Wrapper'
 import Hero from '../components/Hero'
 import SEO from '../components/SEO'
 import Webmentions from '../components/Webmentions'
 
-const Page = props => {
-  const page = props.data.page
+function Page({ data, location, children }) {
+  const page = data.page
 
   return (
-    <Layout location={props.location}>
+    <Layout location={location}>
       <SEO
         title={page.frontmatter.title}
         description={page.excerpt}
@@ -24,7 +24,7 @@ const Page = props => {
 
       <Wrapper>
         <article>
-          <Content content={page.body} date={page.frontmatter.date} />
+          <Content date={page.frontmatter.date}>{children}</Content>
         </article>
       </Wrapper>
 
@@ -45,7 +45,6 @@ export default Page
 export const pageQuery = graphql`
   query ($slug: String!) {
     page: mdx(frontmatter: { slug: { eq: $slug } }) {
-      body
       excerpt
       frontmatter {
         title

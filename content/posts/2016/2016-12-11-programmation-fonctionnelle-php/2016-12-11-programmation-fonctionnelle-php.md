@@ -6,7 +6,6 @@ date: 2016-12-11
 language: fr
 slug: programmation-fonctionnelle-php
 cover: ./banner.png
-generate-card: false
 ---
 
 Depuis quelque temps, j'entends de plus en plus parler d'un autre paradigme de programmation : la

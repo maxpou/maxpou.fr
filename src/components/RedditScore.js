@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import useReddit from '../hooks/useReddit'
+import useReddit from '../hooks/use-reddit'
 import { StaticImage } from 'gatsby-plugin-image'
 
-const RetweetContainer = styled.div`
+const RedditContainer = styled.div`
   display: inline;
   color: #ff4500;
   padding-left: 12px;
@@ -18,10 +18,10 @@ const RetweetContainer = styled.div`
 const RedditScoreWrapper = props => {
   const [score] = useReddit(props.redditPostId)
   return (
-    <RetweetContainer>
+    <RedditContainer>
       <a
         href={`https://www.reddit.com/${props.redditPostId}`}
-        rel="noopener"
+        rel="noopener noreferrer"
         target="_blank"
       >
         {score}
@@ -32,7 +32,7 @@ const RedditScoreWrapper = props => {
           width={32}
         />
       </a>
-    </RetweetContainer>
+    </RedditContainer>
   )
 }
 

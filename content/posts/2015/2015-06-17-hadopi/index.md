@@ -6,7 +6,6 @@ slug: hadopi
 language: fr
 tags: [Hadopi]
 cover: ./tbp.jpg
-generate-card: false
 ---
 
 _Ca y est, vous venez de recevoir votre premier courrier HADOPI et c'est la panique. Vous avez

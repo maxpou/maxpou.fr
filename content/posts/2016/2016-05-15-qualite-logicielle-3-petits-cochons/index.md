@@ -7,7 +7,6 @@ slug: qualite-logicielle-3-petits-cochons
 date: 2016-05-15
 language: fr
 cover: ./intro.jpg
-generate-card: false
 ---
 
 Il y a quelques temps, j'ai eu affaire à une situation un peu particulière à mon travail. Pendant le

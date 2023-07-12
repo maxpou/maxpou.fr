@@ -8,7 +8,6 @@ modified: 2015-10-21
 language: fr
 tags: ['Tool', 'REST']
 cover: ./background.png
-generate-card: false
 ---
 
 [TL;DR](#points-forts)

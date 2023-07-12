@@ -11,6 +11,7 @@ module.exports = {
     resume,
   },
   pathPrefix: config.pathPrefix,
+  trailingSlash: 'ignore',
   plugins: [
     {
       resolve: `gatsby-plugin-plausible`,
@@ -49,9 +50,6 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
-        defaultLayouts: {
-          default: require.resolve('./src/templates/page.js'),
-        },
         gatsbyRemarkPlugins: [
           {
             resolve: 'gatsby-remark-images',
@@ -137,34 +135,19 @@ function getBlogFeed(filter, overrides) {
   return {
     serialize: ({ query: { site, allMarkdownRemark } }) => {
       return allMarkdownRemark.edges.map(edge => {
-        const siteUrl = site.siteMetadata.siteUrl
-        const postText = `
-          <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog at maxpou.fr. You can read it online by <a href="${
-            siteUrl + edge.node.frontmatter.slug
-          }">clicking here</a>.)</div>
-        `
-        let html = edge.node.html
-        // Hacky workaround for https://github.com/gaearon/overreacted.io/issues/65
-        html = html
-          .replace(/href="\//g, `href="${siteUrl}/`)
-          .replace(/src="\//g, `src="${siteUrl}/`)
-          .replace(/"\/static\//g, `"${siteUrl}/static/`)
-          .replace(/,\s*\/static\//g, `,${siteUrl}/static/`)
         return Object.assign({}, edge.node.frontmatter, {
           description: edge.node.excerpt,
           date: edge.node.frontmatter.date,
           url: site.siteMetadata.siteUrl + '/' + edge.node.frontmatter.slug,
           guid: site.siteMetadata.siteUrl + '/' + edge.node.frontmatter.slug,
-          custom_elements: [{ 'content:encoded': html + postText }],
         })
       })
     },
     query: `
       {
         allMarkdownRemark: allMdx(
-          sort: { order: DESC, fields: [frontmatter___date] },
+          sort: { frontmatter: { date: DESC } }
           filter: {
-            fileAbsolutePath: {regex: "/content/posts/"}
             frontmatter: { 
               published: { ne: false } 
               ${queryFilter}
@@ -173,8 +156,7 @@ function getBlogFeed(filter, overrides) {
         ) {
           edges {
             node {
-              excerpt(pruneLength: 250)
-              html
+              excerpt(pruneLength: 500)
               frontmatter {
                 title
                 date

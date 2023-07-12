@@ -1,6 +1,6 @@
 // 50 shades of grey generator
-// https://javisperez.github.io/tailwindcolorshades/#/?%233E4047=3E4047&tv=1
-const colors = {
+// // https://javisperez.github.io/tailwindcolorshades/#/?%233E4047=3E4047&tv=1
+const baseColor = {
   grey100: '#ECECED',
   grey200: '#CFCFD1',
   grey300: '#B2B3B5',
@@ -21,22 +21,22 @@ const colors = {
 }
 
 export const COLORS = {
-  ...colors,
+  ...baseColor,
   text: {
-    light: colors.grey500,
-    dark: colors.grey100,
+    light: baseColor.grey500,
+    dark: baseColor.grey100,
   },
   textSecondary: {
-    light: colors.blueGreyed,
+    light: baseColor.blueGreyed,
     dark: '#c6d8e0',
   },
   siteBackground: {
     light: '#f4f8fb',
-    dark: colors.grey500,
+    dark: baseColor.grey500,
   },
   wrapperBackground: {
-    light: colors.white,
-    dark: colors.grey500,
+    light: baseColor.white,
+    dark: baseColor.grey500,
   },
   secondaryContentBackground: {
     light: '#f7f7f7',
@@ -47,20 +47,20 @@ export const COLORS = {
     dark: '#00000000',
   },
   primary: {
-    light: colors.grey500,
-    dark: colors.grey500,
+    light: baseColor.grey500,
+    dark: baseColor.grey500,
   },
   primaryAlpha: {
     light: 'rgba(32, 35, 42, 0.85)',
     dark: 'rgba(32, 35, 42, 0.85)',
   },
   secondary: {
-    light: colors.yellow,
-    dark: colors.yellow,
+    light: baseColor.yellow,
+    dark: baseColor.yellow,
   },
   h2: {
-    light: colors.grey500,
-    dark: colors.yellow,
+    light: baseColor.grey500,
+    dark: baseColor.yellow,
   },
 }
 

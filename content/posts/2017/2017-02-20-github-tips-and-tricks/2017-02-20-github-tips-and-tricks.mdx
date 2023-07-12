@@ -6,7 +6,6 @@ slug: github-tips-and-tricks
 date: 2017-02-20
 language: en
 cover: ./banner.png
-generate-card: false
 ---
 
 Summary:
@@ -16,7 +15,7 @@ Summary:
 - [Markdown on steroid (Github Flavored Markdown)](#markdown-on-steroid-github-flavored-markdown)
 - [Gist, another kind of repository](#gist-another-kind-of-repository)
 - [Issue/Pull request Templates](#issuepull-request-templates)
-- [Github Pages ❤️️](#github-pages-%E2%9D%A4%EF%B8%8F%EF%B8%8F)
+- [Github Pages ❤️️](#github-pages-%EF%B8%8F%EF%B8%8F)
 - [Sign your commits](#sign-your-commits)
 - [Playing with URL](#playing-with-url)
   - [URL everywhere](#url-everywhere)
@@ -121,14 +120,15 @@ additional features such as:
   ```
 
   The output will be like this: _(click on License)_
-    <details>
-      <summary>License (MIT)</summary>
-      The MIT License (MIT) <br/>
-      Copyright (c) 2017 Maxence POUTORD<br/>
-      Permission is hereby granted, free of charge, to any person obtaining a copy
-      of this software and associated documentation files (the "Software")
-      [...]
-    </details>
+
+  <details>
+    <summary>License (MIT)</summary>
+    The MIT License (MIT) <br />
+    Copyright (c) 2017 Maxence POUTORD
+    <br />
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+    and associated documentation files (the "Software") [...]
+  </details>
 
 ## Gist, another kind of repository
 
@@ -197,9 +197,9 @@ To deploy, `git push` and that's all!
 
 There is severals url pattern:
 
-- <username/organisationName>.github.io
-- <username/organisationName>.github.io/projectname. In this case, you need to push the HTML/Jekyll
-  files in a branch call gh-pages.
+- `<username/organisationName>.github.io`
+- `<username/organisationName>.github.io/projectname`. In this case, you need to push the
+  HTML/Jekyll files in a branch call gh-pages.
 - ... or whatever custom domain. In this case, put a CNAME file on your repository. Further more
   informations are available
   [in the documentation](https://help.github.com/articles/using-a-custom-domain-with-github-pages/).
@@ -331,6 +331,7 @@ Github provide 2 types of API:
 - https://api.github.com/
 - https://developer.github.com/early-access/graphql/explorer/
 
+{/* prettier-ignore */}
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Playing with GitHub GraphQL API 😀 - <a href="https://t.co/Mo2X9HX3l4">https://t.co/Mo2X9HX3l4</a> <a href="https://t.co/9lA5dylfDN">pic.twitter.com/9lA5dylfDN</a></p>&mdash; Maxence POUTORD (@_maxpou) <a href="https://twitter.com/_maxpou/status/776343643867254784">September 15, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 

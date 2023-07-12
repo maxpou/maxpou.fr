@@ -20,7 +20,6 @@ const FooterWrapper = styled.footer`
     max-width: 900px;
     margin: 0 auto;
 
-    // padding-bottom: 2em;
     .footer-col {
       flex: 1 auto;
       display: inline-flex;

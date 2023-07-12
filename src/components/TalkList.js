@@ -19,11 +19,3 @@ export const Event = styled.em`
 export const Media = styled.a`
   font-style: normal;
 `
-
-export default {
-  List,
-  Item,
-  Link,
-  Event,
-  Media,
-}

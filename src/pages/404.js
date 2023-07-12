@@ -3,7 +3,7 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import Wrapper from '../components/Wrapper'
 import SEO from '../components/SEO'
 import RelatedPosts from '../components/RelatedPosts'
@@ -33,9 +33,9 @@ const NotFoundPage = props => {
   const data = useStaticQuery(graphql`
     query {
       posts: allMdx(
-        sort: { fields: [frontmatter___date], order: DESC }
+        sort: { frontmatter: { date: DESC } }
         filter: {
-          fileAbsolutePath: { regex: "//content/posts//" }
+          internal: { contentFilePath: { regex: "//content/posts//" } }
           frontmatter: { published: { ne: false }, unlisted: { ne: true } }
         }
         limit: 5

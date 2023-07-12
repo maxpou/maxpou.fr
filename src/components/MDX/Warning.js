@@ -6,10 +6,14 @@ const MessageWrapper = styled.aside`
   color: var(--color-grey500);
   box-sizing: border-box;
   background-color: #fdf4ba;
-  border-left: 5px solid var(--color-secondary);
+  border-left: 5px solid var(--color-grey600);
   margin: 30px 0px;
   padding: 20px;
   border-radius: 0 8px 8px 0;
+
+  & a {
+    color: var(--color-primary);
+  }
 `
 const MessageHeader = styled.div`
   font-weight: bold;

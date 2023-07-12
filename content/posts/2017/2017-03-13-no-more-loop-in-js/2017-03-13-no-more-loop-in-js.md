@@ -6,7 +6,6 @@ slug: no-more-loop-in-js
 date: 2017-03-13
 language: en
 cover: ./banner.jpg
-generate-card: false
 ---
 
 A few months ago, I start moving my Javascript code from an Oriented Object/unorganized code to

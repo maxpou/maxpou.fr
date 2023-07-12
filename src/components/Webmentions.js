@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
+
 import RedditScoreWrapper from './RedditScore'
 import useSiteMetadata from '../hooks/use-site-config'
 import BirdHeartIcon from './icons/bird-heart.png'
@@ -72,7 +73,8 @@ const WebmentionsWrapper = props => {
         setLikes(resultData.type.like || 0)
         setRetweets(resultData.type.repost || 0)
       })
-  }, [])
+      .catch(() => {})
+  }, [currentUrl])
   useEffect(() => {
     fetch(
       `https://webmention.io/api/mentions.jf2?per-page=100&target=${currentUrl}/`
@@ -82,7 +84,8 @@ const WebmentionsWrapper = props => {
         const mentions = resultData.children
         setLikesUsers(mentions.filter(m => m['wm-property'] === 'like-of'))
       })
-  }, [])
+      .catch(() => {})
+  }, [currentUrl])
 
   return (
     <div>

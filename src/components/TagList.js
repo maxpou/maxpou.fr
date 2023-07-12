@@ -34,26 +34,22 @@ const TagListItem = styled.span`
   }
 `
 
-class TagList extends React.Component {
-  render() {
-    const { tags, noLink } = this.props
-
-    return (
-      <ListContainer>
-        {tags.map((tag, i) => {
-          return (
-            <Fragment key={`tag-list-${i}`}>
-              {!noLink && (
-                <TagListItemLink to={`/tags/${tag}`}>{tag}</TagListItemLink>
-              )}
-              {noLink && <TagListItem to={`/tags/${tag}`}>{tag}</TagListItem>}
-              {i < tags.length - 1 ? ', ' : ''}
-            </Fragment>
-          )
-        })}
-      </ListContainer>
-    )
-  }
+function TagList({ tags, noLink }) {
+  return (
+    <ListContainer>
+      {tags.map((tag, i) => {
+        return (
+          <Fragment key={`tag-list-${i}`}>
+            {!noLink && (
+              <TagListItemLink to={`/tags/${tag}`}>{tag}</TagListItemLink>
+            )}
+            {noLink && <TagListItem to={`/tags/${tag}`}>{tag}</TagListItem>}
+            {i < tags.length - 1 ? ', ' : ''}
+          </Fragment>
+        )
+      })}
+    </ListContainer>
+  )
 }
 
 export default TagList

@@ -4,7 +4,6 @@ title: '"Else": the unnecessary expression'
 slug: else-unnecessary-expression
 date: 2016-08-19
 language: en
-generate-card: false
 cover: ./header.jpg
 tags: ['Architecture']
 ---

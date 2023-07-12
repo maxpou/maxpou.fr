@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import PostsList from '../components/PostsList'
 import Wrapper from '../components/Wrapper'
 import SEO from '../components/SEO'
@@ -12,23 +12,20 @@ const PageTitle = styled.h1`
   padding-bottom: 10px;
 `
 
-class Tags extends React.Component {
-  render() {
-    const pageTitle = `#${this.props.pageContext.tag}`
-    const posts = this.props.data.posts.edges
+function Tags({ data, pageContext, location }) {
+  const posts = data.posts.edges
 
-    return (
-      <Layout location={this.props.location}>
-        <SEO title={`Top blog posts on ${this.props.pageContext.tag}`} />
-        <Hero title={pageTitle} />
+  return (
+    <Layout location={location}>
+      <SEO title={`Top blog posts on ${pageContext.tag}`} />
+      <Hero title={`#${pageContext.tag}`} />
 
-        <Wrapper>
-          <PageTitle>Posts tagged as {this.props.pageContext.tag}</PageTitle>
-          <PostsList posts={posts} />
-        </Wrapper>
-      </Layout>
-    )
-  }
+      <Wrapper>
+        <PageTitle>Posts tagged as {pageContext.tag}</PageTitle>
+        <PostsList posts={posts} />
+      </Wrapper>
+    </Layout>
+  )
 }
 
 export default Tags
@@ -36,7 +33,7 @@ export default Tags
 export const pageQuery = graphql`
   query PostsByTag($tag: String!) {
     posts: allMdx(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
       filter: {
         frontmatter: {
           tags: { eq: $tag }
@@ -48,7 +45,11 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt
-          timeToRead
+          fields {
+            timeToRead {
+              text
+            }
+          }
           frontmatter {
             title
             tags

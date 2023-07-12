@@ -5,7 +5,6 @@ slug: dealing-with-enum-symfony-doctrine
 date: 2016-08-04
 language: en
 tags: ['Symfony2', 'PHP', 'Doctrine']
-generate-card: false
 cover: ./abstract-1.jpg
 ---
 
