@@ -5,7 +5,6 @@ description: 'Liste des commandes console utilisées lors du développement d’
 date: 2015-06-12
 language: fr
 cover: ./abstract-1.jpg
-generate-card: false
 tags:
   - Symfony2
   - PHP

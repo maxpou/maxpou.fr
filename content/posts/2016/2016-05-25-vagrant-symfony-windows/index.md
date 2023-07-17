@@ -6,7 +6,6 @@ tags: ['Symfony2', 'PHP']
 language: en
 date: 2016-05-25
 cover: ./header.png
-generate-card: false
 ---
 
 # Vagrant, Symfony and Windows are not incompatibles

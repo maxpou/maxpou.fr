@@ -1,4 +1,5 @@
 import React from 'react'
+
 import Layout from '../components/Resume/Layout'
 import SEO from '../components/Resume/Seo'
 import Resume from '../components/Resume/Resume'

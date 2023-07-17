@@ -2,7 +2,6 @@
 title: 'How to mock Date with Jest'
 slug: jest-mock-date
 cover: ./cover.jpg
-generate-card: false
 language: en
 date: 2019-11-18
 tags:

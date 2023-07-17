@@ -26,12 +26,16 @@ const Preview = styled.article`
   flex: 1 1 300px;
   align-self: stretch;
   background-color: var(--color-secondaryContentBackground);
-  box-shadow: 0 0 0 0, 0 6px 12px rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 0 0 0,
+    0 6px 12px rgba(0, 0, 0, 0.1);
   margin: 20px 20px;
   border-radius: 5px;
 
   &:hover {
-    box-shadow: 0 0 0 0, 0 6px 12px var(--color-grey300);
+    box-shadow:
+      0 0 0 0,
+      0 6px 12px var(--color-grey300);
     transition: all 0.3s ease;
     transform: translate3D(0, -1px, 0);
   }
@@ -73,7 +77,8 @@ const PrevNextPost = props => {
     <Fragment>
       <PreviewContainer>
         {articles.map((article, i) => {
-          const { excerpt, timeToRead } = article.node
+          const { excerpt } = article.node
+          const timeToRead = article.node.fields.timeToRead.text
           const { tags, cover, title, slug, language } =
             article.node.frontmatter
           const image = getImage(cover)

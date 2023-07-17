@@ -6,7 +6,6 @@ date: 2017-03-28
 slug: chaining-filter-js
 language: en
 cover: ./abstract-8.jpg
-generate-card: false
 ---
 
 I recently realize a POC with [Vue.js](https://github.com/maxpou/find-a-room-vuejs2). I was

@@ -55,10 +55,6 @@ module.exports = {
           url: '/speaking',
         },
         {
-          label: 'Portfolio',
-          url: '/portfolio',
-        },
-        {
           label: 'Uses',
           url: '/uses',
         },
@@ -69,6 +65,10 @@ module.exports = {
         {
           label: 'Resume',
           url: '/cv',
+        },
+        {
+          label: 'Readme',
+          url: '/readme',
         },
       ],
     },

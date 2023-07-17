@@ -24,6 +24,6 @@ const Time = props => {
     day: 'numeric',
   })
 
-  return <TimeContainer datetime={yyyymmdd}>{friendlyDate}</TimeContainer>
+  return <TimeContainer dateTime={yyyymmdd}>{friendlyDate}</TimeContainer>
 }
 export default Time

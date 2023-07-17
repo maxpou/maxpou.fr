@@ -9,7 +9,6 @@ date: 2016-01-14
 language: fr
 tags: ['Productivity', 'TimeManagement']
 cover: ./abstract-5.jpg
-generate-card: false
 ---
 
 Entre le [multitasking](https://fr.wikipedia.org/wiki/Multitasking), les mails pro, les

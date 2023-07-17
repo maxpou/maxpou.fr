@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import ContentHeader from './ContentHeader'
-import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer'
 
 const ContentBody = styled.div`
   line-height: 1.6;
@@ -128,17 +127,7 @@ const ContentBody = styled.div`
     border-left: 0.25em solid var(--color-yellow);
   }
 
-  & h1 > code.language-text,
-  & h2 > code.language-text,
-  & h3 > code.language-text,
-  & h4 > code.language-text,
-  & h5 > code.language-text,
-  & h6 > code.language-text,
-  & a > code.language-text,
-  & p > code.language-text,
-  & li > code.language-text,
-  & em > code.language-text,
-  & strong > code.language-text {
+  & code.language-text {
     background: var(--color-beige);
     color: #222222cc;
     padding: 0 3px;
@@ -171,22 +160,16 @@ const ContentBody = styled.div`
   }
 `
 
-class Content extends React.Component {
-  render() {
-    const { content, date, tags, translations } = this.props
+function Content({ children, date, tags, translations }) {
+  return (
+    <section>
+      {(tags || date || translations) && (
+        <ContentHeader date={date} tags={tags} translations={translations} />
+      )}
 
-    return (
-      <section>
-        {(tags || date || translations) && (
-          <ContentHeader date={date} tags={tags} translations={translations} />
-        )}
-
-        <ContentBody>
-          <MDXRenderer>{content}</MDXRenderer>
-        </ContentBody>
-      </section>
-    )
-  }
+      <ContentBody>{children}</ContentBody>
+    </section>
+  )
 }
 
 export default Content

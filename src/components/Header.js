@@ -1,8 +1,7 @@
-/* eslint-disable react-hooks/rules-of-hooks */
-
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+
 import useSiteMetadata from '../hooks/use-site-config'
 import { media } from '../tokens'
 import DarkToggle from './DarkToggle'
@@ -139,7 +138,6 @@ const BurgerButton = styled.button`
   border: none;
   cursor: pointer;
   padding: 8px 12px;
-  /* outline: none; */
   -webkit-tap-highlight-color: transparent;
 
   @media ${media.medium} {
@@ -155,11 +153,12 @@ const BurgerContent = styled.div`
   position: absolute;
   left: 0;
   ${props =>
-    props.isToggledOn
-      ? 'background: transparent'
-      : `background: var(--color-white)`};
+    props.$istoggledon
+      ? 'background: transparent;'
+      : `background: var(--color-white);`}
   transition: all 250ms cubic-bezier(0.86, 0, 0.07, 1);
-  ::before {
+
+  &:before {
     content: '';
     top: -8px;
     width: 24px;
@@ -168,12 +167,12 @@ const BurgerContent = styled.div`
     position: absolute;
     left: 0;
     ${props =>
-      props.isToggledOn
+      props.$istoggledon
         ? 'transform: rotate(45deg); top: 0;'
-        : 'transform: rotate(0)'};
+        : 'transform: rotate(0);'};
     transition: all 250ms cubic-bezier(0.86, 0, 0.07, 1);
   }
-  ::after {
+  &:after {
     top: 8px;
     content: '';
     width: 24px;
@@ -182,9 +181,9 @@ const BurgerContent = styled.div`
     position: absolute;
     left: 0;
     ${props =>
-      props.isToggledOn
+      props.$istoggledon
         ? 'transform: rotate(-45deg); top: 0;'
-        : 'transform: rotate(0)'};
+        : 'transform: rotate(0);'};
     transition: all 250ms cubic-bezier(0.86, 0, 0.07, 1);
   }
 `
@@ -199,7 +198,7 @@ const MobileHeader = ({ headerLinks }) => {
         onClick={toggle}
         aria-label={`${isToggledOn ? 'close menu' : 'open menu'}`}
       >
-        <BurgerContent isToggledOn={isToggledOn} />
+        <BurgerContent $istoggledon={isToggledOn} />
       </BurgerButton>
       {isToggledOn && (
         <MobilePanel>

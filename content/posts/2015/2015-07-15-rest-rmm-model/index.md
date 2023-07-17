@@ -6,7 +6,6 @@ language: fr
 slug: rest-rmm-model
 tags: [REST]
 cover: ./abstract-3.jpg
-generate-card: false
 ---
 
 ## Etat des lieux
@@ -166,7 +165,7 @@ POST /reservation HTTP/1.1
 </livraisonRequest>
 ```
 
-Vous noterez que je mets un "s" à mes collections de ressources comme ceci :  
+Vous noterez que je mets un “s” à mes collections de ressources comme ceci :  
 http://example.org/articles/1 Mais rien ne vous empêche de ne pas en mettre :
 http://example.org/article/1
 
@@ -174,7 +173,7 @@ Essayez cependant de garder une certaine cohérence dans l'ensemble de votre app
 
 Comme expliqué plus haut, il y a une URI par ressource.  
 Donc, si vous souhaitez fournir votre ressource sur différents formats, vous ne **devez pas**
-utiliser des URI de la sorte : /pizzas/id.{format}
+utiliser des URI de la sorte : /pizzas/id.&#123;format&#125;
 
 - /pizzas/123.json
 - /pizzas/123.xml

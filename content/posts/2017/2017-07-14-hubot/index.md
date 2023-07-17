@@ -6,7 +6,6 @@ date: '2017-07-14'
 slug: hubot
 language: fr
 cover: ./hubot_shema.jpg
-generate-card: false
 ---
 
 Je regardais l'autre jour cette conférence d'Alain Hélaïli à propos sur le fonctionnement interne de

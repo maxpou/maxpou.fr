@@ -6,7 +6,6 @@ tags: ['PHP', 'Symfony2']
 slug: utilisez-un-framework-php
 cover: ./abstract-4.jpg
 language: fr
-generate-card: false
 ---
 
 Aujourd'hui je vais vous parler de framework dans l'écosystème PHP.  

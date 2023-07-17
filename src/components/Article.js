@@ -18,24 +18,21 @@ const ArticleFooter = styled.footer`
   border-top: 1px solid #ececec;
 `
 
-class Article extends React.Component {
-  render() {
-    const { post } = this.props
-
-    return (
-      <ArticleWrapper>
-        <Content
-          content={post.body}
-          date={post.frontmatter.date}
-          tags={post.frontmatter.tags}
-          translations={post.frontmatter.translations}
-        />
-        <ArticleFooter>
-          <Bio />
-        </ArticleFooter>
-      </ArticleWrapper>
-    )
-  }
+function Article({ post, children }) {
+  return (
+    <ArticleWrapper>
+      <Content
+        date={post.frontmatter.date}
+        tags={post.frontmatter.tags}
+        translations={post.frontmatter.translations}
+      >
+        {children}
+      </Content>
+      <ArticleFooter>
+        <Bio />
+      </ArticleFooter>
+    </ArticleWrapper>
+  )
 }
 
 export default Article

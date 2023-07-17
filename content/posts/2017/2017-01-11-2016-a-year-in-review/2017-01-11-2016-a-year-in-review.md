@@ -6,7 +6,6 @@ slug: 2016-a-year-in-review
 date: 2017-01-11
 language: en
 cover: ./banner-tree-planting.jpg
-generate-card: false
 ---
 
 2016 just ended, and now it's time to look backwards, evaluate success and failures for 2017. First

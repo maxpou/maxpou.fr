@@ -1,4 +1,5 @@
 const { createFilePath } = require('gatsby-source-filesystem')
+const readingTime = require('reading-time')
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
@@ -13,13 +14,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const allMarkdownQuery = await graphql(`
     {
       allMarkdown: allMdx(
-        sort: { fields: [frontmatter___date], order: DESC }
+        sort: { frontmatter: { date: DESC } }
         filter: { frontmatter: { published: { ne: false } } }
         limit: 1000
       ) {
         edges {
           node {
-            fileAbsolutePath
+            internal {
+              contentFilePath
+            }
+            fields {
+              timeToRead {
+                text
+              }
+            }
             frontmatter {
               title
               slug
@@ -34,7 +42,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               }
               unlisted
             }
-            timeToRead
             excerpt
           }
         }
@@ -59,7 +66,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const markdownFiles = allMarkdownQuery.data.allMarkdown.edges
 
   const posts = markdownFiles.filter(item =>
-    item.node.fileAbsolutePath.includes('/content/posts/')
+    item.node.internal.contentFilePath.includes('/content/posts/')
   )
 
   const listedPosts = posts.filter(
@@ -93,38 +100,27 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       .filter(p => p.node.frontmatter.slug !== post.node.frontmatter.slug)
       .sort(() => 0.5 - Math.random())
     const [previous, next] = shuffleFeaturedPosts.slice(0, 2)
-
     createPage({
       path: post.node.frontmatter.slug,
-      component: BlogPostTemplate,
+      component: `${BlogPostTemplate}?__contentFilePath=${post.node.internal.contentFilePath}`,
       context: {
         slug: post.node.frontmatter.slug,
         previous: previous.node,
         next: next.node,
       },
     })
-
-    // generate post share images (dev only) - comment this part make develop command faster
-    // if (process.env.gatsby_executing_command.includes('develop')) {
-    //   createPage({
-    //     path: `${post.node.frontmatter.slug}/image_share`,
-    //     component: BlogPostShareImage,
-    //     context: {
-    //       slug: post.node.frontmatter.slug,
-    //       width: 440,
-    //       height: 220,
-    //     },
-    //   })
-    // }
   })
 
   // generate pages
   markdownFiles
-    .filter(item => item.node.fileAbsolutePath.includes('/content/pages/'))
+    // here
+    .filter(item =>
+      item.node.internal.contentFilePath.includes('/content/pages/')
+    )
     .forEach(page => {
       createPage({
         path: page.node.frontmatter.slug,
-        component: PageTemplate,
+        component: `${PageTemplate}?__contentFilePath=${page.node.internal.contentFilePath}`,
         context: {
           slug: page.node.frontmatter.slug,
         },
@@ -151,6 +147,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
+
+  if (node.internal.type === `Mdx`) {
+    createNodeField({
+      node,
+      name: `timeToRead`,
+      value: readingTime(node.body),
+    })
+  }
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })

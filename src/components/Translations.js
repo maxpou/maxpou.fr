@@ -19,25 +19,22 @@ const TranslationLink = styled.a`
   text-decoration: underline;
 `
 
-class Translations extends React.Component {
-  render() {
-    const { translations } = this.props
-
-    return (
-      <TranslationContainer>
-        <InfoText>This article also exists in: </InfoText>
-        {translations.map((translation, i) => {
-          return (
-            <Fragment key={`translation-${i}`}>
-              <TranslationLink href={withPrefix(translation.link)}>
-                {translation.language}
-              </TranslationLink>
-              {i < translations.length - 1 ? ', ' : ''}
-            </Fragment>
-          )
-        })}
-      </TranslationContainer>
-    )
-  }
+function Translations({ translations }) {
+  return (
+    <TranslationContainer>
+      <InfoText>This article also exists in: </InfoText>
+      {translations.map((translation, i) => {
+        return (
+          <Fragment key={`translation-${i}`}>
+            <TranslationLink href={withPrefix(translation.link)}>
+              {translation.language}
+            </TranslationLink>
+            {i < translations.length - 1 ? ', ' : ''}
+          </Fragment>
+        )
+      })}
+    </TranslationContainer>
+  )
 }
+
 export default Translations

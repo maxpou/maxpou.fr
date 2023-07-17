@@ -214,8 +214,8 @@ lot! If you want, here's a detailed version of my expenses:
 Canggu deserves it #1 place on Nomad List. I really liked Canggu and the atmosphere! But, I have the
 feeling that Bali is becoming a victim of its own success.
 
-- 🌤 **Weather**. I went there during the rainy season and it wasn't raining that much. Once, I had a
-  12h of heavy rain! Otherwise, I had my ~30°c every day.
+- 🌤 **Weather**. I went there during the rainy season and it wasn't raining that much. Once, I had
+  a 12h of heavy rain! Otherwise, I had my ~30°c every day.
 - 🗣 **Language**. Because it's a touristic place, (almost) everybody speaks English.
 - 🍴 **Food**. Awesome! (cf. Food section above) and the Bali Coffee is great too! (I'm not a big
   fan of Kopi Luwak...)
