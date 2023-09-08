@@ -15,8 +15,24 @@ const MessageWrapper = styled.aside`
   }
 `
 
-const Info = ({ children }) => {
-  return <MessageWrapper>{children}</MessageWrapper>
+const MessageHeader = styled.div`
+  font-weight: bold;
+  & > svg {
+    position: relative;
+    top: 5px;
+    width: 25px;
+    height: 25px;
+    padding-right: 5px;
+  }
+`
+
+const Info = ({ children, title }) => {
+  return (
+    <MessageWrapper>
+      {title && <MessageHeader>{title}</MessageHeader>}
+      {children}
+    </MessageWrapper>
+  )
 }
 
 export default Info
