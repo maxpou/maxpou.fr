@@ -6,7 +6,7 @@ module.exports = {
   authorAvatar: 'avatar.jpeg',
   defaultLang: 'en', // show flag if lang is not default. Leave empty to enable flags in post lists
   authorDescription: `
-  Hey, I'm Maxence Poutord, a software engineer specialized in web technologies. 
+  Hey, I'm Maxence Poutord, a passionate software engineer. 
   In my day-to-day job, I'm working as a senior front-end engineer at Orderfox.
   When I'm not working, you can find me travelling the world or cooking.
   `,

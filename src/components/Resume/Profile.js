@@ -13,6 +13,8 @@ const Content = styled.p`
 `
 
 const ProfileLink = styled(Link)`
+  display: flex;
+  align-items: center;
   & > :first-child {
     margin-right: 3px;
   }

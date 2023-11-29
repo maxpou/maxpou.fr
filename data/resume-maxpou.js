@@ -4,18 +4,18 @@ module.exports = {
     title: 'Software Engineer',
     email: 'hello@maxpou.fr',
     nationality: 'French',
-    age: '32',
+    age: '34',
     website: 'https://www.maxpou.fr',
     cvUrl: 'https://www.maxpou.fr/cv',
     phone: '+353838667354',
-    location: 'Remote (Europe - Paris)',
+    location: 'Paris, France / Remote',
     description: `
-      I'm Maxence, a French Software Engineer with 10 years of experience developing web-based applications. 
+      I'm Maxence, a French Software Engineer with +10 years of experience developing web-based applications. 
       I am a dedicated, hardworking, ambitious person that gets things done, both on my own initiative and within a team. 
       I enjoy challenges and I am not afraid of getting my hands dirty.
       Because knowledge sharing matters to me, I spend a non-negligible part of my time sharing things through blog posts, mentoring sessions or conferences.
     `,
-    lastUpdate: 'May 2022',
+    lastUpdate: 'October 2023',
     profiles: [
       {
         network: 'Twitter',
@@ -37,6 +37,7 @@ module.exports = {
       category: 'Proficient',
       content: [
         'JavaScript',
+        'React.js',
         'Vue.js',
         'Git',
         'Testing (Jest&Testing library)',
@@ -46,18 +47,18 @@ module.exports = {
     {
       category: 'Comfortable',
       content: [
-        'React.js',
-        'Gatsby.js',
+        'Node.js',
+        'NestJS',
+        'TypeScript',
         'CI/CD',
         'Web Performances',
-        'Node.js',
-        'TypeScript',
+        'TailwindCSS',
         'GraphQL',
       ],
     },
     {
       category: 'Familiar',
-      content: ['Docker', 'Firebase', 'Functional Programming'],
+      content: ['Docker', 'Supabase', 'Functional Programming'],
     },
   ],
 
