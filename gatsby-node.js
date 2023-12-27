@@ -6,6 +6,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const BlogPostTemplate = require.resolve('./src/templates/blog-post.js')
   const PageTemplate = require.resolve('./src/templates/page.js')
+  const RecipeTemplate = require.resolve('./src/templates/recipe.js')
   const PostsBytagTemplate = require.resolve('./src/templates/tags.js')
   const ListPostsTemplate = require.resolve(
     './src/templates/blog-list-template.js'
@@ -95,25 +96,24 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
 
   // generate blog posts
-  posts.forEach((post, index, posts) => {
-    const shuffleFeaturedPosts = featuredPosts
-      .filter(p => p.node.frontmatter.slug !== post.node.frontmatter.slug)
-      .sort(() => 0.5 - Math.random())
-    const [previous, next] = shuffleFeaturedPosts.slice(0, 2)
-    createPage({
-      path: post.node.frontmatter.slug,
-      component: `${BlogPostTemplate}?__contentFilePath=${post.node.internal.contentFilePath}`,
-      context: {
-        slug: post.node.frontmatter.slug,
-        previous: previous.node,
-        next: next.node,
-      },
-    })
-  })
+  // posts.forEach((post, index, posts) => {
+  //   const shuffleFeaturedPosts = featuredPosts
+  //     .filter(p => p.node.frontmatter.slug !== post.node.frontmatter.slug)
+  //     .sort(() => 0.5 - Math.random())
+  //   const [previous, next] = shuffleFeaturedPosts.slice(0, 2)
+  //   createPage({
+  //     path: post.node.frontmatter.slug,
+  //     component: `${BlogPostTemplate}?__contentFilePath=${post.node.internal.contentFilePath}`,
+  //     context: {
+  //       slug: post.node.frontmatter.slug,
+  //       previous: previous.node,
+  //       next: next.node,
+  //     },
+  //   })
+  // })
 
   // generate pages
   markdownFiles
-    // here
     .filter(item =>
       item.node.internal.contentFilePath.includes('/content/pages/')
     )
@@ -127,22 +127,37 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
 
-  // generate tag page
+  // generate recipes
   markdownFiles
-    .filter(item => item.node.frontmatter.tags !== null)
-    .reduce(
-      (acc, cur) => [...new Set([...acc, ...cur.node.frontmatter.tags])],
-      []
+    .filter(item =>
+      item.node.internal.contentFilePath.includes('/content/recipes/')
     )
-    .forEach(uniqTag => {
+    .forEach(recipe => {
       createPage({
-        path: `tags/${uniqTag}`,
-        component: PostsBytagTemplate,
+        path: 'kitchen/' + recipe.node.frontmatter.slug,
+        component: `${RecipeTemplate}?__contentFilePath=${recipe.node.internal.contentFilePath}`,
         context: {
-          tag: uniqTag,
+          slug: recipe.node.frontmatter.slug,
         },
       })
     })
+
+  // generate tag page
+  // markdownFiles
+  //   .filter(item => item.node.frontmatter.tags !== null)
+  //   .reduce(
+  //     (acc, cur) => [...new Set([...acc, ...cur.node.frontmatter.tags])],
+  //     []
+  //   )
+  //   .forEach(uniqTag => {
+  //     createPage({
+  //       path: `tags/${uniqTag}`,
+  //       component: PostsBytagTemplate,
+  //       context: {
+  //         tag: uniqTag,
+  //       },
+  //     })
+  //   })
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
