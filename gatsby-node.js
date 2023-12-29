@@ -143,21 +143,21 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
 
   // generate tag page
-  // markdownFiles
-  //   .filter(item => item.node.frontmatter.tags !== null)
-  //   .reduce(
-  //     (acc, cur) => [...new Set([...acc, ...cur.node.frontmatter.tags])],
-  //     []
-  //   )
-  //   .forEach(uniqTag => {
-  //     createPage({
-  //       path: `tags/${uniqTag}`,
-  //       component: PostsBytagTemplate,
-  //       context: {
-  //         tag: uniqTag,
-  //       },
-  //     })
-  //   })
+  markdownFiles
+    .filter(item => item.node.frontmatter.tags !== null)
+    .reduce(
+      (acc, cur) => [...new Set([...acc, ...cur.node.frontmatter.tags])],
+      []
+    )
+    .forEach(uniqTag => {
+      createPage({
+        path: `tags/${uniqTag}`,
+        component: PostsBytagTemplate,
+        context: {
+          tag: uniqTag,
+        },
+      })
+    })
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
