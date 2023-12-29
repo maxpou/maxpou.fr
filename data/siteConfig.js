@@ -94,8 +94,8 @@ module.exports = {
           url: 'https://nomadlist.com/@maxpou',
         },
         {
-          label: 'Dev.to',
-          url: 'https://dev.to/maxpou',
+          label: 'Kitchen',
+          url: './kitchen',
         },
         {
           label: 'RSS',

@@ -40,7 +40,8 @@ export const COLORS = {
   },
   secondaryContentBackground: {
     light: '#f7f7f7',
-    dark: '#3a3a3a',
+    // dark: '#3a3a3a',
+    dark: '#484848',
   },
   wrapperShadow: {
     light: '#0000001a',
