@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Maxence Poutord • Maxpou Blog (FR)]]></title><description><![CDATA[Software engineer • Public speaker • Nomadic worker]]></description><link>https://www.maxpou.fr</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 19 Dec 2023 16:24:46 GMT</lastBuildDate><item><title><![CDATA[About]]></title><description><![CDATA[Hello World! Hey, I’m Maxence Poutord, passionate software engineer, speaker, blogger and mentor. I started coding in my early age, at 11 with the QBasic language. And, +20 years later, I’m still coding!
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Maxence Poutord • Maxpou Blog (FR)]]></title><description><![CDATA[Software engineer • Public speaker • Nomadic worker]]></description><link>https://www.maxpou.fr</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 02 Jan 2024 12:46:37 GMT</lastBuildDate><item><title><![CDATA[About]]></title><description><![CDATA[Hello World! Hey, I’m Maxence Poutord, passionate software engineer, speaker, blogger and mentor. I started coding in my early age, at 11 with the QBasic language. And, +20 years later, I’m still coding!
 
 After 2 years as an expat in Dublin, I became a digital nomad. I started working and living where the WiFi and the sun are (mostly in Southeast Asia). I’m now settled in Paris and I still work remotely.]]></description><link>https://www.maxpou.fr/about</link><guid isPermaLink="false">https://www.maxpou.fr/about</guid></item><item><title><![CDATA[Readme]]></title><description><![CDATA[Hey, I’m Maxence. You can also call me Max if you want. The following contains a user guide for me and how I like to work. This is also what people call “Personal README”. North Star Principles
 Humans come first. Diversity and inclusion. Work-life balance. “Actions speak louder than words”.
@@ -14,10 +14,104 @@ Dictionary Game is a Vue.js application created to improve my english vocabulary
 gatsby-starter-morning-dew
 Sources: github.com/maxpou/gatsby-starter-morning-dew Demo
 
-gatsby-starter-morning-dew is a Gatsby theme and a starter for creating static blog/website. The…]]></description><link>https://www.maxpou.fr/portfolio</link><guid isPermaLink="false">https://www.maxpou.fr/portfolio</guid></item><item><title><![CDATA[Speaking]]></title><description><![CDATA[I love to deliver technical talks. If you want to hear me, just contact me. I can give presentations on the following areas:
+gatsby-starter-morning-dew is a Gatsby theme and a starter for creating static blog/website. The…]]></description><link>https://www.maxpou.fr/portfolio</link><guid isPermaLink="false">https://www.maxpou.fr/portfolio</guid></item><item><title><![CDATA[RSS Feeds]]></title><description><![CDATA[3 RSS feeds are available: maxpou.fr/rss-en.xml: for posts in English only 🇬🇧 - maxpou.fr/rss-fr.xml: for posts in French only 🇫🇷 - maxpou.fr/rss.xml: for posts in English and French -]]></description><link>https://www.maxpou.fr/rss</link><guid isPermaLink="false">https://www.maxpou.fr/rss</guid></item><item><title><![CDATA[Apps, Tools, and Gear I Use]]></title><description><![CDATA[This page is somewhat inspired by Wes Bos’ Uses page. Keep in mind that I’m mostly doing Frontend development and I’m also a nomadic worker. In other words, I’m 100% remote and I travel often. Gear
+MacBook Pro M1 (13-inch) 27” screen (QHD). No dual screen. I’ve found myself more focus with only one screen. Keychron K3 Mechanical keyboard G403 HERO Mouse Herman Miller x Logitech Embody chair Jarvis Bamboo Standing Desk OnePlus Nord (and an old Huawei as a backup) Sony MDR 1000X. A noise…]]></description><link>https://www.maxpou.fr/uses</link><guid isPermaLink="false">https://www.maxpou.fr/uses</guid></item><item><title><![CDATA[Speaking]]></title><description><![CDATA[I love to deliver technical talks. If you want to hear me, just contact me. I can give presentations on the following areas:
 
-Vue.js: I have experience building medium-big sized Vue.js Application; Progressive Web Apps (PWA) and Offline patterns. How to take leverage of new browser capabilities. Building offline first applications. Accessibility (A11y): I worked on application accessibility (A11Y) to meet AA criteria (WCAG); Performances: how to manage your frontend performances and sleep at…]]></description><link>https://www.maxpou.fr/speaking</link><guid isPermaLink="false">https://www.maxpou.fr/speaking</guid></item><item><title><![CDATA[RSS Feeds]]></title><description><![CDATA[3 RSS feeds are available: maxpou.fr/rss-en.xml: for posts in English only 🇬🇧 - maxpou.fr/rss-fr.xml: for posts in French only 🇫🇷 - maxpou.fr/rss.xml: for posts in English and French -]]></description><link>https://www.maxpou.fr/rss</link><guid isPermaLink="false">https://www.maxpou.fr/rss</guid></item><item><title><![CDATA[Apps, Tools, and Gear I Use]]></title><description><![CDATA[This page is somewhat inspired by Wes Bos’ Uses page. Keep in mind that I’m mostly doing Frontend development and I’m also a nomadic worker. In other words, I’m 100% remote and I travel often. Gear
-MacBook Pro M1 (13-inch) 27” screen (QHD). No dual screen. I’ve found myself more focus with only one screen. Keychron K3 Mechanical keyboard G403 HERO Mouse Herman Miller x Logitech Embody chair Jarvis Bamboo Standing Desk OnePlus Nord (and an old Huawei as a backup) Sony MDR 1000X. A noise…]]></description><link>https://www.maxpou.fr/uses</link><guid isPermaLink="false">https://www.maxpou.fr/uses</guid></item><item><title><![CDATA[Monorepo: est-ce que ça vaut le coup?]]></title><description><![CDATA[La tendance actuelle est de diviser nos codebases. Ces dernières années, on a vu apparaître des concepts comme les microservices, les micro-frontends… Et puis à contre-courant, on voit aussi des projets se rassembler sous un seul et unique repository git. On appelle cela des monorepos (ou monorepository).
+Vue.js: I have experience building medium-big sized Vue.js Application; Progressive Web Apps (PWA) and Offline patterns. How to take leverage of new browser capabilities. Building offline first applications. Accessibility (A11y): I worked on application accessibility (A11Y) to meet AA criteria (WCAG); Performances: how to manage your frontend performances and sleep at…]]></description><link>https://www.maxpou.fr/speaking</link><guid isPermaLink="false">https://www.maxpou.fr/speaking</guid></item><item><title><![CDATA[Parmigiana di Melanzane]]></title><description><![CDATA[This is a classic Italian dish made with layers of eggplant. The fact that the eggplant is fried, removed it from the healthy category. Ingredients (for 6 persons)
+2 aubergines ~8 tomatoes 3 cloves of garlic Basil. A lot! Parmigiano Reggiano Mozzarella (1 or 2 balls) Olive oil, salt, pepper
+Steps
+Prepping the eggplant
+Slice the eggplant lengthwise. Slices should be 0.5 - 0.8cm thick To drain the water, salt both sides of the slices and place them in a grid. After ~30min to 1 hour, rinse them…]]></description><link>https://www.maxpou.fr/Parmigiana-di-Melanzane-a36a5977e3c54af5b0a4a2f3e1baa7ff</link><guid isPermaLink="false">https://www.maxpou.fr/Parmigiana-di-Melanzane-a36a5977e3c54af5b0a4a2f3e1baa7ff</guid><pubDate>Tue, 17 Oct 2023 15:53:00 GMT</pubDate></item><item><title><![CDATA[Homemade pasta]]></title><description><![CDATA[Ingredients 1 large egg for 100g flour (type 00). Add a bit more for dusting pinch of salt
+Preparation
+mix all ingredients till you have something homogeneous let the dough rest for 30mins pass the pasta to the pasta machine
+Variants
+Mixing flours
+
+Durum wheat semolina or dark flour ⚠️ When using another type of flour, always mix it with type 00 flour. (keep a 50%/50% ratio)
+
+Full egg yolks
+
+If you remove egg whites, you will have to get ~50-60g of egg yolk per 100g of flour.
+
+Green tagliatelle…]]></description><link>https://www.maxpou.fr/Homemade-pasta-a46e9b53af6e492893e93743f43f6dec</link><guid isPermaLink="false">https://www.maxpou.fr/Homemade-pasta-a46e9b53af6e492893e93743f43f6dec</guid><pubDate>Tue, 17 Oct 2023 15:35:00 GMT</pubDate></item><item><title><![CDATA[Curry coco]]></title><description><![CDATA[Ingredients: (3/4 persons) 1 can of coconut milk or coco cream (400ml) 1 big onion (diced) Curry paste (~3 tablespoon) + curry powder & garam masala Chickpeas (400g) Spinaches (200g) 1-2 sweet potatoes 2-3 garlic cloves Ginger (2 - 2.5cm) Tomato paste (1 tablespoon) water or veggie stock (60ml) 1 hot chili pepper Coco oil salt, pepper
+Optional ingredients
+tomatoes cauliflower Potatoes (as replacement for sweet potatoe)
+Steps
+Temper spices. Add the curry paste and the diced onion. 5mins Add…]]></description><link>https://www.maxpou.fr/Curry-coco-c5d3ce208702432782c01e19b9357880</link><guid isPermaLink="false">https://www.maxpou.fr/Curry-coco-c5d3ce208702432782c01e19b9357880</guid><pubDate>Tue, 29 Aug 2023 15:27:00 GMT</pubDate></item><item><title><![CDATA[Hulk Burger (broccoli patties)]]></title><description><![CDATA[Ingredients: (4 persons) 500g of broccoli 2 slices of soft bread 1 egg 100g of dry mozzarella 1 shallot 1 clove of garlic cayenne pepper salt, pepper
+Steps
+Roughly cut the broccoli (keep the small trunks but remove the big ones). Put the broccoli in a pot of salted water. Boil for 10mins. Then plunge them in ice water to stop the vegetables from cooking. Drying the broccoli with a tea towel. Toast the bread. Mince the shallot and the garlic. Put all the ingredients in a food processor and mix…]]></description><link>https://www.maxpou.fr/Hulk-Burger-broccoli-patties-7d2197f460e84034abd5faef83a8e8e4</link><guid isPermaLink="false">https://www.maxpou.fr/Hulk-Burger-broccoli-patties-7d2197f460e84034abd5faef83a8e8e4</guid><pubDate>Thu, 29 Jun 2023 13:30:00 GMT</pubDate></item><item><title><![CDATA[Karē ,Raisu (Japanese curry)]]></title><description><![CDATA[This curry is traditionally made with chicken (fried) but I prefer this vegetarian version. Ingredients
+3/4 potatoes 3 carrots 2 onions 100g of mushrooms (brown or shiitake) 1 apple Soy sauce (4 spoons) 2-3 garlic cloves 50g flour / 50g butter curry powder, garam masala 1 spoon of tomato paste Water (1.5L) with chicken stock Rice
+Steps
+
+The roux:
+
+I recommend starting this step while the stew cook. In a pot, melt the butter. Once it’s melted, add the flour. Cook for 2 minutes and then, add the…]]></description><link>https://www.maxpou.fr/Kar-Raisu-Japanese-curry-0a89722af42548b2862ab0de34701801</link><guid isPermaLink="false">https://www.maxpou.fr/Kar-Raisu-Japanese-curry-0a89722af42548b2862ab0de34701801</guid><pubDate>Sun, 21 May 2023 10:08:00 GMT</pubDate></item><item><title><![CDATA[Beans & Tomatoes]]></title><description><![CDATA[This is an easy-to-prepare dish that I like to prepare when I have limited time. Ingredients (2 persons)
+3x Tomatoes 260g Beans (1 can) Parsley Garlic (4 cloves) 1 cayenne pepper
+Steps
+In a pan, add some neutral oil. Once it’s hot add the diced garlic. Cook for 3mins. While it’s cooking, dice the tomatoes and chop the cayenne pepper. Add the tomatoes, the pepper, the beans and 50ml of water. Cook until water is reduced and the sauce has the right consistency. When it’s ready, add the parsley…]]></description><link>https://www.maxpou.fr/Beans-Tomatoes-e31925a8440b4427ab254a4ba1b67c49</link><guid isPermaLink="false">https://www.maxpou.fr/Beans-Tomatoes-e31925a8440b4427ab254a4ba1b67c49</guid><pubDate>Fri, 19 May 2023 21:09:00 GMT</pubDate></item><item><title><![CDATA[Oyster Mushroom and tagliatelle]]></title><description><![CDATA[Ingredients: (2 persons) Pasta (tagliatelle) Oyster Mushroom (200g) White wine (~1 glass) garlic (~4 cloves) 10cl cream Espelette pepper salt, pepper and parsley Optional: parmesan cheese]]></description><link>https://www.maxpou.fr/Oyster-Mushroom-and-tagliatelle-faa5494eb64f4323b1e5ace96ec0689a</link><guid isPermaLink="false">https://www.maxpou.fr/Oyster-Mushroom-and-tagliatelle-faa5494eb64f4323b1e5ace96ec0689a</guid><pubDate>Fri, 19 May 2023 19:29:00 GMT</pubDate></item><item><title><![CDATA[Gnocchis & Mushrooms]]></title><description><![CDATA[Ingredients: (4 persons) For the Gnocchis:
+
+1kg of potatoes ~300g of flour 2 eggs yolk olive oil nutmeg (optional), salt
+
+For the recipe:
+
+400g of mushroom. Preferably Chanterelles but Brown are fine too. 2 garlic cloves Parmesan cheese parsley (for the colour), salt, and pepper.
+Steps - Gnocchis
+put the potatoes in the oven for ~40 minutes. Side note: cooking potatoes in a pan with water is not recommended because we want to avoid water as much as possible. Mash the potatoes (with a ricer if…]]></description><link>https://www.maxpou.fr/Gnocchis-Mushrooms-bccc91049b8443e2bc8c0dad58841149</link><guid isPermaLink="false">https://www.maxpou.fr/Gnocchis-Mushrooms-bccc91049b8443e2bc8c0dad58841149</guid><pubDate>Wed, 15 Mar 2023 12:25:00 GMT</pubDate></item><item><title><![CDATA[Tomato curry]]></title><description><![CDATA[Ingredients 800g tomatoes 200g chickpeas Spinaches 2 cloves of garlic, Curry paste
+Steps
+in a hot pan, temper the spices add the chopped tomatoes with 100ml of water simmer for ~10 mins add chickpeas and the spinaches simmer for another ~10 mins
+
+Serve with rice]]></description><link>https://www.maxpou.fr/Tomato-curry-4db1bbf7d1474ec8bb95c4b746c5afb9</link><guid isPermaLink="false">https://www.maxpou.fr/Tomato-curry-4db1bbf7d1474ec8bb95c4b746c5afb9</guid><pubDate>Sun, 26 Feb 2023 12:50:00 GMT</pubDate></item><item><title><![CDATA[Pasta alla Norcina]]></title><description><![CDATA[This is a creamy pasta dish from the Umbrian town of Norcia, Italy. Ingredients: (for 2 persons)
+300g of pasta (type rigatoni) 3 cloves of garlic 300g of brown mushroom 1 onion 2 flavourful sausages 2 large spoons of crème fraîche OR ricotta 100g Parmigiano Reggiano A glass of white wine Salt, pepper.
+
+Optional:
+
+Parsley Espelette pepper Shaved black truffles (optional)
+Steps
+Finely dice the onion, garlic and mushroom In a hot pan, add the onion then 3 minutes after the garlic Add the…]]></description><link>https://www.maxpou.fr/Pasta-alla-Norcina-6988cf2ac918448b9f94d7c4675acbed</link><guid isPermaLink="false">https://www.maxpou.fr/Pasta-alla-Norcina-6988cf2ac918448b9f94d7c4675acbed</guid><pubDate>Fri, 24 Feb 2023 13:44:00 GMT</pubDate></item><item><title><![CDATA[Creamy mushroom&eggplants]]></title><description><![CDATA[Ingredients Mushrooms Yellow pepper Spinaches 1/2 or small Eggplant 2 cloves of garlic 1 onion Parsley Cream (creme fraiche or soy cream) Salt, pepper
+Steps
+in a pan, put the garlic and then the onion (3 minutes) then add aubergine (5 minutes) then add pepper (3 minutes) add the rest until it’s fully cooked
+
+Can be served with rice or pasta.]]></description><link>https://www.maxpou.fr/Creamy-mushroom-eggplants-49deb2b6e12747209f62431e9442e29a</link><guid isPermaLink="false">https://www.maxpou.fr/Creamy-mushroom-eggplants-49deb2b6e12747209f62431e9442e29a</guid><pubDate>Tue, 10 Jan 2023 18:40:00 GMT</pubDate></item><item><title><![CDATA[Dahl - red lentil]]></title><description><![CDATA[This dahl is inspired by a recipe from Yotam Ottolenghi (”Lentil tomato soup with curry and coconut”) in his cookbook Simple. Ingredients: (3/4 persons)
+200g red lentils 1 can of coco milk or coco cream (400ml) 1 can of tomato w/ pulp (400ml) Coco oil 1 diced onion Curry paste(~1-2 tablespoon) 2-3 garlic cloves Ginger (2 - 2.5cm) water (60ml) Coriander (with stems!) salt, pepper
+Steps
+temper spices add onion - 3mins add garlic & ginger - 5mins add lentils + water + tomato + coriander stems…]]></description><link>https://www.maxpou.fr/Dahl-red-lentil-94a5d01518c94940ac14973161532499</link><guid isPermaLink="false">https://www.maxpou.fr/Dahl-red-lentil-94a5d01518c94940ac14973161532499</guid><pubDate>Tue, 10 Jan 2023 18:40:00 GMT</pubDate></item><item><title><![CDATA[Lasagna (vegetarian)]]></title><description><![CDATA[Ingredients: (6 persons) mozzarella lasagnes sheets Tomato sauce - 800g fresh tomatoes - 2 onions - 1 carrot - 3-4 cloves of garlic - olive oil - fresh basil or rosemary or
+Variant: add 1 zucchini
+Béchamel sauce - 50g flour - 50g butter - 60cl milk - salt - pepper - grated nutmeg
+alternative: 2 greek yoghurt - 10cl water and nutmeg
+Emmental on top (for grated aspect)]]></description><link>https://www.maxpou.fr/Lasagna-vegetarian-64790e0001ef4d9ea4011ce2aed616d3</link><guid isPermaLink="false">https://www.maxpou.fr/Lasagna-vegetarian-64790e0001ef4d9ea4011ce2aed616d3</guid><pubDate>Tue, 10 Jan 2023 18:40:00 GMT</pubDate></item><item><title><![CDATA[Lemon Spaghetti (+ Shrimps)]]></title><description><![CDATA[The shrimps (optional) Ingredients:
+~10 shrimps 1 lemon juice Olive oil salt+pepper fresh leave of basil (if you have)
+Steps:
+prepare a marinade with lemon, olive oil, and basil. Salt+pepper. marinade for a minimum of 1 hour (up to 8) saute for a ~3 minutes
+Lemon Spaghetti
+Ingredients:
+spaghetti (or linguini) 1 lemon (organic) 4-5 garlic cloves cream salt+pepper parsley
+Steps:
+prepare a pan of water. Once it’s boiling, add the pasta. slice the garlic (no need to chop it!), get the zest of…]]></description><link>https://www.maxpou.fr/Lemon-Spaghetti-Shrimps-dde4d8fb979b4606b9e3624edb38552f</link><guid isPermaLink="false">https://www.maxpou.fr/Lemon-Spaghetti-Shrimps-dde4d8fb979b4606b9e3624edb38552f</guid><pubDate>Tue, 10 Jan 2023 18:40:00 GMT</pubDate></item><item><title><![CDATA[Poke bowl]]></title><description><![CDATA[Ingredients: (per person) carrot 1/2 avocado salmon mango rice (50 - 60g) edamame sesame seeds
+Salmon Marination
+dice the salmon add the juice of 2 lemons (green) soy sauce
+
+Rest for 30min to 1 hour. If you marinate it for longer, the salmon will start to cook itself in the marinade.
+
+Variant
+radish purple cabbage cucumber mango can be replaced with pineapple raw cashews]]></description><link>https://www.maxpou.fr/Poke-bowl-6a28576b74334506b0148697098d936c</link><guid isPermaLink="false">https://www.maxpou.fr/Poke-bowl-6a28576b74334506b0148697098d936c</guid><pubDate>Tue, 10 Jan 2023 18:40:00 GMT</pubDate></item><item><title><![CDATA[Fried rice]]></title><description><![CDATA[I usually do this recipe when I want to finish what’s in the fridge. That’s why most of the ingredients are optional. Base ingredients
+Rice Egg ~ 1 per person 3 cloves of garlic Soy sauce Parsley
+Optional ingredients
+Peas Chilli pepper Broccoli Ginger Red pepper
+Steps
+in a pan make an omelette with the egg. Once it’s ready, remove it from the pan. Chop it roughly. in the same pan (now empty), add garlic then add your veggies (pepper/broccoli/…) when it’s cooked, add the rice and the egg(s)…]]></description><link>https://www.maxpou.fr/Fried-rice-ca00d26cafda4a419c11cf9cd192844c</link><guid isPermaLink="false">https://www.maxpou.fr/Fried-rice-ca00d26cafda4a419c11cf9cd192844c</guid><pubDate>Tue, 10 Jan 2023 18:40:00 GMT</pubDate></item><item><title><![CDATA[Rice and Curry]]></title><description><![CDATA[I got this recipe during a cooking lesson in a place called Matey Hut in Ella, Sri Lanka. All curries are listed from the middle-top, then going clockwise.
+
+Okra curry (Ladyfingers)
+100 grams okra 1 teaspoon raw curry powder 1/4 teaspoon Tumeric powder 1/2 salt 1/2 teaspoon cinnamon 1 teaspoon onion chopped 1 teaspoon Garlic 1 teaspoon green chilli 1 teaspoon of curry leaves 1 cup of coconut milk
+
+Steps: Take a pan and out cut okra and all the other ingredients, add coconut milk too cook until…]]></description><link>https://www.maxpou.fr/Rice-and-Curry-0280f758786141c19b0a47532c8f1d1e</link><guid isPermaLink="false">https://www.maxpou.fr/Rice-and-Curry-0280f758786141c19b0a47532c8f1d1e</guid><pubDate>Tue, 10 Jan 2023 18:40:00 GMT</pubDate></item><item><title><![CDATA[Red wine risotto]]></title><description><![CDATA[Ingredients: (2 persons) Risotto rice 1 bottle of red wine (merlot is good) - use half for the risotto, half for you when you prepare 4 Shallots (2 for decoration) vegetable stock (also work with chicken) 2 garlic cloves Butter Parmesan parsley or thyme (2 options)
+Steps
+Rince rice in a pan, heat stock dice shallots + garlic cloves in a different pan, put butter (and a bit of oil so butter doesn’t burn) add shallots + garlic + thyme add rice (rinsed) + red wine add stock (when needed) when it…]]></description><link>https://www.maxpou.fr/Red-wine-risotto-b873e7f2c22742c48f7e186011a58ce5</link><guid isPermaLink="false">https://www.maxpou.fr/Red-wine-risotto-b873e7f2c22742c48f7e186011a58ce5</guid><pubDate>Tue, 10 Jan 2023 18:40:00 GMT</pubDate></item><item><title><![CDATA[Thai soup]]></title><description><![CDATA[Thai soups (or “tom kha kai”) are often made with chicken or shrimp. This one is a vegetarian version. Most of the ingredients are optional because this is one of my go-to dishes to empty my fridge of vegetables. Ingredients
+
+The basics:
+
+1 can of Coco milk vegetable stock (the equivalent of the coconut milk can) 1 tablespoon of curry paste (red/green) 1 tablespoon of grated ginger fresh cilantro lime juice (~1 lime) fish sauce (1 teaspoon) lemongrass [Optional] 1 cayenne pepper (or half)
+
+The…]]></description><link>https://www.maxpou.fr/Thai-soup-4f4e0dfa0be4473ab7f388a83aae58fb</link><guid isPermaLink="false">https://www.maxpou.fr/Thai-soup-4f4e0dfa0be4473ab7f388a83aae58fb</guid><pubDate>Tue, 10 Jan 2023 18:40:00 GMT</pubDate></item><item><title><![CDATA[Monorepo: est-ce que ça vaut le coup?]]></title><description><![CDATA[La tendance actuelle est de diviser nos codebases. Ces dernières années, on a vu apparaître des concepts comme les microservices, les micro-frontends… Et puis à contre-courant, on voit aussi des projets se rassembler sous un seul et unique repository git. On appelle cela des monorepos (ou monorepository).
 
 Ça va faire pas loin de 2 ans maintenant que j’en utilise et maintient un. Cet article est un condensé de ce que j’aime et n’aime pas avec les monorepos.
 
