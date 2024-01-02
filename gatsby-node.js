@@ -96,21 +96,21 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
 
   // generate blog posts
-  // posts.forEach((post, index, posts) => {
-  //   const shuffleFeaturedPosts = featuredPosts
-  //     .filter(p => p.node.frontmatter.slug !== post.node.frontmatter.slug)
-  //     .sort(() => 0.5 - Math.random())
-  //   const [previous, next] = shuffleFeaturedPosts.slice(0, 2)
-  //   createPage({
-  //     path: post.node.frontmatter.slug,
-  //     component: `${BlogPostTemplate}?__contentFilePath=${post.node.internal.contentFilePath}`,
-  //     context: {
-  //       slug: post.node.frontmatter.slug,
-  //       previous: previous.node,
-  //       next: next.node,
-  //     },
-  //   })
-  // })
+  posts.forEach((post, index, posts) => {
+    const shuffleFeaturedPosts = featuredPosts
+      .filter(p => p.node.frontmatter.slug !== post.node.frontmatter.slug)
+      .sort(() => 0.5 - Math.random())
+    const [previous, next] = shuffleFeaturedPosts.slice(0, 2)
+    createPage({
+      path: post.node.frontmatter.slug,
+      component: `${BlogPostTemplate}?__contentFilePath=${post.node.internal.contentFilePath}`,
+      context: {
+        slug: post.node.frontmatter.slug,
+        previous: previous.node,
+        next: next.node,
+      },
+    })
+  })
 
   // generate pages
   markdownFiles
@@ -143,21 +143,21 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
 
   // generate tag page
-  // markdownFiles
-  //   .filter(item => item.node.frontmatter.tags !== null)
-  //   .reduce(
-  //     (acc, cur) => [...new Set([...acc, ...cur.node.frontmatter.tags])],
-  //     []
-  //   )
-  //   .forEach(uniqTag => {
-  //     createPage({
-  //       path: `tags/${uniqTag}`,
-  //       component: PostsBytagTemplate,
-  //       context: {
-  //         tag: uniqTag,
-  //       },
-  //     })
-  //   })
+  markdownFiles
+    .filter(item => item.node.frontmatter.tags !== null)
+    .reduce(
+      (acc, cur) => [...new Set([...acc, ...cur.node.frontmatter.tags])],
+      []
+    )
+    .forEach(uniqTag => {
+      createPage({
+        path: `tags/${uniqTag}`,
+        component: PostsBytagTemplate,
+        context: {
+          tag: uniqTag,
+        },
+      })
+    })
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {

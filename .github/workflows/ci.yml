@@ -8,10 +8,10 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: 18
       - run: npm ci
-      - run: npm run build
       - run: npm run format
+      - run: npm run build
 
   # see: https://github.com/GoogleChrome/lighthouse-ci
   lighthouseci:
@@ -33,7 +33,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: 18
       - run: npm ci
       - run: npm run build
       - name: Deploy
