@@ -15,7 +15,7 @@ module.exports = {
       I enjoy challenges and I am not afraid of getting my hands dirty.
       Because knowledge sharing matters to me, I spend a non-negligible part of my time sharing things through blog posts, mentoring sessions or conferences.
     `,
-    lastUpdate: 'October 2023',
+    lastUpdate: 'December 2023',
     profiles: [
       {
         network: 'Twitter',
@@ -90,7 +90,7 @@ module.exports = {
       location: 'Remote (Europe)',
       activities: [
         'Migrated a web application to Typescript/React',
-        'Improved performances index (50 to 90 lighthouse score)',
+        'Improved the performance index (50 to 90 lighthouse score)',
         'Led the migration of the main application from a REST-style to GraphQL',
       ],
     },
