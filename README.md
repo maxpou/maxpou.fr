@@ -2,7 +2,7 @@
 
 # maxpou.fr
 
-My website built with Gatsby.
+My website built with Astro.
 
 If you find a typo, pull requests are welcome. Thank you ♥
 
@@ -34,9 +34,8 @@ Previously: [gatsby-starter-morning-dew](https://github.com/maxpou/gatsby-starte
 
 ## Inspirations
 
-- [jekyll-theme-hpstr](https://mmistakes.github.io/jekyll-theme-hpstr/) ~ this blog started with a
-  fork from this project.
-- https://www.lengstorf.com/blog ~ structure/code
-- https://loige.co ~ structure/code/design
+- [jekyll-theme-hpstr](https://mmistakes.github.io/jekyll-theme-hpstr/) ~ this blog started 10y ago
+  with a fork from this project.
+- [Astro template blog](https://github.com/withastro/astro/tree/latest/examples/blog) ~ code
+- https://loige.co ~ code
 - https://ghost.org/blog ~ design
-- https://mxb.dev ~ code (webmentions)

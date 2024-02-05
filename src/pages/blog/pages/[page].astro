@@ -1,0 +1,37 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content'
+import Layout from '../../../components/Layout.astro'
+import BlogCard from '../../../components/BlogCard.astro'
+import { type Page, type PaginateFunction } from 'astro'
+import Pagination from '../../../components/Pagination.astro'
+import { PAGE_SIZE } from '../../../consts'
+
+type GetStaticPathsArgs = { paginate: PaginateFunction }
+
+export async function getStaticPaths({ paginate }: GetStaticPathsArgs) {
+  const posts = (await getCollection('blog'))
+    .filter(post => !post.data.unlisted)
+    .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+
+  return paginate(posts, { pageSize: PAGE_SIZE })
+}
+
+type Props = {
+  page: Page<CollectionEntry<'blog'>>
+}
+
+const { page } = Astro.props
+---
+
+<Layout
+  title=`Maxence Poutord's Blog - Page ${page.currentPage}`
+  description={`Maxence Poutord's articles, page ${page.currentPage} of ${page.lastPage}`}
+  seo={{
+    type: 'article',
+  }}
+>
+  <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+    {page.data.map(post => <BlogCard post={post} />)}
+  </div>
+  <Pagination page={page} />
+</Layout>

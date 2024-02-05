@@ -1,0 +1,103 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+import FormattedDate from '../components/FormattedDate.astro'
+import Layout from '../components/Layout.astro'
+import HeroImage from '../components/HeroImage.astro'
+import PageTitle from '../components/PageTitle.astro'
+import { SITE_OWNER } from '../consts'
+
+type Props = CollectionEntry<'blog'>['data']
+type Translations = CollectionEntry<'blog'>['data']['translations']
+
+function formatBlogTranslation(
+  translations: Translations,
+): { url: string; lang: string }[] {
+  return (
+    translations
+      ?.filter(t => t.hreflang !== undefined)
+      .map(t => ({
+        lang: t.hreflang || 'en',
+        url: t.link.startsWith('../')
+          ? `${Astro.url.origin}${t.link.replace('../', '/blog/')}/`
+          : t.link,
+      })) || []
+  )
+}
+
+const {
+  title,
+  description,
+  date,
+  modified,
+  cover,
+  translations,
+  language,
+  tags,
+  imageShare,
+} = Astro.props
+
+const formattedTranslations = formatBlogTranslation(translations)
+---
+
+<Layout
+  title={title}
+  description={description || `A blog post written by ${SITE_OWNER}`}
+  lang={language}
+  translations={formattedTranslations}
+  seo={{
+    type: 'article',
+    ogImage: imageShare?.src,
+  }}
+>
+  <article>
+    <HeroImage alt={`Cover picture for ${title}`} src={cover} />
+    <div class="container m-auto text-center">
+      <div class="mt-3 text-blueGreyed dark:text-gray-300">
+        <FormattedDate date={date} />
+        {
+          modified && (
+            <span>
+              - Last updated on <FormattedDate date={modified} />
+            </span>
+          )
+        }
+      </div>
+      <PageTitle>{title}</PageTitle>
+      <div class="pb-6">
+        {
+          tags.map(tag => {
+            return (
+              <a
+                href={`/tags/${tag}`}
+                class="mr-2 inline-block rounded-lg bg-darkBlue px-3 py-2 text-sm text-white no-underline hover:bg-blueGreyed dark:bg-blueGreyed dark:hover:bg-darkBlue"
+              >
+                {tag}
+              </a>
+            )
+          })
+        }
+        {
+          translations && (
+            <div class="text-md rounded-lg border border-darkBlue bg-lightYellow p-3 text-left mt-5 dark:text-gray-600 m-auto w-[720px] max-w-full">
+              This article also exists in:{' '}
+              {translations.map((translation, i) => {
+                return (
+                  <Fragment key={`translation-${i}`}>
+                    <a href={translation.link} class="underline">
+                      {translation.language}
+                    </a>
+                    {i < translations.length - 1 ? ', ' : ''}
+                  </Fragment>
+                )
+              })}
+            </div>
+          )
+        }
+      </div>
+    </div>
+    <div class="m-auto w-[720px] max-w-full">
+      <slot />
+    </div>
+  </article>
+</Layout>

@@ -6,7 +6,7 @@
   "author": "Maxence Poutord <maxence.poutord@gmail.com>",
   "homepage": "https://www.maxpou.fr",
   "keywords": [
-    "gatsby",
+    "Astro",
     "blog"
   ],
   "license": "MIT",
@@ -18,47 +18,33 @@
     "url": "https://github.com/maxpou/maxpou.fr/issues"
   },
   "scripts": {
-    "start": "gatsby develop",
-    "gatsby": "gatsby",
-    "import-recipes": "node scripts/import-recipes.js && prettier --write 'content/recipes/*.mdx'",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write 'src/**/*.{js,json}' 'data/siteConfig.js' 'gatsby-*.js' 'content/**/*.{md,mdx}'",
-    "build": "gatsby build",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "dev": "astro dev",
+    "deploy": "astro check && astro build && gh-pages -d dist",
+    "import-recipes": "node scripts/import-recipes.cjs && prettier --write 'src/content/recipes/*.mdx'",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "format": "prettier --write .",
+    "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/check": "^0.5.4",
+    "@astrojs/mdx": "^2.1.1",
+    "@astrojs/preact": "^3.1.0",
+    "@astrojs/rss": "^4.0.5",
+    "@astrojs/sitemap": "^3.0.5",
+    "@astrojs/tailwind": "^5.1.0",
     "@notionhq/client": "^2.2.14",
-    "babel-plugin-styled-components": "^2.0.7",
-    "gatsby": "^5.11.0",
-    "gatsby-plugin-feed": "^5.11.0",
-    "gatsby-plugin-image": "^3.11.0",
-    "gatsby-plugin-manifest": "^5.11.0",
-    "gatsby-plugin-mdx": "^5.11.0",
-    "gatsby-plugin-page-creator": "^5.11.0",
-    "gatsby-plugin-plausible": "^0.0.7",
-    "gatsby-plugin-react-helmet": "^6.11.0",
-    "gatsby-plugin-sharp": "^5.11.0",
-    "gatsby-plugin-sitemap": "^6.11.0",
-    "gatsby-plugin-styled-components": "^6.11.0",
-    "gatsby-remark-autolink-headers": "^6.11.0",
-    "gatsby-remark-copy-linked-files": "^6.11.0",
-    "gatsby-remark-images": "^7.11.0",
-    "gatsby-remark-prismjs": "^7.11.0",
-    "gatsby-remark-responsive-iframe": "^6.11.0",
-    "gatsby-remark-smartypants": "^6.11.0",
-    "gatsby-source-filesystem": "^5.11.0",
-    "gatsby-transformer-remark": "^6.11.0",
-    "gatsby-transformer-sharp": "^5.11.0",
+    "@tailwindcss/typography": "^0.5.10",
+    "astro": "^4.4.0",
+    "astro-expressive-code": "^0.32.4",
     "notion-to-md": "^3.1.1",
-    "prismjs": "^1.27.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
-    "reading-time": "^1.5.0",
-    "styled-components": "^6.0.3",
-    "terser": "^4.6.11"
+    "preact": "^10.19.5",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3"
   },
   "devDependencies": {
-    "prettier": "^3.0.0"
+    "prettier": "^3.2.4",
+    "prettier-plugin-astro": "^0.13.0"
   }
 }

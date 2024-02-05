@@ -1,0 +1,18 @@
+---
+import TwitterIcon from '../icons/TwitterIcon'
+---
+
+<a
+  class="not-prose inline-flex rounded border
+    font-semibold no-underline
+    transition-colors duration-200 ease-in-out px-3 py-2
+    border-[#1da1f2] bg-[#1da1f2] text-white
+    hover:border-[#1da1f2] hover:bg-white hover:text-[#1da1f2]"
+  rel="noopener"
+  target="_blank"
+  href={`https://twitter.com/intent/follow?screen_name=_maxpou`}
+>
+  <TwitterIcon class="h-6 w-6 pr-2" />
+  Follow @_maxpou
+  <slot />
+</a>

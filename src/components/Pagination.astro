@@ -1,0 +1,42 @@
+---
+import type { Page } from 'astro'
+import type { CollectionEntry } from 'astro:content'
+
+type Props = {
+  page: Page<CollectionEntry<any>>
+}
+
+const { page } = Astro.props
+---
+
+<div class="flex items-center justify-between mt-4">
+  {
+    page.url.prev ? (
+      <a
+        href={page.currentPage === 2 ? '/blog' : page.url.prev}
+        class="bg-gray-500 text-white border-gray-500 hover:bg-white hover:text-gray-500
+        dark:bg-gray-600 dark:border-gray-600 dark:border-bg-gray-600 dark:hover:bg-white
+        p-2 rounded min-w-32 text-center border transition-none"
+      >
+        ‹ Newer posts
+      </a>
+    ) : (
+      <span />
+    )
+  }
+  <p>Page {page.currentPage} of {page.lastPage}</p>
+  {
+    page.url.next ? (
+      <a
+        href={page.url.next}
+        class="bg-gray-500 text-white border-gray-500 hover:bg-white hover:text-gray-500
+        dark:bg-gray-600 dark:border-gray-600 dark:border-bg-gray-600 dark:hover:bg-white
+        p-2 rounded min-w-32 text-center border transition-none"
+      >
+        Older posts ›
+      </a>
+    ) : (
+      <span />
+    )
+  }
+</div>

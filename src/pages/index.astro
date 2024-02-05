@@ -1,0 +1,98 @@
+---
+import { getCollection } from 'astro:content'
+import { Image } from 'astro:assets'
+import Layout from '../components/Layout.astro'
+import Prose from '../components/Prose.astro'
+import { SITE_DESCRIPTION } from '../consts'
+import BlogCard from '../components/BlogCard.astro'
+import ProfilePicture from '../assets/profile-picture.jpeg'
+import GithubIcon from '../components/icons/Github'
+import { projects } from '../content/projects'
+
+const posts = (await getCollection('blog'))
+  .filter(post => !post.data.unlisted)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+
+const highlightedPosts = posts.slice(0, 5)
+---
+
+<Layout
+  title={'Maxence Poutord - Software engineer • Technical speaker • Nomadic worker'}
+  description={SITE_DESCRIPTION}
+  seo={{
+    type: 'website',
+  }}
+>
+  <Prose>
+    <h1 class="dark:text-mainYellow">Hello! I'm Maxence.</h1>
+    <div class="flex flex-col md:flex-row gap-5 max-w-[720px] mx-auto mt-12">
+      <div class="flex justify-center md:justify-normal">
+        <Image
+          class="not-prose h-32 w-32 min-w-32 object-cover rounded-full"
+          width={96}
+          height={96}
+          src={ProfilePicture}
+          alt="Maxence Poutord Profile picture"
+        />
+      </div>
+      <div>
+        <p class="!mt-0 text-xl">
+          I am a French Software Engineer, a technical speaker and a nomadic
+          worker. My expertise lies primarily in the development of web
+          applications with more than 10 years of experience.
+        </p>
+        <a href="/about" class="text-xl">Read more about me &rarr;</a>
+      </div>
+    </div>
+
+    <h2>Recently Published</h2>
+    <div class="not-prose grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {
+        highlightedPosts.map(post => (
+          <BlogCard post={post} firstBigger={false} />
+        ))
+      }
+      <a
+        href="/blog/pages/1"
+        class:list={[
+          'ease flex flex-col rounded-lg bg-white transition duration-300 dark:bg-gray-500',
+          'hover:translate-y-0.5 shadow-md  hover:shadow-xl',
+          'justify-center items-center p-4 text-center',
+        ]}
+      >
+        See all {posts.length} posts from the blog &rarr;
+      </a>
+    </div>
+
+    <h2>Featured Projects</h2>
+    <div class="not-prose grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {
+        projects.map(({ name, image, description, url }) => (
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-white dark:bg-gray-500 rounded-lg shadow-md hover:shadow-xl transition duration-300 ease-in-out flex flex-col"
+          >
+            <Image
+              src={image}
+              alt={`${name} description image`}
+              width={420}
+              height={224}
+              class="h-56 w-full rounded-b-none rounded-t-lg object-cover transition bg-white"
+            />
+            <div class="p-4">
+              <p class="inline-flex items-center gap-2">
+                <GithubIcon />
+                {name}
+              </p>
+              <p class="italic text-gray-400 dark:text-gray-100">
+                {description}
+              </p>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </Prose>
+</Layout>

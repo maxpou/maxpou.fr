@@ -1,0 +1,49 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content'
+import BlogCard from '../../components/BlogCard.astro'
+import Layout from '../../components/Layout.astro'
+import PageTitle from '../../components/PageTitle.astro'
+
+export async function getStaticPaths() {
+  const posts = (await getCollection('blog'))
+    .filter(post => !post.data.unlisted)
+    .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+
+  const tags: Record<string, CollectionEntry<'blog'>[]> = {}
+  for (const post of posts) {
+    for (const tag of post.data.tags) {
+      if (tags[tag]) {
+        tags[tag].push(post)
+      } else {
+        tags[tag] = [post]
+      }
+    }
+  }
+
+  return Object.keys(tags).map(tag => ({
+    params: { tag },
+    props: {
+      tagId: tag,
+      posts: tags[tag],
+    },
+  }))
+}
+
+const { posts, tagId } = Astro.props
+---
+
+<Layout
+  title={`Top blog posts on ${tagId}`}
+  description={`List of all the articles published with the tag "${tagId}"`}
+  seo={{
+    type: 'website',
+  }}
+>
+  <div class="mx-auto max-w-screen-xl">
+    <PageTitle>Posts tagged as {tagId}</PageTitle>
+    <h2 class="py-3 text-center">#{tagId}</h2>
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {posts.map(p => <BlogCard post={p} />)}
+    </div>
+  </div>
+</Layout>

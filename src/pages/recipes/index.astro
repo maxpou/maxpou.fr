@@ -1,0 +1,121 @@
+---
+import { getCollection } from 'astro:content'
+import { Image } from 'astro:assets'
+import Layout from '../../components/Layout.astro'
+import FormattedDate from '../../components/FormattedDate.astro'
+import PageTitle from '../../components/PageTitle.astro'
+
+const posts = (await getCollection('recipes')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+)
+---
+
+<Layout
+  title="Max's kitchen"
+  description={`My ${posts.length} cooking recipes that I have published so far.`}
+  seo={{
+    type: 'article',
+  }}
+>
+  <section>
+    <PageTitle class="text-center font-bold dark:text-gray-100">
+      Max's kitchen
+    </PageTitle>
+    <p
+      class="mx-auto mb-6 max-w-[450px] text-center text-lg dark:text-gray-100"
+    >
+      Welcome to my culinary haven! I'm Max, a passionate foodie eager to share
+      my favourite recipes. I hope you enjoy them as much as I do!
+    </p>
+    <ul>
+      {
+        posts.map(post => (
+          <li>
+            <a href={`/recipes/${post.slug}/`}>
+              {post.data.cover && (
+                <Image
+                  src={post.data.cover}
+                  width={720}
+                  height={360}
+                  alt={`Cover picture for ${post.data.title}`}
+                />
+              )}
+              <header class="text-2xl font-semibold dark:text-gray-100">
+                {post.data.title}
+              </header>
+              <p class="date">
+                <FormattedDate date={post.data.date} />
+              </p>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+  <style>
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    ul li {
+      width: calc(50% - 1rem);
+    }
+    ul li * {
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+    ul li:first-child {
+      width: 100%;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    ul li:first-child img {
+      width: 100%;
+    }
+    ul li:first-child .title {
+      font-size: 2.369rem;
+    }
+    ul li img {
+      margin-bottom: 0.5rem;
+      border-radius: 12px;
+    }
+    ul li a {
+      display: block;
+    }
+    .title {
+      margin: 0;
+      color: rgb(var(--black));
+      line-height: 1;
+    }
+    .date {
+      margin: 0;
+      color: rgb(var(--gray));
+    }
+    ul li a:hover h4,
+    ul li a:hover .date {
+      color: rgb(var(--accent));
+    }
+    ul a:hover img {
+      box-shadow: var(--box-shadow);
+    }
+    @media (max-width: 720px) {
+      ul {
+        gap: 0.5em;
+      }
+      ul li {
+        width: 100%;
+        text-align: center;
+      }
+      ul li:first-child {
+        margin-bottom: 0;
+      }
+      ul li:first-child .title {
+        font-size: 1.563em;
+      }
+    }
+  </style>
+</Layout>

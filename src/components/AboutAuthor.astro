@@ -1,0 +1,29 @@
+---
+import { Image } from 'astro:assets'
+import ProfilePicture from '../assets/profile-picture.jpeg'
+import FollowMe from '../components/MDX/FollowMe.astro'
+---
+
+<div>
+  <hr />
+  <h2 class="dark:text-gray-100">About the author</h2>
+  <div class="flex flex-col md:flex-row items-center gap-5 md:gap-8 mt-5">
+    <div class="relative flex-shrink-0 h-32 w-32">
+      <Image
+        class="not-prose h-32 w-32 object-cover rounded-full"
+        width={128}
+        height={128}
+        src={ProfilePicture}
+        alt="Maxence Poutord Profile picture"
+      />
+    </div>
+    <div>
+      <p class="!mt-0 pb-2">
+        Hey, I'm Maxence Poutord, a passionate software engineer. In my
+        day-to-day job, I'm working as a senior front-end engineer at Orderfox.
+        When I'm not working, you can find me travelling the world or cooking.
+      </p>
+      <FollowMe />
+    </div>
+  </div>
+</div>

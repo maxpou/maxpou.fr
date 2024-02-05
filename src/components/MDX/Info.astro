@@ -1,0 +1,20 @@
+---
+interface Props {
+  title?: string
+}
+
+const { title } = Astro.props
+---
+
+<aside
+  class:list={[
+    'my-2 rounded-r-lg border-l-4 p-5',
+    'border-[#0165b7] bg-[#bfe2ff]',
+    'prose-a:text-gray-500 prose-a:hover:text-gray-900',
+    'dark:text-gray-500 prose-a:dark:text-gray-900 dark:prose-strong:text-gray-500',
+    'prose-code:dark:text-gray-900',
+  ]}
+>
+  <div class="font-semibold">{title}</div>
+  <slot />
+</aside>

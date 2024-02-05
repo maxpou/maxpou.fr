@@ -1,0 +1,41 @@
+---
+import Layout from '../../components/Layout.astro'
+
+import { getCollection, type CollectionEntry } from 'astro:content'
+import BlogCard from '../../components/BlogCard.astro'
+import type { Page } from 'astro'
+import Pagination from '../../components/Pagination.astro'
+import { PAGE_SIZE } from '../../consts'
+
+const posts = (await getCollection('blog'))
+  .filter(post => !post.data.unlisted)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+
+const page: Page<CollectionEntry<'blog'>> = {
+  data: posts.slice(0, PAGE_SIZE),
+  start: 0,
+  end: PAGE_SIZE,
+  total: posts.length,
+  currentPage: 1,
+  size: PAGE_SIZE,
+  lastPage: Math.ceil(posts.length / PAGE_SIZE),
+  url: {
+    current: '/blog',
+    next: '/blog/pages/2',
+    prev: undefined,
+  },
+}
+---
+
+<Layout
+  title=`Maxence Poutord's Blog - Page ${page.currentPage}`
+  description={`Maxence Poutord's articles, page ${page.currentPage} of ${page.lastPage}`}
+  seo={{
+    type: 'website',
+  }}
+>
+  <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+    {page.data.map(post => <BlogCard post={post} />)}
+  </div>
+  <Pagination page={page} />
+</Layout>

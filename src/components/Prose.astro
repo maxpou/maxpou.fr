@@ -1,0 +1,29 @@
+---
+import 'prismjs/themes/prism-tomorrow.css'
+// https://docs.astro.build/en/recipes/tailwind-rendered-markdown/#recipe
+// https://tailwindcss.com/docs/typography-plugin
+---
+
+<div
+  class="prose
+  max-w-none
+  dark:prose-invert
+  prose-headings:underline
+  prose-h2:text-2xl prose-h2:font-bold prose-h2:dark:text-mainYellow
+  prose-h3:text-xl prose-h3:font-bold
+  prose-p:mb-0
+  prose-p:mt-4
+  prose-a:underline-offset-4
+  prose-a:decoration-2
+  prose-a:text-gray-700 dark:prose-a:text-slate-100 hover:prose-a:text-slate-900
+  prose-a:decoration-gray-300
+  hover:prose-a:decoration-blue-700 dark:hover:prose-a:decoration-mainYellow
+  prose-img:rounded-xl"
+>
+  <slot />
+</div>
+<style is:global>
+  .expressive-code {
+    margin-top: 1em;
+  }
+</style>

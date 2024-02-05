@@ -1,0 +1,99 @@
+---
+import HeaderLink from './HeaderLink.astro'
+import DarkModeButton from './DarkModeButton.tsx'
+import { SITE_TITLE } from '../consts'
+---
+
+<header class="bg-white dark:bg-gray-600 px-4 h-16">
+  <nav
+    class="dark:text-white h-16 flex items-center justify-between max-w-screen-xl w-full mx-auto"
+  >
+    <h1 class="text-lg dark:text-white font-bold">
+      <a href="/">{SITE_TITLE}</a>
+    </h1>
+    <div class="md:flex hidden">
+      <HeaderLink href="/blog">Blog</HeaderLink>
+      <HeaderLink href="/speaking">Speaking</HeaderLink>
+      <HeaderLink href="/about">About</HeaderLink>
+      <DarkModeButton client:only="preact" />
+    </div>
+    <button
+      id="burger-button"
+      aria-label="Toggle mobile menu"
+      class="md:hidden block w-14 h-14 relative focus:outline-none rounded z-10"
+    >
+      <div
+        class="block w-5 absolute left-6 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
+      >
+        <span
+          id="burger-line-1"
+          class="block absolute h-0.5 w-7 text-white bg-gray-600 dark:bg-white transform transition-all duration-500 ease-in-out -top-2"
+        ></span>
+        <span
+          id="burger-line-2"
+          class="block absolute h-0.5 w-7 text-white bg-gray-600 dark:bg-white transform transition-all duration-500 ease-in-out"
+        ></span>
+        <span
+          id="burger-line-3"
+          class="block absolute h-0.5 w-7 text-white bg-gray-600 dark:bg-white transform transition-all duration-500 ease-in-out top-2"
+        ></span>
+      </div>
+    </button>
+  </nav>
+  <div
+    id="menu-backdrop"
+    class="hidden bg-gray-600 bg-opacity-95 absolute top-0 left-0 h-screen w-screen backdrop-opacity-90 items-center justify-center"
+  >
+    <ul class="text-white font-bold text-xl">
+      <li class="p-3"><a href="/">Home</a></li>
+      <li class="p-3"><a href="/blog">Blog</a></li>
+      <li class="p-3"><a href="/speaking">Speaking</a></li>
+      <li class="p-3"><a href="/about">About</a></li>
+      <li class="p-3">
+        <DarkModeButton client:only="preact" textOnly className="!p-0" />
+      </li>
+    </ul>
+  </div>
+</header>
+
+<script>
+  const burgerButton = document.getElementById(
+    'burger-button',
+  ) as any as HTMLButtonElement
+  const line1 = document.getElementById(
+    'burger-line-1',
+  ) as any as HTMLSpanElement
+  const line2 = document.getElementById(
+    'burger-line-2',
+  ) as any as HTMLSpanElement
+  const line3 = document.getElementById(
+    'burger-line-3',
+  ) as any as HTMLSpanElement
+  const backdropMenu = document.getElementById(
+    'menu-backdrop',
+  ) as any as HTMLDivElement
+
+  burgerButton.addEventListener('click', () => {
+    if (backdropMenu.classList.contains('hidden')) {
+      backdropMenu.classList.add('flex')
+      backdropMenu.classList.remove('hidden')
+      line1.style.transform = 'rotate(45deg)'
+      line1.style.top = '0'
+      line1.style.backgroundColor = 'white'
+      line2.style.backgroundColor = 'transparent'
+      line3.style.transform = 'rotate(-45deg)'
+      line3.style.top = '0'
+      line3.style.backgroundColor = 'white'
+    } else {
+      line1.style.transform = 'rotate(0)'
+      line1.style.removeProperty('top')
+      line1.style.removeProperty('background-color')
+      line2.style.removeProperty('background-color')
+      line3.style.removeProperty('background-color')
+      line3.style.transform = 'rotate(0)'
+      line3.style.removeProperty('top')
+      backdropMenu.classList.add('hidden')
+      backdropMenu.classList.remove('flex')
+    }
+  })
+</script>

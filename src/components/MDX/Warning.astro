@@ -1,0 +1,23 @@
+---
+import WarningIcon from '../icons/WarningIcon.astro'
+interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<aside
+  class:list={[
+    'my-2 rounded-r-lg border-l-4 p-5',
+    'border-[#383A40] bg-[#fdf4ba] dark:border-mainYellow',
+    'dark:text-gray-500 prose-a:dark:text-gray-900 dark:prose-strong:text-gray-500',
+    'prose-code:dark:text-gray-900',
+  ]}
+>
+  <div class="flex items-center font-semibold">
+    <WarningIcon class="relative h-6 w-6 pr-2" />
+    {title}
+  </div>
+  <slot />
+</aside>
