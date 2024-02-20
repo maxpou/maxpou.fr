@@ -1,0 +1,200 @@
+<!DOCTYPE html><html lang="en"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/x-icon" href="/favicon.ico"><meta name="generator" content="Astro v4.4.0"><!-- Font preloads --><link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet"><!-- Canonical URL --><link rel="canonical" href="https://www.maxpou.fr/blog/monorepo-pros-and-cons/"><!-- Primary Meta Tags --><title>Monorepo: is it worth jumping the bandwagon?</title><meta name="title" content="Monorepo: is it worth jumping the bandwagon?"><meta name="description" content="A blog post written by Maxence Poutord"><script async defer data-domain="maxpou.fr" src="https://plausible.io/js/plausible.js"></script><link rel="alternate" type="application/rss+xml" title="Maxence Poutord • Maxpou Blog" href="/rss.xml"><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"><!-- Open Graph / Facebook --><meta property="og:type" content="article"><meta property="og:url" content="https://www.maxpou.fr/blog/monorepo-pros-and-cons/"><meta property="og:title" content="Monorepo: is it worth jumping the bandwagon?"><meta property="og:description" content="A blog post written by Maxence Poutord"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://www.maxpou.fr/blog/monorepo-pros-and-cons/"><meta property="twitter:title" content="Monorepo: is it worth jumping the bandwagon?"><meta property="twitter:description" content="A blog post written by Maxence Poutord"><meta name="twitter:creator" content="_maxpou"><link rel="alternate" hreflang="fr" href="https://www.maxpou.fr/blog/monorepo-pros-and-cons-fr/"><link rel="alternate" hreflang="en" href="https://www.maxpou.fr/blog/monorepo-pros-and-cons/"><script>
+  const theme = (() => {
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+      return localStorage.getItem('theme')
+    }
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark'
+    }
+    return 'light'
+  })()
+
+  if (theme === 'light') {
+    document.documentElement.classList.remove('dark')
+  } else {
+    document.documentElement.classList.add('dark')
+  }
+  window.localStorage.setItem('theme', theme)
+</script><link rel="stylesheet" href="/_astro/_slug_.cE4nuJce.css" />
+<style>code[class*=language-],pre[class*=language-]{color:#ccc;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.comment,.token.block-comment,.token.prolog,.token.doctype,.token.cdata{color:#999}.token.punctuation{color:#ccc}.token.tag,.token.attr-name,.token.namespace,.token.deleted{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.number,.token.function{color:#f08d49}.token.property,.token.class-name,.token.constant,.token.symbol{color:#f8c555}.token.selector,.token.important,.token.atrule,.token.keyword,.token.builtin{color:#cc99cd}.token.string,.token.char,.token.attr-value,.token.regex,.token.variable{color:#7ec699}.token.operator,.token.entity,.token.url{color:#67cdcc}.token.important,.token.bold{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}.expressive-code{margin-top:1em}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.fA4gFHjB.css" />
+<style>a[data-astro-cid-eimmu3lg]{display:inline-block;text-decoration:none;border-bottom:4px solid transparent}a[data-astro-cid-eimmu3lg].active{font-weight:bolder;border-bottom-color:#ffdc4e}footer[data-astro-cid-sz7xmlte]{padding:2em 1em 6em;color:rgb(var(--gray))}*{transition:background .5s ease}*::-moz-selection{background-color:#ffdc4e;color:#3e4047}*::selection{background-color:#ffdc4e;color:#3e4047}
+</style><script type="module">const n=document.getElementById("burger-button"),e=document.getElementById("burger-line-1"),r=document.getElementById("burger-line-2"),t=document.getElementById("burger-line-3"),o=document.getElementById("menu-backdrop");n.addEventListener("click",()=>{o.classList.contains("hidden")?(o.classList.add("flex"),o.classList.remove("hidden"),e.style.transform="rotate(45deg)",e.style.top="0",e.style.backgroundColor="white",r.style.backgroundColor="transparent",t.style.transform="rotate(-45deg)",t.style.top="0",t.style.backgroundColor="white"):(e.style.transform="rotate(0)",e.style.removeProperty("top"),e.style.removeProperty("background-color"),r.style.removeProperty("background-color"),t.style.removeProperty("background-color"),t.style.transform="rotate(0)",t.style.removeProperty("top"),o.classList.add("hidden"),o.classList.remove("flex"))});
+</script></head> <body class="bg-gradient-to-b from-blue-50 to-[#f5f7f9] dark:bg-gray-600 dark:bg-gradient-to-b dark:from-gray-600"> <header class="bg-white dark:bg-gray-600 px-4 h-16"> <nav class="dark:text-white h-16 flex items-center justify-between max-w-screen-xl w-full mx-auto"> <h1 class="text-lg dark:text-white font-bold"> <a href="/">Maxence Poutord</a> </h1> <div class="md:flex hidden"> <a href="/blog" class="py-4 px-2 no-underline text-lg hover:text-blue-900 dark:text-white dark:hover:text-mainYellow" data-astro-cid-eimmu3lg> Blog </a>  <a href="/speaking" class="py-4 px-2 no-underline text-lg hover:text-blue-900 dark:text-white dark:hover:text-mainYellow" data-astro-cid-eimmu3lg> Speaking </a>  <a href="/about" class="py-4 px-2 no-underline text-lg hover:text-blue-900 dark:text-white dark:hover:text-mainYellow" data-astro-cid-eimmu3lg> About </a>  <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();;(()=>{var v=Object.defineProperty;var A=(c,s,a)=>s in c?v(c,s,{enumerable:!0,configurable:!0,writable:!0,value:a}):c[s]=a;var d=(c,s,a)=>(A(c,typeof s!="symbol"?s+"":s,a),a);var u;{let c={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t)},s=t=>{let[e,n]=t;return e in c?c[e](n):void 0},a=t=>t.map(s),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([e,n])=>[e,s(n)]));customElements.get("astro-island")||customElements.define("astro-island",(u=class extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var f;if(!this.hydrator||!this.isConnected)return;let e=(f=this.parentElement)==null?void 0:f.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let n=this.querySelectorAll("astro-slot"),r={},l=this.querySelectorAll("template[data-astro-template]");for(let o of l){let i=o.closest(this.tagName);i!=null&&i.isSameNode(this)&&(r[o.getAttribute("data-astro-template")||"default"]=o.innerHTML,o.remove())}for(let o of n){let i=o.closest(this.tagName);i!=null&&i.isSameNode(this)&&(r[o.getAttribute("name")||"default"]=o.innerHTML)}let h;try{h=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(o){let i=this.getAttribute("component-url")||"<unknown>",b=this.getAttribute("component-export");throw b&&(i+=` (export ${b})`),console.error(`[hydrate] Error parsing props for component ${i}`,this.getAttribute("props"),o),o}let p;await this.hydrator(this)(this.Component,h,r,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),n.disconnect(),this.childrenConnectedCallback()},n=new MutationObserver(()=>{var r;((r=this.lastChild)==null?void 0:r.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});n.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),n=this.getAttribute("client");if(Astro[n]===void 0){window.addEventListener(`astro:${n}`,()=>this.start(),{once:!0});return}try{await Astro[n](async()=>{let r=this.getAttribute("renderer-url"),[l,{default:h}]=await Promise.all([import(this.getAttribute("component-url")),r?import(r):()=>()=>{}]),p=this.getAttribute("component-export")||"default";if(!p.includes("."))this.Component=l[p];else{this.Component=l;for(let y of p.split("."))this.Component=this.Component[y]}return this.hydrator=h,this.hydrate},e,this)}catch(r){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,r)}}attributeChangedCallback(){this.hydrate()}},d(u,"observedAttributes",["props"]),u))}})();</script><astro-island uid="1MPqDn" component-url="/_astro/DarkModeButton.xNbp8Br3.js" component-export="default" renderer-url="/_astro/client.PcUt3MZx.js" props="{}" ssr="" client="only" opts="{&quot;name&quot;:&quot;DarkModeButton&quot;,&quot;value&quot;:&quot;preact&quot;}"></astro-island> </div> <button id="burger-button" aria-label="Toggle mobile menu" class="md:hidden block w-14 h-14 relative focus:outline-none rounded z-10"> <div class="block w-5 absolute left-6 top-1/2 transform -translate-x-1/2 -translate-y-1/2"> <span id="burger-line-1" class="block absolute h-0.5 w-7 text-white bg-gray-600 dark:bg-white transform transition-all duration-500 ease-in-out -top-2"></span> <span id="burger-line-2" class="block absolute h-0.5 w-7 text-white bg-gray-600 dark:bg-white transform transition-all duration-500 ease-in-out"></span> <span id="burger-line-3" class="block absolute h-0.5 w-7 text-white bg-gray-600 dark:bg-white transform transition-all duration-500 ease-in-out top-2"></span> </div> </button> </nav> <div id="menu-backdrop" class="hidden bg-gray-600 bg-opacity-95 absolute top-0 left-0 h-screen w-screen backdrop-opacity-90 items-center justify-center"> <ul class="text-white font-bold text-xl"> <li class="p-3"><a href="/">Home</a></li> <li class="p-3"><a href="/blog">Blog</a></li> <li class="p-3"><a href="/speaking">Speaking</a></li> <li class="p-3"><a href="/about">About</a></li> <li class="p-3"> <astro-island uid="lieIt" component-url="/_astro/DarkModeButton.xNbp8Br3.js" component-export="default" renderer-url="/_astro/client.PcUt3MZx.js" props="{&quot;textOnly&quot;:[0,true],&quot;className&quot;:[0,&quot;!p-0&quot;]}" ssr="" client="only" opts="{&quot;name&quot;:&quot;DarkModeButton&quot;,&quot;value&quot;:&quot;preact&quot;}"></astro-island> </li> </ul> </div> </header>  <main class="m-0 mx-auto min-h-[70vh] w-full max-w-screen-xl px-4 py-12 text-gray-500 dark:text-gray-100">  <article> <div class="hero-image"> <img src="/_astro/cover.2bB88L8A_19jvDR.webp" alt="Cover picture for Monorepo: is it worth jumping the bandwagon?" class="rounded-xl shadow-xl mx-auto h-[500px] object-cover w-full" width="1020" height="500" loading="lazy" decoding="async"> </div> <div class="container m-auto text-center"> <div class="mt-3 text-blueGreyed dark:text-gray-300"> <time datetime="2020-12-11T00:00:00.000Z"> 11 December 2020 </time>  </div> <h1 class="font-bold text-3xl dark:text-white text-center leading-none py-4 mb-2 "> Monorepo: is it worth jumping the bandwagon? </h1> <div class="pb-6"> <a href="/tags/Architecture" class="mr-2 inline-block rounded-lg bg-darkBlue px-3 py-2 text-sm text-white no-underline hover:bg-blueGreyed dark:bg-blueGreyed dark:hover:bg-darkBlue"> Architecture </a><a href="/tags/Git" class="mr-2 inline-block rounded-lg bg-darkBlue px-3 py-2 text-sm text-white no-underline hover:bg-blueGreyed dark:bg-blueGreyed dark:hover:bg-darkBlue"> Git </a> <div class="text-md rounded-lg border border-darkBlue bg-lightYellow p-3 text-left mt-5 dark:text-gray-600 m-auto w-[720px] max-w-full">
+This article also exists in:   <a href="../monorepo-pros-and-cons-fr" class="underline"> French </a>  </div> </div> </div> <div class="m-auto w-[720px] max-w-full">  <div class="prose
+  max-w-none
+  dark:prose-invert
+  prose-headings:underline
+  prose-h2:text-2xl prose-h2:font-bold prose-h2:dark:text-mainYellow
+  prose-h3:text-xl prose-h3:font-bold
+  prose-p:mb-0
+  prose-p:mt-4
+  prose-a:underline-offset-4
+  prose-a:decoration-2
+  prose-a:text-gray-700 dark:prose-a:text-slate-100 hover:prose-a:text-slate-900
+  prose-a:decoration-gray-300
+  hover:prose-a:decoration-blue-700 dark:hover:prose-a:decoration-mainYellow
+  prose-img:rounded-xl">  <p>The trend today is to split things and make them thinner. We witnessed the emergence of
+microservices, micro-frontends…</p>
+<p>Against this trend, some companies and projects had decided to put multiple applications/libraries
+under the same git repository. We call this architectural concept a monorepo (or mono repository).</p>
+<p><img  src="/_astro/mono-vs-multi.0jECb59Z_1Xv5qY.webp" alt="mono vs. multiple repository" width="1906" height="948" loading="lazy" decoding="async"></p>
+<p>I’ve been using and maintaining a monorepo for 2 years now. Here are my thoughts about it.</p>
+<p><em>Context: the monorepo I’m working on contains ~40 npm packages, mostly standalone vue.js apps. All
+those small apps are parts of a big application. We decided to split our big app into small ones
+because the main one had become hard to maintain. Also, we are ~15 developers working on this
+monorepo (not full-time).</em></p>
+<h2 id="pros">Pros</h2>
+<h3 id="-teamwork">🤝 Teamwork</h3>
+<p><strong>Favour contributions</strong>:<br>
+When you already have the code, contributing is easier. You don’t need to search for the repo, clone
+it and install it beforehand.</p>
+<p><strong>Better overview of the whole system</strong>:<br>
+You already have all the source code. So you don’t need to find the repo url, clone it. A plain old
+ctrl + F is enough.</p>
+<p><strong>Favour large refactoring</strong>:<br>
+Let’s say you want to change something in one package used everywhere else. You can update all the
+packages in one commit!</p>
+<p><strong>Remove unused code with confidence</strong>:<br>
+How many times you wanted to remove code but you didn’t because you didn’t know if code was used
+somewhere else? With monorepo, you don’t need to go through all repo to see if this code is used or
+not. It’s very handy.</p>
+<p><strong>Single source of truth</strong>:<br>
+The project I’m working on used to have a very weird name for the main branch. When we changed this
+name to another one, some repositories were updated, some were not (oversight). With a monorepo, you
+only have to find this information once.</p>
+<h3 id="-dependencies">👨‍👩‍👧 Dependencies</h3>
+<p><strong>Less space on your hard drive</strong>:<br>
+If you’re familiar with the JavaScript ecosystem, you’re probably aware that the <code>node_module</code>
+folder can be
+<a href="https://www.reddit.com/r/ProgrammerHumor/comments/6s0wov/heaviest_objects_in_the_universe/">insanely heavy</a>.
+When we had ~30 apps/packages, it used to take 12Gb on our hard drive. Yes, 12Gb! We had
+dependencies like Vue.js installed 30 times. Fortunately, some tools (like yarn) symlink redundant
+dependencies when workspaces are enabled. Thanks to this functionality,
+<a href="https://twitter.com/_maxpou/status/1263426573379739651">we went from 12Gb to 1.7Gb</a>.</p>
+<p><img  src="/_astro/dependency-management.2lLJmuN__ZRSf1X.webp" alt="dependency-management" width="2096" height="1354" loading="lazy" decoding="async"> <em>Note: I know npm 7.0 now supports workspaces.
+However, it’s still in the early stage. Important commands
+<a href="https://github.com/npm/rfcs/pull/117/files">are not supported yet</a>.</em></p>
+<p><strong>Cross-package hot-reload</strong>:<br>
+Some tools automatically symlink local dependencies together. Which means, if package-a is used in
+package-b, you can work on package-a and see the live result in package-b.</p>
+<p><strong>Adding a new package is simple</strong>:<br>
+For us, all our packages are under a <code>packages</code> folder. Adding a new package is very
+straightforward: no need to parameter the continuous integration/package manager credentials, set
+the repository permissions… everything is already there.</p>
+<h2 id="cons">Cons</h2>
+<h3 id="-git--code-hosting-platforms-gitlabgithub">🛠 Git &#x26; code hosting platforms (GitLab/GitHub…)</h3>
+<p><strong>Authorization</strong>:<br>
+When you set read/write permissions on GitLab/GitHub/etc., it’s usually for the whole repo.</p>
+<p><strong>💡 Tip:</strong> You can also create a
+<a href="https://docs.gitlab.com/ee/user/project/code_owners.html">CODEOWNERS file</a> to define specific
+ownership rule.</p>
+<div class="expressive-code"><link rel="stylesheet" href="/_astro/ec.aqfpi.css"><script type="module" src="/_astro/ec.sgewm.js"></script><figure class="frame has-title"><figcaption class="header"><span class="title">.gitlab/CODEOWNERS</span></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#BABED8">packages/app-1 @user1 packages/app-2 @user2</span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="packages/app-1 @user1 packages/app-2 @user2"><div></div></button></div></figure></div>
+<p><em>With the example above, if user2 opens a merge request to change app-1, user1 will have to approve
+it.</em></p>
+<p><strong>Git log may become unreadable</strong>:<br>
+If merge requests are merged “as is”, with no squashing option (with 10-15 commits), the <code>git log</code>
+will quickly become unreadable, and so unusable.</p>
+<p><strong>💡 Tip:</strong> You can use <a href="git-conventional-commits">conventional commit</a> and put in parenthesis the
+name of the package. So if you want to retrieve one old commit, it becomes straightforward.</p>
+<div class="expressive-code"><figure class="frame is-terminal"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#9FA4BC;--0fs:italic"># will list all feature added in package-B</span></div><div class="ec-line"><span style="--0:#FFCB6B">git</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">log</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">--all</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">--grep=</span><span style="--0:#89DDFF">"</span><span style="--0:#C3E88D">feat(package-B):</span><span style="--0:#89DDFF">"</span></div><div class="ec-line">
+</div><div class="ec-line"><span style="--0:#9FA4BC;--0fs:italic"># or:</span></div><div class="ec-line"><span style="--0:#FFCB6B">git</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">log</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">--all</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">path/to/package-b</span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="git log --all --grep=&#x22;feat(package-B):&#x22;git log --all path/to/package-b"><div></div></button></div></figure></div>
+<p><strong>Git log may become unusable</strong>:<br>
+If you have a lot of commits/living branches/tags, it means you will have a lot of git objects
+stored. git will probably have trouble getting the history of a specific file.</p>
+<p><strong>Forget your long-lived branches</strong>:<br>
+If the main branch is the only source of truth, you can’t have a <code>next</code> branch. If you want to have
+some features only available for a specific environment, then I recommend you to use feature flags.</p>
+<p><strong>Repository may become oversized</strong>:<br>
+The <code>.git</code> folder on your monorepo root might reach a few Gb.</p>
+<p><strong>💡 Tip:</strong> Here are 2 different options if you want to save some space</p>
+<div class="expressive-code"><figure class="frame is-terminal"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#9FA4BC;--0fs:italic"># truncate the history</span></div><div class="ec-line"><span style="--0:#FFCB6B">git</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">clone</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">--depth</span><span style="--0:#BABED8"> </span><span style="--0:#F78C6C">1</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">&#x3C;repo-url></span></div><div class="ec-line">
+</div><div class="ec-line"><span style="--0:#9FA4BC;--0fs:italic"># 1. clone an empty repo with no history</span></div><div class="ec-line"><span style="--0:#9FA4BC;--0fs:italic"># 2. pull the desired package</span></div><div class="ec-line"><span style="--0:#FFCB6B">git</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">clone</span><span style="--0:#BABED8"> \</span></div><div class="ec-line"><span style="--0:#BABED8">  </span><span style="--0:#C3E88D">--depth</span><span style="--0:#BABED8"> </span><span style="--0:#F78C6C">1</span><span style="--0:#BABED8"> \</span></div><div class="ec-line"><span style="--0:#BABED8">  </span><span style="--0:#C3E88D">--no-checkout</span><span style="--0:#BABED8"> \</span></div><div class="ec-line"><span style="--0:#BABED8">  </span><span style="--0:#C3E88D">--filter=blob:none</span><span style="--0:#BABED8"> \</span></div><div class="ec-line"><span style="--0:#BABED8">  </span><span style="--0:#C3E88D">&#x3C;repo-url></span></div><div class="ec-line"><span style="--0:#FFCB6B">git</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">checkout</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">main</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">--</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">packages/package-a</span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="git clone --depth 1 <repo-url>git clone \  --depth 1 \  --no-checkout \  --filter=blob:none \  <repo-url>git checkout main -- packages/package-a"><div></div></button></div></figure></div>
+<p><em>Note: learn more about
+<a href="https://docs.gitlab.com/ee/topics/git/partial_clone.html">partial cloning</a>.</em></p>
+<h3 id="-continuous-integration-ci">🤖 Continuous Integration (CI)</h3>
+<p><strong>When it’s broken, everybody is!</strong><br>
+If the <code>main</code> branch is marked red by your continuous integration, everybody is impacted. You cannot
+put this problem under the carpet. It needs to be addressed directly.</p>
+<p><strong>The Continuous Integration dilemma</strong>:<br>
+If codebases are mutualized, you have more code. And more code means more work for continuous
+integration (CI) for jobs like testing, linting, building…</p>
+<p>When dealing with CI, time and reliability are the heart of the matter. On the one hand, you want it
+to be as fast as possible but, on the other hand, you want it to be reliable. I mean, when my CI
+gives me a green light, I’m more confident to merge my work.</p>
+<p>It can be tempting to reduce the number of packages analysed to gain some time. But, continuous
+integration will lose interest because it will not be able to spot a “cross-repository” regression.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th></th><th>Entire codebase</th><th>Selected package</th><th>Affected packages</th></tr></thead><tbody><tr><td>Build/lint/test Speed</td><td>🐌 Slow</td><td>🚀 Fast</td><td>🚗 Medium</td></tr><tr><td>Spot cross-packages<br>regression?</td><td>✅ Yes</td><td>❌ No</td><td>✅ Yes</td></tr><tr><td>Easy to set up?</td><td>😀 Yes</td><td>😀 Yes</td><td>😟 No</td></tr></tbody></table>
+<p>The 3rd option is, in my opinion, the most viable. But, you will have to do it manually. A 4th
+option could use filters. “important” labelled packages use the 1st strategy and the rest use the
+2nd strategy.</p>
+<p><strong>💡 Tips:</strong></p>
+<ul>
+<li>If your CI pipeline is good enough and you have parallel tasks, don’t forget to enable the
+fail-fast option.</li>
+<li>I recommend you to add a specific label to short-circuit the CI. Like if you change a typo in the
+README, you don’t need to run unnecessary commands. (i.e. If the pull request have a “NO_CI”
+label, the build will not be triggered)</li>
+</ul>
+<h3 id="-teamwork-1">🤝 Teamwork</h3>
+<p><strong>Hidden changes</strong>:<br>
+Some repos are sometimes more “sensitive” than others. It’s easy to add a small piece of code with a
+big impact. It can be problematic if it’s done by mistake.</p>
+<p><strong>Amount of code can be intimidating</strong>:<br>
+The first time I “git pulled” the source code of Gatsby.js, I pulled the full history of ~90
+packages. At first glance, I felt overwhelmed. Because it took me ages to clone the full repository
+(with all the history). And also, because the amount of code was massive!</p>
+<p>If you work with 10% of a codebase, you probably don’t care about the 90% remaining.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p><img  src="/_astro/relevant-monorepo.2Bt4wLlu_12R77n.webp" alt="monorepo are become relevant when packages are connected and written in the same language" width="1930" height="1028" loading="lazy" decoding="async"></p>
+<p>Overall, I think a monorepo can be a good thing.</p>
+<p>In our case, it makes our life easier. All our packages are a part of the same big application and
+are written in the same language. Because they’re a part of the same application, they <em>“communicate
+between each other”</em>. Also, we’re a human-sized team working on it.</p> <div> <hr> <h2 class="dark:text-gray-100">About the author</h2> <div class="flex flex-col md:flex-row items-center gap-5 md:gap-8 mt-5"> <div class="relative flex-shrink-0 h-32 w-32"> <img src="/_astro/profile-picture.gF0h5NUU_Zw8iDo.webp" class="not-prose h-32 w-32 object-cover rounded-full" alt="Maxence Poutord Profile picture" width="128" height="128" loading="lazy" decoding="async"> </div> <div> <p class="!mt-0 pb-2">
+Hey, I'm Maxence Poutord, a passionate software engineer. In my
+        day-to-day job, I'm working as a senior front-end engineer at Orderfox.
+        When I'm not working, you can find me travelling the world or cooking.
+</p> <a class="not-prose inline-flex rounded border
+    font-semibold no-underline
+    transition-colors duration-200 ease-in-out px-3 py-2
+    border-[#1da1f2] bg-[#1da1f2] text-white
+    hover:border-[#1da1f2] hover:bg-white hover:text-[#1da1f2]" rel="noopener" target="_blank" href="https://twitter.com/intent/follow?screen_name=_maxpou"> <svg aria-label="Twitter" viewBox="0 0 24 24" width="1em" height="1em" class="h-6 w-6 pr-2"><path fill="currentColor" d="M23.954 4.569a10 10 0 0 1-2.825.775 4.958 4.958 0 0 0 2.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 0 0-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 0 0-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 0 1-2.228-.616v.061a4.923 4.923 0 0 0 3.946 4.827 4.996 4.996 0 0 1-2.212.085 4.937 4.937 0 0 0 4.604 3.417 9.868 9.868 0 0 1-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0 0 7.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 0 0 2.46-2.548l-.047-.02z"></path></svg>
+Follow @_maxpou
+ </a> </div> </div> </div>  </div>  <div> <h2 class="text-2xl underline mt-12 font-bold dark:text-mainYellow">
+Recommended posts
+</h2> <div class="grid grid-cols-1 gap-4 md:grid-cols-2 mt-6"> <a title="Lessons Learned by Maintaining a Large Codebase" href="/blog/lesson-learned-maintaining-large-vue-js-codebase/" class="ease flex flex-col rounded-lg bg-white transition duration-300 dark:bg-gray-500 hover:translate-y-0.5 shadow-md  hover:shadow-xl group"> <img src="/_astro/cover.VzeiStI0_KJHfA.webp" alt="Cover picture for Lessons Learned by Maintaining a Large Codebase" class="h-56 w-full rounded-b-none rounded-t-lg object-cover transition" width="420" height="224" loading="lazy" decoding="async"> <div class="p-4"> <header class="text-xl font-semibold text-gray-700 dark:text-gray-100"> <span class="inline">  <!-- {post.data.title} --> <span class="from-blue-100 to-blue-100 text-dark dark:bg-none
+           bg-gradient-to-r bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]"> Lessons Learned by Maintaining a Large Codebase </span> </span> </header> <p class="date text-gray-400 dark:text-gray-100"> <time datetime="2021-04-15T00:00:00.000Z"> 15 April 2021 </time> </p> </div> </a><a title="Vue.js Testing Made it Easy (with Testing Library)" href="/blog/vue-js-testing-library/" class="ease flex flex-col rounded-lg bg-white transition duration-300 dark:bg-gray-500 hover:translate-y-0.5 shadow-md  hover:shadow-xl group"> <img src="/_astro/cover.BQNQ0oHj_ZGjvpB.webp" alt="Cover picture for Vue.js Testing Made it Easy (with Testing Library)" class="h-56 w-full rounded-b-none rounded-t-lg object-cover transition" width="420" height="224" loading="lazy" decoding="async"> <div class="p-4"> <header class="text-xl font-semibold text-gray-700 dark:text-gray-100"> <span class="inline">  <!-- {post.data.title} --> <span class="from-blue-100 to-blue-100 text-dark dark:bg-none
+           bg-gradient-to-r bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]"> Vue.js Testing Made it Easy (with Testing Library) </span> </span> </header> <p class="date text-gray-400 dark:text-gray-100"> <time datetime="2020-06-11T00:00:00.000Z"> 11 June 2020 </time> </p> </div> </a> </div> </div>  </div> </article>  </main> <footer class="bg-blue-50 dark:bg-gray-600 dark:text-white w-full mx-auto pb-0" data-astro-cid-sz7xmlte> <div class="m-auto flex w-[1024px] max-w-full flex-wrap justify-between" data-astro-cid-sz7xmlte> <div class="w-full pb-4 md:w-auto flex-auto" data-astro-cid-sz7xmlte> <p class="pb-1 font-bold" data-astro-cid-sz7xmlte>
+&copy; 2014 - 2024 - Maxence Poutord </p> <p data-astro-cid-sz7xmlte>Built with Astro, Tailwind and some ☕️</p> <p data-astro-cid-sz7xmlte>
+Hosted with <span class="text-red-500" data-astro-cid-sz7xmlte>❤</span> by <a class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" href="https://github.com/maxpou/maxpou.fr" data-astro-cid-sz7xmlte>GitHub</a>.
+</p> </div> <div class="flex-auto" data-astro-cid-sz7xmlte> <h3 class="pb-1 font-bold" data-astro-cid-sz7xmlte>Explore</h3> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte> <a href="/uses" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Uses </a> </li><li data-astro-cid-sz7xmlte> <a href="/recipes" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Recipes (kitchen) </a> </li><li data-astro-cid-sz7xmlte> <a href="/about" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> About </a> </li><li data-astro-cid-sz7xmlte> <a href="/cv" target="_blank" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Resume (cv) </a> </li><li data-astro-cid-sz7xmlte> <a href="/readme" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Readme </a> </li> </ul> </div> <div class="flex-auto" data-astro-cid-sz7xmlte> <h3 class="pb-1 font-bold flex-auto" data-astro-cid-sz7xmlte>Let's connect</h3> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte> <a href="https://github.com/maxpou" rel="noopener noreferrer" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> GitHub </a> </li><li data-astro-cid-sz7xmlte> <a href="https://twitter.com/_maxpou" rel="noopener noreferrer" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Twitter </a> </li><li data-astro-cid-sz7xmlte> <a href="https://www.linkedin.com/in/maxpou/" rel="noopener noreferrer" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> LinkedIn </a> </li><li data-astro-cid-sz7xmlte> <a href="/rss.xml" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> RSS feed </a> </li> </ul> </div> </div>  </footer>  </body> </html>

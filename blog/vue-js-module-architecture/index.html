@@ -1,0 +1,194 @@
+<!DOCTYPE html><html lang="en"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/x-icon" href="/favicon.ico"><meta name="generator" content="Astro v4.4.0"><!-- Font preloads --><link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet"><!-- Canonical URL --><link rel="canonical" href="https://www.maxpou.fr/blog/vue-js-module-architecture/"><!-- Primary Meta Tags --><title>Vue.js: Let&#39;s Scale!</title><meta name="title" content="Vue.js: Let's Scale!"><meta name="description" content="Architecture and technical decision behind a big Vue.js application."><script async defer data-domain="maxpou.fr" src="https://plausible.io/js/plausible.js"></script><link rel="alternate" type="application/rss+xml" title="Maxence Poutord • Maxpou Blog" href="/rss.xml"><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"><!-- Open Graph / Facebook --><meta property="og:type" content="article"><meta property="og:url" content="https://www.maxpou.fr/blog/vue-js-module-architecture/"><meta property="og:title" content="Vue.js: Let's Scale!"><meta property="og:description" content="Architecture and technical decision behind a big Vue.js application."><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://www.maxpou.fr/blog/vue-js-module-architecture/"><meta property="twitter:title" content="Vue.js: Let's Scale!"><meta property="twitter:description" content="Architecture and technical decision behind a big Vue.js application."><meta name="twitter:creator" content="_maxpou"><script>
+  const theme = (() => {
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+      return localStorage.getItem('theme')
+    }
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark'
+    }
+    return 'light'
+  })()
+
+  if (theme === 'light') {
+    document.documentElement.classList.remove('dark')
+  } else {
+    document.documentElement.classList.add('dark')
+  }
+  window.localStorage.setItem('theme', theme)
+</script><link rel="stylesheet" href="/_astro/_slug_.cE4nuJce.css" />
+<style>code[class*=language-],pre[class*=language-]{color:#ccc;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.comment,.token.block-comment,.token.prolog,.token.doctype,.token.cdata{color:#999}.token.punctuation{color:#ccc}.token.tag,.token.attr-name,.token.namespace,.token.deleted{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.number,.token.function{color:#f08d49}.token.property,.token.class-name,.token.constant,.token.symbol{color:#f8c555}.token.selector,.token.important,.token.atrule,.token.keyword,.token.builtin{color:#cc99cd}.token.string,.token.char,.token.attr-value,.token.regex,.token.variable{color:#7ec699}.token.operator,.token.entity,.token.url{color:#67cdcc}.token.important,.token.bold{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}.expressive-code{margin-top:1em}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.fA4gFHjB.css" />
+<style>a[data-astro-cid-eimmu3lg]{display:inline-block;text-decoration:none;border-bottom:4px solid transparent}a[data-astro-cid-eimmu3lg].active{font-weight:bolder;border-bottom-color:#ffdc4e}footer[data-astro-cid-sz7xmlte]{padding:2em 1em 6em;color:rgb(var(--gray))}*{transition:background .5s ease}*::-moz-selection{background-color:#ffdc4e;color:#3e4047}*::selection{background-color:#ffdc4e;color:#3e4047}
+</style><script type="module">const n=document.getElementById("burger-button"),e=document.getElementById("burger-line-1"),r=document.getElementById("burger-line-2"),t=document.getElementById("burger-line-3"),o=document.getElementById("menu-backdrop");n.addEventListener("click",()=>{o.classList.contains("hidden")?(o.classList.add("flex"),o.classList.remove("hidden"),e.style.transform="rotate(45deg)",e.style.top="0",e.style.backgroundColor="white",r.style.backgroundColor="transparent",t.style.transform="rotate(-45deg)",t.style.top="0",t.style.backgroundColor="white"):(e.style.transform="rotate(0)",e.style.removeProperty("top"),e.style.removeProperty("background-color"),r.style.removeProperty("background-color"),t.style.removeProperty("background-color"),t.style.transform="rotate(0)",t.style.removeProperty("top"),o.classList.add("hidden"),o.classList.remove("flex"))});
+</script></head> <body class="bg-gradient-to-b from-blue-50 to-[#f5f7f9] dark:bg-gray-600 dark:bg-gradient-to-b dark:from-gray-600"> <header class="bg-white dark:bg-gray-600 px-4 h-16"> <nav class="dark:text-white h-16 flex items-center justify-between max-w-screen-xl w-full mx-auto"> <h1 class="text-lg dark:text-white font-bold"> <a href="/">Maxence Poutord</a> </h1> <div class="md:flex hidden"> <a href="/blog" class="py-4 px-2 no-underline text-lg hover:text-blue-900 dark:text-white dark:hover:text-mainYellow" data-astro-cid-eimmu3lg> Blog </a>  <a href="/speaking" class="py-4 px-2 no-underline text-lg hover:text-blue-900 dark:text-white dark:hover:text-mainYellow" data-astro-cid-eimmu3lg> Speaking </a>  <a href="/about" class="py-4 px-2 no-underline text-lg hover:text-blue-900 dark:text-white dark:hover:text-mainYellow" data-astro-cid-eimmu3lg> About </a>  <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();;(()=>{var v=Object.defineProperty;var A=(c,s,a)=>s in c?v(c,s,{enumerable:!0,configurable:!0,writable:!0,value:a}):c[s]=a;var d=(c,s,a)=>(A(c,typeof s!="symbol"?s+"":s,a),a);var u;{let c={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t)},s=t=>{let[e,n]=t;return e in c?c[e](n):void 0},a=t=>t.map(s),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([e,n])=>[e,s(n)]));customElements.get("astro-island")||customElements.define("astro-island",(u=class extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var f;if(!this.hydrator||!this.isConnected)return;let e=(f=this.parentElement)==null?void 0:f.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let n=this.querySelectorAll("astro-slot"),r={},l=this.querySelectorAll("template[data-astro-template]");for(let o of l){let i=o.closest(this.tagName);i!=null&&i.isSameNode(this)&&(r[o.getAttribute("data-astro-template")||"default"]=o.innerHTML,o.remove())}for(let o of n){let i=o.closest(this.tagName);i!=null&&i.isSameNode(this)&&(r[o.getAttribute("name")||"default"]=o.innerHTML)}let h;try{h=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(o){let i=this.getAttribute("component-url")||"<unknown>",b=this.getAttribute("component-export");throw b&&(i+=` (export ${b})`),console.error(`[hydrate] Error parsing props for component ${i}`,this.getAttribute("props"),o),o}let p;await this.hydrator(this)(this.Component,h,r,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),n.disconnect(),this.childrenConnectedCallback()},n=new MutationObserver(()=>{var r;((r=this.lastChild)==null?void 0:r.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});n.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),n=this.getAttribute("client");if(Astro[n]===void 0){window.addEventListener(`astro:${n}`,()=>this.start(),{once:!0});return}try{await Astro[n](async()=>{let r=this.getAttribute("renderer-url"),[l,{default:h}]=await Promise.all([import(this.getAttribute("component-url")),r?import(r):()=>()=>{}]),p=this.getAttribute("component-export")||"default";if(!p.includes("."))this.Component=l[p];else{this.Component=l;for(let y of p.split("."))this.Component=this.Component[y]}return this.hydrator=h,this.hydrate},e,this)}catch(r){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,r)}}attributeChangedCallback(){this.hydrate()}},d(u,"observedAttributes",["props"]),u))}})();</script><astro-island uid="1MPqDn" component-url="/_astro/DarkModeButton.xNbp8Br3.js" component-export="default" renderer-url="/_astro/client.PcUt3MZx.js" props="{}" ssr="" client="only" opts="{&quot;name&quot;:&quot;DarkModeButton&quot;,&quot;value&quot;:&quot;preact&quot;}"></astro-island> </div> <button id="burger-button" aria-label="Toggle mobile menu" class="md:hidden block w-14 h-14 relative focus:outline-none rounded z-10"> <div class="block w-5 absolute left-6 top-1/2 transform -translate-x-1/2 -translate-y-1/2"> <span id="burger-line-1" class="block absolute h-0.5 w-7 text-white bg-gray-600 dark:bg-white transform transition-all duration-500 ease-in-out -top-2"></span> <span id="burger-line-2" class="block absolute h-0.5 w-7 text-white bg-gray-600 dark:bg-white transform transition-all duration-500 ease-in-out"></span> <span id="burger-line-3" class="block absolute h-0.5 w-7 text-white bg-gray-600 dark:bg-white transform transition-all duration-500 ease-in-out top-2"></span> </div> </button> </nav> <div id="menu-backdrop" class="hidden bg-gray-600 bg-opacity-95 absolute top-0 left-0 h-screen w-screen backdrop-opacity-90 items-center justify-center"> <ul class="text-white font-bold text-xl"> <li class="p-3"><a href="/">Home</a></li> <li class="p-3"><a href="/blog">Blog</a></li> <li class="p-3"><a href="/speaking">Speaking</a></li> <li class="p-3"><a href="/about">About</a></li> <li class="p-3"> <astro-island uid="lieIt" component-url="/_astro/DarkModeButton.xNbp8Br3.js" component-export="default" renderer-url="/_astro/client.PcUt3MZx.js" props="{&quot;textOnly&quot;:[0,true],&quot;className&quot;:[0,&quot;!p-0&quot;]}" ssr="" client="only" opts="{&quot;name&quot;:&quot;DarkModeButton&quot;,&quot;value&quot;:&quot;preact&quot;}"></astro-island> </li> </ul> </div> </header>  <main class="m-0 mx-auto min-h-[70vh] w-full max-w-screen-xl px-4 py-12 text-gray-500 dark:text-gray-100">  <article> <div class="hero-image"> <img src="/_astro/cover.eY2JdMXs_Z19w8ls.webp" alt="Cover picture for Vue.js: Let's Scale!" class="rounded-xl shadow-xl mx-auto h-[500px] object-cover w-full" width="1020" height="500" loading="lazy" decoding="async"> </div> <div class="container m-auto text-center"> <div class="mt-3 text-blueGreyed dark:text-gray-300"> <time datetime="2021-05-27T00:00:00.000Z"> 27 May 2021 </time>  </div> <h1 class="font-bold text-3xl dark:text-white text-center leading-none py-4 mb-2 "> Vue.js: Let&#39;s Scale! </h1> <div class="pb-6"> <a href="/tags/Vue.js" class="mr-2 inline-block rounded-lg bg-darkBlue px-3 py-2 text-sm text-white no-underline hover:bg-blueGreyed dark:bg-blueGreyed dark:hover:bg-darkBlue"> Vue.js </a>  </div> </div> <div class="m-auto w-[720px] max-w-full">  <div class="prose
+  max-w-none
+  dark:prose-invert
+  prose-headings:underline
+  prose-h2:text-2xl prose-h2:font-bold prose-h2:dark:text-mainYellow
+  prose-h3:text-xl prose-h3:font-bold
+  prose-p:mb-0
+  prose-p:mt-4
+  prose-a:underline-offset-4
+  prose-a:decoration-2
+  prose-a:text-gray-700 dark:prose-a:text-slate-100 hover:prose-a:text-slate-900
+  prose-a:decoration-gray-300
+  hover:prose-a:decoration-blue-700 dark:hover:prose-a:decoration-mainYellow
+  prose-img:rounded-xl">  <p>Just like React, Vue.js is a great tool to build web applications. In this article, I will share a
+project I have been working on over the last 3 years. I will go through different technical points
+such as the modular architecture we use, micro-frontends, component’s state management, TypeScript,
+Vue 3 and more. Keep in mind that there is not one but many ways to scaffold a Vue app. This is one
+of them.</p>
+<h2 id="how-big">How big?</h2>
+<p>For the last 3 years, I have been working on a large vue.js application. If you’re curious about the
+project, here are some numbers:</p>
+<ul>
+<li>+5k vue&amp;js files / +650k lines of codes;</li>
+<li>10 years old codebase. Vue.js landed in December 2016;</li>
+<li>we have 2 repos: the app monolith + 1 monorepo (contains ~40 npm packages);</li>
+<li>it’s a Single Page Application (SPA) with +30 screens.</li>
+</ul>
+<p>As I often say: this application is not big. It’s <strong>too big</strong>.</p>
+<h2 id="modules-everywhere">Modules everywhere</h2>
+<p><img src="/_astro/diagram.VSUfc4S7_1Fyb2k.webp" alt="architecture diagram" width="1812" height="1400" loading="lazy" decoding="async"></p>
+<p>We adopted a modularised architecture for this app. In a nutshell, 1 module = 1 business part of the
+app. And a module is something that looks like a standalone Vue application. We consider modules as
+self-contained which can potentially be exported. By the way, some are exported as npm packages
+(<a href="/monorepo-pros-and-cons">in a monorepo</a>).</p>
+<p>Modules are not allowed to talk to each other… in theory. If 2 modules have to communicate, we can
+use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent">CustomEvent API</a>
+from the browser and dispatch an event via the window object.</p>
+<blockquote>
+<p>🙋‍♀️ How do you register modules?</p>
+</blockquote>
+<p>With the vue-router. A module loosely corresponds to a single top-level URL root. With this trick,
+modules are <a href="https://router.vuejs.org/guide/advanced/lazy-loading.html">“lazy loaded”</a>. So users
+don’t load the entire app when the application loads.</p>
+<div class="expressive-code"><link rel="stylesheet" href="/_astro/ec.aqfpi.css"/><script type="module" src="/_astro/ec.sgewm.js"></script><figure class="frame"><figcaption class="header"></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#9FA4BC;--0fs:italic">// if module is a npm package</span></div><div class="ec-line"><span style="--0:#C792EA">const</span><span style="--0:#BABED8"> ProductList </span><span style="--0:#89DDFF">=</span><span style="--0:#BABED8"> </span><span style="--0:#89DDFF">()</span><span style="--0:#BABED8"> </span><span style="--0:#C792EA">=&gt;</span><span style="--0:#BABED8"> </span><span style="--0:#89DDFF">import</span><span style="--0:#BABED8">(</span><span style="--0:#89DDFF">&#39;</span><span style="--0:#C3E88D">@company/product-list</span><span style="--0:#89DDFF">&#39;</span><span style="--0:#BABED8">)</span></div><div class="ec-line"><span style="--0:#9FA4BC;--0fs:italic">// or if the module is local</span></div><div class="ec-line"><span style="--0:#C792EA">const</span><span style="--0:#BABED8"> ProductList </span><span style="--0:#89DDFF">=</span><span style="--0:#BABED8"> </span><span style="--0:#89DDFF">()</span><span style="--0:#BABED8"> </span><span style="--0:#C792EA">=&gt;</span><span style="--0:#BABED8"> </span><span style="--0:#89DDFF">import</span><span style="--0:#BABED8">(</span><span style="--0:#89DDFF">&#39;</span><span style="--0:#C3E88D">./path/to/product-list</span><span style="--0:#89DDFF">&#39;</span><span style="--0:#BABED8">)</span></div><div class="ec-line">
+</div><div class="ec-line">
+</div><div class="ec-line"><span style="--0:#C792EA">const</span><span style="--0:#BABED8"> router </span><span style="--0:#89DDFF">=</span><span style="--0:#BABED8"> </span><span style="--0:#89DDFF">new</span><span style="--0:#BABED8"> </span><span style="--0:#82AAFF">VueRouter</span><span style="--0:#BABED8">(</span><span style="--0:#89DDFF">{</span></div><div class="ec-line"><span style="--0:#BABED8">  </span><span style="--0:#F2858B">routes</span><span style="--0:#89DDFF">:</span><span style="--0:#BABED8"> [</span></div><div class="ec-line"><span style="--0:#BABED8">    </span><span style="--0:#89DDFF">{</span><span style="--0:#BABED8"> </span><span style="--0:#F2858B">path</span><span style="--0:#89DDFF">:</span><span style="--0:#BABED8"> </span><span style="--0:#89DDFF">&#39;</span><span style="--0:#C3E88D">/product-list</span><span style="--0:#89DDFF">&#39;</span><span style="--0:#89DDFF">,</span><span style="--0:#BABED8"> </span><span style="--0:#F2858B">component</span><span style="--0:#89DDFF">:</span><span style="--0:#BABED8"> ProductList </span><span style="--0:#89DDFF">}</span></div><div class="ec-line"><span style="--0:#BABED8">    </span><span style="--0:#89DDFF">{</span><span style="--0:#BABED8"> </span><span style="--0:#F2858B">path</span><span style="--0:#89DDFF">:</span><span style="--0:#BABED8"> </span><span style="--0:#89DDFF">&#39;</span><span style="--0:#C3E88D">/payments</span><span style="--0:#89DDFF">&#39;</span><span style="--0:#89DDFF">,</span><span style="--0:#BABED8"> </span><span style="--0:#F2858B">component</span><span style="--0:#89DDFF">:</span><span style="--0:#BABED8"> Payments </span><span style="--0:#89DDFF">}</span></div><div class="ec-line"><span style="--0:#BABED8">    </span><span style="--0:#89DDFF">{</span><span style="--0:#BABED8"> </span><span style="--0:#F2858B">path</span><span style="--0:#89DDFF">:</span><span style="--0:#BABED8"> </span><span style="--0:#89DDFF">&#39;</span><span style="--0:#C3E88D">/user-settings</span><span style="--0:#89DDFF">&#39;</span><span style="--0:#89DDFF">,</span><span style="--0:#BABED8"> </span><span style="--0:#F2858B">component</span><span style="--0:#89DDFF">:</span><span style="--0:#BABED8"> UserSettings </span><span style="--0:#89DDFF">}</span></div><div class="ec-line"><span style="--0:#89DDFF">    </span><span style="--0:#9FA4BC;--0fs:italic">// ... other modules go here!</span></div><div class="ec-line"><span style="--0:#BABED8">  ]</span><span style="--0:#89DDFF">,</span></div><div class="ec-line"><span style="--0:#89DDFF">}</span><span style="--0:#BABED8">)</span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="// if module is a npm packageconst ProductList = () => import('@company/product-list')// or if the module is localconst ProductList = () => import('./path/to/product-list')const router = new VueRouter({  routes: [    { path: '/product-list', component: ProductList }    { path: '/payments', component: Payments }    { path: '/user-settings', component: UserSettings }    // ... other modules go here!  ],})"><div></div></button></div></figure></div>
+<p><strong>☝️ Granularity is important!</strong><br/>
+Among our ~40 packages, ~30 are modules. And we haven’t externalized everything yet. A single
+business part of the app is sometimes splitted into multiple modules. We didn’t discuss the scope of
+a module before creating it. In my opinion, we have too many modules today and a lot of them should
+be merged. If you decide to go with this approach, don’t make the same mistake we did.</p>
+<h2 id="micro-frontends">Micro-frontends?</h2>
+<p><img src="/_astro/micro-fe.Qax6pQe9_4XoDY.webp" alt="Comparison between classical SPA architecture and micro frontends" width="1788" height="898" loading="lazy" decoding="async"></p>
+<p>Our module architecture shows some limits. Because we only export one app, big changes are nearly
+impossible. Let’s say we want to experiment with Vue.js 3, we will have to ensure that our few
+thousand vue files are compatible. And this scenario happens for every major change we want to do. I
+tried once to update our testing library. Out of our ~2200 tests, 500 were failing.</p>
+<p><a href="/3-tips-scaling-vue-application#tip-2-consider-micro-frontends">Micro frontends</a> appear to be a
+good fix for these problems. Because we could gradually update our dependencies. But nothing in life
+comes free. The biggest downside I see is potential inconsistencies across our app. Some teams will
+use the latest version of every tool where others will not update their dependencies. It can lead to
+“mismatched dependencies”, one team using v1 of our common component and another team using the v2.
+This architectural style also brings interesting challenges regarding the deployment. Deploying one
+application is very different from deploying multiple applications.</p>
+<h2 id="webpack-5--module-federation">Webpack 5 &amp; Module federation</h2>
+<blockquote>
+<p>Module federation allows a JavaScript application to dynamically run code from another
+bundle/build, on client and server</p>
+</blockquote>
+<p><img src="/_astro/wp5-mod-fed.O2sRKLuc_Z18RsA8.webp" alt="Apps containers consume the same component library container!" width="1696" height="798" loading="lazy" decoding="async"> <em>The same
+component library container can be shared across multiple “app containers”</em></p>
+<p>If you have 2 microservices, having your favourite framework installed twice is not a big deal.
+Users won’t perceive it. But it’s a different story on the frontend side. If 2 micro frontends use
+the same frameworks and libraries, the user will download everything twice.</p>
+<p>With Webpack 5 and the module federation plugin, it’s now possible to <em>“share code”</em> between
+containers (or pages/builds). So if your component library is a standalone container, you can deploy
+a new version of it without redeploying all the micro frontends.</p>
+<p><em>Note: at the moment, this part is still in the “investigation stage”.</em></p>
+<h2 id="state-management-and-vuex">State management and Vuex</h2>
+<p><img src="/_astro/vuex.eBoePaki_1Jm7gi.webp" alt="Vuex" width="1350" height="730" loading="lazy" decoding="async"></p>
+<p>Vuex provides a handy way to manage the state between components. In the beginning, I really liked
+it… but over time, this feeling faded out. Here are a few reasons:</p>
+<ul>
+<li>devs tend to put
+<a href="/3-tips-scaling-vue-application#tip-3-be-kind-with-your-store-vuex">everything in the store</a>;</li>
+<li>the store makes your app
+<a href="/vue-js-testing-library#testing-the-store-with-vuex">harder to test (integration/unit)</a>;</li>
+<li>scoped stores are hard to unregister. Unnecessary data can be kept in memory, sometimes causing
+state-sync issues;</li>
+<li>if you have +10 mutation when page load, time travel (via devtools) does not work well;</li>
+<li>dead code in state/mutation/actions is hard to identify.</li>
+</ul>
+<p>I mentioned earlier, we splitted our app into small modules. Since our modules are like a small
+<em>vue-cli</em> app with a few pages only, <strong>controlling the pages state with a Vuex store does not make a
+lot of sense at the end</strong>.</p>
+<p>I stopped using Vuex in modules, something like 2y ago. So far, so good. I found the code more
+readable and more maintainable. However, I still use it for high-level stuff like i18n and user
+settings.</p>
+<h2 id="what-about-typescript">What about TypeScript?</h2>
+<p>A few years ago, a colleague wanted to introduce TypeScript. After many debates, we ended up with
+this decision: “TS is cool and static type checking can be beneficial for such a big codebase.
+However, <strong>adding it would require too much effort</strong>. The return of investment is not worthy”.</p>
+<p>It might change with Vue 3. Integration with this language looks very promising!</p>
+<h2 id="what-about-vue-3">What about Vue 3?</h2>
+<p>I see two main reasons to think about Vue.js 3: Performance improvements and Composition API.</p>
+<ul>
+<li>
+<p><strong>Performance improvements</strong>: it’s (almost) always a good thing to thrive for performances. But in
+this case, I don’t think it will solve our problems. It’s like if you replace your car with a
+Ferrari to get your coffee at the end of the road. But the thing is, we live on the 6th floor with
+no elevator.<br/>
+Our bottleneck is not in the component rendering but in the amount of code the browser has to
+parse before rendering the page. Deleting code is not as fancy as bumping a framework version.</p>
+</li>
+<li>
+<p><strong>Composition API</strong> (Hooks made in Vue): The feature we were all looking for, when React added
+hooks ~2y ago. In a nutshell, the Composition API provides a lot of value when you want to reuse
+some logic or when you struggle to read large components. Much like with Mixins, you can extract
+component logic into a file. Then you can <em>compose</em> your component with this logic. If you, like
+me, can’t wait to use it, there’s a <a href="https://github.com/vuejs/composition-api">plugin for Vue 2.x</a>
+which seems to be stable enough to go to
+<a href="https://github.com/vuejs/composition-api/issues/527">production</a>.</p>
+</li>
+</ul>
+<p>For these reasons, <em>I don’t think</em> we will see Vue.js 3 this year. But the Composition API will
+probably arrive soon in the codebase.</p>
+<p><em>Edit: Vue team is working on
+<a href="https://twitter.com/vuejs/status/1388144585600274433">compatibility bridges</a> between versions 2
+and 3. It might change!</em></p>
+<h2 id="component-library-and-storybook">Component library and Storybook</h2>
+<p><img src="/_astro/storybook.wrmVQHfM_5ELpQ.webp" alt="Storybook example" width="2416" height="1294" loading="lazy" decoding="async"> <em>Storybook is a great bridge between the frontend and the UX
+team. We heavily rely on this tool and so far, we’re very happy to use it.</em></p>
+<p>Even if you start from an existing component library, you might have to build your reusable
+components. In one place we put all our components, including very specific components into our
+application. I tend to consider this package as an “open-source package”, something that anybody
+could reuse.</p>
+<p>When we have to build a new screen it’s pretty much like doing a lego construction. There’s a kind
+of component box and developers pick what they need. Most of the time, writing CSS is not needed.</p>
+<h2 id="testing">Testing</h2>
+<p>We have 3 different types of tests:</p>
+<ul>
+<li><strong>Static code analysis</strong> (with ESLint): We created a set of rules on the top of Airbnb’s config.
+This configuration is used everywhere in the app. It prevents us from pushing dead or misformatted
+code to the main branch. By the way, having a shareable ESlint config is a good way to
+<a href="/lesson-learned-maintaining-large-vue-js-codebase#close-the-door-on-bikeshedding">close the door on bikeshedding</a>!</li>
+<li><strong>Unit tests</strong> (with Jest): Less than 10% of our <code>xxx.test.js</code> are unit tests. It’s mostly used to
+test the business part of the app. Because writing integration tests would require too many
+scenarios and test files would end up being unnecessarily verbose. Also, integration tests are
+slower than unit tests. By the way, we don’t unit test components or Vuex stores.</li>
+<li><strong>Integration tests</strong> (with Vue Testing Library): where the magic happens. We really like this
+library, because it provides <a href="/vue-js-testing-library">a very straightforward way</a> to test our
+app.</li>
+</ul>
+<p>At the moment, we have a total of ~3100 unit&amp;integration tests.</p> <div> <hr> <h2 class="dark:text-gray-100">About the author</h2> <div class="flex flex-col md:flex-row items-center gap-5 md:gap-8 mt-5"> <div class="relative flex-shrink-0 h-32 w-32"> <img src="/_astro/profile-picture.gF0h5NUU_Zw8iDo.webp" class="not-prose h-32 w-32 object-cover rounded-full" alt="Maxence Poutord Profile picture" width="128" height="128" loading="lazy" decoding="async"> </div> <div> <p class="!mt-0 pb-2">
+Hey, I'm Maxence Poutord, a passionate software engineer. In my
+        day-to-day job, I'm working as a senior front-end engineer at Orderfox.
+        When I'm not working, you can find me travelling the world or cooking.
+</p> <a class="not-prose inline-flex rounded border
+    font-semibold no-underline
+    transition-colors duration-200 ease-in-out px-3 py-2
+    border-[#1da1f2] bg-[#1da1f2] text-white
+    hover:border-[#1da1f2] hover:bg-white hover:text-[#1da1f2]" rel="noopener" target="_blank" href="https://twitter.com/intent/follow?screen_name=_maxpou"> <svg aria-label="Twitter" viewBox="0 0 24 24" width="1em" height="1em" class="h-6 w-6 pr-2"><path fill="currentColor" d="M23.954 4.569a10 10 0 0 1-2.825.775 4.958 4.958 0 0 0 2.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 0 0-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 0 0-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 0 1-2.228-.616v.061a4.923 4.923 0 0 0 3.946 4.827 4.996 4.996 0 0 1-2.212.085 4.937 4.937 0 0 0 4.604 3.417 9.868 9.868 0 0 1-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0 0 7.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 0 0 2.46-2.548l-.047-.02z"></path></svg>
+Follow @_maxpou
+ </a> </div> </div> </div>  </div>  <div> <h2 class="text-2xl underline mt-12 font-bold dark:text-mainYellow">
+Recommended posts
+</h2> <div class="grid grid-cols-1 gap-4 md:grid-cols-2 mt-6"> <a title="What's happens when you `git commit`" href="/blog/git-under-the-hood/" class="ease flex flex-col rounded-lg bg-white transition duration-300 dark:bg-gray-500 hover:translate-y-0.5 shadow-md  hover:shadow-xl group"> <img src="/_astro/cover.dtWL2vrQ_ZQ0SBb.webp" alt="Cover picture for What's happens when you `git commit`" class="h-56 w-full rounded-b-none rounded-t-lg object-cover transition" width="420" height="224" loading="lazy" decoding="async"> <div class="p-4"> <header class="text-xl font-semibold text-gray-700 dark:text-gray-100"> <span class="inline">  <!-- {post.data.title} --> <span class="from-blue-100 to-blue-100 text-dark dark:bg-none
+           bg-gradient-to-r bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]"> What&#39;s happens when you `git commit` </span> </span> </header> <p class="date text-gray-400 dark:text-gray-100"> <time datetime="2019-10-14T00:00:00.000Z"> 14 October 2019 </time> </p> </div> </a><a title="3 Tips for Scaling Large Vue.js Application" href="/blog/3-tips-scaling-vue-application/" class="ease flex flex-col rounded-lg bg-white transition duration-300 dark:bg-gray-500 hover:translate-y-0.5 shadow-md  hover:shadow-xl group"> <img src="/_astro/cover.ex1KwcGk_Z1CSi66.webp" alt="Cover picture for 3 Tips for Scaling Large Vue.js Application" class="h-56 w-full rounded-b-none rounded-t-lg object-cover transition" width="420" height="224" loading="lazy" decoding="async"> <div class="p-4"> <header class="text-xl font-semibold text-gray-700 dark:text-gray-100"> <span class="inline">  <!-- {post.data.title} --> <span class="from-blue-100 to-blue-100 text-dark dark:bg-none
+           bg-gradient-to-r bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]"> 3 Tips for Scaling Large Vue.js Application </span> </span> </header> <p class="date text-gray-400 dark:text-gray-100"> <time datetime="2018-12-13T00:00:00.000Z"> 13 December 2018 </time> </p> </div> </a> </div> </div>  </div> </article>  </main> <footer class="bg-blue-50 dark:bg-gray-600 dark:text-white w-full mx-auto pb-0" data-astro-cid-sz7xmlte> <div class="m-auto flex w-[1024px] max-w-full flex-wrap justify-between" data-astro-cid-sz7xmlte> <div class="w-full pb-4 md:w-auto flex-auto" data-astro-cid-sz7xmlte> <p class="pb-1 font-bold" data-astro-cid-sz7xmlte>
+&copy; 2014 - 2024 - Maxence Poutord </p> <p data-astro-cid-sz7xmlte>Built with Astro, Tailwind and some ☕️</p> <p data-astro-cid-sz7xmlte>
+Hosted with <span class="text-red-500" data-astro-cid-sz7xmlte>❤</span> by <a class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" href="https://github.com/maxpou/maxpou.fr" data-astro-cid-sz7xmlte>GitHub</a>.
+</p> </div> <div class="flex-auto" data-astro-cid-sz7xmlte> <h3 class="pb-1 font-bold" data-astro-cid-sz7xmlte>Explore</h3> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte> <a href="/uses" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Uses </a> </li><li data-astro-cid-sz7xmlte> <a href="/recipes" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Recipes (kitchen) </a> </li><li data-astro-cid-sz7xmlte> <a href="/about" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> About </a> </li><li data-astro-cid-sz7xmlte> <a href="/cv" target="_blank" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Resume (cv) </a> </li><li data-astro-cid-sz7xmlte> <a href="/readme" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Readme </a> </li> </ul> </div> <div class="flex-auto" data-astro-cid-sz7xmlte> <h3 class="pb-1 font-bold flex-auto" data-astro-cid-sz7xmlte>Let's connect</h3> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte> <a href="https://github.com/maxpou" rel="noopener noreferrer" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> GitHub </a> </li><li data-astro-cid-sz7xmlte> <a href="https://twitter.com/_maxpou" rel="noopener noreferrer" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Twitter </a> </li><li data-astro-cid-sz7xmlte> <a href="https://www.linkedin.com/in/maxpou/" rel="noopener noreferrer" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> LinkedIn </a> </li><li data-astro-cid-sz7xmlte> <a href="/rss.xml" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> RSS feed </a> </li> </ul> </div> </div>  </footer>  </body> </html>

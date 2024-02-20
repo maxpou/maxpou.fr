@@ -1,0 +1,167 @@
+<!DOCTYPE html><html lang="en"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/x-icon" href="/favicon.ico"><meta name="generator" content="Astro v4.4.0"><!-- Font preloads --><link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet"><!-- Canonical URL --><link rel="canonical" href="https://www.maxpou.fr/blog/rsi-as-developer/"><!-- Primary Meta Tags --><title>My Journey with RSI (as a Software Engineer)</title><meta name="title" content="My Journey with RSI (as a Software Engineer)"><meta name="description" content="A blog post written by Maxence Poutord"><script async defer data-domain="maxpou.fr" src="https://plausible.io/js/plausible.js"></script><link rel="alternate" type="application/rss+xml" title="Maxence Poutord • Maxpou Blog" href="/rss.xml"><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"><!-- Open Graph / Facebook --><meta property="og:type" content="article"><meta property="og:url" content="https://www.maxpou.fr/blog/rsi-as-developer/"><meta property="og:title" content="My Journey with RSI (as a Software Engineer)"><meta property="og:description" content="A blog post written by Maxence Poutord"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://www.maxpou.fr/blog/rsi-as-developer/"><meta property="twitter:title" content="My Journey with RSI (as a Software Engineer)"><meta property="twitter:description" content="A blog post written by Maxence Poutord"><meta name="twitter:creator" content="_maxpou"><script>
+  const theme = (() => {
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+      return localStorage.getItem('theme')
+    }
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark'
+    }
+    return 'light'
+  })()
+
+  if (theme === 'light') {
+    document.documentElement.classList.remove('dark')
+  } else {
+    document.documentElement.classList.add('dark')
+  }
+  window.localStorage.setItem('theme', theme)
+</script><link rel="stylesheet" href="/_astro/_slug_.cE4nuJce.css" />
+<style>code[class*=language-],pre[class*=language-]{color:#ccc;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.comment,.token.block-comment,.token.prolog,.token.doctype,.token.cdata{color:#999}.token.punctuation{color:#ccc}.token.tag,.token.attr-name,.token.namespace,.token.deleted{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.number,.token.function{color:#f08d49}.token.property,.token.class-name,.token.constant,.token.symbol{color:#f8c555}.token.selector,.token.important,.token.atrule,.token.keyword,.token.builtin{color:#cc99cd}.token.string,.token.char,.token.attr-value,.token.regex,.token.variable{color:#7ec699}.token.operator,.token.entity,.token.url{color:#67cdcc}.token.important,.token.bold{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}.expressive-code{margin-top:1em}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.fA4gFHjB.css" />
+<style>a[data-astro-cid-eimmu3lg]{display:inline-block;text-decoration:none;border-bottom:4px solid transparent}a[data-astro-cid-eimmu3lg].active{font-weight:bolder;border-bottom-color:#ffdc4e}footer[data-astro-cid-sz7xmlte]{padding:2em 1em 6em;color:rgb(var(--gray))}*{transition:background .5s ease}*::-moz-selection{background-color:#ffdc4e;color:#3e4047}*::selection{background-color:#ffdc4e;color:#3e4047}
+</style><script type="module">const n=document.getElementById("burger-button"),e=document.getElementById("burger-line-1"),r=document.getElementById("burger-line-2"),t=document.getElementById("burger-line-3"),o=document.getElementById("menu-backdrop");n.addEventListener("click",()=>{o.classList.contains("hidden")?(o.classList.add("flex"),o.classList.remove("hidden"),e.style.transform="rotate(45deg)",e.style.top="0",e.style.backgroundColor="white",r.style.backgroundColor="transparent",t.style.transform="rotate(-45deg)",t.style.top="0",t.style.backgroundColor="white"):(e.style.transform="rotate(0)",e.style.removeProperty("top"),e.style.removeProperty("background-color"),r.style.removeProperty("background-color"),t.style.removeProperty("background-color"),t.style.transform="rotate(0)",t.style.removeProperty("top"),o.classList.add("hidden"),o.classList.remove("flex"))});
+</script></head> <body class="bg-gradient-to-b from-blue-50 to-[#f5f7f9] dark:bg-gray-600 dark:bg-gradient-to-b dark:from-gray-600"> <header class="bg-white dark:bg-gray-600 px-4 h-16"> <nav class="dark:text-white h-16 flex items-center justify-between max-w-screen-xl w-full mx-auto"> <h1 class="text-lg dark:text-white font-bold"> <a href="/">Maxence Poutord</a> </h1> <div class="md:flex hidden"> <a href="/blog" class="py-4 px-2 no-underline text-lg hover:text-blue-900 dark:text-white dark:hover:text-mainYellow" data-astro-cid-eimmu3lg> Blog </a>  <a href="/speaking" class="py-4 px-2 no-underline text-lg hover:text-blue-900 dark:text-white dark:hover:text-mainYellow" data-astro-cid-eimmu3lg> Speaking </a>  <a href="/about" class="py-4 px-2 no-underline text-lg hover:text-blue-900 dark:text-white dark:hover:text-mainYellow" data-astro-cid-eimmu3lg> About </a>  <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();;(()=>{var v=Object.defineProperty;var A=(c,s,a)=>s in c?v(c,s,{enumerable:!0,configurable:!0,writable:!0,value:a}):c[s]=a;var d=(c,s,a)=>(A(c,typeof s!="symbol"?s+"":s,a),a);var u;{let c={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t)},s=t=>{let[e,n]=t;return e in c?c[e](n):void 0},a=t=>t.map(s),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([e,n])=>[e,s(n)]));customElements.get("astro-island")||customElements.define("astro-island",(u=class extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var f;if(!this.hydrator||!this.isConnected)return;let e=(f=this.parentElement)==null?void 0:f.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let n=this.querySelectorAll("astro-slot"),r={},l=this.querySelectorAll("template[data-astro-template]");for(let o of l){let i=o.closest(this.tagName);i!=null&&i.isSameNode(this)&&(r[o.getAttribute("data-astro-template")||"default"]=o.innerHTML,o.remove())}for(let o of n){let i=o.closest(this.tagName);i!=null&&i.isSameNode(this)&&(r[o.getAttribute("name")||"default"]=o.innerHTML)}let h;try{h=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(o){let i=this.getAttribute("component-url")||"<unknown>",b=this.getAttribute("component-export");throw b&&(i+=` (export ${b})`),console.error(`[hydrate] Error parsing props for component ${i}`,this.getAttribute("props"),o),o}let p;await this.hydrator(this)(this.Component,h,r,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),n.disconnect(),this.childrenConnectedCallback()},n=new MutationObserver(()=>{var r;((r=this.lastChild)==null?void 0:r.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});n.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),n=this.getAttribute("client");if(Astro[n]===void 0){window.addEventListener(`astro:${n}`,()=>this.start(),{once:!0});return}try{await Astro[n](async()=>{let r=this.getAttribute("renderer-url"),[l,{default:h}]=await Promise.all([import(this.getAttribute("component-url")),r?import(r):()=>()=>{}]),p=this.getAttribute("component-export")||"default";if(!p.includes("."))this.Component=l[p];else{this.Component=l;for(let y of p.split("."))this.Component=this.Component[y]}return this.hydrator=h,this.hydrate},e,this)}catch(r){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,r)}}attributeChangedCallback(){this.hydrate()}},d(u,"observedAttributes",["props"]),u))}})();</script><astro-island uid="1MPqDn" component-url="/_astro/DarkModeButton.xNbp8Br3.js" component-export="default" renderer-url="/_astro/client.PcUt3MZx.js" props="{}" ssr="" client="only" opts="{&quot;name&quot;:&quot;DarkModeButton&quot;,&quot;value&quot;:&quot;preact&quot;}"></astro-island> </div> <button id="burger-button" aria-label="Toggle mobile menu" class="md:hidden block w-14 h-14 relative focus:outline-none rounded z-10"> <div class="block w-5 absolute left-6 top-1/2 transform -translate-x-1/2 -translate-y-1/2"> <span id="burger-line-1" class="block absolute h-0.5 w-7 text-white bg-gray-600 dark:bg-white transform transition-all duration-500 ease-in-out -top-2"></span> <span id="burger-line-2" class="block absolute h-0.5 w-7 text-white bg-gray-600 dark:bg-white transform transition-all duration-500 ease-in-out"></span> <span id="burger-line-3" class="block absolute h-0.5 w-7 text-white bg-gray-600 dark:bg-white transform transition-all duration-500 ease-in-out top-2"></span> </div> </button> </nav> <div id="menu-backdrop" class="hidden bg-gray-600 bg-opacity-95 absolute top-0 left-0 h-screen w-screen backdrop-opacity-90 items-center justify-center"> <ul class="text-white font-bold text-xl"> <li class="p-3"><a href="/">Home</a></li> <li class="p-3"><a href="/blog">Blog</a></li> <li class="p-3"><a href="/speaking">Speaking</a></li> <li class="p-3"><a href="/about">About</a></li> <li class="p-3"> <astro-island uid="lieIt" component-url="/_astro/DarkModeButton.xNbp8Br3.js" component-export="default" renderer-url="/_astro/client.PcUt3MZx.js" props="{&quot;textOnly&quot;:[0,true],&quot;className&quot;:[0,&quot;!p-0&quot;]}" ssr="" client="only" opts="{&quot;name&quot;:&quot;DarkModeButton&quot;,&quot;value&quot;:&quot;preact&quot;}"></astro-island> </li> </ul> </div> </header>  <main class="m-0 mx-auto min-h-[70vh] w-full max-w-screen-xl px-4 py-12 text-gray-500 dark:text-gray-100">  <article> <div class="hero-image"> <img src="/_astro/cover.AYGn3PyR_Z20dpTT.webp" alt="Cover picture for My Journey with RSI (as a Software Engineer)" class="rounded-xl shadow-xl mx-auto h-[500px] object-cover w-full" width="1020" height="500" loading="lazy" decoding="async"> </div> <div class="container m-auto text-center"> <div class="mt-3 text-blueGreyed dark:text-gray-300"> <time datetime="2021-10-05T00:00:00.000Z"> 5 October 2021 </time>  </div> <h1 class="font-bold text-3xl dark:text-white text-center leading-none py-4 mb-2 "> My Journey with RSI (as a Software Engineer) </h1> <div class="pb-6"> <a href="/tags/Life" class="mr-2 inline-block rounded-lg bg-darkBlue px-3 py-2 text-sm text-white no-underline hover:bg-blueGreyed dark:bg-blueGreyed dark:hover:bg-darkBlue"> Life </a>  </div> </div> <div class="m-auto w-[720px] max-w-full">  <div class="prose
+  max-w-none
+  dark:prose-invert
+  prose-headings:underline
+  prose-h2:text-2xl prose-h2:font-bold prose-h2:dark:text-mainYellow
+  prose-h3:text-xl prose-h3:font-bold
+  prose-p:mb-0
+  prose-p:mt-4
+  prose-a:underline-offset-4
+  prose-a:decoration-2
+  prose-a:text-gray-700 dark:prose-a:text-slate-100 hover:prose-a:text-slate-900
+  prose-a:decoration-gray-300
+  hover:prose-a:decoration-blue-700 dark:hover:prose-a:decoration-mainYellow
+  prose-img:rounded-xl">  <p>Three months ago, I started feeling a pain in my hands. In the beginning, I ignored it. I thought it
+was not going to stay. Then the pain intensified, and I reached a point where I couldn’t use a
+keyboard/mouse for more than 10 minutes in a row. I quickly realized I had RSI (Repetitive Strain
+Injury).</p>
+<p>Working with a laptop is a part of my job and, I love what I’m doing for a living. As you might
+guess, I completely freaked out. I didn’t want to be forced to change jobs.</p>
+<p><em>Disclaimer: This post is NOT intended to be a substitute for professional medical advice and should
+not be relied on as health or personal advice.</em></p>
+<h2 id="rsi---repetitive-strain-injury">RSI - Repetitive Strain Injury</h2>
+<blockquote>
+<p>A repetitive strain injury (RSI) is a painful medical condition that can cause damage to the
+hands, wrists, upper arms, and backs, especially of people who use computers and other forms of
+keyboard.<br>
+—
+<a href="https://dictionary.cambridge.org/dictionary/english/repetitive-strain-injury">dictionary.cambridge.org</a></p>
+</blockquote>
+<h2 id="step-1-identifying-the-cause">Step 1: Identifying the cause</h2>
+<p>I’m used to working from cafes / co-working spaces. My posture always kept changing. Because of the
+lockdown, I had to work from home, at the same desk.</p>
+<p>Here is what my configuration looked like:</p>
+<p><img  src="/_astro/bad-desk.0Z4kcprF_ZjhrSr.webp" alt="a bad desk and a cheap IKEA chair" width="800" height="600" loading="lazy" decoding="async"></p>
+<p>It didn’t take me long to identify the root cause. Ergonomic was pretty bad:</p>
+<ul>
+<li>a basic chair that can’t be adjusted</li>
+<li>a very small desk where my arm can’t rest</li>
+<li>the Apple Magic trackpad. As I only use one screen, I constantly use the trackpad to switch
+between desktops. Doing long key travel is bad.</li>
+</ul>
+<p>Also, because of the bad equipment, my wrist was “broken” instead of being straight.</p>
+<p><img  src="/_astro/hand-position.maX-ZB1__1soswJ.webp" alt="hand positions" width="350" height="166" loading="lazy" decoding="async"></p>
+<h2 id="step-2-fixing-the-pain">Step 2: Fixing the pain</h2>
+<p>To fix this pain, I took several actions:</p>
+<h3 id="1---icing">#1 - Icing</h3>
+<p>Fill a bucket of water and ice and put your hand in it for ~3 minutes. All your pain will
+disappear… for 20 minutes or so. It feels like magic!</p>
+<p>I’ve been using this technique when the pain was at its peak. I was working with an ice bucket next
+to me. But icing only reduces the pain and I don’t like to sweep problems under the carpet.</p>
+<h3 id="2---stopping-video-games">#2 - Stopping video games</h3>
+<p>I’ve been playing Age of Empires 2 for years. If you don’t know this game (shame on you!), it’s a
+strategic game where speed is a key to victory. By speed, I mean to perform many actions per minute
+(aka APM).</p>
+<p>In other words, it’s incompatible with RSI. After playing for a few minutes, my hand was on fire. I
+also tried to play other games with a gamepad and I ended up with the same pain. I had to stop
+playing.</p>
+<h3 id="3---taking-a-one-week-laptop-free">#3 - Taking a one-week laptop free</h3>
+<p>When I realized that something was wrong with my body, I came to my manager and told him I had to
+take a week break for the next week. I explained the situation and he understood.</p>
+<p>To be honest, regardless of my manager’s answer, it was clear in my head that I will not work the
+following week. Health comes first!</p>
+<p>It wasn’t the most exciting holiday since I couldn’t do outdoor activities (rain+covid lockdown) or
+coding/playing video games.</p>
+<h3 id="4---fail-using-voice-control-control-computer-with-voice">#4 - [FAIL!] Using Voice Control (control computer with voice)</h3>
+<p>I remember a few months ago, I read a blog post from Joshua Comeau, about
+<a href="https://www.joshwcomeau.com/blog/hands-free-coding/">hands-free coding</a>. In his article, he
+explains how he writes code by using his voice.</p>
+<p>Since I didn’t feel ready to invest in dedicated software, I started using
+<a href="https://support.apple.com/en-gb/guide/mac-help/mh40719/mac">Voice Control</a>, MacOS’s default tool to
+interact with your laptop without using a keyboard/mouse. It turned into a complete disaster!</p>
+<p>For navigation it’s okay but, when it comes to typing, it becomes unusable. When I said “Type:
+maxpou dot fr”, it was converted into “Mexboroughblue don’t ever ever” 🥲. I guess the algorithm
+wasn’t trained by a French guy speaking English.</p>
+<p>After spending 4 hours with this tool, I gave up.</p>
+<h3 id="5---doing-wrist-exercises">#5 - Doing wrist exercises</h3>
+<p><a href="https://twitter.com/bruderkaitlin/status/997190969031319552"><img  src="/_astro/stretch-hands.sb1UEGOB_Z18spV7.webp" alt="stretch hands exercices" width="800" height="1264" loading="lazy" decoding="async"></a></p>
+<p>Many professionals recommend doing wrist exercises to prevent RSI, even if you don’t have it. Like
+many people (I guess), I ignored these recommendations.</p>
+<p>It’s probably one of the first things I adopted when I started getting RSI symptoms. I did
+<a href="https://www.youtube.com/watch?v=BPBWIfKTZCI">these exercises</a> 3 times a day (5mins / session). I
+also set an alarm on my phone not to forget.</p>
+<h3 id="6---improving-my-workstation">#6 - Improving my workstation</h3>
+<p>I’m used to living in short-term accommodations. At the moment I live in Berlin but, I don’t think
+I’ll commit to this city. It is just temporary and I don’t want to invest in a proper setup. I
+already have a laptop stand and I use external input devices. I believe it’s a good thing for my
+posture.</p>
+<p>Since RSI can be a career killer I had to improve my workstation.</p>
+<p><img  src="/_astro/workstation._K46bW4d_Z23dRUI.webp" alt="my improved workstation" width="800" height="600" loading="lazy" decoding="async"></p>
+<ul>
+<li>switched from basic chair to an office chair;</li>
+<li>alternate from a trackpad to a mouse from time to time. But when I use the mouse, I’ve to put the
+trackpad away otherwise my hand goes naturally on the trackpad;</li>
+<li>made a standing desk. I actually use an empty room in my apartment as my 2nd office. You can see
+the standing desk is very basic but it does the job!!! I usually spend my morning standing and the
+afternoon sitting.</li>
+<li>use wrist rest. I don’t find this thing very comfortable when I’m seated. So I only use it when
+I’m standing.</li>
+</ul>
+<p>It’s not perfect but, I feel better at the end of the day!</p>
+<h3 id="7---wearing-a-brace-wrist">#7 - Wearing a brace wrist</h3>
+<p><img  src="/_astro/brace-wrist.-oCw6aH2_ZjzsaV.webp" alt="my brace wrist" width="800" height="600" loading="lazy" decoding="async"></p>
+<p>I bought this brace wrist based on advice. I read that wearing a rigid brace wrist when you sleep/do
+offscreen activities can be beneficial. It’s very uncomfortable to wear one when you are
+eating/cooking. So, I only used mine when I slept.</p>
+<p>It took me a few days to get used to it. But I think wearing it for a month was beneficial to me.</p>
+<h3 id="8---taking-more-breaks">#8 - Taking more breaks</h3>
+<p><a href="https://www.rsiprevention.com/prevention">It’s recommended</a> to take a 5 minutes break every 20-30
+minutes of continuous activity. I’ve found out that there are many occasions to take a break:</p>
+<ul>
+<li>Go to the coffee shop</li>
+<li>Do some hand stretch exercises</li>
+<li>Cook</li>
+<li>Prepare coffee</li>
+<li>…</li>
+</ul>
+<p>Also, I use more video calls than used to. You know when a colleague requires some help. Instead of
+long slack messages, I tend to favour quick calls with a screen sharing session.</p>
+<h2 id="epilogue">Epilogue</h2>
+<p>5 months after, most of the pain is almost gone 🥳!</p>
+<p>But I still suffer when I spend too much time typing. I can also use the laptop for recreational
+use, but I know I’ve limited time until the pain returns. I think I’ll have to live with RSI since
+it’s never cured completely.</p>
+<p>One of the things I’ve learned is to work smarter. I also take more breaks during my workday. I felt
+a bit guilty at the beginning but, I now realized that it didn’t really affect my productivity.</p>
+<p>Last but not least, I couldn’t finish this article without mentioning Swyx and his great post about
+<a href="https://www.swyx.io/rsi-tips/">RSI (swyx.io)</a>. His blog post was like a gold mine to me.</p> <div> <hr> <h2 class="dark:text-gray-100">About the author</h2> <div class="flex flex-col md:flex-row items-center gap-5 md:gap-8 mt-5"> <div class="relative flex-shrink-0 h-32 w-32"> <img src="/_astro/profile-picture.gF0h5NUU_Zw8iDo.webp" class="not-prose h-32 w-32 object-cover rounded-full" alt="Maxence Poutord Profile picture" width="128" height="128" loading="lazy" decoding="async"> </div> <div> <p class="!mt-0 pb-2">
+Hey, I'm Maxence Poutord, a passionate software engineer. In my
+        day-to-day job, I'm working as a senior front-end engineer at Orderfox.
+        When I'm not working, you can find me travelling the world or cooking.
+</p> <a class="not-prose inline-flex rounded border
+    font-semibold no-underline
+    transition-colors duration-200 ease-in-out px-3 py-2
+    border-[#1da1f2] bg-[#1da1f2] text-white
+    hover:border-[#1da1f2] hover:bg-white hover:text-[#1da1f2]" rel="noopener" target="_blank" href="https://twitter.com/intent/follow?screen_name=_maxpou"> <svg aria-label="Twitter" viewBox="0 0 24 24" width="1em" height="1em" class="h-6 w-6 pr-2"><path fill="currentColor" d="M23.954 4.569a10 10 0 0 1-2.825.775 4.958 4.958 0 0 0 2.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 0 0-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 0 0-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 0 1-2.228-.616v.061a4.923 4.923 0 0 0 3.946 4.827 4.996 4.996 0 0 1-2.212.085 4.937 4.937 0 0 0 4.604 3.417 9.868 9.868 0 0 1-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0 0 7.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 0 0 2.46-2.548l-.047-.02z"></path></svg>
+Follow @_maxpou
+ </a> </div> </div> </div>  </div>  <div> <h2 class="text-2xl underline mt-12 font-bold dark:text-mainYellow">
+Recommended posts
+</h2> <div class="grid grid-cols-1 gap-4 md:grid-cols-2 mt-6"> <a title="Git: Cheat Sheet (advanced)" href="/blog/git-cheat-sheet/" class="ease flex flex-col rounded-lg bg-white transition duration-300 dark:bg-gray-500 hover:translate-y-0.5 shadow-md  hover:shadow-xl group"> <img src="/_astro/git-toolbox.oDur-RrH_2aw0y5.webp" alt="Cover picture for Git: Cheat Sheet (advanced)" class="h-56 w-full rounded-b-none rounded-t-lg object-cover transition" width="420" height="224" loading="lazy" decoding="async"> <div class="p-4"> <header class="text-xl font-semibold text-gray-700 dark:text-gray-100"> <span class="inline">  <!-- {post.data.title} --> <span class="from-blue-100 to-blue-100 text-dark dark:bg-none
+           bg-gradient-to-r bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]"> Git: Cheat Sheet (advanced) </span> </span> </header> <p class="date text-gray-400 dark:text-gray-100"> <time datetime="2019-11-28T00:00:00.000Z"> 28 November 2019 </time> </p> </div> </a><a title="Vue.js Testing Made it Easy (with Testing Library)" href="/blog/vue-js-testing-library/" class="ease flex flex-col rounded-lg bg-white transition duration-300 dark:bg-gray-500 hover:translate-y-0.5 shadow-md  hover:shadow-xl group"> <img src="/_astro/cover.BQNQ0oHj_ZGjvpB.webp" alt="Cover picture for Vue.js Testing Made it Easy (with Testing Library)" class="h-56 w-full rounded-b-none rounded-t-lg object-cover transition" width="420" height="224" loading="lazy" decoding="async"> <div class="p-4"> <header class="text-xl font-semibold text-gray-700 dark:text-gray-100"> <span class="inline">  <!-- {post.data.title} --> <span class="from-blue-100 to-blue-100 text-dark dark:bg-none
+           bg-gradient-to-r bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]"> Vue.js Testing Made it Easy (with Testing Library) </span> </span> </header> <p class="date text-gray-400 dark:text-gray-100"> <time datetime="2020-06-11T00:00:00.000Z"> 11 June 2020 </time> </p> </div> </a> </div> </div>  </div> </article>  </main> <footer class="bg-blue-50 dark:bg-gray-600 dark:text-white w-full mx-auto pb-0" data-astro-cid-sz7xmlte> <div class="m-auto flex w-[1024px] max-w-full flex-wrap justify-between" data-astro-cid-sz7xmlte> <div class="w-full pb-4 md:w-auto flex-auto" data-astro-cid-sz7xmlte> <p class="pb-1 font-bold" data-astro-cid-sz7xmlte>
+&copy; 2014 - 2024 - Maxence Poutord </p> <p data-astro-cid-sz7xmlte>Built with Astro, Tailwind and some ☕️</p> <p data-astro-cid-sz7xmlte>
+Hosted with <span class="text-red-500" data-astro-cid-sz7xmlte>❤</span> by <a class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" href="https://github.com/maxpou/maxpou.fr" data-astro-cid-sz7xmlte>GitHub</a>.
+</p> </div> <div class="flex-auto" data-astro-cid-sz7xmlte> <h3 class="pb-1 font-bold" data-astro-cid-sz7xmlte>Explore</h3> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte> <a href="/uses" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Uses </a> </li><li data-astro-cid-sz7xmlte> <a href="/recipes" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Recipes (kitchen) </a> </li><li data-astro-cid-sz7xmlte> <a href="/about" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> About </a> </li><li data-astro-cid-sz7xmlte> <a href="/cv" target="_blank" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Resume (cv) </a> </li><li data-astro-cid-sz7xmlte> <a href="/readme" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Readme </a> </li> </ul> </div> <div class="flex-auto" data-astro-cid-sz7xmlte> <h3 class="pb-1 font-bold flex-auto" data-astro-cid-sz7xmlte>Let's connect</h3> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte> <a href="https://github.com/maxpou" rel="noopener noreferrer" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> GitHub </a> </li><li data-astro-cid-sz7xmlte> <a href="https://twitter.com/_maxpou" rel="noopener noreferrer" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Twitter </a> </li><li data-astro-cid-sz7xmlte> <a href="https://www.linkedin.com/in/maxpou/" rel="noopener noreferrer" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> LinkedIn </a> </li><li data-astro-cid-sz7xmlte> <a href="/rss.xml" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> RSS feed </a> </li> </ul> </div> </div>  </footer>  </body> </html>

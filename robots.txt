@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://www.maxpou.fr/sitemap/sitemap-index.xml
+Sitemap: https://www.maxpou.fr/sitemap-index.xml

@@ -1,0 +1,222 @@
+<!DOCTYPE html><html lang="fr"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/x-icon" href="/favicon.ico"><meta name="generator" content="Astro v4.4.0"><!-- Font preloads --><link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet"><!-- Canonical URL --><link rel="canonical" href="https://www.maxpou.fr/blog/productivite-ninja/"><!-- Primary Meta Tags --><title>Productivité Ninja !</title><meta name="title" content="Productivité Ninja !"><meta name="description" content="Retour d'expérience sur la mise en oeuvre de certaines pratiques telles que les TODO list, pomodoro..."><script async defer data-domain="maxpou.fr" src="https://plausible.io/js/plausible.js"></script><link rel="alternate" type="application/rss+xml" title="Maxence Poutord • Maxpou Blog" href="/rss.xml"><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"><!-- Open Graph / Facebook --><meta property="og:type" content="article"><meta property="og:url" content="https://www.maxpou.fr/blog/productivite-ninja/"><meta property="og:title" content="Productivité Ninja !"><meta property="og:description" content="Retour d'expérience sur la mise en oeuvre de certaines pratiques telles que les TODO list, pomodoro..."><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://www.maxpou.fr/blog/productivite-ninja/"><meta property="twitter:title" content="Productivité Ninja !"><meta property="twitter:description" content="Retour d'expérience sur la mise en oeuvre de certaines pratiques telles que les TODO list, pomodoro..."><meta name="twitter:creator" content="_maxpou"><script>
+  const theme = (() => {
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+      return localStorage.getItem('theme')
+    }
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark'
+    }
+    return 'light'
+  })()
+
+  if (theme === 'light') {
+    document.documentElement.classList.remove('dark')
+  } else {
+    document.documentElement.classList.add('dark')
+  }
+  window.localStorage.setItem('theme', theme)
+</script><link rel="stylesheet" href="/_astro/_slug_.cE4nuJce.css" />
+<style>code[class*=language-],pre[class*=language-]{color:#ccc;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.comment,.token.block-comment,.token.prolog,.token.doctype,.token.cdata{color:#999}.token.punctuation{color:#ccc}.token.tag,.token.attr-name,.token.namespace,.token.deleted{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.number,.token.function{color:#f08d49}.token.property,.token.class-name,.token.constant,.token.symbol{color:#f8c555}.token.selector,.token.important,.token.atrule,.token.keyword,.token.builtin{color:#cc99cd}.token.string,.token.char,.token.attr-value,.token.regex,.token.variable{color:#7ec699}.token.operator,.token.entity,.token.url{color:#67cdcc}.token.important,.token.bold{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}.expressive-code{margin-top:1em}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.fA4gFHjB.css" />
+<style>a[data-astro-cid-eimmu3lg]{display:inline-block;text-decoration:none;border-bottom:4px solid transparent}a[data-astro-cid-eimmu3lg].active{font-weight:bolder;border-bottom-color:#ffdc4e}footer[data-astro-cid-sz7xmlte]{padding:2em 1em 6em;color:rgb(var(--gray))}*{transition:background .5s ease}*::-moz-selection{background-color:#ffdc4e;color:#3e4047}*::selection{background-color:#ffdc4e;color:#3e4047}
+</style><script type="module">const n=document.getElementById("burger-button"),e=document.getElementById("burger-line-1"),r=document.getElementById("burger-line-2"),t=document.getElementById("burger-line-3"),o=document.getElementById("menu-backdrop");n.addEventListener("click",()=>{o.classList.contains("hidden")?(o.classList.add("flex"),o.classList.remove("hidden"),e.style.transform="rotate(45deg)",e.style.top="0",e.style.backgroundColor="white",r.style.backgroundColor="transparent",t.style.transform="rotate(-45deg)",t.style.top="0",t.style.backgroundColor="white"):(e.style.transform="rotate(0)",e.style.removeProperty("top"),e.style.removeProperty("background-color"),r.style.removeProperty("background-color"),t.style.removeProperty("background-color"),t.style.transform="rotate(0)",t.style.removeProperty("top"),o.classList.add("hidden"),o.classList.remove("flex"))});
+</script></head> <body class="bg-gradient-to-b from-blue-50 to-[#f5f7f9] dark:bg-gray-600 dark:bg-gradient-to-b dark:from-gray-600"> <header class="bg-white dark:bg-gray-600 px-4 h-16"> <nav class="dark:text-white h-16 flex items-center justify-between max-w-screen-xl w-full mx-auto"> <h1 class="text-lg dark:text-white font-bold"> <a href="/">Maxence Poutord</a> </h1> <div class="md:flex hidden"> <a href="/blog" class="py-4 px-2 no-underline text-lg hover:text-blue-900 dark:text-white dark:hover:text-mainYellow" data-astro-cid-eimmu3lg> Blog </a>  <a href="/speaking" class="py-4 px-2 no-underline text-lg hover:text-blue-900 dark:text-white dark:hover:text-mainYellow" data-astro-cid-eimmu3lg> Speaking </a>  <a href="/about" class="py-4 px-2 no-underline text-lg hover:text-blue-900 dark:text-white dark:hover:text-mainYellow" data-astro-cid-eimmu3lg> About </a>  <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();;(()=>{var v=Object.defineProperty;var A=(c,s,a)=>s in c?v(c,s,{enumerable:!0,configurable:!0,writable:!0,value:a}):c[s]=a;var d=(c,s,a)=>(A(c,typeof s!="symbol"?s+"":s,a),a);var u;{let c={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t)},s=t=>{let[e,n]=t;return e in c?c[e](n):void 0},a=t=>t.map(s),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([e,n])=>[e,s(n)]));customElements.get("astro-island")||customElements.define("astro-island",(u=class extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var f;if(!this.hydrator||!this.isConnected)return;let e=(f=this.parentElement)==null?void 0:f.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let n=this.querySelectorAll("astro-slot"),r={},l=this.querySelectorAll("template[data-astro-template]");for(let o of l){let i=o.closest(this.tagName);i!=null&&i.isSameNode(this)&&(r[o.getAttribute("data-astro-template")||"default"]=o.innerHTML,o.remove())}for(let o of n){let i=o.closest(this.tagName);i!=null&&i.isSameNode(this)&&(r[o.getAttribute("name")||"default"]=o.innerHTML)}let h;try{h=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(o){let i=this.getAttribute("component-url")||"<unknown>",b=this.getAttribute("component-export");throw b&&(i+=` (export ${b})`),console.error(`[hydrate] Error parsing props for component ${i}`,this.getAttribute("props"),o),o}let p;await this.hydrator(this)(this.Component,h,r,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),n.disconnect(),this.childrenConnectedCallback()},n=new MutationObserver(()=>{var r;((r=this.lastChild)==null?void 0:r.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});n.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),n=this.getAttribute("client");if(Astro[n]===void 0){window.addEventListener(`astro:${n}`,()=>this.start(),{once:!0});return}try{await Astro[n](async()=>{let r=this.getAttribute("renderer-url"),[l,{default:h}]=await Promise.all([import(this.getAttribute("component-url")),r?import(r):()=>()=>{}]),p=this.getAttribute("component-export")||"default";if(!p.includes("."))this.Component=l[p];else{this.Component=l;for(let y of p.split("."))this.Component=this.Component[y]}return this.hydrator=h,this.hydrate},e,this)}catch(r){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,r)}}attributeChangedCallback(){this.hydrate()}},d(u,"observedAttributes",["props"]),u))}})();</script><astro-island uid="1MPqDn" component-url="/_astro/DarkModeButton.xNbp8Br3.js" component-export="default" renderer-url="/_astro/client.PcUt3MZx.js" props="{}" ssr="" client="only" opts="{&quot;name&quot;:&quot;DarkModeButton&quot;,&quot;value&quot;:&quot;preact&quot;}"></astro-island> </div> <button id="burger-button" aria-label="Toggle mobile menu" class="md:hidden block w-14 h-14 relative focus:outline-none rounded z-10"> <div class="block w-5 absolute left-6 top-1/2 transform -translate-x-1/2 -translate-y-1/2"> <span id="burger-line-1" class="block absolute h-0.5 w-7 text-white bg-gray-600 dark:bg-white transform transition-all duration-500 ease-in-out -top-2"></span> <span id="burger-line-2" class="block absolute h-0.5 w-7 text-white bg-gray-600 dark:bg-white transform transition-all duration-500 ease-in-out"></span> <span id="burger-line-3" class="block absolute h-0.5 w-7 text-white bg-gray-600 dark:bg-white transform transition-all duration-500 ease-in-out top-2"></span> </div> </button> </nav> <div id="menu-backdrop" class="hidden bg-gray-600 bg-opacity-95 absolute top-0 left-0 h-screen w-screen backdrop-opacity-90 items-center justify-center"> <ul class="text-white font-bold text-xl"> <li class="p-3"><a href="/">Home</a></li> <li class="p-3"><a href="/blog">Blog</a></li> <li class="p-3"><a href="/speaking">Speaking</a></li> <li class="p-3"><a href="/about">About</a></li> <li class="p-3"> <astro-island uid="lieIt" component-url="/_astro/DarkModeButton.xNbp8Br3.js" component-export="default" renderer-url="/_astro/client.PcUt3MZx.js" props="{&quot;textOnly&quot;:[0,true],&quot;className&quot;:[0,&quot;!p-0&quot;]}" ssr="" client="only" opts="{&quot;name&quot;:&quot;DarkModeButton&quot;,&quot;value&quot;:&quot;preact&quot;}"></astro-island> </li> </ul> </div> </header>  <main class="m-0 mx-auto min-h-[70vh] w-full max-w-screen-xl px-4 py-12 text-gray-500 dark:text-gray-100">  <article> <div class="hero-image"> <img src="/_astro/abstract-5.m8hticRR_2ggPJ0.webp" alt="Cover picture for Productivité Ninja !" class="rounded-xl shadow-xl mx-auto h-[500px] object-cover w-full" width="1020" height="500" loading="lazy" decoding="async"> </div> <div class="container m-auto text-center"> <div class="mt-3 text-blueGreyed dark:text-gray-300"> <time datetime="2016-01-14T00:00:00.000Z"> 14 January 2016 </time>  </div> <h1 class="font-bold text-3xl dark:text-white text-center leading-none py-4 mb-2 "> Productivité Ninja ! </h1> <div class="pb-6"> <a href="/tags/Productivity" class="mr-2 inline-block rounded-lg bg-darkBlue px-3 py-2 text-sm text-white no-underline hover:bg-blueGreyed dark:bg-blueGreyed dark:hover:bg-darkBlue"> Productivity </a><a href="/tags/TimeManagement" class="mr-2 inline-block rounded-lg bg-darkBlue px-3 py-2 text-sm text-white no-underline hover:bg-blueGreyed dark:bg-blueGreyed dark:hover:bg-darkBlue"> TimeManagement </a>  </div> </div> <div class="m-auto w-[720px] max-w-full">  <div class="prose
+  max-w-none
+  dark:prose-invert
+  prose-headings:underline
+  prose-h2:text-2xl prose-h2:font-bold prose-h2:dark:text-mainYellow
+  prose-h3:text-xl prose-h3:font-bold
+  prose-p:mb-0
+  prose-p:mt-4
+  prose-a:underline-offset-4
+  prose-a:decoration-2
+  prose-a:text-gray-700 dark:prose-a:text-slate-100 hover:prose-a:text-slate-900
+  prose-a:decoration-gray-300
+  hover:prose-a:decoration-blue-700 dark:hover:prose-a:decoration-mainYellow
+  prose-img:rounded-xl">  <p>Entre le <a href="https://fr.wikipedia.org/wiki/Multitasking">multitasking</a>, les mails pro, les
+notifications push sur votre téléphone (SMS, mail perso, Facebook, Twitter…), un collègue qui
+vient vous voir…on a vite fait de procrastiner au bureau.</p>
+<p>L’objectif de cet article est donc de faire un retour d’expérience sur la mise en œuvre de certaines
+techniques, qui m’ont permis d’être plus productif dans la vie de tous les jours.</p>
+<h2 id="todo-list">Todo list</h2>
+<p>En ce moment, je commence toutes mes journées par le <em>stand-up</em>. Une réunion de 15’ dans laquelle
+chacun dit ce qu’il a fait la veille, ce qu’il va faire dans la journée et évoque éventuellement ses
+points de blocage. Chaque matin pendant cette période, je note ce que je dis sur mon calepin. Enfin
+ce que je vais faire dans la journée. Car on a vite fait de s’éparpiller et d’oublier ses objectifs.
+Là, tout est écrit.</p>
+<p><img  src="/_astro/sponge-todo.FrfU5W_Z_XmaQ4.webp" alt="todo list" width="575" height="432" loading="lazy" decoding="async"></p>
+<p><strong>TODO papier Vs. e-TODO :</strong> Au début, j’ai essayé de réunir mes tâches dans un outil, développé par
+mes soins pour l’occasion. Puis, après avoir perdu le code source de cette petite application (si
+si…), j’ai utilisé des outils assez connus comme <a href="https://www.wunderlist.com/fr/">Wunderlist</a> et
+<a href="https://todoist.com/android">Todoist</a>. Aucuns de ces outils ne m’a apporté satisfaction. Je suis
+donc passé à quelque chose d’encore plus basique, le combo magique : papier/crayon. C’est peut-être
+bête, mais le simple fait de rayer une tâche m’apporte une certaine satisfaction.<br>
+Et puis, le problème avec les outils web, c’est qu’on a tendance à en rajouter…</p>
+<p><strong>Comment faire une bonne todo list ?</strong></p>
+<p>Pour bien commencer, voici l’exemple d’une mauvaise todo list :</p>
+<p><img  src="/_astro/todo-bad.ua2ePqny_2jScLc.webp" alt="todo list" width="400" height="533" loading="lazy" decoding="async"></p>
+<p>Pourquoi cette todo list est mauvaise :</p>
+<ul>
+<li><strong>Irréaliste</strong> : 1 todo list = 1 journée. Là, il n’y a pas de doutes, une journée ne suffira pas.
+Vous terminerez votre journée déçu de ne pas avoir accompli toutes vos <em>missions</em>.</li>
+<li><strong>Découpage des tâches</strong> : La tâche qui consiste à développer la gestion des utilisateurs est
+beaucoup trop grande. Ne pas hésiter à la découper en sous-tâches. Vous aurez l’impression d’aller
+plus vite.</li>
+<li><strong>Pas d’indications sur la durée des tâches</strong> : Pour voir si votre liste est pertinente, il est
+primordial d’indiquer le temps passé pour chaque tâche. Pensez aussi à laisser de la place pour
+l’<strong>imprévu</strong>, en occupant votre journée à hauteur de 70% maximum.</li>
+<li><strong>Gestion des priorités</strong> : il est très important de séparer vos tâches en deux parties. Les
+tâches prioritaires et les secondaires. Mettez la vraie priorité de la journée tout en haut. C’est
+souvent ce genre de tâches que l’on a tendance à fuir. Si cette tâche est noyée dans plein
+d’autres, c’est un prétexte de plus pour ne pas la faire. En général, il faut garder les tâches
+les plus ardues pour le matin.<br>
+Un bon outil est la <a href="https://fr.wikipedia.org/wiki/Matrice_d%27Eisenhower">matrice d’Eisenhower</a>.
+Cette matrice va vous aider à prioriser vos tâches en fonction de son caractère urgent et/ou
+important.</li>
+<li><strong>Tâches inutiles</strong> : Twitter/Facebook, c’est du divertissement. Pas besoin de le noter pour y
+aller. Ça n’a rien à faire sur une todo list (à moins d’être community manager !).</li>
+<li><strong>Wording</strong> : En un coup d’œil, vous devrez savoir où vous en êtes dans votre journée. Il faut
+donc être le plus bref possible et donc éviter les verbes d’action qui sont induits.</li>
+</ul>
+<p>Voici maintenant un 2e jet beaucoup plus pertinent :</p>
+<p><img  src="/_astro/todo-good.5QpijALO_vdTsV.webp" alt="todo list" width="400" height="533" loading="lazy" decoding="async"></p>
+<p>N’oubliez pas, c’est VOTRE liste. L’objectif est qu’elle soit compréhensible par vous (et pas
+forcément par les autres !). Si quelque chose ne vous va pas dans ce que j’ai écrit plus haut,
+adaptez à votre besoin et expérimentez !</p>
+<h2 id="la-technique-du-pomodoro">La technique du Pomodoro</h2>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Il_pomodoro.jpg/220px-Il_pomodoro.jpg" alt="Pomodoro timer"></p>
+<p>Maintenant que l’on sait comment planifier sa journée, voyons comment la découper. J’ai découvert la
+<a href="http://pomodorotechnique.com/">technique du Pomodoro</a>, il y a quelques mois. Et pour tout vous
+dire, ça m’a presque changé la vie (au travail).</p>
+<p>Cette technique consiste à découper sa journée en <em>sprint</em> de 25 minutes séparés par des pauses
+courtes (de 5 minutes) ou longues (15 minutes). Le fait de découper sa journée favorise l’agilité
+intellectuelle.</p>
+<p>Voici le schéma :</p>
+<ol>
+<li>Choisir une tâche</li>
+<li>Travaillez sur cette tâche pendant 25 minutes sans interruption.</li>
+<li>Prendre une courte pause (5 minutes)</li>
+<li>Tous les 4 <em>pomodori</em>, faire une longue pause (15 minutes)</li>
+</ol>
+<blockquote>
+<p>“Qui fait, en se hâtant, deux choses à la fois ne fait bien ni l’une ni l’autre.”<br>
+— <strong>Publius Syrus</strong></p>
+</blockquote>
+<p><strong>Pomodori :</strong> Pendant ces 25 minutes, il faut garder le focus sur une seule et unique tâche et
+s’interdire toute distraction (Facebook, SMS, spi0n…). Il en va de même pour les requêtes de votre
+chef. Essayez (si possible) de le faire patienter jusqu’au prochain pomodori.</p>
+<p><strong>Pauses :</strong> l’objectif est d’éliminer le stress et de se régénérer pour réattaquer la prochaine
+session dans les meilleures conditions. N’hésitez donc pas à vous lever pour aller aérer le bureau,
+aller boire un verre d’eau, bouger, faire couler un café, répondre au SMS arrivé pendant le
+pomodori…</p>
+<p>Encore une fois : il n’y a rien de figé. N’hésitez pas à adapter la durée des <em>pomodori</em> à votre
+durée de concentration.</p>
+<p>Si vous le souhaitez, j’ai développé un Gadget pour Windows Vista et 7 permettant de gérer votre
+temps. Le code source (et donc l’application) est open source et donc disponible sur mon
+<a href="https://github.com/maxpou/pomodoro-ninja.gadget">répo GitHub</a> :)</p>
+<p><img  src="/_astro/pomodoro-ninja.aVfAmOvU_2liJvv.webp" alt="pomodoro ninja gadget" width="167" height="120" loading="lazy" decoding="async"></p>
+<h2 id="gérer-les-perturbations">Gérer les perturbations</h2>
+<p>C’est très difficile de garder le focus sur une tâche quand on est sans arrêt perturbé. Je vois deux
+types de perturbations, les perturbations technologiques et humaines.</p>
+<p>Perturbations technologiques : notifications push sur votre smartphone (email, Facebook, Twitter,
+votre château qui vient de passer au niveau 5…). J’ai donc décidé de ne pas me laisser faire
+contre cet <em>esclavagisme technologique</em>, en passant
+<a href="http://williamdurand.fr/2015/01/16/rethinking-my-life-on-the-internets/#fighting-technology-enslavement">d’une approche push à une approche pull</a>.
+Concrètement, j’ai <strong>désactivé toutes les notifications sur mon téléphone</strong>. Être informé en temps
+réel que l’on m’a notifié sur Facebook ne m’apporte aucun intérêt. Pourquoi ? Tout simplement parce
+que ce n’est pas à mon téléphone me dire d’aller sur tel ou tel site.</p>
+<p>Perturbations humaines : j’entends par là les <em>“Salut, tu peux me faire ça là maintenant ?“</em>… Là,
+c’est très délicat. Le plus simple est de faire comprendre gentiment à vos collègues que ces
+perturbations vous dérangent et que vous n’êtes pas une hotline. Proposez plutôt des moments pour se
+voir <em>(ex : entre deux pomodori)</em>.</p>
+<h2 id="gestion-des-mails">Gestion des mails</h2>
+<p>Mettons, nous d’accord. Un mail est <strong>asynchrone</strong>. Si vous voulez avertir d’un éventuel retard en
+réunion, si vous voulez une réponse dans la minute… et que vous utilisez le mail, c’est que vous
+vous trompez de canal de diffusion.</p>
+<blockquote>
+<p>”L’email est à l’origine d’une crise de la productivité dans les entreprises… il est le cancer
+silencieux des entreprise”<br>
+— <strong>Nancy FLYNN</strong></p>
+</blockquote>
+<p>Dans mon ancien boulot, ma boîte mail était ouverte en permanence en arrière-plan. Dès que je
+recevais un mail, j’arrêtais mon travail pour répondre presque au tac-o-tac. C’est bien, on se sent
+utile, mais côté productivité on est à la rue, car sans arrêt interrompu.</p>
+<p>La technique du pomodoro requière que l’on ne fasse qu’une activité en même temps. Il a donc fallu
+que je me planifie des <em>emails sessions</em>. Je consulte donc mes mails 3 fois par jour :</p>
+<ul>
+<li>En fin de matinée sur le coup de 11H ;</li>
+<li>En début d’après-midi ;</li>
+<li>Avant de partir du boulot.</li>
+</ul>
+<p>A chaque fin de journée, mon objectif est d’atteindre le
+“<a href="https://www.linkedin.com/pulse/20130509153704-8628736-getting-to-inbox-zero">zéro inbox</a>”. Sinon
+ça s’accumule et pèse presque sur la conscience. Si vous avez vraiment, mais vraiment trop de mails
+à gérer, passez au plan B : désinscrivez-vous des newsletters/pubs/notifications/… et ajoutez des
+filtres pour que les mails tombent dans les bons dossiers. Planifiez-vous du temps pour faire un
+grand nettoyage et repartir à zéro.</p>
+<h2 id="miracle-morning">Miracle Morning</h2>
+<p>Véritable Saint Graal du développement personnel, le Miracle Morning est une technique du livre
+éponyme d’Hal Elrod. Cette technique consiste à prendre du temps le matin pour soi pour faire
+diverses activités (méditation, sport, lecture, écriture…). Ainsi fini les matins où on arrive au
+travail avec un demi café dans le ventre et le cerveau complètement à côté de la plaque.</p>
+<p><img  src="/_astro/alarm-clock-smash.OyGk0b3c_ZRFqiL.webp" alt="réveil" width="320" height="199" loading="lazy" decoding="async"></p>
+<p>Bon je ne vais pas trop détailler cette technique. J’ai tenté de mettre en place cette technique en
+me levant à 5h30 le matin. Ça a duré… 3 jours ! Dès le 4e jour, j’ai re-réglé mon réveil comme
+avant.<br>
+Pourquoi ? Parce que le temps de sommeil est incompressible. Se lever plus tôt, implique de se
+coucher plus tôt. A mon jeune âge, je me vois mal me coucher à l’heure des poules et ne pas pouvoir
+profiter d’une soirée un vendredi soir parce que je suis trop fatigué.</p>
+<p>Qui sait, c’est peut-être comme le café et le vin rouge… une histoire de temps ;-)</p>
+<h2 id="stop-au-présentéisme-reposez-vous">Stop au présentéisme. Reposez-vous !</h2>
+<blockquote>
+<p>”Je ne suis pas né pour augmenter le produit national brut.”<br>
+— <strong>Pierre RABHI</strong></p>
+</blockquote>
+<p>Et il ne faut pas oublier le plus important : avoir une vie en dehors du travail. Je ne vois pas
+comment on peut être efficace, si on ne prend pas le temps de décompresser et même de vivre !</p>
+<p>Après une demi-journée de réunion intense, un collègue est venu solliciter mon aide, mais nos
+cerveaux étaient littéralement à plat. Je lui ai proposé de laisser de <em>laisser décanter</em> et de
+revoir ça ensemble le lendemain matin. Il m’a dit qu’il préférait rester le nez dans le guidon et
+qu’il allait cogiter dessus toute sa soirée. Le lendemain, je n’ai pas été étonné de voir que le
+problème était toujours d’actualité. Problème qui a été résolu en prenant de la hauteur et en
+abordant le problème sous un autre angle de vue.</p>
+<p><img  src="/_astro/sleep-work.s8SvvouN_Z2uzlpO.webp" alt="surcharge de travail" width="600" height="338" loading="lazy" decoding="async"></p>
+<p>J’ai pensé à lui le lendemain en lisant le
+<a href="http://ideas.ted.com/the-business-case-against-overtime-2/">résumé d’une conférence TED</a> de Yoshie
+Komuro, une Japonaise, CEO de Work Life Balance Co. Cette femme dit : <em>“Le travailleur infatigable
+est un mythe. Le cerveau ne peut rester concentré que 13 heures après le réveil. Après, la
+concentration est comparable à la conduite en état d’ivresse”</em>. Et va même plus loin en indiquant
+que tout le monde est perdant, même l’employeur qui <em>paye des heures supplémentaires à son employé
+pour qu’il répare des erreurs, erreurs qu’il n’aurait sans doute pas commises s’il était en
+meilleure forme !</em></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Mises bouts à bouts, ces techniques ont considérablement améliorées ma productivité. Bon, je ne suis
+pas (encore ?) un Ninja de la productivité, mais j’y tends :-)</p>
+<p>Plus de lecture sur le sujet :</p>
+<ul>
+<li><a href="https://medium.com/@kevintonon_/devenir-productif-mais-vraiment-il-est-temps-que-vous-le-fassiez-pour-votre-bien-%C3%AAtre-b82c85aea4b#.ea3b1oxq1">Devenir VRAIMENT productif (il est temps que vous le fassiez pour votre bien-être)</a>
+écrit par <a href="https://twitter.com/KevinTONON_">Kévin TONON</a>. C’est de cet article que m’est venu
+l’idée de repenser ma façon de travailler.</li>
+<li><a href="https://www.linkedin.com/pulse/20130509153704-8628736-getting-to-inbox-zero">Getting To Inbox Zero</a>
+par Randi ZUCKERBERG.</li>
+<li><a href="https://www.linkedin.com/pulse/arr%C3%AAter-dinsulter-votre-temps-et-celui-des-autres-manuel-diaz">Arrêtez d’insulter votre temps ! et celui des autres…</a>
+par <a href="https://twitter.com/manueldiaz">Manuel DIAZ</a></li>
+</ul> <div> <hr> <h2 class="dark:text-gray-100">About the author</h2> <div class="flex flex-col md:flex-row items-center gap-5 md:gap-8 mt-5"> <div class="relative flex-shrink-0 h-32 w-32"> <img src="/_astro/profile-picture.gF0h5NUU_Zw8iDo.webp" class="not-prose h-32 w-32 object-cover rounded-full" alt="Maxence Poutord Profile picture" width="128" height="128" loading="lazy" decoding="async"> </div> <div> <p class="!mt-0 pb-2">
+Hey, I'm Maxence Poutord, a passionate software engineer. In my
+        day-to-day job, I'm working as a senior front-end engineer at Orderfox.
+        When I'm not working, you can find me travelling the world or cooking.
+</p> <a class="not-prose inline-flex rounded border
+    font-semibold no-underline
+    transition-colors duration-200 ease-in-out px-3 py-2
+    border-[#1da1f2] bg-[#1da1f2] text-white
+    hover:border-[#1da1f2] hover:bg-white hover:text-[#1da1f2]" rel="noopener" target="_blank" href="https://twitter.com/intent/follow?screen_name=_maxpou"> <svg aria-label="Twitter" viewBox="0 0 24 24" width="1em" height="1em" class="h-6 w-6 pr-2"><path fill="currentColor" d="M23.954 4.569a10 10 0 0 1-2.825.775 4.958 4.958 0 0 0 2.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 0 0-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 0 0-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 0 1-2.228-.616v.061a4.923 4.923 0 0 0 3.946 4.827 4.996 4.996 0 0 1-2.212.085 4.937 4.937 0 0 0 4.604 3.417 9.868 9.868 0 0 1-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0 0 7.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 0 0 2.46-2.548l-.047-.02z"></path></svg>
+Follow @_maxpou
+ </a> </div> </div> </div>  </div>  <div> <h2 class="text-2xl underline mt-12 font-bold dark:text-mainYellow">
+Recommended posts
+</h2> <div class="grid grid-cols-1 gap-4 md:grid-cols-2 mt-6"> <a title="What's happens when you `git commit`" href="/blog/git-under-the-hood/" class="ease flex flex-col rounded-lg bg-white transition duration-300 dark:bg-gray-500 hover:translate-y-0.5 shadow-md  hover:shadow-xl group"> <img src="/_astro/cover.dtWL2vrQ_ZQ0SBb.webp" alt="Cover picture for What's happens when you `git commit`" class="h-56 w-full rounded-b-none rounded-t-lg object-cover transition" width="420" height="224" loading="lazy" decoding="async"> <div class="p-4"> <header class="text-xl font-semibold text-gray-700 dark:text-gray-100"> <span class="inline">  <!-- {post.data.title} --> <span class="from-blue-100 to-blue-100 text-dark dark:bg-none
+           bg-gradient-to-r bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]"> What&#39;s happens when you `git commit` </span> </span> </header> <p class="date text-gray-400 dark:text-gray-100"> <time datetime="2019-10-14T00:00:00.000Z"> 14 October 2019 </time> </p> </div> </a><a title="Git: Cheat Sheet (advanced)" href="/blog/git-cheat-sheet/" class="ease flex flex-col rounded-lg bg-white transition duration-300 dark:bg-gray-500 hover:translate-y-0.5 shadow-md  hover:shadow-xl group"> <img src="/_astro/git-toolbox.oDur-RrH_2aw0y5.webp" alt="Cover picture for Git: Cheat Sheet (advanced)" class="h-56 w-full rounded-b-none rounded-t-lg object-cover transition" width="420" height="224" loading="lazy" decoding="async"> <div class="p-4"> <header class="text-xl font-semibold text-gray-700 dark:text-gray-100"> <span class="inline">  <!-- {post.data.title} --> <span class="from-blue-100 to-blue-100 text-dark dark:bg-none
+           bg-gradient-to-r bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]"> Git: Cheat Sheet (advanced) </span> </span> </header> <p class="date text-gray-400 dark:text-gray-100"> <time datetime="2019-11-28T00:00:00.000Z"> 28 November 2019 </time> </p> </div> </a> </div> </div>  </div> </article>  </main> <footer class="bg-blue-50 dark:bg-gray-600 dark:text-white w-full mx-auto pb-0" data-astro-cid-sz7xmlte> <div class="m-auto flex w-[1024px] max-w-full flex-wrap justify-between" data-astro-cid-sz7xmlte> <div class="w-full pb-4 md:w-auto flex-auto" data-astro-cid-sz7xmlte> <p class="pb-1 font-bold" data-astro-cid-sz7xmlte>
+&copy; 2014 - 2024 - Maxence Poutord </p> <p data-astro-cid-sz7xmlte>Built with Astro, Tailwind and some ☕️</p> <p data-astro-cid-sz7xmlte>
+Hosted with <span class="text-red-500" data-astro-cid-sz7xmlte>❤</span> by <a class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" href="https://github.com/maxpou/maxpou.fr" data-astro-cid-sz7xmlte>GitHub</a>.
+</p> </div> <div class="flex-auto" data-astro-cid-sz7xmlte> <h3 class="pb-1 font-bold" data-astro-cid-sz7xmlte>Explore</h3> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte> <a href="/uses" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Uses </a> </li><li data-astro-cid-sz7xmlte> <a href="/recipes" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Recipes (kitchen) </a> </li><li data-astro-cid-sz7xmlte> <a href="/about" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> About </a> </li><li data-astro-cid-sz7xmlte> <a href="/cv" target="_blank" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Resume (cv) </a> </li><li data-astro-cid-sz7xmlte> <a href="/readme" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Readme </a> </li> </ul> </div> <div class="flex-auto" data-astro-cid-sz7xmlte> <h3 class="pb-1 font-bold flex-auto" data-astro-cid-sz7xmlte>Let's connect</h3> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte> <a href="https://github.com/maxpou" rel="noopener noreferrer" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> GitHub </a> </li><li data-astro-cid-sz7xmlte> <a href="https://twitter.com/_maxpou" rel="noopener noreferrer" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Twitter </a> </li><li data-astro-cid-sz7xmlte> <a href="https://www.linkedin.com/in/maxpou/" rel="noopener noreferrer" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> LinkedIn </a> </li><li data-astro-cid-sz7xmlte> <a href="/rss.xml" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> RSS feed </a> </li> </ul> </div> </div>  </footer>  </body> </html>

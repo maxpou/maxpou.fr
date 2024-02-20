@@ -1,0 +1,210 @@
+<!DOCTYPE html><html lang="fr"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/x-icon" href="/favicon.ico"><meta name="generator" content="Astro v4.4.0"><!-- Font preloads --><link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet"><!-- Canonical URL --><link rel="canonical" href="https://www.maxpou.fr/blog/atom/"><!-- Primary Meta Tags --><title>Atom, un éditeur qui vous veut du bien</title><meta name="title" content="Atom, un éditeur qui vous veut du bien"><meta name="description" content="Retour d'expérience avec l'éditeur de texte Atom"><script async defer data-domain="maxpou.fr" src="https://plausible.io/js/plausible.js"></script><link rel="alternate" type="application/rss+xml" title="Maxence Poutord • Maxpou Blog" href="/rss.xml"><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"><!-- Open Graph / Facebook --><meta property="og:type" content="article"><meta property="og:url" content="https://www.maxpou.fr/blog/atom/"><meta property="og:title" content="Atom, un éditeur qui vous veut du bien"><meta property="og:description" content="Retour d'expérience avec l'éditeur de texte Atom"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://www.maxpou.fr/blog/atom/"><meta property="twitter:title" content="Atom, un éditeur qui vous veut du bien"><meta property="twitter:description" content="Retour d'expérience avec l'éditeur de texte Atom"><meta name="twitter:creator" content="_maxpou"><script>
+  const theme = (() => {
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+      return localStorage.getItem('theme')
+    }
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark'
+    }
+    return 'light'
+  })()
+
+  if (theme === 'light') {
+    document.documentElement.classList.remove('dark')
+  } else {
+    document.documentElement.classList.add('dark')
+  }
+  window.localStorage.setItem('theme', theme)
+</script><link rel="stylesheet" href="/_astro/_slug_.cE4nuJce.css" />
+<style>code[class*=language-],pre[class*=language-]{color:#ccc;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.comment,.token.block-comment,.token.prolog,.token.doctype,.token.cdata{color:#999}.token.punctuation{color:#ccc}.token.tag,.token.attr-name,.token.namespace,.token.deleted{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.number,.token.function{color:#f08d49}.token.property,.token.class-name,.token.constant,.token.symbol{color:#f8c555}.token.selector,.token.important,.token.atrule,.token.keyword,.token.builtin{color:#cc99cd}.token.string,.token.char,.token.attr-value,.token.regex,.token.variable{color:#7ec699}.token.operator,.token.entity,.token.url{color:#67cdcc}.token.important,.token.bold{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}.expressive-code{margin-top:1em}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.fA4gFHjB.css" />
+<style>a[data-astro-cid-eimmu3lg]{display:inline-block;text-decoration:none;border-bottom:4px solid transparent}a[data-astro-cid-eimmu3lg].active{font-weight:bolder;border-bottom-color:#ffdc4e}footer[data-astro-cid-sz7xmlte]{padding:2em 1em 6em;color:rgb(var(--gray))}*{transition:background .5s ease}*::-moz-selection{background-color:#ffdc4e;color:#3e4047}*::selection{background-color:#ffdc4e;color:#3e4047}
+</style><script type="module">const n=document.getElementById("burger-button"),e=document.getElementById("burger-line-1"),r=document.getElementById("burger-line-2"),t=document.getElementById("burger-line-3"),o=document.getElementById("menu-backdrop");n.addEventListener("click",()=>{o.classList.contains("hidden")?(o.classList.add("flex"),o.classList.remove("hidden"),e.style.transform="rotate(45deg)",e.style.top="0",e.style.backgroundColor="white",r.style.backgroundColor="transparent",t.style.transform="rotate(-45deg)",t.style.top="0",t.style.backgroundColor="white"):(e.style.transform="rotate(0)",e.style.removeProperty("top"),e.style.removeProperty("background-color"),r.style.removeProperty("background-color"),t.style.removeProperty("background-color"),t.style.transform="rotate(0)",t.style.removeProperty("top"),o.classList.add("hidden"),o.classList.remove("flex"))});
+</script></head> <body class="bg-gradient-to-b from-blue-50 to-[#f5f7f9] dark:bg-gray-600 dark:bg-gradient-to-b dark:from-gray-600"> <header class="bg-white dark:bg-gray-600 px-4 h-16"> <nav class="dark:text-white h-16 flex items-center justify-between max-w-screen-xl w-full mx-auto"> <h1 class="text-lg dark:text-white font-bold"> <a href="/">Maxence Poutord</a> </h1> <div class="md:flex hidden"> <a href="/blog" class="py-4 px-2 no-underline text-lg hover:text-blue-900 dark:text-white dark:hover:text-mainYellow" data-astro-cid-eimmu3lg> Blog </a>  <a href="/speaking" class="py-4 px-2 no-underline text-lg hover:text-blue-900 dark:text-white dark:hover:text-mainYellow" data-astro-cid-eimmu3lg> Speaking </a>  <a href="/about" class="py-4 px-2 no-underline text-lg hover:text-blue-900 dark:text-white dark:hover:text-mainYellow" data-astro-cid-eimmu3lg> About </a>  <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();;(()=>{var v=Object.defineProperty;var A=(c,s,a)=>s in c?v(c,s,{enumerable:!0,configurable:!0,writable:!0,value:a}):c[s]=a;var d=(c,s,a)=>(A(c,typeof s!="symbol"?s+"":s,a),a);var u;{let c={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t)},s=t=>{let[e,n]=t;return e in c?c[e](n):void 0},a=t=>t.map(s),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([e,n])=>[e,s(n)]));customElements.get("astro-island")||customElements.define("astro-island",(u=class extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var f;if(!this.hydrator||!this.isConnected)return;let e=(f=this.parentElement)==null?void 0:f.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let n=this.querySelectorAll("astro-slot"),r={},l=this.querySelectorAll("template[data-astro-template]");for(let o of l){let i=o.closest(this.tagName);i!=null&&i.isSameNode(this)&&(r[o.getAttribute("data-astro-template")||"default"]=o.innerHTML,o.remove())}for(let o of n){let i=o.closest(this.tagName);i!=null&&i.isSameNode(this)&&(r[o.getAttribute("name")||"default"]=o.innerHTML)}let h;try{h=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(o){let i=this.getAttribute("component-url")||"<unknown>",b=this.getAttribute("component-export");throw b&&(i+=` (export ${b})`),console.error(`[hydrate] Error parsing props for component ${i}`,this.getAttribute("props"),o),o}let p;await this.hydrator(this)(this.Component,h,r,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),n.disconnect(),this.childrenConnectedCallback()},n=new MutationObserver(()=>{var r;((r=this.lastChild)==null?void 0:r.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});n.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),n=this.getAttribute("client");if(Astro[n]===void 0){window.addEventListener(`astro:${n}`,()=>this.start(),{once:!0});return}try{await Astro[n](async()=>{let r=this.getAttribute("renderer-url"),[l,{default:h}]=await Promise.all([import(this.getAttribute("component-url")),r?import(r):()=>()=>{}]),p=this.getAttribute("component-export")||"default";if(!p.includes("."))this.Component=l[p];else{this.Component=l;for(let y of p.split("."))this.Component=this.Component[y]}return this.hydrator=h,this.hydrate},e,this)}catch(r){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,r)}}attributeChangedCallback(){this.hydrate()}},d(u,"observedAttributes",["props"]),u))}})();</script><astro-island uid="1MPqDn" component-url="/_astro/DarkModeButton.xNbp8Br3.js" component-export="default" renderer-url="/_astro/client.PcUt3MZx.js" props="{}" ssr="" client="only" opts="{&quot;name&quot;:&quot;DarkModeButton&quot;,&quot;value&quot;:&quot;preact&quot;}"></astro-island> </div> <button id="burger-button" aria-label="Toggle mobile menu" class="md:hidden block w-14 h-14 relative focus:outline-none rounded z-10"> <div class="block w-5 absolute left-6 top-1/2 transform -translate-x-1/2 -translate-y-1/2"> <span id="burger-line-1" class="block absolute h-0.5 w-7 text-white bg-gray-600 dark:bg-white transform transition-all duration-500 ease-in-out -top-2"></span> <span id="burger-line-2" class="block absolute h-0.5 w-7 text-white bg-gray-600 dark:bg-white transform transition-all duration-500 ease-in-out"></span> <span id="burger-line-3" class="block absolute h-0.5 w-7 text-white bg-gray-600 dark:bg-white transform transition-all duration-500 ease-in-out top-2"></span> </div> </button> </nav> <div id="menu-backdrop" class="hidden bg-gray-600 bg-opacity-95 absolute top-0 left-0 h-screen w-screen backdrop-opacity-90 items-center justify-center"> <ul class="text-white font-bold text-xl"> <li class="p-3"><a href="/">Home</a></li> <li class="p-3"><a href="/blog">Blog</a></li> <li class="p-3"><a href="/speaking">Speaking</a></li> <li class="p-3"><a href="/about">About</a></li> <li class="p-3"> <astro-island uid="lieIt" component-url="/_astro/DarkModeButton.xNbp8Br3.js" component-export="default" renderer-url="/_astro/client.PcUt3MZx.js" props="{&quot;textOnly&quot;:[0,true],&quot;className&quot;:[0,&quot;!p-0&quot;]}" ssr="" client="only" opts="{&quot;name&quot;:&quot;DarkModeButton&quot;,&quot;value&quot;:&quot;preact&quot;}"></astro-island> </li> </ul> </div> </header>  <main class="m-0 mx-auto min-h-[70vh] w-full max-w-screen-xl px-4 py-12 text-gray-500 dark:text-gray-100">  <article> <div class="hero-image"> <img src="/_astro/atom-mark.hsf-cPhd_Z1bA5ad.webp" alt="Cover picture for Atom, un éditeur qui vous veut du bien" class="rounded-xl shadow-xl mx-auto h-[500px] object-cover w-full" width="1020" height="500" loading="lazy" decoding="async"> </div> <div class="container m-auto text-center"> <div class="mt-3 text-blueGreyed dark:text-gray-300"> <time datetime="2015-08-14T00:00:00.000Z"> 14 August 2015 </time>  </div> <h1 class="font-bold text-3xl dark:text-white text-center leading-none py-4 mb-2 "> Atom, un éditeur qui vous veut du bien </h1> <div class="pb-6"> <a href="/tags/Tool" class="mr-2 inline-block rounded-lg bg-darkBlue px-3 py-2 text-sm text-white no-underline hover:bg-blueGreyed dark:bg-blueGreyed dark:hover:bg-darkBlue"> Tool </a>  </div> </div> <div class="m-auto w-[720px] max-w-full">  <div class="prose
+  max-w-none
+  dark:prose-invert
+  prose-headings:underline
+  prose-h2:text-2xl prose-h2:font-bold prose-h2:dark:text-mainYellow
+  prose-h3:text-xl prose-h3:font-bold
+  prose-p:mb-0
+  prose-p:mt-4
+  prose-a:underline-offset-4
+  prose-a:decoration-2
+  prose-a:text-gray-700 dark:prose-a:text-slate-100 hover:prose-a:text-slate-900
+  prose-a:decoration-gray-300
+  hover:prose-a:decoration-blue-700 dark:hover:prose-a:decoration-mainYellow
+  prose-img:rounded-xl">  <blockquote>
+<p>[18/11/2016] : ajout de ma configuration perso + quelques plugins<br>
+[26/08/2015] : ajout de la gestion des favoris<br>
+[24/11/2015] : l’éditeur est beaucoup plus stable qu’avant</p>
+</blockquote>
+<h2 id="cest-quoi">C’est quoi ?</h2>
+<p>Atom est un éditeur de texte développé par GitHub destiné aux développeurs. Il a été développé avec
+<a href="http://electron.atom.io/">Electron</a>, un framework permettant de développer des applications
+cross-platform avec des technologies web, dont le triptyque gagnant : HTML, CSS et JavaScript.
+Electron fournit un support natif de NodeJS.<br>
+Atom est très proche de SublimeText… vous y trouverez plusieurs points communs (palette de
+commandes, sélection multiple, plugins, …). Si vous utilisiez SublimeText en mode démo,
+c’est-à-dire, sans payer les $70 de licence, vous aurez un message vous invitant à acheter une
+licence tous les 10 enregistrements de fichiers. Avec Atom, vous n’aurez pas ce problème vu qu’il
+est open source ! Vous serez donc en conformité avec la loi (ça ne ferait pas de mal à certaines
+entreprises).</p>
+<p>Si vous êtes toujours là, je vous invite à télécharger cet outil sur
+<a href="https://atom.io/">son site officiel</a>.</p>
+<h2 id="quelques-packages">Quelques packages</h2>
+<p>A l’instar de Sublime, Atom possède pléthore de packages (plugins).<br>
+Pour installer un packages, tout se fait en ligne de commande. J’ai cherché pendant pas mal de temps
+la console de l’éditeur… pour finalement comprendre qu’il n’y en avait pas. Il faut passer par le
+shell de votre OS :-)</p>
+<p>Voici la commandes à exécuter pour installer un ou plusieurs package :</p>
+<p><code>apm install monPackage</code><br>
+<code>apm install monPackage monAutrePackage</code></p>
+<p>La liste complète des packages disponibles est accessible
+<a href="https://atom.io/packages/list?direction=desc&#x26;sort=stars">sur le site officiel d’Atom</a>. Mais je vous
+ai un peu prémâché le travail en vous sélectionnant quelques <em>must have</em> packages.</p>
+<ul>
+<li><a href="https://atom.io/packages/minimap">Minimap</a> : ajoute une minimap façon SublimeText.</li>
+<li><a href="https://atom.io/packages/file-icons">file-icons</a> : ajoute des petites icônes dans la <em>menubar</em></li>
+<li><a href="https://atom.io/packages/highlight-line">highlight-line</a> : permet de surligner la ligne courante</li>
+<li><a href="https://atom.io/packages/sublime-style-column-selection">Sublime-Style-Column-Selection</a> : permet
+de faire des sélection rectangulaires façon SublimeText.</li>
+<li><a href="https://atom.io/packages/atom-alignment">atom-alignment</a> : aligne votre code.</li>
+</ul>
+<p>Exemple :</p>
+<div class="expressive-code"><link rel="stylesheet" href="/_astro/ec.aqfpi.css"><script type="module" src="/_astro/ec.sgewm.js"></script><figure class="frame"><figcaption class="header"></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#babed8">var a = b;</span></div><div class="ec-line"><span style="--0:#babed8">var ab = c;</span></div><div class="ec-line"><span style="--0:#babed8">var abcd = d;</span></div><div class="ec-line"><span style="--0:#babed8">var ddddd =d;</span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="var a = b;var ab = c;var abcd = d;var ddddd =d;"><div></div></button></div></figure></div>
+<p>Deviendra (après un ctrl + alt + A) :</p>
+<div class="expressive-code"><figure class="frame"><figcaption class="header"></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#babed8">var a     = b;</span></div><div class="ec-line"><span style="--0:#babed8">var ab    = c;</span></div><div class="ec-line"><span style="--0:#babed8">var abcd  = d;</span></div><div class="ec-line"><span style="--0:#babed8">var ddddd = d;</span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="var a     = b;var ab    = c;var abcd  = d;var ddddd = d;"><div></div></button></div></figure></div>
+<ul>
+<li>
+<p><a href="https://atom.io/packages/docblockr">docblockr</a> : va générer la PHPDoc/JSDoc/… comme ci-dessous
+:
+<img src="https://i.github-camo.com/75520d0785add27aad25b9111d5fbfe49eb85214/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f4e696b68696c4b616c6967652f646f63626c6f636b722f6d61737465722f7265736f75726365732f66756e6374696f6e2d74656d706c6174652e676966" alt="docblockr"></p>
+</li>
+<li>
+<p><a href="https://atom.io/packages/linter">linter</a> : affiche les erreurs dans votre code.</p>
+</li>
+<li>
+<p><a href="https://atom.io/packages/linter-php">linter-php</a> : Vous indique vos erreurs PHP (soyez sûrs
+d’avoir PHP dans votre PATH).</p>
+</li>
+<li>
+<p><a href="https://atom.io/packages/linter-phpcs">linter-phpcs</a> : PHP CS pour PHP CodeSniffer. Sniffera
+votre code pour vous dire là où vous n’êtes pas en conformité avec les normes PSR. Fonctionne avec
+Linter.</p>
+</li>
+<li>
+<p><a href="https://atom.io/packages/emmet">Emmet</a> : Doit-je le présenter ? ;-)</p>
+</li>
+<li>
+<p><a href="https://atom.io/packages/project-manager">Project Manager</a> : Permet d’ouvrir rapidement ses
+projets en cours</p>
+</li>
+<li>
+<p><a href="https://atom.io/themes/atom-material-ui">Material UI</a> : une UI de type <em>matérial design</em></p>
+</li>
+</ul>
+<p>Et parce que parfois notre métier n’est pas toujours simple, voici un thème pour les nerveux :
+<a href="https://atom.io/packages/activate-power-mode">Activate Power Mode</a>.<br>
+<img src="https://i.github-camo.com/b1d03b9b7a9d7dc9a32d1eab307b5378f8c59a7b/68747470733a2f2f636c6f75642e67697468756275736572636f6e74656e742e636f6d2f6173736574732f3638383431352f31313631353536352f31306631363435362d396336352d313165352d386166342d3236356630316663383361302e676966" alt="activate-power-mode"></p>
+<h2 id="a-propos-des-snippets">A propos des snippets</h2>
+<p>De nombreux snippets sont nativement présents dans Atom (exemple :
+<a href="https://github.com/atom/language-php/blob/master/snippets/language-php.cson">PHP</a>,
+<a href="https://github.com/atom/language-javascript/blob/master/snippets/language-javascript.cson">JavaScript</a>).
+Pour avoir la liste des snippets disponibles, faites la combinaison suivante : Alt + Shift + S. Vous
+pouvez aussi créer vos propres snippets (File > Open Your Snippets). Ces snippets sont écrits dans
+un fichier <a href="https://github.com/bevry/cson#what-is-cson">CSON</a>.</p>
+<p>En voici un exemple :</p>
+<div class="expressive-code"><figure class="frame"><figcaption class="header"></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#babed8">'.source.php':</span></div><div class="ec-line"><span style="--0:#babed8">  'var_dump("…");die();':</span></div><div class="ec-line"><span style="--0:#babed8">    'prefix': 'vdie'</span></div><div class="ec-line"><span style="--0:#babed8">    'body': 'var_dump($1);die();$0'</span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="&#x27;.source.php&#x27;:  &#x27;var_dump(&#x22;…&#x22;);die();&#x27;:    &#x27;prefix&#x27;: &#x27;vdie&#x27;    &#x27;body&#x27;: &#x27;var_dump($1);die();$0&#x27;"><div></div></button></div></figure></div>
+<p>Ce snippet transforme l’expression <code>vdie</code> en <code>var_dump();die();</code> après avoir appuyé sur tab (oui, on
+est d’accord, on débug plus comme ça en PHP depuis longtemps !). Le <em>source.php</em> indique que ce
+n’est valable que pour les fichier PHP.</p>
+<p>Il vous est aussi possible de l’écrire sur plusieurs lignes :</p>
+<div class="expressive-code"><figure class="frame"><figcaption class="header"></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#babed8">'.source.php':</span></div><div class="ec-line"><span style="--0:#babed8">  'var_dump("…");die();':</span></div><div class="ec-line"><span style="--0:#babed8">    'prefix': 'vdie'</span></div><div class="ec-line"><span style="--0:#babed8">    'body': """</span></div><div class="ec-line"><span style="--0:#babed8">        var_dump($1);</span></div><div class="ec-line"><span style="--0:#babed8">        die();P</span></div><div class="ec-line"><span style="--0:#babed8">        $0</span></div><div class="ec-line"><span style="--0:#babed8">        """</span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="&#x27;.source.php&#x27;:  &#x27;var_dump(&#x22;…&#x22;);die();&#x27;:    &#x27;prefix&#x27;: &#x27;vdie&#x27;    &#x27;body&#x27;: &#x22;&#x22;&#x22;        var_dump($1);        die();P        $0        &#x22;&#x22;&#x22;"><div></div></button></div></figure></div>
+<p>Si vous le souhaitez, vous pouvez aussi écraser des snippets existants.</p>
+<h2 id="features-natives-intéressantes">Features natives intéressantes</h2>
+<h3 id="intégration-de-git">Intégration de Git</h3>
+<p>Je vous l’ai dit plus haut, Atom est un produit créé par GitHub. Donc c’est pas un grande surprise
+que d’apprendre que les fonctions Git sont présentes nativement. Les plugins
+<a href="https://atom.io/packages/git-time-machine">git-time-machine</a> et
+<a href="https://atom.io/packages/merge-conflicts">merge-conflicts</a> sont intéressants.<br>
+Mais côté pratique, je préfère de loin utiliser <a href="https://desktop.github.com/">GitHub Desktop</a> ou
+bien <a href="https://www.sourcetreeapp.com/">SourceTree</a> (si vous n’êtes pas sur GitHub).</p>
+<h3 id="recherche-rapide-partielle">Recherche rapide partielle</h3>
+<p>Comme pour Sublime, Atom propose une recherche partielle. Par exemple, si vous souhaitez utiliser la
+commande <code>Editor: Upper Case</code>, vous n’êtes pas obligé de tout écrire. Contentez vous simplement de
+taper <code>upca</code>. <img  src="/_astro/partial-quick-search.H9ikiiRc_110SNV.webp" alt="Recherche rapide partielle" width="501" height="192" loading="lazy" decoding="async"></p>
+<h3 id="markdown-preview">Markdown preview</h3>
+<p>Atom permet de prévisualiser vos fichier de syntaxe Markdown. Pour l’activer : Ctrl + Shift + P >
+Markdown preview: Toogle <img  src="/_astro/markdown.hXpCv45C_Z10aqHV.webp" alt="Markdown preview" width="1406" height="291" loading="lazy" decoding="async"></p>
+<h3 id="gestion-des-favoris">Gestion des favoris</h3>
+<p>Si vous êtes allés sur le répo des packages, vous avez dû voir une petite étoile à côté des
+packages. Ce chiffre correspond au nombre de favoris. Je vous recommande vous aussi de mettre en
+favoris les packages que vous appréciez. Vous pouvez le faire via deux moyens :</p>
+<ul>
+<li>Sur le répository des packages en cliquant sur l’étoile (vous devrez-être connectés avec votre
+compte GitHub)</li>
+<li>En ligne de commande (possibilité de mettre plusieurs étoiles)</li>
+</ul>
+<p><code>apm login</code><br>
+<code>apm star linter minimap anotherPackage</code></p>
+<blockquote>
+<p>Pourquoi faire ?</p>
+</blockquote>
+<p>C’est simple, si un jour vous changez de poste de travail, vous n’aurez qu’à faire :
+<code>apm stars --install</code> pour installer vos favoris<br>
+<code>apm stars --user maxpou --install</code> pour installer les favoris d’un autre utilisateur (les miens
+dans ce cas présent).</p>
+<p>Pour <strong>lister</strong> les packages favoris d’un autre utilisateur, supprimez l’annotation <code>--install</code>.</p>
+<h2 id="raccourcis-claviers">Raccourcis claviers</h2>
+<p>Vous les retrouverez tous dans File > Settings > Keybindings (avec la possibilité de faire des
+recherches).</p>
+<p><code>Ctrl + Shift + P</code> : Affiche palette des commandes<br>
+<code>Ctrl + P</code> : Recherche fichier dans le projet<br>
+<code>Ctrl + R</code> : Recherche dans la page<br>
+<code>Ctrl + G + [numéro de ligne]</code> : Se déplace à la ligne<br>
+<code>Ctrl + flèche haut/bas</code> : Déplace la ligne en haut/bas<br>
+<code>Ctrl + shift + D</code> : duplique la ligne courante<br>
+<code>Ctrl + D</code> : sélectionne une autre occurrence du mot déjà sélectionné<br>
+<code>Ctrl + /</code> : Commente la ligne<br>
+<code>Ctrl + J</code> : Joint la ligne courante et la suivante<br>
+<code>Ctrl + C/X (sans sélection)</code> : Copie/coupe la ligne courante<br>
+<code>Ctrl + tab</code> : Change d’onglet</p>
+<h2 id="limites">Limites</h2>
+<p>Si Atom a souffert d’horribles latences à son tout début, on peut dire qu’il est beaucoup plus
+stable aujourd’hui. Cependant, il se peut que l’éditeur ne réponde plus si vous souhaitez ouvrir un
+fichier trop volumineux (un bon vieux fichier de logs par exemple). Bah oui, ce n’est pas non plus
+VI !<br>
+<img  src="/_astro/error.5ZouT8DP_ZVSIo0.webp" alt="Error" width="368" height="140" loading="lazy" decoding="async"></p>
+<p>Si vous avez un clavier français et que vous n’arrivez pas à écrire ces caractère ”]”, ”}” et ”€”,
+allez dans file > Open Your Keymap. Un fichier CSON va s’ouvrir. Ajoutez ces quelques lignes
+ci-dessous et enregistrez (pour surcharger le snippet existant).</p>
+<div class="expressive-code"><figure class="frame"><figcaption class="header"></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#babed8">'atom-workspace atom-text-editor:not([mini])':</span></div><div class="ec-line"><span style="--0:#babed8">  'ctrl-alt-[': 'unset!'</span></div><div class="ec-line"><span style="--0:#babed8">  'ctrl-alt-]': 'unset!'</span></div><div class="ec-line">
+</div><div class="ec-line"><span style="--0:#babed8">'atom-workspace atom-pane':</span></div><div class="ec-line"><span style="--0:#babed8">  'ctrl-alt-=': 'unset!'</span></div><div class="ec-line">
+</div><div class="ec-line"><span style="--0:#babed8">'atom-workspace':</span></div><div class="ec-line"><span style="--0:#babed8">    'ctrl-alt-e': 'unset!'</span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="&#x27;atom-workspace atom-text-editor:not([mini])&#x27;:  &#x27;ctrl-alt-[&#x27;: &#x27;unset!&#x27;  &#x27;ctrl-alt-]&#x27;: &#x27;unset!&#x27;&#x27;atom-workspace atom-pane&#x27;:  &#x27;ctrl-alt-=&#x27;: &#x27;unset!&#x27;&#x27;atom-workspace&#x27;:    &#x27;ctrl-alt-e&#x27;: &#x27;unset!&#x27;"><div></div></button></div></figure></div>
+<h2 id="le-mot-de-la-fin">Le mot de la Fin</h2>
+<p>Le passage de SublimeText vers Atom a <em>presque</em> été indolore pour moi. Beaucoup de raccourcis
+claviers, concepts… sont identiques (cas échéant, il vous est possible d’adapter le fichier de
+keymap).<br>
+La quantité de packages et de thèmes est impressionnante, il y en a pour tous les goûts. A vrai
+dire, je suis étonné que si peu de mes collègues l’utilisent.</p>
+<p>Et vous, vous en avez pensé quoi de cet éditeur ?</p>
+<h2 id="bonus--ma-conf-perso">Bonus : ma conf perso :)</h2>
+<p>Voir mes <a href="https://github.com/maxpou/dotfiles/tree/master/atom">Dotfiles (répo GitHub)</a>.</p> <div> <hr> <h2 class="dark:text-gray-100">About the author</h2> <div class="flex flex-col md:flex-row items-center gap-5 md:gap-8 mt-5"> <div class="relative flex-shrink-0 h-32 w-32"> <img src="/_astro/profile-picture.gF0h5NUU_Zw8iDo.webp" class="not-prose h-32 w-32 object-cover rounded-full" alt="Maxence Poutord Profile picture" width="128" height="128" loading="lazy" decoding="async"> </div> <div> <p class="!mt-0 pb-2">
+Hey, I'm Maxence Poutord, a passionate software engineer. In my
+        day-to-day job, I'm working as a senior front-end engineer at Orderfox.
+        When I'm not working, you can find me travelling the world or cooking.
+</p> <a class="not-prose inline-flex rounded border
+    font-semibold no-underline
+    transition-colors duration-200 ease-in-out px-3 py-2
+    border-[#1da1f2] bg-[#1da1f2] text-white
+    hover:border-[#1da1f2] hover:bg-white hover:text-[#1da1f2]" rel="noopener" target="_blank" href="https://twitter.com/intent/follow?screen_name=_maxpou"> <svg aria-label="Twitter" viewBox="0 0 24 24" width="1em" height="1em" class="h-6 w-6 pr-2"><path fill="currentColor" d="M23.954 4.569a10 10 0 0 1-2.825.775 4.958 4.958 0 0 0 2.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 0 0-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 0 0-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 0 1-2.228-.616v.061a4.923 4.923 0 0 0 3.946 4.827 4.996 4.996 0 0 1-2.212.085 4.937 4.937 0 0 0 4.604 3.417 9.868 9.868 0 0 1-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0 0 7.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 0 0 2.46-2.548l-.047-.02z"></path></svg>
+Follow @_maxpou
+ </a> </div> </div> </div>  </div>  <div> <h2 class="text-2xl underline mt-12 font-bold dark:text-mainYellow">
+Recommended posts
+</h2> <div class="grid grid-cols-1 gap-4 md:grid-cols-2 mt-6"> <a title="3 Tips for Scaling Large Vue.js Application" href="/blog/3-tips-scaling-vue-application/" class="ease flex flex-col rounded-lg bg-white transition duration-300 dark:bg-gray-500 hover:translate-y-0.5 shadow-md  hover:shadow-xl group"> <img src="/_astro/cover.ex1KwcGk_Z1CSi66.webp" alt="Cover picture for 3 Tips for Scaling Large Vue.js Application" class="h-56 w-full rounded-b-none rounded-t-lg object-cover transition" width="420" height="224" loading="lazy" decoding="async"> <div class="p-4"> <header class="text-xl font-semibold text-gray-700 dark:text-gray-100"> <span class="inline">  <!-- {post.data.title} --> <span class="from-blue-100 to-blue-100 text-dark dark:bg-none
+           bg-gradient-to-r bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]"> 3 Tips for Scaling Large Vue.js Application </span> </span> </header> <p class="date text-gray-400 dark:text-gray-100"> <time datetime="2018-12-13T00:00:00.000Z"> 13 December 2018 </time> </p> </div> </a><a title="Vue.js: Let's Scale!" href="/blog/vue-js-module-architecture/" class="ease flex flex-col rounded-lg bg-white transition duration-300 dark:bg-gray-500 hover:translate-y-0.5 shadow-md  hover:shadow-xl group"> <img src="/_astro/cover.eY2JdMXs_1kNdoS.webp" alt="Cover picture for Vue.js: Let's Scale!" class="h-56 w-full rounded-b-none rounded-t-lg object-cover transition" width="420" height="224" loading="lazy" decoding="async"> <div class="p-4"> <header class="text-xl font-semibold text-gray-700 dark:text-gray-100"> <span class="inline">  <!-- {post.data.title} --> <span class="from-blue-100 to-blue-100 text-dark dark:bg-none
+           bg-gradient-to-r bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]"> Vue.js: Let&#39;s Scale! </span> </span> </header> <p class="date text-gray-400 dark:text-gray-100"> <time datetime="2021-05-27T00:00:00.000Z"> 27 May 2021 </time> </p> </div> </a> </div> </div>  </div> </article>  </main> <footer class="bg-blue-50 dark:bg-gray-600 dark:text-white w-full mx-auto pb-0" data-astro-cid-sz7xmlte> <div class="m-auto flex w-[1024px] max-w-full flex-wrap justify-between" data-astro-cid-sz7xmlte> <div class="w-full pb-4 md:w-auto flex-auto" data-astro-cid-sz7xmlte> <p class="pb-1 font-bold" data-astro-cid-sz7xmlte>
+&copy; 2014 - 2024 - Maxence Poutord </p> <p data-astro-cid-sz7xmlte>Built with Astro, Tailwind and some ☕️</p> <p data-astro-cid-sz7xmlte>
+Hosted with <span class="text-red-500" data-astro-cid-sz7xmlte>❤</span> by <a class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" href="https://github.com/maxpou/maxpou.fr" data-astro-cid-sz7xmlte>GitHub</a>.
+</p> </div> <div class="flex-auto" data-astro-cid-sz7xmlte> <h3 class="pb-1 font-bold" data-astro-cid-sz7xmlte>Explore</h3> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte> <a href="/uses" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Uses </a> </li><li data-astro-cid-sz7xmlte> <a href="/recipes" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Recipes (kitchen) </a> </li><li data-astro-cid-sz7xmlte> <a href="/about" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> About </a> </li><li data-astro-cid-sz7xmlte> <a href="/cv" target="_blank" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Resume (cv) </a> </li><li data-astro-cid-sz7xmlte> <a href="/readme" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Readme </a> </li> </ul> </div> <div class="flex-auto" data-astro-cid-sz7xmlte> <h3 class="pb-1 font-bold flex-auto" data-astro-cid-sz7xmlte>Let's connect</h3> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte> <a href="https://github.com/maxpou" rel="noopener noreferrer" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> GitHub </a> </li><li data-astro-cid-sz7xmlte> <a href="https://twitter.com/_maxpou" rel="noopener noreferrer" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Twitter </a> </li><li data-astro-cid-sz7xmlte> <a href="https://www.linkedin.com/in/maxpou/" rel="noopener noreferrer" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> LinkedIn </a> </li><li data-astro-cid-sz7xmlte> <a href="/rss.xml" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> RSS feed </a> </li> </ul> </div> </div>  </footer>  </body> </html>

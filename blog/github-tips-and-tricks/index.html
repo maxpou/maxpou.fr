@@ -1,0 +1,265 @@
+<!DOCTYPE html><html lang="en"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/x-icon" href="/favicon.ico"><meta name="generator" content="Astro v4.4.0"><!-- Font preloads --><link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet"><!-- Canonical URL --><link rel="canonical" href="https://www.maxpou.fr/blog/github-tips-and-tricks/"><!-- Primary Meta Tags --><title>Github: Tips&amp;tricks</title><meta name="title" content="Github: Tips&#38;tricks"><meta name="description" content="A blog post written by Maxence Poutord"><script async defer data-domain="maxpou.fr" src="https://plausible.io/js/plausible.js"></script><link rel="alternate" type="application/rss+xml" title="Maxence Poutord • Maxpou Blog" href="/rss.xml"><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"><!-- Open Graph / Facebook --><meta property="og:type" content="article"><meta property="og:url" content="https://www.maxpou.fr/blog/github-tips-and-tricks/"><meta property="og:title" content="Github: Tips&#38;tricks"><meta property="og:description" content="A blog post written by Maxence Poutord"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://www.maxpou.fr/blog/github-tips-and-tricks/"><meta property="twitter:title" content="Github: Tips&#38;tricks"><meta property="twitter:description" content="A blog post written by Maxence Poutord"><meta name="twitter:creator" content="_maxpou"><script>
+  const theme = (() => {
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+      return localStorage.getItem('theme')
+    }
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark'
+    }
+    return 'light'
+  })()
+
+  if (theme === 'light') {
+    document.documentElement.classList.remove('dark')
+  } else {
+    document.documentElement.classList.add('dark')
+  }
+  window.localStorage.setItem('theme', theme)
+</script><link rel="stylesheet" href="/_astro/_slug_.cE4nuJce.css" />
+<style>code[class*=language-],pre[class*=language-]{color:#ccc;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.comment,.token.block-comment,.token.prolog,.token.doctype,.token.cdata{color:#999}.token.punctuation{color:#ccc}.token.tag,.token.attr-name,.token.namespace,.token.deleted{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.number,.token.function{color:#f08d49}.token.property,.token.class-name,.token.constant,.token.symbol{color:#f8c555}.token.selector,.token.important,.token.atrule,.token.keyword,.token.builtin{color:#cc99cd}.token.string,.token.char,.token.attr-value,.token.regex,.token.variable{color:#7ec699}.token.operator,.token.entity,.token.url{color:#67cdcc}.token.important,.token.bold{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}.expressive-code{margin-top:1em}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.fA4gFHjB.css" />
+<style>a[data-astro-cid-eimmu3lg]{display:inline-block;text-decoration:none;border-bottom:4px solid transparent}a[data-astro-cid-eimmu3lg].active{font-weight:bolder;border-bottom-color:#ffdc4e}footer[data-astro-cid-sz7xmlte]{padding:2em 1em 6em;color:rgb(var(--gray))}*{transition:background .5s ease}*::-moz-selection{background-color:#ffdc4e;color:#3e4047}*::selection{background-color:#ffdc4e;color:#3e4047}
+</style><script type="module">const n=document.getElementById("burger-button"),e=document.getElementById("burger-line-1"),r=document.getElementById("burger-line-2"),t=document.getElementById("burger-line-3"),o=document.getElementById("menu-backdrop");n.addEventListener("click",()=>{o.classList.contains("hidden")?(o.classList.add("flex"),o.classList.remove("hidden"),e.style.transform="rotate(45deg)",e.style.top="0",e.style.backgroundColor="white",r.style.backgroundColor="transparent",t.style.transform="rotate(-45deg)",t.style.top="0",t.style.backgroundColor="white"):(e.style.transform="rotate(0)",e.style.removeProperty("top"),e.style.removeProperty("background-color"),r.style.removeProperty("background-color"),t.style.removeProperty("background-color"),t.style.transform="rotate(0)",t.style.removeProperty("top"),o.classList.add("hidden"),o.classList.remove("flex"))});
+</script></head> <body class="bg-gradient-to-b from-blue-50 to-[#f5f7f9] dark:bg-gray-600 dark:bg-gradient-to-b dark:from-gray-600"> <header class="bg-white dark:bg-gray-600 px-4 h-16"> <nav class="dark:text-white h-16 flex items-center justify-between max-w-screen-xl w-full mx-auto"> <h1 class="text-lg dark:text-white font-bold"> <a href="/">Maxence Poutord</a> </h1> <div class="md:flex hidden"> <a href="/blog" class="py-4 px-2 no-underline text-lg hover:text-blue-900 dark:text-white dark:hover:text-mainYellow" data-astro-cid-eimmu3lg> Blog </a>  <a href="/speaking" class="py-4 px-2 no-underline text-lg hover:text-blue-900 dark:text-white dark:hover:text-mainYellow" data-astro-cid-eimmu3lg> Speaking </a>  <a href="/about" class="py-4 px-2 no-underline text-lg hover:text-blue-900 dark:text-white dark:hover:text-mainYellow" data-astro-cid-eimmu3lg> About </a>  <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();;(()=>{var v=Object.defineProperty;var A=(c,s,a)=>s in c?v(c,s,{enumerable:!0,configurable:!0,writable:!0,value:a}):c[s]=a;var d=(c,s,a)=>(A(c,typeof s!="symbol"?s+"":s,a),a);var u;{let c={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t)},s=t=>{let[e,n]=t;return e in c?c[e](n):void 0},a=t=>t.map(s),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([e,n])=>[e,s(n)]));customElements.get("astro-island")||customElements.define("astro-island",(u=class extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var f;if(!this.hydrator||!this.isConnected)return;let e=(f=this.parentElement)==null?void 0:f.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let n=this.querySelectorAll("astro-slot"),r={},l=this.querySelectorAll("template[data-astro-template]");for(let o of l){let i=o.closest(this.tagName);i!=null&&i.isSameNode(this)&&(r[o.getAttribute("data-astro-template")||"default"]=o.innerHTML,o.remove())}for(let o of n){let i=o.closest(this.tagName);i!=null&&i.isSameNode(this)&&(r[o.getAttribute("name")||"default"]=o.innerHTML)}let h;try{h=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(o){let i=this.getAttribute("component-url")||"<unknown>",b=this.getAttribute("component-export");throw b&&(i+=` (export ${b})`),console.error(`[hydrate] Error parsing props for component ${i}`,this.getAttribute("props"),o),o}let p;await this.hydrator(this)(this.Component,h,r,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),n.disconnect(),this.childrenConnectedCallback()},n=new MutationObserver(()=>{var r;((r=this.lastChild)==null?void 0:r.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});n.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),n=this.getAttribute("client");if(Astro[n]===void 0){window.addEventListener(`astro:${n}`,()=>this.start(),{once:!0});return}try{await Astro[n](async()=>{let r=this.getAttribute("renderer-url"),[l,{default:h}]=await Promise.all([import(this.getAttribute("component-url")),r?import(r):()=>()=>{}]),p=this.getAttribute("component-export")||"default";if(!p.includes("."))this.Component=l[p];else{this.Component=l;for(let y of p.split("."))this.Component=this.Component[y]}return this.hydrator=h,this.hydrate},e,this)}catch(r){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,r)}}attributeChangedCallback(){this.hydrate()}},d(u,"observedAttributes",["props"]),u))}})();</script><astro-island uid="1MPqDn" component-url="/_astro/DarkModeButton.xNbp8Br3.js" component-export="default" renderer-url="/_astro/client.PcUt3MZx.js" props="{}" ssr="" client="only" opts="{&quot;name&quot;:&quot;DarkModeButton&quot;,&quot;value&quot;:&quot;preact&quot;}"></astro-island> </div> <button id="burger-button" aria-label="Toggle mobile menu" class="md:hidden block w-14 h-14 relative focus:outline-none rounded z-10"> <div class="block w-5 absolute left-6 top-1/2 transform -translate-x-1/2 -translate-y-1/2"> <span id="burger-line-1" class="block absolute h-0.5 w-7 text-white bg-gray-600 dark:bg-white transform transition-all duration-500 ease-in-out -top-2"></span> <span id="burger-line-2" class="block absolute h-0.5 w-7 text-white bg-gray-600 dark:bg-white transform transition-all duration-500 ease-in-out"></span> <span id="burger-line-3" class="block absolute h-0.5 w-7 text-white bg-gray-600 dark:bg-white transform transition-all duration-500 ease-in-out top-2"></span> </div> </button> </nav> <div id="menu-backdrop" class="hidden bg-gray-600 bg-opacity-95 absolute top-0 left-0 h-screen w-screen backdrop-opacity-90 items-center justify-center"> <ul class="text-white font-bold text-xl"> <li class="p-3"><a href="/">Home</a></li> <li class="p-3"><a href="/blog">Blog</a></li> <li class="p-3"><a href="/speaking">Speaking</a></li> <li class="p-3"><a href="/about">About</a></li> <li class="p-3"> <astro-island uid="lieIt" component-url="/_astro/DarkModeButton.xNbp8Br3.js" component-export="default" renderer-url="/_astro/client.PcUt3MZx.js" props="{&quot;textOnly&quot;:[0,true],&quot;className&quot;:[0,&quot;!p-0&quot;]}" ssr="" client="only" opts="{&quot;name&quot;:&quot;DarkModeButton&quot;,&quot;value&quot;:&quot;preact&quot;}"></astro-island> </li> </ul> </div> </header>  <main class="m-0 mx-auto min-h-[70vh] w-full max-w-screen-xl px-4 py-12 text-gray-500 dark:text-gray-100">  <article> <div class="hero-image"> <img src="/_astro/banner.3bNeEQrI_1iIRJP.webp" alt="Cover picture for Github: Tips&#38;tricks" class="rounded-xl shadow-xl mx-auto h-[500px] object-cover w-full" width="1020" height="500" loading="lazy" decoding="async"> </div> <div class="container m-auto text-center"> <div class="mt-3 text-blueGreyed dark:text-gray-300"> <time datetime="2017-02-20T00:00:00.000Z"> 20 February 2017 </time>  </div> <h1 class="font-bold text-3xl dark:text-white text-center leading-none py-4 mb-2 "> Github: Tips&amp;tricks </h1> <div class="pb-6"> <a href="/tags/GitHub" class="mr-2 inline-block rounded-lg bg-darkBlue px-3 py-2 text-sm text-white no-underline hover:bg-blueGreyed dark:bg-blueGreyed dark:hover:bg-darkBlue"> GitHub </a><a href="/tags/Tool" class="mr-2 inline-block rounded-lg bg-darkBlue px-3 py-2 text-sm text-white no-underline hover:bg-blueGreyed dark:bg-blueGreyed dark:hover:bg-darkBlue"> Tool </a>  </div> </div> <div class="m-auto w-[720px] max-w-full">  <div class="prose
+  max-w-none
+  dark:prose-invert
+  prose-headings:underline
+  prose-h2:text-2xl prose-h2:font-bold prose-h2:dark:text-mainYellow
+  prose-h3:text-xl prose-h3:font-bold
+  prose-p:mb-0
+  prose-p:mt-4
+  prose-a:underline-offset-4
+  prose-a:decoration-2
+  prose-a:text-gray-700 dark:prose-a:text-slate-100 hover:prose-a:text-slate-900
+  prose-a:decoration-gray-300
+  hover:prose-a:decoration-blue-700 dark:hover:prose-a:decoration-mainYellow
+  prose-img:rounded-xl">  <p>Summary:</p>
+<ul>
+<li><a href="#github--git--hub-manage-your-repo-by-cli">GitHub = git + hub (Manage your repo by CLI)</a></li>
+<li><a href="#github-aka-svnhub">Github AKA SVNHub?</a></li>
+<li><a href="#markdown-on-steroid-github-flavored-markdown">Markdown on steroid (Github Flavored Markdown)</a></li>
+<li><a href="#gist-another-kind-of-repository">Gist, another kind of repository</a></li>
+<li><a href="#issuepull-request-templates">Issue/Pull request Templates</a></li>
+<li><a href="#github-pages-%EF%B8%8F%EF%B8%8F">Github Pages ❤️️</a></li>
+<li><a href="#sign-your-commits">Sign your commits</a></li>
+<li><a href="#playing-with-url">Playing with URL</a>
+<ul>
+<li><a href="#url-everywhere">URL everywhere</a></li>
+<li><a href="#disable-whitespace-on-code-review">Disable whitespace on code review</a></li>
+<li><a href="#diff-and-patch">.diff and .patch</a></li>
+<li><a href="#highlight-lines">Highlight lines</a></li>
+<li><a href="#filtering-commits">Filtering commits</a></li>
+</ul>
+</li>
+<li><a href="#keyboard-shortcuts">Keyboard shortcuts</a></li>
+<li><a href="#emoji-">Emoji 😍</a></li>
+<li><a href="#gitio-a-github-url-shortener">git.io a Github URL shortener</a></li>
+<li><a href="#not-only-for-your-code">Not only for your code</a></li>
+<li><a href="#api-rest-or-graphql">API (~REST or GraphQL)</a></li>
+<li><a href="#bonus-octodex">Bonus: Octodex</a></li>
+</ul>
+<h2 id="github--git--hub-manage-your-repo-by-cli">GitHub = git + hub (Manage your repo by CLI)</h2>
+<p><a href="https://hub.github.com">Hub</a> is a command line wrapper for Git. Once installed, you can use this
+new git commands:</p>
+<ul>
+<li><code>pull-request</code> Open a pull request on GitHub</li>
+<li><code>fork</code> Make a fork of a remote repository on GitHub and add as remote</li>
+<li><code>create</code> Create this repository on GitHub and add GitHub as origin</li>
+<li><code>browse</code> Open a GitHub page in the default browser ❤️</li>
+<li><code>compare</code> Open a compare page on GitHub</li>
+<li><code>release</code> List or create releases (beta)</li>
+<li><code>issue</code> List or create issues (beta)</li>
+<li><code>ci-status</code> Show the CI status of a commit</li>
+</ul>
+<div class="expressive-code"><link rel="stylesheet" href="/_astro/ec.aqfpi.css"/><script type="module" src="/_astro/ec.sgewm.js"></script><figure class="frame is-terminal"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#C792EA">alias</span><span style="--0:#BABED8"> git</span><span style="--0:#89DDFF">=</span><span style="--0:#89DDFF">&#39;</span><span style="--0:#C3E88D">hub</span><span style="--0:#89DDFF">&#39;</span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="alias git='hub'"><div></div></button></div></figure></div>
+<p>Using ZSH? Don’t forget to add the plugin!</p>
+<div class="expressive-code"><figure class="frame is-terminal"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#9FA4BC;--0fs:italic">#~/.zshrc file</span></div><div class="ec-line"><span style="--0:#BABED8">plugins</span><span style="--0:#89DDFF">=(</span><span style="--0:#C3E88D">git</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">github</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">...</span><span style="--0:#89DDFF">)</span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="plugins=(git github ...)"><div></div></button></div></figure></div>
+<h2 id="github-aka-svnhub">Github AKA SVNHub?</h2>
+<p>You’re not using Git? It doesn’t matter, GitHub also support Subversion!</p>
+<div class="expressive-code"><figure class="frame is-terminal"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#9FA4BC;--0fs:italic"># instead of using:</span></div><div class="ec-line"><span style="--0:#FFCB6B">git</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">clone</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">https://github.com/user/repo</span></div><div class="ec-line"><span style="--0:#9FA4BC;--0fs:italic"># you can do exactly the same with svn:</span></div><div class="ec-line"><span style="--0:#FFCB6B">svn</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">co</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">--depth</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">empty</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">https://github.com/user/repo</span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="git clone https://github.com/user/reposvn co --depth empty https://github.com/user/repo"><div></div></button></div></figure></div>
+<p>…but who uses SVN anyway? ;-)</p>
+<h2 id="markdown-on-steroid-github-flavored-markdown">Markdown on steroid (Github Flavored Markdown)</h2>
+<p>Github use his own version of markdown: Github Flavored Markdown (GFM). It provides severals
+additional features such as:</p>
+<ul>
+<li>
+<p>Task lists (<code>- [ ] &lt;task description&gt;</code>). On the issue summary, a task list will also appear
+(<a href="https://github.com/maxpou-slides/github-tips-tricks/issues">example</a>)</p>
+<div class="expressive-code"><figure class="frame"><figcaption class="header"></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#BABED8">Todo:</span></div><div class="ec-line">
+</div><div class="ec-line"><span style="--0:#89DDFF">-</span><span style="--0:#BABED8"> </span><span style="--0:#89DDFF">[</span><span style="--0:#C3E88D">x</span><span style="--0:#89DDFF">]</span><span style="--0:#BABED8"> Write an article about Github tips and tricks</span></div><div class="ec-line"><span style="--0:#89DDFF">-</span><span style="--0:#BABED8"> [ ] Conquer the world</span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="Todo:- [x] Write an article about Github tips and tricks- [ ] Conquer the world"><div></div></button></div></figure></div>
+<p><img src="/_astro/tasklist.I7bTKL5q_ZsoB2o.webp" alt="tasklist" width="1108" height="621" loading="lazy" decoding="async"></p>
+</li>
+<li>
+<p>Tables:</p>
+<div class="expressive-code"><figure class="frame"><figcaption class="header"></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#89DDFF">|</span><span style="--0:#BABED8"> First Header </span><span style="--0:#89DDFF">|</span><span style="--0:#BABED8"> Second Header </span><span style="--0:#89DDFF">|</span></div><div class="ec-line"><span style="--0:#89DDFF">|</span><span style="--0:#BABED8"> </span><span style="--0:#89DDFF">------------</span><span style="--0:#BABED8"> </span><span style="--0:#89DDFF">|</span><span style="--0:#BABED8"> </span><span style="--0:#89DDFF">-------------</span><span style="--0:#BABED8"> </span><span style="--0:#89DDFF">|</span></div><div class="ec-line"><span style="--0:#89DDFF">|</span><span style="--0:#BABED8"> Content Cell </span><span style="--0:#89DDFF">|</span><span style="--0:#BABED8"> Content Cell  </span><span style="--0:#89DDFF">|</span></div><div class="ec-line"><span style="--0:#89DDFF">|</span><span style="--0:#BABED8"> Content Cell </span><span style="--0:#89DDFF">|</span><span style="--0:#BABED8"> Content Cell  </span><span style="--0:#89DDFF">|</span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="| First Header | Second Header || ------------ | ------------- || Content Cell | Content Cell  || Content Cell | Content Cell  |"><div></div></button></div></figure></div>
+</li>
+<li>
+<p>Syntax color</p>
+<div class="expressive-code"><figure class="frame"><figcaption class="header"></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#C3E88D">```</span><span style="--0:#BABED8D0">javascript</span></div><div class="ec-line"><span style="--0:#BABED8">console</span><span style="--0:#89DDFF">.</span><span style="--0:#82AAFF">log</span><span style="--0:#BABED8">(</span><span style="--0:#89DDFF">&#39;</span><span style="--0:#C3E88D">youpi</span><span style="--0:#89DDFF">&#39;</span><span style="--0:#BABED8">)</span></div><div class="ec-line"><span style="--0:#C3E88D">```</span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="```javascriptconsole.log('youpi')```"><div></div></button></div></figure></div>
+</li>
+<li>
+<p>reference commits/issues/PR …</p>
+</li>
+<li>
+<p>Other interesting HTML tags such as details/summary tags (kind of spoiler tag)</p>
+<div class="expressive-code"><figure class="frame"><figcaption class="header"></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#89DDFF">&lt;</span><span style="--0:#F2858B">details</span><span style="--0:#89DDFF">&gt;</span></div><div class="ec-line"><span style="--0:#BABED8">  </span><span style="--0:#89DDFF">&lt;</span><span style="--0:#F2858B">summary</span><span style="--0:#89DDFF">&gt;</span><span style="--0:#BABED8">License (MIT)</span><span style="--0:#89DDFF">&lt;/</span><span style="--0:#F2858B">summary</span><span style="--0:#89DDFF">&gt;</span></div><div class="ec-line"><span style="--0:#BABED8">  The MIT License (MIT) Copyright (c) 2017 Maxence POUTORD Permission is hereby granted, free of</span></div><div class="ec-line"><span style="--0:#BABED8">  charge, to any person obtaining a copy of this software and associated documentation files (the</span></div><div class="ec-line"><span style="--0:#BABED8">  &quot;Software&quot;) [...]</span></div><div class="ec-line"><span style="--0:#89DDFF">&lt;/</span><span style="--0:#F2858B">details</span><span style="--0:#89DDFF">&gt;</span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="<details>  <summary>License (MIT)</summary>  The MIT License (MIT) Copyright (c) 2017 Maxence POUTORD Permission is hereby granted, free of  charge, to any person obtaining a copy of this software and associated documentation files (the  &#34;Software&#34;) [...]</details>"><div></div></button></div></figure></div>
+<p>The output will be like this: <em>(click on License)</em></p>
+<details><p><summary>License (MIT)</summary>
+The MIT License (MIT) <br/>
+Copyright (c) 2017 Maxence POUTORD</p><br/><p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+and associated documentation files (the “Software”) […]</p></details>
+</li>
+</ul>
+<h2 id="gist-another-kind-of-repository">Gist, another kind of repository</h2>
+<p>Each <a href="https://gist.github.com/">gist</a> is a Github repository. So you can clone and fork them,
+exactly like a Github repository:</p>
+<div class="expressive-code"><figure class="frame is-terminal"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#FFCB6B">git</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">clone</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">https://gist.github.com/maxpou/e6cad8d4699f731c86df628358cba3d6</span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="git clone https://gist.github.com/maxpou/e6cad8d4699f731c86df628358cba3d6"><div></div></button></div></figure></div>
+<p>By the way, if you are not logged into Github while creating this gist, it will be an Anonymous
+gist. Note that Anonymous gists are hard to delete (need to contact Github).</p>
+<h2 id="issuepull-request-templates">Issue/Pull request Templates</h2>
+<p>Everyone who maintain an open source project on Github had already get this kind of message:</p>
+<blockquote>
+<p>User1: It’s not working on my Machines You: Can you provide the version? And the steps to
+reproduce?</p>
+<p>User2: It’s not working… You: Can you provide the version? And the steps to reproduce?</p>
+</blockquote>
+<p>To avoid this repetitive task, you can add an issue template to your repository.</p>
+<div class="expressive-code"><figure class="frame"><figcaption class="header"></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#BABED8">(ISSUE_TEMPLATE.md)</span></div><div class="ec-line">
+</div><div class="ec-line"><span style="--0:#89DDFF">|</span><span style="--0:#BABED8"> Q                </span><span style="--0:#89DDFF">|</span><span style="--0:#BABED8"> A      </span><span style="--0:#89DDFF">|</span></div><div class="ec-line"><span style="--0:#89DDFF">|</span><span style="--0:#BABED8"> </span><span style="--0:#89DDFF">----------------</span><span style="--0:#BABED8"> </span><span style="--0:#89DDFF">|</span><span style="--0:#BABED8"> </span><span style="--0:#89DDFF">------</span><span style="--0:#BABED8"> </span><span style="--0:#89DDFF">|</span></div><div class="ec-line"><span style="--0:#89DDFF">|</span><span style="--0:#BABED8"> Bug report?      </span><span style="--0:#89DDFF">|</span><span style="--0:#BABED8"> yes/no </span><span style="--0:#89DDFF">|</span></div><div class="ec-line"><span style="--0:#89DDFF">|</span><span style="--0:#BABED8"> Feature request? </span><span style="--0:#89DDFF">|</span><span style="--0:#BABED8"> yes/no </span><span style="--0:#89DDFF">|</span></div><div class="ec-line"><span style="--0:#89DDFF">|</span><span style="--0:#BABED8"> BC Break report? </span><span style="--0:#89DDFF">|</span><span style="--0:#BABED8"> yes/no </span><span style="--0:#89DDFF">|</span></div><div class="ec-line"><span style="--0:#89DDFF">|</span><span style="--0:#BABED8"> RFC?             </span><span style="--0:#89DDFF">|</span><span style="--0:#BABED8"> yes/no </span><span style="--0:#89DDFF">|</span></div><div class="ec-line"><span style="--0:#89DDFF">|</span><span style="--0:#BABED8"> Tool version     </span><span style="--0:#89DDFF">|</span><span style="--0:#BABED8"> x.y.z  </span><span style="--0:#89DDFF">|</span></div><div class="ec-line">
+</div><div class="ec-line"><span style="--0:#89DDFF;--0fw:bold">**</span><span style="--0:#F2858B;--0fw:bold">Description</span><span style="--0:#89DDFF;--0fw:bold">**</span></div><div class="ec-line">
+</div><div class="ec-line"><span style="--0:#89DDFF;--0fw:bold">**</span><span style="--0:#F2858B;--0fw:bold">Version concerned</span><span style="--0:#89DDFF;--0fw:bold">**</span></div><div class="ec-line">
+</div><div class="ec-line"><span style="--0:#89DDFF;--0fw:bold">**</span><span style="--0:#F2858B;--0fw:bold">Steps to reproduce the issue:</span><span style="--0:#89DDFF;--0fw:bold">**</span></div><div class="ec-line">
+</div><div class="ec-line"><span style="--0:#BABED8">1.</span></div><div class="ec-line"><span style="--0:#BABED8">2.</span></div><div class="ec-line"><span style="--0:#BABED8">3.</span></div><div class="ec-line">
+</div><div class="ec-line"><span style="--0:#89DDFF;--0fw:bold">**</span><span style="--0:#F2858B;--0fw:bold">Expected Results:</span><span style="--0:#89DDFF;--0fw:bold">**</span></div><div class="ec-line">
+</div><div class="ec-line"><span style="--0:#89DDFF;--0fw:bold">**</span><span style="--0:#F2858B;--0fw:bold">Actual Results:</span><span style="--0:#89DDFF;--0fw:bold">**</span></div><div class="ec-line">
+</div><div class="ec-line"><span style="--0:#89DDFF;--0fw:bold">**</span><span style="--0:#F2858B;--0fw:bold">Additional details:</span><span style="--0:#89DDFF;--0fw:bold">**</span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="(ISSUE_TEMPLATE.md)| Q                | A      || ---------------- | ------ || Bug report?      | yes/no || Feature request? | yes/no || BC Break report? | yes/no || RFC?             | yes/no || Tool version     | x.y.z  |**Description****Version concerned****Steps to reproduce the issue:**1.2.3.**Expected Results:****Actual Results:****Additional details:**"><div></div></button></div></figure></div>
+<p>Now you can ensure that each contributors will provide the corrects informations! You can do exactly
+the same with Pull-request content (<em>“what does it fix? Tests status?”</em>). In this case, call this
+file: PULL_REQUEST_TEMPLATE.md.</p>
+<h2 id="github-pages-️️">Github Pages ❤️️</h2>
+<p>Github can host severals type of websites:</p>
+<ul>
+<li>plain old HTML pages (can be interesting if you want to test the last trending JS Framework!);</li>
+<li>blogs which use <strong><a href="https://jekyllrb.com/">Jekyll</a></strong>, like this blog where you read this lines :)
+<a href="https://github.com/maxpou/maxpou.github.io">github.com/maxpou/maxpou.github.io</a>.</li>
+</ul>
+<p>To deploy, <code>git push</code> and that’s all!</p>
+<p>There is severals url pattern:</p>
+<ul>
+<li><code>&lt;username/organisationName&gt;.github.io</code></li>
+<li><code>&lt;username/organisationName&gt;.github.io/projectname</code>. In this case, you need to push the
+HTML/Jekyll files in a branch call gh-pages.</li>
+<li>… or whatever custom domain. In this case, put a CNAME file on your repository. Further more
+informations are available
+<a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/">in the documentation</a>.</li>
+</ul>
+<p>You can also
+<a href="https://help.github.com/articles/securing-your-github-pages-site-with-https/">secure your Github Pages site with HTTPS</a>.
+Unfortunately it is not compatible with custom domains.</p>
+<p>Personally, I’m a big user of Github Pages. For now, they currently host this website
+(<a href="https://www.maxpou.fr/">www.maxpou.fr</a>), an other one dedicated to my slides
+(<a href="https://slides.maxpou.fr/">slides.maxpou.fr</a>), some Proof of Concepts (<em>ie:
+<a href="https://github.com/maxpou/dictionary-game">Dictionary Game</a> with VueJs 2</em>) and all of my slides (I
+put them into an <a href="https://github.com/maxpou-slides">organization</a> for a better visibility).</p>
+<p>For managing dependencies, I recommend you to use
+<a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">Git submodules</a>. For instance my slides
+repositories use <a href="https://github.com/hakimel/reveal.js/">RevealsJS</a>. I don’t want to manage this
+library inside each repositories. It is exactly the same for my
+<a href="https://github.com/maxpou/dotfiles/tree/master/vim/bundle">Vim plugins</a>. I prefer stock a reference
+to the repositories in my dotfiles instead of the repository itself.</p>
+<h2 id="sign-your-commits">Sign your commits</h2>
+<p>As you may know, every body can hijack your job. You just need to change your git config and that
+it!</p>
+<div class="expressive-code"><figure class="frame is-terminal"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#FFCB6B">git</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">config</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">--global</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">user.name</span><span style="--0:#BABED8"> </span><span style="--0:#89DDFF">&#39;</span><span style="--0:#C3E88D">Linus Torvalds</span><span style="--0:#89DDFF">&#39;</span></div><div class="ec-line"><span style="--0:#FFCB6B">git</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">config</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">--global</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">user.email</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">linus@fake.com</span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="git config --global user.name 'Linus Torvalds'git config --global user.email linus@fake.com"><div></div></button></div></figure></div>
+<p>Now, you can usurp the identity of someone else! To avoid this, you can sign a commit. It works with
+GPG key.</p>
+<p><img src="/_astro/gpgsign.MbgIbOgK_t9J87.webp" alt="gpgsign" width="280" height="230" loading="lazy" decoding="async"></p>
+<h2 id="playing-with-url">Playing with URL</h2>
+<h3 id="url-everywhere">URL everywhere</h3>
+<p>One of GitHub’s motto is: <em>to exist, each action must have a specific URL</em>. By action, I mean:</p>
+<ul>
+<li>commit</li>
+<li>pull request</li>
+<li>comment (on commit, issue, pull request…)</li>
+<li>…</li>
+</ul>
+<h3 id="disable-whitespace-on-code-review">Disable whitespace on code review</h3>
+<p>If a commit is polluted by whitespace simply add <code>?w=1</code> at the end of the URI.</p>
+<p><img src="/_astro/whitespace.BeUTVTLO_Z11wzHH.webp" alt="toggle whitespace animation" width="1108" height="991" loading="lazy" decoding="async"></p>
+<p>Example:
+<a href="https://github.com/maxpou-slides/github-tips-tricks/commit/2616cbecc713389f8455b066711bc74891a593a6">with</a>
+and
+<a href="https://github.com/maxpou-slides/github-tips-tricks/commit/2616cbecc713389f8455b066711bc74891a593a6?w=1">without</a>
+whitespace pollution.</p>
+<h3 id="diff-and-patch">.diff and .patch</h3>
+<p>You can generate a diff/patch file by adding <strong>.diff</strong> or <strong>.patch</strong> at the end of the
+Pull-request/commit.</p>
+<p>Example:</p>
+<ul>
+<li>Original commit:
+<a href="https://github.com/maxpou/maxpou.github.io/commit/470da95b366bbb3efd8fa481308c906c955304db">github.com/user/repo/commit/example</a></li>
+<li>Diff:
+<a href="https://github.com/maxpou/maxpou.github.io/commit/470da95b366bbb3efd8fa481308c906c955304db.diff">github.com/user/repo/commit/example.diff</a></li>
+<li>Patch:
+<a href="https://github.com/maxpou/maxpou.github.io/commit/470da95b366bbb3efd8fa481308c906c955304db.patch">github.com/user/repo/commit/example.patch</a></li>
+</ul>
+<h3 id="highlight-lines">Highlight lines</h3>
+<p>When visualizing a commit, click on the line number to highlight one line. You can now share the
+link:
+<a href="https://github.com/maxpou/dictionary-game/blob/77df749b615b76d661a6bead1084be5650fd438e/.travis.yml#L3-L5">github.com/user/repo/commit/example#L3-L5</a></p>
+<p>For multiple, press shift <em>(or play with url!)</em>.</p>
+<h3 id="filtering-commits">Filtering commits</h3>
+<p>A last URL tip, is filtering in URL. If you want to retrieve one of your commit, you can suffix the
+URL with <code>?author=user</code>.</p>
+<h2 id="keyboard-shortcuts">Keyboard shortcuts</h2>
+<p>Even if it’s a web application, using your mouse isn’t mandatory. In fact, GitHub offer a lot of
+different shortcuts. To see them, just press ” ? ” <em>(doesn’t matter where you are!)</em>.</p>
+<p><img src="/_astro/keyboard-shortcuts-help.48_on2-6_fSm5s.webp" alt="keyboard shortcuts help" width="1002" height="517" loading="lazy" decoding="async"></p>
+<h2 id="emoji">Emoji 😍</h2>
+<p>Good news, you can use emoji (almost) everywhere on Github!<br/>
+But they aren’t only present to decorate your text. For example, I prefix everything related to
+Docker (repositories/commits) with a whale icon.</p>
+<p>A better implementation is the
+<a href="https://github.com/atom/atom/blob/master/CONTRIBUTING.md#styleguides">Atom contributing’s style guides</a>:</p>
+<p><img src="/_astro/commit-message-atom.-I8A0KL4_Z1J8RLD.webp" alt="atom commit message" width="514" height="424" loading="lazy" decoding="async"></p>
+<p>Here’s a good <a href="http://www.webpagefx.com/tools/emoji-cheat-sheet/">cheat sheet</a>.</p>
+<p>After your can run the following command:</p>
+<div class="expressive-code"><figure class="frame is-terminal"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#FFCB6B">git</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">log</span><span style="--0:#BABED8"> </span><span style="--0:#C3E88D">--grep=</span><span style="--0:#89DDFF">&quot;</span><span style="--0:#C3E88D">:penguin:</span><span style="--0:#89DDFF">&quot;</span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="git log --grep=&#34;:penguin:&#34;"><div></div></button></div></figure></div>
+<h2 id="gitio-a-github-url-shortener">git.io a Github URL shortener</h2>
+<p><a href="https://git.io/">git.io</a> is an URL shortener 5such as bit.ly) for your GitHub repositories.</p>
+<h2 id="not-only-for-your-code">Not only for your code</h2>
+<p>GitHub can host specific files like PDF, stl (3D visualisation) and render them. Example with this
+file:
+<a href="https://github.com/skalnik/secret-bear-clip/blob/master/stl/clip.stl">github.com/skalnik/secret-bear-clip/blob/master/stl/clip.stl</a></p>
+<script src="https://embed.github.com/view/3d/skalnik/secret-bear-clip/master/stl/clip.stl"></script>
+<h2 id="api-rest-or-graphql">API (~REST or GraphQL)</h2>
+<p>Github provide 2 types of API:</p>
+<ul>
+<li><a href="https://api.github.com/">https://api.github.com/</a></li>
+<li><a href="https://developer.github.com/early-access/graphql/explorer/">https://developer.github.com/early-access/graphql/explorer/</a></li>
+</ul>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Playing with GitHub GraphQL API 😀 - <a href="https://t.co/Mo2X9HX3l4"><a href="https://t.co/Mo2X9HX3l4">https://t.co/Mo2X9HX3l4</a></a> <a href="https://t.co/9lA5dylfDN">pic.twitter.com/9lA5dylfDN</a></p>— Maxence POUTORD (@_maxpou) <a href="https://twitter.com/_maxpou/status/776343643867254784">September 15, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<h2 id="bonus-octodex">Bonus: Octodex</h2>
+<p><a href="https://octodex.github.com/">Octodex (octodex.github.com)</a> is an Octocat gallery, the mascot of
+GitHub.</p>
+<p><img src="/_astro/gobbleotron.KY0nM52U_1v0oDf.webp" alt="Octocat" width="896" height="896" loading="lazy" decoding="async"></p> <div> <hr> <h2 class="dark:text-gray-100">About the author</h2> <div class="flex flex-col md:flex-row items-center gap-5 md:gap-8 mt-5"> <div class="relative flex-shrink-0 h-32 w-32"> <img src="/_astro/profile-picture.gF0h5NUU_Zw8iDo.webp" class="not-prose h-32 w-32 object-cover rounded-full" alt="Maxence Poutord Profile picture" width="128" height="128" loading="lazy" decoding="async"> </div> <div> <p class="!mt-0 pb-2">
+Hey, I'm Maxence Poutord, a passionate software engineer. In my
+        day-to-day job, I'm working as a senior front-end engineer at Orderfox.
+        When I'm not working, you can find me travelling the world or cooking.
+</p> <a class="not-prose inline-flex rounded border
+    font-semibold no-underline
+    transition-colors duration-200 ease-in-out px-3 py-2
+    border-[#1da1f2] bg-[#1da1f2] text-white
+    hover:border-[#1da1f2] hover:bg-white hover:text-[#1da1f2]" rel="noopener" target="_blank" href="https://twitter.com/intent/follow?screen_name=_maxpou"> <svg aria-label="Twitter" viewBox="0 0 24 24" width="1em" height="1em" class="h-6 w-6 pr-2"><path fill="currentColor" d="M23.954 4.569a10 10 0 0 1-2.825.775 4.958 4.958 0 0 0 2.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 0 0-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 0 0-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 0 1-2.228-.616v.061a4.923 4.923 0 0 0 3.946 4.827 4.996 4.996 0 0 1-2.212.085 4.937 4.937 0 0 0 4.604 3.417 9.868 9.868 0 0 1-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0 0 7.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 0 0 2.46-2.548l-.047-.02z"></path></svg>
+Follow @_maxpou
+ </a> </div> </div> </div>  </div>  <div> <h2 class="text-2xl underline mt-12 font-bold dark:text-mainYellow">
+Recommended posts
+</h2> <div class="grid grid-cols-1 gap-4 md:grid-cols-2 mt-6"> <a title="Vue.js Testing Made it Easy (with Testing Library)" href="/blog/vue-js-testing-library/" class="ease flex flex-col rounded-lg bg-white transition duration-300 dark:bg-gray-500 hover:translate-y-0.5 shadow-md  hover:shadow-xl group"> <img src="/_astro/cover.BQNQ0oHj_ZGjvpB.webp" alt="Cover picture for Vue.js Testing Made it Easy (with Testing Library)" class="h-56 w-full rounded-b-none rounded-t-lg object-cover transition" width="420" height="224" loading="lazy" decoding="async"> <div class="p-4"> <header class="text-xl font-semibold text-gray-700 dark:text-gray-100"> <span class="inline">  <!-- {post.data.title} --> <span class="from-blue-100 to-blue-100 text-dark dark:bg-none
+           bg-gradient-to-r bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]"> Vue.js Testing Made it Easy (with Testing Library) </span> </span> </header> <p class="date text-gray-400 dark:text-gray-100"> <time datetime="2020-06-11T00:00:00.000Z"> 11 June 2020 </time> </p> </div> </a><a title="3 Tips for Scaling Large Vue.js Application" href="/blog/3-tips-scaling-vue-application/" class="ease flex flex-col rounded-lg bg-white transition duration-300 dark:bg-gray-500 hover:translate-y-0.5 shadow-md  hover:shadow-xl group"> <img src="/_astro/cover.ex1KwcGk_Z1CSi66.webp" alt="Cover picture for 3 Tips for Scaling Large Vue.js Application" class="h-56 w-full rounded-b-none rounded-t-lg object-cover transition" width="420" height="224" loading="lazy" decoding="async"> <div class="p-4"> <header class="text-xl font-semibold text-gray-700 dark:text-gray-100"> <span class="inline">  <!-- {post.data.title} --> <span class="from-blue-100 to-blue-100 text-dark dark:bg-none
+           bg-gradient-to-r bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]"> 3 Tips for Scaling Large Vue.js Application </span> </span> </header> <p class="date text-gray-400 dark:text-gray-100"> <time datetime="2018-12-13T00:00:00.000Z"> 13 December 2018 </time> </p> </div> </a> </div> </div>  </div> </article>  </main> <footer class="bg-blue-50 dark:bg-gray-600 dark:text-white w-full mx-auto pb-0" data-astro-cid-sz7xmlte> <div class="m-auto flex w-[1024px] max-w-full flex-wrap justify-between" data-astro-cid-sz7xmlte> <div class="w-full pb-4 md:w-auto flex-auto" data-astro-cid-sz7xmlte> <p class="pb-1 font-bold" data-astro-cid-sz7xmlte>
+&copy; 2014 - 2024 - Maxence Poutord </p> <p data-astro-cid-sz7xmlte>Built with Astro, Tailwind and some ☕️</p> <p data-astro-cid-sz7xmlte>
+Hosted with <span class="text-red-500" data-astro-cid-sz7xmlte>❤</span> by <a class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" href="https://github.com/maxpou/maxpou.fr" data-astro-cid-sz7xmlte>GitHub</a>.
+</p> </div> <div class="flex-auto" data-astro-cid-sz7xmlte> <h3 class="pb-1 font-bold" data-astro-cid-sz7xmlte>Explore</h3> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte> <a href="/uses" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Uses </a> </li><li data-astro-cid-sz7xmlte> <a href="/recipes" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Recipes (kitchen) </a> </li><li data-astro-cid-sz7xmlte> <a href="/about" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> About </a> </li><li data-astro-cid-sz7xmlte> <a href="/cv" target="_blank" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Resume (cv) </a> </li><li data-astro-cid-sz7xmlte> <a href="/readme" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Readme </a> </li> </ul> </div> <div class="flex-auto" data-astro-cid-sz7xmlte> <h3 class="pb-1 font-bold flex-auto" data-astro-cid-sz7xmlte>Let's connect</h3> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte> <a href="https://github.com/maxpou" rel="noopener noreferrer" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> GitHub </a> </li><li data-astro-cid-sz7xmlte> <a href="https://twitter.com/_maxpou" rel="noopener noreferrer" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Twitter </a> </li><li data-astro-cid-sz7xmlte> <a href="https://www.linkedin.com/in/maxpou/" rel="noopener noreferrer" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> LinkedIn </a> </li><li data-astro-cid-sz7xmlte> <a href="/rss.xml" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> RSS feed </a> </li> </ul> </div> </div>  </footer>  </body> </html>

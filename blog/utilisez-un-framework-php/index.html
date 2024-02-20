@@ -1,0 +1,218 @@
+<!DOCTYPE html><html lang="fr"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/x-icon" href="/favicon.ico"><meta name="generator" content="Astro v4.4.0"><!-- Font preloads --><link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet"><!-- Canonical URL --><link rel="canonical" href="https://www.maxpou.fr/blog/utilisez-un-framework-php/"><!-- Primary Meta Tags --><title>Utilisez un framework PHP</title><meta name="title" content="Utilisez un framework PHP"><meta name="description" content="A blog post written by Maxence Poutord"><script async defer data-domain="maxpou.fr" src="https://plausible.io/js/plausible.js"></script><link rel="alternate" type="application/rss+xml" title="Maxence Poutord • Maxpou Blog" href="/rss.xml"><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"><!-- Open Graph / Facebook --><meta property="og:type" content="article"><meta property="og:url" content="https://www.maxpou.fr/blog/utilisez-un-framework-php/"><meta property="og:title" content="Utilisez un framework PHP"><meta property="og:description" content="A blog post written by Maxence Poutord"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://www.maxpou.fr/blog/utilisez-un-framework-php/"><meta property="twitter:title" content="Utilisez un framework PHP"><meta property="twitter:description" content="A blog post written by Maxence Poutord"><meta name="twitter:creator" content="_maxpou"><script>
+  const theme = (() => {
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+      return localStorage.getItem('theme')
+    }
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark'
+    }
+    return 'light'
+  })()
+
+  if (theme === 'light') {
+    document.documentElement.classList.remove('dark')
+  } else {
+    document.documentElement.classList.add('dark')
+  }
+  window.localStorage.setItem('theme', theme)
+</script><link rel="stylesheet" href="/_astro/_slug_.cE4nuJce.css" />
+<style>code[class*=language-],pre[class*=language-]{color:#ccc;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.comment,.token.block-comment,.token.prolog,.token.doctype,.token.cdata{color:#999}.token.punctuation{color:#ccc}.token.tag,.token.attr-name,.token.namespace,.token.deleted{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.number,.token.function{color:#f08d49}.token.property,.token.class-name,.token.constant,.token.symbol{color:#f8c555}.token.selector,.token.important,.token.atrule,.token.keyword,.token.builtin{color:#cc99cd}.token.string,.token.char,.token.attr-value,.token.regex,.token.variable{color:#7ec699}.token.operator,.token.entity,.token.url{color:#67cdcc}.token.important,.token.bold{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}.expressive-code{margin-top:1em}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.fA4gFHjB.css" />
+<style>a[data-astro-cid-eimmu3lg]{display:inline-block;text-decoration:none;border-bottom:4px solid transparent}a[data-astro-cid-eimmu3lg].active{font-weight:bolder;border-bottom-color:#ffdc4e}footer[data-astro-cid-sz7xmlte]{padding:2em 1em 6em;color:rgb(var(--gray))}*{transition:background .5s ease}*::-moz-selection{background-color:#ffdc4e;color:#3e4047}*::selection{background-color:#ffdc4e;color:#3e4047}
+</style><script type="module">const n=document.getElementById("burger-button"),e=document.getElementById("burger-line-1"),r=document.getElementById("burger-line-2"),t=document.getElementById("burger-line-3"),o=document.getElementById("menu-backdrop");n.addEventListener("click",()=>{o.classList.contains("hidden")?(o.classList.add("flex"),o.classList.remove("hidden"),e.style.transform="rotate(45deg)",e.style.top="0",e.style.backgroundColor="white",r.style.backgroundColor="transparent",t.style.transform="rotate(-45deg)",t.style.top="0",t.style.backgroundColor="white"):(e.style.transform="rotate(0)",e.style.removeProperty("top"),e.style.removeProperty("background-color"),r.style.removeProperty("background-color"),t.style.removeProperty("background-color"),t.style.transform="rotate(0)",t.style.removeProperty("top"),o.classList.add("hidden"),o.classList.remove("flex"))});
+</script></head> <body class="bg-gradient-to-b from-blue-50 to-[#f5f7f9] dark:bg-gray-600 dark:bg-gradient-to-b dark:from-gray-600"> <header class="bg-white dark:bg-gray-600 px-4 h-16"> <nav class="dark:text-white h-16 flex items-center justify-between max-w-screen-xl w-full mx-auto"> <h1 class="text-lg dark:text-white font-bold"> <a href="/">Maxence Poutord</a> </h1> <div class="md:flex hidden"> <a href="/blog" class="py-4 px-2 no-underline text-lg hover:text-blue-900 dark:text-white dark:hover:text-mainYellow" data-astro-cid-eimmu3lg> Blog </a>  <a href="/speaking" class="py-4 px-2 no-underline text-lg hover:text-blue-900 dark:text-white dark:hover:text-mainYellow" data-astro-cid-eimmu3lg> Speaking </a>  <a href="/about" class="py-4 px-2 no-underline text-lg hover:text-blue-900 dark:text-white dark:hover:text-mainYellow" data-astro-cid-eimmu3lg> About </a>  <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();;(()=>{var v=Object.defineProperty;var A=(c,s,a)=>s in c?v(c,s,{enumerable:!0,configurable:!0,writable:!0,value:a}):c[s]=a;var d=(c,s,a)=>(A(c,typeof s!="symbol"?s+"":s,a),a);var u;{let c={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t)},s=t=>{let[e,n]=t;return e in c?c[e](n):void 0},a=t=>t.map(s),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([e,n])=>[e,s(n)]));customElements.get("astro-island")||customElements.define("astro-island",(u=class extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var f;if(!this.hydrator||!this.isConnected)return;let e=(f=this.parentElement)==null?void 0:f.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let n=this.querySelectorAll("astro-slot"),r={},l=this.querySelectorAll("template[data-astro-template]");for(let o of l){let i=o.closest(this.tagName);i!=null&&i.isSameNode(this)&&(r[o.getAttribute("data-astro-template")||"default"]=o.innerHTML,o.remove())}for(let o of n){let i=o.closest(this.tagName);i!=null&&i.isSameNode(this)&&(r[o.getAttribute("name")||"default"]=o.innerHTML)}let h;try{h=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(o){let i=this.getAttribute("component-url")||"<unknown>",b=this.getAttribute("component-export");throw b&&(i+=` (export ${b})`),console.error(`[hydrate] Error parsing props for component ${i}`,this.getAttribute("props"),o),o}let p;await this.hydrator(this)(this.Component,h,r,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),n.disconnect(),this.childrenConnectedCallback()},n=new MutationObserver(()=>{var r;((r=this.lastChild)==null?void 0:r.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});n.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),n=this.getAttribute("client");if(Astro[n]===void 0){window.addEventListener(`astro:${n}`,()=>this.start(),{once:!0});return}try{await Astro[n](async()=>{let r=this.getAttribute("renderer-url"),[l,{default:h}]=await Promise.all([import(this.getAttribute("component-url")),r?import(r):()=>()=>{}]),p=this.getAttribute("component-export")||"default";if(!p.includes("."))this.Component=l[p];else{this.Component=l;for(let y of p.split("."))this.Component=this.Component[y]}return this.hydrator=h,this.hydrate},e,this)}catch(r){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,r)}}attributeChangedCallback(){this.hydrate()}},d(u,"observedAttributes",["props"]),u))}})();</script><astro-island uid="1MPqDn" component-url="/_astro/DarkModeButton.xNbp8Br3.js" component-export="default" renderer-url="/_astro/client.PcUt3MZx.js" props="{}" ssr="" client="only" opts="{&quot;name&quot;:&quot;DarkModeButton&quot;,&quot;value&quot;:&quot;preact&quot;}"></astro-island> </div> <button id="burger-button" aria-label="Toggle mobile menu" class="md:hidden block w-14 h-14 relative focus:outline-none rounded z-10"> <div class="block w-5 absolute left-6 top-1/2 transform -translate-x-1/2 -translate-y-1/2"> <span id="burger-line-1" class="block absolute h-0.5 w-7 text-white bg-gray-600 dark:bg-white transform transition-all duration-500 ease-in-out -top-2"></span> <span id="burger-line-2" class="block absolute h-0.5 w-7 text-white bg-gray-600 dark:bg-white transform transition-all duration-500 ease-in-out"></span> <span id="burger-line-3" class="block absolute h-0.5 w-7 text-white bg-gray-600 dark:bg-white transform transition-all duration-500 ease-in-out top-2"></span> </div> </button> </nav> <div id="menu-backdrop" class="hidden bg-gray-600 bg-opacity-95 absolute top-0 left-0 h-screen w-screen backdrop-opacity-90 items-center justify-center"> <ul class="text-white font-bold text-xl"> <li class="p-3"><a href="/">Home</a></li> <li class="p-3"><a href="/blog">Blog</a></li> <li class="p-3"><a href="/speaking">Speaking</a></li> <li class="p-3"><a href="/about">About</a></li> <li class="p-3"> <astro-island uid="lieIt" component-url="/_astro/DarkModeButton.xNbp8Br3.js" component-export="default" renderer-url="/_astro/client.PcUt3MZx.js" props="{&quot;textOnly&quot;:[0,true],&quot;className&quot;:[0,&quot;!p-0&quot;]}" ssr="" client="only" opts="{&quot;name&quot;:&quot;DarkModeButton&quot;,&quot;value&quot;:&quot;preact&quot;}"></astro-island> </li> </ul> </div> </header>  <main class="m-0 mx-auto min-h-[70vh] w-full max-w-screen-xl px-4 py-12 text-gray-500 dark:text-gray-100">  <article> <div class="hero-image"> <img src="/_astro/abstract-4.HNBP_1nI_vrOfm.webp" alt="Cover picture for Utilisez un framework PHP" class="rounded-xl shadow-xl mx-auto h-[500px] object-cover w-full" width="1020" height="500" loading="lazy" decoding="async"> </div> <div class="container m-auto text-center"> <div class="mt-3 text-blueGreyed dark:text-gray-300"> <time datetime="2015-07-18T00:00:00.000Z"> 18 July 2015 </time>  </div> <h1 class="font-bold text-3xl dark:text-white text-center leading-none py-4 mb-2 "> Utilisez un framework PHP </h1> <div class="pb-6"> <a href="/tags/PHP" class="mr-2 inline-block rounded-lg bg-darkBlue px-3 py-2 text-sm text-white no-underline hover:bg-blueGreyed dark:bg-blueGreyed dark:hover:bg-darkBlue"> PHP </a><a href="/tags/Symfony2" class="mr-2 inline-block rounded-lg bg-darkBlue px-3 py-2 text-sm text-white no-underline hover:bg-blueGreyed dark:bg-blueGreyed dark:hover:bg-darkBlue"> Symfony2 </a>  </div> </div> <div class="m-auto w-[720px] max-w-full">  <div class="prose
+  max-w-none
+  dark:prose-invert
+  prose-headings:underline
+  prose-h2:text-2xl prose-h2:font-bold prose-h2:dark:text-mainYellow
+  prose-h3:text-xl prose-h3:font-bold
+  prose-p:mb-0
+  prose-p:mt-4
+  prose-a:underline-offset-4
+  prose-a:decoration-2
+  prose-a:text-gray-700 dark:prose-a:text-slate-100 hover:prose-a:text-slate-900
+  prose-a:decoration-gray-300
+  hover:prose-a:decoration-blue-700 dark:hover:prose-a:decoration-mainYellow
+  prose-img:rounded-xl">  <p>Aujourd’hui je vais vous parler de framework dans l’écosystème PHP.<br>
+L’idée de cet article m’est venue suite à la suite d’une mission de plus chez un client qui
+préférait utiliser son framework maison plutôt qu’un framework open source. Je n’adhère pas vraiment
+à cette philosophie et l’objectif de cet article est de vous présenter pourquoi.</p>
+<h2 id="framework-kezako">Framework, kezako ?</h2>
+<p>Tout d’abord, qu’est-ce qu’un framework ?</p>
+<blockquote>
+<p>Un framework est un ensemble cohérent de composants logiciels structurels, qui sert à créer les
+fondations ainsi que les grandes lignes de tout ou d’une partie d’un logiciel.<br>
+— <strong>Wikipedia</strong></p>
+</blockquote>
+<p>Il faut donc voir le framework comme une sorte de boîte à outil qui évite au développeur de
+<em>réinventer la roue</em> à chaque projet. Les premières fondations de l’application sont déjà posées et
+les fonctionnalités de base (routeur, gestion du cache, gestion des droits des utilisateurs, …)
+sont déjà développées, testées et approuvées !<br>
+Je ne vais pas m’étendre plus sur la définition d’un framework. J’imagine que si vous êtes ici,
+c’est que vous savez ce que c’est ;-)</p>
+<h2 id="pourquoi-vous-devez-utiliser-un-framework">Pourquoi vous devez utiliser un framework</h2>
+<h3 id="capitalisation">Capitalisation</h3>
+<p>Si vous développez, vous le savez forcément : copier/coller du code, c’est mal ! L’objectif d’un
+framework est clair : se concentrer sur la partie métier du projet, et s’assurer que chaque
+fonctionnalité codée soit unique. Si, à chaque fois que vous commencez un projet, vous redéveloppez
+la même fonctionnalité d’authentification, c’est qu’il y a un problème. Vous ne capitalisez rien et
+vous perdez votre temps.</p>
+<h3 id="vélocité">Vélocité</h3>
+<p>L’avantage d’un framework, c’est qu’il va vous permettre de réaliser du bon code répondant à une
+architecture bien définie. Le code est ainsi plus maintenable et évolutif. Par exemple, avec le
+framework Symfony2, tous les formulaires se trouvent dans un répertoire appelé Form. Si on a besoin
+de modifier un formulaire, on devine l’emplacement intuitivement.</p>
+<p><img  src="/_astro/velocity-code-quality.1evKs1t__Z2kb6Qg.webp" alt="velocité et qualité de code" width="556" height="442" loading="lazy" decoding="async"><br>
+<em><a href="http://engineering.quora.com/Moving-Fast-With-High-Code-Quality">Source : Quora - Moving Fast With High Code Quality</a></em></p>
+<p>Ne pas se soucier de la qualité du code peut-être pertinent pour un petit projet (et encore). Pour
+un projet un petit peu plus conséquent, la vélocité en prend un coup. Attention, la qualité du code
+ne passe pas que sur l’utilisation d’un framework.<br>
+Vous devrez aussi respecter :</p>
+<ul>
+<li>coder proprement (commenter, supprimer les codes morts, ne pas avoir trop de niveaux
+d’indentation, …),</li>
+<li>les standards du langage (<a href="http://www.php-fig.org/psr/psr-1">PSR-1</a> et pourquoi pas
+<a href="http://www.php-fig.org/psr/psr-2">PSR-2</a>),</li>
+<li>les bonnes pratiques du framework en question.</li>
+</ul>
+<h3 id="performances">Performances ?</h3>
+<p>Un autre élément que j’ai déjà entendu :</p>
+<blockquote>
+<p>Les frameworks produisent du code lourd et peu performant.</p>
+</blockquote>
+<p>C’est sûr que si le cache n’est pas réglé, si le <em>lazy loading</em> est toujours activé, s’il y a
+toujours des joker (*) dans vos SELECT SQL… pas étonnant que le sysadmin fasse la grimace !</p>
+<p>Mais dites-vous qu’un framework comme Symfony2 peut supporter de grosses charges comme le montre ce
+tweet de la société
+<a href="http://labs.octivi.com/handling-1-billion-requests-a-week-with-symfony2/">Octivi</a> :</p>
+<blockquote class="twitter-tweet" lang="fr"><p lang="en" dir="ltr">Symfony2 performance's bad? 30ms response time of app_dev with 300 req/s total traffic makes us happy ;-) cc <a href="https://twitter.com/fabpot">@fabpot</a> <a href="http://t.co/I6jRsgQU5e">pic.twitter.com/I6jRsgQU5e</a></p>— Octivi (@octivi) <a href="https://twitter.com/octivi/status/448147269338947584">24 Mars 2014</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>En complément, je vous invite à regarder cette conférence d’Eric Pickup qui explique comment ils ont
+géré la scalabilité d’un site à très fort trafic (YouPorn) avec le framework Symfony2.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RlkCdM_f3p4" frameborder="0" allowfullscreen></iframe>
+<h2 id="utiliser-mon-framework-maison-vs-framework-open-source">Utiliser mon framework maison VS. framework open source</h2>
+<p>Il vrai que c’est plutôt plaisant d’utiliser son propre framework. J’ai également créé mon propre
+framework à une époque. C’est vraiment plaisant ! On sait comment il fonctionne de A -> Z. Normal,
+on l’a concu ! On est en plein dans ce que nos amis d’outre-atlantique appellent le
+<a href="https://fr.wikipedia.org/wiki/Dogfooding">dogfooding</a>.<br>
+En plus au fil du temps, on le voit évoluer… on le considère un peu comme son propre bébé.</p>
+<p>Mais, pour ma part, je me suis rapidement rendu compte que je passais beaucoup trop de temps à
+ajouter des nouvelles fonctionnalités/corriger des bugs qu’à développer pour l’entreprise qui
+m’employait. Je savais que je n’empruntais pas la bonne voie en continuant ainsi mais je n’arrivais
+pas à m’en séparer.</p>
+<p>C’est ce que l’on appelle en psychologie sociale : <strong>la théorie de l’engagement</strong>. Sans rentrer dans
+les arcanes de cette théorie, sachez que c’est exactement la même chose qui se produit lorsque vous
+attendez le tramway pour éviter un trajet à pieds de 10 minutes. Vous patientez 5, 6, 7, 9, puis 10
+minutes votre tram. Si vous partez, vous réduisez à néant tous vos efforts (et vous prenez le risque
+de voir passer le tram sous votre nez). Vous ne voulez donc pas abandonner cette somme de petits
+efforts.</p>
+<p>J’ai donc pris une décision difficile ce jour-là en décidant de <em>couper le cordon</em> et d’arrêter le
+développement de mon framework. Aujourd’hui, je ne regrette pas cette décision.</p>
+<ul>
+<li>
+<p><strong>Communauté</strong> : il y a une phrase que je me dis souvent : “Si je me pose cette question, c’est
+que quelqu’un se l’est déjà posé auparavant. Sinon c’est que je me pose pas la bonne question” (on
+est pas très loin de la règle 34). En utilisant un framework reconnu de tous vous trouverez
+rapidement une réponse à une question que vous vous posez.<br>
+Certains frameworks comme Symfony2 sont très modulaires. Ainsi vous pouvez réutiliser un module
+fait par un autre, l’améliorer au passage… et pourquoi pas proposer un
+<a href="https://help.github.com/articles/using-pull-requests/">pull request</a> !</p>
+</li>
+<li>
+<p><strong>Sécurité</strong> : en ce qui me concerne, je pense que la sécurité est presque un métier à part (ce
+n’est pas pour autant qu’il faut la négliger !). Le b.a.-ba de la sécurité que vous ne pouvez
+ignorer sont les 10 failles les plus courantes dans les applications web :
+l’<a href="https://www.owasp.org/index.php/Top_10_2013-Top_10">OWASP top 10</a>. Des framework comme Laravel
+et Symfony2 sont nativement protégé contre les failles CRSF, XSS, injection SQL… Mais ce n’est
+pas parce qu’un framework est nativement protégé que tout est joué pour autant ! Vous pouvez aussi
+laisser des failles dans votre code.<br>
+Autre élément intéressant, les constituantes de l’outils auront été testé par énormément de
+personnes avant vous. Avec du <em>fait maison</em>, il est plus difficile de tester la sécurité (car
+c’est plus simple de trouver des erreurs dans le travail des autres).</p>
+</li>
+<li>
+<p><strong>Documentation</strong> : si vous utilisez un framework maison, n’allez pas me faire croire que tout est
+documenté aux petits oignons ! Par contre avec les frameworks open source, c’est tout l’inverse.
+Il faut dire que si la documentation est mal conçue de base, peu de personnes utiliseront cet
+outil.</p>
+</li>
+<li>
+<p><strong>Rapidité d’exécution</strong> : si vous avez un recrutement à faire dans une équipe de développeurs, la
+montée en compétence du développeur sur le projet sera plus rapide car il connait déjà les outils.
+Avez un outil <em>home made</em>, il faudra libérer une ressource d’un projet pour le former et
+l’encadrer.</p>
+</li>
+</ul>
+<h2 id="pourquoi-ne-pas-utiliser-de-framework">Pourquoi ne pas utiliser de Framework</h2>
+<h3 id="courbe-dapprentissage">Courbe d’apprentissage</h3>
+<p>En fait, depuis le début de cet article, je prône l’utilisation d’un framework dans l’écosystème
+PHP. Mais il ne faut pas voir le framework comme une arme de destruction massive, qui résout tous
+les problème à coups de baguette magique.</p>
+<p><img  src="/_astro/learningcurve.Hw2vp2Xj_Z2hfpI9.webp" alt="courbe d&#38;#x27;apprentissage" width="658" height="494" loading="lazy" decoding="async"></p>
+<p>En plus de ses prérequis (bien connaître le langage PHP et le PHP OOP, namespaces, …), la courbe
+d’apprentissage d’un framework est importante. Ne la négligez pas.<br>
+Si vous souhaitez passer sur un framework pour un projet et que les deadlines sont courtes, oubliez
+l’idée car vous courrez vers l’échec. Commencez par un projet simple avec des deadlines larges (oui
+je sais c’est rare !).</p>
+<h3 id="utiliser-le-bon-outil">Utiliser le bon outil</h3>
+<p>Deuxième cas où vous pouvez vous sentir exempté d’utiliser un framework : si vous êtes dans un
+marché de niche ou si vous gérez un très gros site (Amazon, Facebook, …). Si aucun framework ne
+remplit vos besoins initiaux ou si vous avez un besoin assez important côté performances, n’hésitez
+pas à créer votre propre framework.</p>
+<p>Il en va de même pour l’utilisation de Symfony2 (ou autre framework assez conséquent) pour une
+application minuscule qui doit se charger d’envoyer des mail après soumission d’un formulaire n’est
+pas pertinent du tout.</p>
+<p><img  src="/_astro/mouche-bazooka.gb3IDFZB_1mLIL2.webp" alt="Utilisez le bon outil" width="267" height="271" loading="lazy" decoding="async"></p>
+<p>Utilisez un framework plus approprié comme un <strong>micro framework</strong>
+(<a href="http://silex.sensiolabs.org">Silex</a>, <a href="http://www.slimframework.com">Slim</a>, …). Ils sont beaucoup
+plus légers et plus rapides à mettre en place (il en va de même pour la courbe d’apprentissage).</p>
+<h3 id="développeur-php-ou-développeur-symfony2laravel">Développeur PHP ou développeur Symfony2/Laravel/… ?</h3>
+<p>Un des dangers quand on utilise un framework, c’est de brûler les étapes. <strong>C’est bien d’éviter de
+réinventer la roue, mais encore faut-il savoir comment elle est faite</strong>. De même, il n’y a -à mon
+sens- pas beaucoup de mérite à réutiliser un ensemble de fonctions créées par d’autres. Ça, presque
+tout le monde peut le faire.<br>
+Si vous sentez qu’il est trop tôt pour utiliser un framework, continuez l’apprentissage du langage
+avant de griller les étapes.</p>
+<h2 id="a-vous-de-jouer">A vous de jouer !</h2>
+<p>Je n’ai pas envie de vous guider vers un framework plutôt qu’un autre, pour la bonne et simple
+raison que chaque framework a sa spécificité, ses avantages et inconvénients. C’est avant tout une
+question de goûts.<br>
+Pour ma part, j’ai directement adhéré à Symfony2 et son petit frère Silex (pour les plus petits
+projets). Mais ce n’est pas le cas de tout le monde.</p>
+<p>Néanmoins lorsque vous ferez votre benchmark, prenez en compte ces éléments :</p>
+<ul>
+<li><strong>Qualité de la documentation</strong> : vous allez passer beaucoup de temps dessus au départ. Ne
+négligez pas pas ce point.</li>
+<li><strong>Fréquence de mises à jour</strong> : Si vous travaillez sur un projet et que vous devez tout casser et
+tout réécrire tous les 2 mois pour être à jour sur la nouvelle version, vous n’allez pas avancer.
+De même, si les mises à jour sont quasi inexistantes c’est peut-être que peu de personnes
+l’utilisent.<br>
+Je vous conseille de couper la poire en deux et d’opter pour les version <strong>LTS (Long Term
+Support)</strong>.</li>
+<li><strong>Facilité à produire des API</strong> : C’est de plus en plus demandées dans les projets et ce n’est pas
+prêt de s’arrêter.</li>
+<li><strong>Popularité du framework</strong> : il ne faut pas non plus que vous soyez tout seul au moindre
+problème. Testez la popularité de l’outil sur la toile (avec des sites comme
+<a href="http://stackoverflow.com/">Stack Overflow</a>) ET sur le marché de l’emploi du lieu où vous
+travaillez (via des sites d’emploi).</li>
+</ul>
+<p>Bref, entre Symfony2, Silex, Laravel, Codeigniter, CakePHP, Zend Framework, YII… vous avez le
+choix !</p> <div> <hr> <h2 class="dark:text-gray-100">About the author</h2> <div class="flex flex-col md:flex-row items-center gap-5 md:gap-8 mt-5"> <div class="relative flex-shrink-0 h-32 w-32"> <img src="/_astro/profile-picture.gF0h5NUU_Zw8iDo.webp" class="not-prose h-32 w-32 object-cover rounded-full" alt="Maxence Poutord Profile picture" width="128" height="128" loading="lazy" decoding="async"> </div> <div> <p class="!mt-0 pb-2">
+Hey, I'm Maxence Poutord, a passionate software engineer. In my
+        day-to-day job, I'm working as a senior front-end engineer at Orderfox.
+        When I'm not working, you can find me travelling the world or cooking.
+</p> <a class="not-prose inline-flex rounded border
+    font-semibold no-underline
+    transition-colors duration-200 ease-in-out px-3 py-2
+    border-[#1da1f2] bg-[#1da1f2] text-white
+    hover:border-[#1da1f2] hover:bg-white hover:text-[#1da1f2]" rel="noopener" target="_blank" href="https://twitter.com/intent/follow?screen_name=_maxpou"> <svg aria-label="Twitter" viewBox="0 0 24 24" width="1em" height="1em" class="h-6 w-6 pr-2"><path fill="currentColor" d="M23.954 4.569a10 10 0 0 1-2.825.775 4.958 4.958 0 0 0 2.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 0 0-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 0 0-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 0 1-2.228-.616v.061a4.923 4.923 0 0 0 3.946 4.827 4.996 4.996 0 0 1-2.212.085 4.937 4.937 0 0 0 4.604 3.417 9.868 9.868 0 0 1-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0 0 7.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 0 0 2.46-2.548l-.047-.02z"></path></svg>
+Follow @_maxpou
+ </a> </div> </div> </div>  </div>  <div> <h2 class="text-2xl underline mt-12 font-bold dark:text-mainYellow">
+Recommended posts
+</h2> <div class="grid grid-cols-1 gap-4 md:grid-cols-2 mt-6"> <a title="Git: Cheat Sheet (advanced)" href="/blog/git-cheat-sheet/" class="ease flex flex-col rounded-lg bg-white transition duration-300 dark:bg-gray-500 hover:translate-y-0.5 shadow-md  hover:shadow-xl group"> <img src="/_astro/git-toolbox.oDur-RrH_2aw0y5.webp" alt="Cover picture for Git: Cheat Sheet (advanced)" class="h-56 w-full rounded-b-none rounded-t-lg object-cover transition" width="420" height="224" loading="lazy" decoding="async"> <div class="p-4"> <header class="text-xl font-semibold text-gray-700 dark:text-gray-100"> <span class="inline">  <!-- {post.data.title} --> <span class="from-blue-100 to-blue-100 text-dark dark:bg-none
+           bg-gradient-to-r bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]"> Git: Cheat Sheet (advanced) </span> </span> </header> <p class="date text-gray-400 dark:text-gray-100"> <time datetime="2019-11-28T00:00:00.000Z"> 28 November 2019 </time> </p> </div> </a><a title="What's happens when you `git commit`" href="/blog/git-under-the-hood/" class="ease flex flex-col rounded-lg bg-white transition duration-300 dark:bg-gray-500 hover:translate-y-0.5 shadow-md  hover:shadow-xl group"> <img src="/_astro/cover.dtWL2vrQ_ZQ0SBb.webp" alt="Cover picture for What's happens when you `git commit`" class="h-56 w-full rounded-b-none rounded-t-lg object-cover transition" width="420" height="224" loading="lazy" decoding="async"> <div class="p-4"> <header class="text-xl font-semibold text-gray-700 dark:text-gray-100"> <span class="inline">  <!-- {post.data.title} --> <span class="from-blue-100 to-blue-100 text-dark dark:bg-none
+           bg-gradient-to-r bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]"> What&#39;s happens when you `git commit` </span> </span> </header> <p class="date text-gray-400 dark:text-gray-100"> <time datetime="2019-10-14T00:00:00.000Z"> 14 October 2019 </time> </p> </div> </a> </div> </div>  </div> </article>  </main> <footer class="bg-blue-50 dark:bg-gray-600 dark:text-white w-full mx-auto pb-0" data-astro-cid-sz7xmlte> <div class="m-auto flex w-[1024px] max-w-full flex-wrap justify-between" data-astro-cid-sz7xmlte> <div class="w-full pb-4 md:w-auto flex-auto" data-astro-cid-sz7xmlte> <p class="pb-1 font-bold" data-astro-cid-sz7xmlte>
+&copy; 2014 - 2024 - Maxence Poutord </p> <p data-astro-cid-sz7xmlte>Built with Astro, Tailwind and some ☕️</p> <p data-astro-cid-sz7xmlte>
+Hosted with <span class="text-red-500" data-astro-cid-sz7xmlte>❤</span> by <a class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" href="https://github.com/maxpou/maxpou.fr" data-astro-cid-sz7xmlte>GitHub</a>.
+</p> </div> <div class="flex-auto" data-astro-cid-sz7xmlte> <h3 class="pb-1 font-bold" data-astro-cid-sz7xmlte>Explore</h3> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte> <a href="/uses" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Uses </a> </li><li data-astro-cid-sz7xmlte> <a href="/recipes" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Recipes (kitchen) </a> </li><li data-astro-cid-sz7xmlte> <a href="/about" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> About </a> </li><li data-astro-cid-sz7xmlte> <a href="/cv" target="_blank" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Resume (cv) </a> </li><li data-astro-cid-sz7xmlte> <a href="/readme" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Readme </a> </li> </ul> </div> <div class="flex-auto" data-astro-cid-sz7xmlte> <h3 class="pb-1 font-bold flex-auto" data-astro-cid-sz7xmlte>Let's connect</h3> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte> <a href="https://github.com/maxpou" rel="noopener noreferrer" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> GitHub </a> </li><li data-astro-cid-sz7xmlte> <a href="https://twitter.com/_maxpou" rel="noopener noreferrer" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Twitter </a> </li><li data-astro-cid-sz7xmlte> <a href="https://www.linkedin.com/in/maxpou/" rel="noopener noreferrer" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> LinkedIn </a> </li><li data-astro-cid-sz7xmlte> <a href="/rss.xml" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> RSS feed </a> </li> </ul> </div> </div>  </footer>  </body> </html>

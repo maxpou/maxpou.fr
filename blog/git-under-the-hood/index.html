@@ -1,0 +1,172 @@
+<!DOCTYPE html><html lang="en"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/x-icon" href="/favicon.ico"><meta name="generator" content="Astro v4.4.0"><!-- Font preloads --><link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet"><!-- Canonical URL --><link rel="canonical" href="https://www.maxpou.fr/blog/git-under-the-hood/"><!-- Primary Meta Tags --><title>What&#39;s happens when you `git commit`</title><meta name="title" content="What's happens when you `git commit`"><meta name="description" content="A blog post written by Maxence Poutord"><script async defer data-domain="maxpou.fr" src="https://plausible.io/js/plausible.js"></script><link rel="alternate" type="application/rss+xml" title="Maxence Poutord • Maxpou Blog" href="/rss.xml"><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"><!-- Open Graph / Facebook --><meta property="og:type" content="article"><meta property="og:url" content="https://www.maxpou.fr/blog/git-under-the-hood/"><meta property="og:title" content="What's happens when you `git commit`"><meta property="og:description" content="A blog post written by Maxence Poutord"><meta property="og:image" content="https://www.maxpou.fr/_astro/git-under-the-hood-share.aTCk8AI2.png"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://www.maxpou.fr/blog/git-under-the-hood/"><meta property="twitter:title" content="What's happens when you `git commit`"><meta property="twitter:description" content="A blog post written by Maxence Poutord"><meta name="twitter:creator" content="_maxpou"><meta property="twitter:image" content="https://www.maxpou.fr/_astro/git-under-the-hood-share.aTCk8AI2.png"><script>
+  const theme = (() => {
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+      return localStorage.getItem('theme')
+    }
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark'
+    }
+    return 'light'
+  })()
+
+  if (theme === 'light') {
+    document.documentElement.classList.remove('dark')
+  } else {
+    document.documentElement.classList.add('dark')
+  }
+  window.localStorage.setItem('theme', theme)
+</script><link rel="stylesheet" href="/_astro/_slug_.cE4nuJce.css" />
+<style>code[class*=language-],pre[class*=language-]{color:#ccc;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.comment,.token.block-comment,.token.prolog,.token.doctype,.token.cdata{color:#999}.token.punctuation{color:#ccc}.token.tag,.token.attr-name,.token.namespace,.token.deleted{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.number,.token.function{color:#f08d49}.token.property,.token.class-name,.token.constant,.token.symbol{color:#f8c555}.token.selector,.token.important,.token.atrule,.token.keyword,.token.builtin{color:#cc99cd}.token.string,.token.char,.token.attr-value,.token.regex,.token.variable{color:#7ec699}.token.operator,.token.entity,.token.url{color:#67cdcc}.token.important,.token.bold{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}.expressive-code{margin-top:1em}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.fA4gFHjB.css" />
+<style>a[data-astro-cid-eimmu3lg]{display:inline-block;text-decoration:none;border-bottom:4px solid transparent}a[data-astro-cid-eimmu3lg].active{font-weight:bolder;border-bottom-color:#ffdc4e}footer[data-astro-cid-sz7xmlte]{padding:2em 1em 6em;color:rgb(var(--gray))}*{transition:background .5s ease}*::-moz-selection{background-color:#ffdc4e;color:#3e4047}*::selection{background-color:#ffdc4e;color:#3e4047}
+</style><script type="module">const n=document.getElementById("burger-button"),e=document.getElementById("burger-line-1"),r=document.getElementById("burger-line-2"),t=document.getElementById("burger-line-3"),o=document.getElementById("menu-backdrop");n.addEventListener("click",()=>{o.classList.contains("hidden")?(o.classList.add("flex"),o.classList.remove("hidden"),e.style.transform="rotate(45deg)",e.style.top="0",e.style.backgroundColor="white",r.style.backgroundColor="transparent",t.style.transform="rotate(-45deg)",t.style.top="0",t.style.backgroundColor="white"):(e.style.transform="rotate(0)",e.style.removeProperty("top"),e.style.removeProperty("background-color"),r.style.removeProperty("background-color"),t.style.removeProperty("background-color"),t.style.transform="rotate(0)",t.style.removeProperty("top"),o.classList.add("hidden"),o.classList.remove("flex"))});
+</script></head> <body class="bg-gradient-to-b from-blue-50 to-[#f5f7f9] dark:bg-gray-600 dark:bg-gradient-to-b dark:from-gray-600"> <header class="bg-white dark:bg-gray-600 px-4 h-16"> <nav class="dark:text-white h-16 flex items-center justify-between max-w-screen-xl w-full mx-auto"> <h1 class="text-lg dark:text-white font-bold"> <a href="/">Maxence Poutord</a> </h1> <div class="md:flex hidden"> <a href="/blog" class="py-4 px-2 no-underline text-lg hover:text-blue-900 dark:text-white dark:hover:text-mainYellow" data-astro-cid-eimmu3lg> Blog </a>  <a href="/speaking" class="py-4 px-2 no-underline text-lg hover:text-blue-900 dark:text-white dark:hover:text-mainYellow" data-astro-cid-eimmu3lg> Speaking </a>  <a href="/about" class="py-4 px-2 no-underline text-lg hover:text-blue-900 dark:text-white dark:hover:text-mainYellow" data-astro-cid-eimmu3lg> About </a>  <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();;(()=>{var v=Object.defineProperty;var A=(c,s,a)=>s in c?v(c,s,{enumerable:!0,configurable:!0,writable:!0,value:a}):c[s]=a;var d=(c,s,a)=>(A(c,typeof s!="symbol"?s+"":s,a),a);var u;{let c={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t)},s=t=>{let[e,n]=t;return e in c?c[e](n):void 0},a=t=>t.map(s),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([e,n])=>[e,s(n)]));customElements.get("astro-island")||customElements.define("astro-island",(u=class extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var f;if(!this.hydrator||!this.isConnected)return;let e=(f=this.parentElement)==null?void 0:f.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let n=this.querySelectorAll("astro-slot"),r={},l=this.querySelectorAll("template[data-astro-template]");for(let o of l){let i=o.closest(this.tagName);i!=null&&i.isSameNode(this)&&(r[o.getAttribute("data-astro-template")||"default"]=o.innerHTML,o.remove())}for(let o of n){let i=o.closest(this.tagName);i!=null&&i.isSameNode(this)&&(r[o.getAttribute("name")||"default"]=o.innerHTML)}let h;try{h=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(o){let i=this.getAttribute("component-url")||"<unknown>",b=this.getAttribute("component-export");throw b&&(i+=` (export ${b})`),console.error(`[hydrate] Error parsing props for component ${i}`,this.getAttribute("props"),o),o}let p;await this.hydrator(this)(this.Component,h,r,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),n.disconnect(),this.childrenConnectedCallback()},n=new MutationObserver(()=>{var r;((r=this.lastChild)==null?void 0:r.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});n.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),n=this.getAttribute("client");if(Astro[n]===void 0){window.addEventListener(`astro:${n}`,()=>this.start(),{once:!0});return}try{await Astro[n](async()=>{let r=this.getAttribute("renderer-url"),[l,{default:h}]=await Promise.all([import(this.getAttribute("component-url")),r?import(r):()=>()=>{}]),p=this.getAttribute("component-export")||"default";if(!p.includes("."))this.Component=l[p];else{this.Component=l;for(let y of p.split("."))this.Component=this.Component[y]}return this.hydrator=h,this.hydrate},e,this)}catch(r){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,r)}}attributeChangedCallback(){this.hydrate()}},d(u,"observedAttributes",["props"]),u))}})();</script><astro-island uid="1MPqDn" component-url="/_astro/DarkModeButton.xNbp8Br3.js" component-export="default" renderer-url="/_astro/client.PcUt3MZx.js" props="{}" ssr="" client="only" opts="{&quot;name&quot;:&quot;DarkModeButton&quot;,&quot;value&quot;:&quot;preact&quot;}"></astro-island> </div> <button id="burger-button" aria-label="Toggle mobile menu" class="md:hidden block w-14 h-14 relative focus:outline-none rounded z-10"> <div class="block w-5 absolute left-6 top-1/2 transform -translate-x-1/2 -translate-y-1/2"> <span id="burger-line-1" class="block absolute h-0.5 w-7 text-white bg-gray-600 dark:bg-white transform transition-all duration-500 ease-in-out -top-2"></span> <span id="burger-line-2" class="block absolute h-0.5 w-7 text-white bg-gray-600 dark:bg-white transform transition-all duration-500 ease-in-out"></span> <span id="burger-line-3" class="block absolute h-0.5 w-7 text-white bg-gray-600 dark:bg-white transform transition-all duration-500 ease-in-out top-2"></span> </div> </button> </nav> <div id="menu-backdrop" class="hidden bg-gray-600 bg-opacity-95 absolute top-0 left-0 h-screen w-screen backdrop-opacity-90 items-center justify-center"> <ul class="text-white font-bold text-xl"> <li class="p-3"><a href="/">Home</a></li> <li class="p-3"><a href="/blog">Blog</a></li> <li class="p-3"><a href="/speaking">Speaking</a></li> <li class="p-3"><a href="/about">About</a></li> <li class="p-3"> <astro-island uid="lieIt" component-url="/_astro/DarkModeButton.xNbp8Br3.js" component-export="default" renderer-url="/_astro/client.PcUt3MZx.js" props="{&quot;textOnly&quot;:[0,true],&quot;className&quot;:[0,&quot;!p-0&quot;]}" ssr="" client="only" opts="{&quot;name&quot;:&quot;DarkModeButton&quot;,&quot;value&quot;:&quot;preact&quot;}"></astro-island> </li> </ul> </div> </header>  <main class="m-0 mx-auto min-h-[70vh] w-full max-w-screen-xl px-4 py-12 text-gray-500 dark:text-gray-100">  <article> <div class="hero-image"> <img src="/_astro/cover.dtWL2vrQ_1jKDjE.webp" alt="Cover picture for What's happens when you `git commit`" class="rounded-xl shadow-xl mx-auto h-[500px] object-cover w-full" width="1020" height="500" loading="lazy" decoding="async"> </div> <div class="container m-auto text-center"> <div class="mt-3 text-blueGreyed dark:text-gray-300"> <time datetime="2019-10-14T00:00:00.000Z"> 14 October 2019 </time>  </div> <h1 class="font-bold text-3xl dark:text-white text-center leading-none py-4 mb-2 "> What&#39;s happens when you `git commit` </h1> <div class="pb-6"> <a href="/tags/Git" class="mr-2 inline-block rounded-lg bg-darkBlue px-3 py-2 text-sm text-white no-underline hover:bg-blueGreyed dark:bg-blueGreyed dark:hover:bg-darkBlue"> Git </a>  </div> </div> <div class="m-auto w-[720px] max-w-full">  <div class="prose
+  max-w-none
+  dark:prose-invert
+  prose-headings:underline
+  prose-h2:text-2xl prose-h2:font-bold prose-h2:dark:text-mainYellow
+  prose-h3:text-xl prose-h3:font-bold
+  prose-p:mb-0
+  prose-p:mt-4
+  prose-a:underline-offset-4
+  prose-a:decoration-2
+  prose-a:text-gray-700 dark:prose-a:text-slate-100 hover:prose-a:text-slate-900
+  prose-a:decoration-gray-300
+  hover:prose-a:decoration-blue-700 dark:hover:prose-a:decoration-mainYellow
+  prose-img:rounded-xl">  <p>Nowadays, most of our projects use Git as a version control system. It means most of our projects
+have a <code>.git</code> folder. But, have you ever tried to open it? I tried once… and I closed it within a
+minute!</p>
+<p>I’ve been using Git as a “black box” for years.</p>
+<p><img  src="/_astro/git-explained.P5_Vo23f_1JnOnW.webp" alt="git explained" width="330" height="478" loading="lazy" decoding="async"></p>
+<p>Until a year ago. I was tired of using it without knowing how it works under the hood. I finally
+grabbed the bull by the horns and started to learn it. I read
+<a href="https://git-scm.com/book/en/v2">Pro Git</a> and make tons of experiments. I’ve found out that it’s not
+as complicated as it looks like!</p>
+<p>So, If you:</p>
+<ul>
+<li>are the guy in the picture above,</li>
+<li>want to understand what’s in this <code>.git</code> folder,</li>
+<li>already “lost code with git”…</li>
+</ul>
+<p>…this blog post is for you! 😃</p>
+<h2 id="step-1-git-data-model">Step 1: Git Data Model</h2>
+<p>To make things more understandable, I will start with a new basic project (2 files: <code>index.js</code> and
+<code>README.md</code>).</p>
+<ol>
+<li><code>git init</code></li>
+<li><code>echo "console.log('hi')" >> index.js</code></li>
+<li><code>echo "# Cool project" >> README.md</code></li>
+<li><code>git add . &#x26;&#x26; git commit -m "First commit"</code></li>
+</ol>
+<p>Now let’s see what we have in the .git folder:</p>
+<div class="expressive-code"><link rel="stylesheet" href="/_astro/ec.aqfpi.css"><script type="module" src="/_astro/ec.sgewm.js"></script><figure class="frame"><figcaption class="header"></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#babed8">$ tree .git/objects</span></div><div class="ec-line">
+</div><div class="ec-line"><span style="--0:#babed8">.git/objects</span></div><div class="ec-line"><span style="--0:#babed8">├── 2d</span></div><div class="ec-line"><span style="--0:#babed8">│   └── 1a41ebd2d32cb426b6d32e61e063f330aa1af8</span></div><div class="ec-line"><span style="--0:#babed8">├── 66</span></div><div class="ec-line"><span style="--0:#babed8">│   └── 87898e2a0fe2da282efab6b5f7f38b7f788f56</span></div><div class="ec-line"><span style="--0:#babed8">├── c2</span></div><div class="ec-line"><span style="--0:#babed8">│   └── 43f24fb294ebc954b0a7ee6020589245f78315</span></div><div class="ec-line"><span style="--0:#babed8">├── c3</span></div><div class="ec-line"><span style="--0:#babed8">│   └── 0500babf488d06033e8d039cbf64be3edbd089</span></div><div class="ec-line"><span style="--0:#babed8">├── info</span></div><div class="ec-line"><span style="--0:#babed8">└── pack</span></div><div class="ec-line">
+</div><div class="ec-line"><span style="--0:#babed8">6 directories, 4 files</span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="$ tree .git/objects.git/objects├── 2d│   └── 1a41ebd2d32cb426b6d32e61e063f330aa1af8├── 66│   └── 87898e2a0fe2da282efab6b5f7f38b7f788f56├── c2│   └── 43f24fb294ebc954b0a7ee6020589245f78315├── c3│   └── 0500babf488d06033e8d039cbf64be3edbd089├── info└── pack6 directories, 4 files"><div></div></button></div></figure></div>
+<p>Git created 4 files. For not ending with thousands of files under the same folder, git automatically
+truncates the 2 first characters for the folder name. To retrieve one git object, you have to
+concatenate the folder name + file name.</p>
+<p>And because the files are not human-readable, you can use <code>git cat-file &#x3C;sha-1> -p</code> to see what’s
+inside (or use the <code>-t</code> option to get the type). By the way, you can only use the first 8
+characters.</p>
+<p>Here’s how the files are linked together:</p>
+<p><img  src="/_astro/git-data-model.XEg8O4-P_ZbTYpD.webp" alt="git data model" width="796" height="342" loading="lazy" decoding="async"></p>
+<p>💡 Git object model has 4 different types:</p>
+<ul>
+<li><strong>commit</strong>: contain the committer, date, message and also the directory tree;</li>
+<li><strong>tree</strong>: reference other trees and/or blobs;</li>
+<li><strong>blob</strong>: store file data;</li>
+<li><strong>tag</strong>: store a commit reference (not addressed in this blog post).</li>
+</ul>
+<p>Please note that blobs don’t store their filename (and location). That’s one of the reasons why
+sometimes git lost history when you change file location ;)</p>
+<p>🤔If you try it locally, expect to have a different hash (different author&#x26;date)!</p>
+<h2 id="step-2-adding-a-second-commit">Step 2: Adding a second commit!</h2>
+<p>Now we want to update <code>index.js</code> and add a second line to the file:</p>
+<ol>
+<li><code>echo "console.log('world')" >> index.js</code></li>
+<li><code>git add . &#x26;&#x26; git commit -m "Second commit"</code></li>
+</ol>
+<p>We now have 3 more entries:</p>
+<div class="expressive-code"><figure class="frame"><figcaption class="header"></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#babed8">$ tree .git/objects</span></div><div class="ec-line">
+</div><div class="ec-line"><span style="--0:#babed8">.git/objects</span></div><div class="ec-line mark"><span style="--0:#babed8">├── 11</span></div><div class="ec-line mark"><span style="--0:#babed8">│   └── 75e42a41f75f4b25bab53db36d581f72387aa9</span></div><div class="ec-line"><span style="--0:#babed8">├── 2d</span></div><div class="ec-line"><span style="--0:#babed8">│   └── 1a41ebd2d32cb426b6d32e61e063f330aa1af8</span></div><div class="ec-line"><span style="--0:#babed8">├── 66</span></div><div class="ec-line"><span style="--0:#babed8">│   └── 87898e2a0fe2da282efab6b5f7f38b7f788f56</span></div><div class="ec-line"><span style="--0:#babed8">├── c2</span></div><div class="ec-line"><span style="--0:#babed8">│   └── 43f24fb294ebc954b0a7ee6020589245f78315</span></div><div class="ec-line"><span style="--0:#babed8">├── c3</span></div><div class="ec-line"><span style="--0:#babed8">│   └── 0500babf488d06033e8d039cbf64be3edbd089</span></div><div class="ec-line mark"><span style="--0:#babed8">├── ee</span></div><div class="ec-line mark"><span style="--0:#babed8">│   └── c2cd5e0b771793e03bbd5f8614c567af964a4e</span></div><div class="ec-line mark"><span style="--0:#babed8">├── fc</span></div><div class="ec-line mark"><span style="--0:#babed8">│   └── 512af17ca7ec04be6958047648b32629e4b5a5</span></div><div class="ec-line"><span style="--0:#babed8">├── info</span></div><div class="ec-line"><span style="--0:#babed8">└── pack</span></div><div class="ec-line">
+</div><div class="ec-line"><span style="--0:#babed8">9 directories, 7 files</span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="$ tree .git/objects.git/objects├── 11│   └── 75e42a41f75f4b25bab53db36d581f72387aa9├── 2d│   └── 1a41ebd2d32cb426b6d32e61e063f330aa1af8├── 66│   └── 87898e2a0fe2da282efab6b5f7f38b7f788f56├── c2│   └── 43f24fb294ebc954b0a7ee6020589245f78315├── c3│   └── 0500babf488d06033e8d039cbf64be3edbd089├── ee│   └── c2cd5e0b771793e03bbd5f8614c567af964a4e├── fc│   └── 512af17ca7ec04be6958047648b32629e4b5a5├── info└── pack9 directories, 7 files"><div></div></button></div></figure></div>
+<p>We now have something like this:</p>
+<p><img  src="/_astro/git-data-model-2.NmvfO-Id_Z2rgpNR.webp" alt="git data model with 2 commits" width="800" height="624" loading="lazy" decoding="async"></p>
+<p>👀 Something interesting here: Git doesn’t store diff between files! Thanks to the <strong>packfiles</strong> (in
+<code>.git/objects/pack</code>), Git keeps a reasonable place on the disk.</p>
+<h2 id="step-3-playing-with-time-and-f-up-everything-️">Step 3: Playing with time and f*** up everything 🤦‍♂️</h2>
+<p>In this last step, we are going to add one commit. Then, we will go back in the past to “remove this
+commit”.</p>
+<ol>
+<li><code>echo "console.log('😃')" >> index.js</code></li>
+<li><code>git add . &#x26;&#x26; git commit -m "Third commit"</code></li>
+</ol>
+<p>As you might guess now, git created 3 new files. The structure is similar from step 2.</p>
+<div class="expressive-code"><figure class="frame"><figcaption class="header"></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#babed8">.git/objects</span></div><div class="ec-line"><span style="--0:#babed8">├── 00</span></div><div class="ec-line"><span style="--0:#babed8">│   └── ee8c50f8d74eaf1d3a4160e9d9c9eb1c683132</span></div><div class="ec-line"><span style="--0:#babed8">├── 09</span></div><div class="ec-line"><span style="--0:#babed8">│   └── f760de83890e3c363a38e6dc0700b76e782bc1</span></div><div class="ec-line"><span style="--0:#babed8">├── cf</span></div><div class="ec-line"><span style="--0:#babed8">│   └── 81d6f570911938726cff95b62acbf198fd3510</span></div><div class="ec-line"><span style="--0:#babed8">└── ...</span></div><div class="ec-line">
+</div><div class="ec-line"><span style="--0:#babed8">12 directories, 10 files</span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code=".git/objects├── 00│   └── ee8c50f8d74eaf1d3a4160e9d9c9eb1c683132├── 09│   └── f760de83890e3c363a38e6dc0700b76e782bc1├── cf│   └── 81d6f570911938726cff95b62acbf198fd3510└── ...12 directories, 10 files"><div></div></button></div></figure></div>
+<p>Now, let’s pretend we want to go back in the past from 1 commit (<code>git reset HEAD~1 --hard</code>).</p>
+<p><img  src="/_astro/hard-reset.jvVdyfJl_ZHLTkU.webp" alt="git reset --hard" width="699" height="209" loading="lazy" decoding="async"></p>
+<p>…and now you think you fucked up everything and your commit is gone forever. Right? Maybe. Let’s
+count how many git objects we have…</p>
+<div class="expressive-code"><figure class="frame"><figcaption class="header"></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#babed8">$ tree .git/objects</span></div><div class="ec-line">
+</div><div class="ec-line"><span style="--0:#babed8">.git/objects</span></div><div class="ec-line"><span style="--0:#babed8">└── ...</span></div><div class="ec-line">
+</div><div class="ec-line"><span style="--0:#babed8">12 directories, 10 files</span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="$ tree .git/objects.git/objects└── ...12 directories, 10 files"><div></div></button></div></figure></div>
+<p>Look: we still have 10 files! Nothing was deleted! Guess what? If I
+<code>git cat-file cf81d6f570911938726cff95b62acbf198fd3510 -p</code>, I will get the content of index.js at
+the third commit. 🎉</p>
+<blockquote>
+<p>“You can’t lose code with git.”<br>
+—Me</p>
+</blockquote>
+<p>More seriously, I use <code>git push --force</code>, <code>git rebase</code> and <code>git reset --hard</code> daily and I never lost
+anything. But, we are human and humans are fallible.</p>
+<p>Don’t worry, if you want to rollback, you don’t have to go through all those files. There’s a magic
+trick!</p>
+<h2 id="reflog-the-magic-wand">reflog: the magic wand ✨</h2>
+<p>If you try to retrieve the history with <code>git log</code>, you will not see the “Third commit”. But, if you
+add the additional option <code>-g</code> (for <code>--walk-reflogs</code>), then you’ll see the third commit.</p>
+<p>To make it nicer, you can do <code>git log -g --abbrev-commit --pretty=oneline</code>.</p>
+<p>This super-useful command has an alias: <code>git reflog</code> ❤️</p>
+<div class="expressive-code"><figure class="frame"><figcaption class="header"></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#babed8">$ git reflog</span></div><div class="ec-line">
+</div><div class="ec-line"><span style="--0:#babed8">eec2cd5 (HEAD -> master) HEAD@{0}: reset: moving to HEAD~1</span></div><div class="ec-line"><span style="--0:#babed8">00ee8c5 HEAD@{1}: commit: Third commit</span></div><div class="ec-line"><span style="--0:#babed8">eec2cd5 (HEAD -> master) HEAD@{2}: commit: Second commit</span></div><div class="ec-line"><span style="--0:#babed8">c30500b HEAD@{3}: commit (initial): First commit</span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="$ git reflogeec2cd5 (HEAD -> master) HEAD@{0}: reset: moving to HEAD~100ee8c5 HEAD@{1}: commit: Third commiteec2cd5 (HEAD -> master) HEAD@{2}: commit: Second commitc30500b HEAD@{3}: commit (initial): First commit"><div></div></button></div></figure></div>
+<p>(Note: you can get something similar in <code>.git/logs/HEAD</code>)</p>
+<p>Now, you have the third commit’s fingetprint: <code>00ee8c5</code>. You can now <code>git reset 00ee8c5 --hard</code> to
+cancel previous reset.</p>
+<p><strong>Caveats:</strong></p>
+<p>In some cases, <code>git reflog</code> <strong>will not</strong> help you:</p>
+<ul>
+<li>when you pull someone else code;</li>
+<li>when you remove your repo and clone it again;</li>
+<li>if you’re looking for a >90 days change (after that <code>git gc</code> clean it up). I don’t know about you,
+but, I can’t remember what I did ~1 month ago. So, 3 months should be more than enough 😉</li>
+</ul>
+<p>Also, if you use git commit like you <code>ctrl + s</code>, you might be easily lost. I’m sorry, but, I can’t
+do anything for you, except recommending you to read my post about the
+<a href="https://www.maxpou.fr/git-conventional-commits">conventional commits</a>. In my opinion, it’s the
+cleanest way to use git.</p>
+<h2 id="wrapping-up--tldr">Wrapping up ~ TL;DR</h2>
+<ul>
+<li>there are 4 different types of git objects: commit, tree, blob and tag.</li>
+<li>blobs don’t know their name (it’s the reason why you lose history during a move).</li>
+<li>Git doesn’t store diffs.</li>
+<li>committed code cannot be lost. <code>git reflog</code> can help you.</li>
+</ul>
+<p>That’s it for today!</p> <div> <hr> <h2 class="dark:text-gray-100">About the author</h2> <div class="flex flex-col md:flex-row items-center gap-5 md:gap-8 mt-5"> <div class="relative flex-shrink-0 h-32 w-32"> <img src="/_astro/profile-picture.gF0h5NUU_Zw8iDo.webp" class="not-prose h-32 w-32 object-cover rounded-full" alt="Maxence Poutord Profile picture" width="128" height="128" loading="lazy" decoding="async"> </div> <div> <p class="!mt-0 pb-2">
+Hey, I'm Maxence Poutord, a passionate software engineer. In my
+        day-to-day job, I'm working as a senior front-end engineer at Orderfox.
+        When I'm not working, you can find me travelling the world or cooking.
+</p> <a class="not-prose inline-flex rounded border
+    font-semibold no-underline
+    transition-colors duration-200 ease-in-out px-3 py-2
+    border-[#1da1f2] bg-[#1da1f2] text-white
+    hover:border-[#1da1f2] hover:bg-white hover:text-[#1da1f2]" rel="noopener" target="_blank" href="https://twitter.com/intent/follow?screen_name=_maxpou"> <svg aria-label="Twitter" viewBox="0 0 24 24" width="1em" height="1em" class="h-6 w-6 pr-2"><path fill="currentColor" d="M23.954 4.569a10 10 0 0 1-2.825.775 4.958 4.958 0 0 0 2.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 0 0-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 0 0-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 0 1-2.228-.616v.061a4.923 4.923 0 0 0 3.946 4.827 4.996 4.996 0 0 1-2.212.085 4.937 4.937 0 0 0 4.604 3.417 9.868 9.868 0 0 1-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0 0 7.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 0 0 2.46-2.548l-.047-.02z"></path></svg>
+Follow @_maxpou
+ </a> </div> </div> </div>  </div>  <div> <h2 class="text-2xl underline mt-12 font-bold dark:text-mainYellow">
+Recommended posts
+</h2> <div class="grid grid-cols-1 gap-4 md:grid-cols-2 mt-6"> <a title="3 Tips for Scaling Large Vue.js Application" href="/blog/3-tips-scaling-vue-application/" class="ease flex flex-col rounded-lg bg-white transition duration-300 dark:bg-gray-500 hover:translate-y-0.5 shadow-md  hover:shadow-xl group"> <img src="/_astro/cover.ex1KwcGk_Z1CSi66.webp" alt="Cover picture for 3 Tips for Scaling Large Vue.js Application" class="h-56 w-full rounded-b-none rounded-t-lg object-cover transition" width="420" height="224" loading="lazy" decoding="async"> <div class="p-4"> <header class="text-xl font-semibold text-gray-700 dark:text-gray-100"> <span class="inline">  <!-- {post.data.title} --> <span class="from-blue-100 to-blue-100 text-dark dark:bg-none
+           bg-gradient-to-r bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]"> 3 Tips for Scaling Large Vue.js Application </span> </span> </header> <p class="date text-gray-400 dark:text-gray-100"> <time datetime="2018-12-13T00:00:00.000Z"> 13 December 2018 </time> </p> </div> </a><a title="Vue.js: Let's Scale!" href="/blog/vue-js-module-architecture/" class="ease flex flex-col rounded-lg bg-white transition duration-300 dark:bg-gray-500 hover:translate-y-0.5 shadow-md  hover:shadow-xl group"> <img src="/_astro/cover.eY2JdMXs_1kNdoS.webp" alt="Cover picture for Vue.js: Let's Scale!" class="h-56 w-full rounded-b-none rounded-t-lg object-cover transition" width="420" height="224" loading="lazy" decoding="async"> <div class="p-4"> <header class="text-xl font-semibold text-gray-700 dark:text-gray-100"> <span class="inline">  <!-- {post.data.title} --> <span class="from-blue-100 to-blue-100 text-dark dark:bg-none
+           bg-gradient-to-r bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]"> Vue.js: Let&#39;s Scale! </span> </span> </header> <p class="date text-gray-400 dark:text-gray-100"> <time datetime="2021-05-27T00:00:00.000Z"> 27 May 2021 </time> </p> </div> </a> </div> </div>  </div> </article>  </main> <footer class="bg-blue-50 dark:bg-gray-600 dark:text-white w-full mx-auto pb-0" data-astro-cid-sz7xmlte> <div class="m-auto flex w-[1024px] max-w-full flex-wrap justify-between" data-astro-cid-sz7xmlte> <div class="w-full pb-4 md:w-auto flex-auto" data-astro-cid-sz7xmlte> <p class="pb-1 font-bold" data-astro-cid-sz7xmlte>
+&copy; 2014 - 2024 - Maxence Poutord </p> <p data-astro-cid-sz7xmlte>Built with Astro, Tailwind and some ☕️</p> <p data-astro-cid-sz7xmlte>
+Hosted with <span class="text-red-500" data-astro-cid-sz7xmlte>❤</span> by <a class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" href="https://github.com/maxpou/maxpou.fr" data-astro-cid-sz7xmlte>GitHub</a>.
+</p> </div> <div class="flex-auto" data-astro-cid-sz7xmlte> <h3 class="pb-1 font-bold" data-astro-cid-sz7xmlte>Explore</h3> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte> <a href="/uses" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Uses </a> </li><li data-astro-cid-sz7xmlte> <a href="/recipes" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Recipes (kitchen) </a> </li><li data-astro-cid-sz7xmlte> <a href="/about" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> About </a> </li><li data-astro-cid-sz7xmlte> <a href="/cv" target="_blank" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Resume (cv) </a> </li><li data-astro-cid-sz7xmlte> <a href="/readme" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Readme </a> </li> </ul> </div> <div class="flex-auto" data-astro-cid-sz7xmlte> <h3 class="pb-1 font-bold flex-auto" data-astro-cid-sz7xmlte>Let's connect</h3> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte> <a href="https://github.com/maxpou" rel="noopener noreferrer" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> GitHub </a> </li><li data-astro-cid-sz7xmlte> <a href="https://twitter.com/_maxpou" rel="noopener noreferrer" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Twitter </a> </li><li data-astro-cid-sz7xmlte> <a href="https://www.linkedin.com/in/maxpou/" rel="noopener noreferrer" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> LinkedIn </a> </li><li data-astro-cid-sz7xmlte> <a href="/rss.xml" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> RSS feed </a> </li> </ul> </div> </div>  </footer>  </body> </html>
