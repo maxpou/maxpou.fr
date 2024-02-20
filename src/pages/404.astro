@@ -1,0 +1,38 @@
+---
+import BlogCard from '../components/BlogCard.astro'
+import Layout from '../components/Layout.astro'
+import PageTitle from '../components/PageTitle.astro'
+
+import { getCollection } from 'astro:content'
+
+const posts = (await getCollection('blog'))
+  .filter(post => !post.data.unlisted)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 5)
+---
+
+<Layout
+  title="Page Not Found"
+  description="Look like this page no longer exists..."
+  seo={{
+    type: 'website',
+  }}
+>
+  <div class="flex flex-col items-center">
+    <span role="img" aria-label="Ghost" class="block text-[7em]">👻</span>
+    <PageTitle>Page Not Found</PageTitle>
+
+    <p class="dark:text-white text-xl">
+      Looks like you've followed a broken link or entered a URL that doesn't
+      exist on this site.
+    </p>
+  </div>
+  <div class="m-auto max-w-screen-xl pt-12">
+    <h2 class="pb-4 text-2xl font-bold dark:text-white">
+      Looking for something to read?
+    </h2>
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {posts.map(p => <BlogCard post={p} />)}
+    </div>
+  </div>
+</Layout>

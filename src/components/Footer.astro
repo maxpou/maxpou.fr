@@ -1,0 +1,80 @@
+---
+import { SITE_OWNER } from '../consts'
+
+const today = new Date()
+---
+
+<footer class="bg-blue-50 dark:bg-gray-600 dark:text-white w-full mx-auto pb-0">
+  <div class="m-auto flex w-[1024px] max-w-full flex-wrap justify-between">
+    <div class="w-full pb-4 md:w-auto flex-auto">
+      <p class="pb-1 font-bold">
+        &copy; 2014 - {today.getFullYear()} - {SITE_OWNER}
+      </p>
+      <p>Built with Astro, Tailwind and some ☕️</p>
+      <p>
+        Hosted with <span class="text-red-500">❤</span> by <a
+          class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow"
+          href="https://github.com/maxpou/maxpou.fr">GitHub</a
+        >.
+      </p>
+    </div>
+    <div class="flex-auto">
+      <h3 class="pb-1 font-bold">Explore</h3>
+      <ul>
+        {
+          [
+            ['/uses', 'Uses'],
+            ['/recipes', 'Recipes (kitchen)'],
+            ['/about', 'About'],
+            ['/cv', 'Resume (cv)', '_blank'],
+            ['/readme', 'Readme'],
+          ].map(([url, title, target = '_self']) => (
+            <li>
+              <a
+                href={url}
+                target={target}
+                class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow"
+              >
+                {title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div class="flex-auto">
+      <h3 class="pb-1 font-bold flex-auto">Let's connect</h3>
+      <ul>
+        {
+          [
+            ['https://github.com/maxpou', 'GitHub', 'noopener noreferrer'],
+            ['https://twitter.com/_maxpou', 'Twitter', 'noopener noreferrer'],
+            [
+              'https://www.linkedin.com/in/maxpou/',
+              'LinkedIn',
+              'noopener noreferrer',
+            ],
+            ['/rss.xml', 'RSS feed'],
+          ].map(([url, title, rel]) => (
+            <li>
+              <a
+                href={url}
+                rel={rel}
+                class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow"
+              >
+                {title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+
+  <style>
+    footer {
+      padding: 2em 1em 6em 1em;
+      color: rgb(var(--gray));
+    }
+  </style>
+</footer>

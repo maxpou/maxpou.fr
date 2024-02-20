@@ -1,0 +1,30 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import Layout from '../components/Layout.astro'
+import HeroImage from '../components/HeroImage.astro'
+import PageTitle from '../components/PageTitle.astro'
+
+type Props =
+  | CollectionEntry<'pages'>['data']
+  | CollectionEntry<'recipes'>['data']
+
+const { title, cover, description } = Astro.props
+---
+
+<Layout
+  title={title}
+  description={description || ''}
+  seo={{
+    type: 'article',
+  }}
+>
+  <article>
+    {cover && <HeroImage alt={`Cover picture for ${title}`} src={cover} />}
+    <div class="container m-auto text-center">
+      <PageTitle class="pt-12">{title}</PageTitle>
+    </div>
+    <div class="m-auto w-[720px] max-w-full">
+      <slot />
+    </div>
+  </article>
+</Layout>

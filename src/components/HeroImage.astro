@@ -1,0 +1,17 @@
+---
+import { Image } from 'astro:assets'
+
+// type Props = AstroAssets.Image
+
+const { src, alt } = Astro.props
+---
+
+<div class="hero-image">
+  <Image
+    width={1020}
+    height={500}
+    alt={alt}
+    src={src}
+    class="rounded-xl shadow-xl mx-auto h-[500px] object-cover w-full"
+  />
+</div>

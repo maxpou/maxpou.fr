@@ -1,0 +1,11 @@
+---
+interface Props {
+  class?: string
+}
+---
+
+<h1
+  class=`font-bold text-3xl dark:text-white text-center leading-none py-4 mb-2 ${Astro.props.class || ''}`
+>
+  <slot />
+</h1>

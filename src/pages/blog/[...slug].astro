@@ -1,0 +1,42 @@
+---
+import { getCollection } from 'astro:content'
+import BlogPost from '../../layouts/BlogPost.astro'
+import Prose from '../../components/Prose.astro'
+import AboutAuthor from '../../components/AboutAuthor.astro'
+import type { InferGetStaticPropsType } from 'astro'
+import BlogCard from '../../components/BlogCard.astro'
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog')
+  const featuredPosts = posts.filter(post => post.data.featured)
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post, featuredPosts },
+  }))
+}
+type Props = InferGetStaticPropsType<typeof getStaticPaths>
+
+const { post, featuredPosts } = Astro.props
+const { Content } = await post.render()
+---
+
+<BlogPost {...post.data}>
+  <Prose>
+    <Content />
+    <AboutAuthor />
+  </Prose>
+  <div>
+    <h2 class="text-2xl underline mt-12 font-bold dark:text-mainYellow">
+      Recommended posts
+    </h2>
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 mt-6">
+      {
+        featuredPosts
+          .sort(() => 0.5 - Math.random()) // shuffle
+          .filter(post => post.slug !== Astro.params.slug) // remove current post
+          .slice(0, 2)
+          .map(post => <BlogCard post={post} firstBigger={false} />)
+      }
+    </div>
+  </div>
+</BlogPost>

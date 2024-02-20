@@ -1,0 +1,309 @@
+---
+import { Image } from 'astro:assets'
+import BaseHead from '../components/BaseHead.astro'
+import { cvData } from '../content/cv'
+import qrCode from '../assets/qr-code.png'
+import EmailIcon from '../components/icons/Email'
+import GithubIcon from '../components/icons/Github'
+import LinkedinIcon from '../components/icons/Linkedin'
+import TwitterIcon from '../components/icons/Twitter'
+import WebIcon from '../components/icons/web'
+import PrinterIcon from '../components/icons/Printer'
+import PdfIcon from '../components/icons/Pdf'
+
+function cleanupUrl(url: string) {
+  return url.replace('http://', '').replace('https://', '').replace('www.', '')
+}
+---
+
+<html>
+  <head>
+    <BaseHead
+      title="Maxence Poutord Resume"
+      description="Maxence Poutord, a French Software Engineer with +10 years of experience developing web-based applications"
+    />
+  </head>
+  <body>
+    <main class="mx-auto mt-[15px] w-[90%] max-w-[770px] leading-snug">
+      <aside class="hidden fixed top-0 right-0 md:flex flex-col p-4 gap-4">
+        <button aria-label="Print" onclick="window.print()">
+          <PrinterIcon />
+        </button>
+        <a
+          href="../Maxence-Poutord-Resume.pdf"
+          aria-label="Download PDF"
+          title="Maxence Poutord Resume"
+          download
+        >
+          <PdfIcon />
+        </a>
+      </aside>
+      <header class="mb-2 bg-mainYellow p-2 text-center">
+        <h1 class="pb-1 text-3xl font-bold">{cvData.info.name}</h1>
+        <p class="text-lg">{cvData.info.title}</p>
+      </header>
+      <a
+        href="https://www.maxpou.fr/cv"
+        class="relative float-right hidden flex-col items-center pl-2 md:flex"
+      >
+        <Image src={qrCode} alt="QR Code pointing to this page" class="w-24" />
+        <span class="mt-[-5px] text-sm text-gray-500">maxpou.fr/cv</span>
+      </a>
+      <div class="mb-3">
+        {cvData.info.description}
+      </div>
+      <div class="grid gap-1 grid-cols-1 md:grid-cols-[30fr_70fr]">
+        <div class="">
+          <section class="mb-3">
+            <h2>About</h2>
+            <p>{cvData.info.nationality}, {cvData.info.age} years old</p>
+            <p>
+              <a href=`tel:${cvData.info.phone}`>{cvData.info.phone}</a>
+            </p>
+            <p>
+              <a
+                href=`mailto:${cvData.info.email}`
+                class="flex flex-row items-center gap-2 hover:underline"
+              >
+                <EmailIcon />
+                {cvData.info.email}</a
+              >
+            </p>
+            <p>
+              <a
+                href={cvData.info.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex flex-row items-center gap-2 hover:underline"
+              >
+                <WebIcon />
+                {cleanupUrl(cvData.info.website)}</a
+              >
+            </p>
+            <p>
+              <a
+                href={cvData.info.social.twitter}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex flex-row items-center gap-2 hover:underline"
+              >
+                <TwitterIcon />
+                {cleanupUrl(cvData.info.social.twitter)}</a
+              >
+            </p>
+            <p>
+              <a
+                href={cvData.info.social.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex flex-row items-center gap-2 hover:underline"
+              >
+                <GithubIcon />
+                {cleanupUrl(cvData.info.social.github)}</a
+              >
+            </p>
+            <p>
+              <a
+                href={cvData.info.social.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex flex-row items-center gap-2 hover:underline"
+              >
+                <LinkedinIcon />
+                {cleanupUrl(cvData.info.social.linkedin)}</a
+              >
+            </p>
+          </section>
+          <section class="mb-3">
+            <h2>Skills</h2>
+            {
+              cvData.skills.map((skillCategory, i) => (
+                <div>
+                  <h3 class={`font-bold ${i !== 0 ? 'pt-2' : ''}`}>
+                    {skillCategory.category}
+                  </h3>
+                  <ul>
+                    {skillCategory.content.map(skill => (
+                      <li class="pl-2">{skill}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))
+            }
+          </section>
+          <section class="mb-3">
+            <h2>Languages</h2>
+            {
+              cvData.languages.map((languagesCategory, i) => (
+                <div>
+                  <h3 class={`font-bold ${i !== 0 ? 'pt-2' : ''}`}>
+                    {languagesCategory.level}
+                  </h3>
+                  <ul>
+                    {languagesCategory.languages.map(language => (
+                      <li class="pl-2">{language}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))
+            }
+          </section>
+          <section>
+            <h2>Interests</h2>
+            <div>{cvData.interests}</div>
+          </section>
+        </div>
+        <div>
+          <section>
+            <h2>Highlights</h2>
+            <ul class="list-disc pl-5">
+              {
+                cvData.highlights.map(highlight => (
+                  <li>
+                    {highlight.description}
+                    {highlight.url && (
+                      <span class="inline-block whitespace-nowrap text-sm">
+                        {[
+                          <span>(see </span>,
+                          <a
+                            class="inline-block underline text-blue-500 hover:text-blue-800"
+                            href={highlight.url}
+                          >
+                            {cleanupUrl(highlight.url)}
+                          </a>,
+                          <span>{')'}</span>,
+                        ].map(a => a)}
+                      </span>
+                    )}
+                  </li>
+                ))
+              }
+            </ul>
+          </section>
+          <section class="experiences">
+            <h2 class="mt-2">Experience</h2>
+            <div>
+              {
+                cvData.experiences.map(experience => (
+                  <div class="experience pb-3 last:pb-0 last:mb-3">
+                    <div class="bull" />
+                    <h3 class="text-lg font-bold">{experience.position}</h3>
+                    <p class="text-gray-400">{experience.period}</p>
+                    <p class="pb-2 text-gray-400">
+                      {experience.company}, {experience.location}
+                    </p>
+                    <ul>
+                      {experience.activities.map(activity => (
+                        <li class="pb-1">{activity}</li>
+                      ))}
+                      <li />
+                    </ul>
+                  </div>
+                ))
+              }
+            </div>
+          </section>
+          <section>
+            <h2>Education</h2>
+            <div>
+              {
+                cvData.education.map(education => (
+                  <div class="experience pb-3 last:pb-0 last:mb-3">
+                    <div class="bull" />
+                    <h3 class="font-bold">{education.degree}</h3>
+                    <p class="text-gray-400">{education.period}</p>
+                    <p class="pb-2 text-gray-400">
+                      {education.school}, {education.location}
+                    </p>
+                  </div>
+                ))
+              }
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <style>
+      body {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #3e4047; /* gray-500 */
+      }
+      main {
+        margin-bottom: 20px;
+        break-inside: avoid;
+      }
+
+      h2 {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #3e4047;
+        line-height: normal;
+      }
+
+      h2:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        margin-top: -1px;
+        background-color: #ffdc4e;
+      }
+
+      .experience {
+        border-left: 1px solid darkgray;
+        padding-left: 12px;
+        position: relative;
+      }
+      .experience::before {
+        padding-left: 4px;
+      }
+      .bull {
+        position: absolute;
+        content: '';
+        display: block;
+        margin-top: 5px;
+        width: 14px;
+        height: 14px;
+        left: -7px;
+        top: 0;
+        border-radius: 8px;
+        border: 2px solid #ffdc4e;
+        background-color: white;
+      }
+
+      @media print {
+        @page {
+          size: A4;
+          margin: 10mm 17mm 10mm 17mm;
+        }
+        html,
+        body {
+          width: 210mm;
+          height: 282mm;
+          font-size: 14px;
+          background: #fff;
+          overflow: visible;
+        }
+        body {
+          padding-top: 0mm;
+        }
+
+        .grid {
+          /* otherwise grid not working when printing */
+          grid-template-columns: 30fr 70fr;
+        }
+
+        section,
+        div.experience {
+          page-break-inside: avoid;
+        }
+        section.experiences {
+          page-break-inside: initial;
+        }
+      }
+    </style>
+  </body>
+</html>
