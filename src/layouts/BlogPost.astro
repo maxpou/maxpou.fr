@@ -47,7 +47,7 @@ const formattedTranslations = formatBlogTranslation(translations)
   translations={formattedTranslations}
   seo={{
     type: 'article',
-    ogImage: imageShare?.src,
+    ogImage: imageShare?.src || cover.src,
   }}
 >
   <article>

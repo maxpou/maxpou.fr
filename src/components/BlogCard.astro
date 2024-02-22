@@ -1,6 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content'
-import { Image } from 'astro:assets'
+import { Picture } from 'astro:assets'
 import FrFlag from './icons/FrFlag.png'
 import FormattedDate from './FormattedDate.astro'
 
@@ -25,10 +25,11 @@ const { post, firstBigger = true } = Astro.props
 >
   {
     post.data.cover && (
-      <Image
+      <Picture
         src={post.data.cover}
         width={420}
         height={224}
+        formats={['webp', 'avif', 'jpeg']}
         alt={`Cover picture for ${post.data.title}`}
         class="h-56 w-full rounded-b-none rounded-t-lg object-cover transition"
       />
