@@ -2,7 +2,6 @@
 title: 3 Tips for Scaling Large Vue.js Application
 slug: 3-tips-scaling-vue-application
 cover: ./cover.jpg
-imageShare: ./3-tips-scaling-vue-application-share.png
 language: en
 date: 2018-12-13
 featured: true
@@ -106,7 +105,7 @@ Remember: **Global CSS are evil**. Avoid them as much as you can!
     color: palevioletred;
   `
 
-  ;<StyledTitle>Cool title</StyledTitle>
+  <StyledTitle>Cool title</StyledTitle>
   ```
 
 **Testing**
@@ -129,7 +128,7 @@ let's take the previous file architecture and see what to test and how to do it.
 To reduce the JavaScript bundle, consider
 [lazy load your modules](https://router.vuejs.org/guide/advanced/lazy-loading.html#grouping-components-in-the-same-chunk)!
 
-```js{6}
+```js {6}
 export default new Router({
   routes: [
     {
@@ -273,7 +272,7 @@ I'm not saying that you shouldn't use the store. Just use it with parsimony!
 
 **Use namespaced stores (for modules)**
 
-```js{4,7}
+```js {4,7}
 const store = new Vuex.Store({
   modules: {
     catalog: {

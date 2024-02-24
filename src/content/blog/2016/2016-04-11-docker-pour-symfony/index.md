@@ -5,7 +5,6 @@ language: fr
 slug: docker-pour-symfony
 tags: ['Docker', 'Symfony2', 'PHP']
 cover: ./bg-intro.jpg
-imageShare: ./docker-pour-symfony-share.png
 ---
 
 > [05/07/2016] : màj du docker-compose (suppression conteneur code+alias) + màj schéma + ajout

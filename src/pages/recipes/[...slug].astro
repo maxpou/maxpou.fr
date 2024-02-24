@@ -12,16 +12,17 @@ export async function getStaticPaths() {
 }
 type Props = CollectionEntry<'recipes'>
 
-const recipe = Astro.props
+const recipe = {
+  ...Astro.props,
+  data: {
+    ...Astro.props.data,
+    description: `${Astro.props.data.title}, a cooking recipe by Maxence Poutord`,
+  },
+}
 const { Content } = await recipe.render()
 ---
 
-<Page
-  title={recipe.data.title}
-  cover={recipe.data.cover}
-  webmentions={false}
-  description={`${recipe.data.title}, a cooking recipe by Maxence Poutord`}
->
+<Page {...recipe}>
   <Prose>
     <Content />
     <div class="mt-6">

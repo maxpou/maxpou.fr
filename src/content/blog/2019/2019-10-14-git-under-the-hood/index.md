@@ -4,7 +4,6 @@ slug: git-under-the-hood
 language: en
 date: 2019-10-14
 cover: ./cover.jpg
-imageShare: ./git-under-the-hood-share.png
 featured: true
 tags:
   - Git

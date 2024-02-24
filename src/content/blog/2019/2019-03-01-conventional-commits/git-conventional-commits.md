@@ -3,7 +3,6 @@ title: Enhance your git log with conventional commits
 slug: git-conventional-commits
 language: en
 date: 2019-03-01
-imageShare: ./git-conventional-commits-share.png
 cover: ./cover.jpg
 tags:
   - Git

@@ -7,7 +7,7 @@ import HeroImage from '../components/HeroImage.astro'
 import PageTitle from '../components/PageTitle.astro'
 import { SITE_OWNER } from '../consts'
 
-type Props = CollectionEntry<'blog'>['data']
+type Props = CollectionEntry<'blog'>
 type Translations = CollectionEntry<'blog'>['data']['translations']
 
 function formatBlogTranslation(
@@ -25,6 +25,7 @@ function formatBlogTranslation(
   )
 }
 
+const { data, slug } = Astro.props
 const {
   title,
   description,
@@ -34,8 +35,7 @@ const {
   translations,
   language,
   tags,
-  imageShare,
-} = Astro.props
+} = data
 
 const formattedTranslations = formatBlogTranslation(translations)
 ---
@@ -47,7 +47,7 @@ const formattedTranslations = formatBlogTranslation(translations)
   translations={formattedTranslations}
   seo={{
     type: 'article',
-    ogImage: imageShare?.src || cover.src,
+    ogImage: `/og/${slug}.png`,
   }}
 >
   <article>

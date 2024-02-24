@@ -2,15 +2,13 @@
 title: this post is a ghost
 slug: invisible-post
 date: 2020-01-01
+cover: ./cover.jpeg
 
 # optional fields
-published: false
 unlisted: true
 featured: false
 language: fr
-cover: ./cover.jpeg
-imageShare: ./cover.jpeg
-tags: ['fake']
+tags: ['Life']
 translations:
   - link: 'https://www.maxpou.fr/about'
     language: 'french'

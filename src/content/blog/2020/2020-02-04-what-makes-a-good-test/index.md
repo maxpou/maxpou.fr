@@ -4,7 +4,6 @@ slug: 10-tips-write-better-tests
 date: 2020-02-04
 language: en
 cover: ./cover.jpeg
-imageShare: ./10-tips-write-better-tests-share.png
 tags: ['Testing']
 ---
 
