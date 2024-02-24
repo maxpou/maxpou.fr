@@ -3,7 +3,6 @@ title: 'How to generate social share images with Gatsby'
 slug: generate-social-image-share-with-gatsby
 language: en
 cover: ./cover.jpeg
-imageShare: ./generate-social-image-share-with-gatsby-share.png
 date: 2020-01-20
 tags:
   - Gatsby

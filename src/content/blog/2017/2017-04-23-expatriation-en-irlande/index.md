@@ -5,7 +5,6 @@ slug: expatriation-en-irlande
 date: 2017-04-23
 language: fr
 cover: ./banner.jpg
-imageShare: ./expatriation-en-irlande-share.png
 ---
 
 Ca va faire bientôt 8 mois que j'ai quitté Nantes pour venir m'installer en Irlande, à Dublin.

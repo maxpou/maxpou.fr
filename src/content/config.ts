@@ -22,7 +22,6 @@ const blog = defineCollection({
         )
         .optional(),
       featured: z.boolean().optional(),
-      imageShare: image().optional(),
     }),
 })
 

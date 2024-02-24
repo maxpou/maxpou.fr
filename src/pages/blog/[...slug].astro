@@ -20,7 +20,7 @@ const { post, featuredPosts } = Astro.props
 const { Content } = await post.render()
 ---
 
-<BlogPost {...post.data}>
+<BlogPost {...post}>
   <Prose>
     <Content />
     <AboutAuthor />
