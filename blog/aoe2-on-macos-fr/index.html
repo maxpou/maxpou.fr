@@ -1,0 +1,136 @@
+<!DOCTYPE html><html lang="fr"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/x-icon" href="/favicon.ico"><meta name="generator" content="Astro v4.4.0"><!-- Font preloads --><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" media="print" onload="this.media='all'"><!-- Canonical URL --><link rel="canonical" href="https://www.maxpou.fr/blog/aoe2-on-macos-fr/"><!-- Primary Meta Tags --><title>Comment jouer à Age of Empire II DE sur MacOS</title><meta name="title" content="Comment jouer à Age of Empire II DE sur MacOS"><meta name="description" content="Le guide complet pour jouer à Age of Empire 2 sur Mac (via crossover ou GeForce NOW). Comprend également mes raccourcis clavier et mods personnels."><script async defer data-domain="maxpou.fr" src="https://plausible.io/js/plausible.js"></script><link rel="alternate" type="application/rss+xml" title="Maxence Poutord • Maxpou Blog" href="/rss.xml"><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"><!-- Open Graph / Facebook --><meta property="og:type" content="article"><meta property="og:url" content="https://www.maxpou.fr/blog/aoe2-on-macos-fr/"><meta property="og:title" content="Comment jouer à Age of Empire II DE sur MacOS"><meta property="og:description" content="Le guide complet pour jouer à Age of Empire 2 sur Mac (via crossover ou GeForce NOW). Comprend également mes raccourcis clavier et mods personnels."><meta property="og:image" content="https://www.maxpou.fr/og/aoe2-on-macos-fr.png"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://www.maxpou.fr/blog/aoe2-on-macos-fr/"><meta property="twitter:title" content="Comment jouer à Age of Empire II DE sur MacOS"><meta property="twitter:description" content="Le guide complet pour jouer à Age of Empire 2 sur Mac (via crossover ou GeForce NOW). Comprend également mes raccourcis clavier et mods personnels."><meta name="twitter:creator" content="_maxpou"><meta property="twitter:image" content="https://www.maxpou.fr/og/aoe2-on-macos-fr.png"><link rel="alternate" hreflang="en" href="https://www.maxpou.fr/blog/aoe2-on-macos/"><link rel="alternate" hreflang="fr" href="https://www.maxpou.fr/blog/aoe2-on-macos-fr/"><script>
+  const theme = (() => {
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+      return localStorage.getItem('theme')
+    }
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark'
+    }
+    return 'light'
+  })()
+
+  if (theme === 'light') {
+    document.documentElement.classList.remove('dark')
+  } else {
+    document.documentElement.classList.add('dark')
+  }
+  window.localStorage.setItem('theme', theme)
+</script><link rel="stylesheet" href="/_astro/_slug_.FJDvWzr3.css" />
+<style>code[class*=language-],pre[class*=language-]{color:#ccc;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.comment,.token.block-comment,.token.prolog,.token.doctype,.token.cdata{color:#999}.token.punctuation{color:#ccc}.token.tag,.token.attr-name,.token.namespace,.token.deleted{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.number,.token.function{color:#f08d49}.token.property,.token.class-name,.token.constant,.token.symbol{color:#f8c555}.token.selector,.token.important,.token.atrule,.token.keyword,.token.builtin{color:#cc99cd}.token.string,.token.char,.token.attr-value,.token.regex,.token.variable{color:#7ec699}.token.operator,.token.entity,.token.url{color:#67cdcc}.token.important,.token.bold{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}.expressive-code{margin-top:1em}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.rgG313J3.css" />
+<style>a[data-astro-cid-eimmu3lg]{display:inline-block;text-decoration:none;border-bottom:4px solid transparent}a[data-astro-cid-eimmu3lg].active{font-weight:bolder;border-bottom-color:#ffdc4e}footer[data-astro-cid-sz7xmlte]{padding:2em 1em 6em;color:rgb(var(--gray))}*{transition:background .5s ease}*::-moz-selection{background-color:#ffdc4e;color:#3e4047}*::selection{background-color:#ffdc4e;color:#3e4047}
+</style><script type="module">const n=document.getElementById("burger-button"),e=document.getElementById("burger-line-1"),r=document.getElementById("burger-line-2"),t=document.getElementById("burger-line-3"),o=document.getElementById("menu-backdrop");n.addEventListener("click",()=>{o.classList.contains("hidden")?(o.classList.add("flex"),o.classList.remove("hidden"),e.style.transform="rotate(45deg)",e.style.top="0",e.style.backgroundColor="white",r.style.backgroundColor="transparent",t.style.transform="rotate(-45deg)",t.style.top="0",t.style.backgroundColor="white"):(e.style.transform="rotate(0)",e.style.removeProperty("top"),e.style.removeProperty("background-color"),r.style.removeProperty("background-color"),t.style.removeProperty("background-color"),t.style.transform="rotate(0)",t.style.removeProperty("top"),o.classList.add("hidden"),o.classList.remove("flex"))});
+</script></head> <body class="bg-gradient-to-b from-blue-50 to-[#f5f7f9] dark:bg-gray-600 dark:bg-gradient-to-b dark:from-gray-600"> <header class="bg-white dark:bg-gray-600 px-4 h-16"> <nav class="dark:text-white h-16 flex items-center justify-between max-w-screen-xl w-full mx-auto"> <h1 class="text-lg dark:text-white font-bold"> <a href="/">Maxence Poutord</a> </h1> <div class="md:flex hidden"> <a href="/blog" class="py-4 px-2 no-underline text-lg hover:text-blue-900 dark:text-white dark:hover:text-mainYellow" data-astro-cid-eimmu3lg> Blog </a>  <a href="/speaking" class="py-4 px-2 no-underline text-lg hover:text-blue-900 dark:text-white dark:hover:text-mainYellow" data-astro-cid-eimmu3lg> Speaking </a>  <a href="/about" class="py-4 px-2 no-underline text-lg hover:text-blue-900 dark:text-white dark:hover:text-mainYellow" data-astro-cid-eimmu3lg> About </a>  <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();;(()=>{var v=Object.defineProperty;var A=(c,s,a)=>s in c?v(c,s,{enumerable:!0,configurable:!0,writable:!0,value:a}):c[s]=a;var d=(c,s,a)=>(A(c,typeof s!="symbol"?s+"":s,a),a);var u;{let c={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t)},s=t=>{let[e,n]=t;return e in c?c[e](n):void 0},a=t=>t.map(s),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([e,n])=>[e,s(n)]));customElements.get("astro-island")||customElements.define("astro-island",(u=class extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var f;if(!this.hydrator||!this.isConnected)return;let e=(f=this.parentElement)==null?void 0:f.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let n=this.querySelectorAll("astro-slot"),r={},l=this.querySelectorAll("template[data-astro-template]");for(let o of l){let i=o.closest(this.tagName);i!=null&&i.isSameNode(this)&&(r[o.getAttribute("data-astro-template")||"default"]=o.innerHTML,o.remove())}for(let o of n){let i=o.closest(this.tagName);i!=null&&i.isSameNode(this)&&(r[o.getAttribute("name")||"default"]=o.innerHTML)}let h;try{h=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(o){let i=this.getAttribute("component-url")||"<unknown>",b=this.getAttribute("component-export");throw b&&(i+=` (export ${b})`),console.error(`[hydrate] Error parsing props for component ${i}`,this.getAttribute("props"),o),o}let p;await this.hydrator(this)(this.Component,h,r,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),n.disconnect(),this.childrenConnectedCallback()},n=new MutationObserver(()=>{var r;((r=this.lastChild)==null?void 0:r.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});n.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),n=this.getAttribute("client");if(Astro[n]===void 0){window.addEventListener(`astro:${n}`,()=>this.start(),{once:!0});return}try{await Astro[n](async()=>{let r=this.getAttribute("renderer-url"),[l,{default:h}]=await Promise.all([import(this.getAttribute("component-url")),r?import(r):()=>()=>{}]),p=this.getAttribute("component-export")||"default";if(!p.includes("."))this.Component=l[p];else{this.Component=l;for(let y of p.split("."))this.Component=this.Component[y]}return this.hydrator=h,this.hydrate},e,this)}catch(r){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,r)}}attributeChangedCallback(){this.hydrate()}},d(u,"observedAttributes",["props"]),u))}})();</script><astro-island uid="1MPqDn" component-url="/_astro/DarkModeButton.xNbp8Br3.js" component-export="default" renderer-url="/_astro/client.PcUt3MZx.js" props="{}" ssr="" client="only" opts="{&quot;name&quot;:&quot;DarkModeButton&quot;,&quot;value&quot;:&quot;preact&quot;}"></astro-island> </div> <button id="burger-button" aria-label="Toggle mobile menu" class="md:hidden block w-14 h-14 relative focus:outline-none rounded z-10"> <div class="block w-5 absolute left-6 top-1/2 transform -translate-x-1/2 -translate-y-1/2"> <span id="burger-line-1" class="block absolute h-0.5 w-7 text-white bg-gray-600 dark:bg-white transform transition-all duration-500 ease-in-out -top-2"></span> <span id="burger-line-2" class="block absolute h-0.5 w-7 text-white bg-gray-600 dark:bg-white transform transition-all duration-500 ease-in-out"></span> <span id="burger-line-3" class="block absolute h-0.5 w-7 text-white bg-gray-600 dark:bg-white transform transition-all duration-500 ease-in-out top-2"></span> </div> </button> </nav> <div id="menu-backdrop" class="hidden bg-gray-600 bg-opacity-95 absolute top-0 left-0 h-screen w-screen backdrop-opacity-90 items-center justify-center"> <ul class="text-white font-bold text-xl"> <li class="p-3"><a href="/">Home</a></li> <li class="p-3"><a href="/blog">Blog</a></li> <li class="p-3"><a href="/speaking">Speaking</a></li> <li class="p-3"><a href="/about">About</a></li> <li class="p-3"> <astro-island uid="lieIt" component-url="/_astro/DarkModeButton.xNbp8Br3.js" component-export="default" renderer-url="/_astro/client.PcUt3MZx.js" props="{&quot;textOnly&quot;:[0,true],&quot;className&quot;:[0,&quot;!p-0&quot;]}" ssr="" client="only" opts="{&quot;name&quot;:&quot;DarkModeButton&quot;,&quot;value&quot;:&quot;preact&quot;}"></astro-island> </li> </ul> </div> </header>  <main class="m-0 mx-auto min-h-[70vh] w-full max-w-screen-xl px-4 py-12 text-gray-500 dark:text-gray-100">  <article> <div class="hero-image"> <img src="/_astro/cover.hAr3CRir_1wG7Tq.webp" alt="Cover picture for Comment jouer à Age of Empire II DE sur MacOS" class="rounded-xl shadow-xl mx-auto h-[500px] object-cover w-full" width="1020" height="500" loading="lazy" decoding="async"> </div> <div class="container m-auto text-center"> <div class="mt-3 text-blueGreyed dark:text-gray-300"> <time datetime="2023-07-11T00:00:00.000Z"> 11 July 2023 </time>  </div> <h1 class="font-bold text-3xl dark:text-white text-center leading-none py-4 mb-2 "> Comment jouer à Age of Empire II DE sur MacOS </h1> <div class="pb-6"> <a href="/tags/Gaming" class="mr-2 inline-block rounded-lg bg-darkBlue px-3 py-2 text-sm text-white no-underline hover:bg-blueGreyed dark:bg-blueGreyed dark:hover:bg-darkBlue"> Gaming </a> <div class="text-md rounded-lg border border-darkBlue bg-lightYellow p-3 text-left mt-5 dark:text-gray-600 m-auto w-[720px] max-w-full">
+This article also exists in:   <a href="../aoe2-on-macos" class="underline"> English </a>  </div> </div> </div> <div class="m-auto w-[720px] max-w-full">  <div class="prose
+  max-w-none
+  dark:prose-invert
+  prose-headings:underline
+  prose-h2:text-2xl prose-h2:font-bold prose-h2:dark:text-mainYellow
+  prose-h3:text-xl prose-h3:font-bold
+  prose-p:mb-0
+  prose-p:mt-4
+  prose-a:underline-offset-4
+  prose-a:decoration-2
+  prose-a:text-gray-700 dark:prose-a:text-slate-100 hover:prose-a:text-slate-900
+  prose-a:decoration-gray-300
+  hover:prose-a:decoration-blue-700 dark:hover:prose-a:decoration-mainYellow
+  prose-img:rounded-xl">  <p>Age of Empire 2 est de loin mon jeu préféré. J’y joue depuis que je suis tout petit et maintenant,
+depuis la sortie de la Definitive Edition, j’ai recommencé à y jouer. Je joue sur Mac (modèle M1
+Pro) et on me demande souvent comment je fais. Voici donc un petit guide.</p>
+<p>Gardez à l’esprit que cette configuration est destinée aux puces Silicon (M1, M1 max, M2 etc.). Si
+vous possédez un processeur Intel, je vous recommande d’utiliser
+<a href="https://support.apple.com/en-us/HT201468">Boot Camp</a>.</p>
+<h2 id="option-1---crossover">Option 1 - Crossover</h2>
+<p>J’utilise Crossover (payant).</p>
+<ol>
+<li>Installez <a href="https://www.codeweavers.com/crossover#mac">Crossover</a> - Vous pouvez facilement trouver
+des coupons de reduction en ligne ou commencer par l’essai gratuit.</li>
+<li>Sur Crossover, cliquez sur ”+ Install” et installez une bottle “Steam”.
+<ul>
+<li>It should install a Windows 10/64-bit bottle.</li>
+<li>on the bottle settings, make sure DXVK is enabled.</li>
+</ul>
+</li>
+<li>On Crossover, clicks ”+ Install” and install the “steam” bottle.
+<ul>
+<li>Verifiez que c’est bien un Windows 10/64 bits.</li>
+<li>Dans les paramètres de la bouteille, assurez-vous que “DXVK” est activé.</li>
+</ul>
+</li>
+<li>Lancez Steam, connectez-vous et installez le jeu</li>
+<li>Téléchargez
+“<a href="https://community.pcgamingwiki.com/files/file/2081-ucrtbasedll-extracted-from-microsoft-visual-c-2015-redistributable-update-3-rc/">ucrtbase.dll</a>”</li>
+<li>Sur la bouteille Steam, faites un clic droit &gt; Ouvrir le lecteur C: et placez la DLL sur
+<code>C:/Windows/System32</code> (il faut remplacer la DLL existante).</li>
+<li>Lancez le jeu et amusez-vous ;)</li>
+</ol>
+<p><img src="/_astro/game.CZaRkAL1_LCnYg.webp" alt="un screenshot du jeu" width="1701" height="1043" loading="lazy" decoding="async"></p>
+<aside class="my-2 rounded-r-lg border-l-4 p-5 border-[#383A40] bg-[#fdf4ba] dark:border-mainYellow dark:text-gray-500 prose-a:dark:text-gray-900 dark:prose-strong:text-gray-500 prose-code:dark:text-gray-900"> <div class="flex items-center font-semibold"> <svg aria-label="Warning" x="0px" y="0px" width="554.2px" height="554.199px" viewBox="0 0 554.2 554.199" class="relative h-6 w-6 pr-2"> <path fill="currentColor" d="M538.5,386.199L356.5,70.8c-16.4-28.4-46.7-45.9-79.501-45.9c-32.8,0-63.1,17.5-79.5,45.9L12.3,391.6
+  c-16.4,28.4-16.4,63.4,0,91.8C28.7,511.8,59,529.3,91.8,529.3H462.2c0.101,0,0.2,0,0.2,0c50.7,0,91.8-41.101,91.8-91.8
+  C554.2,418.5,548.4,400.8,538.5,386.199z M316.3,416.899c0,21.7-16.7,38.3-39.2,38.3s-39.2-16.6-39.2-38.3V416
+  c0-21.601,16.7-38.301,39.2-38.301S316.3,394.3,316.3,416V416.899z M317.2,158.7L297.8,328.1c-1.3,12.2-9.4,19.8-20.7,19.8
+  s-19.4-7.7-20.7-19.8L237,158.6c-1.3-13.1,5.801-23,18-23H299.1C311.3,135.7,318.5,145.6,317.2,158.7z"></path> </svg> Heads-up! </div> <p>Le jeu ne fonctionne pas avec Crossover v22. Pensez à bien utiliser la version 23
+(<a href="https://www.codeweavers.com/compatibility/crossover/forum/age-of-empires-ii-definitive-edition?;msg=278919#c35">details</a>).</p> </aside>
+<h2 id="option-2---geforce-now">Option 2 - GeForce NOW</h2>
+<p>GeForce NOW est la plateforme de cloud gaming de Nvidia. Techniquement, le jeu ne fonctionnera pas
+sur votre Mac mais sur une machine distante. Avec une bonne connexion internet, vous le remarquerez
+à peine. Les étapes pour lancer le jeu est assez simples :</p>
+<ol>
+<li><a href="https://www.nvidia.com/en-us/geforce-now/download/">Téléchargez GFN pour Mac OS</a></li>
+<li>Créez un compte GFN, connectez votre compte Steam.</li>
+<li>Sélectionnez le jeu et cliquez sur “Play”.</li>
+</ol>
+<p>J’ai essayé, avec mon compte (sur un forfait freemium on peut jouer jusqu’à 1h/jour). J’ai été
+agréablement surpris de voir que tous mes raccourcis clavier, mods et paramètres de jeu étaient déjà
+là.</p>
+<p>Bien que le jeu soit très fluide, les graphismes ne sont pas optimaux (peut-être que la version
+payante améliore le rendu).</p>
+<h2 id="raccourcis-clavier">Raccourcis clavier</h2>
+<p>Avant de commencer, gardez à l’esprit que les raccourcis clavier sont personnels. J’ai étendu les
+raccourcis clavier par défaut pour qu’ils correspondent à mes préférences. Notez aussi que j’utilise
+un clavier international <em>(qwerty)</em>.</p>
+<p>Voici ce que j’ai :</p>
+<p><img src="/_astro/hotkeys.GCcUAUJJ_ZlUA24.webp" alt="Age of Empire 2 Hotkeys" width="1807" height="745" loading="lazy" decoding="async"></p>
+<p>Je suis une logique suivante : si <code>A</code> c’est la touche de ma caserne, alors <code>ctrl + A</code> correspond à
+“Aller à la caserne” et <code>maj + A</code> correspond à “Sélectionner toutes les casernes”.</p>
+<p>Pour faire des “quick walls”, j’utilise les touches <code>Q</code> et <code>Y</code> qui sont aussi associées à la
+commande “construction du villageois”.</p>
+<p>J’utilise les boutons de ma souris pour :</p>
+<ul>
+<li>Molette + haut / bas - Prochaine unité militaire inactive / Arrêt de l’unité. (J’utilise aussi la
+molette pour les faire tourner les portes)</li>
+<li>Bouton supplémentaire 1 - Sélectionner tous les TC</li>
+<li>Bouton supplémentaire 2 - Allez voir le prochain villageois inactif</li>
+<li>Bouton supplémentaire 3 - Aller à la dernière notification (ou P)</li>
+</ul>
+<p>Votre fichier de raccourcis sera disponible ici:
+<code>/Users/{MACOS_USER}/Library/Application Support/CrossOver/Bottles/Steam/drive_c/users/crossover/Games/Age of Empires 2 DE/{YOUR_STEAM_ID}/</code></p>
+<h2 id="mods">Mods</h2>
+<p>Encore une fois, c’est aussi quelque chose de très personnel. Mais voici les mods que j’utilise :</p>
+<ul>
+<li>Advanced Idle Pointer</li>
+<li>No more plants</li>
+<li>Short walls</li>
+<li>Anne_HK - New Fish Border</li>
+<li>Anne_HK - Better Resource Panel and Idle Villager Icon</li>
+<li>Anne_HK - Bigger and Eye-catching Relic</li>
+<li>Anne_HK - Selected Small Trees with Grid Shadow</li>
+</ul> <div> <hr> <h2 class="dark:text-gray-100">About the author</h2> <div class="flex flex-col md:flex-row items-center gap-5 md:gap-8 mt-5"> <div class="relative flex-shrink-0 h-32 w-32"> <img src="/_astro/profile-picture.gF0h5NUU_Zw8iDo.webp" class="not-prose h-32 w-32 object-cover rounded-full" alt="Maxence Poutord Profile picture" width="128" height="128" loading="lazy" decoding="async"> </div> <div> <p class="!mt-0 pb-2">
+Hey, I'm Maxence Poutord, a passionate software engineer. In my
+        day-to-day job, I'm working as a senior front-end engineer at Orderfox.
+        When I'm not working, you can find me travelling the world or cooking.
+</p> <a class="not-prose inline-flex rounded border
+    font-semibold no-underline
+    transition-colors duration-200 ease-in-out px-3 py-2
+    border-[#1da1f2] bg-[#1da1f2] text-white
+    hover:border-[#1da1f2] hover:bg-white hover:text-[#1da1f2]" rel="noopener" target="_blank" href="https://twitter.com/intent/follow?screen_name=_maxpou"> <svg aria-label="Twitter" viewBox="0 0 24 24" width="1em" height="1em" class="h-6 w-6 pr-2"><path fill="currentColor" d="M23.954 4.569a10 10 0 0 1-2.825.775 4.958 4.958 0 0 0 2.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 0 0-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 0 0-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 0 1-2.228-.616v.061a4.923 4.923 0 0 0 3.946 4.827 4.996 4.996 0 0 1-2.212.085 4.937 4.937 0 0 0 4.604 3.417 9.868 9.868 0 0 1-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0 0 7.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 0 0 2.46-2.548l-.047-.02z"></path></svg>
+Follow @_maxpou
+ </a> </div> </div> </div>  </div>  <div> <h2 class="text-2xl underline mt-12 font-bold dark:text-mainYellow">
+Recommended posts
+</h2> <div class="grid grid-cols-1 gap-4 md:grid-cols-2 mt-6"> <a title="Lessons Learned by Maintaining a Large Codebase" href="/blog/lesson-learned-maintaining-large-vue-js-codebase/" class="ease flex flex-col rounded-lg bg-white transition duration-300 dark:bg-gray-500 hover:translate-y-0.5 shadow-md  hover:shadow-xl group"> <picture> <source srcset="/_astro/cover.VzeiStI0_KJHfA.webp" type="image/webp"><source srcset="/_astro/cover.VzeiStI0_V3X6q.avif" type="image/avif"><source srcset="/_astro/cover.VzeiStI0_Z7vrz7.jpeg" type="image/jpeg"> <img src="/_astro/cover.VzeiStI0_Iinja.jpg" alt="Cover picture for Lessons Learned by Maintaining a Large Codebase" class="h-56 w-full rounded-b-none rounded-t-lg object-cover transition" width="420" height="224" loading="lazy" decoding="async"> </picture> <div class="p-4"> <header class="text-xl font-semibold text-gray-700 dark:text-gray-100"> <span class="inline">  <!-- {post.data.title} --> <span class="from-blue-100 to-blue-100 text-dark dark:bg-none
+           bg-gradient-to-r bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]"> Lessons Learned by Maintaining a Large Codebase </span> </span> </header> <p class="date text-gray-400 dark:text-gray-100"> <time datetime="2021-04-15T00:00:00.000Z"> 15 April 2021 </time> </p> </div> </a><a title="Vue.js Testing Made it Easy (with Testing Library)" href="/blog/vue-js-testing-library/" class="ease flex flex-col rounded-lg bg-white transition duration-300 dark:bg-gray-500 hover:translate-y-0.5 shadow-md  hover:shadow-xl group"> <picture> <source srcset="/_astro/cover.BQNQ0oHj_ZGjvpB.webp" type="image/webp"><source srcset="/_astro/cover.BQNQ0oHj_Z1YEN91.avif" type="image/avif"><source srcset="/_astro/cover.BQNQ0oHj_Z20oYie.jpeg" type="image/jpeg"> <img src="/_astro/cover.BQNQ0oHj_uWphl.jpg" alt="Cover picture for Vue.js Testing Made it Easy (with Testing Library)" class="h-56 w-full rounded-b-none rounded-t-lg object-cover transition" width="420" height="224" loading="lazy" decoding="async"> </picture> <div class="p-4"> <header class="text-xl font-semibold text-gray-700 dark:text-gray-100"> <span class="inline">  <!-- {post.data.title} --> <span class="from-blue-100 to-blue-100 text-dark dark:bg-none
+           bg-gradient-to-r bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]"> Vue.js Testing Made it Easy (with Testing Library) </span> </span> </header> <p class="date text-gray-400 dark:text-gray-100"> <time datetime="2020-06-11T00:00:00.000Z"> 11 June 2020 </time> </p> </div> </a> </div> </div>  </div> </article>  </main> <footer class="bg-blue-50 dark:bg-gray-600 dark:text-white w-full mx-auto pb-0" data-astro-cid-sz7xmlte> <div class="m-auto flex w-[1024px] max-w-full flex-wrap justify-between" data-astro-cid-sz7xmlte> <div class="w-full pb-4 md:w-auto flex-auto" data-astro-cid-sz7xmlte> <p class="pb-1 font-bold" data-astro-cid-sz7xmlte>
+&copy; 2014 - 2024 - Maxence Poutord </p> <p data-astro-cid-sz7xmlte>Built with Astro, Tailwind and some ☕️</p> <p data-astro-cid-sz7xmlte>
+Hosted with <span class="text-red-500" data-astro-cid-sz7xmlte>❤</span> by <a class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" href="https://github.com/maxpou/maxpou.fr" data-astro-cid-sz7xmlte>GitHub</a>.
+</p> </div> <div class="flex-auto" data-astro-cid-sz7xmlte> <h3 class="pb-1 font-bold" data-astro-cid-sz7xmlte>Explore</h3> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte> <a href="/uses" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Uses </a> </li><li data-astro-cid-sz7xmlte> <a href="/recipes" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Recipes (kitchen) </a> </li><li data-astro-cid-sz7xmlte> <a href="/about" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> About </a> </li><li data-astro-cid-sz7xmlte> <a href="/cv" target="_blank" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Resume (cv) </a> </li><li data-astro-cid-sz7xmlte> <a href="/readme" target="_self" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Readme </a> </li> </ul> </div> <div class="flex-auto" data-astro-cid-sz7xmlte> <h3 class="pb-1 font-bold flex-auto" data-astro-cid-sz7xmlte>Let's connect</h3> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte> <a href="https://github.com/maxpou" rel="noopener noreferrer" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> GitHub </a> </li><li data-astro-cid-sz7xmlte> <a href="https://twitter.com/_maxpou" rel="noopener noreferrer" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> Twitter </a> </li><li data-astro-cid-sz7xmlte> <a href="https://www.linkedin.com/in/maxpou/" rel="noopener noreferrer" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> LinkedIn </a> </li><li data-astro-cid-sz7xmlte> <a href="/rss.xml" class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow" data-astro-cid-sz7xmlte> RSS feed </a> </li> </ul> </div> </div>  </footer>  </body> </html>
