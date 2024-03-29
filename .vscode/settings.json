@@ -1,6 +1,16 @@
 {
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "prettier.documentSelectors": ["**/*.astro"],
-  "tailwindCSS.classAttributes": ["class", "class:list", "className", "ngClass"]
+  "tailwindCSS.classAttributes": [
+    "class",
+    "class:list",
+    "className",
+    "ngClass"
+  ],
+  "editor.defaultFormatter": "biomejs.biome",
+  "[mdx]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

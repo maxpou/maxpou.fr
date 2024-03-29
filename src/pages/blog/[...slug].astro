@@ -1,10 +1,10 @@
 ---
 import { getCollection } from 'astro:content'
-import BlogPost from '../../layouts/BlogPost.astro'
-import Prose from '../../components/Prose.astro'
-import AboutAuthor from '../../components/AboutAuthor.astro'
 import type { InferGetStaticPropsType } from 'astro'
+import AboutAuthor from '../../components/AboutAuthor.astro'
 import BlogCard from '../../components/BlogCard.astro'
+import Prose from '../../components/Prose.astro'
+import BlogPost from '../../layouts/BlogPost.astro'
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog')

@@ -1,7 +1,7 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content'
-import Page from '../../layouts/Page.astro'
 import Prose from '../../components/Prose.astro'
+import Page from '../../layouts/Page.astro'
 
 export async function getStaticPaths() {
   const recipes = await getCollection('recipes')

@@ -1,8 +1,8 @@
-import fs from 'fs'
-import path from 'path'
+import fs from 'node:fs'
+import path from 'node:path'
 import { getCollection } from 'astro:content'
-import { ImageResponse } from '@vercel/og'
 import type { ImageFunction, z } from 'astro:content'
+import { ImageResponse } from '@vercel/og'
 import type { ReactNode } from 'preact/compat'
 
 type AstroImage = z.infer<ReturnType<ImageFunction>>

@@ -5,10 +5,7 @@
   "version": "1.0.0",
   "author": "Maxence Poutord <maxence.poutord@gmail.com>",
   "homepage": "https://www.maxpou.fr",
-  "keywords": [
-    "Astro",
-    "blog"
-  ],
+  "keywords": ["Astro", "blog"],
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -24,7 +21,7 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "format": "prettier --write .",
+    "format": "biome check --apply src/ scripts/",
     "astro": "astro"
   },
   "dependencies": {
@@ -45,7 +42,7 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
-    "prettier": "^3.2.4",
-    "prettier-plugin-astro": "^0.13.0"
+    "@biomejs/biome": "1.6.3",
+    "prettier": "^3.2.5"
   }
 }

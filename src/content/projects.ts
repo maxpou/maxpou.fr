@@ -1,5 +1,5 @@
-import MorningDewImg from '../assets/projects/morning-dew.png'
 import DockerSymfonyImg from '../assets/projects/docker-symfony.png'
+import MorningDewImg from '../assets/projects/morning-dew.png'
 import MaxpouFrImg from '../assets/projects/website.jpg'
 
 export const projects = [
