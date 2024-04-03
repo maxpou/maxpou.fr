@@ -64,6 +64,7 @@ export function getLegacyPostRedirections(): Record<string, string> {
 
   return legacyPostsUrls.reduce((acc, legacyUrl) => {
     return {
+      // biome-ignore lint/performance/noAccumulatingSpread: <explanation>
       ...acc,
       [legacyUrl]: `/blog/${legacyUrl}`,
     }

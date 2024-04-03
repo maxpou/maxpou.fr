@@ -2,6 +2,7 @@ import React from 'preact'
 
 const Email = props => (
   <svg
+    role="img"
     aria-hidden="true"
     data-prefix="far"
     data-icon="envelope"

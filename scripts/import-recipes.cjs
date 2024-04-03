@@ -1,7 +1,7 @@
 const { Client } = require('@notionhq/client')
 const { NotionToMarkdown } = require('notion-to-md')
-const fs = require('fs')
-var http = require('https')
+const fs = require('node:fs')
+const http = require('node:https')
 
 const notion = new Client({
   auth: 'secret_VMuj8eNDHEfJp39DM0PWJTVtcZ9XnzTHPlZGGBHVd7y',
@@ -43,12 +43,11 @@ const getBlocks = async blockId => {
 
 const download = (url, destination) => {
   const fileStream = fs.createWriteStream(destination)
-  http.get(url, function (response) {
+  http.get(url, response => {
     response.pipe(fileStream)
     console.log('👨‍🍳 File downloaded', destination)
   })
 }
-
 ;(async () => {
   fs.rmdirSync('./src/content/recipes', { recursive: true })
   fs.mkdirSync('./src/content/recipes')
@@ -64,9 +63,9 @@ const download = (url, destination) => {
     const cleanBlocks = blocks.map((block, i) => {
       if (block.type === 'image') {
         const imgFileName = `${fileName}-${i}.jpg`
-        const destination = './src/content/recipes/assets/' + imgFileName
+        const destination = `./src/content/recipes/assets/${imgFileName}`
         download(block.image.file.url, destination)
-        block.image.file.url = './assets/' + imgFileName
+        block.image.file.url = `./assets/${imgFileName}`
       } else if (block.type === 'numbered_list_item') {
         olCounter =
           blocks[i - 1]?.type === 'numbered_list_item' ? olCounter + 1 : 1
@@ -81,7 +80,7 @@ const download = (url, destination) => {
     page.cover &&
       download(
         page.cover.file.url,
-        './src/content/recipes/assets/' + coverFileName,
+        `./src/content/recipes/assets/${coverFileName}`,
       )
 
     const header = `---

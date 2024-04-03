@@ -1,8 +1,8 @@
 ---
-import { getCollection } from 'astro:content'
 import { Image } from 'astro:assets'
-import Layout from '../../components/Layout.astro'
+import { getCollection } from 'astro:content'
 import FormattedDate from '../../components/FormattedDate.astro'
+import Layout from '../../components/Layout.astro'
 import PageTitle from '../../components/PageTitle.astro'
 
 const recipes = (await getCollection('recipes')).sort(

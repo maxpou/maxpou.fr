@@ -2,6 +2,7 @@ import React from 'preact'
 
 const Pdf = props => (
   <svg
+    role="img"
     aria-label="PDF"
     x="0px"
     y="0px"

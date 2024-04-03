@@ -1,15 +1,15 @@
 ---
 import { Image } from 'astro:assets'
-import BaseHead from '../components/BaseHead.astro'
-import { cvData } from '../content/cv'
 import qrCode from '../assets/qr-code.png'
+import BaseHead from '../components/BaseHead.astro'
 import EmailIcon from '../components/icons/Email'
 import GithubIcon from '../components/icons/Github'
 import LinkedinIcon from '../components/icons/Linkedin'
+import PdfIcon from '../components/icons/Pdf'
+import PrinterIcon from '../components/icons/Printer'
 import TwitterIcon from '../components/icons/Twitter'
 import WebIcon from '../components/icons/web'
-import PrinterIcon from '../components/icons/Printer'
-import PdfIcon from '../components/icons/Pdf'
+import { cvData } from '../content/cv'
 
 function cleanupUrl(url: string) {
   return url.replace('http://', '').replace('https://', '').replace('www.', '')

@@ -2,6 +2,7 @@ import React from 'preact'
 
 const Github = props => (
   <svg
+    role="img"
     aria-label="GitHub"
     viewBox="0 0 24 24"
     width="1em"

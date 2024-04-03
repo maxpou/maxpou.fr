@@ -2,6 +2,7 @@ import React from 'preact'
 
 const Printer = props => (
   <svg
+    role="img"
     aria-label="Printer"
     x="0px"
     y="0px"

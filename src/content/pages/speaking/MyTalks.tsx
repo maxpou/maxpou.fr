@@ -1,6 +1,6 @@
 import React, { type JSX } from 'preact'
 
-import { talks, trainingsAndWorkshops, presentations } from '../../talks'
+import { presentations, talks, trainingsAndWorkshops } from '../../talks'
 
 function Talks(): JSX.Element {
   return (

@@ -1,12 +1,12 @@
 ---
-import { getCollection } from 'astro:content'
 import { Image } from 'astro:assets'
+import { getCollection } from 'astro:content'
+import ProfilePicture from '../assets/profile-picture.jpeg'
+import BlogCard from '../components/BlogCard.astro'
 import Layout from '../components/Layout.astro'
 import Prose from '../components/Prose.astro'
-import { SITE_DESCRIPTION } from '../consts'
-import BlogCard from '../components/BlogCard.astro'
-import ProfilePicture from '../assets/profile-picture.jpeg'
 import GithubIcon from '../components/icons/Github'
+import { SITE_DESCRIPTION } from '../consts'
 import { projects } from '../content/projects'
 
 const posts = (await getCollection('blog'))
