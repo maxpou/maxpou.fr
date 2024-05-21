@@ -1,5 +1,8 @@
 ---
 title: 'Typical JavaScript interview exercises (explained)'
+description:
+  'Level up your JavaScript interview skills! This post tackles common exercises, offering clear
+  explanations to help you ace the coding challenge.'
 language: en
 cover: ./banner.jpg
 slug: js-exercises-explained

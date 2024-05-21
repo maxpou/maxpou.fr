@@ -3,6 +3,9 @@ title: 10 Tips for Working From Home
 slug: 10-tips-for-working-from-home
 date: 2020-03-15
 language: en
+description:
+  "Since the pandemic, most developers have been forced to work from home. I've been working
+  remotely for over 2 years now. Here are some tips to make this period a little bit less painful."
 cover: ./cover.jpeg
 tags: ['remote']
 translations:

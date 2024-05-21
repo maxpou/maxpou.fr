@@ -1,6 +1,9 @@
 ---
 title: No more for/while loop in JavaScript
-tags: ['JavaScript', 'FunctionalProgramming']
+description:
+  'Some alternatives to traditional for/while loops in JavaScript. Also how to address set theory
+  with array of objects (union, intersection and difference).'
+tags: ['JavaScript', 'FunctionalProgramming', 'Architecture']
 slug: no-more-loop-in-js
 date: 2017-03-13
 language: en

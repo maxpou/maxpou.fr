@@ -1,6 +1,9 @@
 ---
 title: 'Immutability in JavaScript (without library)'
 cover: ./banner.jpg
+description:
+  'A deep dive into JS immutability, guiding you on how to achieve it without relying on external
+  libraries.'
 slug: immutability-js-without-library
 language: en
 date: 2017-10-16
@@ -16,7 +19,7 @@ but I didn't gave a try. 6 months later, after another talk, I decided to learn 
 paradigm. It changed my way of writing code, mostly, when I started to adopt Immutability as a rule
 of thumb.
 
-## Immutability? Kezako?
+## Immutability? What's that?
 
 If you follow the JavaScript trends, you probably heard about **functional programming**. It's
 getting popular since the ES2015 version of JavaScript. Immutability is one pillar of this paradigm.

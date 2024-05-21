@@ -10,7 +10,7 @@ cover: ./header.png
 # Vagrant, Symfony and Windows are not incompatibles
 
 At work, I'm using Vagrant on my Windows 10 because Docker really sucks on windows :(  
-So after promote [PuPHPet](https://puphpet.com/), I'm now using
+So after promoting [PuPHPet](https://puphpet.com/), I'm now using
 [Scotch Box](https://box.scotch.io/).
 
 In a few words, this is some features already in this box:
@@ -25,8 +25,8 @@ In a few words, this is some features already in this box:
 
 It is a good base.  
 For my needs, I pimp this box (take a look on
-[my fork (on GitHub)](https://github.com/maxpou/scotch-box)). I found it pretty cool on my own
-linux... but on my Windows, it's **really SLOW!**
+[my fork (on GitHub)](https://github.com/maxpou/scotch-box)). I found it pretty cool on my linux...
+but on my Windows, it's **really SLOW!**
 
 ![funny snail gif](./snail-1.gif)
 
@@ -136,8 +136,8 @@ alias cache-clear='rm -rf /dev/shm/application-name/cache/'
 alias cplogs='cp -R /dev/shm/application-name/logs /var/www/application-name/public/app'
 ```
 
-And... tadaaaa! It took Some hundred milliseconds ♥ (I also add some SQL request to MySQL... just
-for fun).
+And... tadaaaa! It took Some hundred milliseconds ♥ (I also added some SQL requests to MySQL...
+just for fun).
 
 ![step 3](./3.png)
 

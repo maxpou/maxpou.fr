@@ -1,6 +1,7 @@
 ---
 title: 'How to mock Date with Jest'
 slug: jest-mock-date
+description: 'A guide on how to deal with unit tests that uses the JavaScript Date object.'
 cover: ./cover.jpg
 language: en
 date: 2019-11-18

@@ -1,6 +1,9 @@
 ---
 title: 3 Tips for Scaling Large Vue.js Application
 slug: 3-tips-scaling-vue-application
+description:
+  "1. Split your application into completely isolated modules. 2. Consider micro-frontends
+  architecture. 3. Don't put everything in the Vuex Store"
 cover: ./cover.jpg
 language: en
 date: 2018-12-13
@@ -134,10 +137,11 @@ export default new Router({
     {
       path: '/catalog',
       name: 'catalog',
-      component: () => import(/* webpackChunkName: "catalog" */ './modules/Catalog/views/Catalog.vue')
+      component: () =>
+        import(/* webpackChunkName: "catalog" */ './modules/Catalog/views/Catalog.vue'),
     },
     // ...
-  ]
+  ],
 })
 ```
 

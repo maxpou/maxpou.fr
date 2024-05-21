@@ -1,5 +1,6 @@
 ---
 title: 'Digital Nomad: the Golden Ticket?'
+description: "Don't trust the influencers. Working from the beach doesn't work."
 slug: busting-nomad-myths
 language: en
 date: 2019-06-27

@@ -1,6 +1,7 @@
 ---
 title: 'How to generate social share images with Gatsby'
 slug: generate-social-image-share-with-gatsby
+description: 'How I created dynamic Open Graph images for my Gatsby website'
 language: en
 cover: ./cover.jpeg
 date: 2020-01-20

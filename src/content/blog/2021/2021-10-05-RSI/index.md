@@ -1,5 +1,6 @@
 ---
-title: My Journey with RSI (as a Software Engineer)
+title: 'My Journey with RSI (as a Software Engineer)'
+description: 'Some strategies I implemented to overcoming Repetitive Strain Injury (RSI)'
 slug: rsi-as-developer
 date: 2021-10-05
 cover: ./cover.jpeg

@@ -1,6 +1,7 @@
 ---
 title: 'async/await without try...catch!'
 slug: async-await-without-try-catch
+description: A cool wrapper to write promises without using a try...catch block
 language: en
 date: 2020-05-25
 cover: ./cover.jpeg

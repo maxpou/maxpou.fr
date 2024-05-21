@@ -1,6 +1,7 @@
 ---
 title: Enhance your git log with conventional commits
 slug: git-conventional-commits
+description: Standards to write more explicit commits messages.
 language: en
 date: 2019-03-01
 cover: ./cover.jpg
