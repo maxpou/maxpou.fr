@@ -1,0 +1,14 @@
+---
+interface Props {
+  name: string
+  link: string
+}
+
+const { name, link } = Astro.props
+---
+<a
+  href={link}
+  class="mr-2 inline-block rounded-lg bg-darkBlue px-3 py-2 text-sm text-white no-underline hover:bg-blueGreyed dark:bg-blueGreyed dark:hover:bg-darkBlue shadow-md hover:shadow-xl"
+>
+  {name}
+</a>

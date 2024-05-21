@@ -5,6 +5,7 @@ import ProfilePicture from '../assets/profile-picture.jpeg'
 import BlogCard from '../components/BlogCard.astro'
 import Layout from '../components/Layout.astro'
 import Prose from '../components/Prose.astro'
+import Tag from '../components/Tag.astro'
 import GithubIcon from '../components/icons/Github'
 import { SITE_DESCRIPTION } from '../consts'
 import { projects } from '../content/projects'
@@ -13,14 +14,28 @@ const posts = (await getCollection('blog'))
   .filter(post => !post.data.unlisted)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
 
-const highlightedPosts = posts.slice(0, 5)
+const latestPosts = posts.slice(0, 5)
+
+const highlightedPosts = (await getCollection('blog'))
+  .filter(post => !post.data.unlisted && post.data.featured)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 6)
+
+const SELECTED_TAGS = [
+  'Git',
+  'JavaScript',
+  'Testing',
+  'Vue.js',
+  'Architecture',
+  'Life',
+]
 ---
 
 <Layout
   title={'Maxence Poutord - Software engineer • Technical speaker • Nomadic worker'}
   description={SITE_DESCRIPTION}
   seo={{
-    type: 'website',
+    type: 'website'
   }}
 >
   <Prose>
@@ -45,10 +60,24 @@ const highlightedPosts = posts.slice(0, 5)
       </div>
     </div>
 
-    <h2>Recently Published</h2>
-    <div class="not-prose grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+    <h2>Featured Posts</h2>
+    <div class="not-prose grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
       {
         highlightedPosts.map(post => (
+          <BlogCard post={post} firstBigger={false} />
+        ))
+      }
+    </div>
+
+    <h2>Recently Published</h2>
+    <div class="not-prose flex flex-wrap items-center gap-2 mb-6">
+      {SELECTED_TAGS.map(tag => (
+        <Tag name={tag} link={`/tags/${tag}`} />
+      ))}
+    </div>
+    <div class="not-prose grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {
+        latestPosts.map(post => (
           <BlogCard post={post} firstBigger={false} />
         ))
       }
@@ -65,7 +94,7 @@ const highlightedPosts = posts.slice(0, 5)
     </div>
 
     <h2>Featured Projects</h2>
-    <div class="not-prose grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+    <div class="not-prose grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
       {
         projects.map(({ name, image, description, url }) => (
           <a

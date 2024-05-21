@@ -31,7 +31,7 @@ const posts = (await getCollection('blog'))
     <h2 class="pb-4 text-2xl font-bold dark:text-white">
       Looking for something to read?
     </h2>
-    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
       {posts.map(p => <BlogCard post={p} />)}
     </div>
   </div>
