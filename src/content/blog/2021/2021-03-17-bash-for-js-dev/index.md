@@ -1,6 +1,7 @@
 ---
 title: Bash for developers
 slug: bash-for-dev
+description: 'Essential bash commands and time-saving aliases to simplify your daily tasks'
 date: 2021-03-17
 cover: ./cover.png
 language: en

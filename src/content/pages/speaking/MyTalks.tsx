@@ -6,13 +6,13 @@ function Talks(): JSX.Element {
   return (
     <ul>
       {talks.map(talk => (
-        <li>
+        <li key={talk.link}>
           <a href={talk.link} target="_blank" rel="noopener noreferrer">
             {talk.title}
           </a>
           <ul>
-            {talk.events.map(event => (
-              <li>
+            {talk.events.map((event, i) => (
+              <li key={event.eventName}>
                 {'🗓 '}
                 {event.date}, {event.eventName} — {event.city}
                 {event.link && (
@@ -34,7 +34,7 @@ function TrainingsAndWorkshops(): JSX.Element {
   return (
     <ul>
       {trainingsAndWorkshops.map(educational => (
-        <li>
+        <li key={educational.url}>
           <a href={educational.url} target="_blank" rel="noopener noreferrer">
             {educational.title}
           </a>
@@ -56,7 +56,7 @@ function Presentations(): JSX.Element {
   return (
     <ul>
       {presentations.map(presentation => (
-        <li>
+        <li key={presentation.url}>
           <a href={presentation.url} target="_blank" rel="noopener noreferrer">
             {presentation.title}
           </a>

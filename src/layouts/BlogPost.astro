@@ -5,6 +5,7 @@ import FormattedDate from '../components/FormattedDate.astro'
 import HeroImage from '../components/HeroImage.astro'
 import Layout from '../components/Layout.astro'
 import PageTitle from '../components/PageTitle.astro'
+import Tag from '../components/Tag.astro'
 import { SITE_OWNER } from '../consts'
 
 type Props = CollectionEntry<'blog'>
@@ -68,12 +69,7 @@ const formattedTranslations = formatBlogTranslation(translations)
         {
           tags.map(tag => {
             return (
-              <a
-                href={`/tags/${tag}`}
-                class="mr-2 inline-block rounded-lg bg-darkBlue px-3 py-2 text-sm text-white no-underline hover:bg-blueGreyed dark:bg-blueGreyed dark:hover:bg-darkBlue"
-              >
-                {tag}
-              </a>
+              <Tag name={tag} link={`/tags/${tag}`} />
             )
           })
         }

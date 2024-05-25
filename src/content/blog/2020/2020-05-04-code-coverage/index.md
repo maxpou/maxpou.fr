@@ -1,5 +1,8 @@
 ---
 title: "Why you shouldn't pay too much attention to your code coverage"
+description:
+  "High code coverage doesn't guarantee quality: You can write tests that cover every line but miss
+  edge cases or core functionality."
 slug: code-coverage
 date: 2020-05-04
 language: en

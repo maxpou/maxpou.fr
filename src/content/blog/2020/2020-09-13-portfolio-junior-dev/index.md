@@ -1,6 +1,8 @@
 ---
 title: 'Tips for your GitHub Portfolio'
 slug: tips-for-your-github-portfolio
+description:
+  'Showcasing your work can help you land your dream job. But you have to follow a few simple rules.'
 language: en
 date: 2020-10-14
 cover: ./cover.jpg

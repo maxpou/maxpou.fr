@@ -29,7 +29,7 @@ const { Content } = await post.render()
     <h2 class="text-2xl underline mt-12 font-bold dark:text-mainYellow">
       Recommended posts
     </h2>
-    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 mt-6">
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 mt-6">
       {
         featuredPosts
           .sort(() => 0.5 - Math.random()) // shuffle

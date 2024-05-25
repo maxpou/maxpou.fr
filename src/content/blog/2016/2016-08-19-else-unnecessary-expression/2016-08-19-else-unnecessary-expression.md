@@ -1,5 +1,6 @@
 ---
 title: '"Else": the unnecessary expression'
+description: 'How to write code without the traditional "else"'
 slug: else-unnecessary-expression
 date: 2016-08-19
 language: en
@@ -7,16 +8,16 @@ cover: ./header.jpg
 tags: ['Architecture']
 ---
 
-First time I was using PHP Mess Detector (a PHP Quality Tool), I was very surprise. Because, when I
-type an **Else expression, it raises an error** which it said: _"An if expression with an else
-branch is never necessary"_. What the f\*\*\*, I have never seen something like this before.
+The first time I was using PHP Mess Detector (a PHP Quality Tool), I was very surprised. Because,
+when I type an **Else expression, it raises an error** which it said: _"An if expression with an
+else branch is never necessary"_. What the f\*\*\*, I have never seen something like this before.
 
-Indeed, this principle came from Jeff BAY in **Object Calisthenics**, an exercise-chapter from the
-**The ThoughWorks Anthology** (written by many well-known programmers like Martin FOWLER). In this
-chapter, Jeff BAY define 9 rules to write better software. _Avoid else expression_ is one of them.
+Indeed, this principle came from Jeff BAY in **Object Calisthenics**, an exercise-chapter from **The
+ThoughWorks Anthology** (written by many well-known programmers like Martin FOWLER). In this
+chapter, Jeff BAY defined 9 rules for writing better software. _"Avoid else expression"_ is one of
+them.
 
-> Whaaaaaaaaaaaaaaaaaaaaaaaaaaaaaat?!  
-> — **one of my colleague** when I say 'Else is unnecessary'
+Let's see how we can write code without the traditional "else".
 
 ## Solution 1: reorder your code
 
@@ -70,10 +71,10 @@ And tadaaaa! `else` condition disappears!
 > Ok, you're kind but this example is very easy. Trust me, I write specific code and I can't drop
 > else! — **one of my colleague**
 
-That was my colleague response when I talk about this. But you know, every developer write specific
-code (in 2016, CRUD are generated). If you don't, I'm sorry for you!  
-So, sometimes it's difficult to avoid this expression. Most of times, it came from another problem:
-**you don't know design patterns**.
+That was my colleague's answer when I mentioned this. But you know, every developer writes specific
+code (in 2016, CRUD were generated). If you don't, I'm sorry for you!  
+So, sometimes it's difficult to avoid this expression. Most of the time, it came from another
+problem: **design patterns misknowledge**.
 
 ## Solution 2: State Pattern
 
@@ -91,7 +92,7 @@ if ($car->isStarted()) {
 }
 ```
 
-First of all, replace this conditions by a `switch` statement. It's pretty much the same, but a
+First of all, replace these conditions with a `switch` statement. It's pretty much the same, but a
 little bit more readable.  
 And then, you should use the **State Pattern**.
 
@@ -188,8 +189,8 @@ $myTestcar = new Car(new >WhateverCarState());
 $myTestcar->move();
 ```
 
-**Nb:** Instead of creating an AbstractCarState, you can simply implement the CarStateInterface for
-all of your XXXCarState.
+**Nb:** Instead of creating an AbstractCarState, you can implement the CarStateInterface for all of
+your XXXCarState.
 
 ## Solution 3: Strategy Pattern
 
@@ -321,7 +322,7 @@ class Service
 }
 ```
 
-And this is how does it works:
+This is how it works:
 
 ```php
 <?php
@@ -338,12 +339,12 @@ As far as I'm concerned, I prefer this pattern when he's combined with patterns 
 ## Conclusion
 
 I apply this principle every day. And now 90% of my if blocks, does not contain any else expression!
-(yeah, I am lazy sometime ;-)). Most of time, the first solution is the solution. Take care,
-sometimes too much design patterns lead your application to **overengineering**. First, make sure
+(yeah, I am lazy sometimes ;-)). Most of the time, the first solution is the solution. Take care,
+sometimes too many design patterns lead your application to **over-engineering**. First, make sure
 it's relevant and remember: **pragmatism over theory**.
 
 ![overengineering](./overengineering.jpg)
 
-Oh, by the way, I implement this patterns
+Oh, by the way, I implement these patterns
 [in a Github repository](https://github.com/maxpou/design-pattern-php). You can take a look, it's
 fully tested!

@@ -1,6 +1,7 @@
 ---
 title: 'How to mock Axios HTTP calls with Jest'
 slug: jest-mock-axios-calls
+description: 'How to unit test components that have HTTP calls.'
 cover: ./cover.jpeg
 language: en
 date: 2020-06-09

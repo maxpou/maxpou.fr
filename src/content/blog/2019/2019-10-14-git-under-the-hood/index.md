@@ -1,6 +1,7 @@
 ---
-title: "What's happens when you `git commit`"
+title: What's happens when you "git commit"
 slug: git-under-the-hood
+description: 'Understanding the Git Folder Structure and how git works under the hood.'
 language: en
 date: 2019-10-14
 cover: ./cover.jpg

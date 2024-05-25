@@ -1,6 +1,7 @@
 ---
 title: 'Vue.js Performance Improvement with Memoization'
 slug: vuejs-performance-improvement-with-memoization
+description: 'How I reduced the rendering of a complex component by 10 (from ~4s to ~0.3s).'
 language: en
 date: 2020-09-01
 cover: ./cover.png

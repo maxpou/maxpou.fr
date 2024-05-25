@@ -1,5 +1,7 @@
 ---
 title: Two months in Canggu as a Digital Nomad
+description:
+  'My global review and my budget breakdown after living and working remotely in Bali for 60 days'
 slug: nomad-in-canggu
 language: en
 date: 2019-03-14

@@ -1,5 +1,8 @@
 ---
 title: 10 Tips for Writing Better Tests
+description:
+  "1. Think documentation 2. Isolate your tests 3. Keep it flat 4.Only mock what you can't control
+  5. Avoid assertion in loops (forEach/...) 6..."
 slug: 10-tips-write-better-tests
 date: 2020-02-04
 language: en

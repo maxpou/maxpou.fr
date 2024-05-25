@@ -1,6 +1,7 @@
 ---
 title: 'Monorepo: is it worth jumping the bandwagon?'
 slug: monorepo-pros-and-cons
+description: 'Monorepos: beyond the hype. when and when not) to use them.'
 language: en
 date: 2020-12-11
 cover: ./cover.jpg
