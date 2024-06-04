@@ -18,7 +18,11 @@ export default function ThemeToggle({
   )
 
   const handleClick = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light')
+    const newTheme = theme === 'light' ? 'dark' : 'light'
+    setTheme(newTheme)
+    // @ts-ignore
+    typeof plausible !== 'undefined' && // @ts-ignore
+      plausible('darkModeClick', { props: { theme: newTheme } })
   }
 
   useEffect(() => {
