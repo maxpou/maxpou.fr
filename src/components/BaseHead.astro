@@ -48,7 +48,6 @@ const { title, description, translations = [], seo } = Astro.props
 
 <script
   is:inline
-  async
   defer
   data-domain="maxpou.fr"
   src="https://plausible.io/js/plausible.js"></script>
@@ -108,4 +107,6 @@ const { title, description, translations = [], seo } = Astro.props
     document.documentElement.classList.add('dark')
   }
   window.localStorage.setItem('theme', theme)
+  typeof plausible !== 'undefined'
+    && plausible('pageview', {props: {darkMode: theme !== 'light'}})
 </script>
