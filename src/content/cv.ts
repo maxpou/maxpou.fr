@@ -82,7 +82,7 @@ export const cvData = {
       activities: [
         'Migrated a web application to Typescript/React',
         'Improved performance index (50 to 90 lighthouse score)',
-        'Led the migration of the main application from a REST-style to GraphQL',
+        'Led the migration from a REST-style to GraphQL',
       ],
     },
     {
@@ -173,7 +173,7 @@ export const cvData = {
   ],
 
   interests: `
-    Canyoning (I guide group), hiking, cooking, travelling (Asia, Europe), 
+    Canyoning (I guide group), running (100km/month), hiking, cooking, travelling (Asia, Europe), 
     video games (Age of Empire II).
   `,
 }

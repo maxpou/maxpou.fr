@@ -1,5 +1,3 @@
-import React from 'preact'
-
 const Twitter = props => (
   <svg
     role="img"

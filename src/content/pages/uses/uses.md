@@ -62,7 +62,6 @@ My main browser is [Brave](https://brave.com/). I also use the following extensi
   for Accessibility audits
 - [LastPass](https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd)
   for password management
-- [Pocket (Save to Pocket)](https://chrome.google.com/webstore/detail/save-to-pocket/niloccemoadcdkdjlinkgdfekeahmflj)
 
 ## Terminal & Command Line Apps
 

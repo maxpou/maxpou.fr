@@ -80,10 +80,7 @@ const formattedTranslations = formatBlogTranslation(translations)
               {translations.map((translation, i) => {
                 return (
                   <Fragment key={`translation-${i}`}>
-                    <a href={translation.link} class="underline">
-                      {translation.language}
-                    </a>
-                    {i < translations.length - 1 ? ', ' : ''}
+                    <a href={translation.link} class="underline">{translation.language}</a>{i < translations.length - 1 ? ', ' : ''}
                   </Fragment>
                 )
               })}

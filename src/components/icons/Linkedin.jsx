@@ -1,5 +1,3 @@
-import React from 'preact'
-
 const Linkedin = props => (
   <svg
     role="img"

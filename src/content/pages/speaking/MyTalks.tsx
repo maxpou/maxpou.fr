@@ -1,4 +1,4 @@
-import React, { type JSX } from 'preact'
+import type { JSX } from 'preact'
 
 import { presentations, talks, trainingsAndWorkshops } from '../../talks'
 

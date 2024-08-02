@@ -1,5 +1,3 @@
-import React from 'preact'
-
 const Printer = props => (
   <svg
     role="img"

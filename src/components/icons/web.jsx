@@ -1,5 +1,3 @@
-import React from 'preact'
-
 const Web = props => (
   <svg
     role="img"
