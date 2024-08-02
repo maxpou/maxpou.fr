@@ -1,5 +1,3 @@
-import React from 'preact'
-
 const Email = props => (
   <svg
     role="img"

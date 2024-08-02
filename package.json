@@ -21,20 +21,20 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "format": "biome check --apply src/ scripts/",
+    "format": "biome check --write src/ scripts/",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.7.0",
-    "@astrojs/mdx": "^3.0.0",
-    "@astrojs/preact": "^3.3.0",
-    "@astrojs/rss": "^4.0.6",
-    "@astrojs/sitemap": "^3.1.4",
+    "@astrojs/check": "^0.8.1",
+    "@astrojs/mdx": "^3.1.2",
+    "@astrojs/preact": "^3.5.0",
+    "@astrojs/rss": "^4.0.7",
+    "@astrojs/sitemap": "^3.1.6",
     "@astrojs/tailwind": "^5.1.0",
     "@notionhq/client": "^2.2.14",
     "@tailwindcss/typography": "^0.5.10",
     "@vercel/og": "^0.6.2",
-    "astro": "^4.8.6",
+    "astro": "^4.11.5",
     "astro-expressive-code": "^0.32.4",
     "notion-to-md": "^3.1.1",
     "preact": "^10.19.5",
@@ -42,7 +42,7 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.7.3",
+    "@biomejs/biome": "1.8.3",
     "prettier": "^3.2.5"
   }
 }

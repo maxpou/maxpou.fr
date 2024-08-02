@@ -1,5 +1,3 @@
-import React from 'preact'
-
 const Github = props => (
   <svg
     role="img"

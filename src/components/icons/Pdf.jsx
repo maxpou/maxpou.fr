@@ -1,5 +1,3 @@
-import React from 'preact'
-
 const Pdf = props => (
   <svg
     role="img"
