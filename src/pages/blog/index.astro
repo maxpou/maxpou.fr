@@ -19,6 +19,7 @@ const page: Page<CollectionEntry<'blog'>> = {
   currentPage: 1,
   size: PAGE_SIZE,
   lastPage: Math.ceil(posts.length / PAGE_SIZE),
+  // @ts-ignore
   url: {
     current: '/blog',
     next: '/blog/pages/2',

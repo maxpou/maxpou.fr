@@ -119,15 +119,26 @@ export async function getStaticPaths() {
   const allBlogPosts = await getCollection('blog')
   const allPages = await getCollection('pages')
   const allRecipes = await getCollection('recipes')
+  const indexPage = allPages
+    .filter(page => page.slug === 'speaking')
+    .map(page => {
+      return {
+        slug: 'home',
+        data: {
+          title: 'Maxence Poutord',
+          cover: page.data.cover,
+        },
+      }
+    })[0]
 
-  return [...allBlogPosts, ...allPages, ...allRecipes].map(post => {
+  return [indexPage, ...allBlogPosts, ...allPages, ...allRecipes].map(page => {
     return {
       params: {
-        slug: post.slug,
+        slug: page.slug,
       },
       props: {
-        title: post.data.title,
-        image: post.data.cover,
+        title: page.data.title,
+        image: page.data.cover,
       },
     }
   })

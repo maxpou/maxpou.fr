@@ -16,6 +16,7 @@ interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
 const { title, description, translations = [], seo } = Astro.props
+const ogImage = seo?.ogImage ?? '/og/home.png'
 // https://developers.google.com/search/docs/specialty/international/localized-versions
 ---
 
@@ -77,11 +78,7 @@ const { title, description, translations = [], seo } = Astro.props
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta name="twitter:creator" content="_maxpou" />
-{
-  seo?.ogImage && (
-    <meta property="twitter:image" content={new URL(seo.ogImage, Astro.url)} />
-  )
-}
+<meta property="twitter:image" content={new URL(ogImage, Astro.url)} />
 
 {
   translations.length > 1 &&
