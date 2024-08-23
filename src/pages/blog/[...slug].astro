@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content'
 import type { InferGetStaticPropsType } from 'astro'
 import AboutAuthor from '../../components/AboutAuthor.astro'
 import BlogCard from '../../components/BlogCard.astro'
+import Comments from '../../components/Comments.astro'
 import Prose from '../../components/Prose.astro'
 import BlogPost from '../../layouts/BlogPost.astro'
 
@@ -24,6 +25,7 @@ const { Content } = await post.render()
   <Prose>
     <Content />
     <AboutAuthor />
+    <Comments language={post.data.language} />
   </Prose>
   <div>
     <h2 class="text-2xl underline mt-12 font-bold dark:text-mainYellow">
@@ -35,7 +37,7 @@ const { Content } = await post.render()
           .sort(() => 0.5 - Math.random()) // shuffle
           .filter(post => post.slug !== Astro.params.slug) // remove current post
           .slice(0, 2)
-          .map(post => <BlogCard post={post} firstBigger={false} />)
+          .map(post => <BlogCard post={post} firstBigger={false} showDate={false} />)
       }
     </div>
   </div>
