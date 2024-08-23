@@ -11,7 +11,7 @@ function Talks(): JSX.Element {
             {talk.title}
           </a>
           <ul>
-            {talk.events.map((event, i) => (
+            {talk.events.map(event => (
               <li key={event.eventName}>
                 {'🗓 '}
                 {event.date}, {event.eventName} — {event.city}

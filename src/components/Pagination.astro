@@ -3,8 +3,7 @@ import type { CollectionEntry } from 'astro:content'
 import type { Page } from 'astro'
 
 type Props = {
-  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-  page: Page<CollectionEntry<any>>
+  page: Page<CollectionEntry<'blog'>>
 }
 
 const { page } = Astro.props
