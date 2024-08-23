@@ -1,7 +1,7 @@
 ---
 title: La qualité logicielle et les trois petits cochons
 description: 'Un comparatif entre le conte pour enfants et la qualité logicielle'
-tags: ['Qualité logicielle', 'Gestion de projet']
+tags: []
 slug: qualite-logicielle-3-petits-cochons
 date: 2016-05-15
 language: fr

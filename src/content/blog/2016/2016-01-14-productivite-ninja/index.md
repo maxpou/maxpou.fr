@@ -6,7 +6,7 @@ description:
   pomodoro..."
 date: 2016-01-14
 language: fr
-tags: ['Productivity', 'TimeManagement']
+tags: ['Productivity']
 cover: ./abstract-5.jpg
 ---
 
