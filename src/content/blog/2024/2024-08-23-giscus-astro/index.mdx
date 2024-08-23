@@ -1,0 +1,123 @@
+---
+title: How to integrate Giscus to your Astro Blog
+description:
+  Learn how to integrate Giscus (GitHub-powered comments), into your Astro blog. How to deal with
+  dark mode and styles customization.
+date: 2024-08-23
+language: en
+cover: ./cover.jpg
+tags: ['Tools']
+---
+
+import Info from '../../../../components/MDX/Info.astro'
+
+Giscus is an open-source blog comment service, powered by GitHub Discussions. It's very similar to
+Disqus but they don't use trackers :)
+
+It took me 10-15 minutes to get it up and running on my blog.
+
+## Installation
+
+1. Follow the steps here: [https://giscus.app](https://giscus.app/)
+2. Once you have installed the GitHub App fine-tune the config;
+3. At the end, you should have some code with some `data-xxx` attributes.
+4. Create a `Comments.atro` component and copy-paste the code in it:
+
+```html title="src/components/Comments.astro"
+<section class="mx-auto mt-12">
+  <script
+    is:inline
+    src="https://giscus.app/client.js"
+    data-repo="maxpou/maxpou.fr"
+    data-repo-id="[YOUR-REPO-ID]"
+    data-category="General"
+    data-category-id="[YOUR-CATEGORY-ID]"
+    data-mapping="og:title"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
+  ></script>
+</section>
+```
+
+5\. Call the component in your blog post container:
+
+```jsx title="src/pages/blog/[...slug].astro" {9}
+---
+import Comments from '../components/Comments.astro'
+// ...
+---
+
+<BlogPost {...post}>
+  <Content />
+  <AboutAuthor />
+  <Comments/>
+</BlogPost>
+```
+
+1. Enjoy 🥳
+
+## Dark Mode
+
+If you have a dark mode button, you have to write some JS to update the theme according to the
+current mode.
+
+I use Tailwind's dark mode class strategy. Meaning, that when I switch the dark mode “ON”, my HTML
+page has a dark CSS class (`<html class="dark">`).
+
+The trick here is to listen to observe the document CSS classes and trigger a `updateGiscusTheme()`
+method to update the theme.
+
+My code looks like the following:
+
+```html title="src/components/Comments.astro"
+<section class="mx-auto mt-12">
+  <!-- ... -->
+</section>
+
+<script is:inline>
+  function updateGiscusTheme() {
+    const theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+    const iframe = document.querySelector('iframe.giscus-frame')
+    if (!iframe) return
+    iframe.contentWindow.postMessage({ giscus: { setConfig: { theme } } }, 'https://giscus.app')
+  }
+
+  const observer = new MutationObserver(updateGiscusTheme)
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] })
+
+  window.onload = () => {
+    updateGiscusTheme()
+  }
+</script>
+```
+
+<Info title="⚠️ Heads-up!">Don't forget to add the `is:inline` next to the script tag!</Info>
+
+## Custom styles
+
+Let's say you want to extend the dark style.
+
+If you want to extend a style, copy/paste the desired styles from
+[the repository](https://github.com/giscus/giscus/tree/main/styles/themes) to
+`public/giscus/dark.css`. Then you can update the `data-theme` attribute and put the URL pointing to
+your CSS file (i.e. `data-theme={${Astro.url.origin}/giscus/dark.css}`).
+
+Notes: If you have a dark mode toggle, you can do something like this:
+
+```js
+iframe.contentWindow.postMessage(
+  {
+    giscus: {
+      setConfig: { theme: `${new URL(document.URL).origin}/giscus/dark.css` },
+    },
+  },
+  'https://giscus.app',
+)
+```
