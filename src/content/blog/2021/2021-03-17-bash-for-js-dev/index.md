@@ -5,7 +5,7 @@ description: 'Essential bash commands and time-saving aliases to simplify your d
 date: 2021-03-17
 cover: ./cover.png
 language: en
-tags: ['Tips']
+tags: ['Tool']
 ---
 
 Like many developers, I use the terminal on a daily basis.
