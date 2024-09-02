@@ -6,7 +6,7 @@ description:
 language: en
 date: 2020-10-14
 cover: ./cover.jpg
-tags: ['career']
+tags: ['Career']
 ---
 
 A few weeks ago 2 people asked me the same question on Twitter: _"how do I make a better
