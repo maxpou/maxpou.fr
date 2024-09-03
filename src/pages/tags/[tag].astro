@@ -43,7 +43,7 @@ const { posts, tagId } = Astro.props
     <PageTitle>Posts tagged as {tagId}</PageTitle>
     <h2 class="py-3 text-center">#{tagId}</h2>
     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {posts.map(p => <BlogCard post={p} />)}
+      {posts.map(p => <BlogCard post={p} firstBigger={posts.length > 2} />)}
     </div>
   </div>
 </Layout>
