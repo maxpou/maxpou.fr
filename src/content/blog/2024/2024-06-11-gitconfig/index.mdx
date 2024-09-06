@@ -86,6 +86,24 @@ that you meant ”commit” and run the command 0,1 second after.
 
 Set the default branch name to `main` (instead of `master`) for all newly created repositories.
 
+## Fancy Git diff
+
+Delta is a syntax-highlighting pager for git diff. On Mac, you can install it with
+`brew install delta`.
+
+```bash
+[core]
+  pager = delta
+
+[delta]
+  line-numbers = true
+  navigate = true # use n and N to move between diff sections
+```
+
+After adding these lines, `git diff` will render like this:
+
+![Delta highlighting git diff](./delta.jpg)
+
 ## Editor
 
 ```bash
