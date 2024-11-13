@@ -40,16 +40,14 @@ const SELECTED_TAGS = [
 >
   <Prose>
     <h1 class="dark:text-mainYellow">Hello! I'm Maxence.</h1>
-    <div class="flex flex-col md:flex-row gap-5 max-w-[720px] mx-auto mt-12">
-      <div class="flex justify-center md:justify-normal">
-        <Image
-          class="not-prose h-32 w-32 min-w-32 object-cover rounded-full"
-          width={96}
-          height={96}
-          src={ProfilePicture}
-          alt="Maxence Poutord"
-        />
-      </div>
+    <div class="flex flex-col md:flex-row gap-5 max-w-[720px]  mt-12">
+      <Image
+        class="not-prose h-32 w-32 min-w-32 object-cover rounded-full"
+        width={96}
+        height={96}
+        src={ProfilePicture}
+        alt="Maxence Poutord"
+      />
       <div>
         <p class="!mt-0 text-xl">
           I am a French Software Engineer, a technical speaker and a nomadic
@@ -96,7 +94,7 @@ const SELECTED_TAGS = [
     <h2>Featured Projects</h2>
     <div class="not-prose grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
       {
-        projects.map(({ name, image, description, url }) => (
+        projects.map(({ name, image, description, url, ghIcon }) => (
           <a
             href={url}
             target="_blank"
@@ -112,7 +110,7 @@ const SELECTED_TAGS = [
             />
             <div class="p-4">
               <p class="inline-flex items-center gap-2">
-                <GithubIcon />
+                {ghIcon && <GithubIcon />}
                 {name}
               </p>
               <p class="italic text-gray-400 dark:text-gray-100">

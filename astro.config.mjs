@@ -9,6 +9,7 @@ import { getLegacyPostRedirections } from './src/utils/301'
 
 /** @type {import('astro-expressive-code').AstroExpressiveCodeOptions} */
 const astroExpressiveCodeOptions = {
+  site: 'https://www.maxpou.fr',
   themes: ['material-theme-palenight'],
   styleOverrides: {
     textMarkers: {
