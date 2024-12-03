@@ -1,18 +1,18 @@
 ---
-import TwitterIcon from '../icons/TwitterIcon'
+import Bluesky from '../icons/BlueskyIcon'
 ---
 
 <a
-  class="not-prose inline-flex rounded border
+  class="not-prose group inline-flex rounded border
     font-semibold no-underline
     transition-colors duration-200 ease-in-out px-3 py-2
-    border-[#1da1f2] bg-[#1da1f2] text-white
-    hover:border-[#1da1f2] hover:bg-white hover:text-[#1da1f2]"
+    border-blue-500 bg-blue-500 text-white
+    hover:border-blue-500 hover:bg-white hover:text-blue-500"
   rel="noopener"
   target="_blank"
-  href={`https://twitter.com/intent/follow?screen_name=_maxpou`}
+  href="https://bsky.app/profile/maxpou.bsky.social"
 >
-  <TwitterIcon class="h-6 w-6 pr-2" />
-  Follow @_maxpou
+  <Bluesky class="h-6 w-6 pr-2 pt-1 fill-white group-hover:fill-blue-600" width="24" height="24" />
+  Follow me on Bluesky
   <slot />
 </a>
