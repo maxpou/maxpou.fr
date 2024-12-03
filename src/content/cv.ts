@@ -17,7 +17,7 @@ export const cvData = {
     `,
     lastUpdate: 'January 2024',
     social: {
-      bluesky: 'https://bsky.app/profile/maxpou.bsky.social',
+      bluesky: 'https://bsky.app/profile/maxpou.fr',
       twitter: 'https://twitter.com/_maxpou',
       github: 'https://github.com/maxpou',
       linkedin: 'https://www.linkedin.com/in/maxpou',
