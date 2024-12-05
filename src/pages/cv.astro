@@ -7,9 +7,10 @@ import GithubIcon from '../components/icons/Github'
 import LinkedinIcon from '../components/icons/Linkedin'
 import PdfIcon from '../components/icons/Pdf'
 import PrinterIcon from '../components/icons/Printer'
-import TwitterIcon from '../components/icons/Twitter'
+// import TwitterIcon from '../components/icons/Twitter'
 import WebIcon from '../components/icons/web'
 import { cvData } from '../content/cv'
+import Bluesky from '../components/icons/BlueskyIcon'
 
 function cleanupUrl(url: string) {
   return url.replace('http://', '').replace('https://', '').replace('www.', '')
@@ -80,7 +81,18 @@ function cleanupUrl(url: string) {
                 {cleanupUrl(cvData.info.website)}</a
               >
             </p>
-            <p>
+            <!-- <p>
+              <a
+                href={cvData.info.social.twitter}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex flex-row items-center gap-2 hover:underline"
+              >
+                <Bluesky width="16" height="16" />
+                maxpou.fr</a
+              >
+            </p> -->
+            <!-- <p>
               <a
                 href={cvData.info.social.twitter}
                 target="_blank"
@@ -90,7 +102,7 @@ function cleanupUrl(url: string) {
                 <TwitterIcon />
                 {cleanupUrl(cvData.info.social.twitter)}</a
               >
-            </p>
+            </p> -->
             <p>
               <a
                 href={cvData.info.social.github}
