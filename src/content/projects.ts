@@ -5,7 +5,7 @@ import YoutubeMateImg from '../assets/projects/youtube-mate.jpg'
 
 export const projects = [
   {
-    name: 'Youtube-Mate',
+    name: 'YoutubeMate',
     image: YoutubeMateImg,
     description:
       'An AI assistant that generates summaries of YouTube videos and saves you precious time!',
