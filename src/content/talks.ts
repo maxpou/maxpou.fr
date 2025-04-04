@@ -212,7 +212,7 @@ export const presentations = [
     url: 'https://npm-nodesmodules.netlify.app/index.html?slideIndex=0&stepIndex=0',
   },
   {
-    title: '🇬🇧 Package management with NPM',
+    title: '🇬🇧 An introduction to GraphQL',
     details: 'Presentation for Orderfox (11/2021)',
     url: 'https://slides.maxpou.fr/GraphQL-introduction/?slideIndex=0&stepIndex=0',
   },

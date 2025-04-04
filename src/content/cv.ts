@@ -2,7 +2,7 @@ export const cvData = {
   info: {
     name: 'Maxence Poutord',
     title: 'Software Engineer',
-    email: 'hello@maxpou.fr',
+    email: 'maxence.poutord@gmail.com',
     nationality: 'French',
     age: '34',
     website: 'https://www.maxpou.fr',
