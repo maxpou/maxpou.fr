@@ -1,7 +1,8 @@
 import DockerSymfonyImg from '../assets/projects/docker-symfony.png'
 import MorningDewImg from '../assets/projects/morning-dew.png'
 import MaxpouFrImg from '../assets/projects/website.jpg'
-import YoutubeMateImg from '../assets/projects/youtube-mate.jpg'
+import YoutubeMateImg from '../assets/projects/youtube-mate.png'
+import RecipesImg from '../assets/projects/recipes.jpg'
 
 export const projects = [
   {
@@ -10,6 +11,14 @@ export const projects = [
     description:
       'An AI assistant that generates summaries of YouTube videos and saves you precious time!',
     url: 'https://www.youtube-mate.com',
+    ghIcon: false,
+  },
+  {
+    name: "Max's Kitchen",
+    image: RecipesImg,
+    description:
+      'A collection of my favorite recipes, open-sourced for everyone to enjoy.',
+    url: '/recipes',
     ghIcon: false,
   },
   {
