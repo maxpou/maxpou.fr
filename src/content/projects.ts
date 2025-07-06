@@ -3,6 +3,7 @@ import MorningDewImg from '../assets/projects/morning-dew.png'
 import MaxpouFrImg from '../assets/projects/website.jpg'
 import YoutubeMateImg from '../assets/projects/youtube-mate.png'
 import RecipesImg from '../assets/projects/recipes.jpg'
+import AvionImg from '../assets/projects/avion.png'
 
 export const projects = [
   {
@@ -11,6 +12,13 @@ export const projects = [
     description:
       'An AI assistant that generates summaries of YouTube videos and saves you precious time!',
     url: 'https://www.youtube-mate.com',
+    ghIcon: false,
+  },
+  {
+    name: 'Avion',
+    image: AvionImg,
+    description: 'Experience the thrill of flying in this 3D flight simulator.',
+    url: 'https://air-max.netlify.app',
     ghIcon: false,
   },
   {
