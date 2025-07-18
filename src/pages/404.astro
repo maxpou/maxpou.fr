@@ -1,7 +1,9 @@
 ---
+import type { JsonLdDocument } from 'jsonld'
 import BlogCard from '../components/BlogCard.astro'
 import Layout from '../components/Layout.astro'
 import PageTitle from '../components/PageTitle.astro'
+import StructuredData from '../components/StructuredData.astro'
 
 import { getCollection } from 'astro:content'
 
@@ -9,15 +11,29 @@ const posts = (await getCollection('blog'))
   .filter(post => !post.data.unlisted)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 5)
+
+const errorPageStructuredData: JsonLdDocument = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Page Not Found',
+  description: "The page you're looking for doesn't exist.",
+  url: Astro.url.toString(),
+  mainEntity: {
+    '@type': 'WebPage',
+    name: '404 Error Page',
+    description: 'Page not found error',
+  },
+}
 ---
 
 <Layout
-  title="Page Not Found"
-  description="Look like this page no longer exists..."
+  title="Page Not Found - Maxence Poutord"
+  description="The page you're looking for doesn't exist."
   seo={{
     type: 'website',
   }}
 >
+  <StructuredData data={errorPageStructuredData} />
   <div class="flex flex-col items-center">
     <span role="img" aria-label="Ghost" class="block text-[7em]">👻</span>
     <PageTitle>Page Not Found</PageTitle>
