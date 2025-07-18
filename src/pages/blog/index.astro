@@ -1,11 +1,13 @@
 ---
 import Layout from '../../components/Layout.astro'
+import StructuredData from '../../components/StructuredData.astro'
 
 import { type CollectionEntry, getCollection } from 'astro:content'
 import type { Page } from 'astro'
 import BlogCard from '../../components/BlogCard.astro'
 import Pagination from '../../components/Pagination.astro'
-import { PAGE_SIZE } from '../../consts'
+import { PAGE_SIZE, SITE_URL } from '../../consts'
+import type { JsonLdDocument } from 'jsonld'
 
 const posts = (await getCollection('blog'))
   .filter(post => !post.data.unlisted)
@@ -26,15 +28,36 @@ const page: Page<CollectionEntry<'blog'>> = {
     prev: undefined,
   },
 }
+
+const blogStructuredData: JsonLdDocument = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  name: "Maxence Poutord's Blog",
+  description: 'Articles about software development, technology, and life',
+  url: `${SITE_URL}/blog`,
+  publisher: {
+    '@type': 'Person',
+    name: 'Maxence Poutord',
+    url: SITE_URL,
+  },
+  blogPost: page.data.map(post => ({
+    '@type': 'BlogPosting',
+    headline: post.data.title,
+    description: post.data.description,
+    datePublished: post.data.date.toISOString(),
+    url: `${SITE_URL}/blog/${post.slug}`,
+  })),
+}
 ---
 
 <Layout
-  title=`Maxence Poutord's Blog - Page ${page.currentPage}`
+  title={`Maxence Poutord's Blog - Page ${page.currentPage}`}
   description={`Maxence Poutord's articles, page ${page.currentPage} of ${page.lastPage}`}
   seo={{
     type: 'website',
   }}
 >
+  <StructuredData data={blogStructuredData} />
   <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
     {page.data.map(post => <BlogCard post={post} />)}
   </div>

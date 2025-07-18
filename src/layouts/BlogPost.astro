@@ -6,7 +6,11 @@ import HeroImage from '../components/HeroImage.astro'
 import Layout from '../components/Layout.astro'
 import PageTitle from '../components/PageTitle.astro'
 import Tag from '../components/Tag.astro'
-import { SITE_OWNER } from '../consts'
+import StructuredData from '../components/StructuredData.astro'
+import RelatedPosts from '../components/RelatedPosts.astro'
+import { SITE_OWNER, SITE_URL } from '../consts'
+import { getCollection } from 'astro:content'
+import type { JsonLdDocument } from 'jsonld'
 
 type Props = CollectionEntry<'blog'>
 type Translations = CollectionEntry<'blog'>['data']['translations']
@@ -39,6 +43,41 @@ const {
 } = data
 
 const formattedTranslations = formatBlogTranslation(translations)
+
+// Get all posts for related posts
+const allPosts = (await getCollection('blog')).filter(
+  post => !post.data.unlisted,
+)
+
+const articleStructuredData: JsonLdDocument = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  description: description,
+  author: {
+    '@type': 'Person',
+    name: SITE_OWNER,
+    url: SITE_URL,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: SITE_OWNER,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${SITE_URL}/android-chrome-192x192.png`,
+    },
+  },
+  datePublished: date.toISOString(),
+  dateModified: modified ? modified.toISOString() : date.toISOString(),
+  image: cover ? `${SITE_URL}${cover}` : undefined,
+  url: Astro.url.toString(),
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': Astro.url.toString(),
+  },
+  keywords: tags.join(', '),
+  articleSection: 'Blog',
+}
 ---
 
 <Layout
@@ -51,6 +90,7 @@ const formattedTranslations = formatBlogTranslation(translations)
     ogImage: `/og/${slug}.png`,
   }}
 >
+  <StructuredData data={articleStructuredData} />
   <article>
     <HeroImage alt={`Cover for ${title}`} src={cover} />
     <div class="container m-auto text-center">
@@ -93,4 +133,5 @@ const formattedTranslations = formatBlogTranslation(translations)
       <slot />
     </div>
   </article>
+  <RelatedPosts currentPost={Astro.props} allPosts={allPosts} />
 </Layout>

@@ -26,6 +26,14 @@ const ogImage = seo?.ogImage ?? '/og/home.png'
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 <meta name="generator" content={Astro.generator} />
 
+<!-- SEO Meta Tags -->
+<meta name="language" content="en" />
+<meta name="geo.region" content="FR" />
+<meta name="geo.placename" content="France" />
+<meta name="author" content="Maxence Poutord" />
+<meta name="robots" content="index, follow" />
+<meta name="googlebot" content="index, follow" />
+
 <!-- Font preloads -->
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
@@ -66,6 +74,10 @@ const ogImage = seo?.ogImage ?? '/og/home.png'
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
+<meta property="og:site_name" content="Maxence Poutord" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 {
   seo?.ogImage && (
     <meta property="og:image" content={new URL(seo.ogImage, Astro.url)} />
@@ -79,6 +91,14 @@ const ogImage = seo?.ogImage ?? '/og/home.png'
 <meta property="twitter:description" content={description} />
 <meta name="twitter:creator" content="_maxpou" />
 <meta property="twitter:image" content={new URL(ogImage, Astro.url)} />
+
+<!-- Web App Manifest -->
+<link rel="manifest" href="/manifest.json" />
+<meta name="theme-color" content="#ffdc4e" />
+
+<!-- DNS Prefetch -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//plausible.io" />
 
 {
   translations.length > 1 &&

@@ -28,8 +28,21 @@ export default defineConfig({
   integrations: [
     astroExpressiveCode(astroExpressiveCodeOptions),
     mdx(),
-    sitemap(),
+    sitemap({
+      changefreq: 'weekly',
+      priority: 0.7,
+      lastmod: new Date(),
+    }),
     tailwind(),
     preact(),
   ],
+  // Add security headers
+  server: {
+    headers: {
+      'X-Content-Type-Options': 'nosniff',
+      'X-Frame-Options': 'DENY',
+      'X-XSS-Protection': '1; mode=block',
+      'Referrer-Policy': 'strict-origin-when-cross-origin',
+    },
+  },
 })

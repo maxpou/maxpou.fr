@@ -31,7 +31,9 @@ const { post, firstBigger = true, showDate = true } = Astro.props
         width={420}
         height={224}
         formats={['webp', 'avif', 'jpeg']}
-        alt={`Cover for post ${post.data.title}`}
+        alt={post.data.description || `Cover image for ${post.data.title}`}
+        loading="lazy"
+        decoding="async"
         class="h-56 w-full rounded-b-none rounded-t-lg object-cover transition"
       />
     )
@@ -54,6 +56,7 @@ const { post, firstBigger = true, showDate = true } = Astro.props
               src={FrFlag.src}
               alt="French post"
               class="inline pb-[6px] pr-1"
+              loading="lazy"
             />
           )
         }

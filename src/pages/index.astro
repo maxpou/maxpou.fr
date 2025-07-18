@@ -6,9 +6,11 @@ import BlogCard from '../components/BlogCard.astro'
 import Layout from '../components/Layout.astro'
 import Prose from '../components/Prose.astro'
 import Tag from '../components/Tag.astro'
+import StructuredData from '../components/StructuredData.astro'
 import GithubIcon from '../components/icons/Github'
-import { SITE_DESCRIPTION } from '../consts'
+import { SITE_DESCRIPTION, SITE_URL } from '../consts'
 import { projects } from '../content/projects'
+import type { JsonLdDocument } from 'jsonld'
 
 const posts = (await getCollection('blog'))
   .filter(post => !post.data.unlisted)
@@ -29,6 +31,29 @@ const SELECTED_TAGS = [
   'Architecture',
   'Life',
 ]
+
+const personStructuredData: JsonLdDocument = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Maxence Poutord',
+  url: SITE_URL,
+  description: SITE_DESCRIPTION,
+  image: `${SITE_URL}/profile-picture.jpeg`,
+  sameAs: ['https://twitter.com/_maxpou', 'https://github.com/maxpou'],
+  jobTitle: 'Software Engineer',
+  worksFor: {
+    '@type': 'Organization',
+    name: 'Freelance',
+  },
+  knowsAbout: [
+    'Web Development',
+    'JavaScript',
+    'Vue.js',
+    'Testing',
+    'Git',
+    'Software Architecture',
+  ],
+}
 ---
 
 <Layout
@@ -38,6 +63,7 @@ const SELECTED_TAGS = [
     type: 'website'
   }}
 >
+  <StructuredData data={personStructuredData} />
   <Prose>
     <h1 class="dark:text-mainYellow">Hello! I'm Maxence.</h1>
     <div class="flex flex-col md:flex-row gap-5 max-w-[720px]  mt-12">
