@@ -1,0 +1,40 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import BlogCard from './BlogCard.astro'
+
+interface Props {
+  currentPost: CollectionEntry<'blog'>
+  allPosts: CollectionEntry<'blog'>[]
+}
+
+const { currentPost, allPosts } = Astro.props
+
+// Find posts with similar tags
+const relatedPosts = allPosts
+  .filter(
+    post =>
+      post.slug !== currentPost.slug &&
+      post.data.tags.some(tag => currentPost.data.tags.includes(tag)),
+  )
+  .slice(0, 3)
+
+// If no related posts by tags, show recent posts
+const fallbackPosts = allPosts
+  .filter(post => post.slug !== currentPost.slug)
+  .slice(0, 3)
+
+const postsToShow = relatedPosts.length > 0 ? relatedPosts : fallbackPosts
+---
+
+{postsToShow.length > 0 && (
+  <section class="mt-12">
+    <h2 class="text-2xl font-bold mb-6 dark:text-white">
+      {relatedPosts.length > 0 ? 'Related Posts' : 'Recent Posts'}
+    </h2>
+    <div class="not-prose grid grid-cols-1 gap-6 md:grid-cols-3">
+      {postsToShow.map(post => (
+        <BlogCard post={post} firstBigger={false} />
+      ))}
+    </div>
+  </section>
+)} 

@@ -5,7 +5,10 @@
   "version": "1.0.0",
   "author": "Maxence Poutord <maxence.poutord@gmail.com>",
   "homepage": "https://www.maxpou.fr",
-  "keywords": ["Astro", "blog"],
+  "keywords": [
+    "Astro",
+    "blog"
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -33,6 +36,7 @@
     "@astrojs/tailwind": "^5.1.3",
     "@notionhq/client": "^2.2.15",
     "@tailwindcss/typography": "^0.5.15",
+    "@types/jsonld": "^1.5.15",
     "@vercel/og": "^0.6.4",
     "astro": "^5.0.2",
     "astro-expressive-code": "^0.38.3",
