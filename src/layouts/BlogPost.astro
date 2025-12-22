@@ -1,16 +1,16 @@
 ---
 import type { CollectionEntry } from 'astro:content'
 
+import { getCollection } from 'astro:content'
+import type { JsonLdDocument } from 'jsonld'
 import FormattedDate from '../components/FormattedDate.astro'
 import HeroImage from '../components/HeroImage.astro'
 import Layout from '../components/Layout.astro'
 import PageTitle from '../components/PageTitle.astro'
-import Tag from '../components/Tag.astro'
-import StructuredData from '../components/StructuredData.astro'
 import RelatedPosts from '../components/RelatedPosts.astro'
+import StructuredData from '../components/StructuredData.astro'
+import Tag from '../components/Tag.astro'
 import { SITE_OWNER, SITE_URL } from '../consts'
-import { getCollection } from 'astro:content'
-import type { JsonLdDocument } from 'jsonld'
 
 type Props = CollectionEntry<'blog'>
 type Translations = CollectionEntry<'blog'>['data']['translations']

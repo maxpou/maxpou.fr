@@ -10,17 +10,18 @@ export const cvData = {
     phone: '+33767786250',
     location: 'Paris, France / Remote',
     description: `
-      I'm Maxence, a French Software Engineer with +10 years of experience developing web-based applications. 
-      I am a dedicated, hardworking, ambitious person that gets things done, both on my own initiative and within a team. 
-      I enjoy challenges and I am not afraid of getting my hands dirty.
-      Because knowledge sharing matters to me, I spend a non-negligible part of my time sharing things through blog posts, mentoring sessions or conferences.
+      I'm Maxence, a French Software Engineer with +15 years of experience building high-value web applications. 
+      I am a dedicated team player who takes initiative to meet customer needs and ensure successful project completion. 
+      A dedicated team player, I take initiative to overcome challenges and get customer-facing features deployed
+      I dedicate time to knowledge sharing via blog posts, mentoring, and conferences.
     `,
-    lastUpdate: 'January 2024',
+    lastUpdate: 'December 2025',
     social: {
       bluesky: 'https://bsky.app/profile/maxpou.fr',
       twitter: 'https://twitter.com/_maxpou',
       github: 'https://github.com/maxpou',
       linkedin: 'https://www.linkedin.com/in/maxpou',
+      readme: 'https://www.maxpou.fr/readme/',
     },
   },
 
@@ -46,11 +47,12 @@ export const cvData = {
         'Web Performances',
         'TailwindCSS',
         'GraphQL',
+        'ElasticSearch',
       ],
     },
     {
       category: 'Familiar',
-      content: ['Docker', 'Supabase', 'Functional Programming'],
+      content: ['Docker', 'Supabase', 'AWS/Azure'],
     },
   ],
 
@@ -81,9 +83,9 @@ export const cvData = {
       period: 'May 2021 - Present',
       location: 'Remote (Europe)',
       activities: [
-        'Migrated a web application to Typescript/React',
-        'Improved performance index (50 to 90 lighthouse score)',
-        'Led the migration from a REST-style to GraphQL',
+        'Migrated a legacy web application to TypeScript and React, boosting team velocity by 3x (measured by sprint story point completion)',
+        'Improved backend performance for Partfox search, reducing response time from ~25s to ~300 ms',
+        'Improved frontend performance index (50 to 90 lighthouse score)',
       ],
     },
     {
@@ -105,7 +107,7 @@ export const cvData = {
       period: 'November 2016 - April 2018',
       location: 'Dublin, Ireland',
       activities: [
-        'Co-led the frontend migration of hostelworld.com from jQuery to Vue.js.',
+        'Led the frontend migration of hostelworld.com from jQuery to Vue.js.',
         'Architecture definition, development and maintenance of the main website (back+front)',
         'Trained and mentored team to modern JavaScript and Vue.js',
       ],
@@ -116,9 +118,9 @@ export const cvData = {
       period: 'May 2015 - April 2016',
       location: 'Nantes, France',
       activities: [
-        'Architecture definition, development and maintenance of various web applications',
-        'Build proof of concepts/research and development',
-        'Draft and give training in PHP, Symfony2',
+        // 'Architecture definition, development and maintenance of various web applications',
+        // 'Build proof of concepts/research and development',
+        // 'Draft and give training in PHP, Symfony2',
       ],
     },
     {
@@ -127,8 +129,8 @@ export const cvData = {
       period: 'October 2011 - January 2015',
       location: 'Nantes, France',
       activities: [
-        'Creation of a web application based on the Symfony2 Framework (expose/consume API)',
-        'Led a project which aims to reduce paper consumption by supplying dematerialized documentation to customers',
+        // 'Creation of a web application based on the Symfony2 Framework (expose/consume API)',
+        // 'Led a project which aims to reduce paper consumption by supplying dematerialized documentation to customers',
       ],
     },
   ],
@@ -174,7 +176,7 @@ export const cvData = {
   ],
 
   interests: `
-    Canyoning (I guide group), running (100km/month), hiking, cooking, travelling (Asia, Europe), 
+    Canyoning (I guide group), running (100km/month), cycling, hiking, cooking, travelling (Asia, Europe), 
     video games (Age of Empire II).
   `,
 }

@@ -1,13 +1,12 @@
 ---
-import Layout from '../../components/Layout.astro'
-import StructuredData from '../../components/StructuredData.astro'
-
 import { type CollectionEntry, getCollection } from 'astro:content'
 import type { Page } from 'astro'
-import BlogCard from '../../components/BlogCard.astro'
-import Pagination from '../../components/Pagination.astro'
-import { PAGE_SIZE, SITE_URL } from '../../consts'
 import type { JsonLdDocument } from 'jsonld'
+import BlogCard from '../../components/BlogCard.astro'
+import Layout from '../../components/Layout.astro'
+import Pagination from '../../components/Pagination.astro'
+import StructuredData from '../../components/StructuredData.astro'
+import { PAGE_SIZE, SITE_URL } from '../../consts'
 
 const posts = (await getCollection('blog'))
   .filter(post => !post.data.unlisted)
@@ -21,7 +20,7 @@ const page: Page<CollectionEntry<'blog'>> = {
   currentPage: 1,
   size: PAGE_SIZE,
   lastPage: Math.ceil(posts.length / PAGE_SIZE),
-  // @ts-ignore
+  // @ts-expect-error
   url: {
     current: '/blog',
     next: '/blog/pages/2',

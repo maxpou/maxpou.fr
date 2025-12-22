@@ -4,12 +4,13 @@ import { SITE_OWNER } from '../consts'
 const today = new Date()
 ---
 
-<footer class="bg-blue-50 dark:bg-gray-600 dark:text-white w-full mx-auto pb-0">
-  <div class="m-auto flex w-[1024px] max-w-full flex-wrap justify-between">
+<footer class="bg-blue-50 dark:bg-gray-600 dark:text-white w-full mx-auto pb-0 text-[#60739f]">
+  <div class="m-auto flex w-5xl max-w-full flex-wrap justify-between">
     <div class="w-full pb-4 md:w-auto flex-auto">
       <p class="pb-1 font-bold">
         &copy; 2014 - {today.getFullYear()} - {SITE_OWNER}
       </p>
+
       <p>Built with Astro, Tailwind and some ☕️</p>
       <p>
         Hosted with <span class="text-red-500">❤</span> by <a
@@ -74,7 +75,6 @@ const today = new Date()
   <style>
     footer {
       padding: 2em 1em 6em 1em;
-      color: rgb(var(--gray));
     }
   </style>
 </footer>

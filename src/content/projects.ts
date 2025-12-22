@@ -1,9 +1,9 @@
+import AvionImg from '../assets/projects/avion.png'
 import DockerSymfonyImg from '../assets/projects/docker-symfony.png'
 import MorningDewImg from '../assets/projects/morning-dew.png'
+import RecipesImg from '../assets/projects/recipes.jpg'
 import MaxpouFrImg from '../assets/projects/website.jpg'
 import YoutubeMateImg from '../assets/projects/youtube-mate.png'
-import RecipesImg from '../assets/projects/recipes.jpg'
-import AvionImg from '../assets/projects/avion.png'
 
 export const projects = [
   {

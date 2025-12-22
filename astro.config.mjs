@@ -1,8 +1,8 @@
-import { defineConfig } from 'astro/config'
 import mdx from '@astrojs/mdx'
-import sitemap from '@astrojs/sitemap'
 import preact from '@astrojs/preact'
-import tailwind from '@astrojs/tailwind'
+import sitemap from '@astrojs/sitemap'
+import tailwindcss from '@tailwindcss/vite'
+import { defineConfig } from 'astro/config'
 import astroExpressiveCode from 'astro-expressive-code'
 import { SITE_URL } from './src/consts'
 import { getLegacyPostRedirections } from './src/utils/301'
@@ -21,10 +21,12 @@ const astroExpressiveCodeOptions = {
 // https://astro.build/config
 export default defineConfig({
   site: SITE_URL,
+
   redirects: {
     '/blog/pages/1': '/blog',
     ...getLegacyPostRedirections(),
   },
+
   integrations: [
     astroExpressiveCode(astroExpressiveCodeOptions),
     mdx(),
@@ -33,9 +35,10 @@ export default defineConfig({
       priority: 0.7,
       lastmod: new Date(),
     }),
-    tailwind(),
+
     preact(),
   ],
+
   // Add security headers
   server: {
     headers: {
@@ -44,5 +47,9 @@ export default defineConfig({
       'X-XSS-Protection': '1; mode=block',
       'Referrer-Policy': 'strict-origin-when-cross-origin',
     },
+  },
+
+  vite: {
+    plugins: [tailwindcss()],
   },
 })
