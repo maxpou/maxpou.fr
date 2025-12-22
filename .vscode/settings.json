@@ -1,16 +1,9 @@
 {
   "editor.formatOnSave": true,
-  "tailwindCSS.classAttributes": [
-    "class",
-    "class:list",
-    "className",
-    "ngClass"
-  ],
-  "editor.defaultFormatter": "biomejs.biome",
-  "[mdx]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  "editor.codeActionsOnSave": {
+    "source.organizeImports.biome": "explicit",
+    "source.fixAll.biome": "explicit"
   }
 }

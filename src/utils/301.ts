@@ -62,11 +62,9 @@ export function getLegacyPostRedirections(): Record<string, string> {
     'improving-core-web-vitals-react-app',
   ]
 
-  return legacyPostsUrls.reduce((acc, legacyUrl) => {
-    return {
-      // biome-ignore lint/performance/noAccumulatingSpread: <explanation>
-      ...acc,
-      [legacyUrl]: `/blog/${legacyUrl}`,
-    }
-  }, {})
+  const redirections: Record<string, string> = {}
+  for (const legacyUrl of legacyPostsUrls) {
+    redirections[legacyUrl] = `/blog/${legacyUrl}`
+  }
+  return redirections
 }

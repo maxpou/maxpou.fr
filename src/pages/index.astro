@@ -1,16 +1,16 @@
 ---
 import { Image } from 'astro:assets'
 import { getCollection } from 'astro:content'
+import type { JsonLdDocument } from 'jsonld'
 import ProfilePicture from '../assets/profile-picture.jpeg'
 import BlogCard from '../components/BlogCard.astro'
+import GithubIcon from '../components/icons/Github'
 import Layout from '../components/Layout.astro'
 import Prose from '../components/Prose.astro'
-import Tag from '../components/Tag.astro'
 import StructuredData from '../components/StructuredData.astro'
-import GithubIcon from '../components/icons/Github'
+import Tag from '../components/Tag.astro'
 import { SITE_DESCRIPTION, SITE_URL } from '../consts'
 import { projects } from '../content/projects'
-import type { JsonLdDocument } from 'jsonld'
 
 const posts = (await getCollection('blog'))
   .filter(post => !post.data.unlisted)
@@ -75,10 +75,10 @@ const personStructuredData: JsonLdDocument = {
         alt="Maxence Poutord"
       />
       <div>
-        <p class="!mt-0 text-xl">
+        <p class="mt-0! text-xl">
           I am a French Software Engineer, a technical speaker and a nomadic
           worker. My expertise lies primarily in the development of web
-          applications with more than 10 years of experience.
+          applications with more than 15 years of experience.
         </p>
         <a href="/about" class="text-xl">Read more about me &rarr;</a>
       </div>

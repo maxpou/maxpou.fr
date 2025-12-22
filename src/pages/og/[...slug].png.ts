@@ -1,7 +1,7 @@
+import type { ImageFunction, z } from 'astro:content'
+import { getCollection } from 'astro:content'
 import fs from 'node:fs'
 import path from 'node:path'
-import { getCollection } from 'astro:content'
-import type { ImageFunction, z } from 'astro:content'
 import { ImageResponse } from '@vercel/og'
 import type { ReactNode } from 'preact/compat'
 
@@ -103,12 +103,12 @@ export async function GET({ props }: Props) {
     fonts: [
       {
         name: 'Roboto',
-        data: robotoMedium.buffer,
+        data: new Uint8Array(robotoMedium).buffer,
         style: 'normal',
       },
       {
         name: 'Roboto Bold',
-        data: robotoBold.buffer,
+        data: new Uint8Array(robotoBold).buffer,
         style: 'normal',
       },
     ],

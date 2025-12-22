@@ -6,7 +6,7 @@ import HeaderLink from './HeaderLink.astro'
 
 <header class="bg-white dark:bg-gray-600 px-4 h-16">
   <nav
-    class="dark:text-white h-16 flex items-center justify-between max-w-screen-xl w-full mx-auto"
+    class="dark:text-white h-16 flex items-center justify-between max-w-7xl w-full mx-auto"
   >
     <h1 class="text-lg dark:text-white font-bold">
       <a href="/">{SITE_TITLE}</a>
@@ -50,7 +50,7 @@ import HeaderLink from './HeaderLink.astro'
       <li class="p-3"><a href="/speaking">Speaking</a></li>
       <li class="p-3"><a href="/about">About</a></li>
       <li class="p-3">
-        <DarkModeButton client:only="preact" textOnly className="!p-0" />
+        <DarkModeButton client:only="preact" textOnly className="p-0!" />
       </li>
     </ul>
   </div>

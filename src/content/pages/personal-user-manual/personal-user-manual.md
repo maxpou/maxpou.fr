@@ -16,14 +16,21 @@ and how I like to work. This is also what people call "Personal README".
 - Work-life balance.
 - _"Actions speak louder than words"_.
 
+## Working Hours & Timezone
+
+- **Timezone**: I'm based in Europe in Paris (CET), but this can vary as I travel.
+- **Core hours**: I'm typically available between 9:00 and 18:00 in my local timezone. I fully
+  disconnect outside work hours and on weekends.
+- **Flexibility**: I don't expect immediate responses and I won't be offended if you reply async.
+
 ## My Work Preferences\*
 
 _\* As mentioned above, this list sums up the way I like to work. It is absolutely not here to set
 expectations._
 
 - **Asynchronous communication**. Notifications are my productivity killer. They are always switched
-  off. That's why I am more "offline" than the average. It allows me to do deep work sessions, free
-  of distractions.
+  off. That's why I am more "offline" than average. It allows me to do deep work sessions, free of
+  distractions.
 - **Home office**. [My work setup](/uses) is very minimalistic and nomad-friendly. It's common to
   see me with different backgrounds during remote meetings. I find myself more productive working
   from different places (co-working space, cafe, library...).
@@ -48,10 +55,10 @@ expectations._
   paragraph with 2 different fonts. The same goes for technical stuff (irregularities in variables
   name casing, etc.). When it happens I usually do a sneaky fix and no one notices.
 - **Language**: English is not my mother tongue. I may say the exact opposite of what I think at the
-  moment. I also love expressions which I learn outside work (films, blogs...). If I use something
-  offensive or inappropriate, please let me know. It's probably unintentional.
-- **Bullet list**: I tend to overuse bullet lists. It's the perfect way to communicate with me (as
+  moment. I also love expressions which I learn outside work (films, blogs...). If I seem to be
+  contradicting myself, please ask me to rephrase—I won’t take it personally.
+- **Bullet lists**: I tend to overuse bullet lists. It's the perfect way to communicate with me (as
   long as it's not an endless list). If it's a trigger for you, please let me know.
 
-I forgot one point: **Feedback**. I love to receiving feedback so I can improve. If you have to give
-me feedback, please go straight to the point.
+I forgot one point: **Feedback**. I love receiving feedback so I can improve. If you have to give me
+feedback, please go straight to the point.

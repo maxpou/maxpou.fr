@@ -1,5 +1,5 @@
 import type { JSX } from 'preact'
-import React from 'preact/compat'
+
 import { useEffect, useState } from 'preact/hooks'
 import MoonIcon from './icons/moon.svg'
 import SunIcon from './icons/sun.svg'
@@ -20,7 +20,7 @@ export default function ThemeToggle({
   const handleClick = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light'
     setTheme(newTheme)
-    // @ts-ignore
+    // @ts-expect-error
     typeof plausible !== 'undefined' && // @ts-ignore
       plausible('darkModeClick', { props: { theme: newTheme } })
   }
@@ -37,7 +37,7 @@ export default function ThemeToggle({
   return (
     <button
       type="button"
-      className={`px-2 py-4 ${className}`}
+      className={`px-2 py-4 cursor-pointer ${className}`}
       onClick={handleClick}
       aria-label={`Activate ${theme === 'light' ? 'dark' : 'light'} mode`}
     >

@@ -1,11 +1,10 @@
 ---
+import { getCollection } from 'astro:content'
 import type { JsonLdDocument } from 'jsonld'
 import BlogCard from '../components/BlogCard.astro'
 import Layout from '../components/Layout.astro'
 import PageTitle from '../components/PageTitle.astro'
 import StructuredData from '../components/StructuredData.astro'
-
-import { getCollection } from 'astro:content'
 
 const posts = (await getCollection('blog'))
   .filter(post => !post.data.unlisted)
@@ -43,7 +42,7 @@ const errorPageStructuredData: JsonLdDocument = {
       exist on this site.
     </p>
   </div>
-  <div class="m-auto max-w-screen-xl pt-12">
+  <div class="m-auto max-w-7xl pt-12">
     <h2 class="pb-4 text-2xl font-bold dark:text-white">
       Looking for something to read?
     </h2>
