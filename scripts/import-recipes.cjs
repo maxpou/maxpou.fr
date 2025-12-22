@@ -16,20 +16,21 @@ async function getPages() {
     filter: {
       and: [
         {
-          property: 'Ready',
+          property: 'Text ready',
           checkbox: {
             equals: true,
           },
         },
         {
-          property: 'Photo missing',
+          property: 'Has photo',
           checkbox: {
-            equals: false,
+            equals: true,
           },
         },
       ],
     },
   })
+
   return pages.results
 }
 
