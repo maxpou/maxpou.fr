@@ -1,0 +1,24 @@
+---
+import Layout from '../../components/Layout.astro'
+import CompoundInterestCalculatorComponent from './CompoundInterestCalculatorComponent'
+---
+
+<Layout
+  title="Compound Interest Calculator"
+  description="Calculate compound interest with monthly contributions. See how your investments grow over time with this interactive calculator."
+  seo={{ type: 'website' }}
+>
+  <div class="mx-auto max-w-5xl">
+    <h1
+      class="mb-2 text-4xl font-bold text-gray-900 dark:text-white md:text-5xl"
+    >
+      Compound Interest Calculator
+    </h1>
+    <p class="mb-8 text-lg text-gray-600 dark:text-gray-300">
+      See how your investments can grow over time with the power of compound
+      interest.
+    </p>
+
+    <CompoundInterestCalculatorComponent client:load />
+  </div>
+</Layout>
