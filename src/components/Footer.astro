@@ -24,11 +24,35 @@ const today = new Date()
       <ul>
         {
           [
-            ['/uses', 'Uses'],
-            ['/recipes', 'Recipes (kitchen)'],
+            ['/blog', 'Blog'],
             ['/about', 'About'],
+            ['/uses', 'Uses'],
             ['/cv', 'Resume (cv)', '_blank'],
             ['/readme', 'Readme'],
+          ].map(([url, title, target = '_self']) => (
+            <li>
+              <a
+                href={url}
+                target={target}
+                class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow"
+              >
+                {title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div class="flex-auto">
+      <h3 class="pb-1 font-bold">Things I’ve Made
+      </h3>
+      <ul>
+        {
+          [
+            ['/recipes', 'Recipes'],
+            ['https://air-max.netlify.app', 'Avion', '_blank'],
+            ['https://youtube-mate.com', 'YoutubeMate', '_blank'],
+            ['/apps', 'Full list'],
           ].map(([url, title, target = '_self']) => (
             <li>
               <a
