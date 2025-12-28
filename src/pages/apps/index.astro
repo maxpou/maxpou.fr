@@ -1,0 +1,74 @@
+---
+import Layout from '../../components/Layout.astro'
+
+const apps = [
+  {
+    icon: '✈️',
+    name: 'Avion',
+    description: 'A 3D flight simulator game built with Three.js.',
+    url: 'https://air-max.netlify.app',
+  },
+  {
+    icon: '👨‍🍳',
+    name: "Max's Kitchen",
+    description: 'My cooking recipes.',
+    url: '/recipes',
+  },
+  {
+    icon: '🏃',
+    name: 'Runner Dashboard',
+    description:
+      'Calculate your pace, estimate finish times, and plan your race nutrition.',
+    url: '/apps/runner-dashboard',
+  },
+  {
+    icon: '💰',
+    name: 'Compound Interest Calculator',
+    description:
+      'See how your investments can grow over time with the power of compound interest.',
+    url: '/apps/compound-interest-calculator',
+  },
+  {
+    icon: '🎥',
+    name: 'YoutubeMate (Paid)',
+    description:
+      'An AI assistant that generates summaries of YouTube videos and saves you precious time!',
+    url: 'https://www.youtube-mate.com',
+  },
+]
+---
+
+<Layout
+  title="Runner Dashboard - Pace & Nutrition Calculator"
+  description="Convert running pace (min/km) to speed (km/h), see estimated finish times, and plan your race nutrition strategy."
+  seo={{ type: 'website' }}
+>
+  <div class="mx-auto max-w-6xl">
+    <h1
+      class="mb-2 text-4xl font-bold text-gray-900 dark:text-white md:text-5xl"
+    >
+      Apps
+    </h1>
+      <p class="mb-8 text-lg text-gray-600 dark:text-gray-300">
+        A collection of apps I built.
+      </p>
+
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {apps.map((app) => {
+        const isExternal = app.url.startsWith('http://') || app.url.startsWith('https://');
+        return (
+          <a 
+            href={app.url} 
+            class="bg-white dark:bg-gray-500 rounded-lg shadow-md hover:shadow-xl transition duration-300 ease-in-out flex flex-col"
+            {...(isExternal && { target: '_blank', rel: 'noopener noreferrer' })}
+          >
+            <div class="p-4">
+              <p class="inline-flex items-center gap-2">{app.icon} {app.name}</p>
+              <p class="italic text-gray-400 dark:text-gray-100">{app.description}</p>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+</Layout>
