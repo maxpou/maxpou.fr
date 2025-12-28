@@ -1,0 +1,23 @@
+---
+import Layout from '../../components/Layout.astro'
+import RunnerDashboardTabs from './RunnerDashboardTabs'
+---
+
+<Layout
+  title="Runner Dashboard - Pace & Nutrition Calculator"
+  description="Convert running pace (min/km) to speed (km/h), see estimated finish times, and plan your race nutrition strategy."
+  seo={{ type: 'website' }}
+>
+  <div class="mx-auto max-w-6xl">
+    <h1
+      class="mb-2 text-4xl font-bold text-gray-900 dark:text-white md:text-5xl"
+    >
+      Runner Dashboard
+    </h1>
+    <p class="mb-8 text-lg text-gray-600 dark:text-gray-300">
+      Calculate your pace, estimate finish times, and plan your race nutrition.
+    </p>
+
+    <RunnerDashboardTabs client:load />
+  </div>
+</Layout>
