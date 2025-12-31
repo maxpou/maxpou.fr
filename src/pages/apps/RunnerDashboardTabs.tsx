@@ -14,7 +14,7 @@ const TABS: { id: Tab; label: string; icon: string }[] = [
   { id: 'nutrition', label: 'Nutrition Planner', icon: '🍯' },
 ]
 
-export default function LRunnerDashboardTabs(): JSX.Element {
+export default function RunnerDashboardTabs(): JSX.Element {
   const [activeTab, setActiveTab] = useState<Tab>('pace')
 
   return (

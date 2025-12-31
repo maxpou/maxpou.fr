@@ -404,13 +404,6 @@ export default function GlucidCalculator(): JSX.Element {
           ))}
         </div>
       </div>
-
-      {/* Info note */}
-      <p class="text-sm text-gray-500 dark:text-gray-400">
-        These are general guidelines. Individual needs vary based on training,
-        gut tolerance, and race conditions. Always test your nutrition strategy
-        during training.
-      </p>
     </div>
   )
 }

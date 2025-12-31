@@ -165,12 +165,6 @@ export default function RunnerDashboard(): JSX.Element {
           </table>
         </div>
       </div>
-
-      {/* Info note */}
-      <p class="text-sm text-gray-500 dark:text-gray-400">
-        Times are calculated using standard race distances: Marathon (42.195km),
-        Half Marathon (21.0975km).
-      </p>
     </div>
   )
 }
