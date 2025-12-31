@@ -20,7 +20,7 @@
   "scripts": {
     "dev": "astro dev",
     "deploy": "astro check && astro build && gh-pages -d dist",
-    "import-recipes": "node scripts/import-recipes.cjs && prettier --write 'src/content/recipes/*.mdx'",
+    "import-recipes": "tsx scripts/import-recipes.ts && prettier --write 'src/content/recipes/*.mdx'",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
@@ -33,20 +33,21 @@
     "@astrojs/preact": "^4.1.0",
     "@astrojs/rss": "^4.0.0",
     "@astrojs/sitemap": "^3.6.0",
-    "@notionhq/client": "^2.2.15",
+    "@notionhq/client": "^5.6.0",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.17",
     "@types/jsonld": "^1.5.15",
     "@vercel/og": "^0.6.4",
     "astro": "^5.16.0",
     "astro-expressive-code": "^0.41.4",
-    "notion-to-md": "^3.1.1",
+    "notion-to-md": "^3.1.9",
     "preact": "^10.25.1",
     "tailwindcss": "^4.1.17",
     "typescript": "^5.9.0"
   },
   "devDependencies": {
     "@biomejs/biome": "2.3.10",
-    "prettier": "^3.7.4"
+    "prettier": "^3.7.4",
+    "tsx": "^4.19.2"
   }
 }
