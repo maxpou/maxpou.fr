@@ -1,0 +1,42 @@
+---
+import Image from 'astro/components/Image.astro';
+import GithubIcon from './icons/Github'
+
+interface Props {
+  project: {
+    name: string;
+    description: string;
+    url: string;
+    image?: ImageMetadata;
+    icon?: string;
+  };
+}
+
+const { project } = Astro.props;
+const isExternal = project.url.startsWith('http://') || project.url.startsWith('https://');
+const isGitHub = project.url.startsWith('https://github.com/');
+---
+
+<a 
+  href={project.url} 
+  class="bg-white dark:bg-gray-500 rounded-lg shadow-md hover:shadow-xl transition duration-300 ease-in-out flex flex-col"
+  {...(isExternal && { target: '_blank', rel: 'noopener noreferrer' })}
+>
+  {project.image && (
+    <Image
+      src={project.image as ImageMetadata}
+      alt={`${project.name} description image`}
+      width={420}
+      height={224}
+      class="h-56 w-full rounded-b-none rounded-t-lg object-cover transition bg-white"
+    />
+  )}
+  {project.icon && (
+    <p class="h-56 inline-flex items-center justify-center text-7xl">{project.icon}</p>
+  )}
+  <div class="p-4">
+    <p class="inline-flex items-center gap-2">{isGitHub ? <GithubIcon /> : null}{project.name}</p>
+    <p class="italic text-gray-400 dark:text-gray-100">{project.description}</p>
+  </div>
+</a>
+

@@ -61,7 +61,7 @@ export default function SplitsCalculator(): JSX.Element {
   ) // Marathon default
   const [time1, setTime1] = useState<TimeInput>({
     hours: 3,
-    minutes: 55,
+    minutes: 50,
     seconds: 0,
   })
   const [showSecondTime, setShowSecondTime] = useState(false)
@@ -140,7 +140,7 @@ export default function SplitsCalculator(): JSX.Element {
               key={dist.name}
               type="button"
               onClick={() => setSelectedDistance(dist)}
-              class={`rounded-lg px-4 py-2 text-sm font-medium transition-all ${
+              class={`rounded-lg px-4 py-2 text-sm font-medium transition-all cursor-pointer ${
                 selectedDistance.name === dist.name
                   ? 'bg-blue-500 text-white shadow-md'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
@@ -150,9 +150,6 @@ export default function SplitsCalculator(): JSX.Element {
             </button>
           ))}
         </div>
-        <p class="mt-3 text-sm text-gray-500 dark:text-gray-400">
-          Selected: {selectedDistance.km.toFixed(3)} km
-        </p>
       </div>
 
       {/* Time Inputs */}
@@ -524,13 +521,6 @@ export default function SplitsCalculator(): JSX.Element {
               </p>
               <p class="text-xl font-bold text-gray-900 dark:text-white">
                 {formatTime(Math.abs(totalSeconds1 - totalSeconds2))}
-                <span class="ml-2 text-sm font-normal text-gray-500">
-                  {totalSeconds1 < totalSeconds2
-                    ? '(Time 1 faster)'
-                    : totalSeconds1 > totalSeconds2
-                      ? '(Time 2 faster)'
-                      : '(Same)'}
-                </span>
               </p>
             </div>
             <div>

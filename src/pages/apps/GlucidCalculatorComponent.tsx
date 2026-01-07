@@ -169,7 +169,7 @@ export default function GlucidCalculator(): JSX.Element {
                   key={preset.name}
                   type="button"
                   onClick={() => setDistance(preset.km)}
-                  class={`rounded-full px-3 py-1 text-xs font-medium transition-colors ${
+                  class={`rounded-full px-3 py-1 text-xs font-medium transition-colors cursor-pointer ${
                     Math.abs(distance - preset.km) < 0.1
                       ? 'bg-blue-500 text-white'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'

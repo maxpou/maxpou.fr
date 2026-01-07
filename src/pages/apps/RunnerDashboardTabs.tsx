@@ -26,7 +26,7 @@ export default function RunnerDashboardTabs(): JSX.Element {
             key={tab.id}
             type="button"
             onClick={() => setActiveTab(tab.id)}
-            class={`flex items-center gap-2 px-4 py-3 text-sm font-medium transition-all duration-200 ${
+            class={`flex items-center gap-2 px-4 py-3 text-sm font-medium transition-all duration-200 cursor-pointer ${
               activeTab === tab.id
                 ? 'border-b-2 border-blue-500 text-blue-600 dark:text-blue-400'
                 : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'

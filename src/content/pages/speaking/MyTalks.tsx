@@ -1,5 +1,6 @@
 import type { JSX } from 'preact'
-
+// biome-ignore lint/correctness/noUnusedImports: Needed for JSX types
+import * as React from 'preact/compat'
 import { presentations, talks, trainingsAndWorkshops } from '../../talks'
 
 function Talks(): JSX.Element {

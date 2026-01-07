@@ -73,7 +73,7 @@ export default function RunnerDashboard(): JSX.Element {
         </div>
         <div class="flex items-center gap-2">
           <div class="h-3 w-3 rounded bg-pink-500" />
-          <span>Sub 4h Marathon (Goal)</span>
+          <span>Sub 4h Marathon (Goal 3:50)</span>
         </div>
         <div class="flex items-center gap-2">
           <div class="h-3 w-3 rounded bg-emerald-500" />
@@ -112,7 +112,7 @@ export default function RunnerDashboard(): JSX.Element {
                 const marathonTime = paceInMinutes * 42.195
                 const halfTime = paceInMinutes * 21.0975
 
-                const isSubMarathonGoal = marathonTime < 240 // 4h
+                const isSubMarathonGoal = marathonTime < 230 // 3h50
                 const isSubMarathonPr = marathonTime < 255 // 4h15
                 const isSubPRHalf = halfTime < 108 // 1h47
 
