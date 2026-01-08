@@ -39,18 +39,21 @@ const personStructuredData: JsonLdDocument = {
   url: SITE_URL,
   description: SITE_DESCRIPTION,
   image: `${SITE_URL}/profile-picture.jpeg`,
-  sameAs: ['https://twitter.com/_maxpou', 'https://github.com/maxpou'],
-  jobTitle: 'Software Engineer',
-  worksFor: {
-    '@type': 'Organization',
-    name: 'Freelance',
-  },
+  sameAs: ['https://twitter.com/_maxpou', 'https://github.com/maxpou', 'https://www.linkedin.com/in/maxpou', 'https://bsky.app/profile/maxpou.fr'],
+  jobTitle: 'Senior Software Engineer',
   knowsAbout: [
-    'Web Development',
     'JavaScript',
     'Vue.js',
+    'React.js',
+    'Node.js',
+    'NestJS',
+    'TypeScript',
+    'CI/CD',
+    'Web Performances',
+    'GraphQL',
     'Testing',
     'Git',
+    'LLMs',
     'Software Architecture',
   ],
 }
@@ -120,20 +123,22 @@ const personStructuredData: JsonLdDocument = {
     <h2>Featured Projects</h2>
     <div class="not-prose grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
       {
-        projects.map(({ name, image, description, url, ghIcon }) => (
+        projects.filter(project => project.highlighted).map(({ name, image, description, url, ghIcon }) => (
           <a
             href={url}
             target="_blank"
             rel="noopener noreferrer"
             class="bg-white dark:bg-gray-500 rounded-lg shadow-md hover:shadow-xl transition duration-300 ease-in-out flex flex-col"
           >
-            <Image
-              src={image}
-              alt={`${name} description image`}
-              width={420}
-              height={224}
-              class="h-56 w-full rounded-b-none rounded-t-lg object-cover transition bg-white"
-            />
+            {image && (
+              <Image
+                src={image}
+                alt={`${name} description image`}
+                width={420}
+                height={224}
+                class="h-56 w-full rounded-b-none rounded-t-lg object-cover transition bg-white"
+              />
+            )}
             <div class="p-4">
               <p class="inline-flex items-center gap-2">
                 {ghIcon && <GithubIcon />}
@@ -146,6 +151,16 @@ const personStructuredData: JsonLdDocument = {
           </a>
         ))
       }
+      <a
+        href="/portfolio"
+        class:list={[
+          'ease flex flex-col rounded-lg bg-white transition duration-300 dark:bg-gray-500',
+          'hover:translate-y-0.5 shadow-md  hover:shadow-xl',
+          'justify-center items-center p-4 text-center',
+        ]}
+      >
+        See all my {projects.length} projects &rarr;
+      </a>
     </div>
   </Prose>
 </Layout>
