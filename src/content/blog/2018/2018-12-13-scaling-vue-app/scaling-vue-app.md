@@ -121,7 +121,7 @@ let's take the previous file architecture and see what to test and how to do it.
 - Pages: High priority, hard to do. You probably gonna have to mock api/browser parts.
 - Routes: Usually bugs aren't here. Leave it for E2E tests.
 - Services:
-  - api interface: I personnally don't test this part (90% of the code is mocked).
+  - api interface: I personally don't test this part (90% of the code is mocked).
   - helpers/dataFormaters: High priority, easy to do. Usually, the easiest tests to do in your app!
 - Store: The hardest part to test. You can test it via integration tests. Testing action, getter and
   initial state separately is useless.
@@ -257,8 +257,7 @@ component oriented application have a lot of point of interest.
 > Use React for ephemeral state that doesn't matter to the app globally and doesn't mutate in
 > complex ways. For example, a toggle in some UI element, a form input state. Use Redux for state
 > that matters globally or is mutated in complex ways. For example, cached users, or a post draft.  
-> —
-> [Dan Abramov (creator of redux, equivalent of Vuex but for React)](https://github.com/reduxjs/redux/issues/1287#issuecomment-175351978)
+> — [Dan Abramov (creator of redux, equivalent of Vuex but for React)](https://github.com/reduxjs/redux/issues/1287#issuecomment-175351978)
 
 When I ask to myself: "should I use the store or not?", I usually do something like that in my mind:
 ![should I store this data in vuex (flow chart)](./vuex-or-not.png)
