@@ -27,7 +27,7 @@ const deadProjects = projects.filter(project => project.isDead);
       {activeProjects.map((project) => <ProjectCard project={project} />)}
     </div>
 
-    <h2 class="text-2xl font-bold">🪦 Graveyard</h2>
+    <h2 class="text-2xl font-bold mt-16">🪦 Graveyard</h2>
     <p class="mb-8 text-gray-600 dark:text-gray-300">Projects that are no longer maintained.</p>
     <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
       {deadProjects.map((project) => <ProjectCard project={project} />)}

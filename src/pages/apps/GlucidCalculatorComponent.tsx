@@ -54,7 +54,7 @@ export default function GlucidCalculator(): JSX.Element {
   const [weight, setWeight] = useState<number>(70)
   const [distance, setDistance] = useState<number>(42.195)
   const [estimatedHours, setEstimatedHours] = useState<number>(3)
-  const [estimatedMinutes, setEstimatedMinutes] = useState<number>(55)
+  const [estimatedMinutes, setEstimatedMinutes] = useState<number>(50)
   const [glucidPerGel, setGlucidPerGel] = useState<number>(25)
   const [numberOfGels, setNumberOfGels] = useState<number>(9)
 
@@ -100,11 +100,6 @@ export default function GlucidCalculator(): JSX.Element {
   }
 
   const currentZone = getCurrentZone()
-
-  const isLow = glucidPerHour < recommendedRange.min
-  const isOptimal =
-    glucidPerHour >= recommendedRange.min &&
-    glucidPerHour <= recommendedRange.max
 
   const formatTime = (hours: number, minutes: number): string => {
     return `${hours}h${minutes.toString().padStart(2, '0')}`
@@ -296,13 +291,17 @@ export default function GlucidCalculator(): JSX.Element {
       {/* Results */}
       <div class="grid gap-4 md:grid-cols-3">
         <div
-          class={
-            isLow
-              ? 'rounded-xl p-6 text-white shadow-lg bg-linear-to-br from-amber-500 to-orange-500'
-              : isOptimal
-                ? 'rounded-xl p-6 text-white shadow-lg bg-linear-to-br from-emerald-500 to-green-500'
-                : 'rounded-xl p-6 text-white shadow-lg bg-linear-to-br from-purple-500 to-pink-500'
-          }
+          class={`rounded-xl p-6 text-white shadow-lg ${
+            currentZone?.label === 'Low'
+              ? 'bg-linear-to-br from-amber-500 to-orange-500'
+              : currentZone?.label === 'Moderate'
+                ? 'bg-linear-to-br from-emerald-500 to-green-500'
+                : currentZone?.label === 'High'
+                  ? 'bg-linear-to-br from-blue-500 to-cyan-500'
+                  : currentZone?.label === 'Very High'
+                    ? 'bg-linear-to-br from-purple-500 to-pink-500'
+                    : 'bg-linear-to-br from-red-500 to-rose-500'
+          }`}
         >
           <p class="text-sm font-medium opacity-80">Carbs per Hour</p>
           <p class="text-3xl font-bold">{glucidPerHour.toFixed(0)}g/h</p>
@@ -347,18 +346,6 @@ export default function GlucidCalculator(): JSX.Element {
           </strong>{' '}
           total.
         </p>
-
-        {glucidPerHour < recommendedRange.min && (
-          <div class="mt-4 rounded-lg bg-amber-50 p-3 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300">
-            ⚠️ Your plan provides {glucidPerHour.toFixed(0)}g/h which is below
-            the recommended range. Consider adding{' '}
-            {Math.ceil(
-              (recommendedRange.min * totalTimeHours - totalGlucid) /
-                glucidPerGel,
-            )}{' '}
-            more gel(s).
-          </div>
-        )}
 
         {glucidPerHour > recommendedRange.max && (
           <div class="mt-4 rounded-lg bg-purple-50 p-3 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300">

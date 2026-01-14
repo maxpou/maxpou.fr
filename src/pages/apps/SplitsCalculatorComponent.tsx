@@ -260,7 +260,7 @@ export default function SplitsCalculator(): JSX.Element {
 
         {/* Time 2 */}
         <div
-          class={`rounded-xl p-6 shadow-lg transition-all ${
+          class={`rounded-xl shadow-lg transition-all ${
             showSecondTime
               ? 'bg-white dark:bg-gray-800'
               : 'border-2 border-dashed border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-800/50'
@@ -270,7 +270,7 @@ export default function SplitsCalculator(): JSX.Element {
             <button
               type="button"
               onClick={() => setShowSecondTime(true)}
-              class="flex h-full w-full flex-col items-center justify-center gap-2 py-8 text-gray-500 transition-colors hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+              class="flex h-full w-full flex-col items-center justify-center gap-2 py-8 text-gray-500 transition-colors hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 cursor-pointer"
             >
               <span class="text-4xl">+</span>
               <span class="text-sm font-medium">
@@ -278,7 +278,7 @@ export default function SplitsCalculator(): JSX.Element {
               </span>
             </button>
           ) : (
-            <>
+            <div class="p-6">
               <div class="mb-4 flex items-center justify-between">
                 <h2 class="text-xl font-semibold text-gray-900 dark:text-white">
                   Estimated Time 2
@@ -288,7 +288,7 @@ export default function SplitsCalculator(): JSX.Element {
                   <button
                     type="button"
                     onClick={() => setShowSecondTime(false)}
-                    class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200"
+                    class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 cursor-pointer"
                     aria-label="Remove second time"
                   >
                     ✕
@@ -389,7 +389,7 @@ export default function SplitsCalculator(): JSX.Element {
                   </p>
                 </div>
               </div>
-            </>
+            </div>
           )}
         </div>
       </div>

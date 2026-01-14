@@ -4,6 +4,6 @@
 export const SITE_TITLE = 'Maxence Poutord'
 export const SITE_URL = 'https://www.maxpou.fr'
 export const SITE_DESCRIPTION =
-  'Personnal website of Maxence Poutord, a software engineer with more than 10 years working in the industry.'
+  'Personal website of Maxence Poutord, a software engineer with more than 10 years working in the industry.'
 export const SITE_OWNER = 'Maxence Poutord'
 export const PAGE_SIZE = 10
