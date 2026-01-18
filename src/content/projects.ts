@@ -67,6 +67,13 @@ export const projects = [
     url: '/apps/compound-interest-calculator',
   },
   {
+    icon: '🍕',
+    name: 'Neapolitan Pizza Dough Calculator',
+    description:
+      'Calculate the perfect amounts of flour, water, salt, and yeast for your homemade Neapolitan pizza dough.',
+    url: '/apps/pizza-dough-calculator',
+  },
+  {
     name: 'maxpou.fr',
     image: MaxpouFrImg,
     description: 'This website! Built with Astro and Tailwind.',
