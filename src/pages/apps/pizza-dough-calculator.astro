@@ -1,0 +1,25 @@
+---
+import Layout from '../../components/Layout.astro'
+import PizzaDoughCalculatorComponent from './PizzaDoughCalculatorComponent'
+---
+
+<Layout
+  title="Neapolitan Pizza Dough Calculator"
+  description="Calculate the perfect pizza dough recipe. Enter your number of doughs, size, and hydration to get precise flour, water, salt, and yeast measurements."
+  seo={{ type: 'website' }}
+>
+  <div class="mx-auto max-w-4xl">
+    <h1
+      class="mb-2 text-4xl font-bold text-gray-900 dark:text-white md:text-5xl"
+    >
+    Neapolitan Pizza Dough Calculator
+    </h1>
+    <p class="mb-8 text-lg text-gray-600 dark:text-gray-300">
+      Calculate the perfect amounts of flour, water, salt, and yeast for your
+      homemade Neapolitan pizza dough.
+    </p>
+
+    <PizzaDoughCalculatorComponent client:load />
+  </div>
+</Layout>
+

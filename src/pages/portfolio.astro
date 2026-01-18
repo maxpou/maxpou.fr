@@ -4,7 +4,8 @@ import ProjectCard from '../components/ProjectCard.astro'
 
 import { projects } from '../content/projects'
 
-const activeProjects = projects.filter(project => !project.isDead);
+const highlightedProjects = projects.filter(project => project.highlighted && !project.isDead);
+const otherProjects = projects.filter(project => !project.isDead && !project.highlighted);
 const deadProjects = projects.filter(project => project.isDead);
 ---
 
@@ -19,12 +20,19 @@ const deadProjects = projects.filter(project => project.isDead);
     >
       Portfolio
     </h1>
-      <p class="mb-8 text-lg text-gray-600 dark:text-gray-300">
-        A collection of applications and GitHub projects I’ve built.
-      </p>
+    <p class="mb-8 text-lg text-gray-600 dark:text-gray-300">
+      A collection of applications and GitHub projects I’ve built.
+    </p>
+
+    <h2 class="text-2xl font-bold mt-16 mb-8">Highlighted projects</h2>
 
     <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 mb-8">
-      {activeProjects.map((project) => <ProjectCard project={project} />)}
+      {highlightedProjects.map((project) => <ProjectCard project={project} />)}
+    </div>
+
+    <h2 class="text-2xl font-bold mt-16 mb-8">Other Applications</h2>
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {otherProjects.map((project) => <ProjectCard project={project} />)}
     </div>
 
     <h2 class="text-2xl font-bold mt-16">🪦 Graveyard</h2>
