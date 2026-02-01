@@ -109,30 +109,30 @@ export default function PizzaDoughCalculator(): JSX.Element {
       </div>
 
       {/* Results Cards */}
-      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <div class="rounded-xl bg-linear-to-br from-amber-400 to-amber-500 p-6 text-white shadow-lg">
-          <div class="mb-2 text-4xl">🌾</div>
-          <p class="text-sm font-medium opacity-90">Flour</p>
-          <p class="text-3xl font-bold">{roundedFlour}g</p>
+      <div class="grid gap-3 grid-cols-2 lg:grid-cols-4 sm:gap-4">
+        <div class="rounded-xl bg-linear-to-br from-amber-400 to-amber-500 p-3 text-white shadow-lg sm:p-6">
+          <div class="mb-1 text-2xl sm:mb-2 sm:text-4xl">🌾</div>
+          <p class="text-xs font-medium opacity-90 sm:text-sm">Flour</p>
+          <p class="text-xl font-bold sm:text-3xl">{roundedFlour}g</p>
         </div>
 
-        <div class="rounded-xl bg-linear-to-br from-sky-400 to-sky-500 p-6 text-white shadow-lg">
-          <div class="mb-2 text-4xl">💧</div>
-          <p class="text-sm font-medium opacity-90">Water</p>
-          <p class="text-3xl font-bold">{roundedWater}g</p>
+        <div class="rounded-xl bg-linear-to-br from-sky-400 to-sky-500 p-3 text-white shadow-lg sm:p-6">
+          <div class="mb-1 text-2xl sm:mb-2 sm:text-4xl">💧</div>
+          <p class="text-xs font-medium opacity-90 sm:text-sm">Water</p>
+          <p class="text-xl font-bold sm:text-3xl">{roundedWater}g</p>
         </div>
 
-        <div class="rounded-xl bg-linear-to-br from-slate-400 to-slate-500 p-6 text-white shadow-lg">
-          <div class="mb-2 text-4xl">🧂</div>
-          <p class="text-sm font-medium opacity-90">Salt</p>
-          <p class="text-3xl font-bold">{roundedSalt}g</p>
+        <div class="rounded-xl bg-linear-to-br from-slate-400 to-slate-500 p-3 text-white shadow-lg sm:p-6">
+          <div class="mb-1 text-2xl sm:mb-2 sm:text-4xl">🧂</div>
+          <p class="text-xs font-medium opacity-90 sm:text-sm">Salt</p>
+          <p class="text-xl font-bold sm:text-3xl">{roundedSalt}g</p>
           <p class="mt-1 text-xs opacity-75">2% of flour</p>
         </div>
 
-        <div class="rounded-xl bg-linear-to-br from-lime-400 to-lime-500 p-6 text-white shadow-lg">
-          <div class="mb-2 text-4xl">🦠</div>
-          <p class="text-sm font-medium opacity-90">Yeast</p>
-          <p class="text-3xl font-bold">{roundedYeast}g</p>
+        <div class="rounded-xl bg-linear-to-br from-lime-400 to-lime-500 p-3 text-white shadow-lg sm:p-6">
+          <div class="mb-1 text-2xl sm:mb-2 sm:text-4xl">🦠</div>
+          <p class="text-xs font-medium opacity-90 sm:text-sm">Yeast</p>
+          <p class="text-xl font-bold sm:text-3xl">{roundedYeast}g</p>
           <p class="mt-1 text-xs opacity-75">0.5% of flour</p>
         </div>
       </div>
