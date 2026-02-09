@@ -1,20 +1,21 @@
 ---
-import Image from 'astro/components/Image.astro';
+import Image from 'astro/components/Image.astro'
 import GithubIcon from './icons/Github'
 
 interface Props {
   project: {
-    name: string;
-    description: string;
-    url: string;
-    image?: ImageMetadata;
-    icon?: string;
-  };
+    name: string
+    description: string
+    url: string
+    image?: ImageMetadata
+    icon?: string
+  }
 }
 
-const { project } = Astro.props;
-const isExternal = project.url.startsWith('http://') || project.url.startsWith('https://');
-const isGitHub = project.url.startsWith('https://github.com/');
+const { project } = Astro.props
+const isExternal =
+  project.url.startsWith('http://') || project.url.startsWith('https://')
+const isGitHub = project.url.startsWith('https://github.com/')
 ---
 
 <a 

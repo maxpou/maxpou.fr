@@ -4,9 +4,13 @@ import ProjectCard from '../components/ProjectCard.astro'
 
 import { projects } from '../content/projects'
 
-const highlightedProjects = projects.filter(project => project.highlighted && !project.isDead);
-const otherProjects = projects.filter(project => !project.isDead && !project.highlighted);
-const deadProjects = projects.filter(project => project.isDead);
+const highlightedProjects = projects.filter(
+  project => project.highlighted && !project.isDead,
+)
+const otherProjects = projects.filter(
+  project => !project.isDead && !project.highlighted,
+)
+const deadProjects = projects.filter(project => project.isDead)
 ---
 
 <Layout

@@ -22,7 +22,7 @@ and I travel often.
 - [Jarvis Bamboo Standing Desk](https://www.fully.com/en-eu/jarvis-adjustable-height-desk-bamboo.html)
 - [Keychron K3 Mechanical keyboard](https://twitter.com/_maxpou/status/1436270414544654348)
 - MX Master 3S Mouse
-- OnePlus Nord (and an old Huawei as a backup)
+- iPhone 16 (and an old OnePlus Nord as a backup)
 - Sony MDR 1000X. A noise-cancelling headphone with 2 modes: wired or wireless (bluetooth). I also
   have some Airpods.
 
