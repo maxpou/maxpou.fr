@@ -13,7 +13,7 @@ export const projects = [
     image: YoutubeMateImg,
     description:
       'An AI assistant that generates summaries of YouTube videos and saves you precious time!',
-    url: 'https://www.youtube-mate.com',
+    url: 'https://youtube-mate.com',
     ghIcon: false,
     highlighted: true,
   },
@@ -21,7 +21,7 @@ export const projects = [
     name: 'Avion',
     image: AvionImg,
     description: 'Experience the thrill of flying in this 3D flight simulator.',
-    url: 'https://air-max.netlify.app',
+    url: 'https://avion-game.netlify.app',
     ghIcon: false,
     highlighted: true,
   },
