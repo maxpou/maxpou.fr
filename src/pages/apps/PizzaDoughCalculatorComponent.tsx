@@ -45,10 +45,12 @@ export default function PizzaDoughCalculator(): JSX.Element {
               id="numberOfDoughs"
               value={numberOfDoughs}
               onInput={e =>
-                setNumberOfDoughs(
-                  Math.max(1, Number((e.target as HTMLInputElement).value)),
-                )
+                setNumberOfDoughs(Number((e.target as HTMLInputElement).value))
               }
+              onBlur={e => {
+                const v = Number((e.target as HTMLInputElement).value)
+                setNumberOfDoughs(Math.max(1, Number.isNaN(v) ? 1 : v))
+              }}
               class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-lg text-gray-900 focus:border-amber-500 focus:ring-2 focus:ring-amber-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
               min="1"
               step="1"
@@ -67,10 +69,12 @@ export default function PizzaDoughCalculator(): JSX.Element {
               id="doughSize"
               value={doughSize}
               onInput={e =>
-                setDoughSize(
-                  Math.max(100, Number((e.target as HTMLInputElement).value)),
-                )
+                setDoughSize(Number((e.target as HTMLInputElement).value))
               }
+              onBlur={e => {
+                const v = Number((e.target as HTMLInputElement).value)
+                setDoughSize(Math.max(100, Number.isNaN(v) ? 100 : v))
+              }}
               class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-lg text-gray-900 focus:border-amber-500 focus:ring-2 focus:ring-amber-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
               min="100"
               step="10"
@@ -89,13 +93,14 @@ export default function PizzaDoughCalculator(): JSX.Element {
               id="hydration"
               value={hydration}
               onInput={e =>
-                setHydration(
-                  Math.min(
-                    90,
-                    Math.max(50, Number((e.target as HTMLInputElement).value)),
-                  ),
-                )
+                setHydration(Number((e.target as HTMLInputElement).value))
               }
+              onBlur={e => {
+                const v = Number((e.target as HTMLInputElement).value)
+                setHydration(
+                  Math.min(90, Math.max(50, Number.isNaN(v) ? 67 : v)),
+                )
+              }}
               class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-lg text-gray-900 focus:border-amber-500 focus:ring-2 focus:ring-amber-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
               min="50"
               max="90"
