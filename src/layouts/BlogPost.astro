@@ -7,7 +7,6 @@ import FormattedDate from '../components/FormattedDate.astro'
 import HeroImage from '../components/HeroImage.astro'
 import Layout from '../components/Layout.astro'
 import PageTitle from '../components/PageTitle.astro'
-import RelatedPosts from '../components/RelatedPosts.astro'
 import StructuredData from '../components/StructuredData.astro'
 import Tag from '../components/Tag.astro'
 import { SITE_OWNER, SITE_URL } from '../consts'
@@ -133,5 +132,4 @@ const articleStructuredData: JsonLdDocument = {
       <slot />
     </div>
   </article>
-  <RelatedPosts currentPost={Astro.props} allPosts={allPosts} />
 </Layout>
