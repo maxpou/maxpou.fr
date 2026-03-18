@@ -335,9 +335,10 @@ export default function GlucidCalculator(): JSX.Element {
           <strong>{formatTime(estimatedHours, estimatedMinutes)}</strong>, aim
           for{' '}
           <strong>
-            {recommendedRange.min}-{recommendedRange.max}g/hour
+            {Math.round(recommendedRange.min * totalTimeHours)}-
+            {Math.round(recommendedRange.max * totalTimeHours)}g
           </strong>{' '}
-          of carbs.
+          of carbs ({recommendedRange.min}-{recommendedRange.max}g/hour).
         </p>
         <p class="mt-2 text-gray-600 dark:text-gray-400">
           With your {glucidPerGel}g gels, that's approximately{' '}
