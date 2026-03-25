@@ -41,7 +41,7 @@ To prevent the FPS counter from going crazy, I had to implement a few tricks:
 - **Level of Details (LOD)**: the farther an object is, the lower quality it will have. In Avion,
   the trees that are too far away will only render a bush. The trunk will be hidden. When you play
   open-world games, and you travel fast, you may have the feeling that a lot of objects appear at
-  once. It's usually because the loop was stucks and the LOD didn't refresh at the right pace.
+  once. It's usually because the loop was stuck and the LOD didn't refresh at the right pace.
 - **Frustum culling**: prevents rendering objects outside the camera view (the frustum).
   <video src={myVideo} loop autoPlay muted></video> *Frustum Culling in the game Horizon: Zero Dawn*
 - **Occlusion culler**: It's usually the next step after implementing the frustum culling. In a
