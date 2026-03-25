@@ -44,7 +44,7 @@ To prevent the FPS counter from going crazy, I had to implement a few tricks:
   once. It's usually because the loop was stuck and the LOD didn't refresh at the right pace.
 - **Frustum culling**: prevents rendering objects outside the camera view (the frustum).
   <video src={myVideo} loop autoPlay muted></video> *Frustum Culling in the game Horizon: Zero Dawn*
-- **Occlusion culler**: It's usually the next step after implementing the frustum culling. In a
+- **Occlusion culling**: It's usually the next step after implementing the frustum culling. In a
   nutshell, if a house is hidden from the screen behind a mountain, there's no point of rendering
   it.
 - **Frame skipping**: Instead of detecting collision on every frame, I do it every 3 frames. If the
