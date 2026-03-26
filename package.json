@@ -38,7 +38,7 @@
     "@tailwindcss/vite": "^4.1.17",
     "@types/jsonld": "^1.5.15",
     "@vercel/og": "^0.6.4",
-    "astro": "^5.16.0",
+    "astro": "^5.18.1",
     "astro-expressive-code": "^0.41.4",
     "notion-to-md": "^3.1.9",
     "preact": "^10.25.1",
