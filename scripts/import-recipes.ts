@@ -41,24 +41,46 @@ async function getPages(): Promise<PageObjectResponse[]> {
 }
 
 async function getBlocks(blockId: string): Promise<BlockObjectResponse[]> {
-  const response = await notion.blocks.children.list({
-    block_id: blockId,
-    page_size: 10000,
-  })
-  return response.results as BlockObjectResponse[]
+  const results: BlockObjectResponse[] = []
+  let cursor: string | undefined
+
+  do {
+    const response = await notion.blocks.children.list({
+      block_id: blockId,
+      page_size: 100,
+      start_cursor: cursor,
+    })
+    results.push(...(response.results as BlockObjectResponse[]))
+    cursor = response.has_more ? (response.next_cursor ?? undefined) : undefined
+  } while (cursor)
+
+  return results
 }
 
-function download(url: string, destination: string): void {
-  const fileStream = fs.createWriteStream(destination)
-  https.get(url, response => {
-    response.pipe(fileStream)
-    console.log('👨‍🍳 File downloaded', destination)
+function download(url: string, destination: string): Promise<void> {
+  return new Promise((resolve, reject) => {
+    const fileStream = fs.createWriteStream(destination)
+    https
+      .get(url, response => {
+        if (response.statusCode && response.statusCode >= 400) {
+          reject(new Error(`HTTP ${response.statusCode} downloading ${url}`))
+          return
+        }
+        response.pipe(fileStream)
+        fileStream.on('finish', () => {
+          console.log('👨‍🍳 File downloaded', destination)
+          resolve()
+        })
+        fileStream.on('error', reject)
+      })
+      .on('error', reject)
   })
 }
 
 async function cleanBlocksDownloadImgs(
   blocks: BlockObjectResponse[],
   fileName: string,
+  fileIdToLocalPath: Map<string, string>,
   indexPrefix = '',
 ): Promise<BlockObjectResponse[]> {
   let olCounter = 1
@@ -68,10 +90,18 @@ async function cleanBlocksDownloadImgs(
     const blockIndex = indexPrefix ? `${indexPrefix}-${i}` : `${i}`
 
     if (block.type === 'image' && block.image.type === 'file') {
+      const url = block.image.file.url
       const imgFileName = `${fileName}-${blockIndex}.jpg`
       const destination = `./src/content/recipes/assets/${imgFileName}`
-      download(block.image.file.url, destination)
-      block.image.file.url = `./assets/${imgFileName}`
+      const localPath = `./assets/${imgFileName}`
+      await download(url, destination)
+      block.image.file.url = localPath
+
+      // Extract Notion file UUID from the S3 URL (stable across URL refreshes)
+      const fileIdMatch = url.match(/amazonaws\.com\/[^/]+\/([a-f0-9-]+)\//)
+      if (fileIdMatch) {
+        fileIdToLocalPath.set(fileIdMatch[1], localPath)
+      }
     } else if (block.type === 'numbered_list_item') {
       olCounter =
         blocks[i - 1]?.type === 'numbered_list_item' ? olCounter + 1 : 1
@@ -83,6 +113,7 @@ async function cleanBlocksDownloadImgs(
       const processedChildren = await cleanBlocksDownloadImgs(
         children,
         fileName,
+        fileIdToLocalPath,
         blockIndex,
       )
       ;(block as { children?: BlockObjectResponse[] }).children =
@@ -111,14 +142,35 @@ async function main(): Promise<void> {
 
     const blocks = await getBlocks(page.id)
 
-    const cleanBlocks = await cleanBlocksDownloadImgs(blocks, fileName)
+    const fileIdToLocalPath = new Map<string, string>()
+    const cleanBlocks = await cleanBlocksDownloadImgs(
+      blocks,
+      fileName,
+      fileIdToLocalPath,
+    )
 
     const mdblocks = await n2m.blocksToMarkdown(cleanBlocks)
-    const mdString = n2m.toMarkdownString(mdblocks).parent
+    let mdString = n2m.toMarkdownString(mdblocks).parent
 
-    const coverFileName = `${fileName}-cover.jpg`
+    // notion-to-md re-fetches children from Notion, getting fresh (different) S3 URLs.
+    // Post-process to replace any remaining S3 URLs using the stable Notion file UUID.
+    mdString = mdString.replace(
+      /\(https:\/\/prod-files-secure\.s3[^)]+\)/g,
+      match => {
+        const url = match.slice(1, -1)
+        const fileIdMatch = url.match(/amazonaws\.com\/[^/]+\/([a-f0-9-]+)\//)
+        const localPath = fileIdMatch && fileIdToLocalPath.get(fileIdMatch[1])
+        return localPath ? `(${localPath})` : match
+      },
+    )
+
+    const coverExt =
+      page.cover?.type === 'file'
+        ? (new URL(page.cover.file.url).pathname.split('.').pop() ?? 'jpg')
+        : 'jpg'
+    const coverFileName = `${fileName}-cover.${coverExt}`
     if (page.cover?.type === 'file') {
-      download(
+      await download(
         page.cover.file.url,
         `./src/content/recipes/assets/${coverFileName}`,
       )
@@ -128,14 +180,16 @@ async function main(): Promise<void> {
 title: ${title}
 date: ${page.created_time}
 slug: ${fileName}
-${page.cover ? `cover: ./assets/${coverFileName}` : ''}
+${page.cover?.type === 'file' ? `cover: ./assets/${coverFileName}` : ''}
 ---
 `
     const fileContent = header + mdString
 
-    fs.writeFile(`./src/content/recipes/${fileName}.mdx`, fileContent, () => {
-      console.log(`👨‍🍳 File created: ${fileName}`)
-    })
+    await fs.promises.writeFile(
+      `./src/content/recipes/${fileName}.mdx`,
+      fileContent,
+    )
+    console.log(`👨‍🍳 File created: ${fileName}`)
   }
 }
 
