@@ -1,9 +1,8 @@
 ---
-import { Image } from 'astro:assets'
 import { getCollection } from 'astro:content'
-import FormattedDate from '../../components/FormattedDate.astro'
 import Layout from '../../components/Layout.astro'
 import PageTitle from '../../components/PageTitle.astro'
+import RecipeCard from '../../components/RecipeCard.astro'
 
 const recipes = (await getCollection('recipes')).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
@@ -27,104 +26,8 @@ const recipes = (await getCollection('recipes')).sort(
       Welcome to my culinary haven! I'm Max, a passionate foodie eager to share
       my favourite recipes. I hope you enjoy them as much as I do!
     </p>
-    <ul>
-      {
-        recipes.map((recipe, i) => (
-          <li>
-            <a href={`/recipes/${recipe.slug}/`} title={recipe.data.title}>
-              {i === 0 ? (
-                <Image
-                  src={recipe.data.cover}
-                  alt={`Cover picture for ${recipe.data.title}`}
-                  width={1020}
-                  height={500}
-                  class="rounded-xl shadow-xl mx-auto h-[500px] object-cover w-full"
-                />
-              ) : (
-                <Image
-                  src={recipe.data.cover}
-                  width={720}
-                  height={360}
-                  alt={`Cover picture for ${recipe.data.title}`}
-                  class="rounded-xl shadow-xl mx-auto h-[360px] object-cover w-full"
-                />
-              )}
-              <header class="text-2xl font-semibold dark:text-gray-100">
-                {recipe.data.title}
-              </header>
-              <p class="date">
-                <FormattedDate date={recipe.data.date} />
-              </p>
-            </a>
-          </li>
-        ))
-      }
-    </ul>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {recipes.map((recipe) => <RecipeCard recipe={recipe} />)}
+    </div>
   </section>
-  <style>
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-    ul li {
-      width: calc(50% - 1rem);
-    }
-    ul li * {
-      text-decoration: none;
-      transition: 0.2s ease;
-    }
-    ul li:first-child {
-      width: 100%;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-    ul li:first-child img {
-      width: 100%;
-    }
-    ul li:first-child .title {
-      font-size: 2.369rem;
-    }
-    ul li img {
-      margin-bottom: 0.5rem;
-      border-radius: 12px;
-    }
-    ul li a {
-      display: block;
-    }
-    .title {
-      margin: 0;
-      color: rgb(var(--black));
-      line-height: 1;
-    }
-    .date {
-      margin: 0;
-      color: rgb(var(--gray));
-    }
-    ul li a:hover h4,
-    ul li a:hover .date {
-      color: rgb(var(--accent));
-    }
-    ul a:hover img {
-      box-shadow: var(--box-shadow);
-    }
-    @media (max-width: 720px) {
-      ul {
-        gap: 0.5em;
-      }
-      ul li {
-        width: 100%;
-        text-align: center;
-      }
-      ul li:first-child {
-        margin-bottom: 0;
-      }
-      ul li:first-child .title {
-        font-size: 1.563em;
-      }
-    }
-  </style>
 </Layout>
