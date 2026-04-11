@@ -101,8 +101,26 @@ export default function GlucidCalculator(): JSX.Element {
 
   const currentZone = getCurrentZone()
 
+  const gelSchedule =
+    numberOfGels > 0 && distance > 0 && totalTimeHours > 0
+      ? Array.from({ length: numberOfGels }, (_, i) => {
+          const km = i * (distance / numberOfGels)
+          return {
+            gelNumber: i + 1,
+            km,
+            timeHours: (km / distance) * totalTimeHours,
+          }
+        })
+      : []
+
   const formatTime = (hours: number, minutes: number): string => {
     return `${hours}h${minutes.toString().padStart(2, '0')}`
+  }
+
+  const formatDecimalTime = (decimalHours: number): string => {
+    const h = Math.floor(decimalHours)
+    const m = Math.round((decimalHours - h) * 60)
+    return `${h}h${m.toString().padStart(2, '0')}`
   }
 
   return (
@@ -392,6 +410,60 @@ export default function GlucidCalculator(): JSX.Element {
           ))}
         </div>
       </div>
+
+      {/* Gel Schedule */}
+      {gelSchedule.length > 0 && (
+        <div class="rounded-xl bg-white shadow-lg dark:bg-gray-800">
+          <div class="border-b border-gray-200 p-6 pb-4 dark:border-gray-700">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Gel Schedule
+            </h3>
+            <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+              Take a gel every {(distance / numberOfGels).toFixed(1)} km
+            </p>
+          </div>
+          <div class="max-h-[50vh] overflow-auto">
+            <table class="w-full border-collapse">
+              <thead class="sticky top-0 z-10 bg-gray-50 dark:bg-gray-700">
+                <tr>
+                  <th class="px-4 py-2 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-300">
+                    Gel #
+                  </th>
+                  <th class="px-4 py-2 text-center text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-300">
+                    Distance
+                  </th>
+                  <th class="px-4 py-2 text-center text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-300">
+                    Est. Time
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200 dark:divide-gray-600">
+                {gelSchedule.map(stop => (
+                  <tr
+                    key={stop.gelNumber}
+                    class="transition-colors hover:bg-gray-50 dark:hover:bg-gray-700"
+                  >
+                    <td class="whitespace-nowrap px-4 py-2 text-sm font-medium text-gray-900 dark:text-white">
+                      Gel {stop.gelNumber}
+                      {stop.gelNumber === 1 && (
+                        <span class="ml-2 text-xs text-gray-500 dark:text-gray-400">
+                          (start)
+                        </span>
+                      )}
+                    </td>
+                    <td class="whitespace-nowrap px-4 py-2 text-center text-sm text-gray-700 dark:text-gray-300">
+                      {stop.km.toFixed(1)} km
+                    </td>
+                    <td class="whitespace-nowrap px-4 py-2 text-center text-sm text-gray-700 dark:text-gray-300">
+                      {formatDecimalTime(stop.timeHours)}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
