@@ -16,7 +16,7 @@ const { post, firstBigger = true, showDate = true } = Astro.props
 
 <a
   title={post.data.title}
-  href={`/blog/${post.slug}/`}
+  href={`/blog/${post.id}/`}
   class:list={[
     'ease flex flex-col rounded-lg bg-white transition duration-300 dark:bg-gray-500',
     'hover:translate-y-0.5 shadow-md  hover:shadow-xl',

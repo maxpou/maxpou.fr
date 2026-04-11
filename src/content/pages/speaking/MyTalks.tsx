@@ -68,4 +68,4 @@ function Presentations(): JSX.Element {
   )
 }
 
-export { Talks, TrainingsAndWorkshops, Presentations }
+export { Presentations, Talks, TrainingsAndWorkshops }

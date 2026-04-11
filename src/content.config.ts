@@ -1,12 +1,19 @@
-import { defineCollection, z } from 'astro:content'
+import { defineCollection } from 'astro:content'
+import { glob } from 'astro/loaders'
+import { z } from 'zod'
 
 const blog = defineCollection({
-  type: 'content',
+  loader: glob({
+    pattern: '**/*.{md,mdx}',
+    base: './src/content/blog',
+    generateId: ({ entry }) =>
+      entry.replace(/\/index\.(md|mdx)$/, '').replace(/\.(md|mdx)$/, ''),
+  }),
   schema: ({ image }) =>
     z.object({
       title: z.string(),
       description: z.string().optional(),
-      date: z.coerce.date(), // Transform string to Date object
+      date: z.coerce.date(),
       cover: image(),
       language: z.string().optional(),
       modified: z.coerce.date().optional(),
@@ -26,7 +33,14 @@ const blog = defineCollection({
 })
 
 const pages = defineCollection({
-  type: 'content',
+  loader: glob({
+    pattern: '**/*.{md,mdx}',
+    base: './src/content/pages',
+    generateId: ({ entry, data }) => {
+      if (data.slug && typeof data.slug === 'string') return data.slug
+      return entry.replace(/\/index\.(md|mdx)$/, '').replace(/\.(md|mdx)$/, '')
+    },
+  }),
   schema: ({ image }) =>
     z.object({
       title: z.string(),
@@ -37,11 +51,16 @@ const pages = defineCollection({
 })
 
 const recipes = defineCollection({
-  type: 'content',
+  loader: glob({
+    pattern: '**/*.{md,mdx}',
+    base: './src/content/recipes',
+    generateId: ({ entry }) =>
+      entry.replace(/\/index\.(md|mdx)$/, '').replace(/\.(md|mdx)$/, ''),
+  }),
   schema: ({ image }) =>
     z.object({
       title: z.string(),
-      date: z.coerce.date(), // Transform string to Date object
+      date: z.coerce.date(),
       cover: image(),
       description: z.string().optional(),
     }),

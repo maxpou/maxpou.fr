@@ -1,11 +1,11 @@
-import type { ImageFunction, z } from 'astro:content'
 import { getCollection } from 'astro:content'
 import fs from 'node:fs'
 import path from 'node:path'
 import { ImageResponse } from '@vercel/og'
+import type { ImageMetadata } from 'astro'
 import type { ReactNode } from 'preact/compat'
 
-type AstroImage = z.infer<ReturnType<ImageFunction>>
+type AstroImage = ImageMetadata
 
 interface Props {
   params: { slug: string }
@@ -120,10 +120,10 @@ export async function getStaticPaths() {
   const allPages = await getCollection('pages')
   const allRecipes = await getCollection('recipes')
   const indexPage = allPages
-    .filter(page => page.slug === 'speaking')
+    .filter(page => page.id === 'speaking')
     .map(page => {
       return {
-        slug: 'home',
+        id: 'home',
         data: {
           title: 'Maxence Poutord',
           cover: page.data.cover,
@@ -134,7 +134,7 @@ export async function getStaticPaths() {
   return [indexPage, ...allBlogPosts, ...allPages, ...allRecipes].map(page => {
     return {
       params: {
-        slug: page.slug,
+        slug: page.id,
       },
       props: {
         title: page.data.title,

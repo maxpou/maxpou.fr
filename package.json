@@ -28,26 +28,26 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.6",
-    "@astrojs/mdx": "^4.3.0",
-    "@astrojs/preact": "^4.1.0",
-    "@astrojs/rss": "^4.0.0",
-    "@astrojs/sitemap": "^3.6.0",
-    "@notionhq/client": "^5.6.0",
+    "@astrojs/check": "^0.9.8",
+    "@astrojs/mdx": "^5.0.3",
+    "@astrojs/preact": "^5.1.0",
+    "@astrojs/rss": "^4.0.18",
+    "@astrojs/sitemap": "^3.7.2",
+    "@notionhq/client": "^5.15.0",
     "@tailwindcss/typography": "^0.5.19",
-    "@tailwindcss/vite": "^4.1.17",
+    "@tailwindcss/vite": "^4.2.2",
     "@types/jsonld": "^1.5.15",
-    "@vercel/og": "^0.6.4",
-    "astro": "^5.16.0",
-    "astro-expressive-code": "^0.41.4",
+    "@vercel/og": "^0.11.1",
+    "astro": "^6.1.1",
+    "astro-expressive-code": "^0.41.7",
     "notion-to-md": "^3.1.9",
-    "preact": "^10.25.1",
-    "tailwindcss": "^4.1.17",
-    "typescript": "^5.9.0"
+    "preact": "^10.29.0",
+    "tailwindcss": "^4.2.2",
+    "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.3.10",
-    "prettier": "^3.7.4",
+    "@biomejs/biome": "2.4.9",
+    "prettier": "^3.8.1",
     "tsx": "^4.19.2"
   }
 }
