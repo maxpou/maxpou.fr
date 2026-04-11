@@ -39,7 +39,7 @@ export default function RunnerDashboardTabs(): JSX.Element {
       </div>
 
       {/* Tab Content */}
-      <div class="min-h-[600px]">
+      <div class="min-h-150">
         {activeTab === 'pace' && <PaceCalculatorComponent />}
         {activeTab === 'splits' && <SplitsCalculatorComponent />}
         {activeTab === 'nutrition' && <GlucidCalculatorComponent />}
