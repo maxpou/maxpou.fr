@@ -2,7 +2,7 @@ import type { JSX } from 'preact'
 // biome-ignore lint/correctness/noUnusedImports: Needed for JSX types
 import * as React from 'preact/compat'
 import type { Dispatch, StateUpdater } from 'preact/hooks'
-import { useState } from 'preact/hooks'
+import { useLocalStorage } from '../../hooks/useLocalStorage'
 
 type Distance = {
   name: string
@@ -56,20 +56,24 @@ function calculateSpeed(totalSeconds: number, distanceKm: number): number {
 }
 
 export default function SplitsCalculator(): JSX.Element {
-  const [selectedDistance, setSelectedDistance] = useState<Distance>(
-    DISTANCES[6],
-  ) // Marathon default
-  const [time1, setTime1] = useState<TimeInput>({
-    hours: 3,
-    minutes: 50,
-    seconds: 0,
-  })
-  const [showSecondTime, setShowSecondTime] = useState(false)
-  const [time2, setTime2] = useState<TimeInput>({
-    hours: 4,
-    minutes: 15,
-    seconds: 0,
-  })
+  const [distanceName, setDistanceName] = useLocalStorage<string>(
+    'runner-dashboard:splits.distanceName',
+    'Marathon',
+  )
+  const selectedDistance =
+    DISTANCES.find(d => d.name === distanceName) ?? DISTANCES[6]
+  const [time1, setTime1] = useLocalStorage<TimeInput>(
+    'runner-dashboard:splits.time1',
+    { hours: 3, minutes: 50, seconds: 0 },
+  )
+  const [showSecondTime, setShowSecondTime] = useLocalStorage<boolean>(
+    'runner-dashboard:splits.showSecondTime',
+    false,
+  )
+  const [time2, setTime2] = useLocalStorage<TimeInput>(
+    'runner-dashboard:splits.time2',
+    { hours: 4, minutes: 15, seconds: 0 },
+  )
 
   const totalSeconds1 = timeToSeconds(time1)
   const pacePerKm1 = calculatePacePerKm(totalSeconds1, selectedDistance.km)
@@ -139,7 +143,7 @@ export default function SplitsCalculator(): JSX.Element {
             <button
               key={dist.name}
               type="button"
-              onClick={() => setSelectedDistance(dist)}
+              onClick={() => setDistanceName(dist.name)}
               class={`rounded-lg px-4 py-2 text-sm font-medium transition-all cursor-pointer ${
                 selectedDistance.name === dist.name
                   ? 'bg-blue-500 text-white shadow-md'
