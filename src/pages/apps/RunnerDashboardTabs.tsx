@@ -1,7 +1,7 @@
 import type { JSX } from 'preact'
 // biome-ignore lint/correctness/noUnusedImports: Needed for JSX types
 import * as React from 'preact/compat'
-import { useState } from 'preact/hooks'
+import { useLocalStorage } from '../../hooks/useLocalStorage'
 import GlucidCalculatorComponent from './GlucidCalculatorComponent'
 import PaceCalculatorComponent from './PaceCalculatorComponent'
 import SplitsCalculatorComponent from './SplitsCalculatorComponent'
@@ -15,7 +15,7 @@ const TABS: { id: Tab; label: string; icon: string }[] = [
 ]
 
 export default function RunnerDashboardTabs(): JSX.Element {
-  const [activeTab, setActiveTab] = useState<Tab>('pace')
+  const [activeTab, setActiveTab] = useLocalStorage<Tab>('runner-dashboard:activeTab', 'pace')
 
   return (
     <div class="space-y-6">

@@ -1,7 +1,7 @@
 import type { JSX } from 'preact'
 // biome-ignore lint/correctness/noUnusedImports: Needed for JSX types
 import * as React from 'preact/compat'
-import { useState } from 'preact/hooks'
+import { useLocalStorage } from '../../hooks/useLocalStorage'
 
 type NutritionZone = {
   min: number
@@ -51,12 +51,12 @@ const PRESET_DISTANCES = [
 ]
 
 export default function GlucidCalculator(): JSX.Element {
-  const [weight, setWeight] = useState<number>(70)
-  const [distance, setDistance] = useState<number>(42.195)
-  const [estimatedHours, setEstimatedHours] = useState<number>(3)
-  const [estimatedMinutes, setEstimatedMinutes] = useState<number>(50)
-  const [glucidPerGel, setGlucidPerGel] = useState<number>(25)
-  const [numberOfGels, setNumberOfGels] = useState<number>(9)
+  const [weight, setWeight] = useLocalStorage<number>('runner-dashboard:nutrition.weight', 70)
+  const [distance, setDistance] = useLocalStorage<number>('runner-dashboard:nutrition.distance', 42.195)
+  const [estimatedHours, setEstimatedHours] = useLocalStorage<number>('runner-dashboard:nutrition.estimatedHours', 3)
+  const [estimatedMinutes, setEstimatedMinutes] = useLocalStorage<number>('runner-dashboard:nutrition.estimatedMinutes', 50)
+  const [glucidPerGel, setGlucidPerGel] = useLocalStorage<number>('runner-dashboard:nutrition.glucidPerGel', 25)
+  const [numberOfGels, setNumberOfGels] = useLocalStorage<number>('runner-dashboard:nutrition.numberOfGels', 9)
 
   // Calculations
   const totalTimeHours = estimatedHours + estimatedMinutes / 60
