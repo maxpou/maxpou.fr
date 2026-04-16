@@ -51,12 +51,30 @@ const PRESET_DISTANCES = [
 ]
 
 export default function GlucidCalculator(): JSX.Element {
-  const [weight, setWeight] = useLocalStorage<number>('runner-dashboard:nutrition.weight', 70)
-  const [distance, setDistance] = useLocalStorage<number>('runner-dashboard:nutrition.distance', 42.195)
-  const [estimatedHours, setEstimatedHours] = useLocalStorage<number>('runner-dashboard:nutrition.estimatedHours', 3)
-  const [estimatedMinutes, setEstimatedMinutes] = useLocalStorage<number>('runner-dashboard:nutrition.estimatedMinutes', 50)
-  const [glucidPerGel, setGlucidPerGel] = useLocalStorage<number>('runner-dashboard:nutrition.glucidPerGel', 25)
-  const [numberOfGels, setNumberOfGels] = useLocalStorage<number>('runner-dashboard:nutrition.numberOfGels', 9)
+  const [weight, setWeight] = useLocalStorage<number>(
+    'runner-dashboard:nutrition.weight',
+    70,
+  )
+  const [distance, setDistance] = useLocalStorage<number>(
+    'runner-dashboard:nutrition.distance',
+    42.195,
+  )
+  const [estimatedHours, setEstimatedHours] = useLocalStorage<number>(
+    'runner-dashboard:nutrition.estimatedHours',
+    3,
+  )
+  const [estimatedMinutes, setEstimatedMinutes] = useLocalStorage<number>(
+    'runner-dashboard:nutrition.estimatedMinutes',
+    50,
+  )
+  const [glucidPerGel, setGlucidPerGel] = useLocalStorage<number>(
+    'runner-dashboard:nutrition.glucidPerGel',
+    25,
+  )
+  const [numberOfGels, setNumberOfGels] = useLocalStorage<number>(
+    'runner-dashboard:nutrition.numberOfGels',
+    9,
+  )
 
   // Calculations
   const totalTimeHours = estimatedHours + estimatedMinutes / 60

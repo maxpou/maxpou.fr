@@ -3,19 +3,26 @@ import type { JSX } from 'preact'
 import * as React from 'preact/compat'
 import { useLocalStorage } from '../../hooks/useLocalStorage'
 import GlucidCalculatorComponent from './GlucidCalculatorComponent'
+import HeartZonesComponent from './HeartZonesComponent'
 import PaceCalculatorComponent from './PaceCalculatorComponent'
+import SettingsComponent from './SettingsComponent'
 import SplitsCalculatorComponent from './SplitsCalculatorComponent'
 
-type Tab = 'pace' | 'splits' | 'nutrition'
+type Tab = 'pace' | 'splits' | 'nutrition' | 'heartZones' | 'settings'
 
 const TABS: { id: Tab; label: string; icon: string }[] = [
   { id: 'pace', label: 'Pace Calculator', icon: '⏱️' },
   { id: 'splits', label: 'Splits', icon: '📏' },
   { id: 'nutrition', label: 'Nutrition Planner', icon: '🍯' },
+  { id: 'heartZones', label: 'Heart Zones', icon: '❤️' },
+  { id: 'settings', label: 'Settings', icon: '⚙️' },
 ]
 
 export default function RunnerDashboardTabs(): JSX.Element {
-  const [activeTab, setActiveTab] = useLocalStorage<Tab>('runner-dashboard:activeTab', 'pace')
+  const [activeTab, setActiveTab] = useLocalStorage<Tab>(
+    'runner-dashboard:activeTab',
+    'pace',
+  )
 
   return (
     <div class="space-y-6">
@@ -43,6 +50,8 @@ export default function RunnerDashboardTabs(): JSX.Element {
         {activeTab === 'pace' && <PaceCalculatorComponent />}
         {activeTab === 'splits' && <SplitsCalculatorComponent />}
         {activeTab === 'nutrition' && <GlucidCalculatorComponent />}
+        {activeTab === 'heartZones' && <HeartZonesComponent />}
+        {activeTab === 'settings' && <SettingsComponent />}
       </div>
     </div>
   )

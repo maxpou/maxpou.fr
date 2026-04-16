@@ -72,7 +72,7 @@ export default function SplitsCalculator(): JSX.Element {
   )
   const [time2, setTime2] = useLocalStorage<TimeInput>(
     'runner-dashboard:splits.time2',
-    { hours: 4, minutes: 15, seconds: 0 },
+    { hours: 3, minutes: 59, seconds: 0 },
   )
 
   const totalSeconds1 = timeToSeconds(time1)
