@@ -11,7 +11,7 @@ const { recipe } = Astro.props
 
 <a
   title={recipe.data.title}
-  href={`/recipes/${recipe.slug}/`}
+  href={`/recipes/${recipe.data.slug}/`}
   class="ease flex flex-col rounded-lg bg-white transition duration-300 dark:bg-gray-500
     hover:translate-y-0.5 shadow-md hover:shadow-xl group"
 >

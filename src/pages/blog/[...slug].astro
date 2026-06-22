@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content'
+import { getCollection, render } from 'astro:content'
 import type { InferGetStaticPropsType } from 'astro'
 import AboutAuthor from '../../components/AboutAuthor.astro'
 import BlogCard from '../../components/BlogCard.astro'
@@ -11,14 +11,14 @@ export async function getStaticPaths() {
   const posts = await getCollection('blog')
   const featuredPosts = posts.filter(post => post.data.featured)
   return posts.map(post => ({
-    params: { slug: post.slug },
+    params: { slug: post.data.slug },
     props: { post, featuredPosts },
   }))
 }
 type Props = InferGetStaticPropsType<typeof getStaticPaths>
 
 const { post, featuredPosts } = Astro.props
-const { Content } = await post.render()
+const { Content } = await render(post)
 ---
 
 <BlogPost {...post}>
@@ -35,7 +35,7 @@ const { Content } = await post.render()
       {
         featuredPosts
           .sort(() => 0.5 - Math.random()) // shuffle
-          .filter(post => post.slug !== Astro.params.slug) // remove current post
+          .filter(post => post.data.slug !== Astro.params.slug) // remove current post
           .slice(0, 2)
           .map(post => <BlogCard post={post} firstBigger={false} showDate={false} />)
       }

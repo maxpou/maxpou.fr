@@ -44,7 +44,7 @@ const blogStructuredData: JsonLdDocument = {
     headline: post.data.title,
     description: post.data.description,
     datePublished: post.data.date.toISOString(),
-    url: `${SITE_URL}/blog/${post.slug}`,
+    url: `${SITE_URL}/blog/${post.data.slug}`,
   })),
 }
 ---

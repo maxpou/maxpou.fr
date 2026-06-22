@@ -29,7 +29,8 @@ function formatBlogTranslation(
   )
 }
 
-const { data, slug } = Astro.props
+const { data } = Astro.props
+const { slug } = data
 const {
   title,
   description,
