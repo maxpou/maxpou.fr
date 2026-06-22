@@ -19,6 +19,24 @@ import CompoundInterestCalculatorComponent from './CompoundInterestCalculatorCom
       interest.
     </p>
 
+
+    <div
+      class="mb-8 rounded-lg border border-amber-300 bg-amber-50 p-4 dark:border-amber-700 dark:bg-amber-900/20"
+    >
+      <p class="mb-1 font-semibold text-amber-900 dark:text-amber-200">
+        Important Note: The blind spots of this calculator
+      </p>
+      <p class="text-sm text-amber-800 dark:text-amber-300">
+        This tool calculates theoretical compounding and does not account for
+        real-world factors like taxes (tax drag) and management fees, which
+        reduce your actual returns. It also assumes a smooth, fixed annual
+        return, ignoring market volatility (the linearity bias) and the fact
+        that inflation will erode your final purchasing power over time. For a
+        more realistic estimate, consider lowering your expected return rate by
+        a few percentage points to factor in these costs.
+      </p>
+    </div>
+
     <CompoundInterestCalculatorComponent client:load />
   </div>
 </Layout>
