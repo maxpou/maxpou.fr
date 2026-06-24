@@ -1,3 +1,4 @@
+import { unified } from '@astrojs/markdown-remark'
 import mdx from '@astrojs/mdx'
 import preact from '@astrojs/preact'
 import sitemap from '@astrojs/sitemap'
@@ -21,6 +22,16 @@ const astroExpressiveCodeOptions = {
 // https://astro.build/config
 export default defineConfig({
   site: SITE_URL,
+
+  // Preserve Astro <=6 whitespace handling (v7 changed the default to 'jsx')
+  compressHTML: true,
+
+  // Astro 7 defaults to the Sätteri processor, which ignores remark/rehype
+  // plugins. astro-expressive-code injects a rehype plugin for code blocks, so
+  // we opt back into the unified() pipeline to keep code-block rendering.
+  markdown: {
+    processor: unified(),
+  },
 
   redirects: {
     '/blog/pages/1': '/blog',
