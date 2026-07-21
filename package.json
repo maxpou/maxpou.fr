@@ -31,7 +31,7 @@
     "@astrojs/check": "^0.9.9",
     "@astrojs/mdx": "^7.0.0",
     "@astrojs/preact": "^6.0.0",
-    "@astrojs/rss": "^4.0.18",
+    "@astrojs/rss": "^4.0.19",
     "@astrojs/sitemap": "^3.7.3",
     "@notionhq/client": "^5.6.0",
     "@tailwindcss/typography": "^0.5.19",
