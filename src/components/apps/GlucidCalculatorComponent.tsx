@@ -50,6 +50,11 @@ const PRESET_DISTANCES = [
   { name: '100km', km: 100 },
 ]
 
+// Clamp manual numeric input to [0, max] so out-of-range / negative values
+// can't flow into state (HTML min/max is only enforced on the spinner).
+const clamp = (value: number, max: number): number =>
+  Number.isNaN(value) ? 0 : Math.max(0, Math.min(max, value))
+
 export default function GlucidCalculator(): JSX.Element {
   const [weight, setWeight] = useLocalStorage<number>(
     'runner-dashboard:nutrition.weight',
@@ -163,7 +168,9 @@ export default function GlucidCalculator(): JSX.Element {
               id="weight"
               value={weight}
               onInput={e =>
-                setWeight(Number((e.target as HTMLInputElement).value))
+                setWeight(
+                  clamp(Number((e.target as HTMLInputElement).value), 200),
+                )
               }
               class="w-full rounded-lg border border-gray-300 bg-white px-4 py-2 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
               min="30"
@@ -186,7 +193,9 @@ export default function GlucidCalculator(): JSX.Element {
                 id="distance"
                 value={distance}
                 onInput={e =>
-                  setDistance(Number((e.target as HTMLInputElement).value))
+                  setDistance(
+                    clamp(Number((e.target as HTMLInputElement).value), 500),
+                  )
                 }
                 class="w-full rounded-lg border border-gray-300 bg-white px-4 py-2 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
                 min="1"
@@ -201,7 +210,7 @@ export default function GlucidCalculator(): JSX.Element {
                   type="button"
                   onClick={() => setDistance(preset.km)}
                   class={`rounded-full px-3 py-1 text-xs font-medium transition-colors cursor-pointer ${
-                    Math.abs(distance - preset.km) < 0.1
+                    distance === preset.km
                       ? 'bg-blue-500 text-white'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
                   }`}
@@ -229,7 +238,7 @@ export default function GlucidCalculator(): JSX.Element {
                     value={estimatedHours}
                     onInput={e =>
                       setEstimatedHours(
-                        Number((e.target as HTMLInputElement).value),
+                        clamp(Number((e.target as HTMLInputElement).value), 48),
                       )
                     }
                     class="w-full rounded-lg border border-gray-300 bg-white px-4 py-2 pr-8 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
@@ -248,7 +257,7 @@ export default function GlucidCalculator(): JSX.Element {
                     value={estimatedMinutes}
                     onInput={e =>
                       setEstimatedMinutes(
-                        Number((e.target as HTMLInputElement).value),
+                        clamp(Number((e.target as HTMLInputElement).value), 59),
                       )
                     }
                     class="w-full rounded-lg border border-gray-300 bg-white px-4 py-2 pr-10 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
@@ -288,7 +297,9 @@ export default function GlucidCalculator(): JSX.Element {
               id="glucidPerGel"
               value={glucidPerGel}
               onInput={e =>
-                setGlucidPerGel(Number((e.target as HTMLInputElement).value))
+                setGlucidPerGel(
+                  clamp(Number((e.target as HTMLInputElement).value), 100),
+                )
               }
               class="w-full rounded-lg border border-gray-300 bg-white px-4 py-2 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
               min="1"
@@ -313,7 +324,9 @@ export default function GlucidCalculator(): JSX.Element {
               id="numberOfGels"
               value={numberOfGels}
               onInput={e =>
-                setNumberOfGels(Number((e.target as HTMLInputElement).value))
+                setNumberOfGels(
+                  clamp(Number((e.target as HTMLInputElement).value), 50),
+                )
               }
               class="w-full rounded-lg border border-gray-300 bg-white px-4 py-2 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
               min="0"
