@@ -10,6 +10,7 @@ interface Props {
   seo?: {
     type: 'website' | 'article'
     ogImage?: string
+    noindex?: boolean
   }
 }
 
@@ -17,6 +18,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
 const { title, description, translations = [], seo } = Astro.props
 const ogImage = seo?.ogImage ?? '/og/home.png'
+const robotsContent = seo?.noindex ? 'noindex, nofollow' : 'index, follow'
 // https://developers.google.com/search/docs/specialty/international/localized-versions
 ---
 
@@ -31,8 +33,8 @@ const ogImage = seo?.ogImage ?? '/og/home.png'
 <meta name="geo.region" content="FR" />
 <meta name="geo.placename" content="France" />
 <meta name="author" content="Maxence Poutord" />
-<meta name="robots" content="index, follow" />
-<meta name="googlebot" content="index, follow" />
+<meta name="robots" content={robotsContent} />
+<meta name="googlebot" content={robotsContent} />
 
 <!-- Font preloads -->
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
