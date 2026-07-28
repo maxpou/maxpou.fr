@@ -18,7 +18,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
 const { title, description, translations = [], seo } = Astro.props
 const ogImage = seo?.ogImage ?? '/og/home.png'
-const robotsContent = seo?.noindex ? 'noindex, nofollow' : 'index, follow'
+const robotsContent = seo?.noindex ? 'noindex, follow' : 'index, follow'
 // https://developers.google.com/search/docs/specialty/international/localized-versions
 ---
 
