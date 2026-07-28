@@ -10,10 +10,9 @@ export const cvData = {
     phone: '+33767786250',
     location: 'Paris, France / Remote',
     description: `
-      I'm Maxence, a French Software Engineer with +15 years of experience building high-value web applications. 
-      I am a dedicated team player who takes initiative to meet customer needs and ensure successful project completion. 
-      A dedicated team player, I take initiative to overcome challenges and get customer-facing features deployed
-      I dedicate time to knowledge sharing via blog posts, mentoring, and conferences.
+      I'm Maxence, a French Software Engineer with +15 years of experience building high-value web applications.
+      I'm a dedicated team player who takes initiative to overcome challenges and get customer-facing features shipped.
+      I also dedicate time to knowledge sharing via blog posts, mentoring, and conferences.
     `,
     lastUpdate: 'December 2025',
     social: {
@@ -71,7 +70,7 @@ export const cvData = {
       url: 'https://www.maxpou.fr/speaking',
     },
     {
-      description: 'Open sources lover and occasional contributor',
+      description: 'Open source enthusiast and contributor',
       url: 'https://github.com/maxpou',
     },
   ],
