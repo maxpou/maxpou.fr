@@ -35,6 +35,7 @@ export default defineConfig({
 
   redirects: {
     '/blog/pages/1': '/blog',
+    '/portfolio': '/projects',
     ...getLegacyPostRedirections(),
   },
 
