@@ -1,5 +1,6 @@
 ---
 import { SITE_OWNER } from '../consts'
+import { socialIcons } from './icons/footer-socials'
 
 const today = new Date()
 ---
@@ -72,21 +73,39 @@ const today = new Date()
       <ul>
         {
           [
-            ['https://github.com/maxpou', 'GitHub', 'noopener noreferrer'],
-            ['https://bsky.app/profile/maxpou.fr', 'Bluesky', 'noopener noreferrer'],
+            [
+              'https://github.com/maxpou',
+              'GitHub',
+              'noopener noreferrer',
+              socialIcons.github,
+            ],
+            [
+              'https://bsky.app/profile/maxpou.fr',
+              'Bluesky',
+              'noopener noreferrer',
+              socialIcons.bluesky,
+            ],
             [
               'https://www.linkedin.com/in/maxpou/',
               'LinkedIn',
               'noopener noreferrer',
+              socialIcons.linkedin,
             ],
-            ['/rss.xml', 'RSS feed'],
-          ].map(([url, title, rel]) => (
+            ['/rss.xml', 'RSS feed', '', socialIcons.rss],
+          ].map(([url, title, rel, icon]) => (
             <li>
               <a
                 href={url}
                 rel={rel}
-                class="hover:text-gray-700 hover:underline dark:hover:text-mainYellow"
+                class="flex items-center gap-2 hover:text-gray-700 hover:underline dark:hover:text-mainYellow"
               >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="w-4 h-4 shrink-0"
+                  set:html={icon}
+                />
                 {title}
               </a>
             </li>
