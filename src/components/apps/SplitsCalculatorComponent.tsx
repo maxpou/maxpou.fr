@@ -51,8 +51,21 @@ function calculatePacePerKm(totalSeconds: number, distanceKm: number): number {
 }
 
 function calculateSpeed(totalSeconds: number, distanceKm: number): number {
+  if (totalSeconds <= 0) return 0
   const hours = totalSeconds / 3600
   return distanceKm / hours
+}
+
+// Max value allowed per time field (used to clamp manual input)
+const TIME_LIMITS: Record<keyof TimeInput, number> = {
+  hours: 24,
+  minutes: 59,
+  seconds: 59,
+}
+
+function clampTimeField(field: keyof TimeInput, value: number): number {
+  if (Number.isNaN(value)) return 0
+  return Math.max(0, Math.min(TIME_LIMITS[field], value))
 }
 
 export default function SplitsCalculator(): JSX.Element {
@@ -127,7 +140,7 @@ export default function SplitsCalculator(): JSX.Element {
   ) => {
     setter((prev: TimeInput) => ({
       ...prev,
-      [field]: value,
+      [field]: clampTimeField(field, value),
     }))
   }
 
@@ -493,9 +506,9 @@ export default function SplitsCalculator(): JSX.Element {
                         <td
                           class={`whitespace-nowrap px-4 py-3 text-center text-sm font-medium ${
                             diff < 0
-                              ? 'text-red-600 dark:text-red-400'
+                              ? 'text-emerald-600 dark:text-emerald-400'
                               : diff > 0
-                                ? 'text-emerald-600 dark:text-emerald-400'
+                                ? 'text-red-600 dark:text-red-400'
                                 : 'text-gray-500'
                           }`}
                         >

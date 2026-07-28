@@ -82,16 +82,19 @@ export default function HeartZonesComponent(): JSX.Element {
             type="number"
             id="maxHr"
             value={maxHr}
-            onInput={e =>
-              setMaxHr(Number((e.target as HTMLInputElement).value))
-            }
+            onInput={e => {
+              const value = Number((e.target as HTMLInputElement).value)
+              setMaxHr(
+                Number.isNaN(value) ? 0 : Math.max(0, Math.min(220, value)),
+              )
+            }}
             class="w-full rounded-lg border border-gray-300 bg-white px-4 py-2 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
             min="120"
             max="220"
             step="1"
           />
           <p class="text-xs text-gray-500 dark:text-gray-400">
-            Rough estimate: 220 - your age
+            Rough estimate: Max HR = 207 - (0.7 × your age)
           </p>
         </div>
       </div>
