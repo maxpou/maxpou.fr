@@ -22,7 +22,7 @@ export const projects = [
     icon: '🚴',
     description:
       'Fix your bike fit with a photo and get personalized recommendations to improve your cycling performance.',
-    url: 'http://pedalyze.bike',
+    url: 'https://pedalyze.bike',
     ghIcon: false,
     highlighted: true,
   },
