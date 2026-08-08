@@ -1,10 +1,8 @@
 export const cvData = {
   info: {
     name: 'Maxence Poutord',
-    title: 'Software Engineer',
+    title: 'Senior Software Engineer',
     email: 'maxence.poutord@gmail.com',
-    nationality: 'French',
-    age: '34',
     website: 'https://www.maxpou.fr',
     cvUrl: 'https://www.maxpou.fr/cv',
     phone: '+33767786250',
@@ -14,7 +12,7 @@ export const cvData = {
       I'm a dedicated team player who takes initiative to overcome challenges and get customer-facing features shipped.
       I also dedicate time to knowledge sharing via blog posts, mentoring, and conferences.
     `,
-    lastUpdate: 'December 2025',
+    lastUpdate: 'July 2026',
     social: {
       bluesky: 'https://bsky.app/profile/maxpou.fr',
       twitter: 'https://twitter.com/_maxpou',
@@ -29,10 +27,11 @@ export const cvData = {
       category: 'Proficient',
       content: [
         'JavaScript',
+        'TypeScript',
         'React.js',
         'Vue.js',
         'Git',
-        'Testing (Jest&Testing library)',
+        'Testing (integration, unit & e2e)',
         'Web Accessibility (A11Y)',
       ],
     },
@@ -41,17 +40,15 @@ export const cvData = {
       content: [
         'Node.js',
         'NestJS',
-        'TypeScript',
         'CI/CD',
-        'Web Performances',
-        'TailwindCSS',
+        'Web Performance',
         'GraphQL',
         'ElasticSearch',
       ],
     },
     {
       category: 'Familiar',
-      content: ['Docker', 'Supabase', 'AWS/Azure'],
+      content: ['Docker', 'Supabase', 'TailwindCSS', 'AWS/Azure'],
     },
   ],
 
@@ -63,7 +60,7 @@ export const cvData = {
     {
       description:
         'Mentor junior developers and people who want to retrain as a developer',
-      url: '',
+      url: null,
     },
     {
       description: 'Tech trainer and public speaker',
@@ -83,6 +80,7 @@ export const cvData = {
       location: 'Remote (Europe)',
       activities: [
         'Migrated a legacy web application to TypeScript and React, boosting team velocity by 3x (measured by sprint story point completion)',
+        'Owned the application architecture and its infrastructure (build tooling, CI/CD, deployments)',
         'Improved backend performance for Partfox search, reducing response time from ~25s to ~300 ms',
         'Improved frontend performance index (50 to 90 lighthouse score)',
       ],
@@ -93,7 +91,7 @@ export const cvData = {
       period: 'May 2018 - May 2021',
       location: 'Remote (Europe/Asia)',
       activities: [
-        'Improved the frontend infrastructure of a massive Vue.js application (~5k vue&js files / ~650k lines of codes). Frontend relies on a big monorepo (~40 packages)',
+        'Improved the frontend infrastructure of a massive Vue.js application (~5k vue&js files / ~650k lines of code). Frontend relies on a big monorepo (~40 packages)',
         'Software designed and planned major architecture changes towards micro-frontends',
         'Introduced and maintained a testing culture (from 0 to 3.1k unit & integration tests)',
         'Worked on accessibility (A11Y) to meet WCAG AA conformance',
@@ -114,7 +112,7 @@ export const cvData = {
     {
       company: 'Conserto',
       position: 'Consultant',
-      period: 'May 2015 - April 2016',
+      period: 'May 2015 - August 2016',
       location: 'Nantes, France',
       activities: [
         // 'Architecture definition, development and maintenance of various web applications',
@@ -176,6 +174,6 @@ export const cvData = {
 
   interests: `
     Canyoning (I guide group), running (100km/month), cycling, hiking, cooking, travelling (Asia, Europe), 
-    video games (Age of Empire II).
+    video games (Age of Empires II).
   `,
 }

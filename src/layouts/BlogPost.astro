@@ -44,11 +44,6 @@ const {
 
 const formattedTranslations = formatBlogTranslation(translations)
 
-// Get all posts for related posts
-const allPosts = (await getCollection('blog')).filter(
-  post => !post.data.unlisted,
-)
-
 const articleStructuredData: JsonLdDocument = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',

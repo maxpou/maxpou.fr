@@ -2,7 +2,7 @@ import type { JSX } from 'preact'
 // biome-ignore lint/correctness/noUnusedImports: Needed for JSX types
 import * as React from 'preact/compat'
 import type { Dispatch, StateUpdater } from 'preact/hooks'
-import { useLocalStorage } from '../../hooks/useLocalStorage'
+import { useLocalStorage } from './useLocalStorage'
 
 type Distance = {
   name: string

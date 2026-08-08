@@ -1,7 +1,7 @@
 import type { JSX } from 'preact'
 // biome-ignore lint/correctness/noUnusedImports: Needed for JSX types
 import * as React from 'preact/compat'
-import { useLocalStorage } from '../../hooks/useLocalStorage'
+import { useLocalStorage } from './useLocalStorage'
 
 type NutritionZone = {
   min: number
