@@ -1,12 +1,12 @@
 import type { JSX } from 'preact'
 // biome-ignore lint/correctness/noUnusedImports: Needed for JSX types
 import * as React from 'preact/compat'
-import { useLocalStorage } from '../../hooks/useLocalStorage'
 import GlucidCalculatorComponent from './GlucidCalculatorComponent'
 import HeartZonesComponent from './HeartZonesComponent'
 import PaceCalculatorComponent from './PaceCalculatorComponent'
 import SettingsComponent from './SettingsComponent'
 import SplitsCalculatorComponent from './SplitsCalculatorComponent'
+import { useLocalStorage } from './useLocalStorage'
 
 type Tab = 'pace' | 'splits' | 'nutrition' | 'heartZones' | 'settings'
 

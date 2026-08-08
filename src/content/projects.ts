@@ -18,6 +18,15 @@ export const projects = [
     highlighted: true,
   },
   {
+    name: 'Pedalyze',
+    icon: '🚴',
+    description:
+      'Fix your bike fit with a photo and get personalized recommendations to improve your cycling performance.',
+    url: 'http://pedalyze.bike',
+    ghIcon: false,
+    highlighted: true,
+  },
+  {
     name: 'Avion',
     image: AvionImg,
     description: 'Experience the thrill of flying in this 3D flight simulator.',
