@@ -132,7 +132,7 @@ async function main(): Promise<void> {
   const pages = await getPages()
 
   for (const page of pages) {
-    const fileName = page.url.replace('https://www.notion.so/', '')
+    const fileName = page.url.split('/').pop() ?? page.id
 
     const titleProperty = page.properties.Name
     const title =
