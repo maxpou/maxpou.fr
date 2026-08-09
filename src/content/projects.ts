@@ -3,6 +3,7 @@ import DictionaryGameImg from '../assets/projects/dictionary-game.png'
 import DockerSymfonyImg from '../assets/projects/docker-symfony.png'
 import GitVubImg from '../assets/projects/gitvub.png'
 import MorningDewImg from '../assets/projects/morning-dew.png'
+import PedalyzeImg from '../assets/projects/pedalyze.jpg'
 import RecipesImg from '../assets/projects/recipes.jpg'
 import MaxpouFrImg from '../assets/projects/website.jpg'
 import YoutubeMateImg from '../assets/projects/youtube-mate.png'
@@ -19,10 +20,10 @@ export const projects = [
   },
   {
     name: 'Pedalyze',
-    icon: '🚴',
+    image: PedalyzeImg,
     description:
       'Fix your bike fit with a photo and get personalized recommendations to improve your cycling performance.',
-    url: 'https://pedalyze.bike',
+    url: 'http://pedalyze.bike',
     ghIcon: false,
     highlighted: true,
   },
