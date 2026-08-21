@@ -8,11 +8,11 @@ export const cvData = {
     phone: '+33767786250',
     location: 'Paris, France / Remote',
     description: `
-      I'm Maxence, a French Software Engineer with +15 years of experience building high-value web applications.
+      I'm Maxence, a French Software Engineer with 15+ years of experience building high-value web applications.
       I'm a dedicated team player who takes initiative to overcome challenges and get customer-facing features shipped.
       I also dedicate time to knowledge sharing via blog posts, mentoring, and conferences.
     `,
-    lastUpdate: 'July 2026',
+    lastUpdate: 'August 2026',
     social: {
       bluesky: 'https://bsky.app/profile/maxpou.fr',
       twitter: 'https://twitter.com/_maxpou',
@@ -54,21 +54,21 @@ export const cvData = {
 
   highlights: [
     {
+      description: 'Build and run side projects',
+      links: ['https://pedalyze.bike', 'https://youtube-mate.com'],
+    },
+    {
       description: 'Write technical blog posts in French & English',
-      url: 'https://www.maxpou.fr',
+      links: ['https://www.maxpou.fr'],
     },
     {
       description:
         'Mentor junior developers and people who want to retrain as a developer',
-      url: null,
+      links: [],
     },
     {
       description: 'Tech trainer and public speaker',
-      url: 'https://www.maxpou.fr/speaking',
-    },
-    {
-      description: 'Open source enthusiast and contributor',
-      url: 'https://github.com/maxpou',
+      links: ['https://www.maxpou.fr/speaking'],
     },
   ],
 
@@ -77,12 +77,13 @@ export const cvData = {
       company: 'Orderfox',
       position: 'Senior Software Engineer',
       period: 'May 2021 - Present',
-      location: 'Remote (Europe)',
+      location: 'Remote (Paris and Berlin)',
       activities: [
-        'Migrated a legacy web application to TypeScript and React, boosting team velocity by 3x (measured by sprint story point completion)',
-        'Owned the application architecture and its infrastructure (build tooling, CI/CD, deployments)',
-        'Improved backend performance for Partfox search, reducing response time from ~25s to ~300 ms',
+        'Owned application architecture and infrastructure; drove key tech decisions',
+        'Led migration to TypeScript and React, boosting team velocity by 3x',
+        'Cut search engine response time from ~25s to ~300ms',
         'Improved frontend performance index (50 to 90 lighthouse score)',
+        'Interviewed candidates and coached junior engineers',
       ],
     },
     {
@@ -92,7 +93,7 @@ export const cvData = {
       location: 'Remote (Europe/Asia)',
       activities: [
         'Improved the frontend infrastructure of a massive Vue.js application (~5k vue&js files / ~650k lines of code). Frontend relies on a big monorepo (~40 packages)',
-        'Software designed and planned major architecture changes towards micro-frontends',
+        'Designed and planned major architecture changes towards micro-frontends',
         'Introduced and maintained a testing culture (from 0 to 3.1k unit & integration tests)',
         'Worked on accessibility (A11Y) to meet WCAG AA conformance',
         'Mentored junior developers',
@@ -173,7 +174,7 @@ export const cvData = {
   ],
 
   interests: `
-    Canyoning (I guide group), running (100km/month), cycling, hiking, cooking, travelling (Asia, Europe), 
+    Canyoning (I guide groups), running (100km/month), cycling, hiking, cooking, travelling (Asia, Europe), 
     video games (Age of Empires II).
   `,
 }
