@@ -16,7 +16,7 @@ function cleanupUrl(url: string) {
 }
 ---
 
-<html>
+<html lang="en">
   <head>
     <BaseHead
       title="Maxence Poutord Resume"
@@ -182,19 +182,8 @@ function cleanupUrl(url: string) {
                 cvData.highlights.map(highlight => (
                   <li>
                     {highlight.description}
-                    {highlight.url && (
-                      <span class="inline-block whitespace-nowrap text-sm">
-                        {[
-                          <span>(see </span>,
-                          <a
-                            class="inline-block underline text-blue-500 hover:text-blue-800"
-                            href={highlight.url}
-                          >
-                            {cleanupUrl(highlight.url)}
-                          </a>,
-                          <span>{')'}</span>,
-                        ].map(a => a)}
-                      </span>
+                    {highlight.links.length > 0 && (
+                      <span class="inline-block whitespace-nowrap text-sm">{' (see '}{highlight.links.map((url, index) => (<>{index > 0 && ', '}<a class="inline-block underline text-blue-500 hover:text-blue-800" href={url}>{cleanupUrl(url)}</a></>))}{')'}</span>
                     )}
                   </li>
                 ))
@@ -209,16 +198,17 @@ function cleanupUrl(url: string) {
                   <div class="experience pb-3 last:pb-0 last:mb-3">
                     <div class="bull" />
                     <h3 class="text-lg font-bold">{experience.position}</h3>
-                    <p class="text-gray-400">{experience.period}</p>
-                    <p class="pb-2 text-gray-400">
+                    <p class="text-neutral-500">{experience.period}</p>
+                    <p class="pb-2 text-neutral-500">
                       {experience.company}, {experience.location}
                     </p>
-                    <ul>
-                      {experience.activities.map(activity => (
-                        <li class="pb-1">{activity}</li>
-                      ))}
-                      <li />
-                    </ul>
+                    {experience.activities.length > 0 && (
+                      <ul>
+                        {experience.activities.map(activity => (
+                          <li class="pb-1">{activity}</li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 ))
               }
@@ -232,8 +222,8 @@ function cleanupUrl(url: string) {
                   <div class="experience pb-3 last:pb-0 last:mb-3">
                     <div class="bull" />
                     <h3 class="font-bold">{education.degree}</h3>
-                    <p class="text-gray-400">{education.period}</p>
-                    <p class="pb-2 text-gray-400">
+                    <p class="text-neutral-500">{education.period}</p>
+                    <p class="pb-2 text-neutral-500">
                       {education.school}, {education.location}
                     </p>
                   </div>
