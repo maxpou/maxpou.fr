@@ -44,6 +44,8 @@ expectations._
 - **Transparency**. I'm very transparent about my activities. There are days where I'm less
   productive and I'm perfectly fine with that. I don't like to feel the need to fake my online
   activity.
+- **AI**. Please, don't be a "[meat proxy](https://gruhn.me/blog/2026-08-03/)". If an AI wrote it,
+  tell me—or better, send me the prompt. I want to talk to you, not through you.
 - **Words matter**. I believe words like _"simple"_, _"just"_, _"of course"_, _"everyone knows"_ and
   _"easy"_ should stay out of technical conversations. They can often be perceived as
   [offensive](https://css-tricks.com/words-avoid-educational-writing/). Also, I don't think they
