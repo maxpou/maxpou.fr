@@ -10,15 +10,6 @@ import YoutubeMateImg from '../assets/projects/youtube-mate.png'
 
 export const projects = [
   {
-    name: 'YoutubeMate',
-    image: YoutubeMateImg,
-    description:
-      'An AI assistant that generates summaries of YouTube videos and saves you precious time!',
-    url: 'https://youtube-mate.com',
-    ghIcon: false,
-    highlighted: true,
-  },
-  {
     name: 'Pedalyze',
     image: PedalyzeImg,
     description:
@@ -28,9 +19,18 @@ export const projects = [
     highlighted: true,
   },
   {
+    name: 'YoutubeMate',
+    image: YoutubeMateImg,
+    description:
+      'An AI assistant that generates summaries of YouTube videos and saves you precious time!',
+    url: 'https://youtube-mate.com',
+    ghIcon: false,
+    highlighted: true,
+  },
+  {
     name: 'Avion',
     image: AvionImg,
-    description: 'Experience the thrill of flying in this 3D flight simulator.',
+    description: 'A little 3D flight simulator I built for fun.',
     url: 'https://avion-game.netlify.app',
     ghIcon: false,
     highlighted: true,
