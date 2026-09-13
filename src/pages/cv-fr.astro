@@ -1,15 +1,15 @@
 ---
 import BaseHead from '../components/BaseHead.astro'
 import { SITE_URL } from '../consts'
-import { cvData, cvLabels } from '../content/cv'
+import { cvDataFr, cvLabelsFr } from '../content/cv-fr'
 import Cv from '../layouts/Cv.astro'
 ---
 
-<html lang="en">
+<html lang="fr">
   <head>
     <BaseHead
-      title="Maxence Poutord Resume"
-      description="Maxence Poutord, a French Software Engineer with +15 years of experience developing web-based applications"
+      title="CV de Maxence Poutord"
+      description="Maxence Poutord, ingénieur logiciel français avec plus de 15 ans d'expérience dans le développement d'applications web"
       translations={[
         { url: `${SITE_URL}/cv`, lang: 'en' },
         { url: `${SITE_URL}/cv-fr`, lang: 'fr' },
@@ -18,10 +18,9 @@ import Cv from '../layouts/Cv.astro'
   </head>
   <body>
     <Cv
-      data={cvData}
-      labels={cvLabels}
+      data={cvDataFr}
+      labels={cvLabelsFr}
       pdfHref="../Maxence-Poutord-Resume.pdf"
-      showQrCode
     />
   </body>
 </html>

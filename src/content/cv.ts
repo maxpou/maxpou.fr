@@ -1,3 +1,36 @@
+export type CvLabels = {
+  title: string
+  print: string
+  downloadPdf: string
+  about: string
+  skills: string
+  languages: string
+  interests: string
+  highlights: string
+  see: string
+  experience: string
+  education: string
+  userManual: string
+  otherLanguageUrl?: string
+  otherLanguageCode?: string
+  otherLanguageLabel?: string
+}
+
+export const cvLabels: CvLabels = {
+  title: 'Maxence Poutord Resume',
+  print: 'Print',
+  downloadPdf: 'Download PDF',
+  about: 'About',
+  skills: 'Skills',
+  languages: 'Languages',
+  interests: 'Interests',
+  highlights: 'Highlights',
+  see: 'see',
+  experience: 'Experience',
+  education: 'Education',
+  userManual: 'Personal user manual',
+}
+
 export const cvData = {
   info: {
     name: 'Maxence Poutord',
@@ -178,3 +211,5 @@ export const cvData = {
     video games (Age of Empires II).
   `,
 }
+
+export type CvData = typeof cvData
