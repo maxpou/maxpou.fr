@@ -46,110 +46,74 @@ export default function SettingsComponent(): JSX.Element {
     window.location.reload()
   }
 
-  const resetAll = () => {
-    Object.keys(window.localStorage)
-      .filter(key => key.startsWith('runner-dashboard:'))
-      .forEach(key => {
-        window.localStorage.removeItem(key)
-      })
-    window.location.reload()
-  }
-
   return (
     <div class="space-y-8">
-      <div class="rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
-        <h2 class="text-xl font-semibold text-gray-900 dark:text-white">
-          Saved Preferences
-        </h2>
-        <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
-          Your preferences are saved in your browser's local storage. You can
-          reset them individually by section or all at once.
-        </p>
-      </div>
+      <div class="overflow-hidden rounded-xl bg-white shadow-lg dark:bg-gray-800">
+        <div class="border-b border-gray-200 p-6 dark:border-gray-700">
+          <h2 class="text-xl font-semibold text-gray-900 dark:text-white">
+            Saved Preferences
+          </h2>
+          <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+            Your preferences are saved in your browser's local storage. You can
+            reset them individually by section or all at once.
+          </p>
+        </div>
 
-      <div class="space-y-4">
-        {STORAGE_SECTIONS.map(section => (
-          <div
-            key={section.name}
-            class="flex items-center justify-between rounded-xl bg-white p-5 shadow-lg dark:bg-gray-800"
-          >
-            <div class="flex items-center gap-4">
-              <span class="text-2xl">{section.icon}</span>
-              <div>
-                <h3 class="font-medium text-gray-900 dark:text-white">
-                  {section.name}
-                </h3>
-                <p class="text-sm text-gray-500 dark:text-gray-400">
-                  {section.description}
-                </p>
-              </div>
-            </div>
-
-            {confirming === section.name ? (
-              <div class="flex items-center gap-2">
-                <span class="text-sm text-gray-500 dark:text-gray-400">
-                  Are you sure?
+        <ul class="divide-y divide-gray-200 dark:divide-gray-700">
+          {STORAGE_SECTIONS.map(section => (
+            <li
+              key={section.name}
+              class="flex flex-wrap items-center justify-between gap-4 p-5 transition-colors hover:bg-gray-50 dark:hover:bg-gray-700/40"
+            >
+              <div class="flex items-center gap-4">
+                <span
+                  aria-hidden="true"
+                  class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gray-100 text-xl dark:bg-gray-700"
+                >
+                  {section.icon}
                 </span>
-                <button
-                  type="button"
-                  onClick={() => resetSection(section.keys)}
-                  class="cursor-pointer rounded-lg bg-red-500 px-3 py-1.5 text-sm font-medium text-white transition-all hover:bg-red-600"
-                >
-                  Confirm
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setConfirming(null)}
-                  class="cursor-pointer rounded-lg bg-gray-100 px-3 py-1.5 text-sm font-medium text-gray-700 transition-all hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
-                >
-                  Cancel
-                </button>
+                <div>
+                  <h3 class="font-medium text-gray-900 dark:text-white">
+                    {section.name}
+                  </h3>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">
+                    {section.description}
+                  </p>
+                </div>
               </div>
-            ) : (
-              <button
-                type="button"
-                onClick={() => setConfirming(section.name)}
-                class="cursor-pointer rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 transition-all hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
-              >
-                Reset
-              </button>
-            )}
-          </div>
-        ))}
-      </div>
 
-      <div class="rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
-        {confirming === 'all' ? (
-          <div class="flex items-center justify-between">
-            <span class="text-sm text-gray-500 dark:text-gray-400">
-              This will reset all preferences and return to the default tab.
-            </span>
-            <div class="flex items-center gap-2">
-              <button
-                type="button"
-                onClick={resetAll}
-                class="cursor-pointer rounded-lg bg-red-500 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-red-600"
-              >
-                Confirm Reset All
-              </button>
-              <button
-                type="button"
-                onClick={() => setConfirming(null)}
-                class="cursor-pointer rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 transition-all hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
-              >
-                Cancel
-              </button>
-            </div>
-          </div>
-        ) : (
-          <button
-            type="button"
-            onClick={() => setConfirming('all')}
-            class="w-full cursor-pointer rounded-lg bg-red-50 px-4 py-3 text-sm font-medium text-red-600 transition-all hover:bg-red-100 dark:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/30"
-          >
-            Reset All Preferences
-          </button>
-        )}
+              {confirming === section.name ? (
+                <div class="flex items-center gap-2">
+                  <span class="text-sm text-gray-500 dark:text-gray-400">
+                    Are you sure?
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => resetSection(section.keys)}
+                    class="cursor-pointer rounded-lg bg-red-500 px-3 py-1.5 text-sm font-medium text-white transition-all hover:bg-red-600"
+                  >
+                    Confirm
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setConfirming(null)}
+                    class="cursor-pointer rounded-lg px-3 py-1.5 text-sm font-medium text-gray-600 transition-all hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => setConfirming(section.name)}
+                  class="cursor-pointer rounded-lg border border-gray-200 px-4 py-2 text-sm font-medium text-gray-700 transition-all hover:border-gray-300 hover:bg-gray-100 dark:border-gray-600 dark:text-gray-300 dark:hover:border-gray-500 dark:hover:bg-gray-700"
+                >
+                  Reset
+                </button>
+              )}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   )
