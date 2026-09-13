@@ -13,9 +13,12 @@ import HeaderLink from './HeaderLink.astro'
     </h1>
     <div class="md:flex hidden">
       <HeaderLink href="/blog">Blog</HeaderLink>
-      <HeaderLink href="/speaking">Speaking</HeaderLink>
+      <HeaderLink href="/projects">Projects</HeaderLink>
       <HeaderLink href="/about">About</HeaderLink>
-      <DarkModeButton client:only="preact" className='mb-1' />
+      <!-- client:only renders nothing on the server: reserve the button box to avoid a layout shift -->
+      <div class="w-10 h-14 shrink-0">
+        <DarkModeButton client:only="preact" className="mb-1" />
+      </div>
     </div>
     <button
       id="burger-button"
