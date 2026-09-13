@@ -68,6 +68,7 @@ export const GET: APIRoute = async () => {
     section('Optional', [
       { title: 'Projects', url: `${SITE_URL}/projects/` },
       { title: 'Resume', url: `${SITE_URL}/cv/` },
+      { title: 'Resume (French)', url: `${SITE_URL}/cv-fr/` },
       { title: 'RSS feed', url: `${SITE_URL}/rss.xml` },
       { title: 'Sitemap', url: `${SITE_URL}/sitemap-index.xml` },
     ]),
