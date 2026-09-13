@@ -21,7 +21,7 @@
     "dev": "astro dev",
     "deploy": "astro check && astro build && gh-pages -d dist",
     "import-recipes": "tsx scripts/import-recipes.ts && prettier --write 'src/content/recipes/*.mdx'",
-    "start": "astro dev",
+    "start": "astro dev --host",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "format": "biome check --write src/ scripts/",
