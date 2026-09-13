@@ -1,5 +1,6 @@
 ---
 title: 'Digital Nomad: le ticket doré?'
+description: 'Démystification de la vie de digital nomad : non, on ne travaille pas depuis la plage. Le vrai quotidien après un an de nomadisme.'
 slug: busting-nomad-myths-fr
 language: fr
 date: 2020-01-18

@@ -1,5 +1,6 @@
 ---
 title: PHP et Programmation fonctionnelle
+description: 'Les concepts clefs de la programmation fonctionnelle appliqués à PHP : immuabilité, récursion, fonctions d''ordre supérieur, fonctions pures et mémoïsation.'
 tags: ['PHP', 'FunctionalProgramming']
 date: 2016-12-11
 language: fr

@@ -1,5 +1,6 @@
 ---
 title: 'Monorepo: est-ce que ça vaut le coup?'
+description: 'Les avantages et inconvénients des monorepos, après 2 ans à maintenir un monorepo de ~40 packages npm avec une équipe de 15 personnes.'
 slug: monorepo-pros-and-cons-fr
 language: fr
 date: 2020-12-22

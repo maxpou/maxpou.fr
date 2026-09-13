@@ -1,5 +1,6 @@
 ---
 title: 2018 - A Year In Review
+description: 'A look back at 2018: leaving HostelWorld for VSware, going 100% remote, starting a nomadic life, and the goals I set for 2019.'
 slug: 2018-a-year-in-review
 date: 2019-01-22
 language: en

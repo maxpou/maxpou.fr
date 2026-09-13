@@ -1,5 +1,6 @@
 ---
 title: Vagrant, Symfony and Windows are not incompatibles
+description: 'Tips to speed up a Symfony application running in a Vagrant box on Windows: NFS shared folders, the vbguest and winnfsd plugins, and cache tuning.'
 slug: vagrant-symfony-windows
 tags: ['Symfony2', 'PHP']
 language: en

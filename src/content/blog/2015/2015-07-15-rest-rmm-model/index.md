@@ -1,5 +1,6 @@
 ---
 title: Non, votre API n'est pas REST !
+description: 'Le modèle de maturité de Richardson (RMM) explique pourquoi la plupart des API dites REST n''atteignent jamais le niveau 3 (HATEOAS).'
 date: 2015-07-15
 language: fr
 slug: rest-rmm-model

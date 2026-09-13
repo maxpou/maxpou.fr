@@ -1,5 +1,6 @@
 ---
 title: 2016 - A Year In Review
+description: 'A look back at 2016: switching to Linux, moving from Nantes to Dublin, speaking at conferences, and the SMART goals I set for 2017.'
 tags: ['Life', 'Year In Review']
 slug: 2016-a-year-in-review
 date: 2017-01-11

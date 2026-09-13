@@ -1,5 +1,6 @@
 ---
 title: 2020 - A Year In Review
+description: 'A look back at 2020: frontend infrastructure, accessibility (WCAG AA), testing, side projects, and the goals I set for 2021.'
 slug: 2020-a-year-in-review
 date: 2021-01-07
 language: en

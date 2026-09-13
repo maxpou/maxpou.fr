@@ -1,5 +1,6 @@
 ---
 title: 'Utiliser async/await sans bloc try...catch !'
+description: 'Comment utiliser async/await sans bloc try...catch, grâce à une petite fonction wrapper qui retourne un tuple [erreur, donnée] à la manière de Go.'
 slug: async-await-without-try-catch-fr
 language: fr
 unlisted: true

@@ -1,5 +1,6 @@
 ---
 title: Hello GatsbyJS!
+description: 'Why I migrated my blog from Jekyll to GatsbyJS after 3 years: what I liked about Jekyll, what pushed me away, and what Gatsby brings.'
 slug: hello-gatsby
 language: en
 cover: ./cover.jpeg

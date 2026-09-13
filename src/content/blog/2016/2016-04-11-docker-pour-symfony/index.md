@@ -1,5 +1,6 @@
 ---
 title: Une stack Docker pour votre application Symfony
+description: 'Une stack Docker complète pour développer une application Symfony : nginx, PHP-FPM, MySQL, Redis, la stack ELK et PHPMyAdmin avec docker-compose.'
 date: 2016-04-11
 language: fr
 slug: docker-pour-symfony
