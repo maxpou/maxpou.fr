@@ -16,21 +16,38 @@ interface Props {
   }
 }
 
-export async function GET({ props }: Props) {
-  const robotoMedium = fs.readFileSync(
-    path.resolve('./src/assets/fonts/Roboto-Medium.ttf'),
-  )
-  const robotoBold = fs.readFileSync(
-    path.resolve('./src/assets/fonts/Roboto-Bold.ttf'),
-  )
-  const postCover = fs.readFileSync(
-    process.env.NODE_ENV === 'development'
-      ? path.resolve(props.image.src.replace(/\?.*/, '').replace('/@fs', ''))
-      : path.resolve(props.image.src.replace('/', 'dist/')),
-  )
+const MIME_TYPES: Record<string, string> = {
+  '.jpg': 'image/jpeg',
+  '.jpeg': 'image/jpeg',
+  '.png': 'image/png',
+  '.gif': 'image/gif',
+  '.webp': 'image/webp',
+  '.avif': 'image/avif',
+}
 
-  // supported HTML - https://github.com/vercel/satori?tab=readme-ov-file#documentation
-  const html: ReactNode = {
+function buildCard(title: string, cover: string | null): ReactNode {
+  const background: ReactNode = cover
+    ? {
+        type: 'img',
+        props: {
+          tw: 'h-full w-full',
+          height: 630,
+          width: 1200,
+          src: cover,
+          style: {
+            objectFit: 'cover',
+          },
+        },
+      }
+    : {
+        type: 'div',
+        props: {
+          tw: 'h-[630px] w-[1200px]',
+          style: { backgroundColor: '#3e4047' },
+        },
+      }
+
+  return {
     type: 'div',
     props: {
       tw: 'flex h-[630px] w-[1200px]',
@@ -40,18 +57,7 @@ export async function GET({ props }: Props) {
           props: {
             tw: 'relative top-0 flex h-full w-full',
             children: [
-              {
-                type: 'img',
-                tw: 'h-full w-full',
-                props: {
-                  height: 630,
-                  width: 1200,
-                  src: postCover.buffer,
-                  style: {
-                    objectFit: 'cover',
-                  },
-                },
-              },
+              background,
               {
                 type: 'div',
                 props: {
@@ -74,7 +80,7 @@ export async function GET({ props }: Props) {
                         style: {
                           fontFamily: 'Roboto Bold',
                         },
-                        children: props.title,
+                        children: title,
                       },
                     },
                     {
@@ -97,23 +103,61 @@ export async function GET({ props }: Props) {
       ],
     },
   }
+}
 
-  return new ImageResponse(html, {
+export async function GET({ props }: Props) {
+  const robotoMedium = fs.readFileSync(
+    path.resolve('./src/assets/fonts/Roboto-Medium.ttf'),
+  )
+  const robotoBold = fs.readFileSync(
+    path.resolve('./src/assets/fonts/Roboto-Bold.ttf'),
+  )
+  const coverPath =
+    process.env.NODE_ENV === 'development'
+      ? path.resolve(props.image.src.replace(/\?.*/, '').replace('/@fs', ''))
+      : path.resolve(props.image.src.replace('/', 'dist/'))
+  // satori only accepts a URL or a data URI for `src`; a raw buffer renders
+  // nothing at all.
+  const postCover = `data:${MIME_TYPES[path.extname(coverPath).toLowerCase()]};base64,${fs.readFileSync(coverPath).toString('base64')}`
+
+  const options = {
     width: 1200,
     height: 630,
     fonts: [
       {
         name: 'Roboto',
         data: new Uint8Array(robotoMedium).buffer,
-        style: 'normal',
+        style: 'normal' as const,
       },
       {
         name: 'Roboto Bold',
         data: new Uint8Array(robotoBold).buffer,
-        style: 'normal',
+        style: 'normal' as const,
       },
     ],
-  })
+  }
+
+  // ImageResponse renders lazily, so the body has to be consumed here for a
+  // decoding failure to be catchable.
+  const render = async (cover: string | null) => {
+    const png = await new ImageResponse(
+      buildCard(props.title, cover),
+      options,
+    ).arrayBuffer()
+    return new Response(png, { headers: { 'Content-Type': 'image/png' } })
+  }
+
+  // A cover satori cannot decode must not break the whole build: fall back to
+  // the plain dark card instead.
+  try {
+    return await render(postCover)
+  } catch (error) {
+    console.warn(
+      `[og] cover unusable for "${props.title}", rendering without it:`,
+      error,
+    )
+    return await render(null)
+  }
 }
 
 export async function getStaticPaths() {
