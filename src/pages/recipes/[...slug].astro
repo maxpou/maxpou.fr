@@ -1,7 +1,9 @@
 ---
 import { type CollectionEntry, getCollection, render } from 'astro:content'
 import Prose from '../../components/Prose.astro'
+import StructuredData from '../../components/StructuredData.astro'
 import Page from '../../layouts/Page.astro'
+import { buildRecipeSchema } from '../../utils/recipeSchema'
 
 export async function getStaticPaths() {
   const recipes = await getCollection('recipes')
@@ -20,9 +22,19 @@ const recipe = {
   },
 }
 const { Content } = await render(recipe)
+
+const recipeStructuredData = buildRecipeSchema({
+  title: recipe.data.title,
+  description: recipe.data.description,
+  date: recipe.data.date,
+  cover: recipe.data.cover?.src,
+  body: recipe.body,
+  url: Astro.url.toString(),
+})
 ---
 
 <Page {...recipe}>
+  <StructuredData data={recipeStructuredData} />
   <Prose>
     <Content />
     <div class="mt-6">

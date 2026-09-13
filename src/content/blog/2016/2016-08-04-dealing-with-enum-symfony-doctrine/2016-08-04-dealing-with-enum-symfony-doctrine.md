@@ -1,5 +1,6 @@
 ---
 title: Dealing with Enum in a Symfony App with Doctrine2 as ORM
+description: 'How to handle Enums in a Symfony application with Doctrine2, with a reusable abstract PHP Enum class, entity validation and a Symfony choice form type — no database-specific ENUM column.'
 slug: dealing-with-enum-symfony-doctrine
 date: 2016-08-04
 language: en

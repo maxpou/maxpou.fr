@@ -1,5 +1,6 @@
 ---
 title: Chaining Javascript filters recursively
+description: 'How to apply an unknown number of filters to a JavaScript collection, with a recursive filter function instead of an imperative loop — and why extending Array.prototype is a bad idea.'
 tags: ['JavaScript', 'FunctionalProgramming']
 date: 2017-03-28
 slug: chaining-filter-js

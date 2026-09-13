@@ -1,5 +1,6 @@
 ---
 title: 2019 - A Year In Review
+description: 'A look back at 2019: scaling a large Vue.js application, frontend infrastructure, remote work from Asia, and the goals I set for 2020.'
 slug: 2019-a-year-in-review
 date: 2020-01-08
 language: en

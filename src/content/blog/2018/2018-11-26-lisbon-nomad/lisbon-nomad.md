@@ -1,5 +1,6 @@
 ---
 title: My first month in Lisbon as a Digital Nomad
+description: 'My first month in Lisbon as a digital nomad: accommodation, meeting people, the best places to work from, useful mobile apps, and my overall feedback.'
 slug: nomad-in-lisbon
 language: en
 cover: ./cover.jpg

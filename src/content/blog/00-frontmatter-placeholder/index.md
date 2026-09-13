@@ -1,5 +1,6 @@
 ---
 title: this post is a ghost
+description: 'Cet article fantôme sert à peupler tous les champs de frontmatter disponibles.'
 slug: invisible-post
 date: 2020-01-01
 cover: ./cover.jpeg

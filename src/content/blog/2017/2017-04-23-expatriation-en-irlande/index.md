@@ -1,5 +1,6 @@
 ---
 title: 'Mon expat à Dublin'
+description: 'Huit mois après avoir quitté Nantes pour Dublin : pourquoi partir, le logement, le travail, le coût de la vie, et est-ce que ça vaut le coup.'
 tags: ['Life']
 slug: expatriation-en-irlande
 date: 2017-04-23

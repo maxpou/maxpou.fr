@@ -1,5 +1,6 @@
 ---
 title: Utilisez un framework PHP
+description: 'Pourquoi utiliser un framework PHP open source plutôt qu''un framework maison : capitalisation, vélocité, performances — et les cas où il vaut mieux s''en passer.'
 date: 2015-07-18
 tags: ['PHP', 'Symfony2']
 slug: utilisez-un-framework-php

@@ -1,5 +1,6 @@
 ---
 title: 10 Conseils pour reussir son Home Office
+description: '10 conseils pour réussir son home office, tirés de mon expérience en télétravail à 100% depuis octobre 2018 : espace de travail, routine et vie sociale.'
 slug: 10-tips-for-working-from-home-fr
 date: 2020-03-17
 language: fr

@@ -83,6 +83,8 @@ const articleStructuredData: JsonLdDocument = {
   seo={{
     type: 'article',
     ogImage: `/og/${slug}.png`,
+    publishedTime: date.toISOString(),
+    modifiedTime: (modified ?? date).toISOString(),
   }}
 >
   <StructuredData data={articleStructuredData} />

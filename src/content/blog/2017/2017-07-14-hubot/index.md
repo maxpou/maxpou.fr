@@ -1,5 +1,6 @@
 ---
 title: A la découverte d'Hubot
+description: 'Découverte d''Hubot, le bot de GitHub : à quoi il sert, comment l''installer et écrire ses propres scripts pour automatiser son équipe via le chat.'
 tags: ['Tool']
 date: '2017-07-14'
 slug: hubot

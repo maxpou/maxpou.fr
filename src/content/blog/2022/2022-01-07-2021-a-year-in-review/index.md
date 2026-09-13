@@ -1,5 +1,6 @@
 ---
 title: 2021 - A Year In Review
+description: 'A look back at 2021: joining Orderfox as a Senior Software Engineer, 5 blog posts, side projects, travel, and the goals I set for 2022.'
 slug: 2021-a-year-in-review
 date: 2022-01-07
 language: en

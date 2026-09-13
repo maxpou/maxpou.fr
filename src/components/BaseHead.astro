@@ -11,6 +11,8 @@ interface Props {
     type: 'website' | 'article'
     ogImage?: string
     noindex?: boolean
+    publishedTime?: string
+    modifiedTime?: string
   }
 }
 
@@ -70,6 +72,12 @@ const robotsContent = seo?.noindex ? 'noindex, follow' : 'index, follow'
   href="/rss.xml"
 />
 <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+<link
+  rel="alternate"
+  type="text/markdown"
+  title="llms.txt"
+  href="/llms.txt"
+/>
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content={seo?.type ?? 'website'} />
@@ -83,6 +91,21 @@ const robotsContent = seo?.noindex ? 'noindex, follow' : 'index, follow'
 {
   seo?.ogImage && (
     <meta property="og:image" content={new URL(seo.ogImage, Astro.url)} />
+  )
+}
+{
+  seo?.type === 'article' && seo.publishedTime && (
+    <meta property="article:published_time" content={seo.publishedTime} />
+  )
+}
+{
+  seo?.type === 'article' && seo.modifiedTime && (
+    <meta property="article:modified_time" content={seo.modifiedTime} />
+  )
+}
+{
+  seo?.type === 'article' && (
+    <meta property="article:author" content="Maxence Poutord" />
   )
 }
 

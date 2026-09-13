@@ -1,5 +1,6 @@
 ---
 title: 'Hadopi : fonctionnement et contournement'
+description: 'Comment fonctionne la surveillance HADOPI du P2P, et quelles alternatives (seedbox, VPN, newsgroups) existent pour ne plus être concerné.'
 date: 2015-06-17
 slug: hadopi
 language: fr
