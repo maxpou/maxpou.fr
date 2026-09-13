@@ -4,8 +4,8 @@ import Layout from '../../components/Layout.astro'
 ---
 
 <Layout
-  title="Runner Dashboard - Pace & Nutrition Calculator"
-  description="Convert running pace (min/km) to speed (km/h), see estimated finish times, and plan your race nutrition strategy."
+  title="Runner Dashboard - Pace, Workouts & Nutrition Calculator"
+  description="Convert running pace (min/km) to speed (km/h), see estimated finish times, build Garmin workouts from your goal pace, and plan your race nutrition strategy."
   seo={{ type: 'website' }}
 >
   <div class="mx-auto max-w-6xl">
@@ -15,7 +15,8 @@ import Layout from '../../components/Layout.astro'
       Runner Dashboard
     </h1>
     <p class="mb-8 text-lg text-gray-600 dark:text-gray-300">
-      Calculate your pace, estimate finish times, and plan your race nutrition.
+      Calculate your pace, estimate finish times, build workouts for your
+      Garmin watch, and plan your race nutrition.
     </p>
 
     <RunnerDashboardTabs client:load />

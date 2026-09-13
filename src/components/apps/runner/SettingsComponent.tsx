@@ -16,6 +16,16 @@ const STORAGE_SECTIONS = [
     ],
   },
   {
+    name: 'Workouts',
+    icon: '🏃',
+    description: 'Goal distance and target pace',
+    keys: [
+      'runner-dashboard:workouts.goalDistance',
+      'runner-dashboard:workouts.paceMinutes',
+      'runner-dashboard:workouts.paceSeconds',
+    ],
+  },
+  {
     name: 'Nutrition Planner',
     icon: '🍯',
     description: 'Weight, distance, estimated time, and gel settings',

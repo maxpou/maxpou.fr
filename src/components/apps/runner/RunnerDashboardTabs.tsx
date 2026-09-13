@@ -7,12 +7,20 @@ import PaceCalculatorComponent from './PaceCalculatorComponent'
 import SettingsComponent from './SettingsComponent'
 import SplitsCalculatorComponent from './SplitsCalculatorComponent'
 import { useLocalStorage } from './useLocalStorage'
+import WorkoutBuilderComponent from './WorkoutBuilderComponent'
 
-type Tab = 'pace' | 'splits' | 'nutrition' | 'heartZones' | 'settings'
+type Tab =
+  | 'pace'
+  | 'splits'
+  | 'workouts'
+  | 'nutrition'
+  | 'heartZones'
+  | 'settings'
 
 const TABS: { id: Tab; label: string; icon: string }[] = [
   { id: 'pace', label: 'Pace Calculator', icon: '⏱️' },
   { id: 'splits', label: 'Splits', icon: '📏' },
+  { id: 'workouts', label: 'Workouts', icon: '🏃' },
   { id: 'nutrition', label: 'Nutrition Planner', icon: '🍯' },
   { id: 'heartZones', label: 'Heart Zones', icon: '❤️' },
   { id: 'settings', label: 'Settings', icon: '⚙️' },
@@ -49,6 +57,7 @@ export default function RunnerDashboardTabs(): JSX.Element {
       <div class="min-h-150">
         {activeTab === 'pace' && <PaceCalculatorComponent />}
         {activeTab === 'splits' && <SplitsCalculatorComponent />}
+        {activeTab === 'workouts' && <WorkoutBuilderComponent />}
         {activeTab === 'nutrition' && <GlucidCalculatorComponent />}
         {activeTab === 'heartZones' && <HeartZonesComponent />}
         {activeTab === 'settings' && <SettingsComponent />}
