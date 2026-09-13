@@ -48,12 +48,20 @@ export default function ThemeToggle({
         <img
           src={MoonIcon.src}
           alt="moon"
+          width={24}
+          height={24}
           style={'filter: invert(100%) contrast(50%);'}
           class="hover:animate-spin"
         />
       )}
       {theme === 'dark' && !textOnly && (
-        <img src={SunIcon.src} alt="sun" class="hover:animate-spin" />
+        <img
+          src={SunIcon.src}
+          alt="sun"
+          width={24}
+          height={24}
+          class="hover:animate-spin"
+        />
       )}
     </button>
   )

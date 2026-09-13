@@ -5,6 +5,7 @@ import GitVubImg from '../assets/projects/gitvub.png'
 import MorningDewImg from '../assets/projects/morning-dew.png'
 import PedalyzeImg from '../assets/projects/pedalyze.jpg'
 import RecipesImg from '../assets/projects/recipes.jpg'
+import RunnerDashboard from '../assets/projects/runner-dashboard.jpeg'
 import MaxpouFrImg from '../assets/projects/website.jpg'
 import YoutubeMateImg from '../assets/projects/youtube-mate.png'
 
@@ -30,7 +31,8 @@ export const projects = [
   {
     name: 'Avion',
     image: AvionImg,
-    description: 'Experience the thrill of flying in this 3D flight simulator.',
+    description:
+      'A 3D flight simulator in your browser. No install, no account, just pick a plane and fly.',
     url: 'https://avion-game.netlify.app',
     ghIcon: false,
     highlighted: true,
@@ -60,27 +62,28 @@ export const projects = [
       'A complete stack to run a Symfony app into multiple containers (PHP, Nginx, MySQL, ELK, Redis) by using Docker compose. My most popular GitHub project!',
     url: 'https://github.com/maxpou/docker-symfony',
     ghIcon: true,
-    highlighted: true,
+    highlighted: false,
   },
   {
-    icon: '🏃',
     name: 'Runner Dashboard',
+    image: RunnerDashboard,
     description:
       'A dashboard I use to calculate pace, estimate finish times, and plan nutrition during a race.',
     url: '/apps/runner-dashboard',
+    highlighted: true,
   },
   {
     icon: '💰',
     name: 'Compound Interest Calculator',
     description:
-      'See how your investments can grow over time with the power of compound interest.',
+      'I built this to show a friend how powerful compound interest is.',
     url: '/apps/compound-interest-calculator',
   },
   {
     icon: '🍕',
     name: 'Neapolitan Pizza Dough Calculator',
     description:
-      'Calculate the perfect amounts of flour, water, salt, and yeast for your homemade Neapolitan pizza dough.',
+      'I always forget the quantities for my Neapolitan pizzas, so I made this.',
     url: '/apps/pizza-dough-calculator',
   },
   {
