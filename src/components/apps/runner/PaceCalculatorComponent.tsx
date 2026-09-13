@@ -65,22 +65,6 @@ export default function RunnerDashboard(): JSX.Element {
 
   return (
     <div class="space-y-6">
-      {/* Legend */}
-      <div class="flex flex-wrap gap-4 text-sm text-gray-600 dark:text-gray-300">
-        <div class="flex items-center gap-2">
-          <div class="h-3 w-3 rounded bg-amber-500" />
-          <span>Sub 3h59 Marathon (PR)</span>
-        </div>
-        <div class="flex items-center gap-2">
-          <div class="h-3 w-3 rounded bg-pink-500" />
-          <span>Sub 3h50 Marathon (Goal)</span>
-        </div>
-        <div class="flex items-center gap-2">
-          <div class="h-3 w-3 rounded bg-emerald-500" />
-          <span>Sub 1h47 Half (PR)</span>
-        </div>
-      </div>
-
       {/* Results Table */}
       <div class="overflow-hidden rounded-xl bg-white shadow-lg dark:bg-gray-800">
         <div class="max-h-[75vh] overflow-auto">
@@ -106,15 +90,6 @@ export default function RunnerDashboard(): JSX.Element {
             <tbody class="divide-y divide-gray-200 dark:divide-gray-600">
               {rows.map(row => {
                 const paceKey = `${row.paceMinutes}:${row.paceSeconds}`
-                const paceInMinutes = row.paceMinutes + row.paceSeconds / 60
-
-                // Highlight conditions
-                const marathonTime = paceInMinutes * 42.195
-                const halfTime = paceInMinutes * 21.0975
-
-                const isSubMarathonGoal = marathonTime < 230 // 3h50
-                const isSubMarathonPr = marathonTime < 239 // 3h59
-                const isSubPRHalf = halfTime < 108 // 1h47
 
                 return (
                   <tr
@@ -130,34 +105,14 @@ export default function RunnerDashboard(): JSX.Element {
                     <td class="whitespace-nowrap px-4 py-3 text-center text-sm text-gray-700 dark:text-gray-300">
                       {row.speedKmh.toFixed(1)}
                     </td>
-                    {row.times.map((t, idx) => {
-                      let highlight = ''
-
-                      // Marathon column (idx 0)
-                      if (idx === 0 && isSubMarathonGoal) {
-                        highlight =
-                          'bg-pink-50 text-pink-700 font-semibold dark:bg-pink-900/30 dark:text-pink-300'
-                      } else if (idx === 0 && isSubMarathonPr) {
-                        highlight =
-                          'bg-amber-50 text-amber-700 font-semibold dark:bg-amber-900/30 dark:text-amber-300'
-                      }
-                      // Half marathon column (idx 2)
-                      if (idx === 2 && isSubPRHalf) {
-                        highlight =
-                          'bg-emerald-50 text-emerald-700 font-semibold dark:bg-emerald-900/30 dark:text-emerald-300'
-                      }
-
-                      return (
-                        <td
-                          key={t.distance}
-                          class={`whitespace-nowrap px-4 py-3 text-center text-sm ${
-                            highlight || 'text-gray-900 dark:text-white'
-                          }`}
-                        >
-                          {t.time}
-                        </td>
-                      )
-                    })}
+                    {row.times.map(t => (
+                      <td
+                        key={t.distance}
+                        class="whitespace-nowrap px-4 py-3 text-center text-sm text-gray-900 dark:text-white"
+                      >
+                        {t.time}
+                      </td>
+                    ))}
                   </tr>
                 )
               })}
