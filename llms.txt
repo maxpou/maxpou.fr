@@ -1,0 +1,125 @@
+# Maxence Poutord
+
+> Personal website of Maxence Poutord, a software engineer with more than 10 years working in the industry.
+
+Maxence Poutord is a software engineer and public speaker. This site holds his blog (web development, engineering culture, career), a few free web apps, and a personal recipe collection. Content is written in English unless noted otherwise.
+
+## Blog posts
+
+- [How Computers Learned to Talk Like Humans](https://www.maxpou.fr/blog/how-computers-learned-to-talk-like-humans/): From the Turing Test to ChatGPT — how computers went from scripted chatbots like ELIZA to Markov chains, word embeddings, and Transformers, and how "guess the next word" became conversation.
+- [Lessons learned from building my first 3D Video Game](https://www.maxpou.fr/blog/lessons-learned-from-building-my-first-3d-video-game/): Key lessons from building Avion, a 3D flight simulator — covering performance optimisation (frustum culling, LOD, hardware instancing), physics (gimbal lock, quaternions), and the tradeoffs between realism and fun.
+- [Anatomy of a Crypto Scam - Thomas Harris](https://www.maxpou.fr/blog/crypto-scam-with-ai/): Thomas Harris is a fraudulent YouTuber who uses fake crypto tutorials to spread malware. He artificially inflates his channel's popularity and promotes a malicious script that downloads harmful files and steals crypto. This scam, powered by AI-generated content, highlights the growing sophistication of online threats.
+- [10 Years of Blogging, what I learned](https://www.maxpou.fr/blog/10-years-of-blogging/): Reflects on my experience and sharing some key lessons learned after 10y of blogging. Including the importance of writing a good title, not worrying about post popularity...
+- [How to integrate Giscus to your Astro Blog](https://www.maxpou.fr/blog/giscus-with-astro/): Learn how to integrate Giscus (GitHub-powered comments), into your Astro blog. How to deal with dark mode and styles customization.
+- [A Look Inside My Personalized .gitconfig](https://www.maxpou.fr/blog/gitconfig/): Boost your Git efficiency! A simple config for a smoother workflow.
+- [From Gatsby.js to Astro](https://www.maxpou.fr/blog/hello-astro/): How I migrated my website from Gatsby.js to Astro. What I liked about Astro and some problems I encountered during the migration.
+- [Using Notion as a CMS for Gatsby.js](https://www.maxpou.fr/blog/notion-as-cms-gatsby/): How I use Notion as a CMS for my website built with Gatsby.js. The script can also be used with different static site generator like Astro and Next.js
+- [Improving Core Web Vitals of a React Application](https://www.maxpou.fr/blog/improving-core-web-vitals-react-app/): A case study of changes implemented to improve the performances of a React application.
+- [How to publish an npm package for ESM and CommonJS with TypeScript](https://www.maxpou.fr/blog/publish-npm-package-esm-and-cjs/): A step by step tutorial on how to publish an npm package for ECMAScript Modules (ESM) and CommonJS (CJS) with TypeScript
+- [How to play Age of Empire II DE on MacOS](https://www.maxpou.fr/blog/aoe2-on-macos/): The complete guide on how to play Age of Empire 2 when you have a Mac (CrossOver or GeForce NOW). Also includes my personal hotkeys and mods.
+- [Turborepo: a Monorepo Revolution](https://www.maxpou.fr/blog/turborepo/): My thoughts about Turborepo, a tool that facilitates your monorepo management.
+- [Simpler context switching with Git worktrees](https://www.maxpou.fr/blog/git-worktrees/): git worktree allows you to attach a branch to a specific folder. It's like doing a clone of a repository that shares the same git folder.
+- [2021 - A Year In Review](https://www.maxpou.fr/blog/2021-a-year-in-review/): A look back at 2021: joining Orderfox as a Senior Software Engineer, 5 blog posts, side projects, travel, and the goals I set for 2022.
+- [My Journey with RSI (as a Software Engineer)](https://www.maxpou.fr/blog/rsi-as-developer/): Some strategies I implemented to overcoming Repetitive Strain Injury (RSI)
+- [Vue.js: Let's Scale!](https://www.maxpou.fr/blog/vue-js-module-architecture/): Architecture and technical decision behind a big Vue.js application.
+- [Lessons Learned by Maintaining a Large Codebase](https://www.maxpou.fr/blog/lesson-learned-maintaining-large-vue-js-codebase/): I've been maintaining a massive Vue.js codebase for the last 3 years. Here are 9 lessons I've learned along the way.
+- [Bash for developers](https://www.maxpou.fr/blog/bash-for-dev/): Essential bash commands and time-saving aliases to simplify your daily tasks
+- [2020 - A Year In Review](https://www.maxpou.fr/blog/2020-a-year-in-review/): A look back at 2020: frontend infrastructure, accessibility (WCAG AA), testing, side projects, and the goals I set for 2021.
+- [Monorepo: is it worth jumping the bandwagon?](https://www.maxpou.fr/blog/monorepo-pros-and-cons/): Monorepos: beyond the hype. when and when not) to use them.
+- [Tips for your GitHub Portfolio](https://www.maxpou.fr/blog/tips-for-your-github-portfolio/): Showcasing your work can help you land your dream job. But you have to follow a few simple rules.
+- [Vue.js Performance Improvement with Memoization](https://www.maxpou.fr/blog/vuejs-performance-improvement-with-memoization/): How I reduced the rendering of a complex component by 10 (from ~4s to ~0.3s).
+- [Vue.js Testing Made it Easy (with Testing Library)](https://www.maxpou.fr/blog/vue-js-testing-library/): How Testing Library helps you to write better integration test
+- [How to mock Axios HTTP calls with Jest](https://www.maxpou.fr/blog/jest-mock-axios-calls/): How to unit test components that have HTTP calls.
+- [async/await without try...catch!](https://www.maxpou.fr/blog/async-await-without-try-catch/): A cool wrapper to write promises without using a try...catch block
+- [Why you shouldn't pay too much attention to your code coverage](https://www.maxpou.fr/blog/code-coverage/): High code coverage doesn't guarantee quality: You can write tests that cover every line but miss edge cases or core functionality.
+- [10 Tips for Working From Home](https://www.maxpou.fr/blog/10-tips-for-working-from-home/): Since the pandemic, most developers have been forced to work from home. I've been working remotely for over 2 years now. Here are some tips to make this period a little bit less painful.
+- [10 Tips for Writing Better Tests](https://www.maxpou.fr/blog/10-tips-write-better-tests/): 1. Think documentation 2. Isolate your tests 3. Keep it flat 4.Only mock what you can't control 5. Avoid assertion in loops (forEach/...) 6...
+- [How to generate social share images with Gatsby](https://www.maxpou.fr/blog/generate-social-image-share-with-gatsby/): How I created dynamic Open Graph images for my Gatsby website
+- [2019 - A Year In Review](https://www.maxpou.fr/blog/2019-a-year-in-review/): A look back at 2019: scaling a large Vue.js application, frontend infrastructure, remote work from Asia, and the goals I set for 2020.
+- [Git: Cheat Sheet (advanced)](https://www.maxpou.fr/blog/git-cheat-sheet/): A Git Cheat Sheet that focuses on Essential Commands for Experienced Developers.
+- [How to mock Date with Jest](https://www.maxpou.fr/blog/jest-mock-date/): A guide on how to deal with unit tests that uses the JavaScript Date object.
+- [What's happens when you "git commit"](https://www.maxpou.fr/blog/git-under-the-hood/): Understanding the Git Folder Structure and how git works under the hood.
+- [Digital Nomad: the Golden Ticket?](https://www.maxpou.fr/blog/busting-nomad-myths/): Don't trust the influencers. Working from the beach doesn't work.
+- [Two months in Canggu as a Digital Nomad](https://www.maxpou.fr/blog/nomad-in-canggu/): My global review and my budget breakdown after living and working remotely in Bali for 60 days
+- [Enhance your git log with conventional commits](https://www.maxpou.fr/blog/git-conventional-commits/): Standards to write more explicit commits messages.
+- [2018 - A Year In Review](https://www.maxpou.fr/blog/2018-a-year-in-review/): A look back at 2018: leaving HostelWorld for VSware, going 100% remote, starting a nomadic life, and the goals I set for 2019.
+- [3 Tips for Scaling Large Vue.js Application](https://www.maxpou.fr/blog/3-tips-scaling-vue-application/): 1. Split your application into completely isolated modules. 2. Consider micro-frontends architecture. 3. Don't put everything in the Vuex Store
+- [My first month in Lisbon as a Digital Nomad](https://www.maxpou.fr/blog/nomad-in-lisbon/): My first month in Lisbon as a digital nomad: accommodation, meeting people, the best places to work from, useful mobile apps, and my overall feedback.
+- [Hello GatsbyJS!](https://www.maxpou.fr/blog/hello-gatsby/): Why I migrated my blog from Jekyll to GatsbyJS after 3 years: what I liked about Jekyll, what pushed me away, and what Gatsby brings.
+- [Immutability in JavaScript (without library)](https://www.maxpou.fr/blog/immutability-js-without-library/): A deep dive into JS immutability, guiding you on how to achieve it without relying on external libraries.
+- [Typical JavaScript interview exercises (explained)](https://www.maxpou.fr/blog/js-exercises-explained/): Level up your JavaScript interview skills! This post tackles common exercises, offering clear explanations to help you ace the coding challenge.
+- [A la découverte d'Hubot](https://www.maxpou.fr/blog/hubot/): Découverte d'Hubot, le bot de GitHub : à quoi il sert, comment l'installer et écrire ses propres scripts pour automatiser son équipe via le chat.
+- [Mon expat à Dublin](https://www.maxpou.fr/blog/expatriation-en-irlande/): Huit mois après avoir quitté Nantes pour Dublin : pourquoi partir, le logement, le travail, le coût de la vie, et est-ce que ça vaut le coup.
+- [Chaining Javascript filters recursively](https://www.maxpou.fr/blog/chaining-filter-js/): How to apply an unknown number of filters to a JavaScript collection, with a recursive filter function instead of an imperative loop — and why extending Array.prototype is a bad idea.
+- [No more for/while loop in JavaScript](https://www.maxpou.fr/blog/no-more-loop-in-js/): Some alternatives to traditional for/while loops in JavaScript. Also how to address set theory with array of objects (union, intersection and difference).
+- [Github: Tips&tricks](https://www.maxpou.fr/blog/github-tips-and-tricks/): Level up your GitHub game with these tips & tricks.
+- [2016 - A Year In Review](https://www.maxpou.fr/blog/2016-a-year-in-review/): A look back at 2016: switching to Linux, moving from Nantes to Dublin, speaking at conferences, and the SMART goals I set for 2017.
+- [PHP et Programmation fonctionnelle](https://www.maxpou.fr/blog/programmation-fonctionnelle-php/): Les concepts clefs de la programmation fonctionnelle appliqués à PHP : immuabilité, récursion, fonctions d'ordre supérieur, fonctions pures et mémoïsation.
+- ["Else": the unnecessary expression](https://www.maxpou.fr/blog/else-unnecessary-expression/): How to write code without the traditional "else"
+- [Dealing with Enum in a Symfony App with Doctrine2 as ORM](https://www.maxpou.fr/blog/dealing-with-enum-symfony-doctrine/): How to handle Enums in a Symfony application with Doctrine2, with a reusable abstract PHP Enum class, entity validation and a Symfony choice form type — no database-specific ENUM column.
+- [Vagrant, Symfony and Windows are not incompatibles](https://www.maxpou.fr/blog/vagrant-symfony-windows/): Tips to speed up a Symfony application running in a Vagrant box on Windows: NFS shared folders, the vbguest and winnfsd plugins, and cache tuning.
+- [La qualité logicielle et les trois petits cochons](https://www.maxpou.fr/blog/qualite-logicielle-3-petits-cochons/): Un comparatif entre le conte pour enfants et la qualité logicielle
+- [Une stack Docker pour votre application Symfony](https://www.maxpou.fr/blog/docker-pour-symfony/): Une stack Docker complète pour développer une application Symfony : nginx, PHP-FPM, MySQL, Redis, la stack ELK et PHPMyAdmin avec docker-compose.
+- [Utiliser Redis pour stocker le cache de Doctrine](https://www.maxpou.fr/blog/cache-doctrine-avec-redis/): Améliorer les performances de doctrine en utilisant son cache et en stockant les informations sur Redis
+- [Productivité Ninja !](https://www.maxpou.fr/blog/productivite-ninja/): Retour d'expérience sur la mise en oeuvre de certaines pratiques telles que les TODO list, pomodoro...
+- [A la découverte d'APISpark](https://www.maxpou.fr/blog/a-la-decouverte-d-apispark/): Retour d'expérience avec la plateforme APISpark
+- [REST, CRUD et bonnes pratiques](https://www.maxpou.fr/blog/rest-crud/): Guide de bonnes pratiques pour les API REST CRUD
+- [Atom, un éditeur qui vous veut du bien](https://www.maxpou.fr/blog/atom/): Retour d'expérience avec l'éditeur de texte Atom
+- [Utilisez un framework PHP](https://www.maxpou.fr/blog/utilisez-un-framework-php/): Pourquoi utiliser un framework PHP open source plutôt qu'un framework maison : capitalisation, vélocité, performances — et les cas où il vaut mieux s'en passer.
+- [Non, votre API n'est pas REST !](https://www.maxpou.fr/blog/rest-rmm-model/): Le modèle de maturité de Richardson (RMM) explique pourquoi la plupart des API dites REST n'atteignent jamais le niveau 3 (HATEOAS).
+- [Hadopi : fonctionnement et contournement](https://www.maxpou.fr/blog/hadopi/): Comment fonctionne la surveillance HADOPI du P2P, et quelles alternatives (seedbox, VPN, newsgroups) existent pour ne plus être concerné.
+- [vagrant up et dites adieu à WAMP !](https://www.maxpou.fr/blog/vagrant/): Présentation et installation de Vagrant
+- [Mémo - Commandes Symfony2](https://www.maxpou.fr/blog/commandes-sf2/): Liste des commandes console utilisées lors du développement d’un projet sous Symfony2
+
+## Pages
+
+- [About](https://www.maxpou.fr/about/): Find more about Maxence Poutord's work, hobbies, and why he started a blog
+- [Readme](https://www.maxpou.fr/readme/): Maxence's personal README. How he likes to work, his preferences, and his oddities.
+- [Speaking](https://www.maxpou.fr/speaking/): List of my speaking engagements, conferences, workshops and trainings.
+- [Apps, Tools, and Gear I Use](https://www.maxpou.fr/uses/): All my favourite applications, tools, and gear I use daily for my software developer job.
+
+## Apps
+
+- [Pizza dough calculator](https://www.maxpou.fr/apps/pizza-dough-calculator/)
+- [Compound interest calculator](https://www.maxpou.fr/apps/compound-interest-calculator/)
+- [Runner dashboard](https://www.maxpou.fr/apps/runner-dashboard/)
+
+## Recipes
+
+- [Beans & Tomatoes](https://www.maxpou.fr/recipes/Beans-Tomatoes-e31925a8440b4427ab254a4ba1b67c49/)
+- [Bo Bun (bún Bò Nam Bộ)](https://www.maxpou.fr/recipes/Bo-Bun-b-n-B-Nam-B-13e97788675480eb95f5c9d3c4569de6/)
+- [Broccamole (broccoli guacamole)](https://www.maxpou.fr/recipes/Broccamole-broccoli-guacamole-40a30c2306354a32983d16243f933c5c/)
+- [Butternut Squash Risotto](https://www.maxpou.fr/recipes/Butternut-Squash-Risotto-d00e20effcf842e1acd5f733f340d38d/)
+- [Carbonara](https://www.maxpou.fr/recipes/Carbonara-1ab97788675480869d33efd7486ba6e3/)
+- [Chive pesto](https://www.maxpou.fr/recipes/Chive-pesto-3b697788675480eba479f00aa0551c3b/)
+- [Dahl (Green)](https://www.maxpou.fr/recipes/Dahl-Green-ffa231a2475b4ce9aa758b60e349275e/)
+- [Dahl - red lentil](https://www.maxpou.fr/recipes/Dahl-red-lentil-94a5d01518c94940ac14973161532499/)
+- [Fried rice](https://www.maxpou.fr/recipes/Fried-rice-ca00d26cafda4a419c11cf9cd192844c/)
+- [Gnocchis & Mushrooms](https://www.maxpou.fr/recipes/Gnocchis-Mushrooms-bccc91049b8443e2bc8c0dad58841149/)
+- [Homemade pasta](https://www.maxpou.fr/recipes/Homemade-pasta-a46e9b53af6e492893e93743f43f6dec/)
+- [Hulk Burger (broccoli patties)](https://www.maxpou.fr/recipes/Hulk-Burger-broccoli-patties-7d2197f460e84034abd5faef83a8e8e4/)
+- [Karē Raisu (Japanese curry)](https://www.maxpou.fr/recipes/Kar-Raisu-Japanese-curry-0a89722af42548b2862ab0de34701801/)
+- [Kefir](https://www.maxpou.fr/recipes/Kefir-12997788675480aaab87e9f0e1ecbe1c/)
+- [Lasagna (vegetarian)](https://www.maxpou.fr/recipes/Lasagna-vegetarian-64790e0001ef4d9ea4011ce2aed616d3/)
+- [Miso Rāmen](https://www.maxpou.fr/recipes/Miso-R-men-1d097788675480ac9c06fe9f72f40c91/)
+- [Miso Ramen Express](https://www.maxpou.fr/recipes/Miso-Ramen-Express-32f977886754806aadb5cd61a9a8c2d8/)
+- [Napolitan Pizza (+ express version)](https://www.maxpou.fr/recipes/Napolitan-Pizza-express-version-2c297788675480799f48d59912cd31c9/)
+- [Oyster Mushroom and tagliatelle](https://www.maxpou.fr/recipes/Oyster-Mushroom-and-tagliatelle-faa5494eb64f4323b1e5ace96ec0689a/)
+- [Paella Negra](https://www.maxpou.fr/recipes/Paella-Negra-3bf9778867548095bb26d002e502dc62/)
+- [Parmigiana di Melanzane](https://www.maxpou.fr/recipes/Parmigiana-di-Melanzane-a36a5977e3c54af5b0a4a2f3e1baa7ff/)
+- [Pasta alla Norcina](https://www.maxpou.fr/recipes/Pasta-alla-Norcina-6988cf2ac918448b9f94d7c4675acbed/)
+- [Poke bowl](https://www.maxpou.fr/recipes/Poke-bowl-6a28576b74334506b0148697098d936c/)
+- [Rice and Curry](https://www.maxpou.fr/recipes/Rice-and-Curry-0280f758786141c19b0a47532c8f1d1e/)
+- [Scallops, crispy chorizo & Butternut Squash](https://www.maxpou.fr/recipes/Scallops-crispy-chorizo-Butternut-Squash-2d197788675480ea8ae5c523919ad271/)
+- [Shallots and Red wine risotto](https://www.maxpou.fr/recipes/Shallots-and-Red-wine-risotto-b873e7f2c22742c48f7e186011a58ce5/)
+- [Shrimp tartare](https://www.maxpou.fr/recipes/Shrimp-tartare-2040cb29675d48a7b95da7851e01a855/)
+- [Thai soup](https://www.maxpou.fr/recipes/Thai-soup-4f4e0dfa0be4473ab7f388a83aae58fb/)
+- [Tomato curry](https://www.maxpou.fr/recipes/Tomato-curry-4db1bbf7d1474ec8bb95c4b746c5afb9/)
+- [Vegetable Coconut Curry](https://www.maxpou.fr/recipes/Vegetable-Coconut-Curry-c5d3ce208702432782c01e19b9357880/)
+
+## Optional
+
+- [Projects](https://www.maxpou.fr/projects/)
+- [Resume](https://www.maxpou.fr/cv/)
+- [RSS feed](https://www.maxpou.fr/rss.xml)
+- [Sitemap](https://www.maxpou.fr/sitemap-index.xml)
