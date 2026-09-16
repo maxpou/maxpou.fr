@@ -5,7 +5,7 @@ import { cvData, cvLabels } from '../content/cv'
 import Cv from '../layouts/Cv.astro'
 ---
 
-<html lang="en">
+<html class="scheme-light bg-[#f3f4f5] print:bg-white print:text-[10pt] print:leading-[1.35]! print:text-black" lang="en">
   <head>
     <BaseHead
       title="Maxence Poutord Resume"
@@ -16,12 +16,11 @@ import Cv from '../layouts/Cv.astro'
       ]}
     />
   </head>
-  <body>
+  <body class="[font-family:Arial,Helvetica,sans-serif]! text-[15px] leading-[1.5]! text-[#20252b] print:bg-white print:text-[10pt] print:leading-[1.35]! print:text-black">
     <Cv
       data={cvData}
       labels={cvLabels}
       pdfHref="../Maxence-Poutord-Resume.pdf"
-      showQrCode
     />
   </body>
 </html>

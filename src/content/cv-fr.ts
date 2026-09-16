@@ -8,7 +8,7 @@ export const cvLabelsFr: CvLabels = {
   skills: 'Compétences',
   languages: 'Langues',
   interests: 'Centres d’intérêt',
-  highlights: 'En bref',
+  highlights: 'Projets et communauté',
   see: 'voir',
   experience: 'Expériences',
   education: 'Formation',
@@ -26,14 +26,13 @@ export const cvDataFr: CvData = {
     website: 'https://www.maxpou.fr',
     cvUrl: 'https://www.maxpou.fr/cv-fr',
     phone: '+33767786250',
-    location: 'Paris, France / Télétravail',
+    location: 'Paris, France',
     description: `
-      Je suis Maxence, ingénieur logiciel avec plus de 15 ans d'expérience dans le développement
-      d'applications web. J'aime le travail d'équipe, je n'attends pas qu'on me dise quoi faire pour
-      débloquer une situation, et ce qui compte pour moi c'est que les fonctionnalités arrivent
-      jusqu'aux utilisateurs. À côté, je partage ce que j'apprends : blog, mentorat, conférences.
+      Je développe des applications web depuis 15 ans, principalement avec React, Vue et TypeScript.
+      Chez Orderfox, je suis responsable des choix techniques d’une équipe de six développeurs. Je travaille aussi bien sur le frontend que sur le backend Node.js et l’infrastructure Azure.
+      J’ai notamment mené des migrations complètes d’applications et refait un moteur de recherche dont le temps de réponse moyen côté backend est passé de ~30 secondes à ~250 ms.
     `,
-    lastUpdate: 'Août 2026',
+    lastUpdate: 'Septembre 2026',
     social: {
       bluesky: 'https://bsky.app/profile/maxpou.fr',
       twitter: 'https://twitter.com/_maxpou',
@@ -45,52 +44,67 @@ export const cvDataFr: CvData = {
 
   skills: [
     {
-      category: 'Maîtrisé',
+      category: 'Frontend',
       content: [
         'JavaScript',
         'TypeScript',
         'React.js',
         'Vue.js',
-        'Git',
-        'Tests (unitaires, intégration & e2e)',
-        'Accessibilité web (A11Y)',
+        'Next.js',
+        'Tailwind CSS',
+        'Accessibilité web (WCAG)',
+        'Performance web',
       ],
     },
     {
-      category: 'À l’aise',
+      category: 'Backend et infrastructure',
       content: [
         'Node.js',
         'NestJS',
-        'CI/CD',
-        'Performance web',
         'GraphQL',
-        'ElasticSearch',
+        'Elasticsearch',
+        'Supabase',
+        'Docker',
+        'AWS / Azure',
       ],
     },
     {
-      category: 'Notions',
-      content: ['Docker', 'Supabase', 'TailwindCSS', 'AWS/Azure'],
+      category: 'Tests et CI/CD',
+      content: ['Tests unitaires, intégration et e2e', 'CI/CD', 'Git'],
+    },
+    {
+      category: 'Développement IA',
+      content: [
+        'API de LLM et agents',
+        'Model Context Protocol (MCP)',
+        'Développement assisté par IA (Copilot, Claude Code)',
+      ],
     },
   ],
 
   highlights: [
     {
-      description: 'Je développe et maintiens des projets perso',
-      links: ['https://pedalyze.bike', 'https://youtube-mate.com'],
+      content: [
+        { label: 'YoutubeMate', url: 'https://youtube-mate.com' },
+        ' : j’ai créé et lancé cette application web et son extension Chrome pour résumer des vidéos YouTube en plusieurs langues avec l’IA. J’ai aussi développé les transcriptions enrichies et la gestion des abonnements. Je continue à maintenir le produit.',
+      ],
     },
     {
-      description:
-        'J’écris des articles techniques sur mon blog, en français et en anglais',
-      links: ['https://www.maxpou.fr'],
+      content: [
+        { label: 'Pedalyze', url: 'https://pedalyze.bike' },
+        ' : j’ai créé et lancé cette application pour aider les cyclistes à régler leur position sur le vélo. Elle utilise l’IA pour mesurer les angles des articulations sur des photos et proposer des ajustements. J’ai aussi ajouté l’analyse vidéo du mouvement de pédalage complet, directement dans le navigateur : les vidéos restent sur l’appareil de l’utilisateur.',
+      ],
     },
     {
-      description:
-        'J’accompagne des devs juniors et des personnes en reconversion vers le développement',
-      links: [],
+      content: [
+        { label: 'Maxpou.fr', url: 'https://www.maxpou.fr' },
+        ' : j’y partage ce que j’apprends dans des articles techniques, en français et en anglais',
+      ],
     },
     {
-      description: 'Formateur technique et conférencier',
-      links: ['https://www.maxpou.fr/speaking'],
+      content: [
+        'J’accompagne des développeurs juniors et des personnes en reconversion vers le développement',
+      ],
     },
   ],
 
@@ -99,26 +113,26 @@ export const cvDataFr: CvData = {
       company: 'Orderfox',
       position: 'Senior Software Engineer',
       period: 'Mai 2021 - Aujourd’hui',
-      location: 'Remote (Paris et Berlin)',
+      location: 'Télétravail (Paris et Berlin)',
       activities: [
-        'En charge de l’architecture de l’application et de l’infrastructure, et des grandes décisions techniques qui vont avec',
-        'Migration vers TypeScript et React, menée de bout en bout : l’équipe livre 3 fois plus vite',
-        'Moteur de recherche : temps de réponse passé de ~25 s à ~300 ms',
-        'Performance frontend : score Lighthouse passé de 50 à 90',
-        'Entretiens de recrutement et suivi des développeurs juniors',
+        'Choix d’architecture et d’infrastructure pour une équipe de six développeurs, sur une application pour l’industrie CNC (usinage à commande numérique)',
+        'Migration d’un framework JavaScript maison vers React, TypeScript et Vite, menée de bout en bout : du plan de migration au retrait de l’ancien framework',
+        'Refonte du moteur de recherche de fabricants avec Elasticsearch : temps de réponse moyen mesuré côté backend passé de ~30 secondes à ~250 ms',
+        'Création d’environnements de test Azure que les développeurs, la QA et les chefs de produit peuvent lancer eux-mêmes pour valider les fonctionnalités avant de merger le code',
+        'Optimisation des performances web : score Google Lighthouse passé de 50 à 90 sur 100',
       ],
     },
     {
       company: 'VSware',
       position: 'Senior Software Engineer',
       period: 'Mai 2018 - Mai 2021',
-      location: 'Remote (Europe/Asie)',
+      location: 'Télétravail (Europe/Asie)',
       activities: [
-        'Refonte de l’infrastructure frontend d’une très grosse application Vue.js (~5 000 fichiers vue & js, ~650 000 lignes de code, monorepo d’une quarantaine de packages)',
-        'Conception et planification du passage aux micro-frontends',
-        'Introduction des tests dans l’équipe : de 0 à 3 100 tests unitaires et d’intégration',
-        'Mise en conformité accessibilité (A11Y) au niveau WCAG AA',
-        'Mentorat de développeurs juniors',
+        'Amélioration de l’infrastructure frontend d’une application Vue.js : environ 40 packages en monorepo et 650 000 lignes de code',
+        'Conception de l’architecture et du plan de migration vers les micro-frontends',
+        'Introduction des tests automatisés dans l’équipe : de 0 à 3 100 tests unitaires et d’intégration',
+        'Travail sur l’accessibilité pour se rapprocher du niveau WCAG AA',
+        'Accompagnement de développeurs juniors',
       ],
     },
     {
@@ -127,9 +141,9 @@ export const cvDataFr: CvData = {
       period: 'Novembre 2016 - Avril 2018',
       location: 'Dublin, Irlande',
       activities: [
-        'Migration du frontend de hostelworld.com de jQuery vers Vue.js',
-        'Architecture, développement et maintenance du site principal (back et front)',
-        'Formation de l’équipe au JavaScript moderne et à Vue.js',
+        'Migration du frontend de hostelworld.com de jQuery vers Vue.js, menée avec l’équipe',
+        'Conception, développement et maintenance des fonctionnalités du site principal, côté frontend et backend',
+        'Formation et accompagnement de l’équipe au JavaScript moderne et à Vue.js',
       ],
     },
     {
@@ -137,14 +151,19 @@ export const cvDataFr: CvData = {
       position: 'Consultant',
       period: 'Mai 2015 - Août 2016',
       location: 'Nantes, France',
-      activities: [],
+      activities: [
+        'Architecture, développement et maintenance de plusieurs applications web',
+        'Conception et animation de formations PHP et Symfony2',
+      ],
     },
     {
       company: 'Energy Formation (groupe ENGIE)',
       position: 'Développeur web / Chef de projet',
       period: 'Octobre 2011 - Janvier 2015',
       location: 'Nantes, France',
-      activities: [],
+      activities: [
+        'Gestion d’un projet pour remplacer la documentation papier des clients par des documents numériques',
+      ],
     },
   ],
 
@@ -167,21 +186,20 @@ export const cvDataFr: CvData = {
 
   languages: [
     {
-      level: 'Courant',
-      languages: ['Anglais'],
+      language: 'Anglais',
+      level: 'Courant (usage professionnel)',
     },
     {
+      language: 'Français',
       level: 'Langue maternelle',
-      languages: ['Français'],
     },
     {
+      language: 'Espagnol',
       level: 'Intermédiaire',
-      languages: ['Espagnol'],
     },
   ],
 
   interests: `
-    Canyoning (j'encadre des groupes), course à pied (100 km/mois), vélo, randonnée, cuisine,
-    voyages (Asie, Europe), jeux vidéo (Age of Empires II).
+    Canyoning (encadrement de groupes), course à pied (100 km/mois), vélo, cuisine et Age of Empires II.
   `,
 }

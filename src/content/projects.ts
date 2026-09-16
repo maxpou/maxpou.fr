@@ -47,12 +47,20 @@ export const projects = [
     highlighted: true,
   },
   {
+    name: 'Runner Dashboard',
+    image: RunnerDashboard,
+    description:
+      'A dashboard I use to calculate pace, estimate finish times, and plan nutrition during a race.',
+    url: '/apps/runner-dashboard',
+    highlighted: true,
+  },
+  {
     name: 'gatsby-starter-morning-dew',
     image: MorningDewImg,
     description: 'A Gatsby.js starter to build lightning-fast websites!',
     url: 'https://github.com/maxpou/gatsby-starter-morning-dew',
     ghIcon: true,
-    highlighted: true,
+    highlighted: false,
     isDead: true,
   },
   {
@@ -63,14 +71,6 @@ export const projects = [
     url: 'https://github.com/maxpou/docker-symfony',
     ghIcon: true,
     highlighted: false,
-  },
-  {
-    name: 'Runner Dashboard',
-    image: RunnerDashboard,
-    description:
-      'A dashboard I use to calculate pace, estimate finish times, and plan nutrition during a race.',
-    url: '/apps/runner-dashboard',
-    highlighted: true,
   },
   {
     icon: '💰',
