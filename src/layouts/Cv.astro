@@ -1,309 +1,145 @@
 ---
-import { Image } from 'astro:assets'
-import qrCode from '../assets/qr-code.png'
-import EmailIcon from '../components/icons/Email'
-import GithubIcon from '../components/icons/Github'
-import LinkedinIcon from '../components/icons/Linkedin'
-import PdfIcon from '../components/icons/Pdf'
-import PrinterIcon from '../components/icons/Printer'
-import WebIcon from '../components/icons/web'
 import type { CvData, CvLabels } from '../content/cv'
 
 interface Props {
   data: CvData
   labels: CvLabels
   pdfHref: string
-  /** The QR code image is pre-generated, so it only fits the page it points to */
-  showQrCode?: boolean
 }
 
-const { data, labels, pdfHref, showQrCode = false } = Astro.props
+const { data, labels, pdfHref } = Astro.props
+
+const linkClasses = 'text-inherit underline underline-offset-[3px] [overflow-wrap:anywhere] hover:decoration-2 focus-visible:outline-2 focus-visible:outline-[#365d88] focus-visible:outline-offset-4 print:no-underline'
+const sectionClasses = 'mt-[22px] print:mt-[12pt]'
+const headingClasses = 'mb-[9px] border-b border-[#dce0e4] pb-1 text-[16px] font-bold print:mb-[5pt] print:border-[#999] print:pb-[3pt] print:text-[11pt] print:break-after-avoid'
+const entryClasses = '[&+article]:mt-[18px] print:[&+article]:mt-[10pt]'
+const subheadingClasses = 'text-[15px] font-bold print:text-[10pt] print:break-after-avoid'
+const periodClasses = 'text-[13px] text-[#48515c] print:text-[9pt] print:text-black'
+const bulletClasses = 'mt-[7px] list-disc pl-[19px] [&>li+li]:mt-1 print:mt-[4pt] print:[&>li+li]:mt-[2pt]'
 
 function cleanupUrl(url: string) {
-  return url.replace('http://', '').replace('https://', '').replace('www.', '')
+  return url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')
 }
 ---
 
-<main class="mx-auto mt-[15px] w-[90%] max-w-[770px] leading-snug">
-  <aside class="hidden fixed top-0 right-0 md:flex flex-col p-4 gap-4">
-    <button aria-label={labels.print} onclick="window.print()">
-      <PrinterIcon />
-    </button>
-    <a href={pdfHref} aria-label={labels.downloadPdf} title={labels.title} download>
-      <PdfIcon />
-    </a>
-  </aside>
-  <header class="mb-2 bg-mainYellow p-2 text-center">
-    <h1 class="pb-1 text-3xl font-bold">{data.info.name}</h1>
-    <p class="text-lg">{data.info.title}</p>
-  </header>
+<nav class="mx-auto mt-6 mb-4 flex max-w-[860px] flex-wrap items-center justify-end gap-x-5 gap-y-3 px-6 text-[13px] [@media_screen_and_(max-width:600px)]:mt-4 [@media_screen_and_(max-width:600px)]:justify-start [@media_screen_and_(max-width:600px)]:px-5 print:hidden" aria-label={labels.title}>
+  <a class={linkClasses} href={data.info.social.readme}>{labels.userManual}</a>
   {
-    showQrCode && (
-      <a
-        href={data.info.cvUrl}
-        class="relative float-right hidden flex-col items-center pl-2 md:flex"
-      >
-        <Image src={qrCode} alt="QR Code pointing to this page" class="w-24" />
-        <span class="mt-[-5px] text-sm text-gray-500">
-          {cleanupUrl(data.info.cvUrl)}
-        </span>
+    labels.otherLanguageUrl && (
+      <a class={linkClasses} href={labels.otherLanguageUrl} hreflang={labels.otherLanguageCode}>
+        {labels.otherLanguageLabel}
       </a>
     )
   }
-  <div class="mb-3">
-    {data.info.description}
-  </div>
-  <div class="grid gap-1 grid-cols-1 md:grid-cols-[30fr_70fr]">
-    <div>
-      <section class="mb-3">
-        <h2>{labels.about}</h2>
-        <p>
-          <a href=`tel:${data.info.phone}`>{data.info.phone}</a>
-        </p>
-        <p>
-          <a
-            href=`mailto:${data.info.email}`
-            class="flex flex-row items-center gap-2 hover:underline"
-          >
-            <EmailIcon />
-            {data.info.email}</a
-          >
-        </p>
-        <p>
-          <a
-            href={data.info.website}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex flex-row items-center gap-2 hover:underline"
-          >
-            <WebIcon />
-            {cleanupUrl(data.info.website)}</a
-          >
-        </p>
-        <p>
-          <a
-            href={data.info.social.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex flex-row items-center gap-2 hover:underline"
-          >
-            <GithubIcon />
-            {cleanupUrl(data.info.social.github)}</a
-          >
-        </p>
-        <p>
-          <a
-            href={data.info.social.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex flex-row items-center gap-2 hover:underline"
-          >
-            <LinkedinIcon />
-            {cleanupUrl(data.info.social.linkedin)}</a
-          >
-        </p>
-        <p>
-          <a
-            href={data.info.social.readme}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex flex-row items-center gap-2 hover:underline"
-          >
-            <WebIcon />
-            {labels.userManual}
-          </a>
-        </p>
-        {labels.otherLanguageUrl && (
-          <p>
-            <a
-              href={labels.otherLanguageUrl}
-              hreflang={labels.otherLanguageCode}
-              class="flex flex-row items-center gap-2 hover:underline print:hidden"
-              >
-              <WebIcon />
-              {labels.otherLanguageLabel}
-            </a>
-          </p>
-        )}
-      </section>
-      <section class="mb-3">
-        <h2>{labels.skills}</h2>
-        {
-          data.skills.map((skillCategory, i) => (
-            <div>
-              <h3 class={`font-bold ${i !== 0 ? 'pt-2' : ''}`}>
-                {skillCategory.category}
-              </h3>
-              <ul>
-                {skillCategory.content.map(skill => (
-                  <li class="pl-2">{skill}</li>
-                ))}
-              </ul>
-            </div>
-          ))
-        }
-      </section>
-      <section class="mb-3">
-        <h2>{labels.languages}</h2>
-        {
-          data.languages.map((languagesCategory, i) => (
-            <div>
-              <h3 class={`font-bold ${i !== 0 ? 'pt-2' : ''}`}>
-                {languagesCategory.level}
-              </h3>
-              <ul>
-                {languagesCategory.languages.map(language => (
-                  <li class="pl-2">{language}</li>
-                ))}
-              </ul>
-            </div>
-          ))
-        }
-      </section>
-      <section>
-        <h2>{labels.interests}</h2>
-        <div>{data.interests}</div>
-      </section>
-    </div>
-    <div>
-      <section>
-        <h2 class="mt-2">{labels.highlights}</h2>
-        <ul class="list-disc pl-5">
-          {
-            data.highlights.map(highlight => (
-              <li>
-                {highlight.description}
-                {highlight.links.length > 0 && (
-                  <span class="inline-block whitespace-nowrap text-sm">{` (${labels.see} `}{highlight.links.map((url, index) => (<>{index > 0 && ', '}<a class="inline-block underline text-blue-500 hover:text-blue-800" href={url}>{cleanupUrl(url)}</a></>))}{')'}</span>
-                )}
-              </li>
-            ))
-          }
-        </ul>
-      </section>
-      <section class="experiences">
-        <h2 class="mt-2">{labels.experience}</h2>
-        <div>
-          {
-            data.experiences.map(experience => (
-              <div class="experience pb-3 last:pb-0 last:mb-3">
-                <div class="bull" />
-                <h3 class="text-lg font-bold">{experience.position}</h3>
-                <p class="text-neutral-500">{experience.period}</p>
-                <p class="pb-2 text-neutral-500">
-                  {experience.company}, {experience.location}
-                </p>
-                {experience.activities.length > 0 && (
-                  <ul>
-                    {experience.activities.map(activity => (
-                      <li class="pb-1">{activity}</li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            ))
-          }
-        </div>
-      </section>
-      <section>
-        <h2>{labels.education}</h2>
-        <div>
-          {
-            data.education.map(education => (
-              <div class="experience pb-3 last:pb-0 last:mb-3">
-                <div class="bull" />
-                <h3 class="font-bold">{education.degree}</h3>
-                <p class="text-neutral-500">{education.period}</p>
-                <p class="pb-2 text-neutral-500">
-                  {education.school}, {education.location}
-                </p>
-              </div>
-            ))
-          }
-        </div>
-      </section>
-    </div>
-  </div>
+  <a class={linkClasses} href={pdfHref} download>{labels.downloadPdf}</a>
+  <button class="cursor-pointer rounded border border-[#20252b] bg-[#20252b] px-5 py-2 text-white focus-visible:outline-2 focus-visible:outline-[#365d88] focus-visible:outline-offset-4" type="button" onclick="window.print()">{labels.print}</button>
+</nav>
+
+<main class="mx-auto mb-12 max-w-[860px] border border-[#dce0e4] border-t-[5px] border-t-mainYellow bg-white px-[52px] py-11 [@media_screen_and_(max-width:600px)]:mb-0 [@media_screen_and_(max-width:600px)]:border-x-0 [@media_screen_and_(max-width:600px)]:px-5 [@media_screen_and_(max-width:600px)]:py-7 print:m-0 print:max-w-none print:border-0 print:p-0 print:[&_li]:break-inside-avoid print:[&_li]:[orphans:3] print:[&_li]:[widows:3] print:[&_p]:[orphans:3] print:[&_p]:[widows:3]">
+  <header class="border-b border-[#9da5ae] pb-5 print:break-inside-avoid print:pb-[10pt]">
+    <h1 class="text-[34px] leading-[1.15] font-bold tracking-[-0.8px] [@media_screen_and_(max-width:600px)]:text-[30px] print:text-[25pt]">{data.info.name}</h1>
+    <p class="mt-1.5 mb-3.5 text-[20px] print:mt-[3pt] print:mb-[7pt] print:text-[14pt]">{data.info.title}</p>
+    <address class="text-[13px] leading-[1.7] not-italic print:text-[9pt] print:text-black" aria-label={labels.about}>
+      <p>{data.info.location}</p>
+      <p>
+        <a class={linkClasses} href={`mailto:${data.info.email}`}>{data.info.email}</a>
+        <span class="whitespace-pre-wrap"> | </span>
+        <a class={linkClasses} href={`tel:${data.info.phone}`}>{data.info.phone}</a>
+      </p>
+      <p>
+        <a class={linkClasses} href={data.info.website}>{cleanupUrl(data.info.website)}</a>
+        <span class="whitespace-pre-wrap"> | </span>
+        <a class={linkClasses} href={data.info.social.github}>{cleanupUrl(data.info.social.github)}</a>
+        <span class="whitespace-pre-wrap"> | </span>
+        <a class={linkClasses} href={data.info.social.linkedin}>{cleanupUrl(data.info.social.linkedin)}</a>
+      </p>
+    </address>
+  </header>
+
+  <p class={sectionClasses}>{data.info.description}</p>
+
+  <section class={sectionClasses} aria-labelledby="experience">
+    <h2 class={headingClasses} id="experience">{labels.experience}</h2>
+    {
+      data.experiences.map(experience => (
+        <article class={entryClasses}>
+          <header class="print:break-after-avoid print:break-inside-avoid">
+            <h3 class={subheadingClasses}>{experience.position}</h3>
+            <p><strong>{experience.company}</strong> | {experience.location}</p>
+            <p class={periodClasses}>{experience.period}</p>
+          </header>
+          {experience.activities.length > 0 && (
+            <ul class={bulletClasses}>
+              {experience.activities.map(activity => <li>{activity}</li>)}
+            </ul>
+          )}
+        </article>
+      ))
+    }
+  </section>
+
+  <section class={sectionClasses} aria-labelledby="skills">
+    <h2 class={headingClasses} id="skills">{labels.skills}</h2>
+    <ul class="list-none p-0 [&>li+li]:mt-1 print:[&>li+li]:mt-[2pt]">
+      {
+        data.skills.map(skill => (
+          <li><strong>{skill.category}:</strong> {skill.content.join(', ')}</li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class={sectionClasses} aria-labelledby="highlights">
+    <h2 class={headingClasses} id="highlights">{labels.highlights}</h2>
+    <ul class={bulletClasses}>
+      {
+        data.highlights.map(highlight => (
+          <li>
+            {highlight.content.map(part => (
+              typeof part === 'string'
+                ? part
+                : <a class={linkClasses} href={part.url}>{part.label}</a>
+            ))}
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class={sectionClasses} aria-labelledby="education">
+    <h2 class={headingClasses} id="education">{labels.education}</h2>
+    {
+      data.education.map(education => (
+        <article class:list={[entryClasses, 'print:break-inside-avoid']}>
+          <h3 class={subheadingClasses}>{education.degree}</h3>
+          <p>{education.school} | {education.location}</p>
+          <p class={periodClasses}>{education.period}</p>
+        </article>
+      ))
+    }
+  </section>
+
+  <section class={sectionClasses} aria-labelledby="languages">
+    <h2 class={headingClasses} id="languages">{labels.languages}</h2>
+    <p>
+      {
+        data.languages.map(({ language, level }) => `${language}: ${level}`).join('; ')
+      }
+    </p>
+  </section>
+
+  <section class={sectionClasses} aria-labelledby="interests">
+    <h2 class={headingClasses} id="interests">{labels.interests}</h2>
+    <p>{data.interests}</p>
+  </section>
 </main>
+
+<!-- Paged media settings have no Tailwind utility equivalent. -->
 <style>
-  body {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #3e4047; /* gray-500 */
-  }
-  main {
-    margin-bottom: 20px;
-    break-inside: avoid;
-  }
-
-  h2 {
-    display: inline-block;
-    margin-bottom: 10px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #3e4047;
-    line-height: normal;
-  }
-
-  h2:after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 2px;
-    margin-top: -1px;
-    background-color: #ffdc4e;
-  }
-
-  .experience {
-    border-left: 1px solid darkgray;
-    padding-left: 12px;
-    position: relative;
-  }
-  .experience::before {
-    padding-left: 4px;
-  }
-  .bull {
-    position: absolute;
-    content: '';
-    display: block;
-    margin-top: 5px;
-    width: 14px;
-    height: 14px;
-    left: -7px;
-    top: 0;
-    border-radius: 8px;
-    border: 2px solid #ffdc4e;
-    background-color: white;
-  }
-
   @media print {
     @page {
       size: A4;
-      margin: 10mm 17mm 10mm 17mm;
-    }
-    html,
-    body {
-      width: 210mm;
-      height: 282mm;
-      font-size: 14px;
-      background: #fff;
-      overflow: visible;
-    }
-    body {
-      padding-top: 0mm;
-    }
-
-    .grid {
-      /* otherwise grid not working when printing */
-      grid-template-columns: 30fr 70fr;
-    }
-
-    section,
-    div.experience {
-      page-break-inside: avoid;
-    }
-    section.experiences {
-      page-break-inside: initial;
+      margin: 14mm 16mm;
     }
   }
 </style>
