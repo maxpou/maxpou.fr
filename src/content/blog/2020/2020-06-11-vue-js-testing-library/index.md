@@ -1,5 +1,5 @@
 ---
-title: 'Vue.js Testing Made it Easy (with Testing Library)'
+title: 'Vue.js Testing Made Easy (with Testing Library)'
 description: 'How Testing Library helps you to write better integration test'
 slug: vue-js-testing-library
 language: en
