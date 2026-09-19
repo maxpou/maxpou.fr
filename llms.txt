@@ -8,7 +8,7 @@ Maxence Poutord is a software engineer and public speaker. This site holds his b
 
 - [How Computers Learned to Talk Like Humans](https://www.maxpou.fr/blog/how-computers-learned-to-talk-like-humans/): From the Turing Test to ChatGPT — how computers went from scripted chatbots like ELIZA to Markov chains, word embeddings, and Transformers, and how "guess the next word" became conversation.
 - [Lessons learned from building my first 3D Video Game](https://www.maxpou.fr/blog/lessons-learned-from-building-my-first-3d-video-game/): Key lessons from building Avion, a 3D flight simulator — covering performance optimisation (frustum culling, LOD, hardware instancing), physics (gimbal lock, quaternions), and the tradeoffs between realism and fun.
-- [Anatomy of a Crypto Scam - Thomas Harris](https://www.maxpou.fr/blog/crypto-scam-with-ai/): Thomas Harris is a fraudulent YouTuber who uses fake crypto tutorials to spread malware. He artificially inflates his channel's popularity and promotes a malicious script that downloads harmful files and steals crypto. This scam, powered by AI-generated content, highlights the growing sophistication of online threats.
+- [Anatomy of a Crypto Scam - Thomas Harris](https://www.maxpou.fr/blog/crypto-scam-with-ai/): I investigated Thomas Harris, an AI-generated YouTuber who uses fake crypto tutorials to scam people.
 - [10 Years of Blogging, what I learned](https://www.maxpou.fr/blog/10-years-of-blogging/): Reflects on my experience and sharing some key lessons learned after 10y of blogging. Including the importance of writing a good title, not worrying about post popularity...
 - [How to integrate Giscus to your Astro Blog](https://www.maxpou.fr/blog/giscus-with-astro/): Learn how to integrate Giscus (GitHub-powered comments), into your Astro blog. How to deal with dark mode and styles customization.
 - [A Look Inside My Personalized .gitconfig](https://www.maxpou.fr/blog/gitconfig/): Boost your Git efficiency! A simple config for a smoother workflow.
@@ -28,7 +28,7 @@ Maxence Poutord is a software engineer and public speaker. This site holds his b
 - [Monorepo: is it worth jumping the bandwagon?](https://www.maxpou.fr/blog/monorepo-pros-and-cons/): Monorepos: beyond the hype. when and when not) to use them.
 - [Tips for your GitHub Portfolio](https://www.maxpou.fr/blog/tips-for-your-github-portfolio/): Showcasing your work can help you land your dream job. But you have to follow a few simple rules.
 - [Vue.js Performance Improvement with Memoization](https://www.maxpou.fr/blog/vuejs-performance-improvement-with-memoization/): How I reduced the rendering of a complex component by 10 (from ~4s to ~0.3s).
-- [Vue.js Testing Made it Easy (with Testing Library)](https://www.maxpou.fr/blog/vue-js-testing-library/): How Testing Library helps you to write better integration test
+- [Vue.js Testing Made Easy (with Testing Library)](https://www.maxpou.fr/blog/vue-js-testing-library/): How Testing Library helps you to write better integration test
 - [How to mock Axios HTTP calls with Jest](https://www.maxpou.fr/blog/jest-mock-axios-calls/): How to unit test components that have HTTP calls.
 - [async/await without try...catch!](https://www.maxpou.fr/blog/async-await-without-try-catch/): A cool wrapper to write promises without using a try...catch block
 - [Why you shouldn't pay too much attention to your code coverage](https://www.maxpou.fr/blog/code-coverage/): High code coverage doesn't guarantee quality: You can write tests that cover every line but miss edge cases or core functionality.
@@ -121,5 +121,6 @@ Maxence Poutord is a software engineer and public speaker. This site holds his b
 
 - [Projects](https://www.maxpou.fr/projects/)
 - [Resume](https://www.maxpou.fr/cv/)
+- [Resume (French)](https://www.maxpou.fr/cv-fr/)
 - [RSS feed](https://www.maxpou.fr/rss.xml)
 - [Sitemap](https://www.maxpou.fr/sitemap-index.xml)
