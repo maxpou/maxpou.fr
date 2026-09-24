@@ -4,7 +4,11 @@ import Prose from '../components/Prose.astro'
 import Page from '../layouts/Page.astro'
 
 export async function getStaticPaths() {
-  const pages = await getCollection('pages')
+  // speaking has its own page, its entry only holds the metadata
+  const pages = await getCollection(
+    'pages',
+    page => page.data.slug !== 'speaking',
+  )
   return pages.map(page => ({
     params: { slug: page.data.slug },
     props: page,

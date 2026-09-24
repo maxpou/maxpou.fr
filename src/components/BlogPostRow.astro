@@ -1,0 +1,71 @@
+---
+import { Picture } from 'astro:assets'
+import type { CollectionEntry } from 'astro:content'
+import { readingTime } from '../utils/readingTime'
+import FormattedDate from './FormattedDate.astro'
+import FrFlag from './icons/FrFlag.png'
+
+type Props = {
+  post: CollectionEntry<'blog'>
+}
+
+const { post } = Astro.props
+---
+
+<article>
+  <a
+    href={`/blog/${post.data.slug}/`}
+    class="group grid gap-5 py-8 sm:grid-cols-[1fr_12rem] sm:items-center sm:gap-8"
+  >
+    <div class="flex flex-col gap-2">
+      <p
+        class="flex flex-wrap items-center gap-x-2 text-sm text-gray-400 dark:text-gray-200"
+      >
+        <FormattedDate date={post.data.date} />
+        <span aria-hidden="true">·</span>
+        <span>{readingTime(post.body)} min read</span>
+        {
+          post.data.language === 'fr' && (
+            <>
+              <span aria-hidden="true">·</span>
+              <span class="inline-flex items-center gap-1">
+                <img src={FrFlag.src} alt="" loading="lazy" />
+                In French
+              </span>
+            </>
+          )
+        }
+      </p>
+      <h2
+        class="text-2xl leading-snug font-bold text-gray-700 decoration-mainYellow decoration-4 underline-offset-4 group-hover:underline dark:text-white"
+      >
+        {post.data.title}
+      </h2>
+      {
+        post.data.description && (
+          <p class="line-clamp-2 text-lg">{post.data.description}</p>
+        )
+      }
+      <ul class="flex flex-wrap gap-2 pt-1">
+        {
+          post.data.tags.slice(0, 3).map(tag => (
+            <li class="rounded-full bg-white px-3 py-0.5 text-xs font-bold text-darkBlue ring-1 ring-gray-100 dark:bg-gray-500 dark:text-gray-100 dark:ring-white/10">
+              {tag}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div class="order-first overflow-hidden rounded-2xl sm:order-none">
+      <Picture
+        src={post.data.cover}
+        width={384}
+        height={256}
+        formats={['webp', 'avif', 'jpeg']}
+        alt=""
+        loading="lazy"
+        class="aspect-3/2 w-full object-cover transition duration-500 group-hover:scale-105"
+      />
+    </div>
+  </a>
+</article>

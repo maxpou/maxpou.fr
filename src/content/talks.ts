@@ -1,6 +1,39 @@
-export const talks = [
+type Language = 'en' | 'fr'
+
+type TalkEvent = {
+  date: string
+  eventName: string
+  city: string
+  link?: { label: string; url: string; language: Language }
+}
+
+type Talk = {
+  title: string
+  language: Language
+  link: string
+  events: TalkEvent[]
+}
+
+type Training = {
+  title: string
+  language: Language
+  url: string
+  details?: string
+  event?: Omit<TalkEvent, 'link'>
+}
+
+type Presentation = {
+  title: string
+  language: Language
+  url?: string
+  client?: string
+  date?: string
+}
+
+export const talks: Talk[] = [
   {
-    title: '🇬🇧 Web Accessibility 101',
+    title: 'Web Accessibility 101',
+    language: 'en',
     link: 'https://a11y-slides.netlify.app/',
     events: [
       {
@@ -16,7 +49,8 @@ export const talks = [
     ],
   },
   {
-    title: '🇬🇧 Effective Frontend testing',
+    title: 'Effective Frontend testing',
+    language: 'en',
     link: 'https://slides.maxpou.fr/effective-frontend-testing/',
     events: [
       {
@@ -37,7 +71,8 @@ export const talks = [
     ],
   },
   {
-    title: '🇬🇧 Progressive Web Apps: Your web app on steroids',
+    title: 'Progressive Web Apps: Your web app on steroids',
+    language: 'en',
     link: 'https://slides.maxpou.fr/pwa-app-on-steroids/index.html',
     events: [
       {
@@ -50,7 +85,8 @@ export const talks = [
         eventName: 'Devoxx',
         city: 'Kraków, Poland',
         link: {
-          label: '🇬🇧 video (YouTube)',
+          label: 'Video',
+          language: 'en',
           url: 'https://www.youtube.com/watch?v=6Qids36T7DA',
         },
       },
@@ -64,14 +100,16 @@ export const talks = [
         eventName: 'Voxxed Days',
         city: 'Vienna, Austria',
         link: {
-          label: '🇬🇧 video (YouTube)',
+          label: 'Video',
+          language: 'en',
           url: 'https://www.youtube.com/watch?v=sS6IDU6pVHo',
         },
       },
     ],
   },
   {
-    title: '🇬🇧 Vue.js - Yet another JavaScript Framework (company conference)',
+    title: 'Vue.js - Yet another JavaScript Framework (company conference)',
+    language: 'en',
     link: 'https://slides.maxpou.fr/vuejs-yet-another-js-framework/index.html',
     events: [
       {
@@ -82,7 +120,8 @@ export const talks = [
     ],
   },
   {
-    title: '🇬🇧 Immutability for functional JavaScript',
+    title: 'Immutability for functional JavaScript',
+    language: 'en',
     link: 'https://slides.maxpou.fr/immutability-js/index.html',
     events: [
       {
@@ -93,7 +132,8 @@ export const talks = [
     ],
   },
   {
-    title: '🇬🇧 Github Tips&Tricks',
+    title: 'Github Tips&Tricks',
+    language: 'en',
     link: 'https://slides.maxpou.fr/github-tips-tricks/index.html',
     events: [
       {
@@ -101,14 +141,16 @@ export const talks = [
         eventName: 'Open Source Meetup',
         city: 'Dublin, Ireland',
         link: {
-          label: '🇬🇧 blog post',
+          label: 'Blog post',
+          language: 'en',
           url: 'https://www.maxpou.fr/github-tips-and-tricks',
         },
       },
     ],
   },
   {
-    title: '🇬🇧 Make your code great again with the Object Calisthenics',
+    title: 'Make your code great again with the Object Calisthenics',
+    language: 'en',
     link: 'https://slides.maxpou.fr/object-calisthenics/index.html',
     events: [
       {
@@ -116,7 +158,8 @@ export const talks = [
         eventName: 'Web2Day',
         city: 'Nantes, France',
         link: {
-          label: '🇫🇷 video (YouTube)',
+          label: 'Video',
+          language: 'fr',
           url: 'https://www.youtube.com/watch?v=7Hf7q1L8Nh8',
         },
       },
@@ -125,7 +168,8 @@ export const talks = [
         eventName: 'PHPTour',
         city: 'Nantes, France',
         link: {
-          label: '🇫🇷 video (YouTube)',
+          label: 'Video',
+          language: 'fr',
           url: 'https://www.youtube.com/watch?v=aB9pmdtGZjE',
         },
       },
@@ -142,7 +186,8 @@ export const talks = [
     ],
   },
   {
-    title: '🇬🇧 GraphQL/Falcor: Why killing REST?',
+    title: 'GraphQL/Falcor: Why killing REST?',
+    language: 'en',
     link: 'https://slides.maxpou.fr/graphql-falcor-why-killing-rest/index.html',
     events: [
       {
@@ -153,7 +198,8 @@ export const talks = [
     ],
   },
   {
-    title: '🇬🇧 REST & Symfony',
+    title: 'REST & Symfony',
+    language: 'en',
     link: 'https://slides.maxpou.fr/about-rest-symfony/index.html',
     events: [
       {
@@ -161,7 +207,8 @@ export const talks = [
         eventName: 'SfPot',
         city: 'Nantes, France',
         link: {
-          label: '🇫🇷 video (YouTube)',
+          label: 'Video',
+          language: 'fr',
           url: 'https://www.youtube.com/watch?t=2220&v=F0BRnczxTWQ&feature=youtu.be',
         },
       },
@@ -174,9 +221,10 @@ export const talks = [
   },
 ]
 
-export const trainingsAndWorkshops = [
+export const trainingsAndWorkshops: Training[] = [
   {
-    title: '🇬🇧 Vue.js Workshop - Build a StackOverflow app using Vue.js',
+    title: 'Vue.js Workshop - Build a StackOverflow app using Vue.js',
+    language: 'en',
     url: 'https://slides.maxpou.fr/vue-workshop/index.html#/',
     event: {
       date: '02/2018',
@@ -185,59 +233,74 @@ export const trainingsAndWorkshops = [
     },
   },
   {
-    title: '🇬🇧 Vue.js training',
+    title: 'Vue.js training',
+    language: 'en',
     details: 'for Hostelworld',
     url: 'https://slides.maxpou.fr/vuejs-training/index.html#/',
   },
   {
-    title: '🇬🇧 Vue.js workshop',
+    title: 'Vue.js workshop',
+    language: 'en',
     details: 'for Hostelworld',
     url: 'https://slides.maxpou.fr/vuejs-training/_book/docs/',
   },
   {
-    title: '🇬🇧 Symfony2 Basics',
+    title: 'Symfony2 Basics',
+    language: 'en',
     details: 'for Conserto and La Poste',
     url: 'https://slides.maxpou.fr/symfony2-basics-conserto/index.html#/',
   },
   {
-    title: '🇬🇧 PHP Basics',
+    title: 'PHP Basics',
+    language: 'en',
     url: 'https://slides.maxpou.fr/php-basics-conserto/index.html#/',
   },
 ]
 
-export const presentations = [
+export const presentations: Presentation[] = [
   {
-    title: '🇬🇧 Package management with NPM',
-    details: 'Presentation for Orderfox (03/2022)',
+    title: 'Package management with NPM',
+    language: 'en',
+    client: 'Orderfox',
+    date: '03/2022',
     url: 'https://npm-nodesmodules.netlify.app/index.html?slideIndex=0&stepIndex=0',
   },
   {
-    title: '🇬🇧 An introduction to GraphQL',
-    details: 'Presentation for Orderfox (11/2021)',
+    title: 'An introduction to GraphQL',
+    language: 'en',
+    client: 'Orderfox',
+    date: '11/2021',
     url: 'https://slides.maxpou.fr/GraphQL-introduction/?slideIndex=0&stepIndex=0',
   },
   {
-    title: '🇬🇧 JS Today - a (re-)introduction to JavaScript',
-    details: 'Presentation for Hostelworld (06/2017)',
+    title: 'JS Today - a (re-)introduction to JavaScript',
+    language: 'en',
+    client: 'Hostelworld',
+    date: '06/2017',
     url: 'https://slides.maxpou.fr/js-today-2017/index.html#/',
   },
   {
-    title: "🇫🇷 Redis et l'écosysteme Symfony",
-    details: 'Presentation for La Poste (03/2016)',
+    title: "Redis et l'écosysteme Symfony",
+    language: 'fr',
+    client: 'La Poste',
+    date: '03/2016',
     url: 'https://slides.maxpou.fr/redis-doctrine-sf/index.html#/',
   },
   {
-    title: "🇫🇷 Présentation d'Elasticsearch",
-    details: 'Presentation for La Poste (03/2016)',
+    title: "Présentation d'Elasticsearch",
+    language: 'fr',
+    client: 'La Poste',
+    date: '03/2016',
     url: 'https://slides.maxpou.fr/elasticsearch-php/index.html#/',
   },
   {
-    title: '🇫🇷 Pourquoi utiliser un framework comme Symfony2',
-    details: 'Presentation for Conserto clients',
-    url: '#',
+    title: 'Pourquoi utiliser un framework comme Symfony2',
+    language: 'fr',
+    client: 'Conserto clients',
   },
   {
-    title: '🇫🇷 Dissertation defence (Software Architect degree)',
+    title: 'Dissertation defence (Software Architect degree)',
+    language: 'fr',
     url: 'https://slides.maxpou.fr/afcepf-soutenance-memoire/index.html#/',
   },
 ]

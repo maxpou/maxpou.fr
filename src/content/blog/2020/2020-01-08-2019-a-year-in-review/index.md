@@ -53,7 +53,7 @@ Overall, I 💙 working remotely.
 ### 😥Failures: online courses
 
 At the beginning of 2019, I get contacted by a famous platform to do some online courses about
-Vue.js Testing. I already gave a few [training in the past](/speaking#trainings--workshop) and I
+Vue.js Testing. I already gave a few [training in the past](/speaking#trainings--workshops) and I
 setup twice a testing strategies for Vue.js application. At first glance, it looked like an easy way
 to get money and improve my personal branding. But, recording courses is not like giving a talk.
 Every time you make a mistake or a car start horning on the street, you have to start over.

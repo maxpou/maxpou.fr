@@ -2,9 +2,8 @@
 import { type CollectionEntry, getCollection } from 'astro:content'
 import type { Page } from 'astro'
 import type { JsonLdDocument } from 'jsonld'
-import BlogCard from '../../components/BlogCard.astro'
+import BlogListing from '../../components/BlogListing.astro'
 import Layout from '../../components/Layout.astro'
-import Pagination from '../../components/Pagination.astro'
 import StructuredData from '../../components/StructuredData.astro'
 import { PAGE_SIZE, SITE_URL } from '../../consts'
 
@@ -57,8 +56,5 @@ const blogStructuredData: JsonLdDocument = {
   }}
 >
   <StructuredData data={blogStructuredData} />
-  <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-    {page.data.map(post => <BlogCard post={post} />)}
-  </div>
-  <Pagination page={page} />
+  <BlogListing page={page} />
 </Layout>

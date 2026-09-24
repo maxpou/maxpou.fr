@@ -1,16 +1,16 @@
 ---
-import { Image } from 'astro:assets'
+import { Image, Picture } from 'astro:assets'
 import { getCollection } from 'astro:content'
 import type { JsonLdDocument } from 'jsonld'
 import ProfilePicture from '../assets/profile-picture.jpeg'
-import BlogCard from '../components/BlogCard.astro'
-import GithubIcon from '../components/icons/Github'
+import FormattedDate from '../components/FormattedDate.astro'
+import FrFlag from '../components/icons/FrFlag.png'
+import { socialIcons } from '../components/icons/footer-socials'
 import Layout from '../components/Layout.astro'
-import Prose from '../components/Prose.astro'
 import StructuredData from '../components/StructuredData.astro'
-import Tag from '../components/Tag.astro'
 import { SITE_DESCRIPTION, SITE_URL } from '../consts'
 import { projects } from '../content/projects'
+import { highlights } from '../content/sport'
 
 const posts = (await getCollection('blog'))
   .filter(post => !post.data.unlisted)
@@ -18,10 +18,26 @@ const posts = (await getCollection('blog'))
 
 const latestPosts = posts.slice(0, 5)
 
-const highlightedPosts = (await getCollection('blog'))
-  .filter(post => !post.data.unlisted && post.data.featured)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+const [mainFeaturedPost, ...featuredPosts] = posts
+  .filter(post => post.data.featured)
   .slice(0, 6)
+
+const recipes = (await getCollection('recipes')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+)
+const latestRecipes = recipes.slice(0, 4)
+
+const trainingLog = [...highlights]
+  .sort((a, b) => b.date.localeCompare(a.date))
+  .slice(0, 5)
+
+const formatMonth = (date: string) =>
+  new Date(date).toLocaleDateString('en-GB', {
+    month: 'short',
+    year: 'numeric',
+  })
+
+const highlightedProjects = projects.filter(project => project.highlighted)
 
 const SELECTED_TAGS = [
   'Git',
@@ -31,6 +47,27 @@ const SELECTED_TAGS = [
   'Architecture',
   'Life',
 ]
+
+const SOCIALS = [
+  {
+    url: 'https://github.com/maxpou',
+    label: 'GitHub',
+    icon: socialIcons.github,
+  },
+  {
+    url: 'https://bsky.app/profile/maxpou.fr',
+    label: 'Bluesky',
+    icon: socialIcons.bluesky,
+  },
+  {
+    url: 'https://www.linkedin.com/in/maxpou/',
+    label: 'LinkedIn',
+    icon: socialIcons.linkedin,
+  },
+  { url: '/rss.xml', label: 'RSS feed', icon: socialIcons.rss },
+]
+
+const isExternal = (url: string) => /^https?:\/\//.test(url)
 
 const personStructuredData: JsonLdDocument = {
   '@context': 'https://schema.org',
@@ -72,100 +109,389 @@ const personStructuredData: JsonLdDocument = {
   }}
 >
   <StructuredData data={personStructuredData} />
-  <Prose>
-    <h1 class="dark:text-mainYellow">Hello! I'm Maxence.</h1>
-    <div class="flex flex-col md:flex-row gap-5 max-w-[720px]  mt-12">
-      <Image
-        class="not-prose h-32 w-32 min-w-32 object-cover rounded-full"
-        width={96}
-        height={96}
-        src={ProfilePicture}
-        alt="Maxence Poutord"
-      />
-      <div>
-        <p class="mt-0! text-xl">
+
+  <div class="flex flex-col gap-24 md:gap-32">
+    <section
+      class="grid items-center gap-12 pt-4 md:pt-12 lg:grid-cols-[1fr_auto] lg:gap-20"
+    >
+      <div class="max-w-3xl">
+        <p
+          class="mb-6 inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-sm font-bold text-gray-500 shadow-sm ring-1 ring-gray-100 dark:bg-gray-500 dark:text-gray-100 dark:ring-white/10"
+        >
+          <span aria-hidden="true">👋</span> Hello! I'm Maxence.
+        </p>
+        <h1
+          class="text-5xl leading-[1.1] font-bold tracking-tight text-gray-700 md:text-7xl dark:text-white"
+        >
+          <span class="highlight">Software engineer</span>, endurance nerd &amp;
+          home chef.
+        </h1>
+        <p class="mt-8 max-w-2xl text-xl leading-relaxed">
           I'm a software engineer in France. I build web apps for a living and
           occasionally write code to figure out how much flour goes in a pizza.
-          This is where I share my projects, things I've learned, and a few recipes.
+          This is where I share my projects, things I've learned, and a few
+          recipes.
         </p>
-        <a href="/about" class="text-xl">Read more about me &rarr;</a>
-      </div>
-    </div>
-
-    <h2>Featured Posts</h2>
-    <div class="not-prose grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {
-        highlightedPosts.map(post => (
-          <BlogCard post={post} firstBigger={false} showDate={false} />
-        ))
-      }
-    </div>
-
-    <h2>Recently Published</h2>
-    <div class="not-prose flex flex-wrap items-center gap-2 mb-6">
-      {SELECTED_TAGS.map(tag => (
-        <Tag name={tag} link={`/tags/${tag}`} />
-      ))}
-    </div>
-    <div class="not-prose grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {
-        latestPosts.map(post => (
-          <BlogCard post={post} firstBigger={false} />
-        ))
-      }
-      <a
-        href="/blog/"
-        class:list={[
-          'ease flex flex-col rounded-lg bg-white transition duration-300 dark:bg-gray-500',
-          'hover:translate-y-0.5 shadow-md  hover:shadow-xl',
-          'justify-center items-center p-4 text-center',
-        ]}
-      >
-        See all {posts.length} posts from the blog &rarr;
-      </a>
-    </div>
-
-    <h2>Featured Projects</h2>
-    <div class="not-prose grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {
-        projects.filter(project => project.highlighted).map(({ name, image, description, url, ghIcon }) => (
+        <div class="mt-10 flex flex-wrap items-center gap-4">
           <a
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="bg-white dark:bg-gray-500 rounded-lg shadow-md hover:shadow-xl transition duration-300 ease-in-out flex flex-col"
+            href="/blog"
+            class="rounded-full bg-darkBlue px-6 py-3 font-bold text-white shadow-md transition hover:-translate-y-0.5 hover:shadow-lg dark:bg-mainYellow dark:text-gray-700"
           >
-            {image && (
-              <Image
-                src={image}
-                alt={`${name} description image`}
-                width={420}
-                height={224}
-                class="h-56 w-full rounded-b-none rounded-t-lg object-cover transition bg-white"
-              />
-            )}
-            <div class="p-4">
-              <p class="inline-flex items-center gap-2">
-                {ghIcon && <GithubIcon />}
-                {name}
-              </p>
-              <p class="italic text-gray-400 dark:text-gray-100">
-                {description}
-              </p>
-            </div>
+            Read the blog
           </a>
-        ))
-      }
-      <a
-        href="/projects"
-        class:list={[
-          'ease flex flex-col rounded-lg bg-white transition duration-300 dark:bg-gray-500',
-          'hover:translate-y-0.5 shadow-md  hover:shadow-xl',
-          'justify-center items-center p-4 text-center',
-        ]}
-      >
-        See all my {projects.length} projects &rarr;
-      </a>
-    </div>
-  </Prose>
+          <a
+            href="/about"
+            class="rounded-full px-6 py-3 font-bold text-gray-700 ring-2 ring-gray-200 transition hover:ring-gray-700 dark:text-white dark:ring-gray-400 dark:hover:ring-white"
+          >
+            More about me
+          </a>
+          <ul class="flex items-center gap-1 sm:ml-2">
+            {
+              SOCIALS.map(({ url, label, icon }) => (
+                <li>
+                  <a
+                    href={url}
+                    aria-label={label}
+                    title={label}
+                    class="flex h-10 w-10 items-center justify-center rounded-full text-gray-400 transition hover:bg-white hover:text-gray-700 dark:text-gray-200 dark:hover:bg-gray-500 dark:hover:text-mainYellow"
+                    {...(isExternal(url) && { rel: 'noopener noreferrer' })}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      class="h-5 w-5"
+                      aria-hidden="true"
+                      set:html={icon}
+                    />
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+
+      <div class="relative mx-auto hidden w-72 sm:block lg:w-80">
+        <div
+          class="absolute inset-0 translate-x-4 translate-y-4 rotate-3 rounded-[2rem] bg-mainYellow"
+          aria-hidden="true"
+        >
+        </div>
+        <Image
+          class="relative aspect-4/5 w-full rounded-[2rem] object-cover shadow-xl"
+          width={640}
+          height={800}
+          src={ProfilePicture}
+          alt="Maxence Poutord"
+          loading="eager"
+        />
+      </div>
+    </section>
+
+    <section>
+      <header class="section-header">
+        <h2 class="section-title">Featured posts</h2>
+        <a href="/blog" class="section-link">
+          All posts <span aria-hidden="true">&rarr;</span>
+        </a>
+      </header>
+      <div class="grid gap-6 lg:grid-cols-[3fr_2fr]">
+        {
+          mainFeaturedPost && (
+            <a
+              href={`/blog/${mainFeaturedPost.data.slug}/`}
+              class="card group flex flex-col"
+            >
+              <div class="overflow-hidden">
+                <Picture
+                  src={mainFeaturedPost.data.cover}
+                  width={840}
+                  height={448}
+                  formats={['webp', 'avif', 'jpeg']}
+                  alt=""
+                  class="aspect-15/8 w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div class="flex flex-1 flex-col gap-3 p-6 md:p-8">
+                <h3 class="text-2xl font-bold text-gray-700 md:text-3xl dark:text-white">
+                  {mainFeaturedPost.data.title}
+                </h3>
+                <p class="text-lg">{mainFeaturedPost.data.description}</p>
+              </div>
+            </a>
+          )
+        }
+        <ul class="card flex flex-col divide-y divide-gray-100 dark:divide-white/10">
+          {
+            featuredPosts.map(post => (
+              <li class="flex-1">
+                <a
+                  href={`/blog/${post.data.slug}/`}
+                  class="group flex h-full items-center gap-4 p-4 transition hover:bg-lightBlue dark:hover:bg-gray-600"
+                >
+                  <Picture
+                    src={post.data.cover}
+                    width={160}
+                    height={160}
+                    formats={['webp', 'avif', 'jpeg']}
+                    alt=""
+                    loading="lazy"
+                    class="h-16 w-16 shrink-0 rounded-xl object-cover"
+                  />
+                  <span class="font-bold leading-snug text-gray-700 group-hover:underline group-hover:decoration-mainYellow group-hover:decoration-4 group-hover:underline-offset-4 dark:text-white">
+                    {post.data.title}
+                  </span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+
+    <section class="grid gap-10 lg:grid-cols-[1fr_2fr] lg:gap-16">
+      <div>
+        <h2 class="section-title">Latest writing</h2>
+        <p class="mt-4 text-lg">
+          Notes on web development, software architecture, and the occasional
+          life lesson. Browse by topic:
+        </p>
+        <ul class="mt-6 flex flex-wrap gap-2">
+          {
+            SELECTED_TAGS.map(tag => (
+              <li>
+                <a
+                  href={`/tags/${tag}`}
+                  class="inline-block rounded-full bg-white px-4 py-1.5 text-sm font-bold text-gray-500 ring-1 ring-gray-100 transition hover:bg-darkBlue hover:text-white dark:bg-gray-500 dark:text-gray-100 dark:ring-white/10 dark:hover:bg-mainYellow dark:hover:text-gray-700"
+                >
+                  #{tag}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div>
+        <ol class="divide-y divide-gray-200 border-y border-gray-200 dark:divide-white/10 dark:border-white/10">
+          {
+            latestPosts.map(post => (
+              <li>
+                <a
+                  href={`/blog/${post.data.slug}/`}
+                  class="group grid gap-1 py-6 sm:grid-cols-[10rem_1fr_auto] sm:items-baseline sm:gap-6"
+                >
+                  <span class="text-sm text-gray-400 dark:text-gray-200">
+                    <FormattedDate date={post.data.date} />
+                  </span>
+                  <span>
+                    <span class="block text-xl font-bold text-gray-700 group-hover:underline group-hover:decoration-mainYellow group-hover:decoration-4 group-hover:underline-offset-4 dark:text-white">
+                      {post.data.language === 'fr' && (
+                        <img
+                          src={FrFlag.src}
+                          alt="French post"
+                          class="mr-1 inline pb-1"
+                          loading="lazy"
+                        />
+                      )}
+                      {post.data.title}
+                    </span>
+                    {post.data.description && (
+                      <span class="mt-1 line-clamp-2 block">
+                        {post.data.description}
+                      </span>
+                    )}
+                  </span>
+                  <span
+                    class="hidden text-xl text-gray-300 transition group-hover:translate-x-1 group-hover:text-gray-700 sm:block dark:group-hover:text-mainYellow"
+                    aria-hidden="true"
+                  >
+                    &rarr;
+                  </span>
+                </a>
+              </li>
+            ))
+          }
+        </ol>
+        <a href="/blog" class="section-link mt-6 inline-block">
+          See all {posts.length} posts <span aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <header class="section-header">
+        <h2 class="section-title">Things I've made</h2>
+        <a href="/projects" class="section-link">
+          All {projects.length} projects <span aria-hidden="true">&rarr;</span>
+        </a>
+      </header>
+      <ul class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {
+          highlightedProjects.map(({ name, image, description, url }) => (
+            <li class="contents">
+              <a
+                href={url}
+                class="card group flex flex-col"
+                {...(isExternal(url) && {
+                  target: '_blank',
+                  rel: 'noopener noreferrer',
+                })}
+              >
+                {image && (
+                  <div class="overflow-hidden bg-white">
+                    <Image
+                      src={image}
+                      alt=""
+                      width={420}
+                      height={224}
+                      class="aspect-15/8 w-full object-cover transition duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                )}
+                <div class="flex flex-1 flex-col gap-2 p-6">
+                  <h3 class="flex items-center justify-between gap-2 text-xl font-bold text-gray-700 dark:text-white">
+                    {name}
+                    <span
+                      class="text-gray-300 transition group-hover:translate-x-1 group-hover:text-gray-700 dark:group-hover:text-mainYellow"
+                      aria-hidden="true"
+                    >
+                      {isExternal(url) ? '↗' : '→'}
+                    </span>
+                  </h3>
+                  <p>{description}</p>
+                </div>
+              </a>
+            </li>
+          ))
+        }
+        <li class="contents">
+          <a
+            href="/projects"
+            class="group flex min-h-48 flex-col items-center justify-center gap-2 rounded-3xl border-2 border-dashed border-gray-200 p-6 text-center font-bold text-gray-700 transition hover:border-gray-700 dark:border-gray-400 dark:text-white dark:hover:border-mainYellow"
+          >
+            <span class="text-3xl" aria-hidden="true">+{projects.length - highlightedProjects.length}</span>
+            See all my projects
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <header class="section-header">
+        <h2 class="section-title">Off the keyboard</h2>
+      </header>
+      <div class="grid gap-6 lg:grid-cols-2">
+        <div
+          class="flex flex-col rounded-3xl bg-darkBlue p-8 text-gray-200 md:p-10 dark:bg-gray-800"
+        >
+          <p class="eyebrow text-mainYellow">Endurance</p>
+          <h3 class="mt-2 text-2xl font-bold text-white">Training log</h3>
+          <p class="mt-2">
+            From canyons to marathons. My most recent efforts:
+          </p>
+          <ol class="mt-8 flex flex-col gap-6 border-l-2 border-white/15 pl-6">
+            {
+              trainingLog.map(({ title, date, description }) => (
+                <li class="relative">
+                  <span
+                    class="absolute top-2 -left-[calc(1.5rem+7px)] h-3 w-3 rounded-full bg-mainYellow ring-4 ring-darkBlue dark:ring-gray-800"
+                    aria-hidden="true"
+                  />
+                  <time datetime={date} class="text-sm text-gray-300">
+                    {formatMonth(date)}
+                  </time>
+                  <p class="font-bold text-white">{title}</p>
+                  {description && <p>{description}</p>}
+                </li>
+              ))
+            }
+          </ol>
+          <a
+            href="/about"
+            class="mt-auto self-start pt-8 font-bold text-mainYellow underline decoration-transparent decoration-2 underline-offset-4 hover:decoration-mainYellow"
+          >
+            More about me <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+
+        <div class="card flex flex-col p-8 md:p-10">
+          <p class="eyebrow text-blueGreyed dark:text-mainYellow">Kitchen</p>
+          <h3 class="mt-2 text-2xl font-bold text-gray-700 dark:text-white">
+            Fresh from the kitchen
+          </h3>
+          <p class="mt-2">
+            The dishes I cook again and again, from ramen to homemade pasta.
+          </p>
+          <ul class="mt-8 grid grid-cols-2 gap-4">
+            {
+              latestRecipes.map(recipe => (
+                <li>
+                  <a
+                    href={`/recipes/${recipe.data.slug}`}
+                    class="group relative block overflow-hidden rounded-2xl"
+                  >
+                    <Picture
+                      src={recipe.data.cover}
+                      width={400}
+                      height={400}
+                      formats={['webp', 'avif', 'jpeg']}
+                      alt=""
+                      loading="lazy"
+                      class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
+                    />
+                    <span class="absolute inset-x-0 bottom-0 bg-linear-to-t from-black/80 to-transparent p-3 pt-12 font-bold leading-snug text-white">
+                      {recipe.data.title}
+                    </span>
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+          <a href="/recipes" class="section-link mt-auto self-start pt-8">
+            All {recipes.length} recipes <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
 </Layout>
+
+<style>
+  @reference "../styles/global.css";
+
+  .highlight {
+    background-image: linear-gradient(
+      to top,
+      var(--color-mainYellow) 0.3em,
+      transparent 0.3em
+    );
+    box-decoration-break: clone;
+  }
+
+  :global(.dark) .highlight {
+    background-image: none;
+    color: var(--color-mainYellow);
+  }
+
+  .eyebrow {
+    @apply text-sm font-bold tracking-widest uppercase;
+  }
+
+
+  .card {
+    @apply overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-gray-100 transition hover:shadow-xl dark:bg-gray-500 dark:ring-white/10;
+  }
+
+  .section-header {
+    @apply mb-8 flex items-baseline justify-between gap-4;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold tracking-tight text-gray-700 md:text-4xl dark:text-white;
+  }
+
+  .section-link {
+    @apply font-bold text-gray-700 underline decoration-mainYellow decoration-4 underline-offset-4 hover:decoration-gray-700 dark:text-white dark:hover:decoration-white;
+  }
+</style>

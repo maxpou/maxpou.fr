@@ -98,14 +98,14 @@ export const cvData = {
   highlights: [
     {
       content: [
-        { label: 'YoutubeMate', url: 'https://youtube-mate.com' },
-        ': Built and launched a web app and Chrome extension that turn YouTube videos into multilingual AI summaries. Implemented enhanced transcripts and subscription billing, and maintain the live product.',
+        { label: 'Pedalyze', url: 'https://pedalyze.bike' },
+        ': Built and launched a bike-fitting app that turns rider photos into joint-angle measurements and position recommendations using AI pose estimation. Implemented video analysis in the browser to assess the full pedal stroke while keeping footage on the user’s device.',
       ],
     },
     {
       content: [
-        { label: 'Pedalyze', url: 'https://pedalyze.bike' },
-        ': Built and launched a bike-fitting app that turns rider photos into joint-angle measurements and position recommendations using AI pose estimation. Implemented video analysis in the browser to assess the full pedal stroke while keeping footage on the user’s device.',
+        { label: 'YoutubeMate', url: 'https://youtube-mate.com' },
+        ': Built and launched a web app and Chrome extension that turn YouTube videos into multilingual AI summaries. Implemented enhanced transcripts and subscription billing, and maintain the live product.',
       ],
     },
     {

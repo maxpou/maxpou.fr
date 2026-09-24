@@ -7,36 +7,65 @@ type Props = {
 }
 
 const { page } = Astro.props
+
+const pageUrl = (pageNumber: number) =>
+  pageNumber === 1 ? '/blog' : `/blog/pages/${pageNumber}`
+
+const pageNumbers = Array.from({ length: page.lastPage }, (_, i) => i + 1)
+
+const buttonClass =
+  'rounded-full px-5 py-2 font-bold text-gray-700 ring-2 ring-gray-200 transition hover:ring-gray-700 dark:text-white dark:ring-gray-400 dark:hover:ring-white'
 ---
 
-<div class="flex items-center justify-between mt-4">
+<nav
+  aria-label="Blog pagination"
+  class="mt-12 grid grid-cols-[1fr_auto_1fr] items-center gap-4"
+>
   {
-    page.url.prev ? (
+    page.currentPage > 1 ? (
       <a
-        href={page.currentPage === 2 ? '/blog' : page.url.prev}
-        class="bg-gray-500 text-white border-gray-500 hover:bg-white hover:text-gray-500
-        dark:bg-gray-600 dark:border-gray-600 dark:border-bg-gray-600 dark:hover:bg-white
-        p-2 rounded min-w-32 text-center border transition-none"
+        href={pageUrl(page.currentPage - 1)}
+        class:list={[buttonClass, 'justify-self-start']}
       >
-        ‹ Newer posts
+        <span aria-hidden="true">&larr;</span> Newer
       </a>
     ) : (
       <span />
     )
   }
-  <p>Page {page.currentPage} of {page.lastPage}</p>
+
+  <p class="sm:hidden">Page {page.currentPage} of {page.lastPage}</p>
+  <ol class="hidden gap-1 sm:flex">
+    {
+      pageNumbers.map(pageNumber => (
+        <li>
+          <a
+            href={pageUrl(pageNumber)}
+            aria-current={pageNumber === page.currentPage ? 'page' : undefined}
+            class:list={[
+              'flex h-10 w-10 items-center justify-center rounded-full font-bold transition',
+              pageNumber === page.currentPage
+                ? 'bg-darkBlue text-white dark:bg-mainYellow dark:text-gray-700'
+                : 'text-gray-500 hover:bg-white dark:text-gray-100 dark:hover:bg-gray-500',
+            ]}
+          >
+            {pageNumber}
+          </a>
+        </li>
+      ))
+    }
+  </ol>
+
   {
-    page.url.next ? (
+    page.currentPage < page.lastPage ? (
       <a
-        href={page.url.next}
-        class="bg-gray-500 text-white border-gray-500 hover:bg-white hover:text-gray-500
-        dark:bg-gray-600 dark:border-gray-600 dark:border-bg-gray-600 dark:hover:bg-white
-        p-2 rounded min-w-32 text-center border transition-none"
+        href={pageUrl(page.currentPage + 1)}
+        class:list={[buttonClass, 'justify-self-end']}
       >
-        Older posts ›
+        Older <span aria-hidden="true">&rarr;</span>
       </a>
     ) : (
       <span />
     )
   }
-</div>
+</nav>
