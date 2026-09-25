@@ -1,0 +1,403 @@
+---
+import { Picture } from 'astro:assets'
+import { getEntry } from 'astro:content'
+import { socialIcons } from '../components/icons/footer-socials'
+import Layout from '../components/Layout.astro'
+import { presentations, talks, trainingsAndWorkshops } from '../content/talks'
+
+const page = await getEntry('pages', 'speaking')
+if (!page) throw new Error('Missing "speaking" page entry')
+const { title, description, cover, slug } = page.data
+
+const CONTACT_URL = 'mailto:maxence.poutord@gmail.com?subject=Speaking+Inquiry'
+
+const TOPICS = [
+  {
+    name: 'Vue.js',
+    description: 'Building and scaling medium to large Vue.js applications.',
+  },
+  {
+    name: 'PWA & offline',
+    description:
+      'New browser capabilities and offline-first patterns for web apps.',
+  },
+  {
+    name: 'Accessibility',
+    description: 'Making applications meet WCAG AA criteria, step by step.',
+  },
+  {
+    name: 'Performance',
+    description: 'Managing frontend performance so you can sleep at night.',
+  },
+  {
+    name: 'Testing',
+    description:
+      'Testing Vue and React apps effectively, and growing a testing culture.',
+  },
+]
+
+const allEvents = talks.flatMap(talk => talk.events)
+const countries = new Set(
+  allEvents
+    .map(event => event.city.split(', ')[1])
+    .filter((country): country is string => Boolean(country)),
+)
+const years = allEvents.map(event => Number(event.date.split('/')[1]))
+
+const STATS = [
+  { value: talks.length, label: 'talks' },
+  { value: allEvents.length, label: 'events' },
+  { value: countries.size, label: 'countries' },
+  { value: `${Math.min(...years)}–${Math.max(...years)}`, label: 'on stage' },
+]
+
+const formatDate = (date: string) => {
+  const [month, year] = date.split('/').map(Number)
+  return new Date(year, month - 1).toLocaleDateString('en-GB', {
+    month: 'short',
+    year: 'numeric',
+  })
+}
+const toDatetime = (date: string) => date.split('/').reverse().join('-')
+
+const LANGUAGE_LABELS = { en: 'English', fr: 'French' } as const
+---
+
+<Layout
+  title={title}
+  description={description ?? ''}
+  seo={{
+    type: 'article',
+    ogImage: `/og/${slug}.png`,
+  }}
+>
+  <div class="flex flex-col gap-24 md:gap-32">
+    <section
+      class="grid items-center gap-12 pt-4 md:pt-8 lg:grid-cols-[1fr_28rem] lg:gap-16"
+    >
+      <div class="max-w-3xl">
+        <p class="eyebrow mb-4 text-blueGreyed dark:text-mainYellow">
+          Speaking
+        </p>
+        <h1
+          class="text-5xl leading-[1.1] font-bold tracking-tight text-gray-700 md:text-6xl dark:text-white"
+        >
+          Talks, workshops &amp; trainings.
+        </h1>
+        <p class="mt-6 text-xl leading-relaxed">
+          I love to deliver technical talks. From meetups in Dublin to Devoxx in
+          Kraków, I share what I learn building web apps: frameworks, testing,
+          accessibility and performance.
+        </p>
+        <div class="mt-10 flex flex-wrap items-center gap-4">
+          <a
+            href={CONTACT_URL}
+            class="rounded-full bg-darkBlue px-6 py-3 font-bold text-white shadow-md transition hover:-translate-y-0.5 hover:shadow-lg dark:bg-mainYellow dark:text-gray-700"
+          >
+            Invite me to speak
+          </a>
+          <a
+            href="https://github.com/maxpou-slides"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 rounded-full px-6 py-3 font-bold text-gray-700 ring-2 ring-gray-200 transition hover:ring-gray-700 dark:text-white dark:ring-gray-400 dark:hover:ring-white"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="h-5 w-5"
+              aria-hidden="true"
+              set:html={socialIcons.github}
+            />
+            All slides on GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="relative mx-auto w-full max-w-md">
+        <div
+          class="absolute inset-0 translate-x-4 translate-y-4 -rotate-2 rounded-[2rem] bg-mainYellow"
+          aria-hidden="true"
+        >
+        </div>
+        <Picture
+          src={cover}
+          width={896}
+          height={672}
+          formats={['webp', 'avif', 'jpeg']}
+          alt="Maxence presenting a technical talk to a conference audience"
+          loading="eager"
+          class="relative aspect-4/3 w-full rounded-[2rem] object-cover shadow-xl"
+        />
+      </div>
+    </section>
+
+    <dl
+      class="-mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-3xl bg-gray-100 ring-1 ring-gray-100 md:-mt-16 md:grid-cols-4 dark:bg-white/10 dark:ring-white/10"
+    >
+      {
+        STATS.map(({ value, label }) => (
+          <div class="flex flex-col-reverse gap-1 bg-white p-6 md:p-8 dark:bg-gray-500">
+            <dt class="text-gray-400 dark:text-gray-200">{label}</dt>
+            <dd class="text-3xl font-bold tracking-tight whitespace-nowrap md:text-4xl text-gray-700 dark:text-white">
+              {value}
+            </dd>
+          </div>
+        ))
+      }
+    </dl>
+
+    <section
+      aria-labelledby="topics-title"
+      class="grid gap-10 lg:grid-cols-[1fr_2fr] lg:gap-16"
+    >
+      <div>
+        <h2 id="topics-title" class="section-title">What I can talk about</h2>
+        <p class="mt-4 text-lg">
+          The subjects I know well enough to stand in front of a room for.
+        </p>
+      </div>
+      <dl
+        class="divide-y divide-gray-200 border-y border-gray-200 dark:divide-white/10 dark:border-white/10"
+      >
+        {
+          TOPICS.map(({ name, description }) => (
+            <div class="grid gap-1 py-5 sm:grid-cols-[12rem_1fr] sm:gap-6">
+              <dt class="text-lg font-bold text-gray-700 dark:text-white">
+                {name}
+              </dt>
+              <dd class="text-lg">{description}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </section>
+
+    <section id="talks" aria-labelledby="talks-title" class="scroll-mt-8">
+      <header class="section-header">
+        <h2 id="talks-title" class="section-title">Talks</h2>
+        <p class="text-gray-400 dark:text-gray-200">
+          Newest first, with every stage they went on.
+        </p>
+      </header>
+      <ol class="grid gap-6 lg:grid-cols-2">
+        {
+          talks.map(talk => (
+            <li class="card flex flex-col p-6 md:p-8">
+              <div class="flex items-start justify-between gap-4">
+                <h3 class="text-2xl leading-snug font-bold text-gray-700 dark:text-white">
+                  {talk.title}
+                </h3>
+                <span class="badge" title={LANGUAGE_LABELS[talk.language]}>
+                  {talk.language}
+                </span>
+              </div>
+              <ol class="mt-6 mb-8 flex flex-col gap-4 border-l-2 border-gray-100 pl-6 dark:border-white/10">
+                {talk.events.map(event => (
+                  <li class="relative">
+                    <span
+                      class="absolute top-2 -left-[calc(1.5rem+7px)] h-3 w-3 rounded-full bg-mainYellow ring-4 ring-white dark:ring-gray-500"
+                      aria-hidden="true"
+                    />
+                    <time
+                      datetime={toDatetime(event.date)}
+                      class="text-sm text-gray-400 dark:text-gray-200"
+                    >
+                      {formatDate(event.date)}
+                    </time>
+                    <p>
+                      <span class="font-bold text-gray-700 dark:text-white">
+                        {event.eventName}
+                      </span>{' '}
+                      · {event.city}
+                    </p>
+                    {event.link && (
+                      <a
+                        href={event.link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="mt-1 inline-flex items-center gap-1.5 rounded-full bg-lightBlue px-3 py-0.5 text-sm font-bold text-darkBlue transition hover:bg-darkBlue hover:text-white dark:bg-gray-600 dark:text-gray-100 dark:hover:bg-mainYellow dark:hover:text-gray-700"
+                      >
+                        <span aria-hidden="true">
+                          {event.link.label === 'Video' ? '▶' : '✎'}
+                        </span>
+                        {event.link.label}
+                        <span class="font-normal opacity-70">
+                          ({LANGUAGE_LABELS[event.link.language]})
+                        </span>
+                      </a>
+                    )}
+                  </li>
+                ))}
+              </ol>
+              <a
+                href={talk.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="section-link mt-auto self-start"
+              >
+                See the slides <span aria-hidden="true">↗</span>
+              </a>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <div class="grid gap-16 lg:grid-cols-2 lg:gap-12">
+      <section
+        id="trainings--workshops"
+        aria-labelledby="trainings-title"
+        class="scroll-mt-8"
+      >
+        <h2 id="trainings-title" class="section-title mb-8">
+          Trainings &amp; workshops
+        </h2>
+        <ul class="list">
+          {
+            trainingsAndWorkshops.map(training => (
+              <li>
+                <a
+                  href={training.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="list-row group"
+                >
+                  <span>
+                    <span class="list-title">{training.title}</span>
+                    <span class="block text-gray-400 dark:text-gray-200">
+                      {training.event
+                        ? `${training.event.eventName} · ${training.event.city} · ${formatDate(training.event.date)}`
+                        : training.details && `Private training ${training.details}`}
+                    </span>
+                  </span>
+                  <span class="list-arrow" aria-hidden="true">
+                    ↗
+                  </span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+
+      <section id="presentations" aria-labelledby="presentations-title">
+        <h2 id="presentations-title" class="section-title mb-8">
+          Other presentations
+        </h2>
+        <ul class="list">
+          {
+            presentations.map(presentation => {
+              const meta = [
+                presentation.client && `for ${presentation.client}`,
+                presentation.date && formatDate(presentation.date),
+              ]
+                .filter(Boolean)
+                .join(' · ')
+              const content = (
+                <>
+                  <span>
+                    <span class="list-title">
+                      {presentation.title}
+                      {presentation.language === 'fr' && (
+                        <span class="badge ml-2 align-middle" title="French">
+                          fr
+                        </span>
+                      )}
+                    </span>
+                    {meta && (
+                      <span class="block text-gray-400 dark:text-gray-200">
+                        {meta}
+                      </span>
+                    )}
+                  </span>
+                  {presentation.url && (
+                    <span class="list-arrow" aria-hidden="true">
+                      ↗
+                    </span>
+                  )}
+                </>
+              )
+              return (
+                <li>
+                  {presentation.url ? (
+                    <a
+                      href={presentation.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="list-row group"
+                    >
+                      {content}
+                    </a>
+                  ) : (
+                    <div class="list-row">{content}</div>
+                  )}
+                </li>
+              )
+            })
+          }
+        </ul>
+      </section>
+    </div>
+
+    <a
+      href={CONTACT_URL}
+      class="flex flex-col gap-2 rounded-3xl bg-mainYellow p-8 text-gray-700 transition hover:-translate-y-0.5 hover:shadow-xl md:flex-row md:items-center md:justify-between md:p-10"
+    >
+      <span>
+        <span class="block text-2xl font-bold">🎤 Looking for a speaker?</span>
+        <span class="text-lg">
+          Meetup, conference or in-house training: tell me about your event.
+        </span>
+      </span>
+      <span class="shrink-0 font-bold">
+        Get in touch <span aria-hidden="true">&rarr;</span>
+      </span>
+    </a>
+  </div>
+</Layout>
+
+<style>
+  @reference "../styles/global.css";
+
+  .eyebrow {
+    @apply text-sm font-bold tracking-widest uppercase;
+  }
+
+  .card {
+    @apply overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-gray-100 dark:bg-gray-500 dark:ring-white/10;
+  }
+
+  .badge {
+    @apply inline-block shrink-0 rounded-full bg-gray-100 px-2 py-0.5 text-xs font-bold text-gray-500 uppercase dark:bg-gray-600 dark:text-gray-100;
+  }
+
+  .section-header {
+    @apply mb-8 flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold tracking-tight text-gray-700 md:text-4xl dark:text-white;
+  }
+
+  .section-link {
+    @apply font-bold text-gray-700 underline decoration-mainYellow decoration-4 underline-offset-4 hover:decoration-gray-700 dark:text-white dark:hover:decoration-white;
+  }
+
+  .list {
+    @apply divide-y divide-gray-200 border-y border-gray-200 dark:divide-white/10 dark:border-white/10;
+  }
+
+  .list-row {
+    @apply flex items-center justify-between gap-4 py-5;
+  }
+
+  .list-title {
+    @apply block text-lg font-bold text-gray-700 decoration-mainYellow decoration-4 underline-offset-4 group-hover:underline dark:text-white;
+  }
+
+  .list-arrow {
+    @apply text-xl text-gray-300 transition group-hover:translate-x-1 group-hover:text-gray-700 dark:group-hover:text-mainYellow;
+  }
+</style>

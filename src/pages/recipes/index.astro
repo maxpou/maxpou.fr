@@ -1,12 +1,14 @@
 ---
 import { getCollection } from 'astro:content'
 import Layout from '../../components/Layout.astro'
-import PageTitle from '../../components/PageTitle.astro'
 import RecipeCard from '../../components/RecipeCard.astro'
 
 const recipes = (await getCollection('recipes')).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 )
+
+const normalize = (text: string) =>
+  text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
 ---
 
 <Layout
@@ -16,18 +18,121 @@ const recipes = (await getCollection('recipes')).sort(
     type: 'article',
   }}
 >
-  <section>
-    <PageTitle class="text-center font-bold dark:text-gray-100">
-      Max's kitchen
-    </PageTitle>
+  <header class="max-w-3xl pt-4 md:pt-8">
     <p
-      class="mx-auto mb-6 max-w-[450px] text-center text-lg dark:text-gray-100"
+      class="mb-4 text-sm font-bold tracking-widest text-blueGreyed uppercase dark:text-mainYellow"
     >
-      Welcome to my culinary haven! I'm Max, a passionate foodie eager to share
-      my favourite recipes. I hope you enjoy them as much as I do!
+      Max's kitchen
     </p>
-    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {recipes.map((recipe) => <RecipeCard recipe={recipe} />)}
+    <h1
+      class="text-5xl leading-[1.1] font-bold tracking-tight text-gray-700 md:text-6xl dark:text-white"
+    >
+      Recipes I cook again and again.
+    </h1>
+    <p class="mt-6 text-xl leading-relaxed">
+      Welcome to my culinary haven! I'm Max, a passionate foodie eager to share
+      my favourite recipes. From ramen to homemade pasta, I hope you enjoy them
+      as much as I do!
+    </p>
+  </header>
+
+  <section aria-labelledby="all-recipes-title" class="mt-16">
+    <div
+      class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between"
+    >
+      <div>
+        <h2
+          id="all-recipes-title"
+          class="text-3xl font-bold tracking-tight text-gray-700 md:text-4xl dark:text-white"
+        >
+          All recipes
+        </h2>
+        <p id="recipe-count" class="mt-1" aria-live="polite">
+          {recipes.length} recipes
+        </p>
+      </div>
+      <label class="relative block w-full sm:w-80">
+        <span class="sr-only">Search a recipe</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          class="pointer-events-none absolute top-1/2 left-4 h-5 w-5 -translate-y-1/2 text-gray-400"
+          aria-hidden="true"
+        >
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="m20 20-3.5-3.5"></path>
+        </svg>
+        <input
+          id="recipe-search"
+          type="search"
+          placeholder="Curry, pasta, ramen…"
+          autocomplete="off"
+          class="w-full rounded-full bg-white py-3 pr-5 pl-12 text-gray-700 shadow-sm ring-1 ring-gray-100 outline-none placeholder:text-gray-300 focus:ring-2 focus:ring-darkBlue dark:bg-gray-500 dark:text-white dark:ring-white/10 dark:placeholder:text-gray-300 dark:focus:ring-mainYellow"
+        />
+      </label>
     </div>
+
+    <ul
+      id="recipe-list"
+      class="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6 lg:grid-cols-4"
+    >
+      {
+        recipes.map(recipe => (
+          <li data-title={normalize(recipe.data.title)}>
+            <RecipeCard recipe={recipe} />
+          </li>
+        ))
+      }
+    </ul>
+    <p id="recipe-empty" class="hidden py-16 text-center text-lg">
+      No recipe matches your search. Maybe it's time to invent one?
+    </p>
   </section>
+
+  <a
+    href="/apps/pizza-dough-calculator"
+    class="mt-20 flex flex-col gap-2 rounded-3xl bg-mainYellow p-8 text-gray-700 transition hover:-translate-y-0.5 hover:shadow-xl md:flex-row md:items-center md:justify-between md:p-10"
+  >
+    <span>
+      <span class="block text-2xl font-bold">🍕 Pizza night?</span>
+      <span class="text-lg">
+        Get the right amount of flour, water, salt and yeast with my pizza dough
+        calculator.
+      </span>
+    </span>
+    <span class="shrink-0 font-bold">
+      Open the calculator <span aria-hidden="true">&rarr;</span>
+    </span>
+  </a>
 </Layout>
+
+<script>
+  const search = document.getElementById('recipe-search') as HTMLInputElement
+  const count = document.getElementById('recipe-count') as HTMLElement
+  const empty = document.getElementById('recipe-empty') as HTMLElement
+  const items = [
+    ...document.querySelectorAll<HTMLLIElement>('#recipe-list > li'),
+  ]
+
+  search.addEventListener('input', () => {
+    const query = search.value
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .trim()
+
+    let visible = 0
+    for (const item of items) {
+      const isMatch = item.dataset.title?.includes(query) ?? false
+      item.hidden = !isMatch
+      if (isMatch) visible++
+    }
+
+    count.textContent = `${visible} ${visible === 1 ? 'recipe' : 'recipes'}`
+    empty.classList.toggle('hidden', visible > 0)
+  })
+</script>

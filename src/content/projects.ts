@@ -11,20 +11,20 @@ import YoutubeMateImg from '../assets/projects/youtube-mate.png'
 
 export const projects = [
   {
-    name: 'YoutubeMate',
-    image: YoutubeMateImg,
-    description:
-      'An AI assistant that generates summaries of YouTube videos and saves you precious time!',
-    url: 'https://youtube-mate.com',
-    ghIcon: false,
-    highlighted: true,
-  },
-  {
     name: 'Pedalyze',
     image: PedalyzeImg,
     description:
       'Fix your bike fit with a photo and get personalized recommendations to improve your cycling performance.',
     url: 'http://pedalyze.bike',
+    ghIcon: false,
+    highlighted: true,
+  },
+  {
+    name: 'YoutubeMate',
+    image: YoutubeMateImg,
+    description:
+      'An AI assistant that generates summaries of YouTube videos and saves you precious time!',
+    url: 'https://youtube-mate.com',
     ghIcon: false,
     highlighted: true,
   },

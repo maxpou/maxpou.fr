@@ -1,0 +1,177 @@
+---
+import { Picture } from 'astro:assets'
+import { type CollectionEntry, getCollection } from 'astro:content'
+import type { Page } from 'astro'
+import { readingTime } from '../utils/readingTime'
+import BlogPostRow from './BlogPostRow.astro'
+import FormattedDate from './FormattedDate.astro'
+import { socialIcons } from './icons/footer-socials'
+import Pagination from './Pagination.astro'
+
+type Props = {
+  page: Page<CollectionEntry<'blog'>>
+}
+
+const { page } = Astro.props
+const isFirstPage = page.currentPage === 1
+const latestPost = isFirstPage ? page.data[0] : undefined
+const listedPosts = isFirstPage ? page.data.slice(1) : page.data
+
+const allPosts = (await getCollection('blog'))
+  .filter(post => !post.data.unlisted)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+
+const firstYear = allPosts.at(-1)?.data.date.getFullYear()
+
+const tagCounts = new Map<string, number>()
+for (const tag of allPosts.flatMap(post => post.data.tags)) {
+  tagCounts.set(tag, (tagCounts.get(tag) ?? 0) + 1)
+}
+const topTags = [...tagCounts].sort((a, b) => b[1] - a[1]).slice(0, 12)
+
+const popularPosts = allPosts.filter(post => post.data.featured).slice(0, 5)
+---
+
+<header class="max-w-3xl pt-4 md:pt-8">
+  <p
+    class="mb-4 text-sm font-bold tracking-widest text-blueGreyed uppercase dark:text-mainYellow"
+  >
+    The blog
+  </p>
+  <h1
+    class="text-5xl leading-[1.1] font-bold tracking-tight text-gray-700 md:text-6xl dark:text-white"
+  >
+    {isFirstPage ? 'Notes on code, and everything around it.' : 'Older articles'}
+  </h1>
+  <p class="mt-6 text-xl leading-relaxed">
+    {
+      isFirstPage
+        ? `${page.total} articles since ${firstYear} about JavaScript, Vue.js, testing, Git, software architecture, and a bit of life.`
+        : `Page ${page.currentPage} of ${page.lastPage} of the archive.`
+    }
+  </p>
+</header>
+
+{
+  latestPost && (
+    <a
+      href={`/blog/${latestPost.data.slug}/`}
+      class="group mt-12 grid overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-gray-100 transition hover:shadow-xl lg:grid-cols-2 dark:bg-gray-500 dark:ring-white/10"
+    >
+      <div class="overflow-hidden">
+        <Picture
+          src={latestPost.data.cover}
+          width={960}
+          height={640}
+          formats={['webp', 'avif', 'jpeg']}
+          alt=""
+          class="aspect-3/2 h-full w-full object-cover transition duration-500 group-hover:scale-105"
+        />
+      </div>
+      <div class="flex flex-col justify-center gap-4 p-8 md:p-12">
+        <p class="text-sm font-bold tracking-widest text-blueGreyed uppercase dark:text-mainYellow">
+          Latest post
+        </p>
+        <h2 class="text-3xl leading-tight font-bold text-gray-700 decoration-mainYellow decoration-4 underline-offset-4 group-hover:underline md:text-4xl dark:text-white">
+          {latestPost.data.title}
+        </h2>
+        {latestPost.data.description && (
+          <p class="text-lg">{latestPost.data.description}</p>
+        )}
+        <p class="flex flex-wrap gap-x-2 text-sm text-gray-400 dark:text-gray-200">
+          <FormattedDate date={latestPost.data.date} />
+          <span aria-hidden="true">·</span>
+          <span>{readingTime(latestPost.body)} min read</span>
+        </p>
+      </div>
+    </a>
+  )
+}
+
+<div class="mt-16 grid gap-16 lg:grid-cols-[1fr_20rem]">
+  <section aria-labelledby="articles-title">
+    <h2
+      id="articles-title"
+      class="text-sm font-bold tracking-widest text-gray-400 uppercase dark:text-gray-200"
+    >
+      {isFirstPage ? 'Recent articles' : `Page ${page.currentPage}`}
+    </h2>
+    <div class="divide-y divide-gray-200 dark:divide-white/10">
+      {listedPosts.map(post => <BlogPostRow post={post} />)}
+    </div>
+    <Pagination page={page} />
+  </section>
+
+  <aside class="flex flex-col gap-10 lg:sticky lg:top-8 lg:self-start">
+    <div>
+      <h2 class="aside-title">Topics</h2>
+      <ul class="flex flex-wrap gap-2">
+        {
+          topTags.map(([tag, count]) => (
+            <li>
+              <a
+                href={`/tags/${tag}`}
+                class="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-sm font-bold text-gray-500 ring-1 ring-gray-100 transition hover:bg-darkBlue hover:text-white dark:bg-gray-500 dark:text-gray-100 dark:ring-white/10 dark:hover:bg-mainYellow dark:hover:text-gray-700"
+              >
+                {tag}
+                <span class="font-normal opacity-60">{count}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="aside-title">Popular posts</h2>
+      <ol class="flex flex-col gap-4">
+        {
+          popularPosts.map((post, index) => (
+            <li>
+              <a
+                href={`/blog/${post.data.slug}/`}
+                class="group flex gap-4 font-bold leading-snug text-gray-700 dark:text-white"
+              >
+                <span
+                  class="text-2xl leading-none text-blueGreyed dark:text-mainYellow"
+                  aria-hidden="true"
+                >
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <span class="decoration-mainYellow decoration-2 underline-offset-4 group-hover:underline">
+                  {post.data.title}
+                </span>
+              </a>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+
+    <a
+      href="/rss.xml"
+      class="flex flex-col gap-2 rounded-3xl bg-mainYellow p-6 text-gray-700 transition hover:-translate-y-0.5 hover:shadow-xl"
+    >
+      <span class="flex items-center gap-2 text-lg font-bold">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="h-5 w-5"
+          aria-hidden="true"
+          set:html={socialIcons.rss}
+        />
+        Subscribe via RSS
+      </span>
+      <span>Get new posts in your feed reader. No spam, no tracking.</span>
+    </a>
+  </aside>
+</div>
+
+<style>
+  @reference "../styles/global.css";
+
+  .aside-title {
+    @apply mb-4 text-sm font-bold tracking-widest text-gray-400 uppercase dark:text-gray-200;
+  }
+</style>
