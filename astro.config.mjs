@@ -36,6 +36,7 @@ export default defineConfig({
   redirects: {
     '/blog/pages/1': '/blog',
     '/portfolio': '/projects',
+    '/apps/runner-dashboard': 'https://runner-dashboard.maxpou.fr/',
     ...getLegacyPostRedirections(),
   },
 
