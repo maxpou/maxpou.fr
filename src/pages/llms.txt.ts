@@ -55,7 +55,7 @@ export const GET: APIRoute = async () => {
         title: 'Compound interest calculator',
         url: `${SITE_URL}/apps/compound-interest-calculator/`,
       },
-      { title: 'Runner dashboard', url: `${SITE_URL}/apps/runner-dashboard/` },
+      { title: 'Runner dashboard', url: 'https://runner-dashboard.maxpou.fr/' },
     ]),
     section(
       'Recipes',

@@ -51,7 +51,7 @@ export const projects = [
     image: RunnerDashboard,
     description:
       'A dashboard I use to calculate pace, estimate finish times, and plan nutrition during a race.',
-    url: '/apps/runner-dashboard',
+    url: 'https://runner-dashboard.maxpou.fr/',
     highlighted: true,
   },
   {
