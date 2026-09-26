@@ -82,7 +82,7 @@ Maxence Poutord is a software engineer and public speaker. This site holds his b
 
 - [Pizza dough calculator](https://www.maxpou.fr/apps/pizza-dough-calculator/)
 - [Compound interest calculator](https://www.maxpou.fr/apps/compound-interest-calculator/)
-- [Runner dashboard](https://www.maxpou.fr/apps/runner-dashboard/)
+- [Runner dashboard](https://runner-dashboard.maxpou.fr/)
 
 ## Recipes
 
