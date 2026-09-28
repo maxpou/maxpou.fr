@@ -1,6 +1,7 @@
 import { getCollection } from 'astro:content'
 import type { APIRoute } from 'astro'
 import { SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from '../consts'
+import { projects } from '../content/projects'
 
 type Link = {
   title: string
@@ -46,17 +47,17 @@ export const GET: APIRoute = async () => {
         description: page.data.description,
       })),
     ),
-    section('Apps', [
-      {
-        title: 'Pizza dough calculator',
-        url: `${SITE_URL}/apps/pizza-dough-calculator/`,
-      },
-      {
-        title: 'Compound interest calculator',
-        url: `${SITE_URL}/apps/compound-interest-calculator/`,
-      },
-      { title: 'Runner dashboard', url: 'https://runner-dashboard.maxpou.fr/' },
-    ]),
+    section(
+      'Apps',
+      projects
+        // Recipes have their own section below
+        .filter(p => !p.ghIcon && !p.isDead && p.url !== '/recipes')
+        .map(p => ({
+          title: p.name,
+          url: p.url.startsWith('/') ? `${SITE_URL}${p.url}/` : p.url,
+          description: p.description,
+        })),
+    ),
     section(
       'Recipes',
       recipes.map(recipe => ({
