@@ -80,9 +80,12 @@ Maxence Poutord is a software engineer and public speaker. This site holds his b
 
 ## Apps
 
-- [Pizza dough calculator](https://www.maxpou.fr/apps/pizza-dough-calculator/)
-- [Compound interest calculator](https://www.maxpou.fr/apps/compound-interest-calculator/)
-- [Runner dashboard](https://runner-dashboard.maxpou.fr/)
+- [Pedalyze](http://pedalyze.bike): Fix your bike fit with a photo and get personalized recommendations to improve your cycling performance.
+- [YoutubeMate](https://youtube-mate.com): An AI assistant that generates summaries of YouTube videos and saves you precious time!
+- [Avion](https://avion-game.netlify.app): A 3D flight simulator in your browser. No install, no account, just pick a plane and fly.
+- [Runner Dashboard](https://runner-dashboard.maxpou.fr/): A dashboard I use to calculate pace, estimate finish times, and plan nutrition during a race.
+- [Compound Interest Calculator](https://www.maxpou.fr/apps/compound-interest-calculator/): I built this to show a friend how powerful compound interest is.
+- [Neapolitan Pizza Dough Calculator](https://www.maxpou.fr/apps/pizza-dough-calculator/): I always forget the quantities for my Neapolitan pizzas, so I made this.
 
 ## Recipes
 
