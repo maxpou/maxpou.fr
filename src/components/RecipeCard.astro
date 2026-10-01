@@ -2,6 +2,7 @@
 import { Picture } from 'astro:assets'
 import type { CollectionEntry } from 'astro:content'
 import { recipeServings } from '../utils/recipeServings'
+import RecipeTagIcon from './RecipeTagIcon.astro'
 
 type Props = {
   recipe: CollectionEntry<'recipes'>
@@ -9,6 +10,9 @@ type Props = {
 
 const { recipe } = Astro.props
 const servings = recipeServings(recipe.body)
+const cardTags = recipe.data.tags.filter(
+  tag => tag === 'Favorite' || tag === 'Veggie',
+)
 ---
 
 <a
@@ -25,6 +29,21 @@ const servings = recipeServings(recipe.body)
     decoding="async"
     class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
   />
+  {
+    cardTags.length > 0 && (
+      <span class="absolute top-3 left-3 flex gap-1">
+        {cardTags.map(tag => (
+          <span
+            title={tag}
+            class="rounded-full bg-white/90 p-1.5 text-darkBlue backdrop-blur"
+          >
+            <RecipeTagIcon tag={tag} class="h-3.5 w-3.5" />
+            <span class="sr-only">{tag}</span>
+          </span>
+        ))}
+      </span>
+    )
+  }
   {
     servings && (
       <span class="absolute top-3 right-3 rounded-full bg-white/90 px-3 py-1 text-xs font-bold text-gray-700 backdrop-blur">

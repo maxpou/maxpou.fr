@@ -2,6 +2,8 @@
 import { getCollection } from 'astro:content'
 import Layout from '../../components/Layout.astro'
 import RecipeCard from '../../components/RecipeCard.astro'
+import RecipeTagIcon from '../../components/RecipeTagIcon.astro'
+import { recipeFilterTags } from '../../utils/recipeTags'
 
 const recipes = (await getCollection('recipes')).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
@@ -76,13 +78,43 @@ const normalize = (text: string) =>
       </label>
     </div>
 
+    <div
+      id="recipe-filters"
+      role="group"
+      aria-label="Filter recipes by tag"
+      class="mb-8 flex flex-wrap gap-2"
+    >
+      {
+        [null, ...recipeFilterTags].map(tag => (
+          <button
+            type="button"
+            data-tag={tag ?? ''}
+            aria-pressed={tag === null ? 'true' : 'false'}
+            class="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 text-sm font-bold text-gray-500 ring-1 ring-gray-100 transition hover:bg-darkBlue hover:text-white aria-pressed:bg-darkBlue aria-pressed:text-white dark:bg-gray-500 dark:text-gray-100 dark:ring-white/10 dark:hover:bg-mainYellow dark:hover:text-gray-700 dark:aria-pressed:bg-mainYellow dark:aria-pressed:text-gray-700"
+          >
+            {tag === null ? (
+              'All'
+            ) : (
+              <>
+                <RecipeTagIcon tag={tag} />
+                {tag}
+              </>
+            )}
+          </button>
+        ))
+      }
+    </div>
+
     <ul
       id="recipe-list"
       class="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6 lg:grid-cols-4"
     >
       {
         recipes.map(recipe => (
-          <li data-title={normalize(recipe.data.title)}>
+          <li
+            data-title={normalize(recipe.data.title)}
+            data-tags={recipe.data.tags.join('|')}
+          >
             <RecipeCard recipe={recipe} />
           </li>
         ))
@@ -118,7 +150,12 @@ const normalize = (text: string) =>
     ...document.querySelectorAll<HTMLLIElement>('#recipe-list > li'),
   ]
 
-  search.addEventListener('input', () => {
+  const filters = [
+    ...document.querySelectorAll<HTMLButtonElement>('#recipe-filters button'),
+  ]
+  let activeTag = ''
+
+  const update = () => {
     const query = search.value
       .normalize('NFD')
       .replace(/[\u0300-\u036f]/g, '')
@@ -127,12 +164,26 @@ const normalize = (text: string) =>
 
     let visible = 0
     for (const item of items) {
-      const isMatch = item.dataset.title?.includes(query) ?? false
+      const tags = item.dataset.tags?.split('|') ?? []
+      const isMatch =
+        (item.dataset.title?.includes(query) ?? false) &&
+        (activeTag === '' || tags.includes(activeTag))
       item.hidden = !isMatch
       if (isMatch) visible++
     }
 
     count.textContent = `${visible} ${visible === 1 ? 'recipe' : 'recipes'}`
     empty.classList.toggle('hidden', visible > 0)
-  })
+  }
+
+  search.addEventListener('input', update)
+  for (const filter of filters) {
+    filter.addEventListener('click', () => {
+      activeTag = filter.dataset.tag ?? ''
+      for (const other of filters) {
+        other.setAttribute('aria-pressed', String(other === filter))
+      }
+      update()
+    })
+  }
 </script>

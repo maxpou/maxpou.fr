@@ -49,6 +49,7 @@ const recipes = defineCollection({
       date: z.coerce.date(), // Transform string to Date object
       cover: image(),
       description: z.string().optional(),
+      tags: z.array(z.string()).default([]),
     }),
 })
 
