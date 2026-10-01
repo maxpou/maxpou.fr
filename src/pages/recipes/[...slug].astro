@@ -1,6 +1,7 @@
 ---
 import { type CollectionEntry, getCollection, render } from 'astro:content'
 import Prose from '../../components/Prose.astro'
+import RecipeTagIcon from '../../components/RecipeTagIcon.astro'
 import StructuredData from '../../components/StructuredData.astro'
 import Page from '../../layouts/Page.astro'
 import { buildRecipeSchema } from '../../utils/recipeSchema'
@@ -35,6 +36,18 @@ const recipeStructuredData = buildRecipeSchema({
 
 <Page {...recipe}>
   <StructuredData data={recipeStructuredData} />
+  {
+    recipe.data.tags.length > 0 && (
+      <ul class="mt-6 flex flex-wrap justify-center gap-2">
+        {recipe.data.tags.map(tag => (
+          <li class="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1 text-sm font-bold text-darkBlue ring-1 ring-gray-100 dark:bg-gray-500 dark:text-gray-100 dark:ring-white/10">
+            <RecipeTagIcon tag={tag} />
+            {tag}
+          </li>
+        ))}
+      </ul>
+    )
+  }
   <Prose>
     <Content />
     <div class="mt-6">

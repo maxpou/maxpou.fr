@@ -17,27 +17,46 @@ const notion = new Client({
 const n2m = new NotionToMarkdown({ notionClient: notion })
 
 async function getPages(): Promise<PageObjectResponse[]> {
-  const pages = await notion.dataSources.query({
-    data_source_id: DS_ID,
-    filter: {
-      and: [
-        {
-          property: 'Text ready',
-          checkbox: {
-            equals: true,
-          },
-        },
-        {
-          property: 'Has photo',
-          checkbox: {
-            equals: true,
-          },
-        },
-      ],
-    },
-  })
+  const results: PageObjectResponse[] = []
+  let cursor: string | undefined
 
-  return pages.results as PageObjectResponse[]
+  do {
+    const response = await notion.dataSources.query({
+      data_source_id: DS_ID,
+      start_cursor: cursor,
+      filter: {
+        and: [
+          {
+            property: 'Text ready',
+            checkbox: {
+              equals: true,
+            },
+          },
+          {
+            property: 'Has photo',
+            checkbox: {
+              equals: true,
+            },
+          },
+        ],
+      },
+    })
+    results.push(...(response.results as PageObjectResponse[]))
+    cursor = response.has_more ? (response.next_cursor ?? undefined) : undefined
+  } while (cursor)
+
+  return results
+}
+
+function getTags(page: PageObjectResponse): string[] {
+  const property = page.properties.Tags
+  if (property?.type === 'multi_select') {
+    return property.multi_select.map(option => option.name)
+  }
+  if (property?.type === 'select' && property.select) {
+    return [property.select.name]
+  }
+  return []
 }
 
 async function getBlocks(blockId: string): Promise<BlockObjectResponse[]> {
@@ -176,13 +195,14 @@ async function main(): Promise<void> {
       )
     }
 
-    const header = `---
-title: ${title}
-date: ${page.created_time}
-slug: ${fileName}
-${page.cover?.type === 'file' ? `cover: ./assets/${coverFileName}` : ''}
----
-`
+    const frontmatter = [
+      `title: ${JSON.stringify(title)}`,
+      `date: ${page.created_time}`,
+      `slug: ${fileName}`,
+      page.cover?.type === 'file' ? `cover: ./assets/${coverFileName}` : '',
+      `tags: ${JSON.stringify(getTags(page))}`,
+    ].filter(Boolean)
+    const header = `---\n${frontmatter.join('\n')}\n---\n`
     const fileContent = header + mdString
 
     await fs.promises.writeFile(
@@ -193,4 +213,7 @@ ${page.cover?.type === 'file' ? `cover: ./assets/${coverFileName}` : ''}
   }
 }
 
-main()
+main().catch(error => {
+  console.error(error)
+  process.exit(1)
+})
