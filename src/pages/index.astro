@@ -2,6 +2,7 @@
 import { Image, Picture } from 'astro:assets'
 import { getCollection } from 'astro:content'
 import type { JsonLdDocument } from 'jsonld'
+import MarathonParis from '../assets/marathon-paris.png'
 import ProfilePicture from '../assets/profile-picture.jpeg'
 import FormattedDate from '../components/FormattedDate.astro'
 import FrFlag from '../components/icons/FrFlag.png'
@@ -390,7 +391,8 @@ const personStructuredData: JsonLdDocument = {
           <p class="mt-2">
             From canyons to marathons. My most recent efforts:
           </p>
-          <ol class="mt-8 flex flex-col gap-6 border-l-2 border-white/15 pl-6">
+          <div class="mt-8 grid gap-8 sm:grid-cols-[1fr_auto]">
+          <ol class="flex flex-col gap-6 border-l-2 border-white/15 pl-6">
             {
               trainingLog.map(({ title, date, description }) => (
                 <li class="relative">
@@ -407,6 +409,18 @@ const personStructuredData: JsonLdDocument = {
               ))
             }
           </ol>
+          <figure class="order-first sm:order-none">
+            <Picture
+              src={MarathonParis}
+              width={320}
+              formats={['avif', 'webp']}
+              alt="Maxence running the Paris Marathon"
+              loading="lazy"
+              class="aspect-3/4 w-full rounded-2xl object-cover object-top sm:w-40"
+            />
+            <figcaption class="mt-2 text-sm text-gray-300">Paris Marathon</figcaption>
+          </figure>
+          </div>
           <a
             href="/about"
             class="mt-auto self-start pt-8 font-bold text-mainYellow underline decoration-transparent decoration-2 underline-offset-4 hover:decoration-mainYellow"
