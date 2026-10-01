@@ -1,8 +1,7 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content'
-import BlogCard from '../../components/BlogCard.astro'
+import BlogPostRow from '../../components/BlogPostRow.astro'
 import Layout from '../../components/Layout.astro'
-import PageTitle from '../../components/PageTitle.astro'
 
 export async function getStaticPaths() {
   const posts = (await getCollection('blog'))
@@ -20,16 +19,24 @@ export async function getStaticPaths() {
     }
   }
 
+  const tagCounts = Object.entries(tags)
+    .map(([tag, tagPosts]) => [tag, tagPosts.length] as const)
+    .sort((a, b) => b[1] - a[1])
+
   return Object.keys(tags).map(tag => ({
     params: { tag },
     props: {
       tagId: tag,
       posts: tags[tag],
+      otherTags: tagCounts.filter(([t]) => t !== tag).slice(0, 20),
     },
   }))
 }
 
-const { posts, tagId } = Astro.props
+const { posts, tagId, otherTags } = Astro.props
+const firstYear = posts.at(-1)?.data.date.getFullYear()
+const lastYear = posts[0]?.data.date.getFullYear()
+const period = firstYear === lastYear ? `in ${firstYear}` : `from ${firstYear} to ${lastYear}`
 ---
 
 <Layout
@@ -39,11 +46,57 @@ const { posts, tagId } = Astro.props
     type: 'website',
   }}
 >
-  <div class="mx-auto max-w-screen-xl">
-    <PageTitle>Posts tagged as {tagId}</PageTitle>
-    <h2 class="py-3 text-center">#{tagId}</h2>
-    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {posts.map(p => <BlogCard post={p} firstBigger={posts.length > 2} />)}
-    </div>
+  <header class="max-w-3xl pt-4 md:pt-8">
+    <a
+      href="/blog"
+      class="mb-4 inline-block text-sm font-bold tracking-widest text-blueGreyed uppercase hover:underline dark:text-mainYellow"
+    >
+      ← The blog
+    </a>
+    <h1
+      class="text-5xl leading-[1.1] font-bold tracking-tight text-gray-700 md:text-6xl dark:text-white"
+    >
+      <span class="text-blueGreyed dark:text-mainYellow" aria-hidden="true">#</span>{tagId}
+    </h1>
+    <p class="mt-6 text-xl leading-relaxed">
+      {posts.length} {posts.length > 1 ? 'articles' : 'article'} tagged “{tagId}”, {period}.
+    </p>
+  </header>
+
+  <div class="mt-16 grid gap-16 lg:grid-cols-[1fr_20rem]">
+    <section aria-labelledby="articles-title">
+      <h2
+        id="articles-title"
+        class="text-sm font-bold tracking-widest text-gray-400 uppercase dark:text-gray-200"
+      >
+        Articles
+      </h2>
+      <div class="divide-y divide-gray-200 dark:divide-white/10">
+        {posts.map(post => <BlogPostRow post={post} />)}
+      </div>
+    </section>
+
+    <aside class="lg:sticky lg:top-8 lg:self-start">
+      <h2
+        class="mb-4 text-sm font-bold tracking-widest text-gray-400 uppercase dark:text-gray-200"
+      >
+        Other topics
+      </h2>
+      <ul class="flex flex-wrap gap-2">
+        {
+          otherTags.map(([tag, count]) => (
+            <li>
+              <a
+                href={`/tags/${tag}`}
+                class="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-sm font-bold text-gray-500 ring-1 ring-gray-100 transition hover:bg-darkBlue hover:text-white dark:bg-gray-500 dark:text-gray-100 dark:ring-white/10 dark:hover:bg-mainYellow dark:hover:text-gray-700"
+              >
+                {tag}
+                <span class="font-normal opacity-60">{count}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </aside>
   </div>
 </Layout>
