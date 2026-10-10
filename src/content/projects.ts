@@ -1,4 +1,4 @@
-import AvionImg from '../assets/projects/avion.png'
+import AvionImg from '../assets/projects/avion.jpg'
 import DictionaryGameImg from '../assets/projects/dictionary-game.png'
 import DockerSymfonyImg from '../assets/projects/docker-symfony.png'
 import GitVubImg from '../assets/projects/gitvub.png'
