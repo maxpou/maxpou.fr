@@ -119,6 +119,7 @@ export function buildRecipeSchema({
     })
 
   const recipeYield = parseYield(sections.map(s => s.heading))
+  const image = cover ? `${SITE_URL}${cover}` : undefined
 
   return {
     '@context': 'https://schema.org',
@@ -132,7 +133,7 @@ export function buildRecipeSchema({
       name: SITE_OWNER,
       url: SITE_URL,
     },
-    image: cover ? `${SITE_URL}${cover}` : undefined,
+    image,
     ...(recipeYield ? { recipeYield } : {}),
     ...(ingredients.length > 0 ? { recipeIngredient: ingredients } : {}),
     ...(steps.length > 0
@@ -140,7 +141,12 @@ export function buildRecipeSchema({
           recipeInstructions: steps.map((text, i) => ({
             '@type': 'HowToStep',
             position: i + 1,
+            name: `Step ${i + 1}`,
             text,
+            url: `${url}#step-${i + 1}`,
+            // Step photos are relative MDX assets with no public URL at this point,
+            // so the recipe cover is the only image available.
+            ...(image ? { image } : {}),
           })),
         }
       : {}),
