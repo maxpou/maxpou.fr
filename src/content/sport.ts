@@ -1,7 +1,13 @@
-export const highlights = [
+export const sportAchievements = [
+  {
+    title: 'Corrida Villejuif (1st 10km)',
+    date: '2026-10-04',
+    description: '0h47m32 @ 4:45 min/km',
+  },
   {
     title: '1st 80km Bike',
     date: '2026-06-17',
+    hide: true,
   },
   {
     title: 'Royan Half-Marathon',
