@@ -1,0 +1,105 @@
+---
+// Inline SVG so Tailwind dark-mode classes apply to the diagram
+---
+
+<figure class="my-8">
+  <svg
+    viewBox="0 0 760 500"
+    role="img"
+    aria-labelledby="stack-title"
+    class="mx-auto w-full max-w-3xl"
+    font-size="14"
+  >
+    <title id="stack-title"
+      >The three layers of a coding agent: you, the harness on your machine, and
+      the model behind an API</title
+    >
+    <defs>
+      <marker
+        id="stack-arrow"
+        viewBox="0 0 10 10"
+        refX="9"
+        refY="5"
+        markerWidth="7"
+        markerHeight="7"
+        orient="auto-start-reverse"
+      >
+        <path d="M0,0 L10,5 L0,10 z" class="fill-gray-500 dark:fill-gray-400"
+        ></path>
+      </marker>
+    </defs>
+
+    <!-- You -->
+    <rect
+      x="60"
+      y="16"
+      width="640"
+      height="64"
+      rx="12"
+      class="fill-white stroke-gray-400 dark:fill-gray-700 dark:stroke-gray-500"
+      stroke-width="2"></rect>
+    <text x="380" y="42" text-anchor="middle" class="fill-gray-900 dark:fill-gray-100" font-weight="700" font-size="16">You</text>
+    <text x="380" y="64" text-anchor="middle" class="fill-gray-500 dark:fill-gray-400">terminal, IDE, chat window…</text>
+
+    <!-- You <-> harness -->
+    <line x1="380" y1="84" x2="380" y2="128" class="stroke-gray-500 dark:stroke-gray-400" stroke-width="2" marker-start="url(#stack-arrow)" marker-end="url(#stack-arrow)"></line>
+    <text x="396" y="110" class="fill-gray-500 dark:fill-gray-400" font-size="13">prompt ↓ · answer ↑ · permission prompts ↑</text>
+
+    <!-- Harness -->
+    <rect
+      x="60"
+      y="132"
+      width="640"
+      height="200"
+      rx="12"
+      class="fill-beige stroke-mainYellow dark:fill-gray-900"
+      stroke-width="2"></rect>
+    <text x="380" y="160" text-anchor="middle" class="fill-gray-900 dark:fill-gray-100" font-weight="700" font-size="16">The harness</text>
+    <text x="380" y="182" text-anchor="middle" class="fill-gray-500 dark:fill-gray-400">a regular program running on your machine (Claude Code, Codex CLI, Cursor, Aider…)</text>
+
+    <g font-size="13" font-weight="600" class="fill-gray-900 dark:fill-gray-100">
+      <rect x="92" y="200" width="130" height="34" rx="8" class="fill-white stroke-gray-400 dark:fill-gray-700 dark:stroke-gray-500" stroke-width="1.5"></rect>
+      <text x="157" y="222" text-anchor="middle">the loop</text>
+      <rect x="236" y="200" width="130" height="34" rx="8" class="fill-white stroke-gray-400 dark:fill-gray-700 dark:stroke-gray-500" stroke-width="1.5"></rect>
+      <text x="301" y="222" text-anchor="middle">permissions</text>
+      <rect x="380" y="200" width="150" height="34" rx="8" class="fill-white stroke-gray-400 dark:fill-gray-700 dark:stroke-gray-500" stroke-width="1.5"></rect>
+      <text x="455" y="222" text-anchor="middle">context management</text>
+      <rect x="544" y="200" width="124" height="34" rx="8" class="fill-white stroke-gray-400 dark:fill-gray-700 dark:stroke-gray-500" stroke-width="1.5"></rect>
+      <text x="606" y="222" text-anchor="middle">tool runner</text>
+    </g>
+
+    <g font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" class="fill-gray-900 dark:fill-gray-100">
+      <rect x="92" y="252" width="96" height="30" rx="15" class="fill-white stroke-gray-400 dark:fill-gray-700 dark:stroke-gray-500" stroke-width="1.5"></rect>
+      <text x="140" y="272" text-anchor="middle">Read</text>
+      <rect x="200" y="252" width="96" height="30" rx="15" class="fill-white stroke-gray-400 dark:fill-gray-700 dark:stroke-gray-500" stroke-width="1.5"></rect>
+      <text x="248" y="272" text-anchor="middle">Edit</text>
+      <rect x="308" y="252" width="96" height="30" rx="15" class="fill-white stroke-gray-400 dark:fill-gray-700 dark:stroke-gray-500" stroke-width="1.5"></rect>
+      <text x="356" y="272" text-anchor="middle">Grep</text>
+      <rect x="416" y="252" width="96" height="30" rx="15" class="fill-white stroke-gray-400 dark:fill-gray-700 dark:stroke-gray-500" stroke-width="1.5"></rect>
+      <text x="464" y="272" text-anchor="middle">Bash</text>
+      <rect x="524" y="252" width="144" height="30" rx="15" class="fill-white stroke-gray-400 dark:fill-gray-700 dark:stroke-gray-500" stroke-width="1.5"></rect>
+      <text x="596" y="272" text-anchor="middle">WebFetch…</text>
+    </g>
+    <text x="380" y="314" text-anchor="middle" class="fill-gray-500 dark:fill-gray-400" font-size="13">tools touch your files, your shell, your git repo, the network</text>
+
+    <!-- Harness <-> model -->
+    <line x1="380" y1="336" x2="380" y2="392" class="stroke-gray-500 dark:stroke-gray-400" stroke-width="2" marker-start="url(#stack-arrow)" marker-end="url(#stack-arrow)"></line>
+    <text x="396" y="368" class="fill-gray-500 dark:fill-gray-400" font-size="13">HTTPS · JSON in, JSON out · one request per loop iteration</text>
+
+    <!-- Model -->
+    <rect
+      x="60"
+      y="396"
+      width="640"
+      height="88"
+      rx="12"
+      class="fill-white stroke-gray-400 dark:fill-gray-700 dark:stroke-gray-500"
+      stroke-width="2"></rect>
+    <text x="380" y="426" text-anchor="middle" class="fill-gray-900 dark:fill-gray-100" font-weight="700" font-size="16">The model</text>
+    <text x="380" y="448" text-anchor="middle" class="fill-gray-500 dark:fill-gray-400">an LLM behind an API, somewhere in a data centre</text>
+    <text x="380" y="470" text-anchor="middle" class="fill-gray-500 dark:fill-gray-400">text in, text out · no disk · no shell · no memory between calls</text>
+  </svg>
+  <figcaption class="text-center text-sm text-gray-500 dark:text-gray-400">
+    Only the middle layer can touch your computer. The model just talks.
+  </figcaption>
+</figure>
