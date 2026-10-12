@@ -1,0 +1,91 @@
+---
+// Inline SVG so Tailwind dark-mode classes apply to the diagram
+---
+
+<figure class="my-8">
+  <svg
+    viewBox="0 0 760 420"
+    role="img"
+    aria-labelledby="loop-title"
+    class="mx-auto w-full max-w-3xl"
+    font-size="14"
+  >
+    <title id="loop-title"
+      >The agent loop: build the request, call the model, run the requested tool,
+      append the result, repeat until the model stops asking for tools</title
+    >
+    <defs>
+      <marker
+        id="loop-arrow"
+        viewBox="0 0 10 10"
+        refX="9"
+        refY="5"
+        markerWidth="7"
+        markerHeight="7"
+        orient="auto-start-reverse"
+      >
+        <path d="M0,0 L10,5 L0,10 z" class="fill-gray-500 dark:fill-gray-400"
+        ></path>
+      </marker>
+    </defs>
+
+    <g class="stroke-gray-500 dark:stroke-gray-400" stroke-width="2" fill="none" marker-end="url(#loop-arrow)">
+      <!-- prompt -> build -->
+      <line x1="170" y1="200" x2="212" y2="200"></line>
+      <!-- build -> call -->
+      <line x1="392" y1="200" x2="434" y2="200"></line>
+      <!-- call -> stop_reason -->
+      <line x1="574" y1="200" x2="596" y2="200"></line>
+      <!-- stop_reason -> answer (up) -->
+      <line x1="660" y1="150" x2="660" y2="104"></line>
+      <!-- stop_reason -> run tool (down) -->
+      <line x1="660" y1="250" x2="660" y2="296"></line>
+      <!-- run tool -> append -->
+      <line x1="588" y1="330" x2="552" y2="330"></line>
+      <!-- append -> call (back up) -->
+      <polyline points="380,330 300,330 300,260 504,260 504,234"></polyline>
+    </g>
+
+    <!-- labels on arrows -->
+    <text x="672" y="138" class="fill-gray-900 dark:fill-gray-100" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">end_turn</text>
+    <text x="672" y="272" class="fill-gray-900 dark:fill-gray-100" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">tool_use</text>
+    <text x="402" y="282" text-anchor="middle" class="fill-gray-500 dark:fill-gray-400" font-size="12">re-send the whole transcript</text>
+
+    <!-- User prompt -->
+    <rect x="30" y="170" width="140" height="60" rx="10" class="fill-white stroke-gray-400 dark:fill-gray-700 dark:stroke-gray-500" stroke-width="2"></rect>
+    <text x="100" y="205" text-anchor="middle" class="fill-gray-900 dark:fill-gray-100" font-weight="600">Your prompt</text>
+
+    <!-- Build request -->
+    <rect x="212" y="160" width="180" height="80" rx="10" class="fill-white stroke-gray-400 dark:fill-gray-700 dark:stroke-gray-500" stroke-width="2"></rect>
+    <text x="302" y="184" text-anchor="middle" class="fill-gray-900 dark:fill-gray-100" font-weight="600">Build the request</text>
+    <text x="302" y="204" text-anchor="middle" class="fill-gray-500 dark:fill-gray-400" font-size="12">system prompt + tool definitions</text>
+    <text x="302" y="222" text-anchor="middle" class="fill-gray-500 dark:fill-gray-400" font-size="12">+ every message so far</text>
+
+    <!-- Call the model -->
+    <rect x="434" y="170" width="140" height="60" rx="10" class="fill-beige stroke-mainYellow dark:fill-gray-900" stroke-width="2"></rect>
+    <text x="504" y="196" text-anchor="middle" class="fill-gray-900 dark:fill-gray-100" font-weight="600">Call the model</text>
+    <text x="504" y="216" text-anchor="middle" class="fill-gray-500 dark:fill-gray-400" font-size="12">POST /v1/messages</text>
+
+    <!-- stop_reason diamond -->
+    <polygon points="660,152 722,200 660,248 598,200" class="fill-white stroke-gray-400 dark:fill-gray-700 dark:stroke-gray-500" stroke-width="2"></polygon>
+    <text x="660" y="204" text-anchor="middle" class="fill-gray-900 dark:fill-gray-100" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12">stop_reason?</text>
+
+    <!-- Answer -->
+    <rect x="590" y="40" width="140" height="60" rx="10" class="fill-white stroke-gray-400 dark:fill-gray-700 dark:stroke-gray-500" stroke-width="2"></rect>
+    <text x="660" y="66" text-anchor="middle" class="fill-gray-900 dark:fill-gray-100" font-weight="600">Show the answer</text>
+    <text x="660" y="86" text-anchor="middle" class="fill-gray-500 dark:fill-gray-400" font-size="12">loop exits</text>
+
+    <!-- Run tool -->
+    <rect x="590" y="300" width="140" height="60" rx="10" class="fill-white stroke-gray-400 dark:fill-gray-700 dark:stroke-gray-500" stroke-width="2"></rect>
+    <text x="660" y="326" text-anchor="middle" class="fill-gray-900 dark:fill-gray-100" font-weight="600">Run the tool</text>
+    <text x="660" y="346" text-anchor="middle" class="fill-gray-500 dark:fill-gray-400" font-size="12">on your machine</text>
+
+    <!-- Append result -->
+    <rect x="380" y="300" width="172" height="60" rx="10" class="fill-white stroke-gray-400 dark:fill-gray-700 dark:stroke-gray-500" stroke-width="2"></rect>
+    <text x="466" y="326" text-anchor="middle" class="fill-gray-900 dark:fill-gray-100" font-weight="600">Append the result</text>
+    <text x="466" y="346" text-anchor="middle" class="fill-gray-500 dark:fill-gray-400" font-size="12">as a tool_result message</text>
+  </svg>
+  <figcaption class="text-center text-sm text-gray-500 dark:text-gray-400">
+    One iteration = one API call. A typical task takes dozens.
+  </figcaption>
+</figure>

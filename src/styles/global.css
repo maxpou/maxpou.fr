@@ -44,6 +44,61 @@ body {
   line-height: 1.7;
 }
 
+.prose details {
+  border: 1px solid var(--color-gray-200);
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+}
+
+.prose summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 0;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.prose summary::-webkit-details-marker {
+  display: none;
+}
+
+.prose summary::before {
+  content: "▸";
+  transition: transform 0.2s;
+}
+
+.prose details[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.prose summary::after {
+  content: "Click to expand";
+  margin-left: auto;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--color-gray-400);
+}
+
+.prose details[open] > summary::after {
+  content: "Click to collapse";
+}
+
+@media (max-width: 640px) {
+  .prose summary::after {
+    display: none;
+  }
+}
+
+.prose summary:hover {
+  color: var(--accent);
+}
+
+.dark .prose details {
+  border-color: var(--color-gray-600);
+}
+
 .sr-only {
   border: 0;
   padding: 0;
