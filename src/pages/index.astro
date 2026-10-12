@@ -11,7 +11,7 @@ import Layout from '../components/Layout.astro'
 import StructuredData from '../components/StructuredData.astro'
 import { SITE_DESCRIPTION, SITE_URL } from '../consts'
 import { projects } from '../content/projects'
-import { highlights } from '../content/sport'
+import { sportAchievements } from '../content/sport'
 
 const posts = (await getCollection('blog'))
   .filter(post => !post.data.unlisted)
@@ -28,8 +28,9 @@ const recipes = (await getCollection('recipes')).sort(
 )
 const latestRecipes = recipes.slice(0, 4)
 
-const trainingLog = [...highlights]
+const shownSportTimeline = sportAchievements
   .sort((a, b) => b.date.localeCompare(a.date))
+  .filter(entry => !entry.hide)
   .slice(0, 5)
 
 const formatMonth = (date: string) =>
@@ -394,7 +395,7 @@ const personStructuredData: JsonLdDocument = {
           <div class="mt-8 grid gap-8 sm:grid-cols-[1fr_auto]">
           <ol class="flex flex-col gap-6 border-l-2 border-white/15 pl-6">
             {
-              trainingLog.map(({ title, date, description }) => (
+              shownSportTimeline.map(({ title, date, description }) => (
                 <li class="relative">
                   <span
                     class="absolute top-2 -left-[calc(1.5rem+7px)] h-3 w-3 rounded-full bg-mainYellow ring-4 ring-darkBlue dark:ring-gray-800"
