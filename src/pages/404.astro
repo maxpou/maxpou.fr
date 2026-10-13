@@ -34,16 +34,54 @@ const errorPageStructuredData: JsonLdDocument = {
   }}
 >
   <StructuredData data={errorPageStructuredData} />
-  <div class="flex flex-col items-center">
-    <span role="img" aria-label="Ghost" class="block text-[7em]">👻</span>
-    <PageTitle>Page Not Found</PageTitle>
+  <section class="flex flex-col items-center px-4 pt-8 text-center">
+    <div
+      class="flex items-center justify-center font-black leading-none text-darkBlue select-none dark:text-white text-[8rem] sm:text-[11rem]"
+      aria-hidden="true"
+    >
+      <span>4</span>
+      <span class="ghost relative mx-2 inline-block text-[0.8em]">
+        👻
+        <span class="ghost-shadow"></span>
+      </span>
+      <span>4</span>
+    </div>
 
-    <p class="dark:text-white text-xl">
-      Looks like you've followed a broken link or entered a URL that doesn't
-      exist on this site.
+    <PageTitle class="mt-6">Boo! This page vanished.</PageTitle>
+    <p class="max-w-xl text-lg text-gray-500 dark:text-gray-300">
+      Either the link is broken, or this page is haunting another URL now.
     </p>
-  </div>
-  <div class="m-auto max-w-7xl pt-12">
+
+    <div
+      class="mt-8 w-full max-w-xl overflow-hidden rounded-xl bg-gray-900 text-left font-mono text-sm shadow-xl ring-1 ring-gray-700"
+    >
+      <div class="flex gap-2 bg-gray-800 px-4 py-3" aria-hidden="true">
+        <span class="size-3 rounded-full bg-red-400"></span>
+        <span class="size-3 rounded-full bg-mainYellow"></span>
+        <span class="size-3 rounded-full bg-green-400"></span>
+      </div>
+      <pre class="m-0! overflow-x-auto bg-transparent! p-4 text-gray-200"><span class="text-green-400">$</span> curl {Astro.url.pathname}
+<span class="text-red-400">Error: ENOENT, no such page or directory</span>
+<span class="text-gray-400">  at Internet.findPage (you-are-here.js:404)</span>
+<span class="text-green-400">$</span> <span class="cursor">▍</span></pre>
+    </div>
+
+    <div class="mt-8 flex flex-wrap justify-center gap-4">
+      <a
+        href="/"
+        class="rounded-full bg-mainYellow px-6 py-3 font-semibold text-darkBlue no-underline shadow-md transition hover:-translate-y-0.5 hover:shadow-lg"
+      >
+        Take me home
+      </a>
+      <a
+        href="/blog"
+        class="rounded-full px-6 py-3 font-semibold text-darkBlue no-underline ring-2 ring-darkBlue transition hover:-translate-y-0.5 dark:text-white dark:ring-white"
+      >
+        Browse the blog
+      </a>
+    </div>
+  </section>
+  <div class="m-auto max-w-7xl pt-20">
     <h2 class="pb-4 text-2xl font-bold dark:text-white">
       Looking for something to read?
     </h2>
@@ -52,3 +90,40 @@ const errorPageStructuredData: JsonLdDocument = {
     </div>
   </div>
 </Layout>
+
+<style>
+  .ghost {
+    animation: float 3s ease-in-out infinite;
+  }
+  .ghost-shadow {
+    position: absolute;
+    bottom: -0.4em;
+    left: 50%;
+    width: 60%;
+    height: 0.12em;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: 0.15;
+    transform: translateX(-50%);
+    animation: shadow 3s ease-in-out infinite;
+  }
+  .cursor {
+    animation: blink 1s steps(1) infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(-4deg); }
+    50% { transform: translateY(-0.25em) rotate(4deg); }
+  }
+  @keyframes shadow {
+    0%, 100% { transform: translateX(-50%) scaleX(1); opacity: 0.15; }
+    50% { transform: translateX(-50%) scaleX(0.6); opacity: 0.07; }
+  }
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ghost, .ghost-shadow, .cursor {
+      animation: none;
+    }
+  }
+</style>
