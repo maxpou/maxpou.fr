@@ -8,16 +8,21 @@ import 'prismjs/themes/prism-tomorrow.css'
   class="prose
   max-w-none
   dark:prose-invert
-  prose-headings:underline
-  prose-h2:text-2xl prose-h2:font-bold prose-h2:dark:text-mainYellow
-  prose-h3:text-xl prose-h3:font-bold
+  prose-headings:scroll-mt-8
+  prose-headings:tracking-tight
+  prose-headings:text-gray-700 dark:prose-headings:text-white
+  prose-h2:mt-14 prose-h2:text-2xl md:prose-h2:text-3xl prose-h2:font-extrabold prose-h2:dark:text-mainYellow
+  prose-h3:mt-10 prose-h3:text-xl prose-h3:font-bold
   prose-p:mb-0
   prose-p:mt-4
+  prose-strong:text-gray-700 dark:prose-strong:text-white
+  prose-a:font-medium
   prose-a:underline-offset-4
   prose-a:decoration-2
   prose-a:text-gray-700 dark:prose-a:text-slate-100 prose-a:hover:text-slate-900
-  prose-a:decoration-gray-300
-  prose-a:hover:decoration-blue-700 dark:prose-a:hover:decoration-mainYellow
+  prose-a:decoration-mainYellow
+  prose-a:hover:decoration-darkBlue dark:prose-a:hover:decoration-white
+  prose-blockquote:border-mainYellow prose-blockquote:font-normal prose-blockquote:not-italic
   prose-img:rounded-xl"
 >
   <slot />
@@ -29,5 +34,22 @@ import 'prismjs/themes/prism-tomorrow.css'
 
   aside > p:first-child {
     margin-top: 0;
+  }
+
+  .prose :not(pre) > code {
+    border-radius: 0.375rem;
+    padding: 0.15em 0.4em;
+    font-size: 0.85em;
+    font-weight: 500;
+    background-color: rgb(2 42 75 / 0.07);
+  }
+
+  .dark .prose :not(pre) > code {
+    background-color: rgb(255 255 255 / 0.1);
+  }
+
+  .prose :not(pre) > code::before,
+  .prose :not(pre) > code::after {
+    content: none;
   }
 </style>

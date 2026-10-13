@@ -1,16 +1,17 @@
 ---
+import { Image } from 'astro:assets'
 import type { CollectionEntry } from 'astro:content'
+import type { MarkdownHeading } from 'astro'
 
 import type { JsonLdDocument } from 'jsonld'
+import ProfilePicture from '../assets/profile-picture.jpeg'
 import FormattedDate from '../components/FormattedDate.astro'
-import HeroImage from '../components/HeroImage.astro'
 import Layout from '../components/Layout.astro'
-import PageTitle from '../components/PageTitle.astro'
 import StructuredData from '../components/StructuredData.astro'
-import Tag from '../components/Tag.astro'
 import { SITE_OWNER, SITE_URL } from '../consts'
+import { readingTime } from '../utils/readingTime'
 
-type Props = CollectionEntry<'blog'>
+type Props = CollectionEntry<'blog'> & { headings?: MarkdownHeading[] }
 type Translations = CollectionEntry<'blog'>['data']['translations']
 
 function formatBlogTranslation(
@@ -28,7 +29,7 @@ function formatBlogTranslation(
   )
 }
 
-const { data } = Astro.props
+const { data, body, headings = [] } = Astro.props
 const { slug } = data
 const {
   title,
@@ -42,6 +43,8 @@ const {
 } = data
 
 const formattedTranslations = formatBlogTranslation(translations)
+const tocHeadings = headings.filter(heading => heading.depth === 2)
+const showToc = tocHeadings.length >= 3
 
 const articleStructuredData: JsonLdDocument = {
   '@context': 'https://schema.org',
@@ -87,46 +90,184 @@ const articleStructuredData: JsonLdDocument = {
   }}
 >
   <StructuredData data={articleStructuredData} />
+  <div class="reading-progress" aria-hidden="true"></div>
   <article>
-    <HeroImage alt={`Cover for ${title}`} src={cover} />
-    <div class="container m-auto text-center">
-      <div class="mt-3 text-blueGreyed dark:text-gray-300">
-        <FormattedDate date={date} />
+    <header class="mx-auto w-[720px] max-w-full">
+      <div class="flex flex-wrap gap-2">
         {
-          modified && (
-            <span>
-              - Last updated on <FormattedDate date={modified} />
-            </span>
-          )
+          tags.map(tag => (
+            <a
+              href={`/tags/${tag}`}
+              class="rounded-full bg-mainYellow/40 px-3 py-0.5 text-xs font-bold uppercase tracking-wider text-darkBlue transition-colors hover:bg-mainYellow dark:bg-mainYellow/15 dark:text-mainYellow dark:hover:bg-mainYellow/30"
+            >
+              {tag}
+            </a>
+          ))
         }
       </div>
-      <PageTitle>{title}</PageTitle>
-      <div class="pb-6">
-        {
-          tags.map(tag => {
-            return (
-              <Tag name={tag} link={`/tags/${tag}`} />
-            )
-          })
-        }
-        {
-          translations && (
-            <div class="text-md rounded-lg border border-darkBlue bg-lightYellow p-3 text-left mt-5 dark:text-gray-600 m-auto w-[720px] max-w-full">
-              This article also exists in:{' '}
-              {translations.map((translation, i) => {
-                return (
-                  <Fragment key={`translation-${i}`}>
-                    <a href={translation.link} class="underline">{translation.language}</a>{i < translations.length - 1 ? ', ' : ''}
-                  </Fragment>
-                )
-              })}
-            </div>
-          )
-        }
+      <h1
+        class="mt-5 text-balance text-3xl font-extrabold leading-[1.15] tracking-tight text-gray-700 sm:text-4xl lg:text-5xl dark:text-white"
+      >
+        {title}
+      </h1>
+      {
+        description && (
+          <p class="mt-5 text-pretty text-lg leading-relaxed text-gray-400 sm:text-xl dark:text-gray-300">
+            {description}
+          </p>
+        )
+      }
+      <div class="mt-8 flex items-center gap-3 text-sm">
+        <Image
+          src={ProfilePicture}
+          alt=""
+          width={88}
+          height={88}
+          class="h-11 w-11 rounded-full object-cover ring-2 ring-white dark:ring-gray-500"
+        />
+        <div class="leading-snug">
+          <a
+            href="/about"
+            class="font-semibold text-gray-700 hover:underline dark:text-white"
+          >
+            {SITE_OWNER}
+          </a>
+          <div class="text-gray-400 dark:text-gray-300">
+            <FormattedDate date={date} />
+            <span aria-hidden="true" class="mx-1">·</span>
+            {readingTime(body)} min read
+            {
+              modified && (
+                <>
+                  <span aria-hidden="true" class="mx-1">·</span>
+                  Updated <FormattedDate date={modified} />
+                </>
+              )
+            }
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="m-auto w-[720px] max-w-full">
-      <slot />
+      {
+        translations && (
+          <p class="mt-6 rounded-xl border border-mainYellow/60 bg-beige px-4 py-3 text-sm text-gray-500 dark:border-mainYellow/30 dark:bg-gray-700 dark:text-gray-100">
+            🌍 This article also exists in:{' '}
+            {translations.map((translation, i) => (
+              <Fragment key={`translation-${i}`}>
+                <a
+                  href={translation.link}
+                  class="font-semibold underline decoration-mainYellow decoration-2 underline-offset-4"
+                >
+                  {translation.language}
+                </a>
+                {i < translations.length - 1 ? ', ' : ''}
+              </Fragment>
+            ))}
+          </p>
+        )
+      }
+    </header>
+
+    <Image
+      src={cover}
+      alt={`Cover for ${title}`}
+      width={1200}
+      height={600}
+      loading="eager"
+      fetchpriority="high"
+      class="mx-auto mt-10 aspect-[2/1] w-full max-w-5xl rounded-2xl object-cover shadow-sm ring-1 ring-black/5 md:mt-12 dark:ring-white/10"
+    />
+
+    <div
+      class="mt-10 md:mt-14 xl:grid xl:grid-cols-[minmax(0,1fr)_720px_minmax(0,1fr)] xl:gap-12"
+    >
+      <div class="mx-auto w-[720px] max-w-full xl:col-start-2">
+        <slot />
+      </div>
+      {
+        showToc && (
+          <aside class="hidden xl:block" aria-label="Table of contents">
+            <nav class="sticky top-10 max-w-60">
+              <p class="mb-3 text-xs font-bold uppercase tracking-wider text-gray-400 dark:text-gray-300">
+                On this page
+              </p>
+              <ul class="space-y-1 border-l border-gray-200 text-sm dark:border-gray-500">
+                {tocHeadings.map(heading => (
+                  <li>
+                    <a
+                      href={`#${heading.slug}`}
+                      data-toc-link={heading.slug}
+                      class="-ml-px block border-l-2 border-transparent py-1 pl-4 leading-snug text-gray-400 transition-colors hover:text-gray-700 dark:text-gray-300 dark:hover:text-white"
+                    >
+                      {heading.text}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </aside>
+        )
+      }
     </div>
   </article>
 </Layout>
+
+<style>
+  .reading-progress {
+    display: none;
+  }
+
+  @supports (animation-timeline: scroll()) {
+    .reading-progress {
+      display: block;
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 50;
+      height: 3px;
+      background: var(--color-mainYellow);
+      transform-origin: 0 50%;
+      animation: reading-progress linear both;
+      animation-timeline: scroll(root);
+    }
+  }
+
+  @keyframes reading-progress {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  [data-toc-link].is-active {
+    border-color: var(--color-mainYellow);
+    color: var(--color-gray-700);
+    font-weight: 600;
+  }
+
+  :global(.dark) [data-toc-link].is-active {
+    color: var(--color-white);
+  }
+</style>
+
+<script>
+  const links = document.querySelectorAll<HTMLAnchorElement>('[data-toc-link]')
+  const headings = [...links]
+    .map(link => document.getElementById(link.dataset.tocLink ?? ''))
+    .filter((heading): heading is HTMLElement => heading !== null)
+
+  if (headings.length > 0) {
+    const setActive = () => {
+      const threshold = window.innerHeight / 3
+      let current = headings[0]
+      for (const heading of headings) {
+        if (heading.getBoundingClientRect().top <= threshold) current = heading
+      }
+      for (const link of links) {
+        link.classList.toggle('is-active', link.dataset.tocLink === current.id)
+      }
+    }
+    setActive()
+    window.addEventListener('scroll', setActive, { passive: true })
+  }
+</script>
