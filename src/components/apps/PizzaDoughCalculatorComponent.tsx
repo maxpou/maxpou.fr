@@ -5,7 +5,7 @@ import { useState } from 'preact/hooks'
 
 export default function PizzaDoughCalculator(): JSX.Element {
   const [numberOfDoughs, setNumberOfDoughs] = useState<number>(3)
-  const [doughSize, setDoughSize] = useState<number>(250)
+  const [doughSize, setDoughSize] = useState<number>(260)
   const [hydration, setHydration] = useState<number>(67)
 
   // Calculate ingredients
