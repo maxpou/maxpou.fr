@@ -8,34 +8,34 @@ import Layout from '../../components/Layout.astro'
   description="Calculate compound interest with monthly contributions. See how your investments grow over time with this interactive calculator."
   seo={{ type: 'website' }}
 >
-  <div class="mx-auto max-w-5xl">
+  <div class="mx-auto max-w-6xl">
     <h1
-      class="mb-2 text-4xl font-bold text-gray-900 dark:text-white md:text-5xl"
+      class="mb-3 text-4xl font-black tracking-tight text-darkBlue dark:text-white md:text-5xl"
     >
       Compound Interest Calculator
     </h1>
-    <p class="mb-8 text-lg text-gray-600 dark:text-gray-300">
+    <p class="mb-8 max-w-2xl text-lg text-gray-400 dark:text-gray-300">
       See how your investments can grow over time with the power of compound
       interest.
     </p>
 
+    <CompoundInterestCalculatorComponent client:load />
+
     <div
-      class="mb-8 rounded-lg border border-amber-300 bg-amber-50 p-4 dark:border-amber-700 dark:bg-amber-900/20"
+      class="mt-10 rounded-2xl border-l-4 border-mainYellow bg-beige p-5 dark:bg-gray-800"
     >
-      <p class="mb-1 font-semibold text-amber-900 dark:text-amber-200">
-        Important Note: The blind spots of this calculator
+      <p class="mb-1 font-bold text-darkBlue dark:text-white">
+        ⚠️ The blind spots of this calculator
       </p>
-      <p class="text-sm text-amber-800 dark:text-amber-300">
+      <p class="text-sm text-gray-500 dark:text-gray-300">
         This tool calculates theoretical compounding and does not account for
-        real-world factors like taxes (tax drag) and management fees, which
-        reduce your actual returns. It also assumes a smooth, fixed annual
+        real-world factors like taxes (tax drag), which reduce your actual
+        returns. It also assumes a smooth, fixed annual
         return, ignoring market volatility (the linearity bias) and the fact
         that inflation will erode your final purchasing power over time. For a
         more realistic estimate, consider lowering your expected return rate by
         a few percentage points to factor in these costs.
       </p>
     </div>
-
-    <CompoundInterestCalculatorComponent client:load />
   </div>
 </Layout>
