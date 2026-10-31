@@ -28,8 +28,8 @@ and how I like to work. This is also what people call "Personal README".
 _\* As mentioned above, this list sums up the way I like to work. It is absolutely not here to set
 expectations._
 
-- **Asynchronous communication**. Notifications are my productivity killer. They are always switched
-  off. That's why I am more "offline" than average. It allows me to do deep work sessions, free of
+- **Asynchronous communication**. Notifications are my productivity killer. They are often off.
+  That's why I am more "offline" than average. It allows me to do deep work sessions, free of
   distractions.
 - **Home office**. [My work setup](/uses) is very minimalistic and nomad-friendly. It's common to
   see me with different backgrounds during remote meetings. I find myself more productive working
