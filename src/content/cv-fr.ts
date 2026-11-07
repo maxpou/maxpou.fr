@@ -62,6 +62,7 @@ export const cvDataFr: CvData = {
         'Node.js',
         'NestJS',
         'GraphQL',
+        'PostgreSQL',
         'Elasticsearch',
         'Supabase',
         'Docker',

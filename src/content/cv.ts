@@ -75,6 +75,7 @@ export const cvData = {
         'Node.js',
         'NestJS',
         'GraphQL',
+        'PostgreSQL',
         'Elasticsearch',
         'Supabase',
         'Docker',
